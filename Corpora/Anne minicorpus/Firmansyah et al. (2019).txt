@@ -1,0 +1,499 @@
+ICFST 2019
+IOP Conf. Series: Earth and Environmental Science 484 (2020) 012041
+
+IOP Publishing
+doi:10.1088/1755-1315/484/1/012041
+
+A review of heat stress signaling in plants
+Firmansyah1* and N Argosubekti2
+1)
+2)
+
+Tungro Disease Research Station, Lanrang, South Sulawesi 91651
+Indonesian Center for Food Crops Research and Development, Bogor,West Java
+
+*Email: firmansyahfirdaus85@gmail
+Abstract. The threat and crisis of food due to global warming has a related with global
+climate change. The threat of a decline in food production in various countries by climate
+change triggers a long drought. The increase in temperature causes heat stress on the plant
+which has an impact on the decline in land quality and others. Heat stress is often defined as an
+increase in temperature for a certain period of time, which can cause irreversible damage to
+plants, which generally occurs at temperatures of 10-15˚C above the threshold. Heat stress is a
+major factor limiting crop productivity and adaptation, especially when extreme temperatures
+coincide with the critical stage of plant growth.. Heat stress is a major factor limiting crop
+productivity and adaptation, especially when extreme temperatures coincide with the critical
+stage of plant growth. Excessive heat can disrupt by denaturing enzymes and damaging
+metabolism so that changes occur in the morphological structure, phenology, physiology and
+molecular plants.The response to increase in temperature of 5-10o C, makes plants produce a
+unique protein called heat shock proteins (HSP). An increase in HSP production occurs when
+plants experience a sudden or gradual increase in temperature. HSP is released when the stress
+of exposed to plant . Under these conditions HSP is useful for protecting proteins and causes
+resistant plants. The resistance obtained by heat shock is different from the resistance obtained
+by rapid growth at moderately high temperatures. This difference is presumed by the presence
+of HSP responses induced by heat stress. The HSP can play a role as a sign of gene stress and
+activation and in regulating oxidation reactions in cells. Utilization of heat stress signaling in
+food crops breeding can be used to development Wheat Tolerance to High Temperature.
+
+1. Introduction
+Temperature as an environmental factor can affect crop yields both physically and physiologically.
+Physically, the temperature is the part that is affected by solar radiation and can be estimated based on
+heat balance. Physiologically, the temperature can affect plant growth, photosynthesis, stomata
+opening, and respiration. In addition, the temperature is one of the inhibitors in the physiological
+process for crop production systems when the temperature of the plant is outside the lowest and
+highest optimal temperatures.
+Heat stress is often defined as an increase heat for a certain period of time, which can cause
+irreversible damage to plants, which generally occurs at temperatures of 10-15˚C above the threshold
+[38]. The stress factor is usually not only single but is a complex process because it involves several
+determinants of growth. One example in the summer can cause damage tochlorophyll, low humidity,
+dry soil and high temperatures. In addition, stress responses are very complex, involving various parts
+of plants and involving stress hormones such as abscisic acid (ABA) and ethylene which are
+transported to all parts of plants [42].
+
+Content from this work may be used under the terms of the Creative Commons Attribution 3.0 licence. Any further distribution
+of this work must maintain attribution to the author(s) and the title of the work, journal citation and DOI.
+Published under licence by IOP Publishing Ltd
+
+Heat stress is a major factor limiting crop productivity and adaptation, especially when extreme
+temperatures coincide with the critical stage of plant growth. The rate of change in temperature and
+the degree of resistance of plants to temperature is important to remember that plants have different
+levels of heat resistance to survive periods of stress. In addition, the response of plants to heat stress
+depends on adaptation to temperature, exposure interval and stage of tissue growth [5]. The response
+to a sudden increase in temperature of 5-10 oC, makes plants produce a unique protein called heat
+shock proteins (HSP). Increased HSP production occurs when plants experience an increase in
+temperature either suddenly or gradually [34][44]. HSP, known as a heat shock protein, is released
+when the plants body experiencing heat stress. Under these conditions, HSP is useful for protecting
+proteins.
+High temperatures disrupt and kill plants by denaturing their enzymes and damaging their
+metabolism in various ways. Hot and dry weather also tends to cause water shortages in many plants
+and stomata closure. Most plants have a reserve response that allows them to survive heat stress
+Above a certain temperature of around 40° C in most plants that occupy four seasons, plant cells begin
+to synthesize a special protein in sufficient quantities called protein heat shock (heat shock protein).
+This heat shock protein may flank enzymes and other proteins and help prevent denaturation [4].
+In tropical climate areas, excess radiation and high temperatures are often the limiting factors that
+greatly affect plant growth and plant yields. High temperatures can cause crop damage, including
+leaves, branches and stems. In addition there is an inhibition of ageing and root growth, fruit
+discolouration and reduced production [15][22][50]. Likewise in temperate regions, heat stress has
+been reported as one of the most important causes of reducing yields and production of dry matter in
+plants, for example corn [14].
+2. Signalling Morphology of Heat Stress
+Heat killing temperature for plants is the temperature at 50% of plants die. This temperature varies
+according to the type of plant. For higher plants that are growing, the highest temperature is reported
+to be 60-120°C. However, this temperature lasts only for a very short period of time, namely during
+the day, when growth is stopped temporarily [48].
+Table 1. Heat-Killing Temperatures for Plants [24]
+Plant
+Nicotiana rustica (Wild Tobacco)
+Cucurbita pepo (Squash
+Zea mays (corn)
+Brassica napus (rape)
+Citrus aurantium (Sour orange)
+Opuntia (Cactus)
+Sempervivum
+arachnoideum
+(Succulent)
+Potato Leaves
+Pine and Spruce seedlings
+Medicago seeds (alfalfa)
+Grape (Ripe Fruit)
+Tomato Fruits
+Red Pine pollen
+Hydrated (Various mosses)
+Dehydrated (Various mosses)
+
+Most plant tissues cannot survive long exposure at temperatures above 45 o C. Cells that are not
+growing or dehydrated tissue (such as seeds and pollen) can survive at temperatures much higher than
+vegetative cells. Tissues that are actively growing rarely survive at temperatures above 45 oC, but dry
+seeds can withstand temperatures up to 120oC, and pollen grains from some species up to 70 oC.
+
+Generally, only a single cell eukaryote can complete its life at temperatures above 50 oC and only
+prokaryotes can divide and grow above 60 oC [48].
+Responses due to high temperatures in plants can occur directly as in physiological processes while
+the extreme damage is the death of cells, tissues, organs, and finally plants. This may differ from one
+stage of phenology to another. For example, the effect of long-term heat stress causes delayed
+germination or loss of vigour, resulting in reduced seed formation. Growth of coleoptiles in corn
+decreases at 40°C and stops at 45°C. In seedlings also symptoms of burns occur at organ surface
+temperatures reaching 48-50oC [56].
+Burns or burn tissue generally occur on the trunk, branches and fruit due to the weak influence of
+cooling by transpiration. High temperatures in shoot growth cause a reduction in weight at the length
+of the first segment resulting in the premature death of plants [18]. High temperatures cause a decrease
+in dry weight in shoots, relative growth rates and net assimilation rates of corn, barley and sugar cane,
+although leaf area has minimal effect [1][53]. In wheat both seed weight and the number of seeds
+appear to be very sensitive to heat stress with increasing temperature [11]. In environments with
+intense sun radiation and high temperatures, plants avoid excessive heating of the leaves by reducing
+the absorption of solar radiation. This adaptation is important in hot environments. Leaves transpire
+near the upper limit of temperature tolerance. In such conditions, heat stress will cause evaporation of
+distressed water and increased absorption energy so that it can damage the leaves.
+
+Figure 1. The absorption and dissipation of energy from sunlight by the leaf [47]
+The phenology of plants is greatly affected by heat, which is generally accelerated by temperatures
+which cumulatively decrease yields. The heat accelerates phenology (plant development), the
+acceleration of the process (phenology) will accelerate the transition from a certain phase to the next
+phase, which results in reducing the size of plants or plant organs. Sugarcane plants that grow at high
+temperatures show smaller segments, tillers increase, cook quickly and biomass decreases [8]. In
+temperate and tropical lowlands, heat stress causes yield losses in Phaseolus vulgaris [15] and peanuts
+[49] If the economic yield is part of the vegetative (biomass), heat will reduce the yield. If the harvest
+is in the form of generative parts (seeds/fruit) then the negative impact of heat during the initial growth
+phase will greatly reduce the time (shortening) of seed filling in cereals, followed by a reduction in the
+number of seeds per grain, reducing the length of the seed filling period.
+Heat stress combined with salinity generally has problems when the flowers bloom and the filling
+of seeds of cereal plants that grow in temperate climates. For example, the extension of heat stress
+when filling grain causes losses in wheat seeds up to 7% [16]. The same thing happened in the
+formation of starch, protein and oil in corn kernels [57] and the quality of cereal grains affected by
+heat stress[28].
+
+3. Signaling Physiology of Heat Stress
+Temperature as an environmental factor that can affect physical and physiological plant production.
+Physically,the temperature is the part that is affected by sunlight radiation. Physiologically, the
+temperature can affect plant growth, photosynthesis, stomata opening, and respiration. In addition, the
+temperature can be one of the inhibitors in the physiological process for crop production systems if the
+plant temperature is outside the optimal temperature both low and high temperatures. Heat stress
+affects all aspects of plant processes like germination, growth, development, reproduction and yield
+[19][31][30].
+Heat stress differentially influences the constancy of various proteins, membranes, RNA species
+and cytoskeleton structures, and alters the efficiency of enzymatic reactions in the cell for which the
+major physiological processes obstacle and creates metabolic imbalance (Ruelland and Zachowski,
+2010). It is believed by some workers that night high temperatures are major limiting factors, whereas
+others argued that day and night high temperatures do not affect the plant independently. The diurnal
+means temperature is a superior forecaster of plant response to high temperature with day temperature
+having a secondary role [38]
+An increase in leaf temperature during the day in a dry area causes plants to experience a lack of
+water due to high irradiation from sunlight. Plant water status is the most important component under
+changes in threshold temperature [29] Temperature stress also affects plant growth in greenhouses.
+Low air velocity and high humidity reduce the rate of leaf cooling. In general, plants tend to maintain
+the stability of the water status in the tissue without regard to temperature when the humidity is
+sufficient. However, high temperatures are very damaging and water is a limiting factor [27]. In field
+conditions, heat stress is often associated with reduced water availability [45]
+Air temperature or soil temperature affect plants through metabolic processes in the body of the
+plant, which are reflected in various properties such as growth rate, seed dormancy, germination,
+flowering, fruit growth maturation/maturation of plant tissues or organs. Plant responses to
+temperature differ depending on the type of plant, variety, stage of plant growth, type of organ /tissue
+[47]. Plants based on physiological functions are grouped into 3 groups, namely CAM, C3 and C4.
+Plants with open stomata at night and closed during the day are called Crassulacean Acid
+Metabolism (CAM). The difference in vapour pressure or VPD (Vapor pressure difference) from the
+leaves to the air causes very low transpiration at night when the leaves and the air cools. CAM plants
+can get 1 g of dry weight using only 125 g of water. A ratio of 3-5 times greater than the ratio for C3
+plants. CAM plants, such as Opuntia and Sempervivum can withstand tissue temperatures of 600-650C
+in the heat of the sun in summer. Because CAM plants keep their stomataclosed during the day, CAM
+plants cannot be cooled by transpiration but releases heat from solar radiation by re-emitting longwave radiation (infra red) and losing heat by conduction and convection.
+C3 and C4 plants affected by heat stress rely on transpiration to reduce leaf temperature. Leaf
+temperature can immediately rise 4-50C above the ambient air temperature in bright sunlight before
+noon. Lack of groundwater causes partial closure of stomata or when high relative humidity decreases
+the potential for transpiration. Moderate temperature stress slows overall growth. Large respiration is
+associated with high agronomic outcomes. Heat stress interferes with the movement of water, ions and
+organic solutions across the plant membrane [21].
+High temperatures reduce membrane stability while the stability of various cell membranes is
+important at hightemperature stresses, such as when cold and freezing. Excessive exchange of
+substances from membranes at high temperatures is associated with loss of physiological function. In
+oleander (Nerium oleander), the impact of high temperature is related to the higher degree of
+saturation of the membrane fatty acids so that the membrane is less liquid. The function of a cellular
+membrane that is sustained under stress is important for photosynthesis and respiration [3].
+Photosynthesis and respiration are inhibited at high temperatures, but when the temperature rises,
+the rate of photosynthesis decreases sharply before the respiration rate. Treshow (1970) reports that
+photosynthesis is an important reaction that is affected by heat. Photosynthesis occurs in a temperature
+
+range of 10-30°C depending on the climate of the plant. Above the temperature of 10˚C
+photosynthesis will increase with increasing temperature, and will experience a decrease above 30˚C.
+Respiration generally occurs in the temperature range of 5-25˚C, increases at 30-35˚C and slows above
+35˚C [20]. Heat stress reduces chemical reactions, gas solubility, mineral absorption and water uptake,
+disrupts the electron transfer system in photosynthesis and increases oxidative damage to membrane
+lipids[6].
+4. Signalling Biochemical of Heat Stress
+Heat stress causes oxidative stress, which is a condition when the amount of free radicals in the body
+exceeds the capacity to neutralize it and consequently the intensity of the oxidation process of normal
+body cells becomes higher and causes more damage. Reaction of activated oxygen species (AOS)
+including singlet oxygen (1O2), superoxide radical (O2-)hydrogen peroxide (H2O2) and hydroxyl
+radical (OH-) are symptoms of cell damage due to high temperatures [26]. AOS causes lipid
+membranes to lose the ability to regulate the exchange of substances in cells [58]
+The Energy needed for biological functions in aerobic organisms is produced in the mitochondria
+through the electron transfer chain. In addition to AOS reactions, Reactive Oxygen Species (ROS) also
+have the potential to cause cellular damage. ROS can damage DNA, RNA and protein, which
+contribute to the physiology of ageing. ROS are produced as normal products of cell metabolism.
+Specifically, one of the main causes of oxidative damage is hydrogen peroxide (H2O2) which is
+converted from superoxide leaked from mitochondria. A study shows that accumulation of ROS can
+reduce the resistance of organisms due to oxidative damage. Specifically, oxidative damage can affect
+mitochondrial efficiency and increase the rate of ROS production. Oxidative damage and its effect on
+ageing depend on the type of tissue in which the damage occurs [26]
+Decreased antioxidant activity in the tense tissue shows a higher amount of AOS when the
+organism is gripped [10]. Protection against oxidative stress is an important component in determining
+the survival of plants in heat stress. Available data shows. thatseveral molecules can cause an increase
+in the antioxidant capacity of cells [12]
+SOD is a preventive anti oxidant made by the body to prevent excessive free radicals in the body.
+The enzyme catalase and superoxide dismutase (SOD) repair the damage effects that function as a
+catalyst to change the dismutation reaction from superoxide anions to hydrogen peroxide and oxygen
+molecules. However, peroxide can survive in cells. While ROS is produced as a product of normal
+cellular function. Excessive amounts can cause damage. The body produces free radical compounds
+through the process of phosphorylation. During the oxidative phosphorylation process, O2 is reduced
+to H2O by the addition of 4 electrons, so that superoxide anion radicals are formed which then become
+hydrogen peroxide (H2O2) by the SOD enzyme.
+Plants have developed a series of detoxification systems to fight AOS both enzymatically and nonenzymatically, thus protecting cells from oxidative damage [41]. SOD enzymes in plants affect a
+number of physiological phenomena including the elimination of H202, toxic oxidation of reducers,
+biosynthesis and degradation of lignin in cell walls, enzyme catabolism, defense against injury,
+defense against pathogenic or insect attack and some respiratory processes [43] More specifically,
+APX activation is related to the appearance of physiological damage caused by temperature stress [29]
+The process of phosphorylation in the mitochondria causes 1 O2 molecule to be reduced by 4
+electrons together with H + ions to form 2 H2O molecules. If the electrons reducing O2 are less than
+4, the phosphorylation process is incomplete and free radicals are formed. SOD enzymes work can be
+seen in the number of lipid peroxidation products per organelle. If the activity of the enzyme increases
+it will cause lipid oxidation products to decrease [13].
+
+Figure 2. The mechanism of cell resistance to oxidative stress that helps stabilize fatty acids in tense
+environmental conditions [41]
+Superoxide radical compounds are regularly synthesized in chloroplasts and mitochondria and
+some parts are also produced in microbodies. O2-flushing by superoxide dismutase (SOD) results in
+the production of H2O2 lost by APX (ascorbate peroxidase) or CAT (catalase). SOD is a class of
+enzymes that catalyzes oxygen and hydrogen into oxygen and hydrogen peroxide. Thus, SOD is an
+important antioxidant defense in cells. Almost all cells are exposed to oxygen, but both O2- and H2O2
+are not OH- or toxic compounds formed by a combination of O2- and H2O2 in the presence of Fe2 +
+and Fe3 + traces by the Haber-Weiss reaction. OH- can damage chlorophyll, protein, DNA, fat and
+other important macromolecular, thus affecting plant metabolism and limiting growth and yield [41].
+5. Heat Shock Protein
+The response to a sudden increase in temperature of 5-100C, makes plants produce a unique protein
+called heat shock proteins (HSP). Increased HSP production occurs when plants experience an
+increase in temperature either suddenly or gradually [34]. HSP, known as a heat shock protein, is
+released when the body is hot. Under these conditions, HSP is useful for protecting proteins. HSP is
+found in all living things.
+Most of the function of HSP is to help cells survive heat stress by acting as chaperons. Heat Shock
+Proteins are a group of proteins in living cells that can be found in all phases of the development of
+these living things. This protein is active when stimulated by various forms of stress such as oxidative
+stress, heat, cold, inflammation and oxygenation disorders in cells. Under normal conditions, HSP is
+also commonly found in cells as a companion. Heat stress causes many cell proteins that function as
+enzymes or structural components to unfold or fold folded incorrectly. This results in a loss of
+structure and correct enzyme activity. HSP induction is a response to the temperature observed in all
+organisms ranging from bacteria to humans [51].
+The role of HSP as a companion in the formation of proteins. To support the action of ribosomes
+along with RNA molecules, an amino acid chain is built to form a new protein molecule. This chain is
+protected from unwanted interactions with other cytoplasmic molecules with HSP and chaperonin
+molecules until they have successfully completed their cycle into proteins. HSP acts as a chaperonin
+(molecular companion) and serves to achieve the correct folds of collected protein and to prevent
+incorrect folds of protein. This all facilitates proper cell function at high temperatures. Chaperons are
+proteins that help fold / unload noncovalent folds and attach /release proteins with other
+macromolecular structures. Chaperons function primarily if there is an error in protein folding and
+does not function if the structure of the protein formed has normal biological functions [34]
+
+The protein binds to the chaperone molecule and starts the folding process. After folding and
+translating the genetic code by tRNA into the amino acid sequence, the protein is released from the
+chaperon and transferred to the Golgi apparatus. If the protein assembly is incomplete, then the wrong
+folded protein will bind to the chaperons and be in the RE. This landfill in RE serves as a signal for the
+formation of a new chaperon. Proteins that are wrongly folded are removed and degraded in the
+cytoplasm [9]
+Plants and most other organisms make HSPs of different sizes in response to rising temperatures .
+Most HSPs synthesized by eukaryote organisms have five different structures namely HSP100,
+HSP90, HSP70, HSP60, Small HSP (SmHSP) found in the nucleus, mitochondria, chloroplast,
+endoplasmic reticulum and cytosol [51]. The molecular weight of HSP varies from 15-104 kDa. HSP
+molecular weight is characterized by high sequence homologues in plants [54]
+HSP 100 is formed continuously but is also regulated by environmental pressures. These proteins
+generally function to protect protein denaturation and protein formation [55] HSP 104 in Arabidopsis
+and yeast play an important role in resistance to heat stress [28]. HSP 101 in Arabidopsis influences
+growth during the recovery period [52]. It has been found that the homogenised Arabidopsis HSP101
+is involved as a link in the plastids in the formation of thylakoids and as a temperature resistance for
+chloroplasts during hot strikes [32]
+SmHSP is also produced under conditions of environmental stress and several stages of
+development (embryogenesis, germination, growth and maturation of fruit pollen). SmHSP
+encourages gene change. This shows the important role of proteins in abiotic stress [17]. The degree
+of smHSP formation depends on the temperature and duration of the stress period [46]. SmHSP shows
+heterogeneous structure according to its molecule, center of gravity and isoelectric stability [23]. After
+heat stress, smHSP is stable with half -life after 30-50 hours. This shows that smHSP might be
+important for recovery [46].
+All cells contain companion molecules that are formed together and function like HSP. This
+companion is called a heat shock cognate protein. However, when cells are exposed to heat but are not
+damaged, the synthesis of HSPs dramatically increases while the translational continuity of other
+proteins is dramatically reduced or completely stopped. The response to this heat shock is preceded by
+a specific transcription factor (HSF) that acts on HSP mRNA transcription.
+Cells that are induced to synthesize HSP exhibit better temperature resistance and can withstand
+gripping conditions and otherwise damage. Some HSPs are not unique to high-temperature stress. HSP
+is also affected by stresses or very different environmental conditions, including water shortages, ABA
+treatment, wounds, low temperatures, and salinity. Thus, cells that were previously exposed to one
+stress may get cross-protection against other stresses. The case of tomatoes given heat exposure (48
+hours at 38oC) supports the accumulation of HSP and protects cells for 21 days from cooling at 20 oC
+The mechanism that occurs in HSP is still mysterious, although some roles in plant cells have been
+ascribed to HSP. Many studies have confirmed that the HSP chaperone molecule functions as a protein
+that keeps cells under heat stress. Some evidence has been shown that resistance to heat is directly
+related to the synthesis of HSP accumulation [2]
+When there is no heat stress, the heat shock factor (HSF) is a monomer that is unable to bind DNA
+and direct transcription. The stress causes the associated HSF monomer to become a trimer which is
+then able to bind to a specific unique element in DNA called a heat shock element (HSE) or heat
+shock element. Once bound to trimeric HSE HSF is phosphorylated and promotes HSP mRNA
+transcription. HSP70 binds to HSF and causes HSF / HSE to break down. HSF is then recycled into
+the HSF monomer form. Thus the action of HSF causes HSP to accumulate until it becomes abundant
+enough to bind HSF which leads to the cessation of HSP mRNA production [39] Two alternative ways
+could be proposed to enhance HSP70 concentration in plant tissues. The first is subjecting plants to
+heat shock, so that concentration of the inducible form of HSP70 increases and harvesting the plants
+when protein concentration is maximum.Heat shock can be administered in the field by means of heat
+producing machines. The second is overexpressing HSP70 in plants by genetic transformation [36]
+
+Figure 3. Induction and Regulation of Heat Shock Protein due to environmental stress [39]
+
+6. Potential Utilization of Heat ShockProtein for Tropical Wheat Breeding
+Wheat genetic improvement through breeding programs in Indonesia is initiated by introducing the
+elite lines from various countries which are considered suitable for tropical agroecosystems in
+Indonesia because Indonesia does not have local germplasm. A broad genetic diversity is needed to get
+wheat. varieties adaptive to tropical conditions in Indonesia. Increasing genetic diversity of wheat is
+conducted through cross-breeding and mutation (seeds and somaclonal variation). Not all types of
+wheat can be grown in Indonesia, only Triticum aestivum that can be developed at areas of > 1,000 m
+asl. The development of tropical wheat at < 1,000 m asl should be supported by breeding programs
+initiated by forming the population until releasing the varieties with shuttle breeding methods [37].
+Strategies to maintain wheat plants against high temperature stress need to be studied to support
+genetic improvement through a tropical wheat breeding program. According to Dolferus et al [7],
+wheat crop stages that are most critical of abiotic stress are reproductive stages. Therefore, this
+stadium needs to be considered for studying plant turnover against abiotic stresses. Tropical wheat
+breeding programs that have been running and show good results are breeding through conventional
+crosses and mutations (seed mutationsand somaclonal variations) [36].
+Information regarding the genetic basis of heat tolerance is generally scarce, though the use of
+traditional plant breeding protocols and contemporary molecular biological techniques, including
+molecular marker technology and genetic transformation, have resulted in genetic characterization
+and/or development of plants with improved heat stress tolerance. Constitutive expression of specific
+proteins has been shown to enhance heat tolerance. In addition to the knowledges concerning the
+expression of HSPs/ chaperones and manipulation of HSF gene expression, other transgenic plants
+with varying degrees of heat tolerance have been produced. Unpredictably, however, such experiments
+have been quite limited compared to the experiments aimed at engineering drought, salt or cold stress
+tolerance [20]
+Small Heat Shock Proteins (sHSPs)/HSP20 are molecular chaperones that protect plants by
+preventing protein aggregation during abiotic stress conditions, especially heat stress. Due to global
+climate change, high temperature is emerging as a major threat to wheat productivity. Thus, the
+identification of HSP20 and analysis of HSP transcriptional regulation under different abiotic stresses
+in wheat would help in understanding the role of these proteins in abiotic stress tolerance.results
+showed that the identified TaHSP20 genes play an important role under different abiotic stress
+conditions. Thus, the results illustrate the complexity of the TaHSP20 gene family and its stress
+
+regulation in wheat and suggest that SSHs as attractive breeding targets for improvement of the heat
+tolerance of wheat [33].
+7. Conclusion
+Heat stress is defined as an increase in temperature beyond the threshold level for a certain period of
+time, which can cause irreversible damage to plant growth and development. In general, usually
+ranges from 10-15˚C above the threshold. Heat stress causes changes in the morphological,
+phenological, physiological and molecular structure of plants. The response to a temperature rise of 510 ° C suddenly causes plants to produce a unique group of proteins called heat shock proteins that
+function to help cells survive heat stress.Utilization of heat stress signaling in food crops breeding can
+be used to development Wheat Tolerance to High Temperature. Knowledge relating to molecular basis
+and mechanism of tolerance is considered to pave the way for engineering plants that can withstand
+heat stress. In addition, greater emphasis on heat stress management is obligatory for heat tolerance
+features, molecular cloning, and characterization of genes.
+References
+[1] Ashraf M and Hafeez M 2004 Thermotolerance of pearl millet and maize atearly growth stages:
+growth and nutrient relations Biol. Plant. 48 81–86
+[2] Bowen Jet al 2002 The heat shock response is involved in thermotolerance in suspension-cultured
+apple fruit cells J. Plant Physiol. 159 599–606
+[3] Blum A 1988 Plant Breeding for Stress Environments CRC Press Inc. Boca Raton Florida
+[4] Campbell 2003 et al Biologi Jilid 2 Jakarta Erlangga
+[5] Chen HH et al 1982 Adaptability of Crops Plants to high temperature stress Crop Sci 22: 719-725
+[6] Dash S and Mohanty N 2002 Response of seedlings to heat stress in cultivars of wheat: Growth
+temperature-dependent differential modulation of photosystem 1 and 2 activity, and foliar
+antioxidant defense capacity J. Plant Physiol 159: 49-59
+[7] Dolferus R et al 2011 Abiotic stress and control of grain number in cereal Plant Sci. 181: 331–
+341
+[8] Ebrahim MKet al 1998 Growth and sugar storage in sugarcane grown at temperature below
+and above optimum J. Plant Physiol 153: 593–602
+[9] Ellis RJ2006 Molecular chaperones: assisting assembly in addition to folding. Trends Biochem
+Sci. 2006 Jul 31(7): 395-401
+[10] Fadzillah NM et al 1996 Chilling, oxidative stress and antioxidant responses in shoot cultures
+of rice Planta 199: 552–556
+[11] Ferris Ret al 1998 Effect of high temperature stress at anthesis on grain yield and biomass of
+field grown crops ofwheat. Plant Cell Environ 34: 67–78
+[12] Gong M et al 1997 Effect of calcium and calmodulin on intrinsic heat tolerance in relation to
+antioxidant systems in maize seedlings Aust. J. Plant Physiol 24: 371–379
+[13] Goodsell
+D
+2007
+Molecule
+of
+the
+Month:
+Superoxide
+Dismutase.
+http:/www.rcsb.org/pdb/static.do?p=education_discussion/molecule_of_the_month/pdb94_1.
+htmWinarsi
+[14] Giaveno C and Ferrero J 2003 Introduction of tropical maize genotypes to increase silage
+production in the central area of Santa Fe Argentina Crop Breed. Appl. Biotechnol 3: 89–94
+[15] Guilioni L 1997 Heat stress-induced abortion of buds and flowers in pea: is sensitivity linked
+to organ age or to relations betweenreproductive organs Ann. Bot. 80: 159–168
+[16] Guilioni L et al 2003 High temperature and water deficitmay reduce seed number in field pea
+purely by decreasing plant growth rate Funct. Plant Biol. 30: 1151–1164
+[17] Glatz A et al 1999 The Synechocystis model of stress: from molecular chaperones to
+membranes Plant Physiol Biochem. 37(1): 1-12
+[18] Hall AE1992 Breeding for heat tolerance Plant Breed Rev 10: 129–168
+
+[19] Hasanuzzaman M et al 2013 Extreme Temperatures Oxidative Stress and Antioxidant Defense in
+Plants In: Vahdati K Leslie C editors Abiotic Stress—Plant Responses and Applications in
+Agriculture InTech Rijeka Croatia: pp 169–205
+[20] Hemantaranjan A et al 2018 Physiology of Heat Stress amd Tolerance Mechanisms – An
+Overview The Journal of Plant Science Research 33 (1): 55-68
+[21] Ibrahim AMH and Quick JS 2001 Genetic control of high temperature tolerance in wheat as
+measured by membrane thermal stability Crop. Sci. 41: 1405-1407
+[22] Ismail AM et al 199 Reproductive-stage heat tolerance, leaf membrane thermostability and
+plant morphology in cowpea. Crop Sci. 39 1762–1768
+[23] Jinn T et al 1993 Immunological kinship of class I low molecular weigth heat shock proteins and
+thermostabilization of soluble proteins in vitro among plants Plant Cell Physiol 34(7):
+1055-1062
+[24] Levitt J 1980 Response of Plants to Environmental Stresses Vol. II. Water, Radiation, Salt, and
+Other Stresses Academic Press New York
+[25] Lindquist S and Craig EA 1988 The heat shock proteins Annu. Rev. Genet 22: 631-677
+[26] Liu N et al 2006 Isolation and characterization of tomato Hsa32 encoding a novel heat-shock
+protein Plant Sci. 170: 976–985
+[27] Machado S and Paulsen GM 2001 Combined effects of drought and high temperature on wate
+relations of wheat and sorghum Plant and Soil 233: 179-187
+[28] Maestri Eet al 2002 Molecular genetics of heat tolerance and heat shock proteins in cereals,
+Plant Molecular Biology 48: 667-681
+[29] Mazorra LM et al 2002 Influence of brassinosteriods and antioxidant enzymes activity in tomato
+under different temperatures. Plant Biol. 45: 593–596
+[30] McClung CR and Davis SJ 2010 A Curr Biol 20:1086–1092
+[31] Mittler R and Blumwald E Ann Rev Plant Biol 61:443–462
+[32] Myouga F et al 2006 An Arabidopsis chloroplasttargeted Hsp101 homologue, APG6, has
+anessential role in chloroplast development as well asheat stress respons, The Plant
+Journal 48: 249-260
+[33] Muthusamy SK et al 2017 Genome-wide identiﬁcation and analysis of biotic and abiotic stress
+regulation of small heat shock protein (HSP20) family genes in bread wheat 211:100–113
+[34] Nakamoto H and Hiyama T 1999 Heat-shock proteins and temperature stress In: Pessarakli, M.
+(Ed.), Handbook of Plant and Crop Stress. Marcel Dekker, New York, pp. 399–416
+[35] Ferradini N et al 2015 Assessment of Heat Shock Protein 70 Induction by Heat in Alfalfa
+Varieties and Constitutive Overexpression in Transgenic Plants PLoSONE 10(5):
+e0126051
+[36] Nur A2013 Adaptasi tanaman gandum (Triticum aestivum L.) toleran suhu tinggi dan
+peningkatan keragaman genetik melalui induksi mutasi dengan menggunakan iradiasi
+sinar gamma. Disertasi. Sekolah Pascasarjana, Institut Pertanian Bogor
+[37] Nur A et al 2015. Perbaikan Genetik Gandum Tropis Toleran Suhu Tinggi dan permasalahan
+pengembangannya pada daerah dataran rendah Jurnal Litbang Pertanian. Vol. 34 19-30
+[38] Peet MM and Willits DH 1998 The effect of night temperature on greenhouse grown tomato
+yields in warm climate Agric. Forest Meteorol 92: 191–202
+[39] Pockley G 2003 Heat shock proteins as regulators of the immune response The Lancet
+Published online April 29 2003
+[40] Ruelland E and Zachowski A 2010 Environ Exp Bot 69:225–232
+[41] Sairam RK and Tyagi A 2004. Physiology and molecular biology of salinity stress tolerance in
+plants Curr. Sci. 86: 407–421
+[42] Salisbury FB and Ross CW 1992 Plant physiology Wadsworth Publishing Co. New York
+[43] Scandalios JG 1993 Oxygen stress and superoxide dismutases Plant Physiol 101: 7–12
+
+[44] Sch¨offl F et al 1999 Molecular responses to heat stress In: Shinozaki K Yamaguchi-Shinozaki
+K Eds Molecular Responses to Cold, Drought, Heat and Salt Stress in Higher Plants RG
+Landes Co Austin Texas pp 81–98.
+[45] Simoes-Araujo et al 2003 Small heatshock proteins genes are differentially expressed in distinct
+varieties of common bean Braz J Plant Physiol 15:33–41
+[46] Sun A and Montago 2006 Identification and characterizationof a heat inducible ftsH gene from
+tomato (Lycopersicon esculentum Mill.) Plant Sci 170: 551–562
+[47] Taiz L and Zeiger E 2010 Plant Physiology Sinauer Associates Inc. Publishers, Massachusetts
+[48] Turner NC and Kramer PJ (Ed.) 1980 Adaptation of Plants to Water and High Temperature
+Stress John Wiley & Sons USA
+[49] Vara PPV et al 1999 Fruit number in relation to pollen production and viability in groundnut
+exposed to short episodes of heat stress Ann. Bot. 84: 381–386
+[50] Vollenweider P and Gunthardt-Goerg MS, 2005 Diagnosis of abiotic and biotic stress factors
+using the visible symptoms in foliage. Environ. Pollut. 137: 455–465.
+[51] Vierling E 1991 The role of heat shock proteins in plants Annu. Rev. Plant Physiol. Plant Mol.
+Biol. 42: 579–620.
+[52] Vinocur B and Altman A2005 Recent advances in engineering plant tolerance to abiotic stress:
+achievements and limitations, Current Opinion in Biotechnology, 16: 123-132
+[53] Wahid A and Close TJ 2007 Expression of dehydrins under heat stress and their relationship
+with water relations of sugarcane leaves. Biol. Plant. 51:104–109
+[54] Waters ER et al 1996 Evolution, structure and function of the small heat shock proteins in
+plants, Journal of Experimental Botany, 47 (296): 325-338
+[55] Wang W et al 2004 Role of plant heat shock proteins and molecular chaperons in the abiotic
+stress response, TRENDS in Plant Science 9(5): 1360-1385
+[56] Weaich K et al 1996 Modeling preemergent maize shootgrowth. II. High temperature stress
+conditions Agric. J. 88: 398–403.
+[57] Wilhelm EP et al 1999 Heat stressduring grain filling in maize: effects of kernel growth and
+metabolism CropSci. 39: 1733–1741
+[58] Xu S et al 2006 Effects of heat acclimation pretreatment on changes of membrane lipid
+peroxidation, antioxidant metabolites and ultrastructure of chloroplasts in two cool-season
+turfgrass species under heat stress Environ. Exp. Bot. 56: 274–285
+
+Reproduced with permission of copyright owner. Further reproduction
+prohibited without permission.
+
+

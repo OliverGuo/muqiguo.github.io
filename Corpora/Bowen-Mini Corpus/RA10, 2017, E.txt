@@ -1,0 +1,551 @@
+Abstract
+
+High renewable and variable electricity penetration in power systems requires increased grid stabili-
+zation from balancing power plants, namely gas operated. In the future, however, stabilization might be
+provided by electric vehicles operating under the smart-grid framework. Departing from this, this paper
+discusses and quantifies to what extent electric vehicles are required to be possible to shut down gas
+power plants. The analysis is performed using the EnergyPLAN tool, for the case study of the Portuguese
+power system in 2050. The results suggest that even a small share of the fleet of electric vehicles
+providing load balancing could lead to important reductions in gas use and energy excess. The gas share
+in the electricity mix is reduced from 10.2% without electric vehicles providing for stabilization to zero
+with 30% of the fleet providing it; the energy excess is reduced from 1.5% to zero above 15% of electric
+vehicles stabilizing the grid. Therefore, to achieve a power system without fossil fuels, electric vehicles
+capable of supporting the grid should be developed and adopted, as should be promoted the market and
+regulatory conditions to allow this.
+
+1. Introduction
+A mostly carbon free power supply is envisaged for Europe by
+2050. To accomplish it, renewable energy generation is being
+deployed at a fast pace: of the 24.5 GW of new gross power gen-
+eration capacity installed in the European Union in 2016, almost
+80% were wind (51%) and solar (27%) [1]. Until now, their share in
+the electricity mix is not very high e on average, 13% in the Euro-
+pean Union [2] e, and so they do not yet imply great consequences
+in the way power systems are operated. However, with further
+deployment of these technologies, challenges arise [3].
+Wind and solar are variable renewable energy sources (VRES),
+i.e., their output cannot be determined by the system operator, and
+there are limits to their forecast [4]; yet, electricity supply and
+demand must be permanently balanced, which is nowadays largely
+achieved by equalizing the generation to the demand through the
+adjustment of controllable generators (i.e., increasing or decreasing
+their output) acting as power reserve. Therefore, when the sun
+stops shinning or winds blow stronger, controllable generation
+must accommodate the sometimes abrupt fluctuations, especially if
+the operator wants to avoid curtailment, i.e., the use of less wind or
+solar power than is potentially available at a given time [5].
+
+The rising share of VRES in power systems means that the net-
+load, i.e., the electricity demand minus the VRES generation, is
+gradually more volatile (both in frequency and amplitude),
+requiring increased grid stabilization. Base load power plants, e.g.
+coal and nuclear, will have to be run down to very low load regi-
+mens, to avoid major overcapacity when wind and sun power
+peaks; at the same time, power reserve should be available online
+to cope with the higher load following needs [6]. With increasing
+VRES share, the role of thermal power plants to balance the vari-
+ability is increased, which means that in this scenario natural gas
+power plants will continue to be important to stabilize the grid,
+even if they gradually operate less hours in the year. Consequently,
+they inject less energy into the grid, becoming less profitable, and
+so expensive to maintain.
+Besides conventional power reserve, a set of non-traditional
+options to provide grid stabilization, allowing greater VRES pene-
+tration, are available or projected for the future, such as demand
+side management (DSM), VRES control, resource diversity, sta-
+tionary energy storage, or the smart grid. They all require signifi-
+cant changes in the way power systems operate [7].
+One of those alternatives to provide stabilization is by means of
+battery electric vehicles, abbreviated as EVs in this paper, and the
+controllable energy storage that they represent. Electric mobility is
+taking off, expected to reach significant market share in the coming
+decades [8] e by 2050, EVs might represent around 70% of the total
+road transport [9]. The large combined battery capacity of EVs will
+allow them to assist on the integration of VRES into existing power
+grids [10]: since vehicles are parked most of the time, they are
+expected to be a new player by storing VRES energy, such as in
+times of generation surplus [6], or by stabilizing the grid, through
+the provision of ancillary services [11].
+This article departs from this context to explore from the
+perspective of energy and power balances the extent to which EVs
+may substitute thermal power plants in stabilizing the grid. For
+that, a scenario of the Portuguese power system in 2050 with
+several levels of EVs providing for stabilization was modelled and
+simulated. The feasibility of the scenario is assessed from the
+standpoint of the model operation, and the implications are ana-
+lysed. Presently, the reliability of the Portuguese system is mostly
+assured by combined cycle gas (CCGTs1) and large hydro power
+plants [12], and thus it represents a good testbed for what is pro-
+posed. The intention and contribution of this work is to quantify
+how electric vehicles can displace gas power generation for load
+balancing national-scale power systems with high penetration of
+renewables.
+The article proceeds as follows: Section 2 presents the frame-
+work of grid stabilization by electric vehicles, followed by a litera-
+ture review; Section 3 presents the methodology adopted for this
+study; in Section 4 the results are presented and discussed; and
+Section 5 finalizes with the conclusions.
+
+2. Background
+
+2.1. Framework of load balancing by electric vehicles
+Changes in power plants output are called ramps. The tradi-
+tional generators possessing the required quick ramping capabil-
+ities to balance large systems are large hydro and gas units.2 To
+exemplify, Fig. 1 shows the aggregated wind and natural gas power
+generation output for the whole Portuguese power system over a
+period of one week, where the complementarity between the
+output of wind and natural gas is evident. Examples of ramping are
+signalled.
+The aggregated load and generation are balanced in real time by
+a set of ancillary services that differ according to the time frame of
+application, such as load following (inter and intra-hour) and
+regulation (minute timescale), by which generation is matched to
+load in real-time by increasing or decreasing the former [14]; these
+services are continuously required to stabilize the grid [15]. The
+increase of VRES leads to the need of thermal generation for the
+role of balancing the variability in net load. However, the capacity
+factor of these thermal power plants is reduced, because they are
+less needed for bulk power, and so VRES impact directly on their
+profitability [16].
+There are prospects about using EV batteries to provide grid
+ancillary services, reducing or replacing the need of thermal gen-
+eration. This is possible since their response time is very short and
+the development and deployment of the smart grid, with a proper
+communication structure, will allow their control and dispatch
+[17]. The concept of using EVs as a grid resource, acting as load and
+storage/generation, is called vehicle-to-grid (V2G) [18]. From the
+grid standpoint, an individual EV has a negligible storage capacity,
+and it is an unpredictable power resource given that it might be
+unplugged from the grid and driven at any time [17]; thus, they
+have to be grouped together and managed by aggregators. Under
+this approach, EVs might become active players in the reliability of
+the power grid [19], and in its economics [20]. This is today an
+active topic of research (see Section 2.2).
+The V2G system operates in two possible modes: (1) unidirec-
+tional, in which the power flow direction is just from the grid to the
+vehicle; (2) bidirectional, where the flow is both ways, i.e., the
+batteries are able to discharge to the grid. Both modes allow the
+provision of ancillary services, by request of the transmission sys-
+tem operator (TSO). In unidirectional mode, the EV load may be
+regulated up or down. It emulates spinning reserve, i.e., additional
+generation of fast response, by decreasing the EVs charging rate.
+The time difference between the time the vehicles are plugged and
+the charging duration provides flexibility that can be exploited for
+these purposes [21]. In bidirectional mode, spinning reserve can be
+additionally provided by injecting power from the batteries into the
+grid, actively contributing for peak load shaving [19]. Fig. 2 repre-
+sents the dispatch of ancillary services in both modes. For addi-
+tional insights on uni- and bidirectional V2G operation, see
+Ref. [14].
+Unidirectional V2G has less ability to provide ancillary services
+than bidirectional V2G, but its realization is much cheaper and
+simpler, given that it could be done by adding a simple controller to
+the EV chargers to manage their charge rate [22]. In contrast,
+bidirectional V2G encounters many challenges, such as a battery
+degradation effect induced by the frequently required charging and
+discharging cycles [19]; this is a critical barrier to overcome [23].
+Additionally, bidirectional EV chargers are still in their early stages,
+mostly prototype-based [17].
+It is likely that ancillary services provided by EVs will be
+rewarded based on the amount of time the services are provided,
+even if no energy is supplied to the power grid, or the balance is
+zero [24]. The implementation of both cases requires a carefully
+designed energy trading policy between the utilities and the
+vehicle owners, in particular one that encourages the latter to be
+involved [25], and the development of proper regulations [14],
+otherwise the business model for V2G may not be viable [26].
+Smart charging of EVs assist the integration of RES into power
+systems, but their mass deployment introduces different technical
+challenges related to power quality and service reliability, such as
+line and transformer overloading, voltage deviations or harmonic
+distortion. These are important issues to address; it has been pro-
+posed however that advanced smart metering, communication
+interfaces and coordinated delayed charging will alleviate them
+[27].
+
+2.2. Prior recent work on grid integration of electric vehicles
+The integration of a large fleet of EVs in a RES based power
+system under a smart-grid environment has been addressed in
+Ref. [28], with emphasis on the coordination between the TSO and
+the charging of the vehicles. The authors found that this coordi-
+nation reduces the total operation costs of the system, allowing the
+reduction of both energy curtailment and volatility of the real-time
+prices. Also for a RES based power system, in Ref. [29] the authors
+compared stationary energy storage with V2G in terms of their
+impact on the combined electricity and light-duty transportation
+system. They found V2G energy storage less capable of balancing
+the power system due to the constraints of travel patterns and
+availability of charging stations at both home and workplaces.
+Nonetheless, V2G energy storage can provide benefits, such as a
+more efficient use of available renewable energy compared to sta-
+tionary energy storage systems. Additionally, grid-controlling the
+charging of EVs can reduce the required capacity of stationary
+energy storage to obtain the same benefit for RES penetration and
+GHG emissions reductions. Ref. [30] focuses on the role of EVs to
+provide demand response, exploring a stochastic model for risk
+management and participation planning of EVs by the TSO. The
+risks include uncertainties in RES output, electric load, driving
+patterns and transmission lines’ reliability. The results show that
+using services such as time-based demand response is efficient in
+reducing the electricity costs for the players. It is also shown that
+EVs participation in incentive-based demand response is strongly
+conditioned by their availability for charging.
+In what regards planning for supporting a growing penetration
+of EVs into power systems, Ref. [31] uses a numerical model to
+study the role of load balancing power systems by EVs, and their
+impact on the systems steady-state stability, which is useful to
+determine the limits of power transmission. The model may be
+applied to establish criteria for EVs charging stations siting and
+sizing, and to determine the steady-state stability of a small-scale
+systems. In Ref. [32] it is proposed an expansion planning method
+for enabling distribution systems to support growing penetrations
+of EVs. In Ref. [33] the author assessed the use of EVs with V2G
+capability combined with RES for improving the characteristics of
+power distribution systems. He found that the lowest electricity
+generation cost and the best voltage profile are obtained by
+simultaneously using conventional power generators, RES as
+distributed generators and EVs. As for the impact of EVs on the
+reliability of power systems, Ref. [34] discusses the importance of
+choosing a proper charging strategy of EVs, especially for the case of
+large fleets. They found that the resulting loading increase of EVs
+charging may weaken the system reliability, unless a proper
+strategy is applied; in this case, it is proposed that system reserve
+support could also be provided by EVs.
+On the economics of V2G, Ref. [35] estimates the grid payments
+necessary to compensate the additional costs of providing ancillary
+services by EVs, namely from battery fading. The scenario studied is
+the UK until 2030. It is found that the expected revenues are much
+less than the compensation required, and it may not be until 2030
+that sufficient vehicles are on the market to provide a cost-effective
+service e at least under current market and regulatory conditions.
+Ref. [36] studies scenarios where net-income can be generated by
+selling electricity from EVs either to buildings or to the grid. The
+case study is also in the UK. It is found that the EVs acquisition price,
+and battery degradation and infrastructure costs are key factors.
+The greatest return on investment is found to be when EVs have
+additional income from participating in the capacity market.
+This survey shows what was previously recognized, that electric
+vehicles are expected to have a role in power systems for energy
+storage and load balancing, and V2G technology should enable
+higher renewable energy penetration and reduced GHG emissions.
+Nevertheless, it is important to evaluate if, by themselves, EVs have
+the ability to accommodate all the variability of generation and
+demand in large scale power systems, or thermal generation will
+always be required for system balancing. This has no clear response,
+and this paper contributes to answer this.
+
+3. Approach
+The general methodology of this work is thoroughly explained
+in Refs. [6] and [37]. Bellow it is summarized the common approach
+of these studies, and detail is given to the differences and relevant
+aspects for the present discussion.
+The Portuguese electricity system is used as case study; it is
+particularly suitable for this purpose because this country has sig-
+nificant wind and solar potentials e the former is on the way to be
+tapped onshore, with 4.8 GW of installed capacity, corresponding to
+23% of share in the electricity mix in 2015, and the latter is almost
+untapped, with 0.43 GW of capacity and a share of 2% [13]. It is
+noteworthy that Portugal has one of the highest insolation levels
+among Europe [38].
+The impact of V2G on power systems can be quantified using
+aspects such as vehicle penetration, charging schedule, charging
+characteristics and driving patterns [17]. Based on this, one devel-
+oped a model for the electricity-EV mobility system in EnergyPLAN,
+a validated computer tool to analyse energy systems on an hourly
+basis, optimizing their operation [39]. The model was calibrated to
+a reference period (2015) to ensure its reliability, and then it was
+used to simulate future scenarios, as explained below.
+A technical optimization of the system was chosen as opposed to
+a market optimization, in order to capture how the system per-
+forms internally from the perspective of energy and power balances
+with V2G providing for stabilization; this would be compromised
+by a market driven simulation. Therefore, the model assumes that
+imports take place when the supply is lower than the demand, and
+that exports take place when there is energy excess. For the same
+reason, the model was set to consider that the import/export ca-
+pacity is not able to provide for stabilization.
+
+3.1. Scenarios
+A scenario for the year 2050 was designed and tested for
+different levels of V2G stabilization. It incorporates long term
+projections for the sectors of electricity and electric mobility from
+reference entities, such as the European Union [40] and the Inter-
+national Energy Agency [8]. The relevant details of the scenario are
+provided below.
+
+3.1.1. Power plants fleet
+The considered total installed capacity in 2050 is 41.4 GW, which
+approximately corresponds to 2.3 times the present level. It as-
+sumes a solar capacity of 16.7 GW and a wind capacity of 9.1 GW
+(on- and off-shore). It also assumes 5.7 GW of gas power plants and
+4 GW of pumped hydro storage. These capacities are built upon
+long-term European Union objectives for the climate-energy area
+and upon different reference scenarios presented in the literature,
+e.g. by the International Energy Agency, as Refs. [6] and [37] detail.
+Table 1 details all the relevant parameters used in the model.
+
+3.1.2. Import-export capacity
+The import-export capacity is assumed to be 3200 MW, in line
+with the objective for 2020 [41].
+
+3.1.3. Grid stabilization level
+To maintain constant balance between generation and load, a
+minimum share of load following capable power plants is needed.
+This is important to quantify in order to assure that the reference
+model accurately represents the reality, and to know in the sce-
+narios what part of the load diagram may be replaced by EVs
+providing for stabilization e see Section 3.1.6. Equation (1) can be
+used to find that level. At a given time, the share of dispatchable
+generation (dstab) is given as function of estab, the power output
+from regulation capable sources, and etotal, the total power that the
+system is producing at that time. The index i corresponds to the
+hourly values of the time horizon chosen for the analysis.
+
+The share of generation capable to stabilize the grid in 2015 was
+found to be 60.9% on average, with a minimum of 17.1%. However,
+although 2015 was the reference year for the calibration, this value
+was not considered in the scenarios, since in May 2016 a new
+minimum of 15.9% was identified; the latter was assumed for the
+2050 model. It happened in the middle of a four days straight
+period, during which the renewable generation always exceeded
+the demand (from 6:45am on Saturday, 7 May, until 5:45pm the
+following Wednesday). The regulation capable generation power
+output for that period is represented in Fig. 3.
+
+3.1.4. Thermal generation flexibility
+The operational range of thermal plants determines their ‘flex-
+ibility factor’, given by the fraction of annual peak load below which
+they are able to operate [42], as in Eq. (2), where eth represents the
+electricity generation from the thermal power plants fleet.
+
+The technical flexibility can be difficult to assess, as the mini-
+mum operating capability is determined by thermal units cycling
+costs [43]. In 2015 the natural gas power plants were shut down for
+several periods of the year, sometimes just briefly (<3 h); overall,
+they were totally stopped for about 8% of the time, even though
+2015 was a dry year, with an hydrological index of 0.74 (it translates
+water availability e a value of 1 corresponds to the average year)
+[44]. This suggests that these plants are operated very flexibly; for
+the future, the flexibility of thermal power plants is expected to
+increase [45], and so the model assumes for them 100% flexibility in
+2050.
+Table 1 summarises the input data assumed for the generation
+system in 2050.
+
+3.1.5. Electric vehicles
+The 2050 mobility scenario comprises an EV share of 61.4% of
+the total stock of passenger vehicles, corresponding to 2.56 million
+EVs, distributed as pure battery electric vehicles (PEVs) and plug-in
+hybrid electric vehicles (PHEVs), as Ref. [6] details. The energy
+density of the batteries was considered to double from present
+level, thus extending the driving range twofold. It amounts to a
+total of 89.5 GWh of potentially available battery storage. The
+average travel demand was considered to be 35 km/day, the same
+as in the present [46].
+Electric vehicles are assumed to be charged according to an
+optimized smart charging algorithm that minimizes excess of en-
+ergy production, scheduling EV charging to absorb it, and maxi-
+mizes V2G stabilization, using it to replace fossil based generation
+that is balancing the grid [47] (see next Section for details). If there
+is no energy in excess, the model evaluates the driving re-
+quirements for the next hours and forces the charging as needed, so
+that it does not interfere with the EVs driving requirements; it calls
+whatever dispatchable sources that are available to fully charge the
+batteries prior to driving, with priority to the less carbon intensive
+sources. As a last resource, fossil fuel power plants are ramped up or
+switched on. Conservatively, a unidirectional V2G operation was
+adopted, meaning that the model considers that V2G does not
+inject power into the grid (c.f. Section 2.1). It is considered that both
+PEVs and PHEVs are able to operate in V2G mode.
+It is assumed that 70% of the parked cars are connected to the
+grid, using 7.2 kW connections, which corresponds to residential
+circuits of 30 A [48]. From those connected, a varying amount of
+them, between 0 and 100%, are assumed to provide stabilization,
+which constitutes the ‘EV stabilization share’, defined in Eq. (3). The
+V2G capacity depends on the quantity of vehicles connected to the
+grid, which depends on the vehicles travel patterns, and on the
+stabilization share, as Ref. [37] details.
+
+3.1.6. Displacement of thermal generation by electric vehicles for
+stabilization
+In the model developed for the scenario, the production of the
+thermal power plants fleet at i hour is determined by Eq. (5), where
+cth is the installed capacity of the thermal power plant fleet
+(7071 MW); dtotal is the total power demand; etotal is the total power
+generation other than thermal; dstab is the grid stabilization level
+(Eq. (1)); ehydro is the large hydro power generation; CV2G is the V2G
+availability (Eq. (4)); and EV stab is the EV stabilization share 
+
+That is, except for the case in which the installed capacity serves
+as a constraint, in which energy import takes place, thermal gen-
+eration is given by the largest of (1) the difference between demand
+and the remainder of energy generation and (2) the minimum
+thermal power generation needed to stabilize the grid, which de-
+creases as EV stab increases. It should be noted that the model is
+designed to simulate aggregately thermal power production, i.e.,
+gas and biomass, but fuel is distributed differently according to the
+resource available, with priority given to biomass over gas. For
+additional details on the V2G modelling and the analytics part, see
+Ref. [37].
+
+3.1.7. Ramps
+It is assumed that dispatchable units are able to ramp at 100% of
+rated power per hour, both upward and downward. This assump-
+tion is based on the fact that biomass power plants, the slowest to
+react from those that are considered to exist in 2050 e gas turbines
+and reservoir hydro power plants are quicker e, are able to ramp at
+5e10% of rated power per minute [3]. It is also assumed that the
+provision of ancillary services by EVs are not restricted by ramps
+constraints, since batteries are very fast to react (100%/min) [16].
+3.2. Limitations
+The EnergyPLAN tool models hourly balanced energy scenarios
+and it is not designed to compute short dynamics of power systems.
+Parameters such as frequency and voltage fluctuations must be
+accounted separately by short-term dynamic simulations, which do
+not optimize energy and power balances like EnergyPLAN does.
+Therefore, the two types of simulations should be complemented
+by each other to ensure the feasibility of energy scenarios [51].
+Likewise, since EnergyPLAN models spatially aggregate energy
+scenarios, local or regional effects such as on the distributions grids,
+or transmission constraints, are not captured; consequently,
+regional grid analysis should serve as complement [52].
+
+4. Results and discussion
+To evaluate the results, a set of relevant parameters is analysed:
+natural gas share in the electricity mix, surplus of electricity, which
+corresponds to energy that needs to be curtailed after the export
+capacity is exhausted, and gas power plants ramps.
+For systems with high VRES existing capacity, net load can be
+very different than normal load, showing higher volatility and
+different ramping patterns [16]. This effect is illustrated in Fig. 5,
+showing the net load duration curves for the system in 2015
+(12 GW of RES capacity installed) and for the 2050 simulation
+(35.6 GW of RES). These curves represent the amount of time of the
+year that net load is above a given level. Two types of net load are
+shown for 2050: one excluding the EV smart charging load, called
+‘simple net load’, and the other including it, called ‘compound net
+load’.
+The figure confirms the increased variability in 2050, as shown
+by the much wider range of simple net load. The compound net
+load does not show such a wide range since the charging of the
+vehicles is mostly allocated to periods where the net load is
+negative. Note that in 2015 the system net load was always above
+zero, and that in 2050 it is above zero only about 6500 h, and so it is
+to expect that the capacity factor of balancing generation, namely
+gas power plants, will be reduced. It is also significant that without
+EV smart charging, as the simple net load curve shows, the system
+would operate in oversupply (negative net load) around 40% of the
+time. When EV charging is included, the frequency of oversupply
+episodes is strongly reduced, as shown by the compound net load
+curve. Also note that the peak power demand in 2050 is consid-
+erably reduced, both in amplitude and duration.
+Fig. 6 shows the natural gas share and electricity in surplus,
+relative to energy generation, as function of the EV stabilization
+share. It can be seen that even small levels of EV stabilization lead to
+important reductions in natural gas use and energy excess. More-
+over, the marginal benefits of incrementing EV stabilization are
+higher when its value is low, with pronounced diminishing returns
+from about 20% of EV stabilization, i.e., an EV stabilization greater
+than 20% does not lead to significant gains. Without EV stabiliza-
+tion, the natural gas share is 10.3% and the energy surplus is 1.5%;
+from 15% of EV stabilization onwards, the surplus is reduced to zero.
+This is because, as explained above, the EV stabilization, unlike gas
+stabilization, is achieved by balancing instantaneous loads without
+the need of any power injection. Regarding CO2 emissions, 30% of
+EV stabilization allows the reduction of 2.41 Mt, if one compares to
+0% of EV stabilization. This amounts to 15% of current CO2 emissions
+from the electricity sector [13]. These results suggest that even if
+V2G availability is smaller than what was considered, e.g. due to
+increased driving of vehicles or a lesser amount of them, it will
+probably continue to be enough to achieve the same.
+Fig. 7 shows the load duration curves of the thermal power
+plants ramps for 0 and 100% EV stabilization. It represents the
+amount of time of the year the facilities are operating above a given
+level of ramps. Comparing the model results with 2015, also shown
+in the figure, it can be seen that ramp rates will increase substan-
+tially. While 2015 ramps were comprised between 1000
+and þ 1000 MW/h, the model suggests that in 2050 this range
+could be extended to 3000 to þ3000 MW/h, as the result of
+increased VRES penetration. That is, even though the share of
+thermal plants decrease (from about 50% in 2015 to 19e30% in
+2050, depending on EV stabilization), they must operate in a rather
+more flexible way. Table 3 summarises this data.
+If one compares the differences between the results for 0 and
+100% EV stabilization, one sees that, without EV stabilization,
+thermal power plants must be operating virtually all the time,
+whereas for 100% EV stabilization they operate much less (depicted
+by zero values at the middle of the curve) e just 55% of the time.
+When EVs provide for stabilization, the average operating level of
+thermal power plants is strongly reduced and ramps at the ex-
+tremes are more pronounced. Without EV stabilization, the average
+ramp-down is 327 MW/min and ramp-up is 402 MW/min, whereas
+with 100% EV stabilization ramps are respectively 441 MW/min and
+677 MW/min, hence about 45% stronger. Table 4 summarises this
+data.
+Even though the results of Fig. 6 suggest that natural gas could
+be withdrawn from the electricity mix above 30% of EVs stabiliza-
+tion, the gas capacity ought to be replaced by flexible enough
+biomass or biogas capacity, in order to cope with the increased
+flexibility required for thermal power plants, as Fig. 7 notes. Even
+so, the primary resource to operate these power units does not
+need to increase since they will run with a low capacity factor, as it
+happens today with natural gas (23.8% in the Portuguese system in
+2015), which strengths the need to develop for these operators an
+effective capacity remuneration system, adapted to RES growth
+[53].
+Finally, Fig. 8 shows annual heat maps for the thermal ramping
+with different levels of EV stabilization (none, on top, and 100%, on
+bottom). They allow to draw three main conclusions: (1) between
+both scenarios ramps are similar during periods where the sun is
+below the horizon; (2) the more extreme ramping is at sunrise and
+sunset, because of the high solar capacity installed, that needs to be
+balanced during those periods; and, (3) in the 100% EV stabilization
+scenario, thermal power plants are mostly idle in the middle of the
+day.
+
+5. Conclusions
+
+Balancing power supply and demand will shift from the gen-
+eration to the demand side. Today, in spite of increasing levels of
+RES generation, balance is mostly achieved at the generation level,
+by adjusting controllable supply to power, namely from gas power
+plants, which have an important role stabilizing the grid. In the
+future, one alternative way to provide stabilization is by means of
+electric vehicles (EVs), since they represent controllable load
+capable of supplying ancillary services. This article explored the
+extent to which EVs might offer an alternative to gas to stabilize the
+grid. A model of the Portuguese power system in 2050 was used as
+case study. The results qualitatively are expected to be extendible to
+other systems alike, i.e., systems having a large share of renewable
+energy mostly balanced by large hydro and gas.
+The model results suggest that even small levels of EV stabili-
+zation lead to important reductions in gas use and energy excess.
+The gas share in the electricity mix is reduced from 10.2% without
+EV providing for stabilization to zero with 30% of EVs providing it;
+the energy excess is reduced from 1.5% to zero above 15% of EV
+stabilization. Larger EV stabilization does not lead to significant
+gains. It seems therefore that EV stabilization can eliminate the
+need for gas power plants.
+The results also show that by 2050 the maximum ramp rates are
+expected to increase markedly compared to today, by three fold,
+consequence of the high deployment of variable energy sources.
+That is, while the gas share might decrease, the remaining thermal
+power plants, such as biomass and biogas, will be required to
+operate in a rather more flexible way, and substitute gas capacity
+for flexibility provision. The 2050 model shows that, without EV
+stabilization, thermal power plants would be operating virtually all
+the time, whereas with it they operate much less. An effective
+remuneration system based on capacity is thus needed for these
+operators.
+Finally, it ought to be stressed that there is no experience of
+using fleets of EVs to provide grid flexibility at a large scale. If this
+becomes a reality, significant changes in the way power systems are
+operated will be needed. Predictably, there will be key challenges to
+address, such as the monitoring and analysis of large integrated
+data generated by the EVs to support the system operation, and
+issues related to system adequacy. Nonetheless, the authors believe
+that studies like this are useful to gain a conceptual understanding
+on how the factors affect each other, outlining possible develop-
+ment paths to the decision-makers, giving them insight about the
+effects of their policies.

@@ -1,0 +1,668 @@
+<heading>
+Title: Effects of Using Game-Based Learning to Improve the Academic Performance and Motivation in Engineering Studies
+Author: Pablo Pando Cerra, Humberto Fernández Álvarez, Bernardo Busto Parra, and Paula Iglesias Cordera
+Journal: Journal of Educational Computing Research
+Year: 2022
+</heading>
+
+Abstract
+Game-Based Learning (GBL) is increasingly widespread as a learning technique in the engineering studies. However, this innovative methodology may be difﬁcult to incorporate in some subjects due to their complex contents. This paper aims at combining traditional learning methodologies with game mechanics by using an ad-hoc gaming web environment and mobile devices to analyse the academic performance and motivation in engineering studies. A comparative study was carried out with 96 ﬁrstyear engineering students. In this experience, the students were randomly divided into two groups: Control Group (CG) and Experimental Group (EG). The ﬁrst group made use of the traditional learning methodology used, whilst the second group combined the traditional methodology with GBL and Information and Communication Technologies (ICT). The obtained results show that EG students signiﬁcantly improve their academic performance and motivation, expressing a succinctly greater interest in the studied subject. Therefore, the integration of GBL in the teaching methodology could have a very positive impact as well as it could greatly ease the teaching-learning process in engineering studies.
+
+Introduction
+Since the launching of the European Higher Education Area (EHEA), many efforts have been gone into changing the learning methods of complex or challenging subjects within engineering studies. Conventional teaching methodologies become boring for students that are used to access cutting-edge technologies (Arango-Lopez et al., 2019). The new generation of students (digital natives) are more used to deal with technology than the previous generations (Dingli & Seychell, 2015). Students employ smartphones or tablets during their everyday life for many purposes such as play games or socially interact. Therefore, the educators have to seek alternatives for engaging and encouraging students, who are increasingly connected to technological devices (Callaghan et al., 2017). Thus, some authors promote the need for new learning models that integrate the use of technologies into educational contents (Eltahir et al., 2021). Performance and motivation are key characteristics that inﬂuence the learning process in engineering studies (Braghirolli et al., 2016). Aspects such as tough concepts, excessive workloads, unattractive methodologies or the lack of participation may cause a loss of the students’ interest or the abandonment of their studies, which is even worse (Ruiperez-Valiente et al., 2017). In order to keep students interest and motivation, complex concepts need to be taught in a new, immersive and interactive way, which make learning fun for students (Butler & Ahmed, 2016). Some pedagogical strategies such as Game-Based Learning (GBL) may not only ease the understanding of complex key aspects of certain subjects, but also improve the learning quality, increase knowledge retention and deepen students’ commitment to their continuous selfevaluation. GBL has become very popular as a means of providing students with non-conventional learning opportunities in Higher Education (Bodnar et al., 2016). In the case of engineering studies, students can perceive the use of game mechanics as a different and motivating way of applying knowledge in decision-making (Sevim-Cirak & Yildirim, 2020). Therefore, these strategies aim at encouraging student participation in certain activities, through more dynamic work environments than the traditional ones (Piedad Gasca-Hurtado et al., 2018). The proposed activities can be diverse and mainly depend on the available facilities and resources, as well as the participants proﬁle (Miguel Pena & Fuentes Agusti, 2018). Additionally, the today’s competitive job market demands people with transversal competencies, such as creativity, communicability or the ability to solve problems. Engineering skills could be also developed by promoting active learning through games, as suggested in Ruiz et al. (2018). The use of game elements during the training process can help students to acquire competencies and improve the university graduate’s knowledge (Mozgaleva et al., 2018). Similarly, many studies have shown that educational games are a clear motivation for learning engineering skills (Tsai & Tsai,
+Pando Cerra et a
+
+2020). Therefore, a proper game design could provide a favourable environment to efﬁciently develop skills, which could be difﬁcult to acquire using traditional methodologies in engineering studies. It has to be mentioned that adapting game strategies to speciﬁc subject objectives is often tricky and requires a detailed analysis on the different effects caused on the learning process (Dicheva et al., 2018; Ibanez et al., 2015; Piteira et al., 2017; Silveira & Orlando Villalba-Condori, 2018). The goal of this paper is to analyse the effects on the performance and motivation of the students when introducing GBL techniques in subjects that include complex technical contents.
+
+Research questions
+Training in engineering studies needs to incorporate innovative strategies to improve the academic performance whilst motivating students. This paper aims to identify, analyse and discuss a GBL experience carried out in the context of engineering studies. It also presents the role that GBL and Information and Communication Technologies (ICT) can play in the learning process of certain subjects that are perceived as complex by students. Therefore, this paper tries to answer the following research questions: RQ1. Are there signiﬁcant differences in academic performance between students who used GBL and those who did not? RQ2. Are there signiﬁcant differences in learning motivation between students who used GBL and those who did not? RQ3. What perceptions have students had about the learning model used in each case?
+
+Literature review
+Game-Based Learning. Pinedo et al. (2021) deﬁnes GBL as ‘the use of games to support learning in educational settings or as educational tools’. GBL is built upon a constructivist type of learning. Students work to achieve a goal by interacting with their environment and solving challenges through experimentation. Therefore, they learn and actively practice different techniques applicable to the studied subject. This methodology brings situations that require to work on different skills such as decision making, leadership or communication, in order to solve these challenges. In addition, GBL usually includes a game-like environment where students practice the learnt contents through the proposed activities. In this way, students can learn from their mistakes and try again exercises in a risk-free environment. Unlike other entertainment games, Shu and Liu (2019) stated that GBL is a type of game that has interesting learning outcomes. In other words, games are not only designed for students to enjoy, but also for guiding them towards a learning objective. Therefore, GBL seeks to adapt these game mechanics to a new contexts (as long as it can be applied) and thus, generate a change in the attitudes and behaviours of students during their learning process (Garcia et al., 2020; Souza et al., 2018).
+
+4
+The use of game mechanics has received increasing attention by educational researchers over the last few years, since it can be an interesting tool to improve the students’ learning process (Kim et al., 2020). There are numerous studies that demonstrate the positive effect that GBL has on improving the performance of students during their training processes (Dancz et al., 2017; Saba, 2020; Sabourin & Lester, 2014). In addition, the use of GBL can also enhance other skills. For instance, some authors showed that the use of GBL was effective in promoting higher levels of critical thinking among students (Mao et al., 2021; Cicchino, 2015). Yi et al. (2020) focused on analysing the inﬂuence of the students’ personality in the implementation of GBL in education. Sousa and Rocha (2019) examined how the use of GBL affects the leadership development. Other authors focused on the advantages of this methodology to improve students’ conﬁdence and increase their motivation to learn (Bennis & Amali, 2019; Gil-Doménech & Berbegal-Mirabent, 2019; Moylan et al., 2015). Some studies showed that the people motivation during the entertainment games is not equal to the one acquired in an educational game (Garay, 2021). For example Melero and Hernandez-Leo (2017) studied the beneﬁts of GBL, concerning the student motivation and engagement, through the design of located-based games. Crocco et al. (2016) concluded that the use of games are beneﬁcial on subjects that generate anxiety over students as they increase their enjoyment level. Schmitz et al. (2015) argued about the use of GBL as a tool that can help to overcome certain ‘barriers to learning’, such as low motivation. Game-Based Learning in Engineering. Game-based learning techniques has become a promising trend within the engineering studies in subjects as diverse as Algebra (Garcı́a & Cano, 2018), Differential Calculus (Zabala-Vargas et al., 2021), Sustainability and Engineering Management (Viswanathan & Radhakrishnan, 2018), Production Systems (Silva et al., 2017), Railway Engineering (Rajaonah et al., 2018), Textile Engineering (Ursache et al., 2015) or Industrial Systems Optimization (de la Pena Esteban et al., 2020). It has also been applied to the acquisition of transversal competences, such as writing and oral communication (Bodnar & Clark, 2017) or leadership (Nelson & Ahn, 2018). It is also important to analyse the manner in which ICT allows the integration of GBL into conventional engineering learning frameworks. The design of online tools to monitor the proposed activities and the implementation of game mechanics have been linked to the widespread development of ICT. In this sense, Braghirolli et al. (2016) stated that one of the main students’ beneﬁts from using educational Web Games is the opportunity to satisfy the demand for knowledge and motivation. It should be mentioned that there are many researches that analyse these online environments. Aziz et al. (2012) discussed the use of different game platforms to implement interactive laboratory environments for engineering students. Xiao et al. (2018) developed an online game-based environment to train the spatial visualization skills of ﬁrst-year Engineering students. Wang and Abbas (2018) designed web-games to teach Transportation Engineering and found that these type of activities can improve the students’
+
+Pando Cerra et al
+understanding of the hard concepts related to this subject. Other authors designed
+negotiation and decision-making games for engineering students, drawing similar
+conclusions to the Wang and Abbas ones (Dzeng & Wang, 2017; Milosz & Milosz,
+2018).
+The widespread growth of mobile devices has also been crucial for supporting
+technical learning processes. For this reason, the adaptation of game mechanics to this
+type of device is being widely disseminated. Thus, Smith and Chan (2017) showed that
+the combination of GBL and mobile technology motivate ﬁrst-year engineering students and improve their academic performance to learn computing based technologies.
+Jaramillo-Alcazar et al. (2018) proposed a mobile serious game based on basic
+principles of electrical circuits, which is oriented to students with hearing or visual
+impairments. Guler and Yucedag (2018) implemented an Android application based on
+game mechanics, which can be used for training in the ﬁeld of Machine Technology.
+Some authors seek to improve engineering education by using mobile applications with
+augmented reality (Criollo-C et al., 2021; Kanivets et al., 2020). Others made use of
+mobile devices equipped with a Radio Frequency Identiﬁcation (RFID) reader to
+design gaming strategies, improving the learning outcomes of the students (Chang &
+Lin, 2012; Zapata Rivera & Aranzazu Suescun, 2015).
+The research carried out in this paper aims at analysing the advantages of integrating
+GBL techniques in the engineering studies, as well as its application in contexts
+perceived as complex by the engineering students. Moreover, the effects of using game
+mechanics on the students’ academic performance and motivation during their learning
+process are also analysed.
+
+Methodology
+Context and Participants
+A subject perceived as complex by the students (Engineering Graphics) was selected to
+carry out this experiment. Graphic representation skills (technical drawings or diagrams, general views of technical objects, etc.) are fundamental for any engineering
+student (Aleksieiev et al., 2018) and even more for ﬁrst-year students, who often
+experience difﬁculties in visualizing 3D objects and creating mental images of the
+engineering models (Alqahtani et al., 2017). In this case, the traditional tools (textbooks, physical models, modelling techniques, etc.) may not be enough to improve this
+visualization.
+It should be noticed that game mechanics have been scarcely implemented in
+complex subjects like the one used in this experiment, perhaps due to the characteristics
+of the required content (graphic representation and visualization). However, as indicated by Chu et al. (2015), the majority of engineering students need technical graphic
+communication skills, which are not appealing for most students. Therefore, the use of
+game mechanics could keep students interest and motivation to learn this subject.
+
+6
+Ninety-six ﬁrst-year engineering students (aged from 18 to 19years old) have
+participated in this experience. They were randomly assigned into two groups to learn
+Engineering Graphics:
+· Control Group (CG): 45 students that used conventional learning methodologies
+(lecture notes; practice sessions with Computer-Aided Design (CAD) tools;
+traditional techniques for solving exercises on a paper or with the help of a
+computer).
+· Experimental Group (EG): 51 students that used the aforementioned conventional learning methodology and GBL.
+All participants were informed about the objectives of the research. Their anonymities were maintained and they could withdraw from the experiment at any time
+without penalty. However, all the students completed the experience.
+
+Experimental Design
+A randomized experiment was adopted in this research to investigate the effect of GBL
+on academic performance and learning motivation. The followed procedure during the
+experience is shown in Figure 1. The curriculum of Engineering Graphics is divided in
+three blocks: Descriptive Geometry (DG), Technical Drawing (TD) and CAD. All the
+students received the same theoretical training (lecture notes) and collection of exercises for personal work. Similarly, all of them received the same introductory laboratory sessions to CAD.
+The key difference on the learning mechanism followed by both groups stems from
+the learning resources received by the students during the study of the subject. On the
+one hand, CG took eight face-to-face sessions (2hours each) to solve questions and
+carry out exercises that complemented their personal work using the conventional
+methodology. On the other hand, EG combined ﬁve face-to-face sessions with 3 game
+sessions (2hours each) on which students accessed a series of challenges from a Web
+Gaming environment. Each game session tackles a content block of the subject: DG,
+TD and CAD. Examples of the proposed challenges can be seen in Figure 2. In the
+game sessions, students were divided automatically by the Web environment into teams
+of 3–4 people and each team was monitored by a professor. The teams competed with
+each other to ﬁnish the proposed challenges related to the content of each subject block.
+In order to get clues that led to solve other challenges, the teams could also make use of
+the apps installed on their mobile devices (multimedia, QR codes, GPS, etc.), as well as
+the conventional resources of the subject (drawing instruments and CAD software).
+For the design of the experience, Keller’s ARCS motivation model (Keller, 1987)
+was applied. This model is one of the most widely mentioned theories of motivation in
+education and its effectiveness in different learning contexts has been demonstrated by
+many authors (Li & Keller, 2018; Zabala-Vargas et al., 2021). ARCS establishes four
+dimensions to promote learning: generate curiosity in the student (Attention), link the
+Pando Cerra et al
+
+Figure 1. Procedure used during the experience.
+
+content with the students’ expectations (Relevance), help students to understand their
+chances of success (Conﬁdence) and make rewarding the students’ learning (Satisfaction). Therefore, an active and continuous participation of the student was sought to
+guarantee their commitment throughout the learning process.
+It is important to notice that the game sessions were initially conducted face-to-face,
+but due to the COVID-19 pandemic and the sanitary restrictions, the last game session
+had to be done online, using Microsoft Teams® to coordinate the teams. In addition, the
+rest of the activities carried out by both groups during the last stage of the experience
+(lectures and classroom practices) were also conducted online, but no difﬁculties were
+detected in completing them.
+Once completed each block, the students carried out a ﬁnal test to assess their
+acquired knowledge. Each test consisted of several exercises related to the contents of
+the subject. In addition, all the students at the end of the experience had to answer a
+8
+Figure 2. Examples of the proposed challenges.
+
+questionnaire to evaluate the students’ motivation and their perception about the
+methodology and the acquired competencies.
+
+The Web Game Environment
+An interactive ad-hoc game environment, called DIBROOM, was built to this experience. It is a cross-platform web application, developed with HTML5 that allows the
+students to face the proposed challenges by using a collaborative environment.
+Nowadays, many ﬁelds of knowledge have adopted HTML5-based frameworks to
+develop educational games (Marin-Vega et al., 2016). DIBROOM has a responsive
+design, adaptable to any device (PC, tablet or mobile) and exhibits a real time synchronization, so that the students, belonging to the same team, can visualize the current
+progress of the game, including the overcome and pending challenges.
+Once the students have accessed to the game area, they are randomly assigned to a
+team and have access to the proposed challenges (identiﬁed as bombs) and the remaining time to complete them (Figure 3). DIBROOM guides students through the
+different challenges, whilst controlling both their results and completion times. A
+synchronization process is conducted in the background, so that the members of the
+same team have the same real time information.
+On the other hand, the professors can also design ad-hoc challenges parameters (type
+of response, description, challenge category, numerical tolerance to the response,
+maximum number of attempts, etc.), monitor the progress of the game in real time and
+analyse the results and rankings of each team in DIBROOM, as shown in Figure 4.
+
+Pando Cerra et al.
+Figure 3. Captures of DIBROOM and game sessions.
+
+Figure 4. Management module in DIBROOM.
+
+Research Instruments
+Achievement tests. The achievement tests were based on the subject contents. A total of
+three tests were carried out:
+· The tests concerning the block 1 (DG) and 2 (TD) comprise four exercises. They
+have to be solved using the conventional drawing instruments and materials and
+are marked over a maximum of 40 points each.
+
+· The test corresponding to block 3 (CAD) comprises two exercises. They have to
+be solved using CAD software and are marked over a maximum of 20 points.
+
+It should be mentioned that the duration of each of the tests was 2hours. All the
+achievement tests were taken under similar conditions and with similar time limitations
+and scoring procedures. In addition, their content validity was reviewed and ensured by
+other two experts in this subject.
+
+Questionnaires
+The Instructional Materials Motivation Survey (IMMS) questionnaire was adopted in
+this experience. The IMMS was designed by Keller (2010) to evaluate the motivation
+effect in each of the dimensions of the ARCS model. The IMMS is a 36-item scale
+consisting of four subscales: Attention (A), Relevance (R), Conﬁdence (C) and Satisfaction (S). The questionnaire adopted a 5-point Likert scale from strongly disagree
+(1), disagree (2), neither agree nor disagree (3), agree (4) to strongly agree (5). The
+Cronbach’s α for each subscale was 0.838, 0.821, 0.775 and 0.83, respectively, and
+0.877 for the survey. All of the aforementioned subscales exceeds 0.7, so the internal
+consistency of the survey is estimated as high.
+To complement the results of the IMMS and collect data for evaluating the perceptions of the students, other questionnaire was also conducted aiming at assessing
+four aspects (contents, materials, tools and methodology) concerning the teachinglearning process in the proposed experience (4-items 5-point Likert scale, Cronbach’s
+α = 0.8375), as well as the possible transversal competencies that students considered as
+acquired during the experience.
+
+Data Analysis
+Quantitative data was collected for analysis and descriptive statistics were used to
+summarise them. Different statistical analyses were carried out to examine any signiﬁcant behavioural difference between CG and EG. Analyses were conducted using
+the SPSS program (version 28.0.0.0).
+To answer RQ1, the results of the achievement tests carried out at the end of each
+content block were analysed. To answer RQ2, the results of the IMMS, which studies the
+degree of motivation of the students after the teaching-learning, were examined. To
+answer RQ3, the complementary questionnaire, which evaluates the students’ perceptions
+about different aspects of the used methodology during this experience, was analysed.
+
+Results
+Effect of the GBL Model on academic performance
+An independent-samples t-test was run to determine whether there were differences in
+the total mark (TOTSCORE) between CG and EG students. There were no outliers in
+Pando Cerra et al.
+Table 1. Results of the Academic Test.
+
+Block Content
+DG
+TD
+CAD
+TOTSCORE
+
+CG
+EG
+CG
+EG
+CG
+EG
+CG
+EG
+
+N
+
+M
+
+SD
+
+Max. Score
+
+45
+51
+45
+51
+45
+51
+45
+51
+
+22.61
+26.73
+21.00
+25.15
+13.33
+14.50
+56.95
+66.38
+
+8.93
+8.09
+9.75
+9.33
+4.67
+4.45
+20.64
+19.46
+
+40 points
+40 points
+20 points
+100 points
+
+Passing Students
+(at Least 50%
+Max Score)
+29
+43
+27
+37
+37
+46
+36
+46
+
+(64.4%)
+(84.3%)
+(60.0%)
+(72.54%)
+(82.2%)
+(90.1%)
+(80.0%)
+(90.1%)
+
+df
+
+t
+
+p
+
+94
+
+2.369
+
+.020
+
+94
+
+2.131
+
+.036
+
+94
+
+1.249
+
+.215
+
+94
+
+2.304
+
+.023
+
+the data, as assessed by inspection of a boxplot. The scores for each group were
+normally distributed, as assessed by Kolmogorov-Smirnov’s test (p > .05), and there
+was homogeneity of variances, as assessed by Levene’s test for equality of variances
+(p = .654). As shown in Table 1, there was a statistically signiﬁcant difference in scores
+between CG and EG students, with EG students scoring higher than CG students, M =
+7.66, SE = 3.44, t (94) = 2.226, p = .028. Similarly, Figure 5 shows the distribution of
+students by the obtained results in the TOTSCORE variable, which has been divided
+into four categories: (LOW, MEDIUM, HIGH and EXCELLENT).
+In addition, other three independent-samples t-test were also run to determine
+whether there were differences in the partial marks of each content block (DG, TD and
+CAD) between CG and EG students. There were no outliers in the data, as assessed by
+inspection of a boxplot. The scores for each group were analysed using Kolmogorov–
+Smirnov’s test (p > .05), concluding that they are normally distributed. In addition,
+there were homogeneity of variances, as assessed by Levene’s test for equality of
+variances (p = .985 in DG, p = .752 in TD, p = .07 in CAD). As shown in Table 1, there
+was a statistically signiﬁcant difference in scores between CG and EG students in DG
+and TD blocks, but not in the CAD block.
+
+Effect of the GBL Model on Learning Motivation
+Hotelling’s T2 was run to determine the motivational differences among CG and EG
+students. The four dimensions of the IMMS questionnaire were assessed: Attention
+(ARCS-A), Relevance (ARCS-R), Conﬁdence (ARCS-C) and Satisfaction (ARCS-S).
+The preliminary assumption checking revealed that data was not normally distributed,
+but normality is assumed because Hotelling’s T2 is fairly ‘robust’ to deviations from
+normality with respect to Type I error (Bray & Maxwell, 1986); there were no univariate or
+multivariate outliers, as assessed by boxplot and Mahalanobis distance (p > .001), respectively; there were linear relationships, as assessed by scatterplot; no multicollinearity
+(|r| < .9); and there was homogeneity of variance-covariance matrices, as assessed by Box’s
+M test (p = .002). Table 2 shows the analysis results of the IMMS dimensions. The
+12
+Figure 5. Distribution of the students’ results by category.
+
+differences between the groups on the combined dependent variables was statistically
+signiﬁcant, F (4, 91) = 5.526, p < .001; Wilks’ Λ = .805; partial η2 = .195. A Bonferroni
+adjusted α level of .0125 with a simultaneous 95% conﬁdence level was used.
+
+Students’ Perceptions of the Learning Model
+A Mann–Whitney U test was run to determine whether there were differences in the
+assessments about contents, materials, tools and methodologies between CG and EG
+students. Distributions of the scores for both groups were similar, as assessed by visual
+inspection. As shown in Table 3, the assessments in methodologies was statistically
+signiﬁcantly but not in contents, materials and tools.
+The transversal competencies that the students considered as acquired during the
+experience were also analysed. Figure 6 shows the number of students in each group
+who have identiﬁed each competence as being faced during the game sessions.
+
+Discussion
+Effect of the GBL Model on Academic Performance
+From this experience, it can be pointed out that the difference between the mean marks
+of the ﬁnal test for each group is quite signiﬁcant. EG, which made use of traditional
+Pando Cerra et al.
+Table 2. Results of the IMMS Test.
+
+Attention (ARCS-A)
+Relevance (ARCS-R)
+Conﬁdence (ARCS-C)
+Satisfaction (ARCS-S)
+Total
+
+CG (N=45)
+
+EG (N=51)
+
+M
+
+SD
+
+M
+
+SD
+
+2.925
+2.92
+3.239
+3.074
+3.027
+
+0.757
+0.847
+0.563
+0.99
+0.46
+
+3.253
+3.235
+2.938
+3.568
+3.222
+
+0.619
+0.631
+0.838
+0.634
+0.341
+
+T
+2.299
+2.038
+2.081
+2.871
+2.372
+
+df
+
+p
+
+85.112
+80.599
+88.014
+73.192
+94
+
+.024
+.045
+.04
+.005
+.02
+
+Table 3. General Assessment of the Experience.
+
+CONTENTS
+MATERIALS
+TOOLS
+METHODOLOGY
+
+CG (N=45)
+
+EG (N=51)
+
+M
+
+SD
+
+M
+
+SD
+
+3.11
+3.16
+3.09
+3.11
+
+1.402
+1.413
+1.311
+1.496
+
+3.12
+3.27
+3.00
+3.80
+
+1.351
+1.266
+1.200
+1.296
+
+t
+0.023
+0.435
+0.347
+2.431
+
+Figure 6. Transversal competencies acquired during the experience.
+
+df
+
+p
+
+94
+94
+94
+94
+
+.982
+.665
+.730
+.017
+
+14
+learning methodology and game mechanics, has scored almost 10 points more than CG,
+which only used traditional learning methodologies.
+A deeper data analysis gave rise to promising results. Firstly, the number of students
+receiving failing grades (LOW Category) is 20% for the students belonging to the CG
+and 9.9% for the ones of EG. Therefore, the failure rate is halved. These data further
+reﬂect the importance of the obtained results, considering that EG was the largest
+group. On the other hand, students with marks greater or equal to 70 (HIGH and
+EXCELLENT categories) are just 12 (26.6%) for the CG, increasing this number to 22
+(43.1%) for the EG, which means that 16.5% more students in the EG achieve high
+marks. It is also observed that the number of students in the MEDIUM category is
+similar in both groups (24). In summary, it is obvious that the results show a clear
+tendency towards the students’ improvement in EG, who noticeably increase their
+marks, whilst reducing the students who fail.
+Noticeable differences can also be found by analysing the results obtained in each
+content block separately. The mean marks obtained in each block for the students of EG
+are always higher than for the students of CG. Furthermore, the percentage of students
+who passed each content block test also underwent an appreciable increase in EG
+(above 80% in DG and CAD, and above 70% in TD), as shown in Table 1. In contrast,
+the percentage of students in CG group who passed each content block test was lower
+than 70% in DG and TD and reached 80% in CAD test. Therefore, the question is:
+Where could the observed difference come from? The differentiating element in all
+cases was the integration of GBL and its combination with ICT in the conventional
+learning methodology. The students highlighted the difﬁculties of understanding different abstract concepts, mainly from the ﬁeld of DG and TD. Therefore, the game
+mechanics tried to provide a mechanism to clarify the utility and applicability of these
+subject concepts by preparing the proposed challenges to the students in this experience,
+but what about the CAD content? In the technological era, this block is perhaps the most
+similar in the resolution methodology applied to both groups because all of them used
+technologic devices to learn the contents. The latter could be the reason for the increase in
+the number of students who passed the CAD test in CG. It should also be remembered
+that the performed statistical analysis has concluded that there were no signiﬁcant
+differences in the means of both groups in the CAD block. Therefore, this analysis does
+not clarify the reasons why the percentage increased to 90.1% in the case of EG students.
+Consequently, the introduction of ICT and game mechanics for learning Engineering
+Graphics contents can explain the academic result improvements. The combination of
+games and conventional technologies and procedures may also promote the students’
+interest and effort and hence, boost their learning process. The latter was also reﬂected
+in other literature articles (Lambruschini & Pizarro, 2015; Caulﬁeld et al., 2011).
+
+Effect of the GBL Model on Learning Motivation
+The students’ motivation is a key characteristic for their success in the engineering
+studies (Cho et al., 2021). From the conducted IMMS analysis, higher motivational
+
+Pando Cerra et al.
+levels were observed for the students that employed the proposed GBL than for those
+that only used traditional methodologies. Indeed, this tendency has been already
+showed by the EG students during the proposed experience. Most of them highlighted
+that the context on which the presented concepts were introduced was more aligned with
+a real situation. Therefore, the students showed a greater predisposition, which clearly
+enhance the understanding of the concepts. However, for the students in CG this subject
+was just one more within the Engineering students and they do not concede it a special
+relevance, which may cause a negative effect and even give rise to a loss of interest.
+Analysing separately the obtained results for each subscale of the IMMS, several
+conclusions can be drawn. For the Attention subscale (ARCS-A), the students of EG
+gave it a greater value (+0.328 points). It should be mentioned that it is always important to stimulate the students’ curiosity during their learning process using new
+methods. Consequently, new images, schemes, animations or lab sessions are introduced in the subject each year, trying to avoid the loss of interest arising from
+monotonic, boring and outdating contents. The proposed game mechanic was a step
+forward and introduced important changes in the learning program, creating a thirst for
+knowledge. In this sense, the introduction of challenges increases the students’ intrinsic
+motivation, as stated by Kashdan and Fincham (2004). On the other hand, the CG
+students only gave a mean of 2.925 points to this IMMS subscale. The students of CG
+did not feel the same sense of challenging as their classmates in EG and this could be
+one of the causes that give rise to this lower scoring.
+Similar results were obtained for the Relevance subscale (ARCS-R). Students of CG
+did not give a particular relevance to neither the subject contents nor the employed
+methodology (CG 2.92 vs. EG 3.235). They understand that this subject was important
+for their training as engineers, but they did not be aware of the application of most of the
+learnt concepts. In general, the students’ learning motivation increase when they feel
+that the new knowledge could be useful for their future and this is what the students in
+EG felt. Indeed, it is extremely important to know the potential use of the acquired
+knowledge, which was attained in this experiment using ICT and game mechanics that
+reinforce the sense of utility. Therefore, challenges such as the one shown in Figure 2, in
+which DG combined with the GPS of mobile devices was employed to ﬁnd the next
+clue, aiming at giving the students a further motivation to understand the reasons for
+acquiring this knowledge.
+On the other hand, for the Conﬁdence subscale (ARCS-C) different results were
+obtained. Students in CG appreciated more this subscale than those in EG (+0.3 points).
+In addition, it was the most valued subscale by the students in CG and the worst for
+those in EG. Which could be the reason of this change of trend? Conﬁdence is closely
+related to the way students explains their successes and failures. In the conventional
+learning (CG), students knew the way to tackle the study of the subject and they have no
+doubts about the method to follow. Instead, the EG students had to deal, in real time,
+with an unexpected situation, which has to be solved in a collaborative manner. Indeed,
+the real time monitoring tools implemented in DIBROOM allowed to instantly detect
+anxious moments. Some of these moments were caused by: too many consecutive
+
+16
+attempts to solve some of the challenges, a wrong starting point for solving them or the
+limited time to complete them. In this regard, the professor in charge of monitoring the
+game was able to react to these situations in real time, which was noticed and appreciated by the students during the experience. Limiting the number and length of
+game sessions was also important in this experience, because extended work sessions
+could reduce motivation and productivity (Browne et al., 2018).
+Finally, the Satisfaction subscale (ARCS-S) was the best valued by the students in
+EG, with a mean of 3.56 points, increasing it by 0.494 points with regards to the
+students in CG. According to Keller (2010), satisfaction is the positive feelings that the
+students experiment when they learn the proposed concepts. Therefore, satisfaction is a
+way to feel fulﬁlled after a learning experience. The students in EG expressed a greater
+sense of pride and happiness after ﬁnishing the game sessions, leading to more active
+participation not just during the sessions but also outside of them.
+In summary, the students of EG obtained better score results than those in CG
+regarding all the subscales except Conﬁdence. Therefore, the proposed GBL methodology grows the students’ interest and reinforces their satisfaction at the same time
+that the learning relevance also increases.
+
+Students’ Perceptions of the Learning Model
+The results showed in Table 3 unveiled relevant conclusions about this experience.
+Both groups (CG and EG) gave similar scores to the subject contents, materials and
+tools, with differences lower than 4%. All the students worked under the same conditions with regards to the aforementioned three ﬁelds, except for the availability of the
+gaming platform for the students in EG. It should be mentioned that the obtained results
+agree with the expected ones. The statistical analysis concluded that there were no
+signiﬁcant differences in the means of both groups. However, different results were
+obtained when assessing the methodology. Students in EG assessed the proposed
+procedure in a more positive way than those in CG. Indeed, this assessment increased
+by 22%. Signiﬁcant differences on the mean was shown between both groups.
+Consequently, as the only differentiate element between both groups was the employment of GBL combined with ICT in the EG, it can be clearly concluded that
+students attributed a great importance to this new teaching-learning methodology.
+Due to the COVID-19 pandemic and the sanitary restrictions occurred during this
+experience, it was also possible to compare the use of these game mechanics both in
+person and online. Although certain challenges had to be adapted to the new context, no
+differences were observed in the way students tackled the challenges. Only an initial effort
+to adapt to the remote coordination through Microsoft Teams was detected. However, the
+latter is reasonable as it was a new experience for many students. Nevertheless, once they
+got used to this new environment, they worked in the same way as in person.
+Conclusive results were also obtained from the students’ perception about the
+transversal competences on which they have been worked on (Figure 6). Firstly, both
+groups agreed on the usefulness of self-assessment and the oral and written
+
+Pando Cerra et al
+communication. The results also showed that the students in EG acquired more
+transversal competences than those in CG. Some subjects such as the one analysed in
+this experience (Engineering Graphics), which involves gaining competences in
+graphic visualization and representation, have special difﬁculties in training skills such
+as leadership or team orientation, that are necessary for the professional world as
+indicated by Knutas et al. (2016). In many cases, these subjects are undervalued by
+students due to their little practical application in areas, where it is necessary to carry
+out tasks under pressure or cooperative work in a limited time. Therefore, an increase of
+the motivation using game mechanics to apply ‘group skills’ in these types of subjects
+should be sought. In this regard, Estrella Sousa-Vieira et al. (2016) stated that the
+students’ game activities increase their participation and the development and reinforcement of some abilities, such as team working. The methodology and tools
+presented in this paper could facilitate the development of these features in subjects
+perceived as complex by the engineering students. These aspects were precisely the
+most valued by the students in the complementary survey, especially the abilities
+related with collaborative work. For this reason, random team generation tools were
+used to create different teams in each game session. In this way, students with little or no
+personal contact were compelled to work and collaborate together, avoiding competition between them as they have no time to known each other and their personal skills.
+Therefore, the use of GBL also facilitated the acquisition of other important skills for an
+engineer such as leadership or group work.
+In summary, the experience has been highly positive, both from the point of view of
+the teacher (a high interaction among students has been observed) and the student
+(‘group skills’ has been one of the best valued element during the experience by them).
+Besides, the students have been able to identify their way of acting in similar situations
+to the ones that they may face in their future work environment.
+
+Conclusions
+The growing perception to certain complex subjects of the engineering studies among
+students can generate a loss of motivation during their learning process. The presented
+experience aims at developing an alternative way to traditional pedagogical approaches
+for learning these complex subjects, facilitating the integration of technological resources, such as DIBROOM and innovative techniques such as game mechanics, to
+improve the interest and the academic performance. In this way, the internalization of
+knowledge is facilitated using a funny environment and generating a positive experience for the student. The latter was conﬁrmed by the results obtained during this
+experience and the feedback provided by the students.
+The results reinforce the idea that the use of this type of innovative strategies during
+the teaching-learning process is highly appreciated by the students. They are opened to
+different ideas regarding the way they have to face the study of subjects, demonstrating
+a great commitment towards effort and personal ambition. Additionally, the combination of traditional methodologies with ICT and game mechanics in subjects that are
+18
+perceived as complex by the engineering students has resulted in the improvement of
+the academic performance and the creation of positive synergies among students.
+In many cases, the learning methodology of some engineering subjects focuses on
+the individual learning of the student, leaving aside the importance of acquiring other
+professional skills such as leadership, teamwork, and communication orientation. The
+acquisition of these competencies could be an additional factor to achieve the improvement of the results observed in the case of EG students. However, the proposed
+study cannot quantify the degree of relevance in the results. The latter will be addressed
+during future studies.
+The model presented in this study can greatly contribute to enriching the educational experience of students and facilitating their interactions. The latter is obtained through a collaborative learning process by using the interactive environment,
+the supported apps and game sessions which are integrated within the teaching
+methodology. The possibility of monitoring the students’ progress also allows certain
+control of both the learning and the professional competences that are developed
+within this methodology.
+Therefore, this type of teaching methodology has come to stay, as it has a great
+potential to help students that have to effectively apply their knowledge to solve any
+proposed challenge. For this reason, the stimulation of students during their learning
+process is a key aspect. However, the development of an appropriate game-based
+methodology is not a simple and effortless task. The perfect combination of technology
+and game design have to be impressive enough to create a motivating effect among
+students. The latter is necessary to catch their attention and involve them aiming at
+encouraging them to apply the acquired knowledge to solve the proposed challenges.
+Furthermore, students have to be able to understand the importance and applicability of
+the learnt concepts and skills during this experience for their future professional use.
+Many authors conﬁrmed the relationship between the academic performance and the
+students’ motivation. In this case, the latter could not be corroborated as the proposed
+surveys were anonymous and hence, it will be analysed in a future work.
+Finally, it is important to indicate that the approach proposed in this paper
+(combining the use of technologies such a web game environment and mobile apps
+with conventional teaching methodologies) could be easily adaptable to many disciplines within engineering studies.

@@ -1,0 +1,2682 @@
+Abortion laws and women’s health
+Damian Clarkea,∗, Hanna Mühlradb
+a Department of Economics, Universidad de Chile and IZA, Diagonal Paraguay 257, Santiago, Chile b IFAU – Institute for Evaluation of Labour Market and Education Policy & Department of Clinical Sciences, Danderyd Hospital (KI DS) |
+Karolinska Institutet, Sweden
+a r t i c l e i n f o
+Article history:
+Received 13 May 2020
+Received in revised form
+22 November 2020
+Accepted 23 November 2020
+Available online 13 December 2020
+JEL classification:
+I18
+J13
+K38
+H75
+Keywords:
+Abortion
+Maternal morbidity
+Maternal mortality
+Health care provision
+Political economy
+Legislative reform
+
+a b s t r a c t
+We examine the impact of progressive and regressive abortion legislation on women’s
+health in Mexico. Following a 2007 reform in the Federal District of Mexico which
+decriminalised and subsidised early-term elective abortion, multiple other Mexican states
+increased sanctions on illegal abortion. We observe that the original legalisation resulted in
+a sharp decline in maternal morbidity, particularly morbidity due to haemorrhage early in
+pregnancy. We observe small or null impacts on women’s health from increasing sanctions
+on illegal abortion. These results quantify the considerable improvements in non-mortal
+health outcomes flowing from legal access to abortion.
+© 2020 The Author(s). Published by Elsevier B.V. This is an open access article under the
+CC BY license (http://creativecommons.org/licenses/by/4.0/).
+
+ We thank the Editor Ana Balsa, two anonymous referees, Sonia Bhalotra, René Castro, Blair G. Darney, Dolores de la Mata, Hans Grönqvist, Randi
+Hjalmarsson, Lakshmi Iyer, Elin Larsson, Jason Lindo, Andreea Mitrut, Carol Propper and seminar audiences at IPAS Mexico, The LACEA Health Economics
+Network, the IZA Gender Workshop, CIDE Mexico, Colegio de Mexico, the Mexican Institute of Public Health, University of Gothenburg, SOFI Stockholm
+University, Karolinska Institute and CSAE Oxford. We thank Raffaela Schiavon for detailed discussions regarding the practical implementation of Mexico
+DF’s ILE reform and her generosity in sharing expertise. We are also grateful to Natalia Volkow at INEGI for providing access to disaggregated hospitalisation
+data, Alejandro del Valle for sharing data, and Cristhian Molina for excellent research assistance. Clarke acknowledges the generous support of FONDECYT
+Regular, grant number 1200634 from the Government of Chile and the institutional support ofthe Millennium Institute for MarketImperfections and Public
+Policy. This paper considerably extends and partially subsumes an earlier study by these authors called “The impact of abortion legalization on fertility and
+female empowerment: New evidence from Mexico”.
+∗ Corresponding author.
+E-mail addresses: dclarke@fen.uchile.cl (D. Clarke), hanna.muhlrad@ifau.uu.se (H. Mühlrad).
+https://doi.org/10.1016/j.jhealeco.2020.102413
+0167-6296/© 2020 The Author(s). Published by Elsevier B.V. This is an open access article under the CC BY license (http://creativecommons.org/licenses/
+by/4.0/).
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+1. Introduction
+Appeals to women’s health are frequently made when
+debating the merits of abortion legislation. These calls are
+made by both advocates of legal abortion as well as those
+advocating for abortion to become, or remain, illegal. The
+arguments backing up such claims are drawn from a range
+of sources, which are often correlational or based on small
+or non-representative samples of women.1
+
+In this study, we present the first population-level evi-
+dence of the impact of sub-national variation in abortion
+
+laws on maternal morbidity, as well as mortality, using the
+universe of administrative health records from Mexico.2
+We focus on a period in which considerable within-country
+reform of abortion policy was undertaken, with both a
+sweeping legalisation in the Federal District of Mexico
+(Mexico DF) and increasing sanctions on (already illegal)
+abortion in other regions. In this context, we are able to
+determine to what extent change in abortion laws, absent
+
+other major contraceptive revolutions, impact health indi-
+cators for the population of affected women. We combine
+
+the state-level variationover time resulting fromlegislative
+changes in abortion law with high-quality vital statistics
+
+data recording over 30 million births, 18.4 thousand mater-
+nal deaths and 46 million inpatient cases for causes related
+
+to maternal health. To seek to understand the observed
+impact of abortion laws on health outcomes, we also take
+advantage of richadministrative and survey data to identify
+
+the reform’s wider impact on birth rates, judicial sen-
+tencing, and on sexual behaviour, and explore potential
+
+channels of health impacts, including improvements in the
+quality of abortion care and changes in the composition of
+women giving birth.
+The environment under study provides a unique
+
+opportunity to examine simultaneous expansions and con-
+tractions of abortion policies.3 While much of the existing
+
+literature on the impact of abortion—and contraceptive
+
+1 The use of such arguments even when based on weak evidence is not
+isolated to non-governmental organisations. Similar arguments are also
+made by politicians. One example is a fact sheet published on the website
+of the United States (US) Government’s National Cancer Institute by the
+Bush administration positing an (unfounded) link between abortion and
+breast cancer (Special Investigations Division, Committee of Government
+Reform, House of Representatives, 2003). 2 Associations between abortion legalisation and maternal mortality
+or morbidity have been documented in the medical and public health
+literature for multiple countries (Benson et al., 2011), including Albania
+(Sahatci, 1993), Bangladesh (Chowdhury et al., 2007), Nepal (Henderson
+et al., 2013), Romania (Serbanescu et al., 1995; Stephenson et al., 1992),
+Singapore (Singh and Ratnam, 2015) and South Africa (Rees et al., 1997).
+Existing studies are mainly based on reviews of medical charts at selected
+hospitals,for example in the US (Goldstein and Stewart, 1972; Stewart and
+Goldstein, 1971; Seward et al., 1973; Kahan et al., 1975), Guyana (Nunes
+and Delph, 1997), Nepal (Henderson et al., 2013) and South Africa (Mbele
+et al., 2006; Jewkes et al., 2002). We are aware of no prior studies which
+are based on population-level data, and based on within-country variation
+in abortion reforms. 3 As we discuss at greater length in Sections 2.2–2.3 of this paper, the
+
+change due to the initial legalisation of abortion in Mexico DF was con-
+siderably larger than subsequent legislative tightenings in other Mexican
+
+states. In the case of the constitutional changes issued by states, in each
+case abortion was already illegal and any changes owe to an increased
+threat of prosecution or sanction. Using the universe of legal decisions
+
+policies more generally—focuses on expansion in access,
+
+there are a number of papers which focus on contrac-
+tions in policies. These include historical restrictions in
+
+Romania (Pop-Eleches, 2010), the impact of parental con-
+sent or notification laws targeted at adolescents in the US
+
+(Bitler and Zavodny, 2001; Joyce and Kaestner, 1996), and
+a recent hollowing out in the availability of providers due
+to state-specific legislation in the US (Fischer et al., 2018;
+Lindo et al., 2019). However, the legalisation of abortion
+in Mexico DF, and the resulting spate of constitutional
+changes increasing the harshness of sentencing of illegal
+abortion, provides the opportunity to examine the impact
+of a contemporaneous series of restrictive and permissive
+abortion policies in a single country and time.
+Reproductive health rights have been documented to
+be of considerable economic significance. This fact has
+been emphasised by a growing body of economic literature
+which has—empirically and theoretically—demonstrated
+
+how access to elective abortion and contraceptive meth-
+ods has shaped fertility patterns, marital markets, crime,
+
+education, the labour market and female empowerment
+(e.g., Ananat et al., 2007; Bailey and Lindo, 2017; Chiappori
+and Oreffice, 2008; Guldi, 2008; Mitrut and Wolff, 2011;
+Myers, 2017; Pop-Eleches, 2010). The impact of abortion
+laws on women’s health has received less attention, and
+the causal relationship is yet to be established. To the best
+
+of our knowledge,this is thefirst study toprovide welliden-
+tified population-level evidence of the impact of abortion
+
+legalisation on maternal morbidity and mortality based
+on within-country variation in abortion availability. While
+an association between abortion legalisation and lower
+abortion-related complications has been documented in
+previous studies, comprehensively capturing the impact
+
+of the passage of abortion law on abortion-related mor-
+bidity is a considerable challenge, especially in clandestine
+
+settings, where under-reporting may occur (Singh et al.,
+2010).4
+Using two-way fixed effect (FE) models and panel event
+study methods (and synthetic controls as a robustness
+
+check), as well as recent advances in a literature exam-
+ining causal estimation with time varying policy reform
+
+(Rambachan and Roth, 2019; Goodman-Bacon, 2018), we
+observe consistent evidence to suggestthatthe legalisation
+of abortion in Mexico DF brought about a sharp reduction in
+fertility (by 8%), haemorrhage in early pregnancy (by 35%)
+
+and abortion-related morbidity (by 20%). Event study esti-
+mates examining increases in sanctions on (already illegal)
+
+abortion point to much smaller effects on these variables,
+which are generally not statistically significant. In general,
+we observe impacts on maternal mortality, which are hard
+to consistently sign given that they are considerably less
+precise, suggesting that when only examining impacts of
+
+in the country, we document evidence suggesting that these reforms
+increase the average length of sentences handed down to women. 4 Maternal mortality is considered the “tip of the iceberg”, where the
+mass consists of maternal morbidity (Loudon, 1992). In many settings,
+analyses of the impact of abortion on population health focuses only on
+maternal mortality due to a lack of universal health records measuring
+maternal morbidity.
+2
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+abortion law on maternal mortality, analyses failto account
+for the full weight of abortion reform on women’s health.
+Previous studies on Mexico’s abortion reform laws
+include legal and ethical overviews (Johnson, 2013;
+Madrazo, 2009), qualitative studies on abortion provision
+
+(Contreras et al., 2011; Schiavon et al., 2010), quantita-
+tive studies on abortion services and patient characteristics
+
+using data from selected hospitals or surveys (Mondragón
+
+y Kalb et al., 2011; Becker et al., 2013), and fertil-
+ity trends using vital statistics (Gutierrez-Vazquez and
+
+Parrado, 2015).5 This paper contributes to previous studies
+by examining the causal impacts of abortion legalisation,
+as well as regressive law changes, on women’s health and
+well-being using the full power of vital statistics data,
+including administrative microdata on births, maternal
+morbidity, maternal mortality, and judicial statistics on
+penal matters. In addition, we examine heterogeneous
+effects of the reform as well as potential mechanisms such
+as usage and knowledge of contraceptive methods.
+There is a large unmet need for family planning in
+low- and middle-income countries (Sully et al., 2019). Yet,
+the evidence on the impacts of reproductive health rights
+
+including safe and legal abortions in these settings, espe-
+cially building on microdata, is very scarce. In light of this,
+
+our study provides strong evidence that abortion legalisa-
+tion in an emerging economy leads to rapid and discernible
+
+changes in political behaviour, aggregate fertility rates,
+and (significant improvements in) maternal health. These
+results provide a number of important policy lessons for
+jurisdictions considering changes in abortion laws.
+2. Background
+2.1. Unsafe abortions and maternal mortality in Mexico
+Globally, maternal mortality has declined from 385
+maternal deaths per 100,000 live births in 1990 to 211
+deaths per 100,000 live births in 2017. The overwhelming
+
+majority of these deaths occurred in low-income coun-
+tries. During the same period in Mexico, there has been
+
+a similar decline in maternal mortality from 88 to 33
+deaths per 100,000 live births (Rodríguez-Aguilar, 2018;
+Bongaarts, 2016). However, Mexico has still not achieved
+its 2015 United Nations Millennium Development Goal: a
+ratio of below 22 deaths per 100,000 live births. In Mexico,
+the highest prevalence of maternal mortality is found in
+metropolitan areas and among women aged 20–34. Rates
+
+of maternal mortality are especially high in socially vul-
+nerable populations across Mexico. Areas with the highest
+
+rates of maternal mortality exhibit some of the low-
+5 In examining the abortion reform and fertility outcomes, Gutierrez-
+Vazquez and Parrado (2015) use national vital statistics to examine the
+
+effect onfertility across ages. Due to theuse of a limitedamount ofdata and
+limitations inherent in the empirical design, one cannot assign a causal
+interpretation to the results with confidence. More specifically, only three
+different years of data are used (1990, 2000 and 2010). In a study by Koch
+et al. (2015) maternal mortality is found to increase in areas with more
+liberal abortion laws. Koch et al. (2015), however, has received strong
+criticismfor highlymisleading and inaccurate data selection (Darney et al.,
+2017).
+
+est levels of government expenditure on maternal health
+(Pérez-Pérez et al., 2019).
+
+Abortion-related mortality represents a substantial pro-
+portion of all maternal deaths in Mexico, accounting for
+
+7.2% of all maternal deaths between 2000–2008 (Schiavon
+et al., 2012). While there has been a downward trend in
+
+maternal mortality in Mexico between 1990–2008, mater-
+nal mortality attributed to abortion-related causes has not
+
+exhibited similar declines during this period. The majority
+of these deaths occur in women without health insurance
+(Schiavon et al., 2012).
+
+The rate of abortion-related mortality varies substan-
+tially across regions in Mexico. The highest rates can be
+
+found in some of the poorest states, such as Chiapas and
+Guerrero with as many as 90 and 140 deaths per 100,000
+hospitalisations, respectively. This can be compared to Baja
+
+California Sur with only 9 deaths per 100,000 hospitali-
+sations. Yet, high rates of abortion-related mortality are
+
+not exclusively observed in poor states across Mexico. In
+Mexico DF,for example,the abortion-related mortality rate
+was 38 per 100,000 hospitalisations between 2000–2008
+(Schiavon et al., 2012).
+
+Unsafe abortion procedures account for most abortion-
+related mortality (Schiavon et al., 2012). Rates of unsafe
+
+abortion are particularly high in the Latin America and
+Caribbean region with an estimated 4.2 million unsafe
+induced abortions performed each year (World Health
+Organization, 2011). This region also exhibits some of
+the world’s most conservative laws on abortion (United
+Nations, 2014). However, restrictive laws on abortion do
+not translate to lower rates of induced abortion but are
+instead associated with higher rates of unsafe abortion and
+
+correspondingly higher rates of abortion-related morbid-
+ity and mortality, compared to settings with more liberal
+
+access policies (Guttmacher Institute, 2012).
+
+Indeed, the rate of induced abortion in Mexico is con-
+sidered high internationally (Becker, 2013). Despite high
+
+rates of contraceptive use, the estimated rate of induced
+abortions increased between 1990, with 25 abortions per
+1000 fertile-aged women, and 2006, with 33 abortions per
+1000 women, (Juarez et al., 2008). Many of these induced
+abortions were performed in clandestine conditions and
+
+often in unsafe settings (Guttmacher Institute, 2012). Med-
+ical records from public hospitals in Mexico show high
+
+rates of abortion-related complications with an estimated
+150,000 women treated for complications in 2006 alone
+(Juarez et al., 2008).
+2.2. The 2007 legal interruption of pregnancy reform in
+Mexico DF
+Since the 1970s, women’s rights advocates in Mexico
+have been promoting women’s health rights, including
+access to safe abortions (Kulczycki, 2011). To address the
+
+issue of unsafe abortions as a preventable cause of mater-
+nal morbidity and its huge burden on public health system,
+
+a National Pro-choice Alliance in Mexico was established in
+2000 to promote women’s sexual and reproductive health
+rights. This movement was supported by a wide range of
+groups, including healthcare professionals, women’s rights
+groups and activists, politicians, academics, and Catholics
+3
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+with pro-choice views (Johnson, 2013; Madrazo, 2009;
+Kulczycki, 2011; Blanco-Mancilla, 2011).6
+
+With the support of the leftist Party of the Demo-
+cratic Revolution, Mexico DF’s legislative assembly voted
+
+to legalise elective abortion (termed legal interruption of
+pregnancy or ILE for its acronym in Spanish) on April 24,
+2007 (Kulczycki, 2011). The ILE reform was signed into law
+the following day and published in the Official Gazette of
+the Federal District on April 26, 2007 (Ciudad de México,
+2007). This immediately permitted women above the age
+of 18 to request an abortion at up to 12 weeks of gestation
+without restriction and free of charge. Access for minors
+requires the consent of a parent or guardian. Under this law,
+induced abortion was made legal in both the public and
+private healthcare sectors (requiring payment in private
+clinics).
+
+Immediate implementation was made possible by col-
+laboration between the Ministry of Health of Mexico
+
+DF (MOH-DF), members of the health department and
+international NGOs, which had designed a comprehensive
+program for public provision of abortion services called
+the “The ILE Program” and its implementation even before
+the law was passed (Singh et al., 2012). As such, abortion
+
+services were made available via public clinics immedi-
+ately after the law was passed in April 2007, although with
+
+lower capacity and efficiency compared to current condi-
+tions. Abortion services were also quickly available in the
+
+private healthcare sector (Blanco-Mancilla, 2011). Addi-
+tionally, under this law sexual education in schools was
+
+improved and post-abortion contraceptives were made
+
+freely available directly from the health clinics that pro-
+vided abortions (Contreras et al., 2011). On August 29,
+
+2008 the decision to pass the ILE law was ratified by the
+SupremeCourt ofMexico,makingMexico DF,together with
+Cuba and Uruguay, the most liberal jurisdiction in the Latin
+
+American and Caribbean region in terms of abortion legis-
+lation (Fraser, 2015).
+
+Any abortions conducted in publicly-run clinics are pro-
+vided free of charge to residents of Mexico DF.Women with
+
+residency outside Mexico DF can also access the public pro-
+vision of abortion through the MOH-DF but are charged
+
+based on a sliding fee scale depending on the woman’s
+socioeconomic background. In 2010, 74% of all women
+who received an abortion through the public healthcare
+
+sector were women living in Mexico DF, 24% were liv-
+ing in the state of Mexico (which shares a border with
+
+Mexico DF) and 2% were living in other states (Mondragón
+
+y Kalb et al., 2011). The age profile of women seeking abor-
+tions largely mirrors the age-profile of births, occurring at
+
+slightly greater rates among younger (under 25 years) and
+older (above 36 years) groups (Appendix Figure A1).
+
+6 The alliance was successful in rapidly moving the women’s health
+agenda forward in the historically conservative setting of Mexico City
+
+using anumber ofdifferent strategies including the involvement ofhealth-
+care officials, hospitals and other healthcare providers. This was not only
+
+important for building support for the reform, but also to facilitate a
+smooth implementation of the abortion program. The alliance was also
+
+successful in establishing a strong presence in the public media for pro-
+moting women’s health rights (Kulczycki, 2011; Johnson, 2013).
+
+Records from public hospitals show that in 2007, when
+the reform was implemented, more than 7000 abortion
+procedures were performed at 14 selected MOH-DF clinics.
+Over the years, the MOH-DF abortion program expanded
+its services and became more efficient in meeting the high
+demand for elective abortion. The MOH-DF program offers
+both surgical and medical abortion procedures and is the
+main provider of medical abortion in Mexico DF (Winikoff
+
+and Sheldon, 2012). The large shift from 25% of all abor-
+tion procedures being medical in 2007 to as much as 74%
+
+in 2011 has played a key part in meeting the demand and
+reducing complications and side-effects (Becker, 2013).7
+As of 2015, approximately 150,000 abortions were carried
+out at MOH-DF clinics.8 Information regarding the private
+provision of abortion services is limited due to a lack of
+
+supervision of the private market for legal abortion ser-
+vices (Becker, 2013). Despite the fact that safe abortion, at
+
+no or low cost, is provided by the public health system in
+Mexico DF, women do seek abortion services within the
+private sector. A descriptive study by Schiavon et al. (2012)
+suggests that private abortion services are provided at a
+high cost (USD 157–505) and quality of care is inferior to
+
+that in the public sector, given that the less safe and effi-
+cient “dilation and curettage” is used as the main method
+
+in the private sector (in 71% of cases).
+2.3. Regressive law changes following the ILE Reform
+Following Mexico DF’s ILE reform, a number of states
+almost immediately began a series of counter legislation
+to change the respective sections of their constitutions or
+
+penal codes, defining the beginning of human life as occur-
+ring at conception. These legal responses often directly
+
+referenced Mexico DF’s ILE reform.9 And even in cases
+where the ILE reform was not directly referred to in counter
+
+legislation it seems highly likely that it was a defining fac-
+tor. For example, in the 20 years prior to the ILE reform
+
+there had been only two constitutionally defined changes
+to the articles relating to abortion in the penal codes of all
+states in Mexico (Gamboa Montejano and Valdés Robledo,
+2014), compared to 18 changes between June 21, 2008 and
+November 17, 2009. Importantly, these reforms resulted
+
+in constitutional changes which recognised life as begin-
+ning at conception, opening the door for potential homicide
+
+charges. In order to understand the precise nature of law
+changes, we conducted a side-by-side reading of penal
+codes from pre- and post-reform for each state undertaking
+
+7 Misoprostol alone was the main regimen for medical abortions per-
+formed in MOH-DF clinics until 2011 when Mifepristone (combined with
+
+Misoprostol) was introduced. This change made the medical abortion pro-
+cedures provided by the ILE program more efficient and safe. 8 To put this in context, note that the quantity of abortions per year
+
+(adjusted for population) is similar to the quantity in the US. In 2010, for
+example, 16,945 abortions were provided by the ILE program. In 2010
+Mexico DF had approximately 8.55 million inhabitants. Thus, adjusted
+to the US population in 2010 (308.7 million), this would imply 611,803
+abortions. In reality, 765,651 abortions were reported in the US in 2010
+(Pazol et al., 2014). 9 For example, the constitutional decree issued by the state of Nayarit
+when changing their penal code explicitly refers to the changes in the
+penal and civil code of Mexico DF (Gobierno de Nayarit, 2009, p. 14).
+4
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+an abortion reform. The nature of changes implied by the
+
+reform are documented in Appendix Table A1. As we dis-
+play there, of the states undertaking a regressive reform all
+
+but six formally altered their penal codes to change sanc-
+tions in the case of proven abortions, while the remaining
+
+six only altered their state constitution to recognise life as
+beginning at conception.
+In Appendix Figure A2, we display the geographical
+
+distribution of law changes (progressive, regressive or neu-
+tral) over the period under study. The only progressive
+
+reform refers to Mexico DF’s ILE reform, while 18 states
+made regressive changes (i.e., legal tightenings) after the
+initial reform. We compiled the exact dates the reforms
+were passed into law on a state-by-state basis, and these
+are displayed in Appendix Table A2. To the best of our
+knowledge, no centralised record of the dates and laws
+that were altered in the post ILE era exists, and as such we
+compiled these records from our reading of legal source
+documents. In Section 4 of this paper we return to how we
+use the geographic and temporal variation in the passage
+of laws in our identification strategy.
+2.4. The potential channels for impacts of abortion
+reform
+
+Legislative reforms to abortion policies could poten-
+tially impact health though a number of channels. We
+
+lay these out conceptually below, without yet seeking to
+assess their relative importance or relevance in explaining
+
+observed outcomes. We then move on to assess the likeli-
+hood that particular channels canexplainobserved impacts
+
+of abortion reformonmaternal health (in the context ofthis
+paper) in Section 5.3.
+
+1. Unsafe abortions are shifted to safe legal condi-
+tions. This channel is relevant for individuals who would
+
+abort when abortion is illegal, and also would abort when
+abortion is legal.As discussed in Section 2.1 unsafe abortion
+is thoughtto be a significant determinant of maternal death
+and hospitalisation, with evidence that a lack of access to
+
+safe abortion shifts the demand for abortion towards clan-
+destine and unsafe conditions (Haddad and Nour, 2009).
+
+To the degree that legalising abortion shifts clandestine
+abortions at risk of complications to sanitary conditions
+
+with lower risk, there exists a hypothesised direct chan-
+nel through which abortion reform may impact women’s
+
+health. In this channel, holding all else constant, abortions
+which would have occurred whether abortion was legal or
+not should imply a direct improvement in women’s health
+when abortion is legalised. We refer to this as the “quality
+of care channel”.
+2. Undesired pregnancies are avoided. This channel is
+
+relevant for individuals who would not abort when abor-
+tionis illegal, but wouldabort whenabortionis legalised. To
+
+the degree that abortion being illegal discourages women
+who would otherwise have sought to discontinue their
+pregnancy by seeking an abortion, changes in laws will
+shiftthe demand for abortion. This channel, which we refer
+to as the “demand” channel could, theoretically at least,
+have varying impacts on women’s health. For (a) undesired
+pregnancies which would have resulted in poor maternal
+
+health outcomes, the legalisation of abortion and result-
+ing avoidance of risky pregnancies will, all else constant,
+
+improve maternal health. However, for (b) undesired preg-
+nancies which would not have resulted in poor maternal
+
+health outcomes, the legalisation of abortion may shift
+maternal health outcomes if abortion—even in safe legal
+conditions—implies some risk of complications.10
+3. The composition of women becoming pregnant
+changes. This channel is relevant for individuals who
+would not abort when abortion is illegal, and would also
+not abort when abortion is legal. This channel is relevant
+only to the degree that the population of women giving
+birthfollowing abortionreformwill consist ofmore women
+who desire to take their pregnancy to term, regardless of
+whether abortionis legal.As women’shealthcomplications
+arise throughout pregnancy, changes in the composition
+of women becoming pregnant and taking a pregnancy to
+term may result in changes in rates of health complications
+observed at the population level. Ex ante, this selection
+process has ambiguous impacts on maternal health as it
+depends on the nature the selectivity. We will refer to this
+as the “selection channel”.
+3. Data
+We construct a balanced panel recording morbidity and
+mortality outcomes, birth rates and legal outcomes for
+
+each of Mexico’s 32 states between 2001–2015. In prin-
+cipal models we consider a monthly panel; however, we
+
+also generate more temporally aggregate data (by year
+and by trimester) to include the universe of cases where
+monthly records are not available, as laid out below. We
+construct this panel from a large number of administrative
+microdata bases covering hundreds of millions of records,
+which are described at more length in Appendix B and
+summarised below. Along with outcomes generated from
+administrative data, we collect a number of measures of
+sexual behaviour from survey data, time varying controls,
+and the exposure to the ILE reform or subsequent legal
+changes.
+Health outcomes. We observe all morbidity events
+
+resulting in a hospital inpatient visit to any public hospi-
+tal in Mexico. Depending on the hospital type (state run
+
+or social security run),11 the microdata format varies and
+as a result we can consistently group records only for the
+years 2004–2015, and only with a yearly total. Given this,
+we provide two sets of results: one based only on visits to
+state-run hospitals, as in this case we can calculate monthly
+10 As we discuss later in the paper, this second channel appears to be
+quite unlikely given that abortion in safe settings has very low rates of
+
+associated morbidity and mortality. In fact, induced abortions in safe set-
+tings are considered to be “one of the safest procedures in contemporary
+
+practice” with a mortality rate below 1 per 100,000 procedures (Grimes,
+2005). 11 The Mexican health system consists of public and private hospitals.
+Among public hospitals, there are two broad classes: those administered
+by social security providers for workers in the formal sector and those
+
+administered directly by the federal or state governments for individ-
+uals without social security coverage. Hospitals in the latter class are
+
+principally administered by the Secretariat of Health of federal or state
+governments and, as such, below we refer to these as Secretariat of Health
+hospitals.
+5
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+aggregates for the longer period of 2001–2015, and another
+based on yearly records for the shorter 2004–2015 period
+
+when all hospitalisation data is observed.We similarly con-
+sider leakage to the private system using administrative
+
+records from all private hospitals.
+
+Our principal measures of interest are maternal mor-
+bidity outcomes, classified according to International
+
+Classification of Diseases tenth revision (ICD-10) codes,12
+plausibly impacted by abortion. Specifically, these are (a)
+“abortion-related morbidity” (ICD-10 codes O02–O08) and
+(b) haemorrhage in early pregnancy (ICD code O20).13
+The remainder of the ICD codes are not examined as it is
+
+unlikely that they are sequelae of abortion (e.g., eclamp-
+sia or pre-eclampsia), or they are morbidities occurring in
+
+the puerperium period, and so are unable to be sequelae of
+abortion. The two codes are not chosen arbitrarily by the
+authors but rather in line with the fact that haemorrhage
+
+and incomplete abortion are the two most common com-
+plications of unsafe abortion (World Health Organization,
+
+2018). We provide a full breakdown of all ICD codes related
+to pregnancy, childbirth and the puerperium (the ICD-10 O
+codes) in Appendix Table A3, which documents both the
+considerable frequency of the two chosen classes and the
+implausibility of impacts on other variables. Finally, as an
+
+exploratory analysis, we aim to measure mental health out-
+comes of women. In practice, the only way that we can
+
+consistently measure this in our data is via the code F53
+which captures post-partum depression.14
+We consider a number of placebo outcomes and do so
+
+in a number of ways. A first placebo test consists of con-
+sidering a (presumably) unaffected morbidity cause within
+
+the same ICD class (the O codes), namely late term obstet-
+ric complications (ICD codes O70–O75). While this is not a
+
+perfect placebo insofar as it may be impacted by a changing
+
+composition of mothers (via the “selection” channel indi-
+cated earlier), it is unlikely to be mechanically related to
+
+abortion, so provides a useful comparison to our main mor-
+bidity outcomes.Additionally, andto completely isolate the
+
+placebo tests from potential changes in the composition of
+12 It is important to note that the procedure of assigning ICD codes for a
+hospitalisation is typically implemented by a particular person or persons
+in charge of coding diagnoses in hospitals (such as an epidemiologist or
+a hospital employee). This coding is made based on their reading of the
+
+treating team’s charts; it is not determined by the team actually treat-
+ing the patient (Velasco Sustaita, Undated). Moreover, the ICD coding is
+
+typically processed after the patientis discharged from the hospital. Anec-
+dotal evidence suggests that the prosecution of women for the crime of
+
+abortion usually occurs during the hospital stay, after either a clinician,
+nurse or social worker have raised their “suspicion” to the police. There is
+no ICD code for induced illegal abortion in the ICD-10 classifications and
+indeed evidence from other contexts suggests that, if anything, providers
+
+may seek to record abortion-related morbidity within sub-codes of ICD-
+10 classifications (such as recording abortions as spontaneous instead
+
+of induced) rather than classifying it as an alternative code (Suh, 2014).
+The authors are grateful to Dr Raffaela Schiavon for providing very useful
+background details in correspondence. 13 For a longer discussion on classification of abortion-related morbidity
+see Schiavon et al. (2012) and World Health Organization (2018). 14 We explored using external causes of morbidity to capture suicide
+
+attempts; however, the inpatient data from Mexico only consistently pro-
+vides a single ICD code capturing the principal cause of hospitalisation,
+
+while external causes are classified as a secondary ICD code. Thus, these
+external causes are not recorded consistently in administrative data.
+
+mothers, we consider a larger number of placebo outcomes
+coming from other ICD classifications.15
+While our main interest here is to documentthe impacts
+of abortion reform on the much larger pool of morbidity
+outcomes, we additionally consider maternal mortality as
+recorded in Mexico’s complete vital statistics registers. We
+thus calculate the number of all maternal deaths in each
+state andtimeperiodand, additionally, only thosematernal
+
+deaths classified as owing to abortion. Additional discus-
+sion ofthe generation ofthese data, as well as the recording
+
+of microdata bases, is provided in Appendix B.
+Births. In order to benchmark the Mexican abortion
+reforms’ impact on birth rates with respect to the wider
+literature, we also require aggregate data on birth rates by
+
+state. We generate these state-level measures from pub-
+licly available microdata on births provided by the National
+
+Institute of Statistics and Geography, known by its Spanish
+acronym INEGI. We use each birth register for women aged
+15–49 over the time period between 2001–2013, a sample
+of 30,341,376 births. As discussed in more detail in the Data
+Appendix, we can only observe birth records up to 2013 as
+
+we follow the procedure suggested by the National Popu-
+lation Council (known by its Spanish acronym CONAPO) of
+
+using birth registers up to four years following each birth
+
+date to ensure that we capture births even if they are reg-
+istered with a considerable delay. We use these same data
+
+to measure average characteristics of mothers and fathers
+
+(where registered) to examine any changes in the compo-
+sition of parents following abortion reforms. In both the
+
+case of births and the case of health outcomes, in order to
+
+calculate rates of occurrence we record the state-level pop-
+ulation in each year for all women aged 15–49 provided by
+
+CONAPO.
+
+Additional measures. We additionally collect a num-
+ber of other state- and time-varying measures to examine
+
+potential mechanisms of action of the reform or to dis-
+miss alternative possible explanations of observed impacts.
+
+These measures consist of (a) all first legal decisions made
+by the Mexican judiciary related to abortion compiled from
+microdata collected by INEGI and released as Mexico’s
+
+Judicial Statistics on Penal Matters;(b)information on con-
+traceptive use and sexual behaviour from the Mexican
+
+Family Life Survey (MxFLS); and (c) time-varying con-
+trols to capture possible confounders of abortion policy,
+
+namely education, health investment and access to for-
+mal healthcare among the state population, access to the
+
+public insurance program Seguro Popular, economic devel-
+opment, and women’s social inclusion. These controls are
+
+fully described in Data Appendix B, as well as in the discus-
+sion of summary statistics below.
+
+Summary statistics. Summary statistics of principal
+outcomes (maternal morbidity, mortality and births) are
+provided in Table 1. The total number of cases of each
+morbidity class are described in Panel A, and mortality
+
+15 Specifically, these are diseases of the ear and mastoid processes; neo-
+plasms; endocrine, nutritional and metabolic diseases; diseases of the
+
+blood and blood-forming organs; diseases of the nervous system; and
+diseases of the skin and subcutaneous tissue. We discuss these at greater
+length in Section 5.3.
+6
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+Table 1
+Summary statistics for month by year by state specifications
+Variable Obs. Mean Std. Dev. Min. Max.
+Panel A: Morbidity outcomes
+Total Number of Deliveries in Public
+Hospitals
+
+5760 1455.9 1282.8 143 8496
+
+Total Inpatient Cases for ICD O codes,
+except births
+
+5760 1276.3 1002.8 139 6271
+
+Total Inpatient Cases for Abortion-Related
+Causes
+
+5760 268.7 232.9 27 1573
+
+Total Inpatient Cases for Haemorrhage
+Early in Pregnancy
+
+5760 31.4 27.2 0 207
+
+Total Inpatient Days for Abortion-Related
+Causes
+
+5760 361.3 327.4 28 2168
+
+Total Inpatient Days for Haemorrhage
+Early in Pregnancy
+
+5760 64.7 63.0 0 463
+
+Total Inpatient Cases for Obstetric
+Complications
+
+5760 36.0 51.1 0 375
+
+Total Inpatient Cases for Post-Partum
+Depression
+
+5760 0.1 0.3 0 6
+
+Panel B: Mortality outcomes
+Total Number of Maternal Deaths 6144 2.98 3.26 0 25
+Total Number of Maternal Deaths due to
+Abortion
+
+6144 0.21 0.50 0 4
+
+Panel C: Demographic outcomes
+Population of 15–49 Year-old Women 6144 864691 743706 116430 4228223
+Total Number of Births 4992 6078 4904 719 28546
+Birth rate per 1000 women 4992 7 1 5 13
+Each observation is a state × year × month cell. Mexico is composed of 32 States. The number of cells varies due to the number of years and months of data
+available. In Panel A, morbidity data is displayed for 12 months in 12 years (2004–2015). Values are generated from all inpatient cases as classified from
+microdata from the primary care (hospital) records from all public hospitals administered by the Secretariat of Health (social security system hospitals do
+not report month of hospitalisation). Each type of morbidity is classified by ICD-10 codes. In Panel B, mortality outcomes are displayed for 12 months in
+16 years (2001–2016). In Panel C, data on population is displayed for 12 months in 16 years (2001–2016), and data on births is displayed for 12 months
+in 13 years (2001–2013). Following CONAPO, the last four years of birth outcomes are suppressed to account for reporting outside of the period of birth.
+State × year summary statistics including social security system hospitals are provided in Appendix Table A4.
+outcomes, both for all maternal deaths and those only
+classified as owing to abortion, are provided in Panel B.
+State by year × month averages of the number of births
+and births per 1000 fertile-aged women are displayed
+in Panel C of Table 1. On average, morbidity outcomes
+are various orders of magnitude higher than mortality
+
+outcomes. For example, the average quantity of hospitali-
+sations for abortion-related causes was 269 per state and
+
+month versus 3 maternal deaths on average, or 0.2 mater-
+nal deaths when considering only those classified as owing
+
+to abortive causes. In this table, morbidity data is recorded
+only based on public hospital data where the month of the
+visitis recorded. As we will discuss at greater length below,
+we will also consider variation by state and year allowing us
+to capture the full universe of health outcomes from both
+state run and social security run hospitals (see Appendix
+Table A4 for summary statistics), and control variables are
+summarised in Appendix Table A5.
+Raw trends of principal maternal health outcomes are
+
+provided in Fig. 1, pointing to important shifts in inpa-
+tient visits related to maternal health following the ILE
+
+reform. Fig. 1(a) and (b) document the quantity of monthly
+
+inpatient cases for abortion-related morbidity and haem-
+orrhage in early pregnancy in Mexico DF for states that
+
+adopted a subsequent legal tightening and for states with
+no subsequent legal changes. We observe reductions in the
+
+absolute quantity of cases in Mexico DF in both cases fol-
+lowing the ILE reform in April 2007 (indicated as a vertical
+
+red line). Panels (a) and (b) are based only on hospitali-
+sation data from Secretary of Health hospitals. When we
+
+additionally extend to include social security hospitals in
+
+panels (c)-(f), observing yearly variation only, we see a sim-
+ilarpattern withreductions intotalhospitalisations (panels
+
+(c) and (d)), and rates of hospitalisations for fertile-aged
+women (panels (e) and (f)).
+4. Methodology
+We aim to examine the impact of the ILE reform and
+regressive law changes, compared with outcomes in states
+in which no reform was implemented. We thus begin
+by estimating the following two “two-way fixed effect”
+specifications16:
+Healthst =  ̨0 +  ̨1ILEst + X
+
+st1 + s + t
+
++ (s × month) + εst (1)
+Healthst = ˇ0 + ˇ1Regressivest + X
+st2
+
++ s + t + (s × month) + st. (2)
+
+16 We estimate these models separately; however, all results docu-
+mented in this paper are robust to estimating a single model including
+
+both the ILE and regressive variables. Full results in this set-up are docu-
+mented in Clarke and Mühlrad (2018).
+
+7
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+
+Fig. 1. Raw trends in abortion-related morbidity and haemorrhage in early pregnancy. Notes: Figures present the total number of discharges due to
+abortion-related morbidity (left-hand panels) and haemorrhage in early pregnancy (right-hand panels) in Mexico DF (which adopted the ILE reform),
+states which had a later tightening of abortion laws, and all other states. Panels (a) and (b) plot monthly trends based on all discharges from Secretariat of
+Health hospitals given that these are the only registers which record month and year of discharge. Panels (c) and (d) plot yearly trends based on all public
+hospital discharges (both Secretariat of Health hospitals and social security hospitals which do not report month of discharge), and panels (e) and (f) plot
+yearly discharges based on all public hospital data expressed per 1000 women of fertile age. The dotted vertical line is plotted in April 2007, the date of
+passage of the ILE abortion reform, and wide-scale rollout of available abortions. Residualised plots and longer yearly plots based on panels (a) and (b) are
+provided as Appendix Figures A3 and A4, respectively.
+
+8
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+
+Here Health refers to average rates of morbidity or mor-
+tality in state s at time t, and ILE and regressive refer to
+
+the post-ILE and post-regressive law changes in affected
+states. Our parameters of interest are  ̨1 from Eq. (1) and
+
+ˇ1 from Eq. (2). In the case of specification (1), the estima-
+tion sample consists of Mexico DF (which adopts ILE) and
+
+all non-reforming states. In the case of specification (2),the
+
+sample consists of all states which adopt regressive abor-
+tion laws and all non-reforming states. We include state
+
+and year fixed effects as s and t, respectively, as well
+
+as state-specific monthly fixed effects (s × month) to cap-
+ture any potential state-specific seasonality, and examine
+
+stability to the inclusion of the time-varying controls Xst
+listed in Section B.2. In initial specifications, time t refers to
+monthly measures. This allows us to examine fine-grained
+temporal variation in outcomes in all hospitals run by the
+Mexican Secretariat of Health. However, to ensure that
+these results are also observed in the full universe of public
+health records, we also consider specifications where time
+t refers to yearly cells including all data.
+In this two-way FE specification, the ILE variable in Eq.
+
+(1) is an indicator which switches from 0 to 1 at a par-
+ticular point in time; however, the regressive indicator
+
+in Eq. (2) switches from 0 to 1 at varying times depend-
+ing on the state. In the case of heterogeneous treatment
+
+effects and time-varying adoption, this single-coefficient
+
+model can considerably mis-estimate the average treat-
+ment effect on the treated (ATT), given that already treated
+
+units act as controls in future periods (Goodman-Bacon,
+2018). While this is not a concern for our estimate of  ̨1, it
+is for our estimate of ˇ1. Accordingly, we will (a) document
+the parameter decomposition derived in Goodman-Bacon
+(2018) and (b) estimate event study specifications which
+avoid these potential biases. There are 32 states in Mexico
+(including the Mexico DF), and these laws are defined at
+
+the level of the state. In order to account for the possi-
+bility of unobserved correlations of outcomes for women
+
+within a state, standard errors are clustered by state using
+a clustered wild bootstrap.
+
+Our outcomes ofinterestfor this procedure are the mea-
+sures of maternal morbidity and mortality discussed in
+
+Section 3, as well as birth rates. We additionally consider
+exploratory analyses examining post-partum depression.
+We thus implement the procedure for a measure of all
+abortion-related morbidity, morbidity due to haemorrhage
+in early pregnancy, post-partum depression,total maternal
+mortality, and maternal mortality due to abortion. In each
+case in the main outcomes, we focus on rates of morbidity
+and mortality per the population of fertile-aged women.
+We express our outcomes in this way for two reasons. The
+first is that it allows us to capture the full effect of the
+reform. As we will show that the abortion reform reduces
+
+fertility, if we express our outcomes as morbidity or mor-
+tality per live birth this is equivalent to a partial impact,
+
+removing any impact of the reform which flows from the
+ability to avoid undesired, and potentially risky, births.17 In
+practice, we are interested in the total impact ofthe reform,
+17 It is also important to note that the ILE reform included the option
+of accessing free contraceptives after undergoing an abortion procedure,
+
+which consists of the reduction in morbidity and mortality
+due to fewer births, as well as any direct impact the reform
+may have on the composition of mothers giving birth. The
+
+second reason is thatthis focus allows us to ignore any chal-
+lenges arising from the endogenous decision of whether or
+
+not to engage in legal abortion. If we instead report the
+impact of the law on rates of morbidity and mortality per
+live birth, we will be confounding our estimates due to the
+fact that a non-random group of women choose to proceed
+with births following the reform, and this group may be
+selectively more or less healthy than the women who elect
+to abort.We address changes inthe compositionofmothers
+explicitly in Section 5.3 of this paper.
+For two-way FE estimates to capture the causal effects
+of abortion laws, we require a parallel trend assumption
+to hold, or that outcomes in each of the “Regressive”, “ILE”
+and untreated states would have evolved similarly in the
+absence of abortion reforms. We provide a partial test of
+this, and additionally quantify any dynamic reform effects,
+
+by estimating the following panel event study specifica-
+tions:
+
+Healthst = 0 +
+
+36
+j=−36
+ı−jILEs,t+j + X
+st1
+
++ s + t + (s × month) + st (3)
+
+Healthst = 1 +
+
+36
+k=−36
+−kRegressives,t+k
+
++ X
+st2 + s + t + (s × month) +
+
+st. (4)
+
+We normalise both ı and
+
+setting ı−1 = 0 and
+−1 =
+
+0. These event study specifications are increasingly com-
+mon in panel settings, and here we adopt the notation of
+
+Freyaldenhoven et al. (2018), using  to denote the precise
+
+moment in which treatment status changes. In this speci-
+fication, we are interested in the leads and the lags of the
+
+policy changes, where leads capture any prevailing trends
+
+prior to the reform and lags show the change in health out-
+comes following the reform’s implementation. In the main
+
+specifications (3) and (4), we presentthe modelfor morbid-
+ity data available between 2001 to 2015, which allows us
+
+to consider a large number of monthly lags and leads. We
+use 36 monthly lags and leads, where the final lag and lead
+indicates all periods beyond this time. As was the case with
+two-way FE models, we also examine robustness to using
+yearly data with all hospitalisations. In this case we are able
+
+to use data exclusively from between 2004–2015, aggre-
+gated to a yearly-level, and as such we estimate three leads
+
+and eight lags of the ILE reform, and five leads and seven
+lags of regressive law changes. We can estimate additional
+lags for regressive reforms in this case given that there
+is greater variation in treatment timing.18 In the case of
+which could also impact birth rates. We discuss this at greater length in
+Section 5.3. 18 Practical details are discussed in Clarke and Tapia Schythe (2020).
+9
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+
+mortality or fertility where longer periods of data are avail-
+able, lags and leads are modified in yearly event studies to
+
+provide a fully saturated model in each case. In one case
+
+where parallel pre-trends appear less convincing, we con-
+duct a newly described estimation and inference procedure
+
+known as “Honest DD” to examine possible implications
+of violations of the parallel trend assumption (Rambachan
+and Roth, 2019).
+It is important to note here that unbiased estimation
+of reform impacts hinges, pivotally, on the assumption of
+
+(conditional) parallel trends, and on a stable unit treat-
+ment value assumption (SUTVA) implying no spillovers
+
+to untreated states. We address the SUTVA explicitly in
+
+Section 5.3 where we consider whether we observe appre-
+ciable policy spillovers. As always, the parallel trends
+
+assumption is something that cannot be tested formally
+given the unobserved counterfactual state for treated areas
+in the post-treatment period. Thus, the appearance of any
+simultaneous reforms only in treatment areas would result
+in biased estimates of reform impacts. Nevertheless, as
+discussed above, we aim to reduce the likelihood of such
+factors by controlling for time-varying factors (including
+the Seguro Popular rollout), and we additionally consider a
+range of placebo tests to determine whether we observe
+similar patterns in variables which plausibly should not
+respond to abortion reforms.
+5. Results
+5.1. Abortion laws and maternal morbidity and mortality
+5.1.1. Estimated impacts on maternal morbidity
+Two-way FE estimates (which for simplicity hereafter
+we will refer to as “DD” estimates given the similarity to
+double differencemodels) ofthe impact ofthe legal reforms
+on morbidity are presented in Table 2. All coefficients are
+cast as the effect of law changes on morbidity per 1000
+women. Columns 1–2 are baseline DD models including
+only time and state fixed effects, while columns 3–4 add
+in time-varying controls described previously. We present
+results for Eq. (1) in Panel A, and for Eq. (2) in Panel B. On
+average, compared with non-reform states, the ILE reform
+resulted in a reduction in morbidity by approximately 0.06
+
+to 0.08 cases per 1000 women (per month) when consider-
+ing all abortion-related morbidity and 0.013 to 0.016 cases
+
+per 1000 women (per month) when considering the inci-
+dence of haemorrhage in early pregnancy. When compared
+
+to average rates of morbidities, this is approximately a 20%
+
+reduction in abortion-related morbidity and a 35% reduc-
+tion in rates of haemorrhage in early pregnancy. Note that
+
+these large effects were notable even in raw trends dis-
+played in Fig. 1.
+
+In the case of subsequent restrictive reforms, we do not
+
+find evidence to suggest that these reforms shifted mor-
+bidity outcomes. For abortion-related morbidity and for
+
+haemorrhage in early pregnancy, we find no significant
+impacts across specifications reported in Table 2. When
+instead of the total number of cases we examine the total
+number ofinpatient days (Appendix TableA6), we similarly
+observe a large reduction following Mexico’s ILE reform
+
+and no significant, or consistently signed, impactin the case
+of regressive reforms.
+Fig. 2a presents event study evidence for haemorrhage
+
+in early pregnancy, and Fig. 2b presents event study esti-
+mates for abortion-related morbidity. In both cases, the
+
+left-hand panel shows the lag and lead coefficients for
+Mexico DF surrounding the ILE reform (Eq. (3)), and the
+right-hand panel shows the coefficients for regressive
+states (Eq. (4)). In Fig. 2a we observe an immediate sharp
+decline in rates of haemorrhage in Mexico DF following the
+adoption of ILE. Additionally, we observe little evidence
+of prevailing differences in treated and untreated states
+before the reform in all leads. In the case of regressive states
+(Panel (b)), we observe a similar quite flat profile prior to
+the reform. Following the reform, we observe no similar
+reduction in rates of haemorrhage early in pregnancy as
+
+that observed in Mexico DF, with no lag terms being statis-
+tically distinguishable from zero at 95% significance levels.
+
+These results support evidence from the medical literature
+that haemorrhage is one of the major drivers of maternal
+morbidity and mortality following unsafe abortions (World
+Health Organization, 2011), as the appearance of a legal
+and safe alternative to clandestine abortion resulted in
+
+an immediate sharp reduction in hospitalisations result-
+ing from haemorrhage early in pregnancy. Moreover, we
+
+observe that these reductions occur very quickly follow-
+ing the moment that abortion was legalised, suggesting an
+
+immediate effect of safe legal abortion on women’s health
+outcomes.
+
+When considering rates of abortion-related morbid-
+ity, event studies document larger prevailing (pre-reform)
+
+differences between Mexico DF and untreated states,
+although these are largely driven by a number of monthly
+fluctuations greater than two years prior to the reform.19
+This agrees with simple trends in outcomes documented in
+Fig. 1, which suggest a number of relatively sharper jumps
+observed in Mexico DF prior to 2005 that were not seen in
+the rest ofthe country. However,these do not seem to point
+
+to radically different pre-reform trends but rather cycli-
+cal outliers. In the case of states which altered legislation
+
+in response to ILE, we observe very little evidence of an
+impact of these reforms on abortion-related morbidity in
+
+Fig. 2b. In both the pre- and post-reform period, all esti-
+mates are not statistically distinguishable from zero and
+
+are centred around a null impact. In the case of abortion-
+related morbidity, itis importantto note thatthe procedure
+
+used for abortions realised under the auspices of ILE has
+changed over time, which may partially explain the delay
+in observed impacts on morbidity. Initially, the majority
+
+of abortions were performed by surgical procedures com-
+pared to medical abortions (25%). This gradually changed in
+
+subsequent years, withmedical abortionprocedures reach-
+ing 74% in 2011, and the use of dilation and curettage
+
+was eliminated entirely (in accordance with World Health
+Organization (WHO) recommendations for first-trimester
+abortions). In addition, the quality of medical abortions
+
+19 In Appendix Figure A5 similar results, with fewer fluctuations in pre-
+periods, are observed when considering trimesterly rather than monthly
+
+cells.
+10
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+Table 2
+Difference-in-differences estimates of legal reforms on morbidity
+
+Abortion-related morbidity Haemorrhage early in pregnancy
+(1) (2) (3) (4) (5) (6) (7) (8)
+
+Panel A: ILE versus non-reformers
+Post-ILE
+Reform (DF)
+
+−0.064*** −0.071*** −0.063*** −0.075*** −0.014*** −0.016*** −0.014XX −0.013**
+(0.013) (0.006) (0.016) (0.012) (0.004) (0.004) (0.007) (0.007)
+Observations 2496 2496 2496 2496 2496 2496 2496 2496
+Mean of
+Dependent
+Variable
+
+0.338 0.338 0.338 0.338 0.044 0.044 0.044 0.044
+
+Panel B: Regressive reforms versus non-reformers
+
+Post-
+Regressive Law
+
+Change
+
+−0.001 0.000 −0.009 −0.007 −0.005 −0.003 −0.005 −0.002
+(0.013) (0.011) (0.011) (0.011) (0.006) (0.004) (0.006) (0.004)
+Observations 5952 5952 5952 5952 5952 5952 5952 5952
+Mean of
+Dependent
+Variable
+
+0.328 0.328 0.328 0.328 0.042 0.042 0.042 0.042
+
+State and
+Year × Month
+FEs
+
+Y Y Y Y Y Y Y Y
+
+Population
+Weights
+
+Y Y Y Y
+
+Time-Varying
+Controls
+
+Y Y Y Y
+
+Notes: Each column displays a difference-in-differences regression of the impact of abortion reform on rates of morbidity (inpatient cases). Each morbidity
+class is measured as cases per 1000 fertile-aged women each month, and average levels in the full set of data are available at the foot of the table. Each
+regression is estimated using states that adopt reforms (ILE in Panel A, regressive reforms in Panel B) versus other non-adopting states. All standard errors
+are clustered at the level of the state.
+XX p < 0.10. ** p < 0.05. *** p < 0.01.
+
+Fig. 2a. Event studies for rates of haemorrhage early in pregnancy.
+
+performed has also improved due to the introduction of
+mifepristone (combined withmisoprostol)in2011 (Becker,
+2013).
+
+We note that these reductions in rates of maternal mor-
+bidity in Mexico DF surrounding the passage of the ILE
+
+reform are not simply capturing a general improvement
+in health outcomes in the region. In Appendix Figure A6
+
+we estimate identical models for (late-term) obstetric com-
+plications and observe no such improvements in Mexico
+
+DF. We also observe evidence to suggest parallel trends
+throughout the entire period studied between Mexico DF,
+states implementing regressive reforms, and the rest of the
+country. Similarly, in Appendix Figures A7 and A8, when
+considering a much broader class of morbidity outcomes
+11
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+
+Fig. 2b. Event studies for rates of abortion morbidity. Notes: Event studies document the evolution of rates of haemorrhage early in pregnancy (2a) and
+abortion-related morbidity (2b) per 1000 women surrounding the passage of abortion reforms. Each point estimate refers to the change in rates between
+treated and untreated states, compared to their baseline differential immediately prior to the reform. The left-hand panel shows the difference between
+Mexico DF and untreated states surrounding the passage of the ILE reform. The right-hand panel shows the difference between regressive policy changers
+and non-changers around the (time-varying) date that each reform was passed. Regressions are weighted by the population of fertile-aged women, and
+the full set of time-varying controls are included.
+(such as neoplasms, endocrine diseases and so forth), we
+once again observe no systematic difference in rates of
+
+morbidity surrounding abortion reforms, with the excep-
+tion of a number of monthly peaks and troughs observed in
+
+Mexico DF, indicative of no general improvements across
+the time period studied.
+5.1.2. Maternal mortality and “the tip of the iceberg”
+Frequently, analyses of the impact of public policies on
+maternal health focus on maternal mortality, given a lack
+of access to high-quality morbidity records (such as those
+available in Mexico). An argument is made that if effects
+are observed on maternal morbidity, which is the “tip of
+
+the iceberg” (see Firoz et al., 2013), then there will logi-
+cally be considerable impacts on maternal morbidity (the
+
+base ofthe iceberg). However,the much lower frequency of
+maternal deaths compared with maternal morbidity makes
+it much harder to precisely estimate impacts of health
+reforms on maternal mortality. Here we briefly consider
+how much precision is lost when considering impacts on
+maternal mortality, comparing our previously estimated
+impacts on morbidity with those focusing on maternal
+deaths. Given the much lower rates of maternal deaths,
+we focus on yearly models. And as these estimates are
+indeed considerably more noisy than estimated impacts on
+morbidity, we relegate results to an Online Appendix and
+discuss broad patterns and lessons for estimating reform
+impacts on maternal health outcomes.
+
+In Appendix Table A7 we present DD estimates follow-
+ing Eqs. (1) (Panel A) and (2) (Panel B) for both all maternal
+
+deaths (columns 1–4), and only maternal deaths originat-
+ing from abortive causes (columns 5–8). When focusing on
+
+the ILE reform, we observe mixed evidence pointing in the
+direction of negative though imprecisely estimated effects.
+
+Both weighted and unweighted estimates suggest a reduc-
+tion in all maternal deaths following ILE (columns 1 and
+
+2), of approximately 0.5 per 100,000 fertile-aged women
+(versus a mean value of 4 deaths per 100,000 women in
+Mexico). Note, however, that when adding time-varying
+controls in column 3, these estimates are reduced by about
+one-third and become statistically insignificant at typical
+
+levels. Similarly, in the case of abortion-related mater-
+nal mortality, we observe significant reductions when
+
+using weighted or unweighted simple DD models (with
+point estimates of around −0.09 per 100,000 fertile-aged
+
+women),though these become insignificant with the inclu-
+sion of time-varying controls. In the case of regressive
+
+reforms we find, across the board, relatively less evidence
+of any impacts of these reforms on maternal mortality. We
+
+do consistently observe negative point estimates of a mag-
+nitude approaching that observed in Mexico DF following
+
+the ILE reform; however, these are only (marginally) sig-
+nificant in two models. We also note that, as discussed,
+
+standard errors are quite wide thus precluding us from
+concluding that these estimates suggest tightly estimated
+zero-impacts.
+In general these results point to the fact that focusing
+only on mortality when studying reforms which impact
+
+maternal health may considerably understate their impor-
+tance as a determinant of well-being. Both Appendix Table
+
+A7 (as well as event studies presented in Appendix Figures
+A9a for all maternal mortality and A9b for mortality due to
+abortion) suggest noisy results with little power to reject
+
+a range of nulls. While event studies suggest that reduc-
+tions in mortality may have been observed in Mexico DF,
+
+these are certainly not as clearly observed as the morbidity
+results presented in Section 5.1.1 of this paper.
+5.2. Benchmarking impacts on birth rates
+While our main focus in this paper is on quantifying
+the health costs of abortion reform, it is illustrative to also
+12
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+
+estimate impacts on birth rates. This allows us to con-
+sider the magnitude of these reforms compared with a
+
+range of other contexts which have been well-documented
+in the economic literature. As summarised in Appendix
+Table A8, across studies on abortion legalisation in the
+US, Nepal, Norway, Romania and Uruguay, we observe a
+drop in birth rates of between 1.2% and 8%. Studies on
+the impact of regressive abortion law changes (including
+parental consent laws and restricted funding of abortions)
+find considerably more heterogeneous results, with results
+ranging from significant reductions in birth rates (Kane and
+Staiger, 1996), insignificant impacts (Levine et al., 1996),
+and increases in rates of birth (Lahey, 2014).
+Our results from the Mexican abortion reforms suggest
+broadly similar impacts on birth rates to those observed in
+
+other settings following the elimination of abortion restric-
+tions. In Table 3 we present DD estimates of the impact of
+
+reforms on birth rates, weighted and unweighted by the
+number of fertile-aged women in each state by month cell.
+In general, across specifications, results are quite stable in
+suggesting a significant reduction in births in Mexico DF
+following the ILE reform. Depending onestimation weights,
+we observe a reduction of between 0.53 and 0.64 births per
+
+1000 women per month, which is the equivalent of a reduc-
+tion of between 7% and 8.5% in birth rates compared with
+
+pre-reform levels in the state. Our preferred estimates are
+those including population weights with full time-varying
+controls, which suggest a reduction of 0.64 births per 1000
+women of fertile age in the years following the ILE reform,
+which is the equivalent of an 8.5% reduction in birth rates
+in Mexico DF. In the case of states passing regressive laws
+altering their penal codes or state constitutions related to
+
+abortion, we find some evidence to suggest smaller reduc-
+tions in birth rates in these DD specifications. Depending
+
+on the model, point estimates vary from −0.19 to −0.27
+births per 1000 women per month, equivalent to a 2.5% to
+3.6% reduction in birth rates.20 We return to examine the
+nature of these legal reforms in more detail in Section 5.3,
+revisiting the smaller estimated impacts on birth rates.
+
+We provide full event studies corresponding to the pas-
+sage of progressive and regressive reforms in Fig. 3a. Given
+
+the considerable seasonality and even monthly variations
+in the quantity of births, we additionally present event
+studies by year in Fig. 3b (and by trimester in Appendix
+Figure A10), which allows for some smoothing of sharp
+monthly changes. In the left-hand panel of both monthly
+and yearly event studies, we observe a reduction in birth
+rates in Mexico DF when compared with all non-reform
+states, which becomes consistently observed from around
+7–10 months (or one year) post-reform (2008) onwards.
+
+20 As we will discuss below, we note that these estimates are significant
+only in the case of two-way FE models and not in event study models. In
+
+general, inthe case ofthe regressive reforms whichare rolled outina time-
+varying way,two-way FE models potentially mis-estimate the true nature
+
+of the ATT, and so we find event study estimates more credible. Nonethe-
+less, we do note that in some literature discussed in Appendix Table A8
+
+reductions in fertility are observed following legal restrictions on abortion
+access, and this could potentially be explained if increasing sanctions on
+abortion act to discourage marginal births. A theoretical model of such a
+case is provided in Ananat et al. (2009).
+
+This is in line with lags in birth rates expected to be
+
+observed approximately 7–9 months following the pas-
+sage of abortion reforms due to the gestational period and
+
+limits on gestational length when undertaking abortion.
+Estimates in the pre-reform period are not completely flat.
+
+If anything they suggest evidence of a slightly upward-
+sloping trend or an inverted U-shaped trend a number
+
+of years before the adoption of abortion law reforms in
+Mexico DF.
+The impact of prevailing trends in outcomes which are
+not parallel between treated and untreated areas can be
+formally examined using “Honest DD” methods proposed
+by Rambachan and Roth (2019). These methods propose a
+robust estimation and inference technique assuming that
+trends in the post-event period do not diverge ‘too much’
+from those in the pre-event period.21 We document how
+our estimated event study coefficients would vary under a
+range of assumptions using these “Honest DD” techniques
+in Appendix Figures A11, A12 and A13. Given that these
+techniques require bounding each figure in the event study,
+we conduct these methods with yearly analogues of the
+monthly event studies (confidence intervals for baseline
+yearly event studies are presented in blue in these plots for
+comparison). Importantly, as well as allowing for varying
+violations of parallel trends, they document that in each
+case, if trends had remained constant in the post-event
+period, the true estimate would be both more negative and
+consistently statistically significant. In Appendix C we also
+document the stability of these estimates when compared
+to a judiciously chosen synthetic control group (Figure
+A26).
+The right-hand panel of Fig. 3a documents the same
+
+point estimates and confidence intervals for states alter-
+ing their constitutions or criminal codes to increase legal
+
+sanctions on abortion. In the case of regressive reforms,
+
+while we observe a gradual reduction in estimated coef-
+ficients following legal changes, the effects are generally
+
+not statistically distinguishable from zero in monthly (or
+trimesterly) event study models, although a significant
+impact is observed 4–5 years post-treatment in more
+aggregated yearly models. In this case, prevailing trends
+in the pre-reform period are observed to be somewhat
+downward sloping, with little evidence of a trend break
+following the implementation of regressive reforms. These
+event studies suggest that, if anything, the DD estimates
+presented in Fig. 3a may over-state the impact of legislative
+
+tightenings. Given recent advances in work on the interpre-
+tation of two-way FE models, it is important to note that in
+
+the case of regressive abortionlaws whichare rolledoutina
+time-varying way,these event study models which suggest
+insignificant effects (in monthly and trimesterly models
+
+21 Specifically, these methods are not based on parallel trends assump-
+tions but rather impose a limit on the degree to which parallel trends can
+
+fail in the post-treatment period. Following Rambachan and Roth (2019),
+
+in the tests conducted in this paper we limit the degree to which counter-
+factual trends between outcomes in the ILE and non-ILE areas are allowed
+
+to deviate from linearity. We present bounds estimates based on various
+different assumptions related to the maximum possible divergences from
+linearity between each time period, allowing us to observe the sensitivity
+of inference to possible failures of parallel trend assumptions.
+13
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+Table 3
+Monthly difference-in-differences estimates of abortion reforms on fertility.
+Births per 1000 women
+(1) (2) (3) (4)
+
+Panel A: ILE versus non-reformers
+Post-ILE Reform (DF) −0.531*** −0.636*** −0.537*** −0.608***
+(0.075) (0.106) (0.110) (0.106)
+Observations 2028 2028 2028 2028
+Mean of Dependent Variable 7.302 7.302 7.302 7.302
+Mean of Dependent Variable (Mexico DF) 7.433 7.433 7.433 7.433
+Panel B: Regressive reforms versus non-reformers
+Post Regressive Law Change −0.191** −0.269*** −0.202** −0.228**
+(0.089) (0.097) (0.085) (0.112)
+Observations 4836 4836 4836 4836
+Mean of Dependent Variable 7.266 7.266 7.266 7.266
+Mean of Dependent Variable (Regressive States) 7.434 7.434 7.434 7.434
+State and Year FEs Y Y Y Y
+Population Weights Y Y
+Time-Varying Controls Y Y
+Each column displays a difference-in-differences regression of the impact of abortion reform on birth rates. Birth rates are measured as the number of
+births per 1000 fertile-aged women each month. Time-varying controls are documented in Section B.2. All standard errors are clustered at the level of the
+state using a wild clustered bootstrap procedure.
+** p < 0.05. *** p < 0.01.
+
+Fig. 3a. Monthly event studies for birth rates.
+
+documented in Appendix Figure A10) should be preferred
+over the models presented in Table 3. This is because the
+
+weighting in the two-way FE models may result in esti-
+mates which do not truly capture the ATE. We return to
+
+this point in the next sub-section.
+5.3. Understanding impacts of abortions laws
+5.3.1. Why do we observe changes in women’s health?
+
+In Section 2.4 we discussed three conceptual chan-
+nels through which abortion reform could impact maternal
+
+health: the “quality of care” channel, the “demand” chan-
+nel, and the “selection” channel. We consider which of
+
+these channels could explain the observed impacts of abor-
+tion reform on women’s health laid out in Section 5.1.
+
+The selection channel suggests that the composition
+of women giving birth may change because of selective
+interaction with abortion laws. We consider this directly in
+
+Appendix Table A9 where we use the same two-way FE set-
+up to examine how maternal and paternal characteristics
+
+vary surrounding both the ILE reform as well as regressive
+reforms. In general, we observe that parents who give birth
+following the ILE reform are both older and more educated.
+
+We also see some change in the composition of parents fol-
+lowing regressive reforms with parents more likely to be
+
+married, which potentially indicates that there are impacts
+
+on the types of women conceiving when sanctions on abor-
+tions are raised. While this suggests that a selection channel
+
+may be occurring, these results do not allow us to sign
+the direction this channel works in, as they do not directly
+consider the interaction of these changing characteristics
+14
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+
+Fig. 3b. Yearly event studies for birth rates. Notes: Event studies documentthe evolution of birth rates per 1000 women surrounding the passage of abortion
+reforms. Each point estimate refers to the change in rates between treated and untreated states, compared to their baseline differential immediately prior
+to the reform. Fig. 3a presents event studies based on monthly birth rates while Fig. 3b is based on yearly birth rates (trimesterly figures are displayed in
+Appendix Figure A10). In each case, the left-hand panel shows the difference between Mexico DF and untreated states surrounding the passage of the ILE
+reform. The right-hand panel shows the difference between regressive policy changers and non-changers around the (time-varying) date that each reform
+was passed. Regressions are weighted by the population of fertile-aged women, and the full set of time-varying controls are included.
+on health outcomes. We test this directly in Appendix
+Table A10 where we consider the same two-way FE models
+examining reform impacts on health outcomes; however,
+in this instance additionally controlling for variables which
+
+capture parental selection (namely, all outcomes consid-
+ered in Appendix Table A9). This allows us to ask whether
+
+the estimates of the impact of abortion reforms on health
+that we observe are completely explained by the changes
+in the composition of parents.
+
+The results of Table A10 suggest a number of impor-
+tant interpretations. First, in the case of abortion-related
+
+morbidity, many of the observed impacts of the ILE reform
+do appear to flow from changes in the characteristics
+
+of parents. And, in particular, the fact that our signifi-
+cant estimates are attenuated towards zero conditional on
+
+these controls suggests that those giving birth following
+the reform are selectively healthier (at least in terms of
+the likelihood of having a miscarriage or other types of
+
+abortion-related morbidity). However, in the case of haem-
+orrhage early in pregnancy, we observe no such change in
+
+the coefficients. This suggests that the observed impacts
+are not simply a compositional impact but rather likely
+
+owe to the demand channel or the quality of care chan-
+nel. In the case of Mexico, it seems likely that the quality
+
+of care channel explains the large reduction in haemor-
+rhage in early pregnancy. In clandestine settings, where
+
+misoprostol is used without adequate access to informa-
+tion, haemorrhage and resulting hospitalisation is likely
+
+to occur, something which can be avoided when care is
+sought through ILE providers who give both treatment as
+well as information related to post-abortion care. However,
+without data on the usage of clandestine abortion prior to
+the ILE reform it is difficult to assess the degree to which
+legalising abortion may have resulted in the avoidance of
+
+marginal births. Thus, in principle, while the evidence sug-
+gests that the observed impacts of legalised abortion on
+
+rates of haemorrhage early in pregnancy do not owe to the
+
+selection channel, and while it seems likely that the qual-
+ity of care channel is a main determinant, without data
+
+on clandestine abortion we cannot formally rule out the
+demand channel.22
+5.3.2. De jure versus de facto legal reforms
+In general we find no impact of regressive law changes
+on resulting morbidity and small impacts on birth rates.
+One potential explanation for this is that, although de
+jure changes were made to state constitutions, the de
+facto implementation of laws and penal codes remained
+unchanged. As we document in Appendix Table A1, in
+many cases, while constitutions were altered—generally
+to declare that human life begins at conception—this did
+
+not always translate in concrete legal changes in the crim-
+inal sanctions imposed on women. This has been similarly
+
+noted in legal analyses of the reform (Singh et al., 2012).
+And even in cases where criminal sanctions were increased,
+it may be the case that state-level judiciaries do not alter
+the likelihood of imposing sanctions on abortion.
+We examine whether there is evidence of changes in
+
+the likelihood of being sentenced to prison for under-
+taking an abortion or in the length of prison sentences
+
+received, based on the passage of the abortion laws exam-
+ined in this paper. These data cover all individuals in the
+
+country, and here our outcomes are focused explicitly on
+
+whether an individual is sentenced to prison for under-
+taking an abortion. DD results following specifications (1)
+
+and (2) are displayed in Table 4. We observe, first, that
+22 Given the expansion of the medical abortion regime (i.e., the use of
+
+misoprostol and mifepristone) in Mexico DF (Becker, 2013), complica-
+tions due to the abortion procedures themselves following the ILE reform
+
+appear to be low (Grimes et al., 2006). It is therefore unlikely that channel
+2b, from Section 2.4, explains large movements in maternal health.
+15
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+Table 4
+Difference-in-differences estimates of abortion reforms on judicial outcomes.
+
+Number of prison sentences Length of prison sentences
+(1) (2) (3) (4)
+
+Panel A: ILE versus non-reformers
+Post-ILE Reform (DF) −4.018*** −4.050*** 2.251** 2.150**
+(0.294) (0.340) (1.032) (1.063)
+Observations 117 117 56 56
+Mean of Dependent Variable 1.427 1.427 3.606 3.606
+Panel B: Regressive reforms versus non-reformers
+Post-Regressive Law Change −0.648 −1.362** 4.144XX 5.220**
+(0.464) (0.607) (2.361) (2.439)
+Observations 279 279 171 171
+Mean of Dependent Variable 1.806 1.806 3.749 3.749
+State and Year FEs Y Y Y Y
+Population Weights Y Y
+Difference-in-difference models illustrate how abortion reforms correlate with prison sentences handed down by the judiciary and the length of these
+prison sentences in years. The total number of sentences and the average length of prison sentences are generated from administrative records captured
+in Mexico’s Judicial Statistics on Penal Matters. This is the universe of judiciary decisions in the country based on the first legal judgment and so does not
+include any subsequent appeals. Analysis of the length of prison sentences presented in columns 3 and 4 is conditional on any prison sentences being
+handed down in each state and year. Prison sentence lengths are calculated from a categorical variable capturing bins of between six months and two years,
+and in each case we record the total years (or fractions of years) based on the midpoint of each bin. Bins are consistently used in the period displayed here.
+All standard errors are clustered at the level of the state and calculated using a wild bootstrap procedure. Identical models using population-standardised
+values for dependent variables are presented in Appendix Table A11.
+XX p < 0.10. ** p < 0.05. *** p < 0.01.
+
+there is a sharp reduction in the number of prison sen-
+tences for undertaking an abortion in Mexico DF following
+
+the reform (in line with the legalisation of abortion); how-
+ever, this was observed alongside an estimated increase in
+
+sentence lengths.23 Importantly, we observe evidence of
+
+a dual impact in regressive states. We observe mixed evi-
+dence pointing to a slight reduction in the number of prison
+
+sentences handed down, falling by 1.36 cases in weighted
+regressions (compared with a mean number of sentences
+
+per state and year of 1.806). In the case of the length of sen-
+tences, we observe a considerable increase of between 4.1
+
+and 5.2 years, depending on the specification estimated.
+
+In the case of weighted estimates, we observe an aver-
+age increase of 5.2 years, which is considerable, even at
+
+the lower end of the 95% confidence interval, when com-
+pared with themean sentence length of 3.7 years.While the
+
+increase in the length of sentences is in line with harsher
+
+sanctions, the observed reduction in the number of crim-
+inal sanctions is surprising. There are, however, a number
+
+of potential explanations which could be offered such as
+prosecutors focusing on more serious crimes or reduced
+rates of sentencing if women temporarily leave their state
+
+to access abortion in other states with less stringent sen-
+tencing practices. Thus, these results suggest that while
+
+23 Note thatin Mexico DF, while abortion was legalised by the ILE reform
+it was only the case for abortions realisedupto12 weeks of gestation. Thus,
+in theory, custodial sentences can still be handed down for abortion when
+not meeting this condition. In practice, a non-zero number of sentences
+was only observed in Mexico DF in 2011 (refer to Appendix Figure A14 for
+trends over time). In particular, the significant increase in the length of
+custodial sentences is observed as very few cases were prosecuted, with
+prosecuted cases likely being relatively serious offences outside the scope
+of the ILE reform.
+
+the changes in law did not necessarily always prescribe a
+change in prison sentences, there is a detectable increase
+
+in the length of prison sentences observed in administra-
+tive data, conditional on being sentenced to prison. This
+
+increase in average sentence length is observed to hold
+in event study analysis, with significant impacts observed
+fromone year post-reformonwards (Appendix FigureA15).
+5.3.3. Considering the universe of health records
+Considering the universe of the public health system.
+In principal models, we have used month × year × state
+measures of outcomes, given that as documented in Table
+
+A2, a wave of legal restrictions were put in place in vary-
+ing months of 2008 and 2009. However, as discussed in
+
+the Data Section of this document, only hospitals admin-
+istered by Mexico’s Secretariat of Health (available to all
+
+individuals) report month of hospitalisation in administra-
+tive data. In order to determine whether a similar pattern
+
+is observed across the entire public health system, we
+additionally conduct analysis pooling by hospitalisations in
+hospitals administered by the Secretariat of Health, as well
+as those administered by social security providers. In this
+case, given the lack of monthly records in social security
+hospitals, we can only estimate models by year. In Fig. 4
+we present yearly event studies for the main morbidity
+outcomes considered, extending to this full sample.
+In all cases, we observe broadly similar results in each
+case. In the case of haemorrhage morbidity, we observe
+
+a sharp fall of around 1 per 1000 cases per year immedi-
+ately following the reform in Mexico DF (Panel(a)), with no
+
+similar results observed in states undertaking reform tight-
+enings (Panel(b)). Similarly, reductions in abortion-related
+
+morbidity are observed in Mexico DF, appearing gradually
+16
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+
+Fig. 4. Yearly event studies based on all public data. Notes: Event studies replicate those from Figs. 2a and 2b ; however, using yearly administrative records
+based on Secretariat of Health hospitals and social security hospitals. All details follow those indicated in notes to Figs. 2a and 2b ; however, we now work
+with the universe of hospital visits in all public hospitals. DD models are provided in Appendix Table A12 (and Appendix Table A13 for birth rates).
+over time as observed in monthly event studies with no
+similar changes observed in regressive states (panels (c)
+and (d)).
+Leakage to the private health system. One potential
+alternative explanationofthe observedmorbidity results in
+all public hospitals is that, rather than being driven entirely
+by the abortion reform,they may reflect changes in usage of
+the health system, with a larger number of women opting
+
+to use the private healthcare system. This argument can-
+not explain the impact on fertility and maternal mortality
+
+as these outcomes are based on the complete records of
+births and deaths in the country. However, it could partially
+
+explain the impacts observed on morbidity as our admin-
+istrative data records inpatient stays in the public health
+
+system (refer to Section 3 for additional discussion).
+While we cannot consistently merge public and private
+health data at the most disaggregated level of morbidity
+
+causes, we are able to consider all causes of abortion-
+related morbidity in the private healthcare system.24 In
+
+Appendix FigureA16 we plot rates of abortion-related mor-
+bidity in the universe of private hospitals (left-hand panel)
+
+and the universe of public hospitals (right-hand panel).
+These descriptive plots suggest that, if anything, results
+in the private system will only strengthen our estimates,
+as we observe a sharper reduction in abortion-related
+
+morbidity in private hospitals than we observe in pub-
+lic hospitals. In the case of morbidity due to haemorrhage
+
+early in pregnancy, we are unable to observe this as a sole
+cause in the private health records, but we are able to
+observe the class in which this cause falls and again we
+
+observe a considerably sharper reduction in morbidity fol-
+24 Note that as documented in Appendix Table A3,this mapping captures
+
+all ICD-10 codes O00–O08, while typically abortion-related morbidity is
+calculated from codes O02–O08. In Figure A16 we plot comparisons using
+precisely the same aggregated codes in public and private hospitals.
+17
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+lowing the reform in the private health system than we
+observe in the public health system (Appendix Figure A17).
+5.3.4. Reform spillovers and heterogeneity
+Reform spillovers. As outlined in Section 2.2, the ILE
+reform was not strictly limited to residents of Mexico
+
+DF. Recent evidence from the US documents a willing-
+ness to travel a significant distance to access abortion
+
+providers (Lindo et al., 2019; Venator and Fletcher, 2019).
+In Appendix Table A14 we provide summary figures of the
+state of precedence of users of abortion services in Mexico
+DF based on administrative data for 2007–2015. While
+the majority of users (72.5%) are women from Mexico
+DF, women residing all throughout Mexico have access
+to ILE. The largest non-DF population comes from nearby
+Mexico State (24.2%). In general, users of the ILE reform
+are clustered in states geographically close to Mexico DF. A
+
+descriptive plot is presented in Appendix Figure A18. Resi-
+dents in Mexico DF have by far the highest rate of abortion,
+
+at 5.8 abortions per 1000 women aged 15–49, followed by
+Mexico State, at 1 per 1000, and then two nearby states of
+Hidalgo and Morelos, with rates of 0.1 per 1000. Remaining
+
+states have rates which are an additional order of magni-
+tude lower than this.
+
+Despite some evidence of very localised geographic
+spillovers, we do not observe clear evidence of changes in
+birth or maternal health outcomes in nearby states. In Table
+A15 we estimate DD models augmenting specification (1)
+with a post ILE × spillover state indicator, where spillover
+states refer to Mexico State, Morelos and Hidalgo (the three
+
+states with most considerable abortion usage per popu-
+lation). In no case do we observe statistically significant
+
+reductions in fertility, morbidity, or mortality; if anything,
+we observe weakly positive impacts. Additional discussion
+is provided in Appendix C.
+An alternative model which captures both the impacts
+of the reform in Mexico DF as well as any reform spillovers
+to the rest of the country replaces the ILE variable in Eq. (1)
+
+with the intensity of treatment in each state. This inten-
+sity measure is captured as the rate of abortion per 1000
+
+women via the ILE program (documented in Appendix
+Table A14) in the post-reform period in each state.25 This
+information is reported in official ILE reports, but it is
+only available at the level of the year, and as such in this
+
+case we estimate yearly models as in Section 5.3.3. If out-
+comes per 1000 women are regressed on abortion usage
+
+per 1000 women, we are provided with a back-of-the-
+envelope calculation of the elasticity of outcomes with
+
+respect to the availability of a legal abortion. For example,
+if each additional legal abortion results in 1 fewer birth,
+
+we will estimate a coefficient of −1 in this model, suggest-
+ing full pass-through of legalised abortion to birth rates.
+
+We note, however, in our case that the figures on abor-
+tions refer only to those abortions provided by official ILE
+
+providers. To the degree that private providers additionally
+25 We thus capture rates of abortion using the ILE program in Mexico DF
+among residents of all states in the country. Non-residents of Mexico DF
+are able to access abortion through the ILE program without restrictions
+provided that they travel to an ILE clinic in Mexico DF.
+
+provide access to legal abortion, these estimates should be
+seen as an upper bound estimate on the magnitude of pass
+through.We estimatemodels ofthis type inAppendix Table
+
+A16. In general we observe that, using the full data on abor-
+tions across Mexico resulting from the ILE reform, impacts
+
+per abortionare considerable suggesting approximately 0.9
+fewer births per every abortion provided, 0.16 fewer cases
+
+of abortion-related morbidity, and 0.14 fewer cases of mor-
+bidity due to haemorrhage in early pregnancy. These values
+
+must be viewed in line with the caveat above that any abor-
+tions accessed from private providers will reduce the actual
+
+magnitude of pass-through (likely to be considerable given
+the relevance of the private sector), and as such these are
+upper bound estimates.
+Individual heterogeneity in reform impacts. Effects
+discussed up to this point have focused on average
+outcomes over all women aged 15–49. However, given
+
+evidence documenting heterogeneous impacts of abor-
+tion reform in other contexts (Ananat et al., 2007), and
+
+heterogeneity in access to abortion in Mexico (Friedman
+et al., 2019), we consider heterogeneity in a number of
+measures here. In Tables A17 and A18 we examine the
+impacts of the reform on abortion-related morbidity and
+on haemorrhage early in pregnancy by quinquennial age
+groups and by an individual’s insurance coverage. While
+we would like to consider impacts by individual income
+level, the category of insurance coverage is one of the
+
+closest proxies of income which we can observe in hos-
+pitalisation microdata.26 In the case of both outcomes we
+
+observe three broad stylised facts. First, health impacts are
+observed across the age distribution; second,these impacts
+are largest in size among younger women, peaking in the
+20–24 age group; and,third,that results appear to be driven
+by individuals who do have insurance coverage. This final
+
+fact suggests that impacts may be larger among higher-
+income women; however, it is important to note that this
+
+classification by insurance status is very crude because not
+
+having formal insurance likely signifies a considerable dis-
+connection from the public health system.
+
+Finally, in Appendix Figure A19 we document impacts
+more finely by age, specifically focusing on teenaged and
+
+younger women. Given that minors require parental con-
+sent, we may expect that impacts on these women are
+
+26 Microdata on patients treated at state-run hospitals, in particular,
+records whether they have insurance coverage through any social security
+
+providers (such as the Mexican Social Security Institute), state govern-
+ments, private providers, or alternatively no insurance through these
+
+channels. In all years, at least 15% of patients in public hospitals are
+recorded as having no insurance. This proportion did not change sharply
+around the passage of the ILE reform or subsequent regressive reforms
+
+(and access to ILE is free for residents of Mexico DF regardless of indi-
+vidual insurance status). It is important to note that all hospitalisation
+
+records we observe depend on individuals actually presenting at hospi-
+tals. Thus, to the degree that lack of insurance coverage acts to dissuade
+
+individuals from seeking care, this will result in under-estimates of the
+true magnitude of complications. However, in the absence of access to
+
+formal insurance, such incentives are likely similar in both pre- and post-
+reform periods, and as such we do not expect insurance cover categories
+
+to directly interact with the reform coefficients estimated here. Nonethe-
+less, as insurance coverage depends on a broad range of both observable
+
+and unobservable characteristics, we treat this heterogeneity analysis as
+broadly descriptive, and only a rough proxy for income.
+18
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+
+Fig. 5. Goodman-Bacon (2018) Decomposition based on 2 × 2 difference-in-difference models. Notes: Figures document the Goodman-Bacon decompo-
+sition into a series of 2 × 2 difference-in-differences models depending on the type of comparison unit. Here the ‘treatment’ refers to the passage of a
+
+regressive abortion law, and the outcomes refer to rates of morbidity per 1000 women. The passage of the ILE reform occurred at a single moment in time
+and, as such, decompositions need not be performed. The global decomposition is given in Table A19.
+reduced, in line with reduced rates of usage. In Appendix
+Figure A19 we observe single-coefficient DD estimates for
+each age, where we estimate models (1) (presented as
+
+hollow circles) and (2) (presented as black squares) sepa-
+rately in each yearly age group. Here, while we do observe
+
+a general increase in the magnitude of coefficients when
+increasing from women aged 15–18 and above, we do
+observe that even among younger adolescents (e.g., 16-
+year-olds), significant impacts of ILE are observed on both
+rates of haemorrhage and abortion-related morbidity.
+
+Temporal heterogeneity in reform impacts. An addi-
+tional concern related to the timing of adoption of the
+
+regressive reforms is that single-coefficient DD estimates
+(Eq. (1)) may be capturing heterogeneity and variation in
+
+law implementation rather than the ATT itself (Goodman-
+Bacon, 2018). We may be concerned that small effects, in
+
+particular, are being driven by the incorrect use of already
+treated units as controls in future periods. This will bias
+towards zero any effects of the laws if these impacts are
+growing over time.We thus follow Goodman-Bacon (2018)
+in explicitly decomposing the single-coefficient DD model
+
+into its component parts of a pure “treated versus never-
+treated” effect, and effects owing simply to the variation in
+
+timing ofthe passage oflaws.27 We note thatthis decompo-
+sition is only of concern in the case of regressive laws given
+
+that ILE was adopted in a single moment of time (and a sin-
+gle state). This decomposition is displayed graphically in
+
+27 Goodman-Bacon (2018) notes that a single-coefficient DD estimate
+
+is a weighted combination of each possible pair-wise DD estimate com-
+paring treated states with (a) non-treated states, (b) states which are not
+
+yet treated but are treated later, and (c) states which do not change their
+treatment status in a given period but that have been previously treated.
+In the case of time-varying treatment effects, this third comparison can
+potentially lead to mis-signed treatment effects. The decomposition we
+conduct here consists of plotting the individual DD estimate from each
+possible state-by-state comparison, as well as the weight it is given in the
+global single-coefficient DD estimate resulting from Eq. (1).
+
+Fig. 5 following Goodman-Bacon (2018), Goodman-Bacon
+et al. (2019). We plot the full set of “2 × 2” DD estimates of
+the impact of regressive reforms on morbidity outcomes,28
+where these models come from all variation in treatment
+timing and all possible control groups. We observe that
+estimates are largely clustered around zero, particularly
+
+for the Treated versus Never-Treated comparisons of inter-
+est. We present the global decomposition in Appendix
+
+Table A19, and observe—reassuringly—thatin each case the
+majority of the weight in the single coefficient DD estimate
+comes from the Treated versus Never-Treated comparison
+(around 92%) and, in general, estimates even within the
+timing-only groups are similarly small when compared to
+the Treated versus Never-Treated effect.
+5.3.5. Broader impacts of the ILE reform
+
+The ILE reform was a significant change, and was note-
+worthy across Latin America (Sánchez Fuentes et al., 2008).
+
+Evidence from literature in economics, such as Chiappori
+
+and Oreffice (2008), Oreffice (2007), suggests that abor-
+tion reform can have significantimpacts beyond health and
+
+fertility outcomes, extending to broader spheres within
+
+households and individual well-being. Here we briefly dis-
+cuss a number of possible additional impacts of abortion
+
+reform on women’s mental health and family outcomes.
+Given challenges in measurement and reporting,29 this
+28 Estimates for birth rates are provided in Appendix Figure A20. 29 When screened for, as well as other mental health issues related
+
+to childbirth, maternal depression is a common condition both antena-
+tal and post-partum with estimates suggesting a prevalence of between
+
+13–18% in Mexico (Albuja et al., 2017). However, as in most countries,
+the prevalence of maternal depression is difficult to establish as maternal
+
+depression is often under-diagnosed and under-reported (by both health-
+care professionals as well as patients) (Anokye et al., 2018). Our ability to
+
+capture post-partum depression (and similar conditions) is limited given
+that we do not have access to outpatient or pharmaceutical data. Being
+hospitalised for post-partum depression is rare and hospitalisations are
+19
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+
+Fig. 6a. Monthly event studies examining post-partum depression.
+
+work should be considered as exploratory and a possible
+subject of future research.
+To examine the impact on maternal mental health,
+we consider the predominant mental disorders in this
+domain, namely post-partum depression and other mental
+and behavioural disorders associated with the puerperium
+(World Health Organization, 2015). We use the same
+
+administrative health records as used previously record-
+ing all hospitalisations classified as owing to mental and
+
+behavioural disorders associated with the puerperium,
+including post-partum depression (ICD-10 code F53).30
+In Fig. 6a and 6b we estimate impacts of abortion
+reform following Eqs. (1) and (2) on rates of post-partum
+
+depression. While Fig. 6a suggests no consistently observ-
+able impacts on rates of post-partum depression around
+
+the passage of abortion reforms (for both progressive and
+regressive reforms), there is some evidence suggesting a
+reduction in rates of depression in Mexico DF compared
+
+with other untreated states when examining yearly esti-
+mates in Fig. 6b. No such clear evidence is observed in the
+
+case of states undertaking legal tightenings.
+Finally, while in this paper we are focusing principally
+on the health impacts of the adoption of abortion laws,
+there are potentially much broader impacts of such policy.
+
+For example, Lauletta (2019) provides evidence of poten-
+tial reductions in domestic violence flowing from these
+
+reforms, in line with economic theory suggesting improve-
+ments in women’s bargaining power flowing from birth
+
+control reforms.
+5.3.6. Mechanisms: availability, education, or behaviour
+Along with the law change legalising abortions, the ILE
+reform included additional components relating to sexual
+education and disbursement of additional contraceptives
+in clinics (refer to Section 2.2). To examine the channels
+likely to capture the most serve cases of mental illness while the majority
+of women are most likely treated elsewhere if diagnosed. 30 Another relevant mental health outcome is suicide attempt. However,
+this is an extreme measure of poor mental health. Moreover, in the ICD
+system suicide attempts are recorded separately as external causes, which
+are not consistently available in all microdata over time.
+
+through which the reform affected birth rates: whether it
+be only access or a combination of access with behavioural
+change, we use the MxFLS data which follows women over
+
+time and has survey rounds both before and after the abor-
+tion reforms of interest. To examine the potential effect of
+
+the other aspects of the reform (sexual education and con-
+traceptives), we estimate a version of Eq. (1) at the level of
+
+the individual, which allows for individual-specific fixed-
+effects given the panel nature of the MxFLS data.
+
+We examine the effect of abortion reform on all
+
+available measures of contraceptive use (using any con-
+traceptive or using modern contraceptives), the number
+
+of reported sexual partners, and whether the respondent
+
+reports having knowledge of modern contraceptive meth-
+ods. These results are presented in Appendix Table A20.
+
+In general, we find very little evidence to suggest that the
+results of the abortion reform flow from an increase in
+other contraceptive knowledge in reform areas or change
+in risky sexual behaviour as a result of the reform. We
+
+find quite close to zero effects for change in contracep-
+tive use and knowledge, and an insignificant reduction in
+
+the number of sexual partners reported. In all cases, these
+results are insignificant at the 10% level31 suggesting that
+the ILE reform’s effectis largely due to the sharp increase in
+
+utilisation of abortion services rather than alternative con-
+traception or information channels. Similarly, we do not
+
+find that regressive changes in abortion laws cause women
+
+to seek additional information,to be more likely to use con-
+traceptives, or to change sexual behaviour as proxied by
+
+the number of sexual partners compared to areas which
+were not subject to a regressive reform. We do note in the
+case of the number of sexual partners that while we cannot
+reject that the impact is significant even at a 10% level, we
+cannot rule out economically meaningful effects given the
+reasonably inexact point estimate.
+
+31 Summary statistics are provided in Appendix Table A21, and similar
+results are observed using a repeated cross section of women (Appendix
+Table A22).
+20
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+
+Fig. 6b. Yearly event studies examining post-partum depression. Notes: Event studies document the evolution of rates of post-partum depression per 1000
+women surrounding the passage of abortion reforms. Each point estimate refers to the change in rates between treated and non-treated states, compared
+to their baseline differential immediately prior to the reform. Fig. 6a presents event studies based on monthly rates of post-partum depression (using data
+from Secretary of Health hospitals only), while Fig. 6b presents event studies based on yearly rates of post-partum depression using data from all public
+hospitals (both Secretary of Health and social security providers). In each case, the left-hand panel shows the difference between Mexico DF and untreated
+states surrounding the passage of the ILE reform. The right-hand panel shows the difference between regressive policy changers and non-changers around
+the (time-varying) date that each reform was passed. Regressions are weighted by the population of fertile-aged women, and the full set of time-varying
+controls are included.
+6. Conclusion
+In this paper we examine the impact of abortion law on
+
+women’s health. We consider a context in which consid-
+erable heterogeneity in legislative reform is observed. In
+
+Mexico in the late 2000s both a substantial loosening and a
+series of tightenings of abortion policies were undertaken
+
+at the sub-national level. Using comprehensive vital statis-
+tics data on maternal health outcomes, we observe that safe
+
+legal abortion available in the first trimester of pregnancy
+
+in Mexico DF resulted in a sharp drop in maternal morbid-
+ity due to haemorrhage in early pregnancy and a slower
+
+decline in abortion-related morbidity, perhaps in line with
+the gradual adoption of recommended abortion techniques
+by public health clinics. These declines were of substantial
+importance suggesting 8600 fewer inpatient visits in the
+post-abortion years in Mexico DF. In general, we observe
+quite weak effects of the tightening of de facto sanctions
+on abortion, even though, as we show, these sanctions did
+lead to changes in the length of sentences handed down to
+women.
+We document that the impact of Mexico DF’s ILE reform
+on birth rates, at around an 8% reduction, is in line with
+impacts estimated in other settings (e.g., the US in the
+1970s). We observe generally weaker effects of regressive
+reforms on birth rates, although we note that in the case of
+Mexico these state-level reforms may have reduced fertility
+by around 1–2%. When examining the impacts of abortion
+
+reforms on rates of maternal death, our estimates are con-
+siderably noisier than those for maternal morbidity. This
+
+is important given that a range of papers examining the
+impact of abortion on women’s health limit analyses to
+maternal death because of a paucity of high-quality health
+records. Our results suggest that this focus on “the tip of
+the iceberg” may lead to less convincing results than when
+
+focusing on maternal morbidity. While focusing on sur-
+viving child birth should be an absolute minimum when
+
+designing public policies to protect maternal and women’s
+health, maternal morbidity is of considerable importance
+
+when quantifying lifetime well-being and avoiding a con-
+siderable health burden leading to chronic conditions.
+
+The results of this paper are becoming relevant once
+again as a number of countries revisit abortion legislation
+
+and attempt to make considerable changes to constitu-
+tions and penal codes. Among others, legislative reforms
+
+have been undertaken or attempted in Ireland, Argentina,
+Australia, Chile and New Zealand between 2017–2020
+focusing on legalising abortion in certain circumstances,
+and increasing restrictions have been enacted or proposed
+in Poland and a number of US states. This paper documents
+that these policies are likely to have a considerable impact
+on women’s health and well-being.
+Appendix A. Supplementary data
+
+Supplementary data associated with this arti-
+cle can be found, in the online version, at
+
+https://doi.org/10.1016/j.jhealeco.2020.102413.
+References
+Albuja, A.F., Lara, M.A., Navarrete, L., Nieto, L., 2017. Social support and
+postpartum depression revisited: the traditional female role as
+moderator among Mexican women. Sex Roles 77, 209–220.
+Ananat, E.O., Gruber, J., Levine, P., 2007. Abortion legalization and
+life-cycle fertility. J. Hum. Resour. XLII, 375–397.
+Ananat, E.O., Gruber, J., Levine, P.B., Staiger, D., 2009. Abortion and
+selection. Rev. Econ. Stat. 91, 124–136.
+Anokye, R., Acheampong, E., Budu-Ainooson, A., Obeng, E.I., Akwasi, A.G.,
+2018. Prevalence of postpartum depression and interventions
+utilized for its management. Ann. Gen. Psychiatry 17, 18.
+Bailey, M.J., Lindo, J.M., 2017. Access and Use of Contraception and Its
+Effects on Women’s Outcomes in the US. National Bureau of
+Economic Research, Inc, NBER Working Papers 23465.
+21
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+Becker, D., 2013. Decriminalization of abortion in Mexico city: the effects
+on women’s reproductive rights. Am. J. Public Health 103,
+590–593.
+Becker, D., Olavarrieta, C.D., Garcia, S.G., Harper, C.C., 2013. Women’s
+reports on postabortion family-planning services provided by the
+public-sector legal abortion program in Mexico city. Int. J. Gynecol.
+Obstet. 121, 149–153.
+Benson, J., Andersen, K., Samandari, G., 2011. Reductions in
+abortion-related mortality following policy reform: evidence from
+Romania, South Africa and Bangladesh. Reprod. Health 8, 39.
+Bitler, M., Zavodny, M., 2001. The effect of abortion restrictions on the
+timing of abortions. J. Health Econ. 20, 1011–1032.
+Blanco-Mancilla, G., 2011. Implementation of Health Policies in Mexico
+City: What Factors Contribute to More Effective Service Delivery?
+The London School of Economics and Political Science (LSE), Ph.D.
+Thesis.
+Bongaarts, J., 2016. WHO, UNICEF, UNFPA, World Bank Group, and
+United Nations Population Division Trends in Maternal Mortality:
+1990 to 2015 Geneva: World Health Organization, 2015. Popul. Dev.
+Rev. 42, 726.
+Chiappori, P.-A., Oreffice, S., 2008. Birth control and female
+empowerment: an equilibrium analysis. J. Polit. Econ. 116, 113–140.
+Chowdhury, M.E., Botlero, R., Koblinsky, M., Saha, S.K., Dieltiens, G.,
+Ronsmans, C., 2007. Determinants of reduction in maternal mortality
+in Matlab, Bangladesh: a 30-year cohort study. Lancet 370,
+1320–1328.
+Ciudad de México, 2007. Gaceta Oficial del Distrito Federal, Gaceta
+Oficial, No 70, Órgano del Gobierno del Distrito Federal,
+http://www.inmujeres.df.gob.mx/wb/inmujeres/decreto por
+el que se reforma el codigo penal para (accessed 26.04.07)
+(consulted 26.04.16) http://web.archive.org/web/20150924024041/.
+Clarke, D., Mühlrad, H., 2018. Abortion Laws and Women’s Health.
+Institute of Labor Economics (IZA), IZA Discussion Papers 11890.
+Clarke, D., Tapia Schythe, K., 2020. Implementing the Panel Event Study.
+Institute of Labor Economics (IZA), IZA Discussion Papers
+13524.
+Contreras, X., van Dijk, M.G., Sanchez, T., Smith, P.S., 2011. Experiences
+and opinions of health-care professionals regarding legal abortion in
+Mexico city: a qualitative study. Stud. Family Plan. 42, 183–190.
+Darney, B.G., Saavedra-Avendano, B., Lozano, R., 2017. Maintaining rigor
+in research: flaws in a recent study and a reanalysis of the
+relationship between state abortion laws and maternal mortality in
+Mexico. Contraception 95, 105–111.
+Firoz, T., Chou, D., von Dadelszen, P., Agrawal, P., Vanderkruik, R.,
+Tunc ̧ alp, O., Laura, N.v., Magee, A., Say, L., 2013. Measuring maternal
+health: focus on maternal morbidity. Bull. World Health Organ. 91,
+794–796.
+Fischer, S., Royer, H., White, C., 2018. The impacts of reduced access to
+abortion and family planning services on abortions, births, and
+contraceptive purchases. J. Public Econ. 167, 43–68.
+Fraser, B., 2015. Tide begins to turn on abortion access in South America.
+Lancet 383, 2113–2114.
+Freyaldenhoven, S., Hansen, C., Shapiro, J.M., 2018. Pre-event Trends in
+the Panel Event-study Design. National Bureau of Economic
+Research, Working Paper 24565.
+Friedman, J., Saavedra-Avendano,  ̃ B., Schiavon, R., Alexander, L.,
+Sanhueza, P., Rios-Polanco, R., Garcia-Martinez, L., Darney, B.G.,
+2019. Quantifying disparities in access to public-sector abortion
+based on legislative differences within the Mexico City metropolitan
+area. Contraception 99, 160–164.
+Gamboa Montejano, C., Valdés Robledo, S., 2014. Regulación del Aborto
+en México: Derecho Comparado de los 31 estados y del Distrito
+Federal, así como de diversos países en el mundo y estadísticas del
+INEGI en el tema, SAPI-ISS 33-14. Subdirección de Análisis de Política
+Interior.
+Gobierno de Nayarit, 2009. Exposición de Motivos; Reformo y Adición al
+Artículo 7, Fracción XI, de la Constitución Política del Estado Libre y
+Soberano de Nayarit y cómputo y Declaratoria de Aprobación de la
+Reforma, Periódico Oficial 079. Organo del Gobierno de Nayarit.
+Goldstein, P., Stewart, G., 1972. Trends in therapeutic abortion in San
+Francisco. Am. J. Public Health 62, 695–699.
+Goodman-Bacon, A., 2018. Difference-in-Differences with Variation in
+Treatment Timing. National Bureau of Economic Research, Working
+Paper 25018.
+Goodman-Bacon, A., Goldring, T., Nichols, A., 2019. BACONDECOMP:
+Stata Module to Perform a Bacon Decomposition of
+Difference-in-Differences Estimation.
+Grimes, D.A., 2005. Risks of mifepristone abortion in context.
+Contraception 71, 161.
+
+Grimes, D.A., Benson, J., Singh, S., Romero, M., Ganatra, B., Okonofua, F.E.,
+Shah, I.H., 2006. Unsafe abortion: the preventable pandemic. Lancet
+368, 1908–1919.
+Guldi, M., 2008. Fertility effects of abortion and birth control pill access
+for minors. Demography 45, 817–827.
+Gutierrez-Vazquez, E.Y., Parrado, E.A., 2015. Abortion Legalization and
+Fertility Rates in Mexico. University of Pennsylvania (Unpublished
+manuscript) http://paa2015.princeton.edu/uploads/151146.
+Guttmacher Institute, 2012. Facts on Induced Abortion Worldwide.
+Haddad, L.B., Nour, N.M., 2009. Unsafe abortion: unnecessary maternal
+mortality. Obstet. Gynecol. 2, 122–126.
+Henderson, J.T., Puri, M., Blum, M., Harper, C.C., Rana, A., Gurung, G.,
+Pradhan, N., Regmi, K., Malla, K., Sharma, S., et al., 2013. Effects of
+abortion legalization in Nepal, 2001–2010. PLOS ONE 8, e64775.
+Jewkes, R., Brown, H., Dickson-Tetteh, K., Levin, J., Rees, H., et al., 2002.
+Prevalence of morbidity associated with abortion before and after
+legalisation in South Africa. Br. Med. J. 324, 1252–1253.
+Johnson, T., 2013. Guaranteed access to safe and legal abortions: the true
+revolution of Mexico City’s legal reforms regarding abortion.
+Columbia Hum. Rights Law Rev. 44, 437–476.
+Joyce, T., Kaestner, R., 1996. The effect of expansions in medicaid income
+eligibility on abortion. Demography 33, 181–192.
+Juarez, F., Singh, S., Garcia, S.G., Olavarrieta, C.D., 2008. Estimates of
+induced abortion in Mexico: what’s changed between 1990 and
+2006? Int. Fam. Plan. Perspect., 158–168.
+Kahan, R.S., Baker, L.D., Freeman, M.G., 1975. The effect of legalized
+abortion on morbidity resulting from criminal abortion. Am. J.
+Obstet. Gynecol. 121, 114–116.
+Kane, T.J., Staiger, D., 1996. Teen motherhood and abortion access. Q. J.
+Econ. 111, 467–506.
+Koch, E., Chireau, M., Pliego, F., Stanford, J., Haddad, S., Calhoun, B.,
+Aracena, P., Bravo, M., Gatica, S., Thorp, J., 2015. Abortion legislation,
+maternal healthcare, fertility, female literacy, sanitation, violence
+against women and maternal deaths: a natural experiment in 32
+Mexican states. BMJ Open 5, e006013.
+Kulczycki, A., 2011. Abortion in Latin America: changes in practice,
+growing conflict, and recent policy developments. Stud. Fam. Plan.
+42, 199–220.
+Lahey, J.N., 2014. The effect of anti-abortion legislation on nineteenth
+century fertility. Demography 51, 939–948.
+Lauletta, M., 2019. Abortion Decriminalization and Domestic Violence:
+Evidence from Mexico, Tesis de Maestría en Economía 10908-17085.
+Universidad de San Andrés. Departamento de Economía.
+Levine, P.B., Trainor, A.B., Zimmerman, D.J., 1996. The effect of medicaid
+abortion funding restrictions on abortions, pregnancies and births. J.
+Health Econ. 15, 555–578.
+Lindo, J., Myers, C., Schlosser, A., Cunningham, S., 2019. How far is too
+far?: New evidence on abortion clinic closures, access, and abortions.
+J. Hum. Resour.
+Loudon, I., 1992. Death in Childbirth. An International Study of Maternal
+Care and Maternal Mortality 1800–1950. 1992. Clarendon Press
+Oxford, Oxford.
+Madrazo, A., 2009. The evolution of Mexico City’s abortion laws: from
+public morality to women’s autonomy. Int. J. Gynecol. Obstet. 106,
+266–269.
+Mbele, A., Snyman, L., Pattinson, R.C., 2006. Impact of the choice on
+termination of pregnancy act on maternal morbidity and mortality
+in the west of Pretoria. S. Afr. Med. J. 96, 1196–1198.
+Mitrut, A., Wolff, F.-C., 2011. The impact of legalized abortion on child
+health outcomes and abandonment. Evidence from Romania. J.
+Health Econ. 30, 1219–1231.
+Mondragón y Kalb, M., Ahued Ortega, A., Morales Velazquez, J., Diaz
+Olavarrieta, C., Valencia Rodriguez, J., Becker, D., Garcia, S., 2011.
+Patient characteristics and service trends following abortion
+legalization in Mexico City, 2007–10. Am. J. Public Health 3, 159–166.
+Myers, C.K., 2017. The power of abortion policy: reexamining the effects
+of young women’s access to reproductive control. J. Polit. Econ. 125,
+2178–2224.
+Nunes, F.E., Delph, Y.M., 1997. Making abortion law reform work: steps
+and slips in Guyana. Reprod. Health Matters 5, 66–76.
+Oreffice, S., 2007. Did the legalization of abortion increase women’s
+household bargaining power? Evidence from labor supply. Rev. Econ.
+Househ. 5, 181–207.
+Pazol, K., Creanga, A.A., Burley, K.D., Jamieson, D.J., 2014. Abortion
+Surveillance – United States, 2011. Division of Reproductive Health,
+National Center for Chronic Disease Prevention and Health
+Promotion, CDC, Tech. Rep.
+Pérez-Pérez, E., Serván-Mori, E., Nigenda, G., Ávila-Burgos, L.,
+Mayer-Foulkes, D., 2019. Government expenditure on health and
+22
+
+D.Clarke and H.Mühlrad Journal of Health Economics 76 (2021) 102413
+maternal mortality in México: a spatial-econometric analysis. Int. J.
+Health Plan. Manag. 34, 619–635.
+Pop-Eleches, C., 2010. The supply of birth control methods, education,
+and fertility: evidence from Romania. J. Hum. Resour. 45, 971–997.
+Rambachan, A., Roth, J., 2019. An Honest Approach to Parallel Trends.
+Mimeo Harvard University.
+Rees, H., Katzenellenbogen, J., Shabodien, R., Jewkes, R., Fawcus, S.,
+Mclntyre, J., Lombard, C., Truter, H., 1997. The epidemiology of
+incomplete abortion in South Africa. S. Afr. Med. J. 87, 432–437.
+Rodríguez-Aguilar, R., 2018. Maternal mortality in Mexico, beyond
+millennial development objectives: an age-period-cohort model.
+PLOS ONE 13, e0194607.
+Sahatci, E., 1993. Legal Abortion Improved Women’s Health in Albania.
+Newsletter (Women’s Global Network on Reproductive Rights), pp.
+10.
+Sánchez Fuentes, M.L., Paine, J., Elliott-Buettner, B., 2008. The
+decriminalisation of abortion in Mexico City: how did abortion rights
+become a political priority? Gend. Dev. 16, 345–360.
+Schiavon, R., Collado, M.E., Troncoso, E., Soto Sánchez, J.E., Zorrilla, G.O.,
+Palermo, T., 2010. Characteristics of private abortion services in
+Mexico City after legalization. Reprod. Health Matters 18, 127–135.
+Schiavon, R., Troncoso, E., Polo, G., 2012. Analysis of maternal and
+abortion-related mortality in Mexico over the last two decades,
+1990–2008. Int. J. Gynecol. Obstet. 118, S78–S86.
+Serbanescu, F., Morris, L., Stupp, P., Stanescu, A., 1995. The impact of
+recent policy changes on fertility, abortion, and contraceptive use in
+Romania. Stud. Fam. Plan., 76–87.
+Seward, P.N., Ballard, C.A., Ulene, A.L., 1973. The effect of legal abortion
+on the rate of septic abortion at a large county hospital. Am. J. Obstet.
+Gynecol. 115, 335–338.
+Singh, K., Ratnam, S., 2015. The influence of abortion legislation on
+maternal mortality. Int. J. Gynecol. Obstet. 63, 123–129.
+Singh, S., Remez, L., Tartaglione, A., 2010. Methodologies for Estimating
+Abortion Incidence and Abortion-Related Morbidity: A Review.
+Guttmacher Institute.
+Singh, S., Sedgh, G., Bankole, A., Hussain, R., London, S., 2012. Making
+Abortion Services Accessible in the Wake of Legal Reforms: A
+Framework and Six Case Studies. Guttmacher Institute, Tech. Rep.
+
+Special Investigations Division, Committee of Government Reform,
+House of Representatives, 2003. Politics and Science in the Bush
+Administration. Prepared for Rep. Henry A. Waxman,
+http://democrats.oversight.house.gov/images/stories/documents/
+20080130103545.pdf (accessed 02.06.18)
+http://web.archive.org/web/20121215150603/.
+Stephenson, P., Wagner, M., Badea, M., Serbanescu, F., 1992.
+Commentary: the public health consequences of restricted induced
+abortion-lessons from Romania. Am. J. Public Health 82, 1328–1331.
+Stewart, G.K., Goldstein, P.J., 1971. Effects on septic abortion and
+maternal mortality. Obstet. Gynecol. 37, 510–514.
+Suh, S., 2014. Rewriting abortion: deploying medical records in
+jurisdictional negotiation over a forbidden practice in Senegal. Soc.
+Sci. Med. 108, 20–33.
+Sully, E., Biddlecom, A., Darroch, J., Ashford, L., Lince-Deroche, N., Riley,
+T., et al., 2019. Adding It Up: Investing in Sexual and Reproductive
+Health. Guttmacher Institute, New York, NY.
+United Nations, 2014. Abortion Policies and Reproductive Health Around
+the World 2014.
+Velasco Sustaita, B.B. (Undated), Recomendación de Códigos CIE-10a
+Diagnósticos Médicos en Escenarios a Gran Escala, Thesis, Instituto
+Nacional de Astrofísica, Óptica y Electrónica.
+Venator, J., Fletcher, J., 2019. Undue Burden Beyond Texas: An Analysis of
+Abortion Clinic Closures, Births, and Abortions in Wisconsin. National
+Bureau of Economic Research, Inc, NBER Working Papers 26362.
+Winikoff, B., Sheldon, W.R., 2012. Abortion: what is the problem? Lancet
+379, 594–596.
+World Health Organization, 2011. Unsafe Abortion: Global and Regional
+Estimates of the Incidence of Unsafe Abortion and Associated
+Mortality in 2008, Edition 6. WHO Library.
+World Health Organization, 2015. Thinking Healthy: A Manual for
+Psychosocial Management of Perinatal Depression, WHO Generic
+Field-Trial Version 1.0, 2015. World Health Organization, Tech. Rep.
+World Health Organization, 2018. Preventing Unsafe Abortion,
+
+http://www.who.int/news-room/fact-sheets/detail/preventing-
+unsafe-abortion (consulted 28.08.18).

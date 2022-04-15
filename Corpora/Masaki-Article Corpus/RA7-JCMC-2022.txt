@@ -1,0 +1,838 @@
+<heading>
+Title: Memes, Memes, Everywhere, nor Any Meme to Trust: Examining the Credibility and Persuasiveness of COVID-19-Related Memes
+Author: Ben Wasike
+Journal: Journal of Computer-Mediated Communication
+Year: 2021
+</heading>
+
+This study used an experimental design to examine the credibility and persuasiveness of COVID-19related Internet memes. The study used a random sample of U.S. social media users (N ¼ 1,200)
+with source credibility as the theoretical framework. Results indicate that memes with expert source
+attribution are more credible than those with nonexpert source attribution. The same applies to the
+persuasiveness of the memes. Memes with an objective message tone are also more credible and
+persuasive than those with a subjective message tone. Additionally, there is a positive correlation between the credibility of a meme and its persuasiveness. Age correlates inversely with persuasion and
+pro-mask/vaccine memes are more credible and persuasive than anti-mask/vaccines memes. These
+results have implications regarding COVID-19 messaging as well as on meme-based communication.
+
+Lay Summary
+This study examined the credibility and persuasiveness of COVID-19-related Internet memes.
+This approach is important given the widespread use of social media during the pandemic and
+the rise of meme-based communication on social media. The study found that memes from an
+expert source are more credible and persuasive than those from a nonexpert source. The same applied to memes with an objective message over those with a subjective message. The credibility of
+a meme also improved its persuasiveness, meaning that users were more likely to like it, comment
+on it, and share it with others. As expected, younger people were more likely to like, share, and
+comments on memes. Overall, pro-mask/vaccine memes were more credible and persuasive than
+anti-mask/vaccines memes. These results suggest that public health campaigns may beneﬁt by incorporating memes in their communications.
+
+When you plant a fertile meme in my mind you literally parasitize my brain, turning it into a
+vehicle for the meme’s propagation in just the way that a virus may parasitize the genetic
+mechanism of a host cell (Richard Dawkins, 1976, p. 250).
+
+In Dawkins’ conceptualization, a meme is a symbolic aspect of culture that can, as quoted above,
+spread via imitative replication, and may represent a variety of things ranging from tunes and ideas to
+pottery methods and fashion (1976). Social media-related memes, or Internet memes specifically, are
+a disambiguation of Dawkins’ definition of cultural memes even though they too spread virally
+(Shifman, 2011). Internet memes as popularly known today were not only supercharged by the
+Internet, but the use of the term is a co-option and simplification of Dawkins’ broader and nuanced
+characterization of cultural memes (Knobel & Lankshear, 2006; Shifman, 2014). Here, Internet memes
+represent a narrow category of amateur audiovisual material or images and graphics with or without
+superimposed text (Davidson, 2009; Milner, 2012). There is robust debate about equating to or differentiating Internet memes from traditional memes (Davidson, 2009; Grundlingh, 2018; Milner, 2012),
+but that is beyond the scope of this article. Because the current study examines Internet memes, the
+definition and use of the term meme in this study are limited to those consisting of images and superposed text, much like the definition used in studies such Beskow, Kumar, and Carley (2020).
+Generally, this study examines the credibility and persuasiveness of memes using source credibility as the theoretical framework. Particularly, the study seeks to find whether: (a) expert source attribution in a meme affects its credibility and persuasiveness; (b) the message tone of a meme (objective
+vs. subjective) affects its credibility and persuasiveness; (c) there is a correlation between the credibility of a meme and its persuasiveness and (d) there is a correlation between the age (of a user) and the
+credibility and persuasiveness of a meme.
+This study contributes to our understanding of the persuasiveness and credibility of online phenomena in the following ways. First, and as mentioned, memes have diffused rapidly within online
+communication, and it is important to examine the related dynamics. By 2019, memes were second
+among the types of content most likely to be shared by Gen Z and Millennial Internet users. Here,
+66% of this demographic reported that they were either somewhat or very likely to share memes online. Additionally, 54% of this group reported that they were likely to share memes they had created
+themselves (Tankovska, 2021, para. 1). By 2021, memes were the third most shared content in the
+United States among all demographics, a trend partly driven by the COVID-19 pandemic (Enberg,
+2021, para. 2). These trends could explain why memes now spread faster and wider than any other
+nonmeme online content (Beskow et al., 2020).
+Additionally, memes emerged as unique communication tools during the COVID-19 pandemic.
+Users used memes to cope with pandemic-related stress (Myrick, Nabi, & Eng, 2021) as well as to
+blunt the impact of risk messages and to gain a feeling of control during the crisis (Flecha Ortiz, et al.
+2021). The City Baltimore Health Department also famously used humorous memes to encourage
+young people to get COVID-19 vaccines and to combat misinformation (Elwood, 2021). Conversely,
+users have used memes to spread misinformation about the coronavirus (Spencer, 2021, para. 2), its
+origins (Glaveanu & de Saint Laurent, 2021), and to spread a host of anti-vaccine falsities (Ellis, 2021;
+Goodman & Carmichael, 2020).
+The third reason relates to the emergence of social media as a conduit for disinformation and
+misinformation. This includes the fake news campaign during the 2016 U.S. presidential election
+(Allcott & Gentzkow, 2017; Gunther, Beck, & Nisbet, 2019) and a variety of conspiracy movements
+that emerged thereafter, such as Pizzagate (Robb, 2017, para. 2) and QAnon (Roose, 2021, para. 3).
+During the COVID-19 pandemic, social media again proved to be fertile ground for disinformation
+
+B. Wasik
+Internet memes
+As mentioned, the word meme derives from Dawkins’ characterization of cultural artifacts that convey ideas, attire, phrases, or ideas and ways of doing things (1976). In contemporary use however, an
+Internet meme is “a group of digital items sharing common characteristics of content, form, and/or
+stance, which . . . were created with awareness of each other, and . . . were circulated, imitated, and/or
+transformed via the Internet by many users” (Shifman, 2014, p. 41). In this sense, the content refers
+to the idea expressed by a meme. Form refers to the physical manifestation of the meme such as voice,
+video, image, or animation. Stance refers to the position on an issue that the meme creator intends to
+convey with the meme’s message. The current study examines how the content and stance of a meme
+affects its credibility and persuasion. See Figures 1–4 for examples of prominent Internet memes.
+Despite the rapid diffusion of memes in contemporary online communication, there is a dearth of
+experiment-based research examining the effect of memes on users. Most pertinent research has taken a
+sense-making approach in trying to understand the dynamics of meme-based communication, while other
+research has taken a critical approach regarding the role of memes in communication and society. Even
+
+Figure 1 Tourist guy. This early meme is a digitally manipulated hoax depicting a tourist on the
+World Trade Center observation desk supposedly during September 11 attacks. Form: Photo.
+Journal of Computer-Mediated Communication 00 (2022) 1–30
+
+and conspiracies. One such is the YouTube and Twitter-driven “film your hospital” campaign that alleged that hospitals were empty and not overwhelmed with COVID-19 patients (Ahmed, López,
+Vidal-Alaball, & Katz, 2020). Another is the viral pseudo-documentary “Plandemic,” which promoted
+a variety of falsehoods about the coronavirus and vaccines (Pappas, 2020). Similar social mediadriven disinformation campaigns have questioned the origin of the coronavirus, its spread patterns,
+its treatments and vaccines, and the credibility of health experts (Basch, Meleo-Erwin, Fera, Jaime, &
+Basch, 2021; Su, 2021). As mentioned, some among these misinformation campaigns have specifically
+used memes to spread similar falsehoods (Reuters Fact Check, 2021; Sapienza, 2021; Spencer, 2021)
+and therefore it is important to examine the role of memes in such developments. Lastly, few
+(Internet) meme studies have taken an experimental approach to analyze effects at the time of writing
+(see Myrick et al., 2021). This study addresses this shortcoming by using a multi-stimuli experimental
+design to examine the effect of COVID-19-related memes.
+Memes, Memes, Everywher
+Figure 3 Smudge the cat. This viral photo of a Canadian cat named Smudge has been edited to
+include a variety of phrases as well as mash-ups with other photos. Form: Photo with text.
+without experiment-based meme studies, existing research suggests such effects. For instance, scholars
+have discussed how meme humor may belie or lead to nefarious behavior. An example is Durham’s
+(2018) discussion of the ethical aspect of memes, where some viral memes started out as an exercise in casual curiosity but devolved into morbid curiosity. Such was the case with the viral photo of drowned
+Syrian refugee child Alan Kurdi. Users later edited the photo, not just into pro-refugee memes, but later
+into jocular memes that make light of his death. Meme humor may also belie sexism, misogyny, or racial
+
+Figure 2 Dancing pall bearers. Derived from a Ghanaian funeral dance, this meme is commonly
+used to mock people who ﬂirt with deadly situations. Form: Video or animated GIF.
+
+prejudice, some of which may be targeted toward specific individuals or even at an entire group of people
+(Dickerson, 2016; Drakett, Rickett, Day, & Milnes, 2018; Harlow, Rowlett, & Huse, 2020).
+Not all usage of memes suggests negative effects, and memes may play a positive role. Case in
+point is Schonig’s (2020) analysis of aesthetic memes and how users did not just react to them as they
+would other viral Internet content. Here, users delved into philosophical discussions of the meme
+content, some of which would otherwise have seemed to be mere images or photos. This echoes
+Shifman’s (2011) analysis of YouTube memes where users inserted their own text onto video clips to
+create creative dialog. Similarly, Reddit’s MemeEconomy users creatively deploy stock market lingo to
+discuss meme attributes and the risks and benefits involved in “investing” in the memes. The result is
+an organic and active community engaged in political and cultural criticism (Literat & van den Berg,
+2019).
+Scholars have also examined the role of memes in political dialog. This includes the use of memes
+to deconstruct colonialism (Frazer & Carlson, 2017), using meme humor to discuss political corruption (Bebic & Volarevic, 2018), and even the cult worship of authoritarian leaders (Fang, 2020). Other
+research indicates that memes may drive protest (Davis, Glantz, & Novak, 2016), engender online
+radicalization (Kearney, 2019), influence popular perception of future technological trends
+(Frommherz, 2017), encourage the disclosure of personal experiences (Vickery, 2014), and some
+memes may be weaponized against institutions such as the media as is done with the popular “fake
+news” memes (Smith, 2019). Even though the aforementioned meme-based research did not delve
+much into the effects of memes on users, the literature suggests that such effects are not only apparent, but likely exist and remain to be uncovered, and thus the current study.
+
+Social media, credibility, and persuasion
+This study examines the credibility of Internet memes as well as their persuasiveness in eliciting or
+changing user behavior. The key variables under study are credibility and persuasion, regarding the
+believability of the memes (credibility), and the likelihood of that credibility to elicit such behavior as
+sharing, commenting on, and liking memes (persuasion). Even though social media research generally
+classifies sharing, commenting, and liking as measures of engagement, research also shows that these
+
+Figure 4 The Fake Lincoln quote. This obviously misleading meme is in a class of memes that use an
+image of famous person with an erroneous quote attributed to him/her. Form: Photo and text.
+
+actions have a persuasive angle. For instance, commenting and liking has been linked to increased political efficacy and political expression, even among those initially averse to political discussion
+(Mutsvairo & Sirks, 2015; Yu, 2016). Influential social media users also actively persuade others, not
+just by posting information in general, but specifically by liking and sharing memes created by others
+(Weeks et al., 2017). Also, comments posted in support of some online health-related PSAs have been
+shown to elicit real-life behavioral changes (Shi, Messaris, & Cappella, 2014), as were health-related
+Twitter posts and related retweets (Lauricella & Koster, 2016). Additionally, how a user frames a social media post affects both the credibility and persuasiveness of the message (Wasike, 2017).
+Research also indicates that credibility and persuasion are related (Smith, De Houwer, & Nosek,
+2013; Wasike, 2017; Westerwick, 2013). Persuasion is any type of message that will “cause a person or
+group to adopt as their own a product, person, idea, entity, or point of view that the person would
+otherwise not support” (Preston, 2005, p. 294) or “any non-coercive inducement of individual or collective choice by another” (Barker, 2005, p. 376). Credibility refers to how audiences deem a source to
+be believable and trustworthy and the extent to which they deem the message communicated to be accurate and valid (O’Keefe, 1990; Rice & Atkins, 2001).
+Like any other form of communication, social media content, including memes, may depend on
+its credibility and persuasion. An abundance of research supports this. For instance, attitude homophily with political-oriented Facebook messages, or how people think alike on certain issues, positively correlates with perceptions of credibility about the source of the message. This then leads to
+behaviors such as such as donating, volunteering, and even voting for the source, who in the said
+study was a political candidate (Housholder & LaMarre, 2014). The current study examines how message homophily, or one’s stance on masks and vaccines affects the credibility and persuasiveness of a
+meme.
+Research also shows that expert sources elicit more credibility than novice or nonexpert sources
+(Lin, Spence, & Lachlan, 2016; Sohn & Choi, 2019). Additionally, users who perceive themselves to be
+more aligned with others within their social media group are more likely to share this information
+with others (Sohn & Choi, 2019). Likewise, users who deem themselves to be like the source (of a
+message) based on online characteristics such as the avatar, may perceive more credibility from an accompanying message (Spence, Lachlan, Westerman, & Spates, 2013). The current study also examines
+these variables, namely, source expertise, message homophily (as stance on mask-wearing and vaccines) and the likelihood to share memes (as persuasion).
+User-generated content is a unique characteristic of Internet-based media (Wunsch-Vincent &
+Vickery, 2007). Sharing online content such as memes falls under a class of participatory behavior
+called participant sharing. This is when users not only consume media, but also generate their own
+content and share it. Additionally, the quality of the content may affect such sharing (Dedeoglu,
+2019). Participant sharing is related to interactivity, another unique characteristic of social media
+communication. Interactivity is the ability to “share, co-create, discuss, and modify user-generated
+content” (Kietzmann, Hermkens, McCarthy, & Silvestre, 2011, p. 241). Research shows that interactivity also positively correlates with credibility (Li & Suh, 2015). User-generated content and participatory sharing are uniquely important to the current study because as mentioned, users may edit
+photos, images, and videos to create customized memes to share with others (Dickerson, 2016;
+Drakett et al., 2018; Durham, 2018).
+Research also shows that perceptions of credibility on social media can lead to behavior such as
+increased social media use and increased online expression (Neo, 2021). This means that as users
+share more of the content that they deem credible, they may become more expressive about their
+opinions on related issues. While the Neo study focused on political content, it is within reason to
+B. Wasik
+Credibility and online health information
+The credibility of health information plays a crucial role during the ongoing Covid-19 pandemic given
+the misinformation campaigns and conspiracies regarding masks and vaccines vis-à-vis efforts to
+combat these campaigns with credible and persuasive messages. As I described earlier, the “film your
+hospital” disinformation campaign and the conspiracy-laden pseudo-documentary “Plandemic” are
+two such examples. While these two may have abated somewhat at the time of writing, similar campaigns have been harder to combat or even eradicate from social media (Pazzanese, 2020; Rasmus,
+Fletcher, Newman, Brennen, & Howard, 2020).
+Meanwhile, anti-mask campaigns have taken a political bent (Aratani, 2020) and mask-wearing
+enforcement has sometimes ended in violence and death (Bromwich, 2020; Elfrink, 2021). Vaccine
+hesitancy and denial have also posed problems during various COVID-19 vaccine rollout initiative.
+This is evident with the nonuniform positive opinions of vaccines across the world. Such opinions
+vary from 63% worldwide (Johns Hopkin’s, 2021), 72% in the United States (Funk & Tyson, 2021),
+79% in Africa (Africa CDC, 2020), 88.9% in China, and a low 27% in Poland (Lazarus, 2021). The
+vaccine acceptance issue is compounded by longstanding anti-vaccine sentiment (Hussain, Ali,
+Ahmed, & Hussain, 2018; Royal Society for Public Health, 2019).
+With the urgency created by the COVID-19 pandemic, government agencies and non-for-profits
+have launched campaigns to combat this misinformation and improve vaccine acceptance by incorporating the Internet, social media, and related apps (Harting, 2021; Simms, 2021). These efforts may
+well prove effective because recent scholarly studies show that social media plays a critical role in
+fighting misinformation and improving vaccine acceptance rates (Kolff, Scott, & Stockwell, 2018;
+Wilson & Wiysonge, 2020). However, and as I discuss below, the credibility of these social media and
+Internet-based campaigns will play a major role in their success because credibility uniquely affects
+the reception of online health information.
+One such uniqueness is the expertise of the source, which has been shown to affect credibility more
+in an online than an offline context (Yang & Beatty, 2016). The credibility of online health information
+is also subject to the level of deliberation and verification a user engages in when reading the information. This means that activities such as checking evidence, making comparisons, and evaluating the
+quality of online health information affects how one perceives the credibility of that information, with
+younger people more likely to engage in this type of elaboration (Liao & Fu, 2014). This makes age a
+mediating variable regarding the credibility of online health information, and research supports this.
+Generally, young people use the Internet and related technologies such as apps and social media
+at higher rates than other age groups (Pew, 2021; Vogels, 2019). Also, the Internet has traditionally
+been young people’s go-to source for online health information (Percheski & Hargittai, 2011). This
+may explain why young people are more confident with online searches for health information and
+less concerned about associated risks to privacy (Oh & Kim, 2014). It may further explain why young
+Journal of Computer-Mediated Communication 00 (2022) 1–30
+
+suggest that users may share more of memes they trust and even use them to express their opinions
+on issues such as masks and vaccines. This would be easy to do given the abundance of memes and
+the ability to edit memes to suit one’s stance on issues (Enberg, 2021; Tankovska, 2021). Other research shows that users who generally perceive social media content as credible are likely to allow
+products placement on their group pages (Lai & Liu, 2020). This suggests that accepting products
+placement on one’s page may engender the acceptance of other trusted content such as memes shared
+by others.
+Memes, Memes, Everywher
+H1a: Memes with an expert source attribution will elicit higher credibility than memes without an expert source source attribution.
+H1b: Memes with an expert source attribution will elicit more persuasiveness than memes
+without an expert source attribution.
+H2: There is a positive correlation between the credibility of a meme and the persuasiveness
+of a meme.
+RQ1: Does the stance of a subject (pro- or anti-mask/vaccine) affect the credibility and persuasiveness of a meme?
+H3a: There is an inverse correlation between age and the credibility memes.
+H3b: There is an inverse correlation between age and the persuasiveness of a meme.
+RQ2: Is there a significant difference in credibility and persuasiveness between pro-mask/
+vaccine memes and anti-mask/vaccine memes?
+
+Message tone
+In addition to examining the effect of source expertise and age on credibility and persuasion, this study
+also examines the effect of message tone on credibility and persuasion. Message tone is a uniquely important variable to this study. First, research shows that social media has a dark side where some users deploy
+uncivil content to harass, bully, and ridicule others, and often with negative outcomes for the victims
+(Gearhardt & Zhang, 2014; Sobieraj, 2018; Whittaker & Kowalski, 2015). To do this, some users strategically repurpose objective and fact-based information into biased uncivil messages that fit a certain narrative, either to support or oppose an issue. Masullo, Lu, & Fadnis (2021) study of civil and uncivil, pro- and
+anti-issue online comments is a good example of such. See below for excerpts from that study ( p. 3401).
+The study found that uncivil comments, some shown in the excerpts below, not only affected some readers
+emotionally, but the comments also affected the likelihood of some readers to speak out about the issues.
+The current study used similar messaging to develop the message tone in the memes used as stimuli for
+the experiment.
+
+people rate the credibility of online health information the same regardless of the sensitivity of the
+said information, with no difference for instance, when evaluating highly sensitive (sexually transmitted disease-related) information versus less sensitive (allergy-related) information (Kim & Syn, 2016).
+Prior use of health apps is also another age-related determinant of online health information credibility (Cho, Lee, & Quinlan, 2015). Also, young people uniquely tend to rate expert sources with more
+(online) likes accompanying the said information as being more credible than those with less likes
+(Borah & Xiao, 2018).
+The content of online health information also affects perceptions of credibility. For instance, information that is easy to read and comprehend may accelerate the credibility evaluation process, especially if the readers were signposted to it during face-to-face consultations with physicians
+(Trethewey, Beck, & Symonds, 2020). Given that memes are predominantly simple visual imagery
+(Harvey, 2020), and visuals improve comprehension when combined with textual material (Sadoski &
+Paivio, 2013), memes may fall under the easy-to-comprehend category. Credentials accompanying
+online health material also tend to improve credibility ratings (Gao, Tian, & Tu, 2015), just as thirdparty endorsements increase the credibility of online health information (Rains & Karmikel, 2009),
+more so if these endorsements are from reputable and well-known sources (Klawitter & Hargittai,
+2018).
+B. Wasike
+Excerpts of objective and subjective online comments
+Pro-issue and objective
+
+Anti-issue and objective:
+“Women’s bodies can ﬁght off the HPV virus,
+others cannot. There is no need for a vaccine
+for teens.”
+
+“Some women’s bodies can ﬁght off the HPV virus, others cannot. I WISH the vaccine had
+existed when I was a teen, you STUPID
+F*CKING vaccine opponents.”
+Anti-issue and subjective:
+“Women’s bodies can ﬁght off the HPV virus,
+others cannot. There is no need for a vaccine
+for teens, you STUPID F*CKING vaccine
+supporters.”
+
+Additionally, research shows that people view online health information presented in an objective
+manner as being more credible than that which is presented with subjective claims (Gao et al.,
+2015). Also, scholars who have lately extended the use of sentiment analysis to examine message
+polarity and credibility regarding online information have found similar patterns. Message polarity
+is the negative, neutral, or positive tone of a message (Sureka, Goyal, Correa, & Mondal, 2009).
+Here, research shows that there is a relationship between message polarity and credibility regarding
+online product reviews (Hu et al., 2020; Wang, Wang, Zhang, Mao, & Wang, 2017), online hotel
+reviews (Chang & Chen, 2019), and social media content (Alrubaian, Al-Qurishi, Al-Rakhami,
+Hassan, & Alamri, 2017). When these findings are put in the context of the COVID-19-related misinformation, disinformation, and the continued politicization and polarization of the mask and vaccine debate discussed earlier (Ahmed et al., 2020; Aratani, 2020; Pappas, 2020; Pazzanese, 2020;
+Rasmus et al., 2020), the tone of the message in an anti- or pro-mask/vaccine meme is of unique importance to the current study.
+H4a: Memes with an objective message tone will elicit higher credibility ratings than memes
+with a subjective message tone.
+H4b: Memes with an objective message tone will elicit more persuasiveness than memes with
+a subjective message tone.
+
+Method
+This study used a 2  2  2 experimental design. Factor one was source (expert vs. nonexpert), factor
+two was messaging tone (objective vs. subjective), and factor three was the message type in a meme
+(pro- or anti-mask/vaccine). All factors were within group designs. Data were collected between 14
+July and 21 July 2021. The study was approved by the institutional review board.
+
+Stimuli
+I created a set of eight memes from scratch, using Photoshop, each to represent one of the eight conditions in the experimental design. The memes were created to accurately mimic real-life memes on
+Twitter regarding visual style, quality, and account details such as usernames and statistics such as
+
+“Some women’s bodies can ﬁght off the HPV virus, others cannot. I wish the vaccine had
+existed when I was a teen.”
+
+Pro-issue and subjective
+Memes, Memes, Everywher
+followers, retweets, likes, etc. See Appendices A and B for the stimuli and Table 4 for the eight treatment conditions. I chose the U.S. Centers for Disease Control as the expert source because it is a
+widely recognized organization in the United States. The nonexpert source was fashioned as a fictitious activist political action committee, the Patriots for Liberty PAC.
+
+Subjects were drawn randomly from a Qualtrics panel representative of U.S. adults regarding demographics such as age, gender, and political affiliation. All subjects were social media users. Qualtrics
+panels and similar others are an oft-used sampling source and their validity in data collection is
+proven (Brandon, Long, Loraas, Mueller-Phillips, & Vansant, 2014; Gil de Zú~
+niga, Barnidge, &
+Scherman, 2017; Holt & Loraas, 2019; Kalmoe, Gubler, & Wood, 2018).
+
+Instrument and procedure
+After consenting to the study, subjects answered a pair of questions that queried their stance on masks
+and vaccines—see a sample question in the next section. Subjects then answered a series of questions
+measuring the variables discussed in the next section. A rating scale of 0–10 (0 ¼ no support at all, 10 ¼
+fully support) was used. The zero in the scale was used to account for subjects who were diametrically
+opposed to mask-wearing and/or vaccines. See Appendix C for instrument. Subjects were emailed a link
+to the survey. Even though all subjects viewed all eight stimuli, the stimuli were presented one at a time
+and randomly to reduce order effects. Subjects viewed each stimulus and immediately an instrument before proceeding to the next stimuli and filling the accompanying instrument.
+
+Variables
+The five independent variables were expert source, message type, message orientation, subject stance
+(on masks and vaccines), and age. The dependent variables were credibility and persuasion.
+Expert source. This dichotomous variable was measured by the presence of an expert source or a
+nonexpert source attribution on a meme. As mentioned, the Centers for Disease Control (CDC) was
+the expert source, and a fictional activist group (Patriots for Liberty PAC) was the nonexpert source.
+This distinction was made clear to subjects for every question by the inclusion of the following
+statements:
+You just saw a meme on Covid-19 vaccines from the Centers for Disease Control (CDC), a federal agency responsible for public health and safety. Please indicate your response to the following statements on a scale of 0–10 where: 0 ¼ Totally disagree and 10 ¼ totally agree.
+You just saw a meme on vaccines from Patriots for Liberty, an activist political action committee. Please indicate your response to the following statements on a scale of 0–10 where: 0 ¼
+Totally disagree and 10 ¼ totally agree.
+Subject stance on masks and vaccines. Because one’s attitude or stance on an issue has been shown
+to affect how one rates the credibility or persuasiveness of related information on social media
+(Housholder & LaMarre, 2014; Wasike, 2017), this variable sought to examine if a subject’s stance on
+masks and vaccines was correlated with how a subject perceived the credibility of a meme that
+matched his/her stance on masks and vaccines. The variable was measured by two questions adapted
+from Neo’s (2021) study of homogeneity and political messaging on Facebook. The two questions
+
+Participants
+B. Wasik
+queried subjects on their support for mask-wearing and COVID-19 vaccines, respectively. A composite stance score was then computed based on the mean of responses to the two questions:
+
+Message tone. Research indicates that online health information that makes subjective claims elicits less credibility than that which is objective (Gao et al., 2015). This variable measured the effect of
+the objectivity or subjectivity of a meme’s message on its credibility and persuasiveness. Objective
+messaging included memes that made levelled claims and subjective messaging included memes that
+make speculatory and inflammatory claims and distorted facts (See appendices A and B for examples). I used messaging patterns similar to Masullo, Lu, & Fadnis (2021) when creating the memes
+used as stimuli.
+Message orientation. This variable distinguished among pro- and anti-mask and pro- and antivaccine memes. See Table 1 and Appendices A and B for details.
+Age. As discussed , research shows that younger people rate online and social media stimuli different from other age groups. This variable measured the effect of age on the perceptions of meme
+credibility and persuasiveness.
+Credibility. This variable was measured by a set of eight questions derived from previous studies
+(O’Keefe, 1990; Rice & Atkins, 2001; Tandoc, 2019; Wasike, 2017). Each question queried the subjects
+on each of the eight credibility parameters. These were sincerity, honesty, trustworthiness, expertise,
+effectiveness, reliability, message comprehension, and accuracy. A composite credibility score was
+then computed based on the mean of the responses to the eight questions.
+Persuasion. This variable measured the effect of a meme on subjects regarding how it persuaded
+them to share it, comment on it, or post a like on it. The variable was measured by three questions derived from previous studies (Li & Suh, 2015; Neo, 2021). See Appendix C for sample question. The
+three questions that asked users about their likelihood to (a) Like the meme, (b) Comment on the
+meme and (c) Post or retweet the meme on their social media accounts. Like credibility, this also used
+a 0–10 scale and a composite persuasion score was then computed based on the mean of the
+responses to the three questions.
+
+Stimuli pretest
+A stimulus pre-test was conducted with a nonrandom pilot sample (N ¼ 79) based on a set of memes
+depicting only mask-related messages. Subjects received an email with a Qualtrics survey link that
+contained the stimuli and instrument. Subjects viewed four memes that depicted respectively: an objective pro-mask meme, a subjective pro-mask meme, an objective anti-mask meme, and a subjective
+anti-mask meme. Exposure was done one meme at a time and in random order to avoid order effects.
+Subjects viewed and responded to each meme before moving to the next.
+Overall, the Cronbach alphas for the reliability of the various credibility and persuasion scales
+ranged from 0.82–0.95. Memes with an expert source elicited higher credibility (M ¼ 8.16, standard
+deviation (SD) ¼ 2.06) than those with a nonexpert source (M ¼ 4.9, SD ¼ 3.10, p < .001, t ¼ 7.45,
+d ¼ 0.92). Expert-sourced memes also elicited more persuasion (M ¼ 5.39, SD ¼ 3.18) than nonexpert sourced memes (M ¼ 3.75, SD ¼ 3.36, p < .001, t ¼ 3.47, d ¼ 0.42). Likewise, memes with an objective message (M ¼ 6.60, SD ¼ 1.93) elicited more credibility than memes with a subjective message
+
+On a scale of 0–10 where: 0 ¼ fully opposed to and 10 ¼ fully support, how would you characterize your support for mask-wearing in public (or Covid-19 vaccines) as a measure to control the coronavirus?
+Memes, Memes, Everywher
+Results
+This study used a nationally representative random sample of U.S. social media users (N ¼ 1,200).
+The sample was 49.3% female, 49.1% male, and 1.2% nonbinary. Of all respondents, 65.6% were nonHispanic white, 12% were non-Hispanic Black, 12.3% were Hispanic, 5% were Asian, 3.2% were
+Native American, and 0.6% were Native Hawaiian or Pacific Islanders. The average age was 44.94
+years.
+Data supported all hypotheses. Because all subjects viewed all eight same stimuli (in random order to avoid order effects), paired sample t-tests and repeated measures Analysis of Covariance
+(ANCOVA - with stance as a covariate) were used for data analysis, an approach suitable for the
+within-subjects-only design used in this study. Hypothesis one predicted that memes with expert
+source attribution would garner more credibility as well as be more persuasive than those with a nonexpert source. Data showed that overall, memes with an expert source elicited more credibility
+(M ¼ 7.03, SD ¼ 2.62) than those with a nonexpert source (M ¼ 4.91, SD ¼ 3.05, p < .001, t ¼ 18.87;
+d ¼ 0.55). Likewise, memes with an expert source were more persuasive (M ¼ 5.46, SD ¼ 3.27) than
+those without a nonexpert source (M ¼ 4.03, SD ¼ 3.47, t ¼ 15.02, d ¼ 0.44). Because all expertsource memes were also pro-mask/vaccine and all nonexpert-source memes were also anti-mask/
+vaccine, these results also show that overall, pro-mask/vaccine memes were more credible and persuasive than anti-mask/vaccine memes. Additionally, because the persuasion variable was measured by
+three questions (about liking, commenting, and sharing memes), it is worth examining the differences
+among the three parameters (See Table 1).
+Hypothesis two predicted a positive correlation between the credibility and persuasion of the
+memes, and data supported this prediction (r ¼ 0.78, p < .001). Because this correlation refers to all
+memes in general regardless of their message on masks and vaccines, it is insightful to consider the
+stance (on masks and vaccines) of the subjects viewing the memes. Therefore, RQ1 queried about the
+Table 1 Comparisons of Means of the Persuasion Parametersa
+Expert source
+Liking a meme
+Commenting on a meme
+Sharing a meme
+
+6.06 (3.35)
+5.08 (3.53)
+5.21 (3.60)
+
+Nonexpert source
+*
+
+4.70 (3.05)
+4.29 (3.33)*
+4.26 (3.35)*
+
+Cohen’s d
+t ¼ 15.09
+t ¼ 11.48
+t ¼ 12.41
+
+d ¼ 0.44
+d ¼ 0.33
+d ¼ 0.36
+
+a
+
+Standard deviations are shown in parentheses.
+*p < .001
+
+(M ¼ 5.22, SD ¼ 1.79, p < .001, t ¼ 5.01), and were also more persuasive (M ¼ 4.62, SD ¼ 2.67) than
+those with a subjective message (M ¼ 3.27, SD ¼ 2.17, p < .001, t ¼ 4.61).
+I used G*Power to determine the appropriate sample size for the main study. G*Power is a widely
+used power analysis software for determining effects and sample sizes (Faul, Erdfelder, Lang, &
+Buchner, 2007; Faul, Erdfelder, Buchner, & Lang, 2009; Lakens, 2013). I used the two Cohen’s d
+effects sizes reported above as the a priori criteria, respectively. The analysis indicated that samples
+sizes of either N ¼ 36 (for credibility) or N ¼ 47 (for persuasion) were appropriate for the paired samples tests used in this study (80% power, alpha ¼ 0.05, two-tailed).
+B. Wasike
+Table 2 Correlations Between Stance and the Credibility of Memes
+Mean Standard
+Deviation
+Stance
+Pro-mask objective
+Anti-mask objective
+Pro-vaccine objective
+Anti-vaccine subjective
+Pro-mask subjective
+Anti-mask subjective
+Pro-vaccine subjective
+Anti-vaccine subjective
+a
+
+7.62
+7.12
+5.33
+6.98
+4.81
+7.08
+4.92
+6.89
+4.61
+
+2.90
+2.81
+3.36
+2.95
+3.36
+2.87
+3.67
+3.01
+3.49
+
+1
+
+2
+
+3
+
+4
+
+–
+0.71a
+0.02
+0.65a
+0.12a
+0.68a
+0.05
+0.64a
+0.06a
+
+–
+0.16a
+0.76a
+0.01
+0.82a
+0.07a
+0.75a
+0.05
+
+–
+0.14a
+0.65a
+0.15a
+0.70a
+0.15a
+0.63a
+
+–
+0.05
+0.76a
+0.10a
+0.75a
+0.05
+
+5
+
+6
+
+7
+
+8
+
+9
+
+–
+0.02
+–
+0.76a 0.09a –
+0.02 0.75a 0.09a –
+0.76a 0.04 0.72a 0.10a –
+
+Correlation is signiﬁcant at the 0.01 level (two-tailed).
+
+Table 3 Correlations Between Stance and the Persuasiveness of Memes
+Mean Standard
+Deviation
+Stance
+Pro-mask objective
+Anti-mask objective
+Pro-vaccine objective
+Anti-vaccine subjective
+Pro-mask subjective
+Anti-mask subjective
+Pro-vaccine subjective
+Anti-vaccine subjective
+a
+
+7.62
+5.50
+4.41
+5.46
+3.92
+5.51
+3.93
+5.33
+3.84
+
+2.90
+3.49
+3.73
+3.54
+3.77
+3.49
+3.79
+3.56
+3.78
+
+1
+
+2
+
+3
+
+4
+
+–
+0.49a
+0.03
+0.47a
+0.08a
+0.47a
+0.01
+0.44a
+0.01
+
+–
+0.52a
+0.82a
+0.37a
+0.85a
+0.45a
+0.82
+0.46a
+
+–
+0.47a
+0.74a
+0.51a
+0.78a
+0.50a
+0.75a
+
+–
+0.38a
+0.81a
+0.45a
+0.80a
+0.44a
+
+5
+
+6
+
+7
+
+8
+
+9
+
+–
+0.40a –
+0.82a 0.48a –
+0.39a 0.80a 0.47a –
+0.84a 0.45a 0.83a 0.48a –
+
+Correlation is signiﬁcant at the 0.01 level (two-tailed).
+
+correlation between a subject’s stance (on masks/vaccines) and the credibility and persuasion of the
+memes, respectively. To answer this research question, the stance (on masks and vaccines) variable
+was split into two categories—low support for masks/vaccines (5 and below on the 0–10 scale) and
+high support for masks/vaccines. The correlation between credibility and persuasion among the high
+mask/vaccines support group remained steady (r ¼ 0.79, p < .001) but that for the low mask/vaccines
+support group declined (r ¼ 0.62, p < .001).
+Even then, these results still reflect all meme types, so further analysis was conducted to determine the correlation between stance and the eight combinations of memes. This analysis was done for
+credibility (Table 2) and persuasion (Table 3). As the tables indicate, the only strong correlations to
+emerge were between stance and the pro-mask/vaccines memes. Additionally, there were significant
+correlations among pro-mask/vaccine memes as were between anti-mask/vaccine memes. The fact
+that there were more positive correlations among the anti- and pro-mask/vaccine memes for
+Memes, Memes, Everywher
+Table 4 Means of Meme Credibility and Persuasiveness for the Stance/Message Combinationsa
+
+Pro-mask with objective message (expert source)
+Pro-mask with subjective message (expert source)
+Pro-vaccine with objective message (expert source)
+Pro-vaccine with subjective message (expert source)
+Anti-mask with objective message (nonexpert source)
+Anti-mask with subjective message (nonexpert source)
+Anti-vaccine with objective message (nonexpert source)
+Anti-vaccine with subjective message (nonexpert source)
+
+Credibility meansb
+
+Persuasivenessmeansc
+
+7.14 (2.8)
+7.08 (2.87)
+6.98 (2.91)
+6.90 (3.0)
+5.31 (3.35)
+4.90 (3.66)
+4.81 (3.36)
+4.60 (3.48)
+
+5.50 (3.50)
+5.51 (3.49)
+5.47 (3.54)
+5.34 (3.56)
+4.41 (3.73)
+3.93 (3.79)
+3.92 (3.77)
+3.85 (3.78)
+
+a
+
+Standard deviations shown in parentheses
+Repeated measures ANCOVA (using stance as a covariate) for credibility with a Greenhouse–
+Geisser correction (F [2.88, 3,349.02] ¼ 292.01, p < .001; gp2 ¼ 0.20).
+c
+Repeated measures ANCOVA (using stance as a covariate) for persuasion (with a Greenhouse–
+Geisser correction F [3.29, 3920.16] ¼ 216.70, p < .001; gp2 ¼ 0.15).
+b
+
+persuasion may be because one of the persuasion scale questions asked about commenting on memes
+without specifying whether the comments were critical or laudatory. It is possible that pro-vaccine
+subjects may have intended to post negative comments on anti-mask/vaccine memes and vice versa,
+and hence the correlation.
+Hypothesis three predicted an inverse correlation between age and the credibility of a meme
+and the same pattern between age and the persuasiveness of a meme. This hypothesis was partially
+supported. There was no correlation between age and credibility, but there was a moderate inverse
+correlation between age and persuasion (r ¼ 0.18, p < .001), meaning that younger subjects were
+more likely to like, comment on, and share memes than older subjects. RQ2 queried the differences
+in credibility and persuasiveness between pro-mask/vaccines memes and anti-mask/vaccines
+memes. Overall, pro-mask/vaccines memes scored higher in credibility (M ¼ 7.03, SD ¼ 2.62) than
+anti-mask/vaccine memes (M ¼ 4.91, SD ¼ 3.05, p < .001, t ¼ 18.87, d ¼ 0.55). They also scored
+higher in persuasion (M ¼ 5.46, SD ¼ 3.27,) than anti-mask/vaccines memes (M ¼ 4.03, SD ¼ 3.47,
+p < 0.001, t ¼ 15.02. d ¼ 0.44) (See Table 4 for details).
+Overall, memes with an objective tone were more credible (M ¼ 6.06, SD ¼ 2.12) than those with
+a subjective tone (M ¼ 5.87, SD ¼ 2.24, p < .001, t ¼ 5.0, d ¼ 0.16), regardless of whether they
+displayed a pro- or anti-mask/vaccine message. Objective-toned memes were also more persuasive
+(M ¼ 4.83, SD ¼ 3.0) than subjective-toned memes (M ¼ 4.66, SD ¼ 3.04, p < .001, t ¼ 5.35,
+d ¼ 0.16), regardless of their pro- or anti-mask/vaccine message, thus supporting hypothesis four. A
+nuanced examination indicates larger differences when a meme’s pro- or anti-mask/vaccine message
+is considered. A repeated measures ANCOVA (using stance as the covariate) with a Greenhouse–
+Geisser correction (F [2.88, 3,349.02] ¼ 292.01, p < .001; gp2 ¼ 0.20) returned statistically significant
+differences among the four possible means for objective (pro- and anti-mask/vaccine) and subjective
+(pro and anti-mask/vaccine) messaging, with objective pro-mask/vaccine memes scoring the highest
+credibility (M ¼ 7.07, SD ¼ 2.68). Memes with a subjective anti-mask/vaccine message earned the
+lowest credibility (M ¼ 4.75, SD ¼ 3.31).
+B. Wasike
+Discussion
+This study examined COVID-19-related memes regarding their credibility and persuasiveness based
+on pro- and anti-mask/vaccine messages. A major contribution this study makes to literature is that it
+takes an experimental approach to examine meme-based communication. First, the experimental approach identified when, where, and how the memes affected credibility and persuasion, and the extent
+and direction of these effects. Also, as I discussed earlier, few if any Internet meme-communication
+studies have yet taken an experimental approach. Most existing research is largely descriptive and/or
+analytical. An experimental approach is a methodological contribution to pertinent research. Also,
+this study is timely given that data collection occurred during a confluence of the rapid diffusion of
+meme-based communication and the COVID-19 pandemic. This is opportune given the roles that social media in general, and meme-based communication have played among issues such as vaccine
+promotion campaigns, vaccine and COVID-19 misinformation campaigns, and the campaigns aimed
+at combatting this misinformation during the pandemic.
+The results indicate that like other social media content, memes do have a discernible effect on
+users. Additionally, there are discernible patterns within meme-based communication, despite the
+seemingly ubiquitous and rapid diffusion of memes in contemporary communication. One such
+pattern is that the source of a meme determines how credible users view the meme and how likely
+they are to like, comment on, or share it with others. Memes from expert sources are more likely to
+be believed and shared. This matches existing research on social media credibility and content sharing (Lin et al., 2016; Sohn & Choi, 2019; Spence et al., 2013), and specifically research on online
+health information (Yang & Beatty, 2016). Similarly, age correlates inversely with the likelihood to
+like, comment on, and share memes, a reflection of the unique age-related communication patterns
+in social media communication in general (Pew, 2021; Vogels, 2019) and online health communication specifically (Borah & Xiao, 2018; Cho et al., 2015; Liao & Fu, 2014; Oh & Kim, 2014).
+This expert source and age-related findings have unique policy implications. At the time of writing, young people and young adults are among the demographics least likely to get Covid-19 vaccines
+(Baack, 2021; Thigpen & Funk, 2020). Meanwhile, research indicates that online sources are the go-to
+venues for health information among young people (Pew, 2021; Vogels, 2019). Young people also do
+more information verification (via comparisons and evidence-checking) as a means of determining
+the credibility of the online health information (Liao & Fu, 2014) than other demographic groups do.
+Additionally, young people are more adept at navigating the Internet (Oh & Kim, 2014) and are more
+likely to use social media metrics to determine the credibility of online information (Borah & Xiao,
+2018). As discussed, memes provide simple and easily comprehensible visual messages, and this fact
+alone may enhance their credibility regardless of the target demographic (Harvey, 2020; Sadoski &
+Journal of Computer-Mediated Communication 00 (2022) 1–30
+
+The same results emerged for the persuasiveness of the memes. A repeated measures
+ANCOVA (using stance as the covariate) with a Greenhouse-Geisser correction (F [3.29, 3920.16]
+¼ 216.70, p < .001; gp2 ¼ 0.15) returned significant differences among the four persuasion means.
+Here, pro-mask/vaccine memes with an objective tone were the most persuasive (M ¼ 5.49,
+SD ¼ 3.35, F [1.46, 1737.87] ¼ 188.35, p < .001), while memes with a subjective anti-mask/vaccine
+message were the least persuasive (M ¼ 3.89, SD ¼ 3.62). Because each of the credibility and persuasion means in these ANCOVA results combine anti- and pro-mask/vaccine messages, Table 4
+shows nuanced results for the eight combinations of experimental conditions for credibility and
+persuasion for all pro- and anti-mask/vaccines memes.
+Memes, Memes, Everywhere
+Table 5 Means of Author- and Information-Only Credibilitya
+
+Pro-mask with objective message (expert source)
+Pro-mask with subjective message (expert source)
+Pro-vaccine with objective message (expert source)
+Pro-vaccine with subjective message (expert source)
+Anti-mask with objective message (nonexpert source)
+Anti-mask with subjective message (nonexpert source)
+Anti-vaccine with objective message (nonexpert source)
+Anti-vaccine with subjective message (nonexpert source)
+
+Author-onlyb
+
+Information-onlyc
+
+7.10 (2.88)
+7.02 (2.96)
+6.9 (3.02)
+6.82 (3.11)
+5.20 (3.47)
+4.80 (3.76)
+4.77 (3.46)
+4.52 (3.57)
+
+7.18 (2.80)
+7.14 (2.90)
+7.07 (2.94)
+7.00 (3.00)
+5.43 (3.37)
+5.03 (3.70)
+4.87 (3.40)
+4.69 (3.52)
+
+a
+
+Standard deviations shown in parentheses
+Repeated measures ANCOVA (using stance as a covariate) for author-only credibility with a
+Greenhouse–Geisser correction (F [3.0, 3351.40] ¼ 275.43, p < .001; gp2 ¼ 0.19).
+c
+Repeated measures ANCOVA (using stance as a covariate) for information-only credibility with a
+Greenhouse–Geisser correction (F [3.05, 3594.60] ¼ 276.80, p < .001; gp2 ¼ 0.19).
+b
+
+Paivio, 2013; Trethewey et al., 2020). The combination of these facts suggests that meme-based social
+media campaigns from credible sources such as the CDC may be an effective way to reach vaccinewary young people.
+It worth mentioning that this study used a unidimensional credibility scale. Other scholars have used
+similar, but multidimensional scales that differentiate the credibility of the author and that of the information itself (Yin & Zhang, 2020; Xu et al., 2021). To account for this nuance, I ran further analysis with
+a two-dimensional version of the original scale to test for credibility parameters based on the author-only
+parameters (sincerity, honesty, trustworthiness, and expertise) and information-only parameters (reliability, effectiveness, comprehension, and accuracy). Repeated mesures ANCOVA (with stance as a covariate) returned similar results as those of the unidimensional scale for the credibility of pro- and antimask/vaccine memes. Those memes with an expert source attribution still elicited more author- and
+information-only credibility than nonexpert sourced memes. See Tables 4 and 5 for comparisons.
+Another important finding has to do with the objective versus subjective tone of meme messages. The
+study found that objective-toned memes were more credible and persuasive than subjective-toned memes.
+This was true among both pro- and anti-mask memes, with objective pro-mask memes being the most
+credible and subjective anti-vaccine memes being the least credible. This is noteworthy in the context of
+social media communication and the accompanying incivility and toxicity (Anderson & Huntington,
+2017; Kosmidis, 2020; Rheault et al., 2019). Also, the literature discussed earlier shows that meme-based
+communication may engender negative communication. For instance, humorous memes but with subjective messages may belie negativity (Dickerson, 2016; Durham’s, 2018; Harlow et al., 2020). Memes may
+also promote prejudice and radicalization (Drakett et al., 2018; Kearney, 2019) and even be weaponized
+against institutions such as the media (Smith, 2019). The objective versus subjective dynamic is a unique
+finding given that the mask-wearing debate has exacerbated the toxicity and incivility of social media communication (Pascual-Ferrá, Alperstein, Barnett, & Rimal, 2021). The fact that subjects placed higher credibility on objective memes rather than subjective memes and were more likely to share objective memes
+bodes well for the promotion of civil discourse on social media, especially regarding such contentious
+issues as mask-wearing and COVID-19 vaccines.
+B. Wasik
+Limitations
+
+Contributions and recommendations
+Despite these limitations, the study makes practical and theoretical contributions. A practical contribution has to do with systematically showing that memes play a crucial role in public health communication and campaigns, and specifically regarding mask-wearing and vaccine hesitancy. Data showed
+that expert-sourced memes with objective messages are best poised to improve mask-wearing and
+vaccine acceptance. As I mentioned, the CDC and other public health agencies may be well served by
+incorporating meme-based communication when promoting mask-wearing and Covid-19 vaccines.
+Data suggests that this may uniquely improve messaging targeted towards young people who are currently one of the most COVID-19 vaccine-adverse demographic groups.
+The study also makes theoretical contributions. As I mentioned, it enhances meme-based communication by taking an experimental approach using a multi-stimuli design. In the future, scholars
+may adopt and improve on this design. The study also examined a unique set of variables, and the
+results and interactions reported here not only add to knowledge, but scholars may also retest and improve on the variables. Because this study examined phenomena related to the COVID-19 pandemic,
+it also adds to crisis communication research generally and specifically to crisis communication
+
+As with any research endeavor, this study comes with limitations. One limitation is that the study
+uses data from a self-reported survey, albeit from a random and representative sample. As with any
+survey-based study, issues of desirability responses must be considered, especially when querying subjects about contentious issues such as mask-wearing and COVID-19 vaccines. However, the high reliability scores for the survey scales used in the study should mitigate this concern. Additionally, the
+successful stimuli check improves the validity of the results. Another consideration is that the subjects
+were examined in an experimental situation and were exposed only to one meme at a time. On social
+media users may view several memes as well as other content such as posts, comments, and multimedia. This limitation is closely related to those which are natural to most single-scenario experimental
+studies like this one. Unique and unrecognized conditions such as heightened emotions, differences
+among subjects, and different environments may impact data validity and affect the generalization of
+the results (Collett & Childs, 2011; Ferrara & Yang, 2015; Funke, 1998; Jackson & Jacobs, 1983).
+Additionally, the pairs of contrasting memes were visually identical expect for the textual information.
+If, during random exposure, a savvy subject viewed the same images sequentially, they could have
+guessed the hypotheses, and such an occurrence increases the chances of desirability responses. The
+data should be considered with this issue in mind.
+The also study compared the CDC, a well-known federal agency, to a fictional PAC. Even though
+the CDC has registered low approval ratings lately (Jones, 2021a, 2021b), it still carries the name recognition that the nonexpert source used here does not. Therefore, the results reported in this study
+should be interpreted within this lens. Important also is that the study did not consider ideology and
+its interactions with the variables examined, given the fluidity and uncertainty of COVID-19-related
+research during data collection. Recent research suggests an ideological impact on COVID-19 vaccine
+hesitancy (Bhochhibhoya, Thapaliya, Sharma Ghimire, & Wharton, 2021; Galston, 2021, para. 4;
+Haytko & Taillon, 2021), and future research may examine the role of ideology in the credibility and
+persuasiveness of pro- and anti-mask/vaccine memes.
+Memes, Memes, Everywhere
+research vis-à-vis meme-based communication. Lastly, by examining message tone, the study adds to
+previous works that have examined hostility and incivility in online communication.

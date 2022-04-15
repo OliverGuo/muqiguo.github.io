@@ -1,0 +1,2189 @@
+
+Article 
+3b-Hydroxysteroid dehydrogenase expressed by gutmicrobes degrades testosterone and is linked to 
+
+depression in males 
+Graphical abstract 
+Unlabelled image
+Highlights d Mycobacterium neoaurum from patients with depression can degrade testosterone 
+d The 3b-HSD enzyme in M. neoaurum degrades testosterone into androstenedione 
+d Gavaging rats with 3b-HSD-producing bacteria lowers testosterone and induces depression 
+d The prevalence of 3b-HSD is higher in patients with depression 
+Authors 
+Di Li, Ran Liu, Ming Wang, ..., Gaohua Wang, Yan Li, Tiangang Liu 
+Correspondence 
+zcliu6@whu.edu.cn 
+(Z.L.), wgh6402@163.com 
+(G.W.), yanlitf1120@163.com 
+(Y.L.), liutg@whu.edu.cn 
+(T.L.) 
+In brief 
+Li et al. isolated Mycobacterium neoaurum from the fecal samples of testosterone-de.cient patients with depression and showed that this strain degrades testosterone. Gavaging rats with 3b-HSD-producing bacteria led to decreased testosterone levels and depression-like behavior in them, suggesting a potential causal role for gut microbes in certain types of depression. 
+Li et al., 2022, Cell Host & Microbe 30, 1每11 
+
+March 9, 2022 a 2022 The Author(s). Published by Elsevier Inc. 
+https://doi.org/10.1016/j.chom.2022.01.001 
+
+
+ll 
+
+
+
+OPEN ACCESS 
+Article 
+
+
+3b-Hydroxysteroid dehydrogenase expressedby gut microbes degrades testosterone and is linked to depression in males 
+Di Li,1,6 
+Ran Liu,2,3,6 
+Ming Wang,1,6 
+Rui Peng,1,6 
+Shuai Fu,2 
+Aisi Fu,5 
+Juan Le,1 
+Qian Yao,1 
+Tengfei Yuan,1 
+Haoming Chi,2 
+Xin Mu,2 
+Ting Sun,1 
+Hang Liu,1 
+Pan Yan,2 
+Shaoting Wang,1 
+Shu Cheng,2 
+Zixin Deng,2 
+Zhongchun Liu,4,* 
+Gaohua Wang,4,* 
+Yan Li,1,* 
+and Tiangang Liu2,7,* 
+
+1Department of Clinical Laboratory, Renmin Hospital of Wuhan University, Wuhan, Hubei 430060, China 2Key Laboratory of Combinatorial Biosynthesis and Drug Discovery, Ministry of Education and School of Pharmaceutical Sciences, Wuhan University, Wuhan, Hubei 430072, China 3CAS Key Laboratory of Quantitative Engineering Biology, Shenzhen Institute of Synthetic Biology, Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, Shenzhen, Guangdong 518055, China 4Department of Psychiatry, Renmin Hospital of Wuhan University, Wuhan, Hubei 430060, China 5Wuhan Dgensee Clinical Laboratory Co., Ltd., Wuhan, Hubei 430075, China 6These authors contributed equally 7Lead contact *Correspondence: zcliu6@whu.edu.cn 
+(Z.L.), wgh6402@163.com 
+(G.W.), yanlitf1120@163.com 
+(Y.L.), liutg@whu.edu.cn 
+(T.L.) https://doi.org/10.1016/j.chom.2022.01.001 
+
+SUMMARY 
+Testosterone de.ciency can lead to depressive symptoms in humans; however, the causes of this de.ciency are incompletely understood. Here, we isolated Mycobacterium neoaurum from the fecal samples of testos-terone-de.cient patients with depression and showed that this strain could degrade testosterone in vitro. Furthermore, gavaging rats with M. neoaurum reduced their serum and brain testosterone levels and induced depression-like behaviors. We identi.ed the gene encoding 3b-hydroxysteroid dehydrogenase (3b-HSD) as the enzyme causing testosterone degradation. Introducing 3b-HSD into Escherichia coli enhanced its ability to degrade testosterone. Gavaging rats with 3b-HSD-producing E. coli reduced their serum and brain testos-terone levels and caused depression-like behaviors. Finally, compared with 16.67% of participants without depression, 42.99% (46/107) of the fecal samples of patients with depression harbored 3b-HSD, and 60.87% (28/46) of these fecal samples expressed 3b-HSD. These results suggest that 3b-HSD expressed by gut mi-crobes may be associated with depressive symptoms due to testosterone degradation. 
+INTRODUCTION 
+Depressive disorders are a major public health concern. In 2017, the World Health Organization (WHO) announced that depres-sive disorders became the leading cause of disability worldwide (W.H.O., 
+2017). The incidence of depression in men increases with age-related decline in testosterone levels (Bhasin 
+and 
+Seid-
+man, 
+2019; Wu 
+et 
+al., 
+2010). However, testosterone de.ciency also occurs in young men and is associated with depressive symptoms (Bremner, 
+2010). In the United States of America, testosterone de.ciency occurs in approximately 6% of the gen-eral male population (aged 30 to 79 years) (Araujo 
+et 
+al., 
+2007). Sometimes, testosterone de.ciency can be a primary manifesta-tion (e.g., mumps orchitis and Klinefelter＊s syndrome), and in others, it may be a secondary manifestation (e.g., pituitary injury and excessive hunger) (Basaria, 
+2014). However, the causes of testosterone de.ciency in patients with depression have not been clari.ed. 
+Testosterone is a neuroactive steroid hormone produced by the testis, adrenal glands, and adipose tissue (Baulieu, 
+1991). 
+After being metabolized by the liver, testosterone is excreted through the bile into the gut, and then 83% of it is reabsorbed into the blood (Sandberg 
+and 
+Slaunwhite, 
+1956). Recently, it was reported that gut microbes in.uence the levels of some ste-roid hormones by shifting the ratio of active and inactive forms of the steroid hormones (Needham 
+et 
+al., 
+2020). Therefore, ste-roid hormone metabolism by gut microbes may in.uence the onset or treatment of certain diseases. For example, the gut mi-crobiota contribute to endocrine resistance in castration-resis-tant prostate cancer by providing an alternative source of an-drogens (Pernigoni 
+et 
+al., 
+2021). The gut microbiota of patients with depressive disorders differ signi.cantly from those of healthy controls and are characterized by increased abun-dances of Proteobacteria (Jiang 
+et 
+al., 
+2015), Actinobacteria (Sharon 
+et 
+al., 
+2016), and Bacteroides (Zheng 
+et 
+al., 
+2016). In diverse natural environments, Proteobacteria and Actinobacte-ria have been identi.ed as steroid degraders (Holert 
+et 
+al., 
+2018). Thus, the gut microbiota in patients with depression are likely to have a stronger ability to degrade steroids than those in normal individuals. 
+Cell Host & Microbe 30, 1每11, March 9, 2022 a 2022 The Author(s). Published by Elsevier Inc. 1 This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/). 
+
+
+ll 
+
+OPEN ACCESS 
+Given that testosterone is a steroid hormone, we hypothesized that some microbes in the gut of patients with depression may degrade testosterone, resulting in decreased serum testos-terone levels and subsequent depression. Accordingly, in this study, we evaluated the relationships among testosterone de.-ciency, depression, and the gut microbiota. 
+RESULTS 
+Testosterone de.ciency in participants with and without depression 
+To explore the incidence of testosterone de.ciency in patients with depression, psychiatric in patients who met the diagnostic criteria for major depressive disorder (MDD) or dysthymic disor-der from the Diagnostic and Statistical Manual for Psychiatric Diseases (DSM-V) were included in the depression group (n = 77). Healthy participants who did not meet the DSM-V diag-nostic criteria for MDD or dysthymic disorder were included in the non-depression group (n = 102). 
+Liquid chromatography-tandem mass spectrometry (LC-MS/ MS) was conducted to quantify the serum testosterone levels in the 2 groups. The average serum testosterone level was signif-icantly higher in the non-depression group (549.24 ㊣ 269.16 ng/ dL) than in the depression group (312.97 ㊣ 173.18 ng/dL; p < 0.001; Figure 
+S1A). According to the European Association of Urology, European Academy of Andrology, and International Society of Andrology, testosterone thresholds for the diagnosis of testosterone de.ciency are less than 350 ng/dL (Aversa 
+and 
+Morgentaler, 
+2015). The incidence rates of testosterone de.-ciency in the depression and non-depression groups were 54.55% (42/77) and 11.76% (12/102), respectively. Antidepres-sants affect serum testosterone levels because .uoxetine, ven-lafaxine, and ketamine decrease the testosterone levels after treatment in men whereas amitriptyline and imipramine could increase testosterone levels (Pavlidi 
+et 
+al., 
+2021). Therefore, we excluded 47 patients from the depression group who used antidepressants and found that the incidence of testos-terone de.ciency was 30.00% (9/30) in untreated patients with depression. 
+Fecal transplantation from patients with depression induced depression-like behavior in rats 
+To investigate whether the gut microbiota from patients with depression could degrade testosterone, we cultured the gut mi-crobiota with testosterone (2 g/L). A thin-layer chromatography (TLC) analysis showed that in 83% (5/6) of the depressed pa-tients, the feces can degrade testosterone into androstenedione (AD), and in 67% (4/6) of depressed patients, feces can further degrade AD. All (6/6) feces samples from the non-depressed group showed no obvious testosterone degradation (Figure 
+S2). 
+Furthermore, to determine whether the gut microbiota from patients with depression could decrease testosterone levels and cause depression-like behavior, we performed fecal trans-plantation by gavage. The rats were divided into the following 3 groups: (1) control group, administered 1 mL of saline by gavage once daily for 3 successive days; (2) non-depression mi-crobiota group, transplantation with 1 mL of the gut microbiota from a non-depressive participant once daily for 3 successive days; and (3) depression microbiota group, transplantation 
+
+Article 
+with 1 mL of the gut microbiota from a depressive patient once daily for 3 successive days (Figure 
+1A). 
+Because all the rats were treated with an antibiotic cocktail (ABX) in their drinking water for 1 week to deplete the gut micro-biota before gavage, which may affect the level of serum testos-terone, we detected the level of serum testosterone between un-treated rats and ABX-treated rats. Four weeks after treatment, there was no obvious difference between the 2 groups (Fig-
+ure 
+S1B), which further shows that ABX treatment had no in.u-ence on the level of serum testosterone in this condition. Then, we gavaged the ABX-treated rats with the gut microbiota from participants; the quanti.cation of serum testosterone using LC-MS/MS showed that the serum testosterone levels in the depres-sion microbiota group were signi.cantly lower than those in the control group (118 ㊣ 31 ng/dL versus 232 ㊣ 90 ng/dL; p = 0.018; Figure 
+1B) and non-depression microbiota group (118 ㊣ 31 ng/dL versus 225 ㊣ 75 ng/dL; p = 0.033; Figure 
+1B). Next, we quanti.ed the level of brain testosterone using LC-MS/MS and showed that the brain testosterone levels in the depression microbiota group were statistically signi.cantly lower than those in the control group (5.04 ㊣ 2.37 ng/g versus 12.61 ㊣ 3.78 ng/g; p = 0.042; Figure 
+1C) and non-depression microbiota group 
+(5.04 ㊣ 2.37 ng/g versus 14.39 ㊣ 7.16 ng/g; p = 0.012; Figure 
+1C). 
+Behavioral experiments showed that in the tail suspension test (TST) and forced swimming test (FST), the immobility time of the rats in the depression microbiota group was longer than that of the rats in the control and non-depression microbiota groups, and in the novelty-suppressed feeding (NSF) and splash tests, the latent time of the rats in the depression microbiota group was longer than that of the rats in the control and non-depression microbiota groups (Figures 
+1D and S3A每S3C). 
+These results suggested that the microbiota from patients with depression can decrease the levels of serum and brain testos-terone and induce depression-like behavior in rats. 
+Isolation of testosterone-degrading bacteria from testosterone-de.cient patients with depression 
+Because the degradation of testosterone by gut microbes can reduce serum testosterone, we used testosterone as the sole carbon source (Yang 
+et 
+al., 
+2011) to culture the feces of an un-treated patient with depression; we isolated several bacteria, but only one could degrade testosterone (Figure 
+2A). Then, we performed sequencing analysis for its identi.cation. In the phylo-genetic tree, the 16S rRNA sequence of the strain displayed sim-ilarities of 99.0%每99.8% to Mycobacterium neoaurum and 98.6%每99.7% to other species of Mycobacterium. We named this strain M. neoaurum MN2019. Although M. neoaurum was isolated using testosterone as the sole carbon source, this strain can also grow in a medium with a general carbon source, such as in Luria-Bertani (LB) or blood agar plates. Drug sensitivity tests showed that M. neoaurum MN2019 was sensitive to erythro-mycin and amikacin; the minimum inhibitory concentration (MIC) of erythromycin in M. neoaurum was 0.25 mg/L and that of amikacin in M. neoaurum was 0.75 mg/L (Figure 
+S4A). 
+M. neoaurum was originally isolated from soil in 1972 (Tsuka-
+mura, 
+1972) and has also been identi.ed in clinical infections, such as bloodstream infections (Washer 
+et 
+al., 
+2007), prosthetic valve endocarditis (Kumar 
+et 
+al., 
+2014), vascular catheter infec-tions (George 
+and 
+Schlesinger, 
+1999), and pulmonary infections 
+2 Cell Host & Microbe 30, 1每11, March 9, 2022 
+
+
+
+ll 
+
+OPEN ACCESS
+
+Article 
+Image of Figure 1
+Figure 1. Rats that received fecal transplantation from patients with depression exhibited depression-like behaviors 
+(A) 
+Experimental timeline for the control rats, non-depression-microbiota-recipient rats, and depression-microbiota-recipient rats. All rats (aged 7 weeks) were treated with 7 days of antibiotics followed by 1-day autoclaved water before being gavaged. The control rats were gavaged with saline (1 mL) once daily for 3 successive days. The non-depression-microbiota group rats were gavaged with 1 mL of gut microbiota from a non-depression participant once daily for 3 successive days. Depression microbiota group rats were gavaged with 1 mL of gut microbiota from a patient with depression once daily for 3 successive days. Four weeks after the .rst day of gavage, behavioral observation of rats was performed within a week, followed by testosterone levels measurement. BA, behavior assays. 
+
+(B) 
+Concentration of testosterone in the serum of the control rats (n = 6), non-depression-microbiota-recipient rats (n = 6), and depression-microbiota-recipient rats (n = 6), as determined using targeted LC-MS/MS. 
+
+(C) 
+Concentration of testosterone in the brain of the control rats (n = 6), non-depression-microbiota recipient rats (n = 6), and depression-microbiota-recipient rats (n = 6), as determined using targeted LC-MS/MS. 
+
+(D) 
+Time spent immobile in the FST, time spent immobile in the TST, latency to groom in the splash test, and latency to eat in the NSF for the control rats (n = 6), non-depression-microbiota-recipient rats (n = 6), and depression-microbiota-recipient rats (n = 6). Data are presented as means ㊣ standard errors of the means (㊣ SEM), and one-way analysis of variance with Tukey＊s multiple comparisons tests was performed to calculate statistical signi.cance (*p < 0.05, **p < 0.01, ***p < 0.001). See also Figures 
+S1每S3. 
+
+
+(Morimoto 
+et 
+al., 
+2007). Although M. neoaurum can transform several sterols (Wei 
+et 
+al., 
+2010), its ability to degrade testos-terone has not been reported. 
+We used a fermentation medium for sterol degradation and added testosterone (2 g/L) as the carbon source for assisted growth to verify the degradation ability of M. neoaurum, in accor-dance with a previous study (Sun 
+et 
+al., 
+2019). TLC results showed that compared with those of the standards, the testos-terone levels gradually decreased and the levels of AD, the main product, gradually increased (Figure 
+S4B). High-perfor-mance liquid chromatography (HPLC) quantitative analysis showed that the testosterone levels decreased. After 96 h of cul-ture, the testosterone level decreased by 91.78%. Metabolites included AD, androsta-1,4-diene-3,17-dione (ADD), and 9a-hy-droxyandrosta-1,4-diene-3,17-dione (Figures 
+2B and 2C). The main metabolite was AD, accounting for 91.85% of all metabo-lites (Figure 
+2C). These results indicated that testosterone could be degraded by M. neoaurum. 
+Gavage of M. neoaurum induced depression-like behavior in rats 
+To explore whether M. neoaurum in the gut could cause depres-sion-like behavior, we administered M. neoaurum by gavage to rats. The rats were divided into the following 3 groups: (1) control group, administered 1 mL of saline by gavage once daily for 3 successive days; (2) M. neoaurum-recipient group, administered 
+M. neoaurum (approximately 1 3 108 colony-forming units [cfu] once daily for 3 successive days); and (3) erythromycin treatment group, treated with erythromycin (10 mg/kg once daily for 7 suc-cessive days) after the oral administration of M. neoaurum (Figure 
+3A). 
+The quanti.cation of the serum testosterone levels using LC-MS/MS showed that the serum testosterone levels in 
+M. neoaurum-recipient rats were signi.cantly lower than those in the control group (93 ㊣ 75 ng/dL versus 243 ㊣ 104 ng/dL; p = 0.002; Figure 
+3B). Next, we quanti.ed the level of brain testosterone using LC-MS/MS and showed that brain testos-terone levels in M. neoaurum-recipient rats were statistically signi.cantly lower than those in the control group (4.56 ㊣ 
+3.07 ng/g versus 12.41 ㊣ 4.67 ng/g; p < 0.001; Figure 
+3C). 
+Behavioral experiments showed that in the TST and FST, the immobility time of the M. neoaurum-recipient rats was longer than that of the control rats, and in the NSF and splash tests, the latent time of the M. neoaurum-recipient rats was longer than that of the control rats (Figures 
+3D and S3D每S3F). To eval-uate the survival of M. neoaurum following oral gavage, we 
+Cell Host & Microbe 30, 1每11, March 9, 2022 3 
+
+
+OPEN ACCESS 
+
+Article 
+Image of Figure 2
+Figure 2. Isolation and validation of testosterone-degrading bacteria 
+(A) 
+Images of typical colonies of M. neoaurum. 
+
+(B) 
+Time course of testosterone degradation by M. neoaurum. Data points indicate mean testosterone levels ㊣ standard deviations (3 biological replicates). 
+
+(C) 
+Combined extracted ion chromatograms (EICs) showing time-dependent degradation of testosterone by M. neoaurum. The strain was grown with 2 g/L testosterone, and aliquots from the indicated time points were analyzed using HPLC. 
+
+(D) 
+Testosterone degradation pathway. See also Figure 
+S4. 
+
+
+cultured the feces of the M. neoaurum-recipient rats after the behavioral test, and colonies looking like M. neoaurum were iso-lated and further identi.ed using 16S rRNA sequencing for con.rmation. However, no M. neoaurum was isolated from the feces of the control rats. Next, we also performed real-time reverse transcription-polymerase chain reaction (qRT-PCR) on total RNA extracted from the feces of the M. neoaurum-recipient rats. We selected speci.c marker genes for M. neoaurum (Data 
+S1) to design speci.c primers for M. neoaurum and showed that the gene transcript was in the gut of the M. neoaurum-recipient rats (n = 12) and not in the gut of the control rats (n = 12) (Figures 
+S5A and S5B). These results demonstrate that M. neoaurum sur-vived in the gut of the M. neoaurum-recipient rats, from gavage to the behavioral test. 
+To determine whether antibiotic treatment could alleviate the serum testosterone de.ciency and depression-like behaviors of the M. neoaurum recipients, we administered erythromycin for 1 week (10 mg/kg daily) by gavage (Figure 
+3A). Two weeks af-ter erythromycin gavage, LC-MS/MS analysis showed that the level of serum testosterone in the M. neoaurum recipients treated with erythromycin (238 ㊣ 115 ng/dL) recovered to the level of that in the control group (243 ㊣ 104 ng/dL; p = 0.994; Figure 
+3B). We also quanti.ed the level of brain testosterone using LC-MS/MS and showed that the level of brain testosterone in the 
+M. neoaurum recipients treated with erythromycin (11.45 ㊣ 
+4.78 ng/g) recovered to the level of that in the control group 
+(12.41 ㊣ 4.67 ng/g; p = 0.844; Figure 
+3C). 
+In behavioral experiments, the immobility time in the FST and TST and the latent time in the NSF and splash tests were similar in the erythromycin-treated M. neoaurum rats and control rats. These results indicated that the depression-like behavior of the 
+M. neoaurum recipients was alleviated after erythromycin treat-ment (Figures 
+3D and S3D每S3F). To determine whether erythro-mycin treatment affects the survival of M. neoaurum, we cultured the feces of the erythromycin-treated M. neoaurum rats after the behavioral test, and no M. neoaurum were isolated. Next, we per-formed qRT-PCR on the total RNA content extracted from the feces of the erythromycin-treated M. neoaurum rats and showed that the gene was not transcript in the gut of the erythromycin-treated M. neoaurum rats (n = 12) (Figure 
+S5C). These results demonstrate that M. neoaurum were killed by erythromycin. 
+These data showed that gavage with M. neoaurum decreased the serum and brain testosterone levels and induced depres-sion-like behaviors in rats. Moreover, supplementation with erythromycin normalized the testosterone levels and behavior. 
+Identi.cation of the key enzyme mediating testosterone degradation in M. neoaurum 
+We reasoned that the effects of M. neoaurum gavage on depres-sion-like behaviors could be attributed to its capacity to degrade testosterone; therefore, we hypothesized that the construction of a testosterone-degrading strain by introducing a testos-terone-degrading enzyme gene could induce depression-like behaviors after its administration by gavage in rats. To construct recombinant Escherichia coli, we attempted to .nd the gene sequence of a testosterone-degrading enzyme in M. neoaurum. 
+Information on steroid degradation was processed using BLAST from the Kyoto Encyclopedia of Genes and Genomes database (https://www.kegg.jp/)(Moriya 
+et 
+al., 
+2007). Unfortu-nately, the testosterone-degrading enzyme 3b/17b-hydroxyste-roid dehydrogenase (EC 1.1.1.51) has not been identi.ed in 
+M. neoaurum VKM Ac-1815D. Therefore, we next sequenced the genome of M. neoaurum MN2019. In the M. neoaurum MN2019 chromosome (66.26% GC content in nucleobase, 
+4 Cell Host & Microbe 30, 1每11, March 9, 2022 
+
+
+
+ll 
+
+OPEN ACCESS
+
+Article 
+
+Figure 3. M. neoaurum-recipient rats exhibited depression-like behaviors 
+(A) 
+Experimental timeline for control rats, M. neoaurum-recipient rats, and M. neoaurum-recipient rats treated with erythromycin. All rats (aged 7 weeks) were treated with 7-day antibiotics followed by 1-day autoclaved water before being gavaged. The control rats were gavaged with saline (1 mL) once daily for 3 suc-cessive days. The M. neoaurum-recipient rats were gavaged with M. neoaurum (approximately 1 3 108 cfu) once daily for 3 successive days. The M. neoaurum-recipient rats treated with erythromycin (M. neoaurum + erythromycin) were gavaged with M. neoaurum (approximately 1 3 108 cfu) once daily for 3 successive days; then, erythromycin treatment (10 mg/kg by gavage) started when rats aged 10 weeks and lasted for 1 week. Four weeks after the .rst day of gavage, behavioral observation of the rats was performed within a week, followed by testosterone levels measurement and bacterial detection. BA, behavior assays. 
+
+(B) 
+Concentration of testosterone in the serum of the control rats (n = 12), M. neoaurum-recipient rats (n = 12), and M. neoaurum-recipient rats treated with erythromycin (n = 12), as determined using targeted LC-MS/MS. 
+
+(C) 
+Concentration of testosterone in the brain of the control rats (n = 12), M. neoaurum-recipient rats (n = 12), and M. neoaurum-recipient rats treated with erythromycin (n = 12), as determined using targeted LC-MS/MS. 
+
+(D) 
+Time spent immobile in the FST, time spent immobile in the TST, latency to groom in the splash test, and latency to eat in the NSF for the control rats (n = 12), 
+
+M. 
+neoaurum-recipient rats (n = 12), and M. neoaurum-recipient rats treated with erythromycin (n = 12). Data are presented as means ㊣ standard errors of the means (㊣ SEM), and one-way analysis of variance with Tukey＊s multiple comparisons tests was performed to calculate statistical signi.cance (*p < 0.05, **p < 0.01, ***p < 0.001). See also Figures 
+S3 
+and S5 
+and Data 
+S1. 
+
+
+accession number: CP074376), the gene MN2019_09885, en-coding 3b-hydroxysteroid dehydrogenase (3b-HSD), was identi-.ed via annotation (Figure 
+4A; Data 
+S2). To construct a testos-terone-degrading strain, the pET28a containing MN2019_ 09885 gene was transformed into E. coli BL21 (DE3) cells and 
+E. coli BL21 (DE3)/pDL01 was obtained (Figure 
+S6A). The vector pET28a was introduced into E. coli BL21 (DE3) to construct E. coli BL21 (DE3)/pET28a as a control (Figure 
+S6B). Using PCR, we veri.ed that the MN2019_09885 gene was found in E. coli BL21 (DE3)/pDL01 but not in E. coli BL21 (DE3)/pET28a (Figure 
+S6C). 
+Subsequently, we incubated E. coli BL21 (DE3)/pDL01 or E. coli BL21 (DE3)/pET28a with testosterone (2 g/L) in LB medium. TLC analysis showed that, compared with the standards, E. coli BL21 (DE3)/pDL01 transformed testosterone into AD in a time-depen-dent manner (Figure 
+S6D). In contrast, testosterone was not transformed by E. coli BL21 (DE3)/pET28a (Figure 
+S6E). The me-tabolites were identi.ed using LC-MS/MS, which con.rmed that the product of testosterone degradation by E. coli BL21 (DE3)/ pDL01 was AD (Figure 
+4B). Testosterone and AD levels were quanti.ed using HPLC, and E. coli BL21 (DE3)/pDL01 could convert 71.20% of testosterone into AD within 24 h and 89.41% of testosterone into 
+AD 
+within 
+48 
+h 
+(Figure 
+4C). 
+To explore the activity of the 3b-HSD protein encoded by the MN2019_ 09885 gene, we overexpressed 3b-HSD with His-Tag in E. coli BL21 (DE3) and puri.ed the enzyme using Ni-NTA column. The puri.ed-enzyme (Figure 
+S6F) kinetic con-stants kcat and KM for testosterone hydroxysteroid dehydroge-nase reactions were determined (Figure 
+4D). The enzyme 3b-HSD ef.ciently catalyzed the b-hydroxy dehydrogenation of testosterone with kcat, KM, and kcat/KM values of 0.222 ㊣ 
+1 11
+0.017 min , 101.9 ㊣ 25.46 mM, and 0.002 min mM , respec-tively, for 3b oxidation. In a previous study, the kcat, KM, and kcat/KM values of the 17b-HSD from Comamonas testoster-oni were 0.0012 ㊣ 0.0002 min 1, 11.8 ㊣ 2.0 mM, and 0.0001 min 1 mM 1, respectively (Benach 
+et 
+al., 
+2002), indicating that 3b-HSD in M. neoaurum had a higher testos-terone degradation activity. These data showed that the MN2019_09885 gene in M. neoaurum would express 3b-HSD in E. coli. 
+Administration of E. coli BL21 (DE3)/pDL01 induced depression-like behaviors in rats 
+We next assessed whether the rats administered with E. coli BL21 (DE3)/pDL01 by gavage experienced depression-like 
+Cell Host & Microbe 30, 1每11, March 9, 2022 5 
+
+
+
+ll 
+
+
+OPEN ACCESS 
+
+Article 
+
+Figure 4. Assessment of the 3b-dehydrogenation pathway in vitro 
+(A) 
+Structure and distribution of 3b-HSD for testosterone degradation on the chromosome of M. neoaurum MN2019. The proposed gene products are enclosed in gray boxes. 
+
+(B) 
+Combined EICs showing the conversion of testosterone to AD by E. coli BL21 (DE3)/pDL01 harboring 3b-HSD versus a control strain of E. coli BL21 (DE3)/ pET28a harboring the vector plasmid pET28a. The strains were grown with 2 g/L testosterone for 96 h, extracted with ethyl acetate, and analyzed using LC-MS. The experiment was independently repeated three times. 
+
+(C) 
+Combined EICs showing time-dependent conversion of testosterone to AD by engineered E. coli. The strain was grown with 2 g/L testosterone, and aliquots from the indicated time points were quanti.ed using HPLC. The experiment was repeated twice, independently, and showed similar results. 
+
+(D) 
+Nonlinear regression for testosterone reduction catalyzed by 3b-HSD. The reaction mixture contained 200 mMNAD+, 25 mM Tris-HCl (pH 7.6), 5 mM3b-HSD, and testosterone at 37 C. Enzyme kinetic constants kcat = 0.222 ㊣ 0.017 min 1 and KM = 101.9 ㊣ 25.46 mM. Data points indicate mean levels ㊣ SEM (3 biological replicates). 
+
+(E) 
+Proposed pathway for the 3b-dehydrogenation of testosterone to AD. See also Figure 
+S6. 
+
+
+behaviors. The rats were divided into 3 groups: (1) control group, The quanti.cation of the serum testosterone levels using LC-administered 1 mL of saline by gavage once daily for 3 succes-MS/MS demonstrated that the serum testosterone levels in the sive days; (2) E. coli BL21 (DE3)/pDL01-recipient group, admin-E. coli BL21 (DE3)/pDL01 recipients was signi.cantly lower istered E. coli BL21 (DE3)/pDL01 (approximately 1 3 108 cfu than those in the control group (94 ㊣ 60 ng/dL versus 246 ㊣ once daily for 3 successive days) by gavage; and (3) E. coli 134 ng/dL; p = 0.007), with no signi.cant changes observed BL21 (DE3)/pET28a-recipient group, administered E. coli BL21 in the serum testosterone levels of the E. coli BL21 (DE3)/ (DE3)/pET28a by gavage (approximately 1 3 108 cfu once daily pET28a recipients compared with those of the control rats for 3 successive days; Figure 
+5A). (221 ㊣ 93 ng/dL versus 246 ㊣ 134 ng/dL; p = 0.975; Figure 
+5B). 
+6 Cell Host & Microbe 30, 1每11, March 9, 2022 
+
+
+
+ll 
+
+OPEN ACCESS
+
+Article 
+
+Figure 5. Administration of E. coli BL21 (DE3)/pDL01 by gavage induced depression-like behaviors in rats 
+(A) 
+Experimental timeline for the control rats, E. coli BL21 (DE3)/pDL01 recipients, E. coli BL21 (DE3)/pET28a recipients, E. coli BL21 (DE3)/pDL01 recipients treated with testosterone, and the AD-treated rats. All rats (aged 7 weeks) were treated with 7-day antibiotics followed by 1-day autoclaved water before being gavaged. The control rats were gavaged with saline (1 mL) for 3 successive days. The E. coli BL21 (DE3)/pDL01 recipients and E. coli BL21 (DE3)/pET28a re-cipients were gavaged with E. coli BL21 (DE3)/pDL01 or E. coli BL21 (DE3)/pET28a (approximately 1 3 108 cfu) for 3 successive days. The E. coli BL21 (DE3)/ pDL01 recipients treated with testosterone (E. coli BL21 (DE3)/pDL01+testosterone) were treated with 0.5 mg testosterone daily for 28 days by gavage at the beginning of the day, after E. coli BL21 (DE3)/pDL01 gavage. The AD-treated rats (AD) were treated with AD (0.5 mg/day for 28 days) by gavage, without any bacterial gavage. Four weeks after the .rst day of gavage, behavioral observation of rats was performed within a week, followed by testosterone levels mea-surement and 3b-HSD detection. BA, behavior assays. 
+
+(B) 
+Concentration of testosterone in the serum of control rats (n = 12), E. coli BL21 (DE3)/pDL01 recipients (n = 12), E. coli BL21 (DE3)/pET28a recipients (n = 12), 
+
+E. 
+coli BL21 (DE3)/pDL01 recipients treated with testosterone (n = 6), and the AD-treated rats (n = 6), as detected by using LC-MS/MS. 
+
+(C) 
+Concentration of testosterone in the brain of the control rats (n = 12), E. coli BL21 (DE3)/pDL01 recipients (n = 12), E. coli BL21 (DE3)/pET28a recipients (n = 12), 
+
+E. 
+coli BL21 (DE3)/pDL01 recipients treated with testosterone (n = 6), and the AD-treated rats (n = 6), as detected by using LC-MS/MS. 
+
+(D) 
+Time spent immobile in the FST, time spent immobile in the TST, latency to groom in the splash test, and latency to eat in the NSF for the control rats (n = 12), 
+
+E. 
+coli BL21 (DE3)/pDL01 recipients (n = 12), E. coli BL21 (DE3)/pET28a (n = 12), E. coli BL21 (DE3)/pDL01 recipients treated with testosterone (n = 6), and the AD-treated rats (n = 6). E. coli BL21 (DE3)/pDL01: plasmid pDL01, which contained 3b-HSD, was introduced into E. coli BL21 (DE3). E. coli BL21 (DE3)/pET28a: vector plasmid pET28a was introduced into E. coli BL21 (DE3). Data are presented as mean levels ㊣ SEM, and one-way analysis of variance with Tukey＊s multiple comparisons tests was performed to calculate statistical signi.cance (*p < 0.05, **p < 0.01, ***p < 0.001). See also Figure 
+S3 
+and Data 
+S2. 
+
+
+Next, we quanti.ed the level of brain testosterone using LC-MS/ MS and showed that the brain testosterone levels in the E. coli BL21 (DE3)/pDL01 recipients were signi.cantly lower than those in the control group (5.04 ㊣ 2.28 ng/g versus 14.03 ㊣ 5.01 ng/g; p < 0.001; Figure 
+5C) and E. coli BL21 (DE3)/pET28a recipients 
+(5.04 ㊣ 2.28 ng/g versus 14.27 ㊣ 4.91 ng/g; p < 0.001; Figure 
+5C). 
+Behavioral experiments showed that in the FST and TST, the immobility time of the E. coli BL21 (DE3)/pDL01 recipients was longer than that of the E. coli BL21 (DE3)/pET28a recipients and the control rats. In the NSF and splash tests, the latent time was longer in the E. coli BL21 (DE3)/pDL01 recipients than in the E. coli BL21 (DE3)/pET28a recipients and control rats (Figures 
+5D and S3G每S3I). No signi.cant depression-like behaviors were observed in the E. coli BL21 (DE3)/pET28a recip-ients compared with the control rats (Figures 
+5D and S3G每S3I). Next, to verify whether 3b-HSD is expressed during the experi-ment, we conducted a western blot using the protein obtained from feces samples after behavioral assays. No obvious bands in the samples from the rats gavaged with E. coli BL21(DE3)/ pET28a recipients were observed, whereas bands were observed in the samples from the E. coli BL21 (DE3)/pDL01 re-cipients (Figures 
+S6G and S6H), suggesting that the E. coli BL21 (DE3)/pDL01 recipients expressed 3b-HSD during the experiment. 
+Taken together, these results indicated that expression of 3b-HSD in the gut could degrade serum and brain testosterone to induce depression-like behaviors in rats. 
+Testosterone supplementation alleviated depression-like behaviors in E. coli BL21 (DE3)/pDL01 recipients 
+To further evaluate the roles of testosterone de.ciency in the depression-like behaviors of the E. coli BL21 (DE3)/pDL01 
+Cell Host & Microbe 30, 1每11, March 9, 2022 7 
+
+
+OPEN ACCESS 
+
+Article 
+
+recipients, we determined whether testosterone supplementa-tion could alleviate these phenotypes. The E. coli BL21 (DE3)/ pDL01 recipients were treated with 0.5 mg testosterone daily for 28 days by gavage, beginning from the day after the E. coli BL21 (DE3)/pDL01 gavage (Spritzer 
+et 
+al., 
+2011; Figure 
+5A). 
+The quanti.cation of serum testosterone using LC-MS/MS demonstrated that the testosterone levels in E. coli BL21 (DE3)/pDL01 recipients (289 ㊣ 101 ng/dL) were restored to the level of those in the control rats (246 ㊣ 134 ng/dL) after testos-terone supplementation (Figure 
+5B). The brain testosterone levels in the E. coli BL21 (DE3)/pDL01 recipients (12.44 ㊣ 
+3.32 ng/g) were restored to the level of those in the control rats 
+(14.03 ㊣ 5.01 ng/g, p = 0.989) (Figure 
+5C). Results from the behavioral experiments showed that the immobility time in the FST and TST and the latent time in the NSF and splash tests in the E. coli BL21 (DE3)/pDL01 recipients with testosterone were similar to those of the control rats (Figures 
+5D and S3G每S3I), which suggested that testosterone supplementation could alle-viate depression-like behaviors in the E. coli BL21 (DE3)/pDL01 recipients. Next, to verify whether 3b-HSD is expressed during the experiment, we conducted western blotting using the protein obtained from feces samples after behavioral assays. Bands were observed in the samples from the E. coli BL21 (DE3)/ pDL01 recipients treated with testosterone (Figure 
+S6I), suggest-ing that 3b-HSD was expressed in the gut of rats during the experiment. 
+Because 3b-HSD converts testosterone to AD, there are at least 3 situations that cause depression-like behaviors in the 
+E. coli BL21 (DE3)/pDL01 recipients: (1) testosterone de.ciency induces depression-like behaviors, (2) elevated serum AD levels induce depression-like behaviors, and (3) both testosterone de.-ciency and elevated serum AD levels induce depression-like be-haviors. The relationship between testosterone de.ciency and depression-like behaviors has been reported in a previous study (Carrier 
+and 
+Kabbaj, 
+2012). Therefore, based on this study, we supplemented ABX-treated rats with AD (0.5 mg/day for 
+Figure 6. Metagenomic prevalence of 
+M. neoaurum and 3b-HSD 
+(A) 
+The metagenomic prevalence of M. neoaurum and 3b-HSD was examined in non-depression in-dividuals (n = 102) and patients with depression (n = 107). A Ct value of less than 38 was considered positive. 
+
+(B) 
+Correlation analysis between the Ct value of 3b-HSD DNA and serum testosterone (n = 184). 
+
+(C) 
+Correlation analysis between the Ct value of 3b-HSD RNA and serum testosterone (n = 184). 
+
+
+28 days) by gavage to further elucidate the associations between 3b-HSD and depression-like behaviors. 
+In behavioral experiments, the immo-bility time in the FST and TST and the latent time in the NSF and splash tests for the AD-treated rats were similar to those of the control rats (Figures 
+5D and S3G每S3I). 
+This suggested that AD supplementation 
+did not lead to depression-like behaviors in rats. Therefore, the expression of 3b-HSD in the gut may cause depression-like behavior in rats by reducing their testosterone levels. 
+M. neoaurum and 3b-HSD were prevalent in patients with depression 
+To assess the prevalence of M. neoaurum and 3b-HSD in the hu-man gut, we examined the metagenomic prevalence of 
+M. neoaurum and 3b-HSD in the fecal DNA of the participants without (n = 102) and with depression (n = 107) using real-time polymerase chain reaction (qPCR). The genes of M. neoaurum and 3b-HSD were ampli.ed using speci.c and degenerate primers, respectively. For the degenerate primer of the enzyme, MN2019_09885 sequences were compared using BLAST, and all homologous genes were selected to design primers for the conserved regions. 
+The results showed that M. neoaurum was present in 4.67% (5/107) of the patients in the depression group and in none of the patients in the non-depression group. Moreover, 3b-HSD was present in 42.99% (46/107) of the patients in the depression group and 16.67% (17/102) of the patients in the non-depression group (Figure 
+6A). These data suggested that M. neoaurum mainly existed in the patients with depression and that 3b-HSD was distributed more widely in the patients with depression than in healthy individuals. Furthermore, the distribution of 3b-HSD was more extensive than that of M. neoaurum, indi-cating that M. neoaurum may not be the only bacterium express-ing 3b-HSD in the gut. 
+Next, to investigate the expression level of 3b-HSD in the par-ticipants without (n = 102) and with depression (n = 107), we used qRT-PCR to test the fecal RNA. The result showed that 3b-HSD was transcribed in 26.17% (28/107) of the patients in the depres-sion group and 4.90% (5/102) of the participants in the non-depression group (Figure 
+6A). Upon comparing these results with the qPCR data, we observed that 60.87% (28/46) of the pa-tients with depression showed the transcription of 3b-HSD in 
+8 Cell Host & Microbe 30, 1每11, March 9, 2022 
+
+
+
+
+
+Article 
+their gut, whereas this percentage was 29.41% (5/17) in the non-depression group, which suggests that the testosterone-de-grading bacteria in patients with depression are more active in expressing 3b-HSD. 
+To explore the relationship between 3b-HSD and serum testosterone, correlation analyses were conducted. The result shows that both Ct values of 3b-HSD DNA (r = 0.257; p = 0.001; Figure 
+6B) and 3b-HSD RNA (r = 0.266; p < 0.001; Fig-
+ure 
+6C) were positively associated with serum testosterone, which suggests that serum testosterone could be affected by gut 3b-HSD. 
+DISCUSSION 
+The idea that testosterone de.ciency can lead to depressive dis-orders was proposed over 50 years ago; however, relatively few studies have investigated the causes of testosterone de.ciency. Diczfalusy 
+et 
+al. 
+(1962) 
+found for the .rst time that steroid hor-mones can be converted into other products in the intestine, re-sulting in less reabsorption of steroid hormones into the blood (Diczfalusy 
+et 
+al., 
+1962). Moreover, recent studies suggest that gut microbes can change the ratio of active and inactive forms of steroid hormones through the degradation pathway, thus affecting the levels of some steroid hormones (Needham 
+et 
+al., 
+2020). However, the role of gut microbes in the metabolism of testosterone in the pathogenesis of depression has not yet been studied. In this study, we found that gut microbes could reduce the serum and brain testosterone levels by degrading testosterone and lead to depressive symptoms. 
+Our results provided evidence for a previously unknown mechanism, i.e., the relationship between the gut microbiota and testosterone levels of serum and brain. It has been reported that the serum testosterone level of female mice administered with adult male cecal contents by gavage increased signi.cantly (Markle 
+et 
+al., 
+2013). This indicates that gut microbes can change the testosterone level. In this study, M. neoaurum, which can degrade testosterone, reduced the testosterone levels of serum and brain, possibly because testosterone is degraded by 3b-HSD produced by M. neoaurum before it is reabsorbed into circulation. The presence of M. neoaurum MN2019 was not sur-prising because Mycobacteria have been reported to use natural sterols or some other steroidal compounds as sole energy and carbon sources (Yao 
+et 
+al., 
+2014). M. neoaurum is a rapidly growing Mycobacterium and can degrade natural steroids (Vo.shvillo 
+et 
+al., 
+2003). In addition, M. neoaurum NwIB-01 was isolated from soil using steroids as the sole carbon source (Wei 
+et 
+al., 
+2010) and was found to convert phytosterols into AD, ADD, and 9a-hydroxy-4-androstene-3,17-dione (Yao 
+et 
+al., 
+2014). Notably, M. neoaurum is currently used in the pharmaceu-tical industry to produce AD or ADD by phytosterol degradation (Rodr∩guez-Garc∩a 
+et 
+al., 
+2016). Because the engineered E. coli that expressed 3b-HSD in the gut resulted in depression-like be-haviors in rats, we speculate that the bacteria expressing 3b-HSD in the gut may have the common feature of reducing serum testosterone and resulting in host depression. These data demonstrated a role for the gut-microbiota degradation of testosterone in depression-like behaviors and provided a ge-netic basis for understanding testosterone-de.ciency-related depressive disorders. AD is a weakly active form of testosterone OPEN ACCESS 
+and has a lower af.nity for androgen receptor (Young 
+et 
+al., 
+2013). Therefore, when testosterone is converted into a weakly active form by 3b-HSD in the gut, the testosterone levels in the serum and brain decrease. These results are consistent with the previous results demonstrating that the gut microbiota can in.uence the levels of some steroid hormones by shifting the ra-tio of active and inactive steroid levels through degradation path-ways (Needham 
+et 
+al., 
+2020). 
+Our study identi.ed a type of depression caused by testos-terone-degrading bacteria in the gut, causing a decrease in testosterone levels and depressive symptoms secondary to clinical hypogonadism. Notably, our results show only a partic-ular niche of depression linked to low testosterone levels, rather than all those meeting the clinical cutoff for hypogonadism. A previous review indicates that for depressive symptoms sec-ondary to clinical hypogonadism, there are strong evidences for the ef.cacy of testosterone replacement therapy; for sub-threshold depressive symptoms in men without clinical hypogo-nadism, there is preliminary evidence for the ef.cacy of testos-terone augmentation; and for treatment-resistant MDD in men without clinical hypogonadism, there are strong evidences for there being no bene.t to testosterone augmentation (Dwyer 
+et 
+al., 
+2020). Our result demonstrated that testosterone supple-mentation is effective in alleviating depression-like behaviors in rats, which reinforced the previous conclusion. Future studies can compare the effect of testosterone supplementation in pa-tients with testosterone-degrading bacterial infection with other patients exhibiting depressive symptoms secondary to clinical hypogonadism. Determining the effect of using antibiotics to clear bacteria in this patient population will provide further insights. 
+Many studies have shown that Actinomycetes are more abun-dant in the gut of the patients with depression than in that of the control subjects (Jiang 
+et 
+al., 
+2015; Naseribafrouei 
+et 
+al., 
+2014; Sharon 
+et 
+al., 
+2016; Zheng 
+et 
+al., 
+2016). However, it is not clear how Actinomycetes are associated with depression. In fact, Actinomycetes can metabolize steroids (Holert 
+et 
+al., 
+2018). Therefore, many bacteria in the Actinomycetes family may degrade testosterone. We speculated that Actinomycetes may reduce the testosterone levels of serum and brain through the degradation of testosterone, resulting in depression. 
+However, there remain several unaddressed questions. First, our results showed that the distribution of 3b-HSD was more common than that of M. neoaurum in the depression group, indicating that M. neoaurum was not the only bacterium in the gut harboring 3b-HSD. Other testosterone-degrading bacteria were not evaluated in this study. Second, 3b-HSD was also de-tected in the gut of the non-depressed group, indicating that the investigation on whether 3b-HSD in the gut causes depression should consider other factors, such as enzyme activity, enzyme expression, enzyme inhibitors in the intestinal environment, and the production and regulation of serum testosterone in the host. The relationship between enzyme activity and the testosterone levels of serum and brain should be investigated in further studies. 
+The discovery of relationships among testosterone de.ciency, gut microbial metabolism, and depression pathogenesis has extensive health-related implications. Our study revealeda mech-anism potentially associating the degradation of testosterone by 
+Cell Host & Microbe 30, 1每11, March 9, 2022 9 
+
+
+
+ll 
+
+
+OPEN ACCESS 
+
+Article 
+gut microbes harboring 3b-HSD with elevated depression risk. The role of the gut microbe in this mechanismsuggests modi.able risk factors for preventing testosterone de.ciency and/or depres-sive disorders. Further studies should focus on randomized, double-blind controlled clinical trials to explore effective interven-tions, such as antibiotic treatment, testosterone supplementa-tion, or 3b-HSD inhibitors, to prevent testosterone de.ciency or depressive disorders. 
+Limitations of the study 
+In this study, all rats were given short-term antibiotics before further experiment to deplete their gut microbiota. However, in the subsequent feeding for 4 weeks, the gut microbiota of rats may have slowly recovered to a different composition (Ni 
+et 
+al., 
+2017); so the background gut microbiota (gut microbiota other than gavage bacteria) may be different, and we have not con-ducted an in-depth evaluation of the background gut-microbiota composition. However, we set up a control group in each batch of experiments to exclude the in.uence of the background gut microbiota on the experimental conclusions. 
+STAR+METHODS 
+Detailed methods are provided in the online version of this paper and include the following: 
+d KEY 
+RESOURCES 
+TABLE 
+
+d RESOURCE 
+AVAILABILITY 
+
+B Lead contact 
+B Materials availability 
+B Data and code availability 
+d EXPERIMENTAL 
+MODEL 
+AND 
+SUBJECT 
+DETAILS 
+
+B Rats 
+B Human subjects 
+d METHOD 
+DETAILS 
+
+B Detection of serum and brain testosterone 
+B Fecal sample collection 
+B Testosterone degradation by fecal microbiota 
+B Gut microbiota collection 
+B Gavage with bacteria in rats 
+B Gavage with testosterone or AD in rats 
+B Behavioral assays 
+B Splash test 
+B NSF 
+B TST 
+B FST 
+B Isolation of testosterone-degrading strains 
+B Testosterone degradation by M. neoaurum 
+B TLC for steroids 
+B Quanti.cation of steroids using HPLC 
+B E-test 
+B Whole genome sequencing of M. neoaurum 
+B Heterologous expression of 3b-HSD in E. coli 
+B Analysis of the kinetic parameters of 3b-HSD 
+B Western blot 
+B Fecal sample DNA/RNA extraction 
+B qPCR assay for prevalence of 3b-HSD and M. 
+neoaurum 
+d QUANTIFICATION 
+AND 
+STATISTICAL 
+ANALYSIS 
+
+SUPPLEMENTAL INFORMATION 
+Supplemental information can be found online at https://doi.org/10.1016/j. 
+chom.2022.01.001. 
+ACKNOWLEDGMENTS 
+We thank Dong-Zhi Wei, Fengqing Wang, and the members of the State Key Laboratory of Bioreactor Engineering, East China University of Science and Technology for helpful guidance on the experiments. This work was supported by the National Key Research and Development Program of China (grant no. 2018YFA0900400), Leading Talents of the Ten Thousand Talents Program, the National Key R&D Program of China (grant no. 2018YFC1314600), the Na-tional Natural Science Foundation of China (no. 81571325 and no. 81401117), the Medical Science Advancement Program of Wuhan University (no. TFLC2018001), and the Shenzhen Institute of Synthetic Biology Scienti.c Research Program (HSY89901038). 
+AUTHOR CONTRIBUTIONS 
+Conceptualization, Y.L. and T.L.; methodology, D.L., R.L., M.W., S.F., J.L., T.Y., H.C., X.M., H.L., P.Y., S.W., A.F., and S.C.; investigation, D.L., R.L., M.W., and R.P.; writing 每 original draft, D.L.; writing 每 review & editing, D.L., R.L., Y.L., and T.L.; funding acquisition, T.L., Y.L., G.W., Z.D., and Z.L.; re-sources, Q.Y. and T.S.; supervision, T.L., Y.L., G.W., Z.D., and Z.L. 
+DECLARATION OF INTERESTS 
+The authors applied patents based on this research. 
+Received: August 6, 2021 Revised: October 29, 2021 Accepted: January 5, 2022 Published: February 1, 2022 
+REFERENCES 
+Araujo, 
+A.B., 
+Esche, 
+G.R., 
+Kupelian, 
+V., 
+O＊Donnell, 
+A.B., 
+Travison, 
+T.G., 
+Williams, 
+R.E., 
+Clark, 
+R.V., 
+and 
+McKinlay, 
+J.B. 
+(2007). 
+Prevalence 
+of 
+symptom-
+atic 
+androgen 
+de.ciency 
+in 
+men. 
+J. 
+Clin. 
+Endocrinol. 
+Metab. 
+92, 
+4241每4247. 
+
+Aversa, 
+A., 
+and 
+Morgentaler, 
+A. 
+(2015). 
+The 
+practical 
+management 
+of 
+testos-
+
+terone 
+de.ciency 
+in 
+men. 
+Nat. 
+Rev. 
+Urol. 
+12, 
+641每650. 
+Basaria, S. (2014). Male hypogonadism. Lancet 383, 1250每1263. https://doi. 
+org/10.1016/S0140-6736(13)61126-5. 
+Baulieu, 
+E.E. 
+(1991). 
+Neurosteroids: 
+a 
+new 
+function 
+in 
+the 
+brain. 
+Biol. 
+Cell 
+
+71, 
+3每10. 
+Benach, 
+J., 
+Filling, 
+C., 
+Oppermann, 
+U.C., 
+Roversi, 
+P., 
+Bricogne, 
+G., 
+Berndt, 
+K.D., 
+Jo“ 
+rnvall, 
+H., 
+and 
+Ladenstein, 
+R. 
+(2002). 
+Structure 
+of 
+bacterial 
+3beta/ 
+17beta-hydroxysteroid 
+dehydrogenase 
+at 
+1.2-A 
+resolution: 
+a 
+model 
+for 
+multi-
+ple 
+steroid 
+recognition. 
+Biochemistry 
+41, 
+14659每14668. 
+
+Bhasin, 
+S., 
+and 
+Seidman, 
+S. 
+(2019). 
+Testosterone 
+treatment 
+of 
+depressive 
+dis-
+orders 
+in 
+men: 
+too 
+much 
+smoke, 
+not 
+enough 
+high-quality 
+evidence. 
+JAMA 
+Psychiatry 
+76, 
+9每10. 
+
+Bremner, 
+W.J. 
+(2010). 
+Testosterone 
+de.ciency 
+and 
+replacement 
+in 
+older 
+men. 
+
+N. Engl. 
+J. 
+Med. 
+363, 
+189每191. 
+Carrier, 
+N., 
+and 
+Kabbaj, 
+M. 
+(2012). 
+Extracellular 
+signal-regulated 
+kinase 
+2 
+
+signaling 
+in 
+the 
+hippocampal 
+dentate 
+gyrus 
+mediates 
+the 
+antidepressant 
+ef-
+fects 
+of 
+testosterone. 
+Biol. 
+Psychiatry 
+71, 
+642每651. 
+Chevalier, 
+G., 
+Siopi, 
+E., 
+Guenin-Mace∩ 
+, 
+L., 
+Pascal, 
+M., 
+Laval, 
+T., 
+Rif.et, 
+A., 
+
+Boneca, 
+I.G., 
+Demangel, 
+C., 
+Colsch, 
+B., 
+Pruvost, 
+A., 
+et 
+al. 
+(2020). 
+Effect 
+of 
+gut 
+microbiota 
+on 
+depressive-like 
+behaviors 
+in 
+mice 
+is 
+mediated 
+by 
+the 
+endo-
+cannabinoid 
+system. 
+Nat. 
+Commun. 
+11, 
+6363. 
+
+W.H.O. (2017). Depression and other common mental disorders: global healthes-timates. http://apps.who.int/iris/bitstream/handle/10665/254610/WHO-MSD-
+MER-2017.2-eng.pdf;jsessionid=B1C1FAF375042E9F2A72C24735E6333A? 
+sequence=1. 
+10 Cell Host & Microbe 30, 1每11, March 9, 2022 
+
+
+
+
+
+Article 
+Diczfalusy, 
+E., 
+Franksson, 
+C., 
+Lisboa, 
+B.P., 
+and 
+Martinsen, 
+B. 
+(1962). 
+Formation 
+of 
+oestrone 
+glucosiduronate 
+by 
+the 
+human 
+intestinal 
+tract. 
+Acta 
+Endocrinol. 
+(Copenh) 
+40, 
+537每551. 
+
+Dwyer, 
+J.B., 
+Aftab, 
+A., 
+Radhakrishnan, 
+R., 
+Widge, 
+A., 
+Rodriguez, 
+C.I., 
+Carpenter, 
+L.L., 
+Nemeroff, 
+C.B., 
+McDonald, 
+W.M., 
+and 
+Kalin, 
+N.H.; 
+APA 
+Council 
+of 
+Research 
+Task 
+Force 
+on 
+Novel 
+Biomarkers 
+and 
+Treatments 
+(2020). 
+Hormonal 
+treatments 
+for 
+major 
+depressive 
+disorder: 
+state 
+of 
+the 
+art. 
+Am. 
+J. 
+Psychiatry 
+177, 
+686每705. 
+
+Egede, 
+L.E., 
+Acierno, 
+R., 
+Knapp, 
+R.G., 
+Lejuez, 
+C., 
+Hernandez-Tejada, 
+M., 
+Payne, 
+E.H., 
+and 
+Frueh, 
+B.C. 
+(2015). 
+Psychotherapy 
+for 
+depression 
+in 
+older 
+veterans 
+via 
+telemedicine: 
+a 
+randomised, 
+open-label, 
+non-inferiority 
+trial. 
+Lancet 
+Psychiatry 
+2, 
+693每701. 
+
+Funabashi, 
+M., 
+Grove, 
+T.L., 
+Wang, 
+M., 
+Varma, 
+Y., 
+McFadden, 
+M.E., 
+Brown, 
+L.C., 
+Guo, 
+C., 
+Higginbottom, 
+S., 
+Almo, 
+S.C., 
+and 
+Fischbach, 
+M.A. 
+(2020). 
+A 
+metabolic 
+pathway 
+for 
+bile 
+acid 
+dehydroxylation 
+by 
+the 
+gut 
+microbiome. 
+Nature 
+582, 
+566每570. 
+
+George, 
+S.L., 
+and 
+Schlesinger, 
+L.S. 
+(1999). 
+Mycobacterium 
+neoaurum每an 
+un-
+usual 
+cause 
+of 
+infection 
+of 
+vascular 
+catheters: 
+case 
+report 
+and 
+review. 
+Clin. 
+Infect. 
+Dis. 
+28, 
+682每683. 
+
+Holert, 
+J., 
+Cardenas, 
+E., 
+Bergstrand, 
+L.H., 
+Zaikova, 
+E., 
+Hahn, 
+A.S., 
+Hallam, 
+S.J., 
+and 
+Mohn, 
+W.W. 
+(2018). 
+Metagenomes 
+reveal 
+global 
+distribution 
+of 
+bac-
+terial 
+steroid 
+catabolism 
+in 
+natural, 
+engineered, 
+and 
+host 
+environments. 
+mBio 
+9, 
+e02345每02317. 
+
+Jiang, 
+H., 
+Ling, 
+Z., 
+Zhang, 
+Y., 
+Mao, 
+H., 
+Ma, 
+Z., 
+Yin, 
+Y., 
+Wang, 
+W., 
+Tang, 
+W., 
+Tan, 
+Z., 
+Shi, 
+J., 
+et 
+al. 
+(2015). 
+Altered 
+fecal 
+microbiota 
+composition 
+in 
+patients 
+with 
+major 
+depressive 
+disorder. 
+Brain 
+Behav. 
+Immun. 
+48, 
+186每194. 
+
+Kumar, 
+A., 
+Pazhayattil, 
+G.S., 
+Das, 
+A., 
+and 
+Conte, 
+H.A. 
+(2014). 
+Mycobacterium 
+neoaurum 
+causing 
+prosthetic 
+valve 
+endocarditis: 
+a 
+case 
+report 
+and 
+review 
+of 
+the 
+literature. 
+Braz. 
+J. 
+Infect. 
+Dis. 
+18, 
+235每237. 
+
+Liu, 
+R., 
+Zhang, 
+Y., 
+Zhai, 
+G., 
+Fu, 
+S., 
+Xia, 
+Y., 
+Hu, 
+B., 
+Cai, 
+X., 
+Zhang, 
+Y., 
+Li, 
+Y., 
+Deng, 
+Z., 
+and 
+Liu, 
+T. 
+(2020). 
+A 
+cell-free 
+platform 
+based 
+on 
+nisin 
+biosynthesis 
+for 
+discovering 
+novel 
+lanthipeptides 
+and 
+guiding 
+their 
+overproduction 
+in 
+vivo. 
+Adv. 
+Sci. 
+(Weinh) 
+7, 
+2001616. 
+
+Markle, J.G., Frank, D.N., Mortin-Toth, S., Robertson, C.E., Feazel, L.M., Rolle-Kampczyk, U., von Bergen, M., McCoy, K.D., Macpherson, A.J., and Danska, J.S. (2013). Sex differences in the gut microbiome drive hormone-dependent regulation of autoimmunity. Science 339, 1084每1088. https://doi. 
+org/10.1126/science.1233521. 
+Miyauchi, 
+E., 
+Kim, 
+S.W., 
+Suda, 
+W., 
+Kawasumi, 
+M., 
+Onawa, 
+S., 
+Taguchi-Atarashi, 
+N., 
+Morita, 
+H., 
+Taylor, 
+T.D., 
+Hattori, 
+M., 
+and 
+Ohno, 
+H. 
+(2020). 
+Gut 
+mi-
+croorganisms 
+act 
+together 
+to 
+exacerbate 
+in.ammation 
+in 
+spinal 
+cords. 
+Nature 
+585, 
+102每106. 
+
+Morimoto, 
+Y., 
+Chan, 
+E.D., 
+Heifets, 
+L., 
+and 
+Routes, 
+J.M. 
+(2007). 
+Pulmonary 
+infection 
+with 
+Mycobacterium 
+neoaurum 
+identi.ed 
+by 
+16S 
+ribosomal 
+DNA 
+sequence. 
+J. 
+Infect. 
+54, 
+e227每e231. 
+
+Moriya, Y., Itoh, M., Okuda, S., Yoshizawa, A.C., and Kanehisa, M. (2007). KAAS: an automatic genome annotation and pathway reconstruction server. Nucleic Acids Res 35, W182每W185. https://doi.org/10.1093/nar/gkm321. 
+Naseribafrouei, 
+A., 
+Hestad, 
+K., 
+Avershina, 
+E., 
+Sekelja, 
+M., 
+Linl.kken, 
+A., 
+Wilson, 
+R., 
+and 
+Rudi, 
+K. 
+(2014). 
+Correlation 
+between 
+the 
+human 
+fecal 
+micro-
+biota 
+and 
+depression. 
+Neurogastroenterol. 
+Motil. 
+26, 
+1155每1162. 
+
+Needham, 
+B.D., 
+Kaddurah-Daouk, 
+R., 
+and 
+Mazmanian, 
+S.K. 
+(2020). 
+Gut 
+micro-
+bial 
+molecules 
+in 
+behavioural 
+and 
+neurodegenerative 
+conditions. 
+Nat. 
+Rev. 
+Neurosci. 
+21, 
+717每731. 
+
+Ni, 
+J., 
+Shen, 
+T.D., 
+Chen, 
+E.Z., 
+Bittinger, 
+K., 
+Bailey, 
+A., 
+Roggiani, 
+M., 
+Sirota-Madi, 
+A., 
+Friedman, 
+E.S., 
+Chau, 
+L., 
+Lin, 
+A., 
+et 
+al. 
+(2017). 
+A 
+role 
+for 
+bacterial 
+ure-
+ase 
+in 
+gut 
+dysbiosis 
+and 
+Crohn＊s 
+disease. 
+Sci. 
+Transl. 
+Med. 
+9, 
+eaah6888. 
+
+Pavlidi, 
+P., 
+Kokras, 
+N., 
+and 
+Dalla, 
+C. 
+(2021). 
+Antidepressants＊ 
+effects 
+on 
+testos-
+
+terone 
+and 
+estrogens: 
+what 
+do 
+we 
+know? 
+Eur. 
+J. 
+Pharmacol. 
+899, 
+173998. 
+Pernigoni, 
+N., 
+Zagato, 
+E., 
+Calcinotto, 
+A., 
+Troiani, 
+M., 
+Mestre, 
+R.P., 
+Cal`, 
+B., 
+Attanasio, 
+G., 
+Troisi, 
+J., 
+Minini, 
+M., 
+Mosole, 
+S., 
+et 
+al. 
+(2021). 
+Commensal 
+bac-
+teria 
+promote 
+endocrine 
+resistance 
+in 
+prostate 
+cancer 
+through 
+androgen 
+biosynthesis. 
+Science 
+374, 
+216每224. 
+
+OPEN ACCESS 
+Rodr∩guez-Garc∩a, 
+A., 
+Ferna∩ 
+ndez-Alegre, 
+E., 
+Morales, 
+A., 
+Sola-Landa, 
+A., 
+Lorraine, 
+J., 
+Macdonald, 
+S., 
+Dovbnya, 
+D., 
+Smith, 
+M.C., 
+Donova, 
+M., 
+and 
+Barreiro, 
+C. 
+(2016). 
+Complete 
+genome 
+sequence 
+of 
+＊Mycobacterium 
+neoau-
+rum＊ 
+NRRL 
+B-3805, 
+an 
+androstenedione 
+(AD) 
+producer 
+for 
+industrial 
+biotrans-
+formation 
+of 
+sterols. 
+J. 
+Biotechnol. 
+224, 
+64每65. 
+
+Sandberg, 
+A.A., 
+and 
+Slaunwhite, 
+W.R., 
+Jr. 
+(1956). 
+Metabolism 
+of 
+4-C14-
+testosterone 
+in 
+human 
+subjects. 
+I. 
+Distribution 
+in 
+bile, 
+blood, 
+feces 
+and 
+urine. 
+J. 
+Clin. 
+Invest. 
+35, 
+1331每1339. 
+
+Secombe, 
+K.R., 
+Al-Qadami, 
+G.H., 
+Subramaniam, 
+C.B., 
+Bowen, 
+J.M., 
+Scott, 
+J., 
+Van 
+Sebille, 
+Y.Z.A., 
+Snelson, 
+M., 
+Cowan, 
+C., 
+Clarke, 
+G., 
+Gheorghe, 
+C.E., 
+et 
+al. 
+(2021). 
+Guidelines 
+for 
+reporting 
+on 
+animal 
+fecal 
+transplantation 
+(GRAFT) 
+studies: 
+recommendations 
+from 
+a 
+systematic 
+review 
+of 
+murine 
+transplantation 
+protocols. 
+Gut 
+Microbes 
+13, 
+1979878. 
+
+Sharon, 
+G., 
+Sampson, 
+T.R., 
+Geschwind, 
+D.H., 
+and 
+Mazmanian, 
+S.K. 
+(2016). 
+
+The 
+central 
+nervous 
+system 
+and 
+the 
+gut 
+microbiome. 
+Cell 
+167, 
+915每932. 
+Spritzer, 
+M.D., 
+Ibler, 
+E., 
+Inglis, 
+W., 
+and 
+Curtis, 
+M.G. 
+(2011). 
+Testosterone 
+and 
+social 
+isolation 
+in.uence 
+adult 
+neurogenesis 
+in 
+the 
+dentate 
+gyrus 
+of 
+male 
+rats. 
+Neuroscience 
+195, 
+180每190. 
+
+Sun, 
+W.J., 
+Wang, 
+L., 
+Liu, 
+H.H., 
+Liu, 
+Y.J., 
+Ren, 
+Y.H., 
+Wang, 
+F.Q., 
+and 
+Wei, 
+D.Z. 
+(2019). 
+Characterization 
+and 
+engineering 
+control 
+of 
+the 
+effects 
+of 
+reactive 
+ox-
+ygen 
+species 
+on 
+the 
+conversion 
+of 
+sterols 
+to 
+steroid 
+synthons 
+in 
+Mycobacterium 
+neoaurum. 
+Metab. 
+Eng. 
+56, 
+97每110. 
+
+Truong, 
+D.T., 
+Franzosa, 
+E.A., 
+Tickle, 
+T.L., 
+Scholz, 
+M., 
+Weingart, 
+G., 
+Pasolli, 
+E., 
+Tett, 
+A., 
+Huttenhower, 
+C., 
+and 
+Segata, 
+N. 
+(2015). 
+MetaPhlAn2 
+for 
+enhanced 
+metagenomic 
+taxonomic 
+pro.ling. 
+Nat. 
+Methods 
+12, 
+902每903. 
+
+Tsukamura, 
+M. 
+(1972). 
+A 
+new 
+species 
+of 
+rapidly 
+growing, 
+scotochromogenic 
+mycobacteria, 
+Mycobacterium 
+neoaurum 
+Tsukamura 
+n. 
+sp. 
+(Japanese). 
+Med. 
+Biol. 
+85, 
+229每233. 
+
+Vo.shvillo, 
+N.E., 
+Andriushina, 
+V.A., 
+Savinova, 
+T.S., 
+Stytsenko, 
+T.S., 
+Vasil＊eva, 
+N.A., 
+Turova, 
+T.P., 
+Kolganova, 
+T.V., 
+and 
+Skriabin, 
+K.G. 
+(2003). 
+Identi.cation 
+of 
+a 
+new 
+steroid 
+transforming 
+strain 
+of 
+mycobacteria 
+as 
+Mycobacterium 
+neo-
+aurum. 
+Prikl. 
+Biokhim. 
+Mikrobiol. 
+39, 
+173每179. 
+
+Washer, L.L., Riddell, J.t., Rider, J., and Chenoweth, C.E. (2007). Mycobacterium neoaurum bloodstream infection: report of 4 cases and review of the literature. Clin. Infect. Dis. 45, e10每e13. https://doi.org/10.1086/518891. 
+Wei, 
+W., 
+Fan, 
+S., 
+Wang, 
+F., 
+and 
+Wei, 
+D. 
+(2010). 
+A 
+new 
+steroid-transforming 
+strain 
+of 
+Mycobacterium 
+neoaurum 
+and 
+cloning 
+of 
+3-ketosteroid 
+9alpha-hy-
+droxylase 
+in 
+NwIB-01. 
+Appl. 
+Biochem. 
+Biotechnol. 
+162, 
+1446每1456. 
+
+Wu, 
+F.C., 
+Tajar, 
+A., 
+Beynon, 
+J.M., 
+Pye, 
+S.R., 
+Silman, 
+A.J., 
+Finn, 
+J.D., 
+O＊Neill, 
+T.W., 
+Bartfai, 
+G., 
+Casanueva, 
+F.F., 
+Forti, 
+G., 
+et 
+al. 
+(2010). 
+Identi.cation 
+of 
+late-onset 
+hypogonadism 
+in 
+middle-aged 
+and 
+elderly 
+men. 
+N. 
+Engl. 
+J. 
+Med. 
+363, 
+123每135. 
+
+Yang, 
+Y.Y., 
+Pereyra, 
+L.P., 
+Young, 
+R.B., 
+Reardon, 
+K.F., 
+and 
+Borch, 
+T. 
+(2011). 
+Testosterone-mineralizing 
+culture 
+enriched 
+from 
+swine 
+manure: 
+characteriza-
+tion 
+of 
+degradation 
+pathways 
+and 
+microbial 
+community 
+composition. 
+Environ. 
+Sci. 
+Technol. 
+45, 
+6879每6886. 
+
+Yao, 
+K., 
+Xu, 
+L.Q., 
+Wang, 
+F.Q., 
+and 
+Wei, 
+D.Z. 
+(2014). 
+Characterization 
+and 
+en-
+gineering 
+of 
+3-ketosteroid-O1-dehydrogenase 
+and 
+3-ketosteroid-9a-hy-
+droxylase 
+in 
+Mycobacterium 
+neoaurum 
+ATCC 
+25795 
+to 
+produce 
+9a-hy-
+droxy-4-androstene-3,17-dione 
+through 
+the 
+catabolism 
+of 
+sterols. 
+Metab. 
+Eng. 
+24, 
+181每191. 
+
+Young, 
+R.B., 
+Latch, 
+D.E., 
+Mawhinney, 
+D.B., 
+Nguyen, 
+T.H., 
+Davis, 
+J.C., 
+and 
+Borch, 
+T. 
+(2013). 
+Direct 
+photodegradation 
+of 
+androstenedione 
+and 
+testos-
+terone 
+in 
+natural 
+sunlight: 
+inhibition 
+by 
+dissolved 
+organic 
+matter 
+and 
+reduction 
+of 
+endocrine 
+disrupting 
+potential. 
+Environ. 
+Sci. 
+Technol. 
+47, 
+8416每8424. 
+
+Yuan, 
+J., 
+Chen, 
+C., 
+Cui, 
+J., 
+Lu, 
+J., 
+Yan, 
+C., 
+Wei, 
+X., 
+Zhao, 
+X., 
+Li, 
+N., 
+Li, 
+S., 
+Xue, 
+G., 
+et 
+al. 
+(2019). 
+Fatty 
+liver 
+disease 
+caused 
+by 
+high-alcohol-producing 
+Klebsiella 
+pneumoniae. 
+Cell 
+Metab 
+30, 
+675每688.e677. 
+
+Zheng, 
+P., 
+Zeng, 
+B., 
+Zhou, 
+C., 
+Liu, 
+M., 
+Fang, 
+Z., 
+Xu, 
+X., 
+Zeng, 
+L., 
+Chen, 
+J., 
+Fan, 
+S., 
+Du, 
+X., 
+et 
+al. 
+(2016). 
+Gut 
+microbiome 
+remodeling 
+induces 
+depressive-like 
+behaviors 
+through 
+a 
+pathway 
+mediated 
+by 
+the 
+host＊s 
+metabolism. 
+Mol. 
+Psychiatry 
+21, 
+786每796. 
+
+Cell Host & Microbe 30, 1每11, March 9, 2022 11 
+
+
+
+ll 
+
+
+OPEN ACCESS 
+
+Article 
+STAR+METHODS KEY RESOURCES TABLE 
+REAGENT or RESOURCE  SOURCE  IDENTIFIER  
+Antibodies  
+Anti-His Tag Mouse Monoclonal Antibody  Abbkine  Cat#A02050  
+Bacterial and virus strains  
+M. neoaurum MN2019 E. coli BL21 (DE3) Biological samples Human fecal and plasma samples  This paper AngyuBio Renmin Hospital of Wuhan Univ N/A Cat#G6030 ersity N/A  
+
+Chemicals, peptides, and recombinant proteins  
+Neomycin  Solarbio  Cat#N8090  
+Metronidazole  Solarbio  Cat#M8060  
+Vancomycin  BioFroxx  Cat#1161GR001  
+Ampicillin  Aladdin  Cat#A102048  
+Erythromycin  Aladdin  Cat#E105345  
+Testosterone  Aladdin  Cat#1915399  
+Androstenedione  Aladdin  Cat#A101164  
+
+Critical commercial assays  
+QIAamp PowerFecal Pro DNA Kit  Qiagen  Cat#51804  
+RevertAid First Strand cDNA Synthesis Kit  Thermo Fisher Scienti.c  Cat#K1622  
+Fecal RNA Rapid Extraction Kit  BioTeke  Cat#RP8001  
+Deposited data  
+
+Genome for M. neoaurum MN2019 GenBank Accession: CP074376 
+Experimental models: Organisms/strains 
+SD rats Hunan STJ Laboratory N/A 
+Oligonucleotides 
+Speci.c primers and probe This paper N/A for M. neoaurum 
+M. neoaurum forward primer (50-CTGACCAATCACTACTACC-30) 
+M. neoaurum reverse primer (50-CCATGTACTGGTTCTTGG-30) 
+Recombinant DNA 
+Plasmid: pDL01 This paper N/A 
+e1 Cell Host & Microbe 30, 1每11.e1每e5, March 9, 2022 
+(Continued on next page) 
+
+
+
+ll 
+
+OPEN ACCESS
+
+Article 
+Continued 
+REAGENT or RESOURCE  SOURCE  IDENTIFIER  
+Software and algorithms  
+SPSS 20.0  IBM  https://www.ibm.com/analytics/ 
+spss-statistics-software 
+ 
+
+RESOURCE AVAILABILITY 
+Lead contact 
+Further information and requests for reagents and resources should be directed to and will be ful.lled by the lead contact, Tiangang Liu (liutg@whu.edu.cn). 
+Materials availability 
+No unique reagents were generated in the study. Strains, plasmids, or other materials in this study can be got by contact with lead contact with reasonable request. 
+Data and code availability 
+d The genome of M. neoaurum MN2019 is deposited at GenBank and is publicly available as of publication. Accession numbers 
+are listed in the key 
+resources 
+table. 
+d This paper does not report original code. 
+d Any additional information required to reanalyze the data reported in this paper is available from the lead contact upon request. 
+EXPERIMENTAL MODEL AND SUBJECT DETAILS 
+Rats 
+Animal studies were conducted in strict accordance with protocols approved by the Animal Experiment Center Renmin Hospital of Wuhan University (approval no. S0271902190A). Sprague-Dawley rats (male, 6 weeks of age, n = 6每12 per group) were purchased from Hunan SJA Laboratory Animal Corporation (Hunan, China) and reared in the speci.c pathogen-free (SPF) sector of the Animal Experiment Center of Renmin Hospital of Wuhan University and acclimatized for 1 week before being used for experiments. Rats were maintained under SPF conditions on a 12-h light/dark schedule in a humidity-and temperature-controlled (22每25 C) environ-ment with autoclaved standard chow and water. 
+Human subjects 
+All protocols were approved by the Renmin Hospital of Wuhan University Institutional Review Board (approval no. WDRY2021-K041). Informed consent was waived by the committee. Participants were recruited from Renmin Hospital of Wuhan University. For the depression group, male volunteers (aged 18每65 years) meeting the Diagnostic Criteria for Depression from the DSM-V published by the American Psychiatric Association in 2013 for major depressive disorders (such as MDD and dysthymic disorder) were eligible. Exclusion criteria included patients with active psychosis or dementia, those with both clear intent and suicidal ideation, those meeting criteria for substance dependence, and those with comorbidities that could affect testosterone level, including endocrine disorders and kidney diseases (Egede 
+et 
+al., 
+2015). Finally, 107 patients with depression were included in our study. Serum samples were obtained from 77 of the 107 patients with depression. 
+Age-matched non-depression controls (n = 102) were also included in the current study, recruited from volunteers who visited Re-nmin Hospital of Wuhan University for their annual physical examination and who did not meet the DSM-V criteria for MDD. As con-trols, all clinical indices were within normal ranges, including chest X-ray, urine and feces evaluations, routine examination of blood, physical examination, and preoperative serological tests (kidney and liver function tests). Exclusion criteria included endocrine dis-orders, kidney diseases, cancer, celiac disease, in.ammatory bowel disease, metabolic syndrome, diabetes, hypertension, and all types of viral infections, including human immunode.ciency virus and hepatitis virus. 
+METHOD DETAILS 
+Detection of serum and brain testosterone 
+Blood samples of rats were collected from the inferior vena cava after inhaling anesthesia. Blood samples of human were collected via elbow venous blood. For serum (100 mL) from humans or rats, samples were added into 1.5 mL centrifuge tubes spiked with the testosterone internal standard (2 mL). The whole brain tissue was mashed, and 0.25 g of the brain homogenate was collected in 
+1.5 mL centrifuge tubes spiked with the testosterone internal standard (2 mL). Next, methyl tert-butyl ether (500 mL) was added for extraction. Then the upper organic phase was transferred into a new tube and was evaporated using nitrogen (60 C, 5 min), and 
+Cell Host & Microbe 30, 1每11.e1每e5, March 9, 2022 e2 
+
+
+
+
+OPEN ACCESS 
+
+Article 
+redissolved using 50% methanol. The testosterone was analyzed using an Ekspert ultraLC 100-XL system (AB SCIEX, Framingham, MA, USA) coupled to an AB SCIEX 4500 QTRAP mass spectrometer with a 1.7 mm, 2.1 3 50 mm ACQUITY UPLC BEH Shield RP18 column (Waters, Milford, MA, USA). Methanol with 0.2% formic acid (A) and 0.2% formic acid aqueous solution (B) were used as the mobile phase at a .ow rate of 0.3 mL/min. Data were collected in positive-ion mode. 
+Fecal sample collection 
+Each participant provided a fresh fecal pellet sample between 06:00 and 09:00 AM during normal defecation. The samples were immediately stored in liquid nitrogen and used in the experiment or stored at -80 C immediately. 
+Testosterone degradation by fecal microbiota 
+Feces pellets (0.8每1.2 g) were collected from random six participants in depression group or non-depression group and suspended using 10 mL of normal saline in sterile tubes. After centrifugation at 2,000 3 g at 4 C for 1 min, bacteria-enriched supernatants were collected in sterile tubes and centrifuged at 15,000 3 g for 5 min. Then, the supernatant was discarded and the fecal microbiota of bacterial pellets was resuspended using 10 mL normal saline following addition of testosterone (2 g/L) in the sterile tubes. Then, 
+0.5 mL of the suspension was harvested every 24 h. 
+Gut microbiota collection 
+According to a published fecal microbiota transplant method (Yuan 
+et 
+al., 
+2019), fresh feces pellets (0.20每0.30 g) from participants were collected and suspended using 10 mL normal saline in sterile tubes. After centrifugation at 2,000 3 g at 4 C for 1 min, bacteria-enriched supernatants were collected in sterile tubes and centrifuged at 15,000 3 g for 5 min. Then, the supernatant was discarded and the fecal microbiota of bacterial pellets was resuspended using 10 mL normal saline. This microbial preparation was used for fecal microbiota transplant or stored at -80 C. According to the recommendations from transplantation protocols (Secombe 
+et 
+al., 
+2021), the details for fecal microbiota transplant are listed in Table 
+S1. 
+Gavage with bacteria in rats 
+Rats were treated with short-term antibiotic before gavage (Chevalier 
+et 
+al., 
+2020). Brie.y, rats were given a cocktail comprising 
+0.5 mg/mL vancomycin, 1 mg/mL neomycin, 1 mg/mL metronidazole, and 1 mg/mL ampicillin in their drinking water for 1 week to deplete intestinal microorganisms, followed by one-day autoclaved water (Miyauchi 
+et 
+al., 
+2020). All antibiotics were obtained from Solarbio (Beijing, China). Rats receiving the bacteria were orally gavaged with 1 mL of microbiota solution or approximately 1 mL overnight cultures of bacteria (approximately 1 3 108 cfu once daily for three successive days) 
+(Funabashi 
+et 
+al., 
+2020). 
+E. coli BL21 (DE3)/pDL01 and E. coli BL21 (DE3)/pET28a were induced with isopropyl b-D-1-thiogalactopyranoside (IPTG; 
+0.25 mM) before gavage. 
+Gavage with testosterone or AD in rats 
+For testosterone treatment, E. coli BL21 (DE3)/pDL01 recipients were treated with 0.5 mg testosterone daily for 28 days by gavage, beginning the day after E. coli BL21 (DE3)/pDL01 gavage. For AD treatment, ABX-treated rats (without any bacterial gavage) were supplemented with AD (0.5 mg/day for 28 days) by gavage. 
+Behavioral assays 
+Rats were subjected to splash tests, NSF tests, TSTs, and FSTs, in this order (Chevalier 
+et 
+al., 
+2020). Behavioral assays were con-ducted within one week, with at least 24 h between each behavioral assay. All analyses were conducted with the experimenter blinded to the experimental conditions. 
+Splash test 
+Sucrose solution (10%) was squirted on the dorsal coat of the rat in its home cage. The sucrose solution soils the rat fur because of its viscosity, and rats initiate grooming behavior. After splashing sucrose solution, the time spent grooming, the frequency of grooming, and latency to grooming were measured for 6 min as an index of motivational and self-care behavior. 
+NSF 
+After depriving food for 24 h, the rats were transferred into a novel white methacrylate box (100 cm 3 100 cm 3 40 cm) with the .oor covered in wooden bedding. A single food pellet was positioned on a piece of white .lter paper (10 cm in diameter), placed in the center of the container. The rat was positioned in one corner of the container, and the latent time to feed was recorded for 10 min. Feeding was de.ned as biting food, not touching or snif.ng. After the assay, the rats were placed immediately into their home cage, and the consumption of food during the subsequent 5-min period was recorded as a control of the feeding drive. 
+TST 
+By holding tails wrapped in an adhesive tape, rats were suspended approximately 40 cm above the .oor under dim light environment ( 40 lx). The total immobility time was recorded during a 5-min period. 
+e3 Cell Host & Microbe 30, 1每11.e1每e5, March 9, 2022 
+
+
+
+
+OPEN ACCESS
+
+Article 
+FST 
+Rats were transferred individually in glass cylinders (20 cm diameter) that were .lled to a depth of 40 cm with water (23每27 C) under dim light conditions ( 40 lx). The total immobility time was recorded during a 5-min period. 
+Isolation of testosterone-degrading strains 
+Fresh fecal samples (0.5 g) from the patient with depression, who provide feces for former fecal microbiota transplant (Table 
+S1), were added into 250 mL Erlenmeyer .asks containing 50 mL of a selective medium comprising basic medium (pH 7.0) and 3 mg/L testos-terone. The basic medium composed of 19 mM NH4Cl, 9 mM NaCl, 22 mM KH2PO4, 0.1 mM CaCl2$2H2O, 48 mM Na2HPO4 and 2 mM MgSO4$7H2O(Yang 
+et 
+al., 
+2011). Incubation was performed on a rotary shaker at 250 rpm at 37 C in the dark. Three days after in-cubation, 1 mL cell suspension was added into new 250 mL Erlenmeyer .asks containing 49 mL of the fresh selective medium. This process was repeated nine times over a 27-day period. The .nal culture suspension was inoculated onto nutrient-rich Columbia blood agar plates to obtain bacterial colonies. The strains were tested for their ability to degrade testosterone, and those that degraded testosterone were identi.ed by 16S rRNA sequencing and whole genome sequencing. 
+Testosterone degradation by M. neoaurum 
+Before testosterone degradation, testosterone (100 g/L) was dissolved in methanol. For testosterone fermentation (Sun 
+et 
+al., 
+2019), 
+M. neoaurum strains were incubated in 5 mL of the LB medium (10 g/L NaCl, 10 g/L tryptone and 5 g/L yeast extract, pH 7.0) and cultivated at 37 Cto anOD600 of 2.0每3.0. Then, 3 mL of this bacterial culture was added into 30 mL of a seed medium (2 g/L citric acid, 20 g/L glycerol, 1.65 g/L (NH4)2HPO4, 0.05 g/L ferric ammonium citrate, 0.5 g/L MgSO4$7H2O, 2.52 g/L KNO3, pH 7.5) and cultured at 37 CtoanOD600 of 3.0每4.0. Next, 3 mL cell suspension from the seed medium was added into 30 mL of the fermentation medium (3.5 g/L (NH4)2HPO4, 0.5 g/L K2HPO4, 0.5 g/L MgSO4$7H2O, 0.05 g/L ferric ammonium citrate, 10 g/L glucose, 2 g/L citric acid, pH 7.5) with a .nal testosterone concentration of 2 g/L. Then, 1 mL of the culture was harvested every 24 h and stored at -80 C until further analysis. 
+TLC for steroids 
+Stored samples (500 mL) were thawed in a 37 C water bath and were extracted with 500 mL ethyl acetate. After centrifugation, 2 mL supernatant were added to TLC plates (Qingdao Marine Chemical Factory, Qingdao, China). Ethyl acetate/petroleum ether (4:6, v/v) was used to observe the formation of products. Testosterone and its products were visualized using 20% sulfuric acid solution before baking (80 C, 30 min). 
+Quanti.cation of steroids using HPLC 
+Stored samples (500 mL) were thawed in a 37 C water bath and were extracted with 500 mL ethyl acetate. After centrifugation, su-pernatant was quanti.ed on a 3.9*150mm, 5 mm, 30 C Xterra RP-C18 column (Waters, Milford, MA, USA) using methanol/water (80:20, v/v) as the mobile phase on UtiMate 3000 (Thermo Fisher Scienti.c, Waltham, MA, USA). The .ow rate was 0.8 mL/min. Testosterone and its products were detected with ultraviolet light at 254 nm. 
+E-test 
+The E-test was conducted using a kit (Autobio, Zhengzhou, China), according to the manufacturer＊s instructions. For anti-M. neo-aurum susceptibility testing, Columbia blood agar plates were inoculated with a sterile cotton swab dipped into the M. neoaurum inoculum suspension. After 37 C incubation for 48 h, MIC was the lowest drug concentration on the scale of the elliptical edge con-tact test paper. 
+Whole genome sequencing of M. neoaurum 
+The genomic DNA of M. neoaurum was extracted using Bacterial Genomic DNA Extraction Kit (Tiangen, Beijing, China), following the manufacturer＊s instructions. The whole genome sequencing was performed and assembled by GrandOmics (Wuhan, China) using T7 (MGI, shenzhen, China) and PromethION (Oxford nanopore, oxford, UK) platforms. 
+Heterologous expression of 3b-HSD in E. coli 
+Plasmid pET28a was used as an overexpression vector to express 3b-HSD from M. neoaurum in E. coli. Genomic DNA of 
+M. neoaurum was used as a template to amplify a fragment of 3b-HSD via PCR (forward primer: 50-AATTCGGATCCTCAGCTCT TCGGTGCCGCG-30 , reverse primer: 50-CAGCCATATGGGTGACCCAACTTTGCGTAC-30), and the ampli.ed fragment was digested by BamHI and NdeI and cloned into the pET28a plasmid to construct the plasmid pDL01. The sequence of pDL01 was con.rmed via DNA sequencing. The correct plasmid pDL01 was introduced into E. coli BL21 (DE3) to construct E. coli BL21 (DE3)/pDL01, and the vector pET28a was introduced into E. coli BL21 (DE3) to construct E. coli BL21 (DE3)/pET28a as a control. E. coli BL21 (DE3)/pDL01 or E. coli BL21 (DE3)/pET28a were incubated in 30 mL of the LB medium at 37 C on a rotary shaker at 220 rpm. When the OD600 reached 0.8每1.2, 0.5 mM IPTG was added into the medium to induce 3b-HSD expression. 
+Cell Host & Microbe 30, 1每11.e1每e5, March 9, 2022 e4 
+
+
+
+
+OPEN ACCESS 
+
+Article 
+Analysis of the kinetic parameters of 3b-HSD 
+Based on a previous method (Liu 
+et 
+al., 
+2020), recombinant 3b-HSD protein was puri.ed from intracellular proteins through sonication and Ni-af.nity chromatography. Brie.y, after overexpression cells were harvested by centrifugation at 5000 3 g for20minat4 Cand resuspended in buffer A (20 mmol L 1 Tris, pH 7.6, 500 mmol L 1 NaCl, 10% glycerol). The cell suspension was lysed by sonication and centrifuged at 25000 3 g for 1 h at 4 C. The Ni-NTA column (GE Healthcare, Marlborough, MA, USA) was charged and washed with two column volumes (CV) of buffer A, and the .ltered supernatant was applied to the column. The resin was washed with two CV each of buffers containing 0, 25, 50, 100, 200, and 500 mmol L 1 imidazole. The puri.ed protein was concentrated using Amicon Ultra-15 centrifugal .lter devices (Millipore, Billerica, MA, USA) and the buffer was replaced with storage buffer (100 mmol L 1 phos-phate buffer, 10% glycerol, pH 7.6) via the PD-10 column (GE Healthcare). Then, the puri.ed protein was detected by sodium dodecyl sulfate-polyacrylamide gel electrophoresis (SDS-PAGE). 
+Kinetic parameters for 3b-HSD from M. neoaurum were determined in assays containing 200 mM NAD+, 25 mM Tris-HCl (pH 7.6), and 5 mM3b-HSD. The reaction mixture was incubated for 20 min at 37 C. Substrate testosterone concentrations varied from 1 to 50 mM, and a 20 mL sample was pipetted and mixed with an equal volume of acetonitrile to stop the reaction. Product formation was determined using HPLC, as described above. Reactions were performed in triplicate, and data were .tted to the Michaelis-Menten equation using the least-squares method. 
+Western blot 
+Stored feces samples (0.20每0.30 g) were thawed in a 37 C water bath then suspended in 10 mL normal saline in sterile tubes. After centrifugation at 2,000 3 g at 4 C for 1 min, bacteria-enriched supernatants were collected in sterile tubes and centrifuged at 15,000 3 g for 5 min. After discarding the supernatant, fecal microbiota was treated with 250 mL RIPA lysis buffer (Servicebio, Wuhan, China) followed by sonication and centrifugation at 12,000 3 g for 5 min. Then, 30 mg of protein was loaded in 8% separating gel and 5% concentrated gel for electrophoresis and blotted onto a PVDF membrane (Millipore, Shanghai, China). Membranes were blocked in 5% skimmed milk and incubated with primary antibodies for His-Tag (Abbkine Scienti.c, Wuhan, China). Finally, membranes were developed using ECL kit (Bio-Rad, Shanghai, China) and captured using QuickChemi Imager (QuickChemi 5100, Monna, Jiangsu, China). 
+Fecal sample DNA/RNA extraction 
+DNA was extracted from 0.25 g feces samples using a QIAamp PowerFecal DNA Kit (Qiagen, Valencia, CA, USA), following the man-ufacturer＊s instructions. RNA was extracted from 0.25 g feces samples using fecal RNA extraction kit (Bioteke, Beijing, China) following the manufacturer＊s instructions. The extracted RNA was transcripted into DNA using RevertAid First Strand cDNA Synthe-sis Kit (Thermo Fisher, Shanghai, China) for qPCR. 
+qPCR assay for prevalence of 3b-HSD and M. neoaurum 
+The 3b-HSD-related gene sequences in the GenBank database were searched using protein-protein BLAST (http://www.ncbi.nlm. 
+nih.gov/blast/) with M. neoaurum 3b-HSD as a query. Multiple alignment of the 3b-HSD-related gene sequences was conducted us-ing BioEdit (version 7.2.5). Conserved regions were used to deduce a degenerate primer pair (forward primer: 50-CGGCCSAGYGGN ATCTGGGG-30 , reverse primer: 50-CGTCRTTGAYGAARTASGCCTG-30 , and probe: 50VIC-TSGAYAAYTCCTACGT-30MGB). 
+For M. neoaurum-speci.c primers, we compared the complete genome of M. neoaurum in the NCBI database and our sequencing data of M. neoaurum MN2019 with all Mycobacterium and Mycolicibacterium sequences in the NCBI database and selected conserved and speci.c genes for M. neoaurum. The obtained sequences were compared with the existing species marker genes in metaphlan2 (Truong 
+et 
+al., 
+2015), and we ensured the markers were not selected as marker genes for other species. In total, 129 marker genes were selected for analysis. Based on NCBI BLAST, the gene with the best speci.city was selected for designing speci.c primers. Finally, M. neoaurum fragments were ampli.ed using speci.c primers and probes (forward primer: 50-CTGACCAAT CACTACTACC-30 , reverse primer: 50-CCATGTACTGGTTCTTGG-30 , and probe 50ROX-AGTTGATCGACAGCACCTCCG-30MGB). 
+The gene 3b-HSD and M. neoaurum fragments were ampli.ed using qPCR with speci.c primers and probes on a ViiA 7 Real-Time PCR System (Applied Biosystems, Foster City, CA, USA). The reaction system included 10 mL Premix Ex Taq (Takara, Shiga, Japan; cat. no. RR390Q), 1 mL forward and reverse primers (10 mM), 1 mL probe (10 mM), 2 mL fecal DNA, and 5 mLH2O. The PCR was performed at 95 C for 30 s; 40 cycles: 95 C for 20 s, 57 C for 20 s, and 72 C for 20 s. 
+QUANTIFICATION AND STATISTICAL ANALYSIS 
+Data were presented in the .gures as mean ㊣ SEM. Differences among more than two groups were assessed using one-way ANOVA with Tukey＊s multiple comparisons tests. P values < 0.05 were considered signi.cant. Signi.cant differences emerging from the above tests are stated in the .gures by *P < 0.05, **P < 0.01, ***P < 0.001. Notable non-signi.cant differences are stated in the .gures by NS. Correlation between serum testosterone and the Ct value of 3b-HSD RNA or DNA were assessed using correlation analysis. Statistical analyses were performed in SPSS. 
+e5 Cell Host & Microbe 30, 1每11.e1每e5, March 9, 2022 
+Cell Host & Microbe, Volume 30 
+Supplemental information 
+3b-Hydroxysteroid dehydrogenase expressed by gut microbes degrades testosterone and is linked to depression in males 
+Di Li, Ran Liu, Ming Wang, Rui Peng, Shuai Fu, Aisi Fu, Juan Le, Qian Yao, Tengfei Yuan, Haoming Chi, Xin Mu, Ting Sun, Hang Liu, Pan Yan, Shaoting Wang, Shu Cheng, Zixin Deng, Zhongchun Liu, Gaohua Wang, Yan Li, and Tiangang Liu 
+Table S1. details offecal transplant, related to STAR methods 
+
+Collection  
+Donor phenotype/characteristics  Depression microbiota: A 32-year old patient with depression and testosterone levels below 350 ng/dL (319.88 ng/dL) Non-depression microbiota: A 32-year old non-depressed participant with testosterone levels above 350 ng/dL (644.85 ng/dL)  
+Sample collection  Fresh fecal pellet samples were collected between 06:00每09:00 AM during normal defecation  
+Measures to minimize contamination  The experimental consumables are sterile  
+Immediate storage conditions  Immediate snap freezing in liquid nitrogen  
+Processing  
+Vehicle preparation  Normal saline  
+Concentration  20每30 mg/ mL  
+Homogenization  Vortex for 10 min at 37 ～C  
+Filtration  After 2,000 ℅ g centrifugation at 4 ～C for 1 min, bacteria-enriched supernatants were collected in sterile tubes and centrifuged at 15,000 ℅ g for 5 min  
+Anaerobic conditions  Anaerobic conditions were not applied  
+Storage  
+State of final product  Microbial preparation  
+Time in storage  One week  
+Storage conditions  1 mL per aliquot stored at -80 ～C  
+Freeze/thaw cycles  One freeze-thaw cycle  
+Recipient preparation  
+Recipient phenotype/characteristics  Male Sprague-Dawley (SD) rats, aged 7 weeks, received fecal microbial transportation (FMT) from the same donor per group (n = 6) and co-housing reared in the specific pathogen-free (SPF) sector with autoclaved standard chow and water  
+Host preparation techniques  All rats received a cocktail comprising 0.5 mg/mL vancomycin, 1 mg/mL neomycin, 1 mg/mL metronidazole, and 1 mg/mL ampicillin in their drinking water for 1 week to deplete intestinal microorganisms, followed by one-day autoclaved water  
+Administration  
+Route and method of administration  Oral administration by gavage  
+Volume and concentration  20每30 mg/ mL for 1 mL  
+Time and frequency  FMT was administered by oral gavage once per day for three successive days. Four weeks after the first  
+
+day of gavage, the behavior of rats was observed within a week followed by testosterone levels measurement  
+Control treatment  Non-depression microbiota control rats received microbiota from a non-depression participant by oral gavage (20每30 mg/ mLfor 1 mL) once dailyfor three consecutive days. Four weeks after the first gavage, the behavior of rats was recorded within a week, followed bytestosterone levels measurement  
+
+
+Figure S1. Comparison of serum testosterone levels, related to Figure 1. a, Comparison of serum testosterone levels between non-depression group (n = 102) and depression group (n = 77). b, Comparison of serum testosterone levels between untreated rats (n = 6) and antibiotic cocktail (ABX)-treated rats (n = 6). Data are presented as means ㊣ standard error of the mean (SEM), and independent sample t-tests were used to calculate statistical significance (*P < 0.05, **P < 0.01, ***P < 0.001, two-tailed). 
+
+6) with testosterone (2 g/L) tested in vitro byusing thin-layer chromatography (TLC). 
+
+Figure S3. Gavage with microbiota or microbe causes depressive-like behaviors in rats, related to Figure 1, 3 and 5.Control rats and gavaged rats underwent different behavioral tests. a, Time spent grooming in control rats (n = 6), non-depression microbiota recipient rats (n = 6), and depression microbiota recipientrats (n =6)inthe splash test. b,Occurrenceofself-grooming events in control rats (n = 6), non-depression microbiota recipient rats (n = 6), and depression microbiota recipient rats (n = 6) in the splash test. c, Feeding drive of control rats (n = 6), non-depression microbiota recipient rats (n = 6) and depression microbiota recipient rats (n = 6) in the novelty suppressed feeding test.d,Time spentgrooming in control rats (n =12), Mycobacterium neoaurum recipient rats (n = 12), and M. neoaurum recipient rats treated with erythromycin (n = 12) in the splash test. e, Occurrence of self-grooming events in control rats (n = 12), M. neoaurum recipient rats (n = 12), and M. neoaurum recipient rats treated with erythromycin (n = 12) in the splash test. 
+f, Feeding drive of Control rats (n = 12), M. neoaurum recipient rats (n = 12), and M. neoaurum recipient rats treated with erythromycin (n = 12) in the novelty suppressed feeding test. g, Time spentgrooming in controlrats (n =12), Escherichia coli BL21(DE3)/pDL01 recipients (n =12), E. coli BL21(DE3)/pET28a recipients (n = 12), E. coli BL21(DE3)/pDL01 recipients treated with testosterone (n =6), and androstenedione (AD)treated rats (n = 6) in the splash test. h, Occurrence of self-grooming events in control rats (n = 12), E. coli BL21(DE3)/pDL01 recipients (n = 12), E. coli BL21(DE3)/pET28a recipients (n = 12), E. coli BL21(DE3)/pDL01 recipients treated with testosterone (n =6),and AD treated rats (n =6) in the splash test. i, Feeding drive of control rats (n = 12), E. coli BL21(DE3)/pDL01 recipients (n = 12), E. coli BL21(DE3)/pET28a recipients (n = 12), E. coli BL21(DE3)/pDL01 recipients treated with testosterone (n = 6), and AD treated rats (n = 6)in the noveltysuppressed feeding test. E. coli BL21(DE3)/pDL01: Plasmid pDL01 containing the 3汕-HSD gene was introduced into E. coli BL21(DE3). E. coli BL21(DE3)/ pET28a: Vector plasmid pET28a was introduced into E. coli BL21(DE3). Data are represented as mean ㊣ standard errorofthe mean (SEM).Statisticalsignificancewascalculated using one-wayanalysis ofvariance (ANOVA) with Tukey＊s multiple comparisons test (*P < 0.05, **P < 0.01, ***P < 0.001, ***P < 0.001). 
+
+Figure S4. Drug sensitivity test andvalidation of the capacity of testosterone degradation in Mycobacterium neoaurum, related to Figure 2. a, Drug sensitivity test (E-test methods) on M. neoaurum using ceftriaxone, cefoperazone, aztreonam, amikacin, erythromycin, and penicillin. M. neoaurum wassensitive to erythromycinandamikacin,the minimuminhibitoryconcentration (MIC) of erythromycin to M. neoaurum was 0.25 mg/L and MIC of amikacin to M. neoaurum was 0.75 mg/L; b, Thin-layer chromatography (TLC) analysis showed that M. neoaurum degraded testosterone in a time-dependent manner. Control: Medium with testosterone (2 g/L) as the carbon source, incubated at 37 ⊥. M. neoaurum: M. neoaurum was added into the medium with testosterone (2 g/L)asthe carbon source and cultured at 37 ⊥. After incubation for 2 h, 24 h, 48 h, 72 h, and 96 h, 1 mL of the culture medium was withdrawn to be used in TLC analysis. 
+
+
+Figure S6. Validation of the capacity of testosterone degradation in Escherichia coli BL21(DE3)/pDL01,related to Figure 4 and 5.a, Plasmid pDL01: Plasmid pDL01 containing the 3汕-HSD gene. b, Plasmid pET28a. c, PCR verified MN2019_09885 gene was found in E. coli BL21(DE3)/pDL01 but not in E. coli BL21 (DE3)/pET28a. d, Thin-layer chromatography (TLC) showing testosterone conversion to androstenedione (AD) by E. coli BL21(DE3)/pDL01. e, TLC showingnometabolismoftestosterone byE. coli BL21(DE3)/pET28a.f,Purified3汕-HSDdetected by sodium dodecyl sulfate-polyacrylamide gel electrophoresis (SDS-PAGE). g, E. coli BL21 (DE3)/pET28a recipients (n = 6); h, E. coli BL21 (DE3)/pDL01 recipients (n = 6); i, E. coli BL21(DE3)/pDL01 recipients treated with testosterone (n = 6). 
+Data S1. Marker genes of Mycobacterium neoaurum (GOEGPOJE_01788 Fe(3+)-binding periplasmic protein), related to Figure 3. 
+ATGTCGGTGAAGAGATTTCGTTTGGCCGCCAAAGTCACCGCACTGGCCGGAGCCGCCG CGCTCGCCGTGGCGCTGACCGCCTGTGGCTCGGACTCCGGGCAGTCCGACGGTGCGC AGGCCGGCGCGAGCGATCAGCTGGTGGTGTACTCGGGTCGCAGTGAGGATCTGGTCG GCCCGCTGCTGGAACGCTTCACCGAGGCCACCGGTATCGGCGTCGAGGTGCGCTACGC CGGATCCGGAGAGCTTGCCGCACAGCTGATCACCGAGGGCGACGCGTCACCGGCCGA TGTGTTCCTCTCCCAGGATGCCGGTGCGTTGGGGGCGGTGTCGGCGGCCGGACTGTTC GCGCCCATCGACGCCGAGACGCTGGCCGCGGTGCCCGCGGCGTACTCGGCAGCCGAC GGGACGTGGGTCGGGGTGTCGGGCCGGGCCCGGGTGCTCACCTACAACCCGGAGCTG GCCCCCACCGTGCCCGATACGATCGACGGCCTGCTCGACCCGCAGTGGCGAGGCAAG ATCGGCTACGCGCCGAGCAACGCATCCTGGCAGTCGTTCGTCACCGGACTGCGGGTCC TGCGTGGTGAGCAGGGTGCCAAGGACTGGCTGGAGGCCTTTGCGGCACAGGAGCCCC GCGCGTTCGAGGGCAACGGGCCGATGCGTGACGCGATCAACTCCGGCGAGCTGCCGA TGGGCCTGACCAATCACTACTACCTCTACGAGTTGATCGACAGCACCTCCGCCGATGAC GTCGTCGCCAAGAACCAGTACATGGCTGCCGGCGATCCGGGCGGTTTGGTGAACGTGG CCGGGGTCGGTGTGCTGAAGTCCGCGCCGCACACCGAGCAGGCCAACGAATTCGCCG CCTACCTGGTCGGCACCGCCGCGCAGGAGTACTTCGCGACCGAGACCGCCGAATACCC GTTGGTCGAGGGTGTCACGCCCAGCGCGGCGCTGCCCCCGCTGGCCCAGTTGCAGCC TCCCGCTGTCGATCTCTCGCAACTCGACGATGTCGAGACGACGCAGGAGCTGCTGGTC GAGACCGGGCTGCTCACCAACTGA 
+
+Data S2. Nucleotide sequence for 3汕-HSD, related to Figure 4 and 5. 
+TCAGCTCTTCGGTGCCGCGGCCACAGCAGGCTGGGCGCCCTGAGCCACCATCGTGTCG AACAGATCGGTGTAGTAAGGCAGGCATTCGGCCATCGCCTGTTCGGTGGTGAACAACG GCTCGTACCCGAGATCGCGCCGTGCTTTTGCGATCGAGAAGTAGTTGTTCAGGTAAAG CCGTTCCACGGCAAGGGGTTCCACCAGTGGCTCGCGAATGCCGTACTTGAAGTGCAAC CACTGCCAGCCCATCATCGCCTTGTGTACCAGTCGTCCGGAGACGCGGATGTTGGGGA GCTTGCGACCGCACGCGACCACGACCGGTCGGGCGAACTCGAACATGTTCAGCGGTT CGCCGTCGTTGATGAAATACGCCTGCCCAGGTGCGGTGCCGCCCGGGACCAGATGTTC GGCAGCCAGGATGAAGCCGTGAATGAGGTTGTGTACGTAGGAGTTGTCGAGCTTGATG TTCTTGCTGCCGACGAGCACCTTCACGTGACCGGCCAGCACGTTCTCGAACACTTTGC GGAACATGGTCTGATCGCCGCGACCCCAGATACCGCTGGGCCGGATCGAGCAGGTCAA CATGCCCTGCTCACCGTTCTGGCCCAGCACGAACTTCTCGGCGACCACCTTGGTCTCG GTGTACAGATCGTTGAATCGCGTTGTGTAGGGCAGGGTTTCGTCACCGTTGACGATGTC CTGACCACCCATCACGACGCTGTTGGAGGCGGTGTAGACGAATCGTTGGACGCCGGCC TGCTGACCGGCGTGCACCAGGTTCTTGGTGCCCTCGACGTTCACCGAGAAGCTGCGCT GCCGGTACTCCTCGGTGACGGTGGCCCCGCCCATGAGGTCGATGATGGCCGCAGTGTG GAAGATCGTGTCGATGCCCGCGACGGCGGTCGCGACGTCCTCGCCGTTGGTGATATCT CCCACCACGGTCGTCAGCTTGGGATGCGCAGGCAGTGGCGACGGCACCCGATCGAAG GACCGGACCTCGTGCCCCCGCTCGAGCAGCGTCGTCACCAGGTTGGCGCCGACGAAG CCGGAGCCGCCCGTCACCAGCACTCGGCCCAGGTCAGTACGCAAAGTTGGGTCACCC AT 
+
+
+
+

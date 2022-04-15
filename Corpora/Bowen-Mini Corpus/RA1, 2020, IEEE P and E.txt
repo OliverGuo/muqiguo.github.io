@@ -1,0 +1,591 @@
+A Benchmark Distribution System for Investigation of Residential Microgrids With Multiple Local Generation and Storage Devices
+
+ABSTRACT A benchmark distribution system is developed for investigating control and energy management of distributed generation (DG) at a residential level in the form of three single-phase microgrids. The
+benchmark is derived from a typical distribution network architecture with common parameters found in
+North-America systems including wiring specifications, line impedances and connection details for rooftop
+PV systems. This benchmark system can accommodate microgrids operating in both grid-connected and
+islanded modes. Within this benchmark, multiple single-phase DG sources located in different phases can be
+coordinated to form a dynamically balanced three phase system under different load and generation profiles
+in different phases. The coordination of DG sources in a particular phase is achieved through an intra-phase
+power management device, while mitigating loads and generation imbalance among all phases are done by an
+inter-phase power management scheme. It is expected that this benchmark system will facilitate investigation
+of impacts posed by proliferation of single-phase distributed generation devices and local storage systems in
+private residences. Three case studies have been carried out to demonstrate the versatility and effectiveness
+of this benchmark system.
+
+
+I. INTRODUCTION
+AS PROLIFERATION of roof-top PV systems and
+household energy storage units at residential setting
+continues, the landscape of distribution systems is changing rapidly [1]. A modern distribution system in a residential neighborhood has to be able to accommodate multiple
+embedded generation and energy storage units [2], [3] in both
+single- or three-phase configurations. In fact, these local generation and storage capacities allow a group of such devices to
+be connected together to form a single- or three-phase microgrid to supply local loads. Such systems can operate in either
+a grid-connected or an islanded modes [4], [5]. This rapidly
+evolving trend has forced local utility companies to carry
+out extensive planning, load-forecasting, for both steady state
+and dynamic capacity studies, and reliability assessment of
+their distribution system infrastructure [6]. Needless to say,
+to carry out such studies, it is imperative to have a more
+detailed realistic model to capture ever-changing landscape
+in distribution systems.
+Even though the subject of distribution systems is wellstudied, however, most are focusing on steady state analysis and network reconfiguration in a multi-bus environment
+[7]–[9]. Since distributed generation is dynamic in nature,
+often affected by environmental conditions, power management and control studies have to consider transient behaviors
+of the system at a low voltage (LV) residential settings. Often,
+a family-owned roof-top PV systems and battery-based storage units are connected to form a residential microgrid
+connecting to a primary feeder on a single phase. In this
+respect, it is not only important, but also necessary to have
+a generic distribution network configuration, which can cope
+with various studies for residential microgrids.
+Even though many microgrids have been developed to
+work at a distribution level in the literature, few can be
+directly used for residential applications. Literature on such
+subject is very scarce. A distribution network is introduced in [10] to study an adaptive critic-based approach
+for grid-connected microgrids. It consists of a single point
+of common coupling (PCC) with multiple three-phase feeders from a local substation. The microgrid contains several
+DG units and three-phase loads aggregated as the secondary
+feeder loads. With the provision of local generation at a
+customer end, the need to accommodate details of local distribution transformers and customer loads becomes an integral
+part of the system model requirements. Even though the distribution network used in that study is capable of coordinating
+DG units in a three-phase microgrid environment, it does not
+have any capability to coordinate multiple single-phase units
+in the form of residential microgrids.
+In other studies, microgrids are connected directly to
+the main grid without due consideration of transformer
+interface at substations, nor reactance associated with
+feeders [11]–[13]. For example, transitions of a three-phase
+microgrid from an islanded to a grid-connected modes have
+been investigated in [11] with focus on synchronization
+procedures. The associated distribution system has been simplified with a direct connection to the grid at the PCC.
+Furthermore, only aggregated constant resistive loads are
+considered.
+The microgrid considered in [12] consists of three power
+electronics-interfaced DG units connected to an IEEE 5-bus
+system. The IEEE x-bus standards (where x<13) are typically
+used, where key features of a LV distribution networks are
+omitted for simplicity in analysis. As a result, this model does
+not contain sufficient detail to meet the needs in residential
+microgrid studies, where one of the key points is coordination of multiple DG units using different power management
+strategies at a customer level.
+The microgrid explored in [13] is composed of a multi-bus
+system with renewable energy sources connected to individual buses. The system architecture allows for aggregated
+loads at the feeders and interconnection among the studied
+microgrid, the utility network, and at individual buses serving
+local loads without due consideration of transformers or interfacing devices. Furthermore, the renewable energy sources
+are assumed to operate as centralized units on a bus, rather
+than being distributed as in realistic residential microgrids.
+Hence, this architecture does not represent a realistic distribution system in residential microgrids with generation sources
+and storage devices located at different phases.
+Residential microgrids have been investigated
+in [14]–[16]. A laboratory-scaled single-phase radial microgrid is considered in [14] with generators and loads connected
+to local nodes. The architecture is more suited for three-phase
+microgrids with small micro-turbines as DG sources that
+serve a residential community. No coordination among DG
+sources has been considered. Furthermore, some of the losses
+in key system components, such as distribution transformers,
+have not been taken into account. This network architecture
+would not provide an effective framework for residential
+microgrid related studies.
+A hybrid PV/battery system for a single household is
+examined in [15]. A PV/battery system and local loads are
+connected to a household distribution panel only. However,
+the distribution system topology, primary feeder and transformers have not been considered, nor on potential coordination with DG units nearby, such as devices from next door
+neighbors on the same local distribution network.
+An energy management strategy has been considered for
+a grid-connected residential microgrid in [16]. The system
+consists of multiple DG sources connected to a three-phase
+network at the PCC. The local and central energy management systems allow for coordination of local generation
+and storage in residential units to achieve a state-of-charge
+(SOC) equalization. This would avoid prolonged load shedding for some customers under an islanded condition in case
+of insufficient supply. For this coordination strategy to work,
+the customers need to be on the same phase as the primary
+feeder. In a residential microgrid, different customers could
+be fed from different phases on a same primary feeder. Consequently, such system architecture and associated control
+strategies are not suitable for realistic situations in a practical
+distribution system.
+An islanded hybrid single- and three-phase microgrid has
+been considered in [17]. This single-phase microgrid has DG
+units with local loads on two of the phases while the third
+phase is dedicated to loads only. Only single-phase loads have
+been considered. Despite of this unique feature, this architecture cannot be adopted where single-phase sources and
+loads are located in all three phases. Furthermore, the control
+objectives are based on unidirectional power flow between
+phases, they are not suited for power sharing studies in residential microgrids among different phases, where the power
+flow among phases can be bi-directional. The actual direction
+and the amount of power transfer depend on the availability
+of surplus power and power mismatch among phases.
+To investigate control and power management issues
+for single- and three-phase microgrids with individual DG
+sources, storage devices, and loads in different phases, it is
+imperative to develop a benchmark model with versatile, yet
+flexible, architectures. Since structure and parameters of distribution systems are country and region specific, the current
+work will focus on those commonly found in North America.
+The developed benchmark model is flexible enough to simulate a section of a distribution system by considering details
+of feeder reactance, different transformer configurations and
+wiring conventions of residential loads including roof-top
+PV systems and battery storage devices in the laterals of a
+primary feeder. This feeder can also supply power to common
+three-phase loads; say, a school, or a local community center.
+As compared to those in the literature, the current benchmark
+model is more realistic to a practical distribution system environment. In an islanded operating mode, the benchmark has
+the capability of exchanging power among phases through a
+power management unit based on a back-to-back converter
+configuration.
+The paper is organized as follows; an overview of the
+existing distribution network in North America is explained
+in Section II. Section III identifies potential limitations of
+existing distribution network models in light of proliferation
+of residential size DG and battery storage devices. To address
+these limitations, in Section IV, a benchmark distribution system architecture is developed. Using this benchmark, detailed
+studies of a residential microgrid have been carried out in
+Section V. Section VI presents the simulation results of three
+case studies performed in PSCAD/EMTDC followed by the
+conclusion.
+II. DISTRIBUTION NETWORKS IN NORTH AMERICA
+A simple radial distribution system from the local substation
+to customers with residential loads is illustrated in Fig.1(a)
+while the same network with DG units is shown in Fig.1(b).
+In Fig.1(b), the PV and storage units are assumed to be
+located at customers’ houses. These units can also be either
+central to the phase, primary feeder or to the distribution
+network. The back-to-back converters interconnect the three
+phases for potential power transfer. The key features of a
+distribution network are discussed in this section. For the sake
+of simplicity, residential loads connected to bus#14 only are
+shown here.
+
+A. LOCAL SUBSTATION TO LOCAL DISTRIBUTION
+TRANSFORMER
+Even though the topology from bulk power sources to a
+distribution network can vary from a simple radial system to more complex network configurations, the primary
+feeders still serve a locality or a geographical area near the
+local substation. As shown in Fig.1(a) the primary feeder
+can branch out into several circuits or laterals. These laterals can be in a single-phase form and sub-laterals may be
+tapped out subsequently, if necessary. These laterals can be
+located in residential or rural areas, and normally consist of
+a single-phase conductor and a neutral. Larger loads, such
+as those of schools, community centers, local industrial sites
+may be served by either dedicated underground or overhead
+primary feeders. They are mainly in three-phase.
+
+B. LOCAL DISTRIBUTION TRANSFORMER TO
+CUSTOMERS
+Each phase in a primary feeder serves a group of residential
+units. A split single-phase pole transformer is often used to
+step down the voltage even further to meet the voltage level
+for residential, commercial and industrial users as shown
+in Fig.2. Such split phase transformers are available in both
+120 V and 240 V with a common neutral to customers. The
+local transformer steps down the feeder voltage from 13.8 kV
+to 120 V/240 V [18].
+
+C. AT CUSTOMER’S END
+The voltages of the power source at a customer site can
+be either 120 V or 240 V from outlets routed from a
+local split phase transformer. These dual voltage outputs
+are obtained conveniently between a phase and the ground
+(120V), or between two phases (240 V). A single line diagram
+showing such layouts is highlighted in Fig.2.
+
+D. PV CONNECTION AT RESIDENTIAL UNITS
+At residential sites, customers can set-up their own PV units
+to off-set their household consumption or export to the grid.
+A single line diagram of a typical PV connection at a res-
+idential site is shown in Fig.2. After the converter stage,
+the PV inverter output can be connected to the primary panel
+board through an AC disconnect switch. As depicted in Fig.2,
+the primary panel board is connected to a bidirectional utility
+meter, which measures the net energy usage for accounting
+purposes.
+
+III. LIMITATIONS IN EXISTING DISTRIBUTION NETWORK
+MODELS FOR RESIDENTIAL MICROGRID STUDIES
+The existing models of the distribution network are not meant
+for dealing with newly introduced DGs for microgrid studies.
+Installation of high number of DG units, as shown in Fig.1(b),
+requires enhancements to existing distribution network models. In essence, the following limitations have been identified
+for the existing distribution network models:
+1) Most of the microgrid studies in the literature (as
+discussed in Section I) tend to focus on three-phase
+systems. With proliferation of singe-phase PV systems,
+battery storage units, and large short-term loads (e.g.
+electric cars) at residential levels, there is a need for a
+benchmark distribution network model, which can be
+used to investigate the effects of these non-traditional
+devices on the distribution networks. As reported
+in [19], with high PV proliferation, the peak PV generation can become twice the capacity of the local
+transformer. As a result, this can have a negative impact
+in the overall balance of the grid system;
+2) With installation of phase-wise generation and storage units, single-phase microgrids can be formed on
+individual phases. The existing distribution network
+models do not support such single-phase configuration scenarios for coordination control and energy
+FIGURE 3. The developed intra-phase control scheme [20], [21].
+management within each phase and between two different phases. This is mainly because of the imbalance
+that is created, due to the difference in generation and
+load demand. Previous works in unbalanced conditions
+at the microgrid level have been focused on harmonic
+current injection at the DC link to compensate the
+non-linear loads [22]–[28]. These studies are limited to
+centralized PV generation and storage in three-phase;
+3) To the best of our knowledge, the problem addressed
+herein poses a unique challenge to the current distribution systems, whereby there exist no distribution
+system models in the literature that can accommodate realistic situations of phase-wise generation and
+storage while simultaneously coordinating the multiple
+singe-phase DG units installed in different phase(s) and
+then connected on to a three-phase primary feeder;
+4) The network model with its coordination control strategy should ensure that the voltage and frequency in
+each phase are maintained by balancing generation and
+consumptions under different conditions in that particular phase, while trying as much as possible towards
+balancing the three phases. This feature is not supported in the existing distribution system models;
+5) Community based power sharing using controllable power electronic devices is a novel idea for
+single-phase microgrids, as studied in [20], [21]. Currently, there is no standard distribution system model
+that can provide a unified framework to investigate
+power and load sharing among different microgrids in
+separate phases;
+6) At present, the system utilized by distribution utilities
+can give the operators real time visualization of current state of the network, fault zones or regions under
+maintenance etc. The proposed system is a step towards
+deployment of these residential microgrids whereby,
+the system operators can simulate their jurisdiction’s
+network off-line. This will later help them to later
+deploy such microgrids in the future; and
+7) By making use of the proposed benchmark distribution network with its various configuration parameters,
+the ratings of back-to-back converters, the potential
+system unbalance with multiple DG sources and the
+control parameters can be determined.
+IV. SINGLE-PHASE RESIDENTIAL MICROGRID STUDIES
+The developed benchmark model overcomes the identified
+deficiencies in the existing distribution system models as
+in Section III. This new benchmark model is capable of
+supporting ever-increasing number of DG units introduced at
+individual consumer sites. Without loss of generality, three
+regions of interest are highlighted in Fig.1:
+1) At the left corner of Fig.1, a set of local PV generation
+and storage units has been referred to as DG1. The
+generation and storage that are located centrally with
+respect to phase A, is referred to as DG2. It serves
+the customers that are connected to this phase through
+multiple distribution transformers. PV/storage at each
+residence (DG1) can be used together with central
+generation (DG2) to form Microgrid # 1. This configuration can be repeated in phase B and/or phase C.
+2) Microgrid # 2 overlaps some region of Microgrid # 1
+as is evident from Fig.1. Microgrid # 2, referred to as
+DG3 in Fig.1, has its generation and storage installed
+on the primary feeder at bus#14, which is central to its
+three phases. If a fault occurs on bus#14, the loads on
+this feeder can be served through this architecture.
+3) Finally, DG4 serves the distribution system from the
+substation onwards. The PV generation and storage
+units are placed next to the first serving bus. It can
+serve as a temporary source, should a fault occurs in the
+substation or on the incoming transmission line. The
+location of DG4 is strategic with respect to the entire
+distribution network under the current consideration.
+With DG4, Microgrid # 3 has been formed, which
+incorporates both Microgrids # 1 and # 2 within its
+jurisdiction.
+Some of the salient features of this developed benchmark
+distribution network model are discussed next.
+
+A. COORDINATION OF DG UNITS IN GRID
+CONNECTED MODE
+The developed benchmark distribution system can be used
+to study various scenarios in grid-connected residential
+microgrids. These may involve the coordination of several
+microgrid structures within a distribution network. Due to
+the presence of phase-wise generation and storage units,
+the benchmark allows for some of the local loads to be supported by the grid, while others by the local PV/battery hybrid
+systems. This segregation of supplies for loads between the
+utility and local DG sources is usually dependent upon a
+specific configuration of connection and accounting arrangements of a customer [30].
+
+B. COORDINATION OF DG UNITS IN AN ISLANDED
+MODE
+For islanded residential microgrids, coordination of DG units
+is more complex as compared to that in grid-connected systems, because one can no longer use the grid as the reference
+for voltage and frequency regulation. The situation becomes
+even more complicated when single-phase DGs and loads
+are considered. By referring to the structure for residential
+microgrids in Fig.1, the following control and coordination
+issues should be investigated:
+1) In Microgrid #1, the DG1 at each customer’s home,
+needs to be coordinated with DG2. Control strategies
+can take this task on by either a master-slave or a
+multi-master arrangement. If a master-slave approach
+is chosen, DG2 can be designated as the ‘master unit’
+to regulate the voltage and frequency in Microgrid #
+1, while the DG1 will be run as a slave unit. These
+units will be operated as power controlled sources.
+In a multi-master configuration, two or more identified DG units can be used to regulate the frequency
+and the voltage profile in Microgrid # 1. This can
+be achieved if the units are arranged in droop controlled modes. Since it is necessary to maintain local
+power management within a phase, such schemes are
+referred to as intra-phase power management. Detailed
+coverage of a modified vector control and improved
+multi-segment droop control scheme adopted for the
+intra-phase power management module can be founded
+in [20], [21]. A block diagram representation is shown
+in Fig.3. Five representative power management scenarios and their respective control objectives are tabulated in Table 1. These scenarios have been considered
+in the case studies as described in Section VI to demonstrate the working principles and effectiveness of the
+proposed intra-phase power management strategy.
+2) The system originated from the primary feeder has been
+designated as Microgrid # 2 as shown in Fig.1. Even
+though this microgrid contains three phases, they are
+made up by a single-phase microgrid with nested DG
+units. The control strategy allows individual phases to
+share power under an islanded condition according to
+their load demands, capacities of DG units and the state
+of charge of the battery storage units. In this way, it is
+possible to achieve a balanced three-phase system even
+through each phase can have very different local characteristics. This is achieved by the inter-phase power
+management scheme, known as ‘Community Energy
+Balance Control System’ as shown in Fig.4.
+3) Since Microgrid # 2 is connected with Microgrid # 1,
+DG 3 in Microgrid # 2 will have to be coordinated with
+DG 1 and DG 2 in Microgrid # 1 as well. By a similar
+token, Microgrid # 3 will also need to be coordinated
+with Microgrids # 1 and # 2. Such nested configuration
+makes control and power management challenging, but
+at the same time, makes this model more versatile to
+adapt to various realistic system configurations.
+
+V. BENCHMARK DISTRIBUTION SYSTEM MODEL FOR
+RESIDENTIAL MICROGRIDS
+A section of radial distribution network of Fig.1 from the
+local substation to customer residences, as shown in Fig.2,
+is used as an example in the following analysis. The voltage
+from the substation has been stepped down from 69 kV
+to 13.8 kV in the current study. The parameters adopted
+for the substation step down transformer are presented in
+Table II [31].
+The primary feeder adopted in this model corresponds
+to an overhead three-phase transmission line, supported by
+utility poles with the length varying between 1.61 and
+24 km. According to ABB, the reactance (Rp and Xp shown
+in Fig.1) of a 1000 kcm primary feeder cable, are given
+in m/100ft [32]. For a 13.8 kV primary feeder, the parameters, including the values of the reactance used are tabulated
+in Table III.
+
+VI. CASE STUDIES
+To validate performance of the benchmark distribution system, the architecture of Microgrid # 1, as shown in Fig.1,
+is used for both grid-connected and islanded scenarios of residential microgrids. The configuration parameters of various
+elements of the model are discussed first followed by the
+simulation scenarios. It is assumed that one of the primary
+feeders from the local substation is equipped with a hybrid
+PV/battery unit and a droop controlled unit in each phase,
+with interconnecting back-to-back converters to form a residential microgrid. A solution time step of 0.5µs is used in the
+simulations using PSCAD/EMTDC.
+
+A. CONFIGURATION PARAMETERS OF THE
+BENCHMARK DISTRIBUTION NETWORK
+The local distribution transformer used is a centrally tapped
+transformer, which further steps the voltage down from
+13.8 kV to 120/240 V. The parameters of a local distribution transformer used in the model are summarized
+in Table IV [31]. In this study, 10 residential units have been
+assigned to one phase from the primary feeder. It is assumed
+that all the houses covered by the phase are situated at a
+distance of 10 m from each other. This distance will add to
+the resistance of electric cables, that are laid for each unit.
+Typically 1/0 Aluminum-Copper Steel Reinforced (ACSR)
+cable is used for underground service connections to residential units. In older communities, overhead connections
+are still used. In these cases, the parameters may need to be
+adjusted. The values for the cable resistance in each phase are
+denoted by r1 and rN , where N represents the total number of
+houses served on a phase as shown in Fig.1. The resistance
+of 1/0 ACSR cable is 5.22 × 10−4/m [33]. Assume that
+the maximum permissible voltage drop in the service cable
+from the transformer to the Nth house is 2% [18], [31],
+then, the maximum drop in voltage can be calculated as
+VD = 120 × 2% = 2.4V. The power panel boards at
+each house are commonly rated at 100 A [34]. Therefore,
+the resistance of the service cable can be derived as 1rN =
+2.4V/100A = 0.024. This is nearly equivalent to 45m
+of additional service cable for the 10th house, as compared
+with that of the house nearest to the distribution transformer. Additional cable may even be required for overhead
+clearance [34].
+The local distribution transformer and residential units on
+phase A of the primary feeder can be repeated for the other
+two phases, given that the loading in each phase is similar.
+Otherwise, transformers with different MVA ratings need to
+be used as per regulations.
+As shown in Fig.1, the three-phase primary feeder is routed
+to serve local residential units. For a typical #4 AWG cable,
+the reactance represented by RA and XA in Fig.1 is taken as
+27.4 + j10.45m/100ft [33]. The advantage of using these
+parameters in the model can become clear when single-phase
+laterals are loaded with multiple groups of residential units,
+which are separated by some distance. The reactance will
+cause voltage drops along the lateral. The amount of such
+voltage drops will depend on actual loading of the residence,
+quality of the cable used and the number of homes served by
+the primary feeder.
+
+The residential units in Fig.1 have the same electrical
+layout as shown in Fig.2. Each unit is assumed to have some
+typical household electrical apparatus namely, microwave
+oven, television set, washing machine, refrigerator, compact
+fluorescent lamps (CFLs), high and low speed fans. These
+loads are connected to electrical outlets where voltage can be
+both 120 and 240V. #AWG-14 cables are used for electrification of each unit, which has a rating of 15 A [35].
+
+B. TRANSITION FROM GRID-CONNECTED MODE TO
+ISLANDED MODE
+A residential unit may have access both grid power and local
+generation. Some loads are served by the utility power, others
+by DG units. The utility power can be used for heavier loads
+such as washing machines, driers, and refrigerators. Lighter
+loads for example CFLs, fans, computers might be dedicated
+to the PV/battery hybrid system unit. To investigate system
+behaviors during a transition from a grid-connected mode to
+an islanded mode, bus#14 is simulated with a three-phase to
+ground fault, which is non-recoverable in a typical 5 cycles
+time period. The DG units in the residential microgrid (hybrid
+PV/battery system) will serve the loads under this scenario.
+The simulation results are presented in Figures 5 and 6.
+Prior to t1 = 10s, the grid is operating normally with the
+primary feeder operating at f = 60Hz and Vrms = 13.8kV,
+as evident from the Fig.5(a). A zoomed-in version of the same
+figure is also shown, for visualization purposes. Fig.5(c),
+shows the DC power profile of the system. For the duration
+of the simulation run i.e. 75s, it is assumed that the PV
+power generation is constant at 1000W. This is represented
+by PpvφA
+. The respective charging and discharging of the
+battery in the hybrid unit is represented by PbattφA
+and by the
+state-of-charge (SOC) in Fig.6(a). Since some of the loads in
+the residential microgrid will be supported by the grid and
+others by the PV/battery hybrid unit, the AC power profile
+in Fig.5(c) illustrates the contributions by the grid and the
+hybrid unit respectively.
+At t1 = 10s, an extended three-phase to ground fault is
+detected. At this point, the grid becomes unavailable. Hence,
+the total load is taken up by the hybrid unit, as shown
+in Fig.5(c). After t1 = 10s, the load transitions are simulated
+by step changes of 144W. At this stage, any additional PV
+power available will be used to charge the battery. This is
+illustrated between t1 = 10s and t2 = 20s in Fig.5(b).
+Between t2 = 20s and t3 = 65s, both the PV and battery units
+contribute towards the loads. This is shown by the battery
+discharging in Fig.5(b) with the respective change in SOC
+in Fig.6(a). After t3 = 65s till the end of the simulation run,
+the battery starts charging again. This is because the loading
+deceases below the PV power. At this time, only the PV unit
+will serve the loads while the battery is being charged. Since
+the loading trajectories are such that the hybrid unit alone is
+capable of handling the loads, the droop unit is not required,
+as shown in Fig.5(c). The intra-phase power management
+scheme introduced in [20], [21] allows the system to operate
+between fmax = 60.25Hz and fmin = 59.95Hz, as evident
+from Fig.6(b). Similar results can be obtained for other phases
+also.
+From these simulation studies, it can be concluded that the
+benchmark distribution system is capable of operating both in
+grid-connected and islanded conditions. The system is also
+capable of coordinating a hybrid PV/battery unit with the
+local loads.
+
+C. INTRA-PHASE POWER MANAGEMENT
+The simulation results for intra-phase power management
+strategy are shown in Fig.7. The load increases in steps of
+288W. The simulation is run for 130s, with step changes in
+loads after every 10s. In this simulation run, it is assumed that
+φA is already operating in islanded condition. The battery has
+an initial SOC of 71.2%. As a result of the relatively low load
+demand at early part of the simulation, the battery charges
+with the excess PV power generation in φB. The SOC control
+as shown in Fig.3, manages the battery to be charged till the
+maximum threshold of SOCmax . The charging state is evident
+from the negative battery power between t1 = 0s and t2 = 5s.
+As per the operational scenario #1 in Table 1, the system
+frequency is the above nominal frequency, f0, under islanded
+condition.
+Further increase in the load demand between t2 = 5s
+and t3 = 10s, causes the battery to be in the floating
+state as PpvφB
+= PloadφB
+i.e. PbattφB
+= 0W. In this case,
+the total PV power is used to support the load. This validates
+scenario #2 in Table 1.
+Between t3 = 10s and t4 = 25s, the load increases further.
+In this case, the hybrid PV and battery units start supporting the load, as is represented by positive battery power,
+PbattφB
+, in Fig.7. As per the improved multi-segment droop
+strategy, the system operates below the nominal frequency,
+f0, [20], [21]. This validates scenario #3 in Table 1.
+At t4 = 25s, the battery unit is supplying its rated power
+of P
+max
+batt , with the system operating at f
+min
+batt . The SOC control
+block in Fig.3, will regulate the battery power at 1000W,
+which is the capacity of the battery. Therefore, any increase
+in load demand will cause a power imbalance. For intra-phase
+power management strategy in the proposed benchmark distribution system, this power imbalance will be catered by the
+additional droop unit in the phase, represented by PdroopφB
+in Fig.7. This validates scenario #4 in Table 1.
+From t5 = 35s and t9 = 70s, the load demand starts
+to decrease. Firstly, the contribution from the droop unit
+decreases to 0W and and then, the PV and battery units start
+supporting the load once again. As the load demand decreases
+below PpvφB
+at t8 = 60s, the battery charging resumes. This
+is reflected in the increase of battery’s SOC in Fig.7.
+Based on the results of these simulations, it can be concluded that the proposed intra-phase power management in
+the benchmark model is capable of coordinating multiple DG
+units effectively. This feature is crucial when dealing with
+single-phase DG and storage units in a distribution network.
+
+D. INTER-PHASE POWER MANAGEMENT
+The inter-phase power transfer can be observed at t5 =
+32s in Fig.8. At this point, the PV, battery and droop units
+are already at their rated power output. Further increase in
+the load demand will cause power deficiency in φB. Thus,
+in order to maintain power balance in this phase, the proposed intra-phase power management strategy alone is no
+longer sufficient. In this case, inter-phase power management
+strategy is required to transfer the additional power from
+power-surplus phase to the power-deficient phase to maintain
+the system frequency at fmin. The inter-phase power transfer is
+initiated by the Local Energy Balance Control System and the
+respective logic, as shown in Fig.4, to activate the necessary
+back-to-back converter of φA. The signal EB2BA,B,C
+, as shown
+previously in Fig.4, are used for this purpose. The power reference for the back-to-back converter is communicated from
+the Local Energy Balance Control System to the Community
+Energy Balance Control System. For the simulated case as
+shown in Fig.8, φA supplies φB with the required net power.
+Similar results can be obtained for other phases also. Further
+details on this control strategy can be found in [20], [21].
+The simulation results have demonstrated that, by inclusion of an inter-phase power management unit, the developed
+benchmark distribution system model is capable of dealing
+with and mitigating system imbalance due to single-phase
+DG, storage units, and load.
+
+VII. CONCLUSION
+A new benchmark distribution system model capable of supporting studies of residential microgrids has been developed.
+This model supports both grid-connected and islanded systems, as well as transitions from one to the other. A unique
+feature of this model is that it allows for integration of
+multiple single-phase DG sources to be located in a particular phase, yet, it also supports coordination of these units
+within their respective phases or across different phases.
+This is accomplished by an intra-phase power management
+and an inter-phase power management units. This proposed
+benchmark model will allow utility personnel to investigate
+the impact of ever increasing installation of roof-top PV
+units and residential energy storage units. Introduction of
+the intra-phase and the inter-phase power management units
+improves controllability of the distribution system significantly for load balancing within a single phase or among three
+phases, when the DG and storage units are operating indiscriminately. Three case studies have been carried out using
+this newly developed benchmark to illustrate its effectiveness.
+
+ACKNOWLEDGMENT
+The authors would like to thank the local utility, London
+Hydro, for providing useful information on the practical distribution systems upon which this study is based.
+
+
+
+
+
+

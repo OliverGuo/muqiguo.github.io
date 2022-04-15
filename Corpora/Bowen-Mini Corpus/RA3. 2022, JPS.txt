@@ -1,0 +1,421 @@
+Burst-transfer boost charger for supercapacitors from subwatt-scale
+harvesting sources
+
+ABSTRACT
+A burst-transfer controller utilizing a boost converter for efficient charging of supercapacitors under low supplypower conditions (BurstCap) is presented. Efficient operation is achieved through maximum power transfer
+point (MPTP)-based burst-transfer control while mitigating leakage of the reservoir supercapacitor by means
+of a two-stage supercapacitor topology. Our experimental results show that, within an optimal burst-transfer
+window of 50 mV, BurstCap achieves up to 90% charging efficiency while under low supply-power conditions
+(short-circuit current of 3 mA and open-circuit voltage of 0.9 V). In addition, we observed a two-fold increase
+in charging current compared to conventional maximum power point tracking (MPPT) charging schemes.
+Applying our charging scheme may be beneficial for powering solar or wind-based wireless sensor nodes
+in remote environments as well as subwatt-scale power sources such as microbial fuel cells, thermoelectric
+generators, and galvanic corrosion sources.
+
+1. Introduction
+There has been growing interest to utilize energy harvesting techniques in order to extend the sustainability of remotely deployed
+wireless sensing systems. Wireless sensor devices can be powered by
+simple batteries, but the use of batteries may also come with economic
+and logistical burdens due to the difficulty and expense needed to
+replace batteries in remote environments. Thus, energy harvesters have
+been utilized to recharge batteries while in the field.
+Such a system usually consists of the energy harvesting sources,
+energy-harvesting circuitry, energy storage elements (ESE), and a target
+load. When operating energy harvesters, researchers typically focus on
+maximizing the efficiency of harvesting and energy storage as well
+as the driving load. The former is based on the renewable harvesting
+sources for charging the ESE, while the latter depends on the ESE for
+driving the load.
+The energy-harvesting circuitry is a control circuit that plays a
+pivotal role in increasing efficiency when charging the energy storage
+elements by tracking the maximum power point (MPP) of the energy
+harvesting source. In addition, this circuitry controls the efficiency of
+driving the target loads from the ESE by duty cycling depending on
+the power utility of the loads. In short, efficiency can be balanced
+by impedance matching techniques on the energy-storage side or the
+driving-load side.
+Several maximum power point tracking (MPPT) techniques have
+been proposed to optimize impedance matching on the energy-storage
+side such as constant voltage (CV), open voltage (OV), Perturb and
+Observe (PO), pilot cell, lookup table, and IV sweeping [1–3]. On
+the other hand, the driving efficiency can be the maximized on the
+load side by a load matching switch [4,5] or topology-reconfigurable
+structure [6]. Another important consideration is the overall lifetime
+of the energy harvesting system for sustainable operation. In order
+to extend the lifetime, supercapacitors have been receiving growing
+attention as an ESE in long-term energy harvesters [6–10].
+Supercapacitors operate efficiently when paired with strong harvesting sources, such as solar under high intensity. However, for certain remote environments, where sunlight and wind energy are unavailable or
+unpredictable, one may attempt to tap into other subwatt-scale power
+sources such as thermoelectric generators (TEGs) [11,12], microbial
+fuel cells (MFCs) [13,14], and galvanic corrosion sources (GCSs) [15].
+However, charging large supercapacitors from subwatt power
+sources is inefficient. Although supercapacitors are an excellent form
+of ESE for sustainable operation of harvesters, they have non-ideal
+behaviors attributed to the discharge (voltage-vs.-energy) curve and
+substantial leakage currents [16,17]. Moreover, their leakage power
+grows rapidly with the size (i.e., capacitance) and with the stored
+energy [18,19]. It is challenging to efficiently operate harvesters that
+charge supercapacitors from subwatt-scale havesting sources, which
+may have low ouput-power levels, in addition to combating the leakage
+under the low efficiency of the boost converter.
+When using subwatt-scale harvesting sources, voltage boosting incurs a non-negligible overhead. During voltage boosting while connected to a supercapacitor, the charging current 𝐼chg may decrease
+significantly, depending on the efficiency of the boost converter (𝜂boost)
+and the boost-up rate (𝑉boost∕𝑉hvs). The end result can actually be a net
+power loss if the supercapacitor leakage exceeds the charging power.
+To address this issue, the leakage current can be capped by limiting
+the supercapacitor′
+s capacitance, voltage, or both. Furthermore, the
+voltage of the subwatt-scale harvesting source can drop and stray away
+from the MPP due to the low 𝜂boost when the supply power to the boost
+converter is low.
+It is clear that a supercapacitor charger is needed that is capable of
+efficient voltage boosting especially for systems that harvest low power
+such as TEGs, MFCs, and GCSs.
+1.1. Contributions
+In this work, we showcase an efficient energy-harvesting and
+supercapacitor-charging technique for use with low-power supply
+sources. Our system, henceforth referred to as ‘‘ BurstCap’’ consists of a
+maximum power-transfer point (MPTP) based burst-transfer controller
+and a two-stage supercapacitor topology. First, we propose a bursttransfer charging scheme to charge the reservoir supercapacitors (of
+large capacitance) at the MPTP to maximize 𝑃chg at the system level.
+We then design a two-stage supercapacitor topology for efficient charging of the reservoir supercapacitors by offsetting the leakage current
+while using a low-power harvesting source.
+To achieve a burst-transfer (BT) charging scheme, the chargestrapping supercapacitor (of smaller capacitance) accumulates the energy from the low-power harvesting source, and then rapidly releases
+(i.e., burst-transfers) the accumulated energy to the reservoir supercapacitors within the BT window of the MPTP. By this method, the
+near-instantaneous release of charging current can overcome the leakage rate of the reservoir supercapacitors. To validate and maximize
+of efficiency of BurstCap′
+s ability to harvest energy efficiently from
+subwatt-scale power sources at the system level, we explore the optimal
+BT window size under low supply-power condition of short-circuit
+current (𝐼sc) of 3 mA and open-circuit voltage (𝑉oc) of 0.9 V.
+
+2. Background
+We identify design parameters that enable BurstCap to efficiently
+charge supercapacitors under low-power supply conditions by examining the equivalent circuit model and leakage characteristics of supercapacitors. We then demonstrate how the efficiency of a boost converter
+affects the MPP of low-power harvesting sources.
+2.1. Model of supercapacitors
+Several equivalent-circuit models for supercapacitors have previously been proposed to simulate characteristics of supercapacitors [16,
+18,20]. We adopt an R-C equivalent circuit model due to its applicability
+for low energy flow and the relatively long timescales of charging and
+discharging.
+The equivalent circuit model, as shown in Fig. 1, consists of an equivalent series resistor (ESR) 𝑅esr,scap, an equivalent parallel resistor (EPR)
+𝑅epr,scap, and a capacitor 𝐶scap. 𝑅esr,scap represents losses in charging or
+discharging cycles. 𝑅epr,scap is used to model the leakage current loss
+that represents long-term storage characteristics.
+When a supercapacitor is charged to 𝑉0 and the terminals of the
+supercapacitor are opened, the voltage drop due to 𝑅epr,scap appears as
+a decay from the initial voltage 𝑉0
+. Thus,
+
+
+Higher capacitance of a supercapacitor results in higher leakage
+current and lower 𝑅epr,scap. For a given supercapacitor, the leakage
+current increases with the charged voltage of the supercapacitor as
+shown in Fig. 2(a).
+𝑅epr,scap can be calculated by fitting the measured leakage currents
+over various capacitances using Eq. (3). For example, the 𝑅epr,scap of
+25-F and 1-F supercapacitors are 99.2 kΩ and 398.5 kΩ, respectively.
+
+2.2. Maximizing transferred power
+The key design consideration for MPP tracking in supercapacitor
+chargers is to minimize the power overhead due to MPP tracker itself.
+The MPP used by conventional trackers, which typically considers only
+the harvested power 𝑃hvs, can be quite different from the MPP at the
+harvester system level when taking the efficiency of the boost converter
+𝜂boost into account.
+
+The efficiency of the boost converter can be expressed as:
+
+where 𝑃boost is the power dissipated by the converter. If 𝑃boost is
+constant, maximizing the extracted harvesting source power 𝑃hvs guarantees maximizing the transferred power 𝑃chg.
+However, in practice, the efficiency of a boost converter 𝜂boost is
+not constant but ranges from 10% to 80% according to the power
+dissipation 𝑃boost. 𝑃boost depends on the input voltage, output voltage,
+and output current of the boost converter. Thus, the MPP of the energy
+harvesting source shifts based on 𝜂boost.
+Fig. 2(b) illustrates this shift of MPP with 𝜂boost, which is plotted by
+measuring the output of the boost converter TPS61200 [21] under the
+harvesting source condition of 𝑉oc = 0.9 V and 𝐼sc = 3 mA, and with the
+output voltage of the converter 𝑉boost = 2.7 V. The 𝜂boost rapidly drops
+as the difference between input and output voltage of the converter
+increase [22–24].
+The MPP of the harvesting source with short-circuit current (𝐼sc) of
+3 mA and open-circuit voltage (𝑉oc) of 0.9 V is 0.45 V and is marked
+with a square. The conventional MPPT-based supercapacitor charger
+for energy harvesting tracks the MPP of the harvesting source to
+maximize 𝑃hvs. However, at the system level, the MPP drops down
+to 0.677 V, as marked with a circle, due to the varying 𝜂boost. Therefore, the maximum power-transfer point (MPTP) indicated by the circle
+should be tracked to maximize the 𝑃chg at the system level. Particularly
+under low supply-power conditions, MPTP tracking of supercapacitorbased harvesting systems is an important factor to efficiently charge
+reservoir supercapacitors.
+
+3. Design of burst-transfer boost charger for supercapacitor
+This section describes the design of BurstCap, which harvests energy
+from a low-supply power source, as shown in Table 1, and stores it in
+a reservoir supercapacitor via a charge-strapping supercapacitor. We
+first explain the principle of operation, followed by the selection of parameters for the charge-strapping supercapacitor and the burst-transfer
+window for efficient operation.
+
+3.1. Principle of operation
+Fig. 3(a) shows an overview of the BurstCap design. It is composed
+of a small charge-strapping supercapacitor (CSS) and a large reservoir
+supercapacitor (RS), a boost converter, and a burst-transfer controller
+(BTC). The CSS takes the place of the input ceramic capacitor found
+in conventional chargers and is of smaller capacitance than that of the
+RS.
+In terms of equivalent series resistance, a ceramic capacitor would
+be more ideal than the CSS. However, it would be challenging to
+produce a charging current greater than the leakage current of the
+RS. Our proposed burst-transfer charging scheme attempts to address
+this challenge, allowing the CSS to overwhelm the leakage rate of the
+RS. Moreover, the power dissipated by the boost converter 𝑃boost is
+non-negligible. Another advantage of using the CSS structure can be
+identified here. Losses due to 𝑃boost can be minimized by depowering
+the main circuit of the boost converter during energy accumulation between burst transfers. In contrast, this would be outside the capabilities
+of conventional ceramic capacitors.
+Typical capacitance values for the CSS and RS are 3.3 F and 25 F, respectively. In effect, the BTC enables (i.e., turns on) the boost converter
+within the burst-transfer (BT) window of the MPT point.
+As the CSS accumulates harvested energy, its voltage gradually
+increases until it reaches the upper bound of the burst-transfer window.
+The BTC then enables the boost converter to transfer the stored energy
+from the CSS to the RS until the CSS’s voltage drops to the lower
+bound of the BT window. Note that this scheme can also be applied
+for situations when the harvested power density is high, such as when
+harvesting strong sunlight.
+In this case, the energy stored in the CSS would be maintained at a
+high level, allowing the BTC to continuously enable the boost converter
+and charge the RS at the MPTP. Thus, our BTC can be applied efficiently
+over a wide range of power-supply conditions.
+
+3.2. Selection of charge-strapping supercapacitor
+The capacitance (𝐶CSS) and equivalent series resistor (𝑅esr,CSS) of the
+CSS at the first stage are key parameters to control the efficiency of
+BurstCap as well as the burst charging time.
+The burst charging time is defined as the period to charge the CSS
+from the lower bound to the upper bound of the burst-transfer window.
+Assuming the current from the harvesting source is relatively constant,
+the burst-charging time of the CSS is proportional to 𝐶CSS. The burstcharging time also depends on the loss due to 𝑅esr,CSS, which affects
+the charging efficiency of BurstCap as well.
+The initial charging time is the time needed to charge the CSS from
+0 V to 0.7 V. The initial charging time can be determined by 𝐶CSS and
+the supply power from the harvesting sources. Fig. 3(b) delineates the
+initial charging time of the CSS when connected to a supply power
+of 𝑉hvs = 0.9 V and 𝑅hvs = 300 Ω. The thick gray line indicates the
+variation of the 𝑅esr,CSS, which may be manufacturer-dependent. The
+typical range of the 𝑅esr,CSS of supercapacitors is less than 1.8 Ω.
+To reduce power loss at the first stage, a lower value for 𝑅esr,CSS
+is desirable. Considering both the initial charging time and 𝑅esr,CSS, a
+suitable capacitance value for the CSS would fall between 2 F and 5 F.
+In this work, we utilize a CSS value of 3.3F in BurstCap.
+3.3. Adjustable burst-transfer (BT) window
+The harvesting energy source is modeled as an independent voltage source 𝑉hvs with an equivalent source resistor 𝑅hvs as shown in
+Fig. 3(a). To generate 𝐼sc of 3 mA and 𝑉oc of 0.9 V, we set 𝑉hvs = 0.9 V
+and 𝑅hvs = 300 Ω for the low-power harvesting source model. Since the
+CSS is initially depleted, we can assume that at time 𝑡 = 0, the initial
+voltage of the CSS is 0 V. For 𝑡 > 0, the CSS will begin charging, and
+the voltage across the supercapacitor (𝑉CSS) can be expressed as:
+
+Note that in this expression, 𝑅esr,CSS is not considered, as it is negligible
+compared to 𝑅hvs of the source resistor.
+A BTC has been implemented with the circuit as shown in Fig. 3(c).
+𝑉OL and 𝑉OH respectively denote the low- and high-state saturation
+voltages. 𝑉TH− and 𝑉TH+ are the low- and high-threshold voltages,
+namely the lower and upper bounds of the BT window, respectively.
+They can be expressed as
+
+Hence, the size of the BT window can be expressed as
+
+4. Modeling of BurstCap charger
+We analyze the performance of BurstCap in terms of the system
+efficiency and the BT-cycle leakage of supercapacitors. We also describe
+our maximum power transfer point tracker for BurstCap.
+
+The efficiency of the proposed burst-transfer charging system
+𝜂burst,trf is the ratio of the total input energy to the BurstCap charger
+(𝐸in,tot) to the increase in the RS’s energy level from the start time
+(𝑡
+start) to the end time (𝑡end) of the charging phase.
+By excluding 𝐸leak,RS, which is the leakage energy of the RS, the
+efficiency of the BurstCap system itself 𝜂burst,trf can be formulated as
+
+where 𝐸RS(𝑡
+start), 𝐸RS(𝑡end) can be obtained by measuring the initial
+voltage of the RS at 𝑡
+start and the charged voltage of the RS at 𝑡end.
+However, the total input energy to the BurstCap charger 𝐸in,tot can be
+obtained by calculating the total output energy from the CSS during the
+multiple BT cycles.
+Fig. 4 illustrates the single BT cycle. During a BT cycle (𝑇bc), the
+boost converter of the BurstCap is enabled only for a time duration of
+𝑇en and is otherwise disabled for a time duration of 𝑇dis. Therefore,
+the input energy of the BurstCap charger during a BT cycle (𝐸in,bc)
+is the same as the energy output by the CSS during the enable time
+(𝐸en). Similarly, the amount of energy output from the CSS during 𝑇en
+
+is ideally identical to that of the charging energy of the CSS during the
+disabled period (𝐸dis). That is,
+
+Due to the near instantaneous period of 𝑇en as well as a relatively small
+voltage drop during 𝑇en, below the decimal point of mV, it may be
+difficult to detect 𝐸en by practical methods. Instead, by measuring the
+voltage of CSS during the time of 𝑇dis, we can calculate 𝐸dis, which
+should be equivalent to 𝐸en. Therefore, from Fig. 4, the input energy
+of the charger during a BT cycle can be written as
+
+4.2. The BT-cycle leakage of supercapacitors
+The proposed burst-transfer charging scheme is productive only if
+it can be charged during 𝑇en in excess of the leakage energy from RS
+during 𝑇dis. Therefore, the leakage energy, the BT-cycle leakage, is a
+crucial factor to determine the potential charging ability of BurstCap.
+Based on Fig. 4 and Eq. (1), assuming that the initial voltage 𝑉0 =
+𝑉RS(𝑡1
+), we can obtain the one BT-cycle leakage of the RS:
+
+4.3. Maximum power transfer point tracker for BurstCap
+MPP tracking techniques proposed to date include hill-climbing,
+constant voltage (CV), Perturb and Observe (P&O), pilot cell, lookup
+table, and I–V sweeping [1,3]. However, as discussed in Section 2.2,
+conventional MPP tracking methods target the maximum 𝑃hvs regardless of 𝜂boost. This section describes our MPTP tracker, which tracks 𝑃chg
+to maximize transferred power to the RS rather than maximizing power
+extracted from the harvesting source 𝑃hvs.
+
+Fig. 5 shows the circuit diagram of our MPTP tracker, which corresponds to the gray box in Fig. 3(a) for our BurstCap system. It utilizes a
+lookup table (LUT) for MPTP tracking, which consists of pre-measured
+𝑉OC of the low-power harvesting sources and calculated value of 𝑉 𝑅1
+for MPTP.
+In more detail, the switch S1 is for the power path control between
+the low-power harvesting source and the CSS, while the switch S2 is for
+the 𝑉BV and 𝑉ref for the external interrupt (Ext. INT). While alternating
+between S1 and S2 based on the Timer, if 𝑉ref is out of bound [𝑉UB, 𝑉LB],
+then an interrupt is triggered, at which time the microcontroller unit
+(MCU) starts to track the MPTP based on the Algorithm 1.
+
+Algorithm 1 shows the pseudocode for the MCU to perform MPTP
+tracking. The MCU sets up the timer to perturb the power path by
+alternating control of S1 and S2, and then the comparators of the MPTP
+Tracker monitor the variance of 𝑉ref. If the voltage of the harvesting
+source changes over time, the MCU can be called by an interrupt to
+measure 𝑉OC and adjust digital potentiometers 𝑉 𝑅1 according to the
+LUT for MPTP operation. The MCU can then turn off switch S3 and
+enter sleep mode.
+
+5. Experimental results
+We implemented the BurstCap on a printed circuit board (PCB) with
+a 3.3-F CSS and a 25-F RS, as shown in Fig. 6. We tested it under the
+low supply-power condition of the photomicrobial solar cell in [25,26],
+where 𝐼sc = 3 mA and 𝑉oc = 0.9 V.
+To validate the BurstCap design as a supercapacitor charger, we
+first confirm that the BTC operates as intended. Secondly, we explore
+
+several BT window sizes to select for maximum efficiency under low
+supply-power conditions. Finally, we elaborate on the boundary of
+leakage-offset current of supercapacitors to show that our proposed
+burst-transfer charging scheme is more efficient than the conventional
+MPPT-based supercapacitor chargers.
+
+5.1. Operation of BTC
+Figs. 7(a), (b) shows the probing results during burst-charging
+phase at 𝑉MPTP = 0.677 V with the BT window of 50 mV. The BTC turns
+on the boost converter and delivers the stored energy from the 3.3-F
+CSS to the 25-F RS for the very short duration of 500 μs compared to
+the BT cycle of 700 ms. As soon as the 3.3-F CSS’s voltage (blue solid
+line) reaches the lower bound of the BT window (i.e., 𝑉TH−= 660 mV),
+the BTC turns off the boost converter, and the harvesting source starts
+to charge the 3.3-F CSS again up to the upper bound of the BT window
+(i.e., 𝑉TH+ = 710 mV).
+The BTC can eventually charge the 25-F RS while alternating between a higher charging rate and a lower leakage rate. As the voltage
+of the supercapacitor approaches the rated voltage, the leakage current
+increases rapidly, resulting in a decreased charging rate.
+5.2. Optimal burst-transfer window size
+To identify the optimal BT window size during the low supplypower condition, we explored BT window sizes ranging from 10 mV
+to 70 mV, in 20 mV steps. Fig. 7(c) shows the measured voltage of
+the 25-F RS during charging phase. We observe that our MPTP-based
+burst-transfer charging scheme can charge the 25-F RS significantly
+faster than the conventional MPPT charging scheme at the low powersupply condition of 𝐼sc = 3 mA and 𝑉oc = 0.9 V. Reasons for the lower
+efficiency of the conventional MPPT-based supercapacitor are twofold:
+(1) the MPP shift is not considered, and (2) the boost converter isenabled continuously even when the supply power is low, resulting in
+unnecessary power overhead.
+Fig. 7(d) shows a zoomed-in view for the 25-F RS. For our given
+test conditions, BurstCap achieves the fastest charging rate at 𝑉MPTP =
+0.677 V with a BT window size of 50 mV.
+Fig. 8(a) indicates that the charging efficiency 𝜂burst,trf depends
+on the several sizes of the BT window. 𝜂burst,trf is maximized when
+BurstCap is operating at 𝑉MPTP = 0.677 V with the BT window of 50 mV.
+That is, when the range of the BT window is preset from 660 mV to
+710 mV of the 3.3-F CSS, the efficiency of the charger is increased, up
+to 90%. Therefore, using the subwatt-scale harvesting source, we have
+shown optimal BurstCap charging parameters on the 25-F RS.
+
+5.3. Boundary between charging current and leakage current
+The primary disadvantage of supercapacitors is the high leakage
+current, which must be addressed in order to successfully charge the RS
+under low supply-power conditions. To overcome the leakage of the RS,
+the charging current has to offset the leakage current of the RS. When
+the charging current is equal to the leakage current, the RS receives no
+net charge. We define this condition as the boundary of leakage-offset
+current 𝐼lo. In this sense, the 𝐼lo can be obtained at the moment when
+the leakage energy becomes equal to the charging energy of the RS.
+The leakage-offset current is
+The boundary of 𝐼lo can be an important parameter to evaluate
+the charging performance of the supercapacitor charger. If the leakage current 𝐼leak,RS of the RS is lower than the boundary of 𝐼lo, the
+supercapacitor charger can fully charge the RS by offsetting 𝐼leak,RS.
+Using Eq. (18), Fig. 8(b) plots the boundary between the charging
+current and leakage current. The boundary of our proposed BT charging
+scheme is indicated by the black solid line, while the conventional
+MPPT-based charging scheme is marked by a black dotted line. In
+addition, the blue dotted line indicates the leakage current of the 25-F
+RS, and the blue dotted-dashed line shows the leakage current of the
+50-F RS.
+These results show that conventional MPPT-based supercapacitor
+chargers can charge the 25F-supercapacitor up to 2.5 V, while they
+can charge the 50F-supercapacitor up to only 2.01 V. In contrast, the
+proposed burst-transfer charging scheme can charge both the 25 F and
+50 F supercapacitors up to 2.5 V.
+In effect, our proposed BT charging scheme can charge twice as fast
+as the conventional MPPT charging scheme, with Table 2 summarizing
+the comparison results.
+
+6. Conclusions and future work
+Our work focused on developing an MPTP-based burst-transfer
+boost supercapacitor charging system, named BurstCap, for efficient
+charging of supercapacitors from subwatt-scale harvesting sources such
+as MFCs, TEGs, and GCSs. Our BurstCap achieves the highest charging
+efficiency 𝜂burst,trf by finding the optimal BT window at the 𝑉MPTP, as
+confirmed by our experimental results on a prototype implementation.
+When charging from a low-power source with 𝐼sc = 3 mA and 𝑉oc =
+0.9 V, the proposed BT charging method can charge a 25-F RS from 0 V
+to 2.5 V within 112 h, which was approximately twice as fast compared
+to the conventional MPPT scheme. This is due to several reasons: (1)
+the conventional MPPT scheme has lower leakage-offset current due to
+the continuous power consumption of the boost converter, (2) overhead
+of the MPPT tracker, and (3) inaccurate MPP tracking due to varying
+efficiency of the boost converter. Our BurstCap charger has significantly
+higher charging current compared to the conventional MPPT charging
+scheme. We also show a maximum charging efficiency up to 90%
+while under a low supply-power conditions, which represents a notable
+improvement over the conventional method.
+Future work includes an optimization that allows for greater dynamic range of the system. In our study, we evaluated the performance
+of our BurstCap at short-circuit current of 3 mA and open-circuit
+voltage of 0.9 V, which are classified as low supply-power conditions.
+However, these parameters may not apply in all cases. For example, the
+output of a harvesting source can vary depending on the environment
+(e.g., temperature, light intensity). We plan to build microbial fuel cells
+(MFCs) as the subwatt-scale power source with varying conditions for
+BurstCap to harvest from. Finally, we plan to deploy more BurstCap
+units in real-world settings to validate its performance over longer
+timespans. BurstCap can serve as the basis for efficient charging of
+supercapacitors for subwatt-scale harvesting sources.
+
+CRediT authorship contribution statement
+Sehwan Kim: Investigation, Methodology, Validation, Supervision,
+Writing – original draft. Jesse H. Lam: Writing – reviewing and editing.
+Jeonghun Kim: Software, Data curation. Pai H. Chou: Conceptualization, Supervision, Writing – reviewing and editing.
+
+
+
+
+
+
+
+
+

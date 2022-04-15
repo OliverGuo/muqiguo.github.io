@@ -1,0 +1,510 @@
+<heading>
+Title: Computer-Mediated Communication in the Age of Communication Visibility
+Author: Jeffrey W. Treem, Paul M. Leonardi, & Bart van den Hooff
+Journal: Journal of Computer-Mediated Communication
+Year: 2020
+</heading>
+
+Abstract
+This article argues that a distinctive aspect of computer-mediated communication (CMC) is the way
+it can make communication visible to others in ways that were previously impractical. We propose a
+theory of communication visibility that recognizes its multidimensional nature: resulting from activities that make communication visible, efforts by actors to see communication, and a sociomaterial
+context that influences possibilities for visibility. The different dimensions of communication visibility
+are explored as they relate to possibilities for action with CMC, and the ability of third-parties
+to view communication between others. Centering communication visibility in the study of CMC
+compels scholars to ask new questions regarding the interdependence of active, strategic efforts to
+make communication more or less visible to others, and the ways in which communication is assessed
+by observers. To facilitate ongoing research we offer an agenda for incorporating communication
+visibility into the study of contemporary and future forms of CMC.
+
+Communication visibility has always been a hallmark of computer-mediated communication
+(CMC), and was a distinguishing aspect of early technologies like Usenet groups, discussion forums,
+and instant messaging platforms (Quan-Haase, Cothrel, & Wellman, 2005). Today, social networking
+sites, blogs, and virtual worlds afford communication visibility at a scope and scale greater than through
+previous CMC technologies. Some scholars have argued that we are entering an age of communication
+visibility (Hansen & Flyverbom, 2015; Leonardi, 2014; Stohl, Stohl, & Leonardi 2016), and that visibility
+can serve as a general category for social scientific study (Brighenti, 2007).
+
+Communication visibility
+In order to present a theory of communication visibility we must first provide explication of the concept
+of communication visibility and seek to define the term. Following Chaffee’s (1991) framework for
+explication, we first examined how the concept of visibility has been defined and used in past relevant
+work (i.e., in doing so we recognize that visibility has long been considered a key construct in mediated
+communication). Indeed, visibility was recognized as a core concern of early CMC theorists who
+recognized that technologies that facilitated interpersonal communication were designed to enable
+“socially translucent systems” (Erickson & Kellogg, 2000). In these early studies, visibility referred to the
+ways in which individuals’ presence, activity, and communication were made noticeable to other users.
+For example, Bregman and Haythornwaite (2001) conceptualized visibility as “the means, methods,
+and opportunities for presentation; in our usage it primarily addresses the speakers’ concerns with the
+presentation of self” (p. 5). Visibility has also been examined specifically within the context of online
+media, where scholars have been concerned with the extent to which material is or is not prominently
+displayed or easily available online (Bucher, 2012; Thompson, 2005).
+Table 1 displays several definitions of visibility. Reviewing these definitions reveals that more recent
+conceptualizations by communication researchers have treated visibility as an interplay between those
+who provide communication and those who observe communicative acts (e.g., Treem & Leonardi, 2013;
+Leonardi, 2014). In particular, the definition from Stohl, Stohl, and Leonardi (2016) is of note because
+it presents visibility as multifaceted—a product of an environment in which individuals are able to
+communicate and others are able to access that communication.
+Brighenti (2007) argues that visibility has both relational and strategic qualities that are enacted
+in the process of “seeing and being seen” (p. 325). Though simplistic, this view offers an important
+extension beyond unidirectional views of visibility, and sees visibility as mutually constituted in the
+activity of actors and their orientation to observers. There is an inherent interdependence between the
+efforts to make something visible, efforts to see something, and the extent to which a context makes those
+activities easier or more difficult. Consider characterizing the visibility of a performance at a theater:
+One could be referring to how actors moved around the stage and dressed in bold costumes, to the
+ease of viewing the show from floor-level seats, or how the performance was partially obstructed by the
+columns in the building. Any, or all, of these aspects could influence how one characterizes the visibility
+of the performance.
+
+We argue that the nature of visibility afforded by contemporary CMC, in which individuals
+have numerous choices to present or access communication and that communication is made
+visible for third parties and unintended recipients to easily see, portends significant changes to
+the way meaning is conveyed and produced through communication. Our existing theories of
+CMC are not well-equipped to address the multidimensional nature of communication visibility
+and are largely based on extensions or re-formulations of traditional interpersonal and mass
+communication frameworks. To remedy this problem, we offer a three-dimensional framework
+for a theory of communication visibility. This theoretical lens is based upon three important
+aspects regarding the relationship between visibility and CMC: (a) communication visibility
+is the root affordance, or possibility for action, for CMC, (b) CMC is distinct among other
+modalities of communication in that it makes communication immediately visible across time
+and locations to both immediate audiences and third parties, and (c) the ability of individuals to
+influence or manage the visibility of communication is a product of the sociomaterial context of
+CMC use.
+
+Table 1 Definitions of visibility in relevant literature
+Definition
+
+Bregman and Haythornwaite (2001)
+
+‘refers to the means, methods, and opportunities for
+presentation; in our usage it primarily addresses the speakers’
+concerns with the presentation of self.’ (p. 5)
+‘Visibility lies at the intersection of aesthetics (relations of
+perception) and politics (relations of power)’ (p. 324)
+‘The ability to make [users’] behaviors, knowledge,
+preferences, and communication network connections that
+were once invisible (or at least very hard to see) visible to
+others in the organization. Our notion of visibility is tied to
+the amount of effort people must expend to locate
+information.’ (p. 150)
+‘the combination of three attributes: availability of
+information, approval to disseminate information, and
+accessibility of information to third parties.’ (p. 124)
+‘constitutes forms of noticing, managing attention and
+determining the significance of events and subjects.’ (p. 985)
+
+Brighenti (2007)
+Treem & Leonardi (2013)
+
+Stohl, Stohl, & Leonardi (2016)
+
+Hatuka & Toch (2017)
+
+Our explication of communication visibility recognizes and embraces the multidimensional nature
+of visibility in CMC. We conceptualize communication visibility as follows:
+Communication visibility refers to the outcomes of activities through which actors strategically
+or inadvertently: (a) make their communication more or less available, salient, or noticeable to
+others, and (b) view, access, or become exposed to the communication of others, as they (c)
+interact with a particular sociomaterial context.
+In practice, scholars who seek to explore communication visibility in their research may utilize
+multiple aspects of communication visibility, and have myriad options for operationalizing communication visibility as a relevant variable in examining communication processes. To represent the varied
+operationalizations possible, we offer a three-dimensional view of communication visibility. Figure 11
+provides a visual description of a space of possibilities for types of operationalizations, which reflects the
+different dimensions of our conceptual definition. The first dimension is an actor’s activity. This activity
+could take the form of an online publication, contribution, profile, network connection, or other visible
+communicative act of CMC. The second dimension considers the actions taken by others, who are not
+directly party to the communication, to view communication. These actions can include accessing a
+website, lurking on a social networking site, or reading through the archives of past online conversations.
+The third dimension is the sociomaterial context of communication. This dimension could consist of
+the number of individuals on a platform, the volume of online contributions, or the privacy settings
+available to users.
+These dimensions of communication visibility can be analyzed singularly or collectively. As an
+example, consider how one might research the sharing of relational information online. One could
+study the different ways individuals choose to share information (i.e., what they share and where),
+how individuals seek out information about others’ relationships (i.e., what they view and where), or
+
+Source
+
+The Age of Communication Visibility
+
+whether sharing behaviors relate to perceived efficacy in the use of privacy settings (i.e., how they view
+contexts as capable of managing visibility). Many questions will require working across dimensions;
+for example, evaluating whether efforts to make communication more visible are successful requires
+both measurement of what behaviors communicators engaged in as well as what observers evaluated.
+Additionally, scholars could examine how the use of CMC tools over time—by communicators or
+observers—can change the sociomaterial nature of a space (e.g., as older adults join a social networking
+site it may become less attractive to younger users as a platform for social interaction).
+
+A theory of communication visibility
+Given this explication of communication visibility, our theory of communication visibility in CMC
+can be characterized as a Type II theory in terms of Gregor’s (2006) classification of theories. Gregor
+distinguishes five interrelated types of theory: (I) theory for analyzing, (II) theory for explaining, (III)
+theory for predicting, (IV) theory for explaining and predicting, and (V) theory for design and action.
+Our aim is to present a theory that not only describes communication visibility, but also provides
+explanations about which factors contribute to its emergence and the possible associated consequences.
+Thus, we are presenting a theory for explaining here, one that “explains primarily how and why some
+phenomena occur” (Gregor, 2006, p. 624). Type II theories are not aimed at formulating testable
+propositions, but aimed at understanding “how things are or why they are as they are” (p. 624).
+Thus, our theory aims to clarify what communication visibility in CMC is, how communication
+visibility emerges in CMC use, and the possible consequences associated with communication visibility
+in CMC. Our theoretical lens is based upon three basic foundations: (a) communication visibility is the
+root affordance, or possibility for action for CMC, (b) communication through CMC is made visible
+Journal of Computer-Mediated Communication 25 (2020) 44–59
+
+across time and locations to both immediate audiences and third parties, and (c) the ability of individuals
+to influence or manage the visibility of communication is a product of the sociomaterial context of
+CMC use.
+
+Visibility as a root affordance
+
+The third-party effect
+Although scholarship has focused primarily on the communication between direct actors in CMC,
+the presence and communicative activity of third parties significantly influences the use of CMC to
+
+Central to our argument is the claim that visibility can be understood as the root affordance of CMC
+(Flyverbom, Leonardi, Stohl, & Stohl, 2016). The metaphor of a root is chosen not only to depict the
+central and fundamental nature of visibility in CMC, but also the ways that other possible affordances
+spring from and are dependent upon visibility. In overly simplistic terms, the concept of affordances
+refers to the possibilities for action when an actor interacts with an artifact (Evans, Pearce, Vitak, &
+Treem, 2017; Faraj & Azad, 2012). Consideration of the affordances of CMC is attractive for scholars
+because the concept aims to capture both what individuals can do with CMC tools (i.e., the agency
+of CMC users), as well as what CMC tools allow people to do with a particular technology (i.e., the
+constraints of the materiality of CMC) (Leonardi, 2012). In recent years scholars have grappled with the
+question of whether particular forms of CMC present affordances that are distinct from those present
+in the use of other communication channels. In reviewing work examining the communicative, social,
+and technological affordances associated with CMC (including, but not at all limited to, boyd, 2011;
+Evans et al., 2017; Faraj & Azad, 2012; Gibbs, Rozaidi, & Eisenberg, 2013; Kaptelinin & Nardi, 2012;
+Treem & Leonardi, 2013; Wellman et al. 2003), it appears that nearly all possibilities for action related
+to the use of CMC are connected to efforts to make forms of communication more or less visible. To
+demonstrate this relationship, we can look at how the affordances related to the use of social media in
+organizations presented by Treem and Leonardi (2013) reveal the central role of visibility. For instance,
+the editability (or rehearsability) of CMC ensures communication is made visible in a manner consistent
+with a communicator’s intentions. The persistence of CMC makes communication visible over time
+and available to confront and consume. The association or connectivity afforded through CMC means
+communicators can make relationships between individuals and content visible to others, and that
+users may view each other’s respective communicative networks. Other scholars have recognized
+the primacy of visibility relative to other behaviors and actions afforded by CMC. For instance, in
+reviewing the distinctiveness of instant messaging as a form of CMC Quan-Haase et al. (2005) note
+that, “the fact that the system creates visibility means that it also creates accountability and a means
+for monitoring.” Similarly, Vaast and Kagener (2013) examined references to different communication
+affordances in policies around social media in the workplace and found that mentions of persistence
+were interdependent with, and relevant because of, a recognition of the importance of visibility.
+We treat visibility as a root affordance of communication because it serves not merely to grow
+or amplify the presentation of communication, but also serves to limit, restrict, regulate, vary, and
+even manipulate communication in various ways. Fundamentally, when individuals are using CMC,
+the nature and meaning of that use is dependent upon the communication visibility in that context:
+We make judgements about the value of communication based on whether we feel we were meant to
+see a message (Walther et al., 2009), and we look at individuals’ visible online contributions to learn
+more about them prior to offline interactions (Gibbs, Ellison, & Lai, 2011). In each case, the value and
+usefulness of CMC stems from the ability of individuals to utilize its communication visibility to access
+or provide communication in distinct ways.
+
+J.W. Treem et a
+The Age of Communication Visibility
+
+Sociomateriality of CMC
+An advantage of the theory of communication visibility we propose is that it takes into account the
+role of the material features of technologies in making some communication more prominent and
+accessible than others, while also recognizing that we ascribe differential social and symbolic meanings
+to the ways in which individuals manage visibility (Orlikowski & Scott, 2008). A consequence of the
+sociomateriality of CMC is that individuals are implicated in a web of visibility regardless of whether
+
+enact communication processes. For instance, social media users often communicate with an “imagined
+audience” in mind that may view communication (boyd & Ellison, 2007; Litt, 2012). Research by
+Sergeeva et al. (2017) refers to the influence that third party actors exert on technology use (such as
+CMC) as the onlooker effect, where onlookers are actors who are not directly involved in technology use,
+but who are “exposed to traces of technology use” (p. 1154) and make inferences about the behavior of
+those using the technology. The onlooker effect then concerns the influence these third-party actors exert
+on users’ behavior through their—either explicit or implicit—presence (and inferences). Onlookers can
+directly influence user behavior by actively intervening in users’ activities, but often their influence is
+indirect—through users’ assumptions and inferences about third party actors’ presence and judgments.
+Leonardi (2014) offers a view of communication visibility in which the third-party effect plays a
+key role. Through a field study of the implementation of a new enterprise social networking site in
+a large financial services organization, he showed that previously invisible communication occurring
+between people in the organization became visible for third parties to see. Viewing the contents of others’
+messages helped these third-party observers to make inferences about coworkers’ knowledge domains
+and seeing the structure of coworkers’ communication networks helped workers make inferences
+about those with whom coworkers regularly communicated. Findings showed that this increase in
+communication visibility helped observers enhance their meta knowledge—knowledge of “who knows
+what” and “who knows whom” across the organization, which, in turn, led to more innovative products
+and services and less knowledge duplication as employees learned to work in new ways. Making
+communication visible to third parties made it possible for workers to learn vicariously by observing
+others communicate, but only when third parties made the effort to seek out, view, or engage with
+available communication.
+A clear example of this is provided by studies describing how users of enterprise social media adapt
+their behavior in terms of what they share (and do not share) on platforms because they are aware
+that their managers are able to see this communication (Gibbs et al., 2013; Oostervink, Agterberg &
+Huysman, 2016). Communicators make inferences about how these potential third-party audiences will
+see and judge their communication, and align their actual behavior with these inferred judgments.
+The use of CMC by third parties has been found in a variety of contexts including the evaluation
+of job applicants’ online activities (Berkelaar, 2014) and the assessment of individuals’ online dating
+profiles through a process of “social triangulation” (Gibbs et al., 2011). These behaviors are occurring in
+a context where the ease with which individuals can make communication visible through CMC makes
+it difficult for third parties to evaluate the credibility of information online (Donath, 2007). Given the
+ability of actors to manage what and how communication is made visible through CMC, third party
+observers may seek out additional communicative signals, and increasingly rely on communication not
+provided by the individual they are evaluating (Walther et al., 2009). The presence of third-parties means
+that communication visibility should be understood as part of a broader network of CMC in which
+the possibilities for the visibility of any one actor, message, or interaction are interdependent with the
+communicative acts of others.
+
+Accounting for temporality in communication visibility
+Temporality is implicated in all three dimensions of communication visibility recognizing that the
+nature of online communication shifts over time as material is published, deleted, aggregated or
+obscured, but also in its social meaning as practices become more or less acceptable and the nature
+of participants changes. In examining communication visibility one can look at single dimension over
+time and evaluate changes in actors’ behaviors, observers’ evaluations, or the material state of a CMC
+context (i.e., how contributions to an online community develop over time). Alternatively, questions of
+temporality can intersect multiple dimensions and interrogate how different aspects of communication
+visibility are interrelated or co-evolve. One example of this is research on context collapse which explores
+how the meaning of CMC can change across time as communication becomes potentially visible to
+new groups of actors (Marwick & boyd, 2010; Vitak, 2012). Temporality is key to communication
+visibility in CMC in that the prolonged, persistent, and often public availability of communication
+represents a key distinction from other forms of interaction. This persistence allows for the development
+and maintenance of communities and a CMC context that can evolve beyond the limits of time and
+space (Hampton, 2015; Mynatt, O’Day, Adler, & Ito, 1998). Moreover, this persistence can help develop
+common ground among interaction partners (Gergle, Millen, Kraut, & Fussell, 2004) and make it
+more difficult for individuals to manage efforts at self-presentation (Vitak & Kim, 2014). Incorporating
+temporality into questions of communication visibility is critical to evaluating changes or differences in
+
+or not they are actively seeking to manage the visibility of their communication within CMC. Type
+in someone’s name in a search engine, and results will likely appear whether they provided content
+or not. Theorizing CMC in terms of communication visibility offers us a way to compare practices
+and purposeful (or accidental) actions and outcomes across both technologies and contexts. Questions
+related to communication visibility are not bound to any particular platform or time, but are a product
+of distinct sociomaterial conditions that influence individuals’ abilities to make communication more
+or less visible, and the associated consequences of those acts.
+One example of how embracing the sociomaterial nature of communication visibility can alter
+the study of CMC is in our understanding of impression management. Goffman’s (1969) seminal and
+influential dramaturgical framework of impression management was specifically developed to examine
+interaction that takes place among co-present individuals. With copresence the visibility of communication is rather straightforward and materially bound to the setting in which the action takes place (e.g.,
+frontstage and backstage). CMC complicates impression management both by making communication
+potentially visible to far more individuals than those present at the time of an interaction, and by
+offering individuals ways to materially manipulate communicative performances (Gibbs et al., 2013;
+Oostervink et al., 2016). Thus, efforts at impression management must be understood as intertwined
+with the sociomaterial affordances of the CMC technologies used to produce the communication, and
+the sociomaterial conditions under which performances are viewed (Pinch, 2010).
+CMC scholars must move beyond Goffman’s dramaturgical metaphor in describing the ways in
+which individuals approach self-presentation and how observers evaluate the performances of individuals. Treating social interaction as occurring on a particular stage is not as meaningful or instructive
+when the play has no ending, the theater has no walls, the stage has no boundaries, and the audience
+is an ever-changing sea of millions of known and unknown accounts, avatars, and automated agents.
+CMC scholarship needs to broaden its consideration of the different elements—some related to the
+features of technologies and others related to strategic use of platforms—that influence the ways in which
+individuals knowingly and unknowingly present communication across mediated contexts.
+
+J.W. Treem et al
+
+
+CMC, which is particularly important given the pace with which new technologies, tools, and platforms
+evolve.
+
+Recentering CMC scholarship around issues of communication visibility
+
+Though communication visibility has always been relevant to the study of CMC, recognizing the
+multidimensional nature of the concept offers opportunities to consider how to extend or reimagine
+communication visibility. For instance, social influence theory (Schmitz & Fulk, 1991) argues that
+individuals understand the meaning of technologies and make decisions about use based on interactions
+with and observations of peers. However, this theory is largely based on empirical investigations of
+organizational settings or contexts in which individuals are being introduced to unfamiliar forms
+of CMC and views regarding communication visibility are developed through initial use. Recently,
+scholars have recognized that decisions about the use of technologies at work are complicated by the
+widespread availability of CMC outside organizations, and that decisions related to communication
+visibility may operate very differently in work and non-work contexts (Treem et al., 2015). The ubiquity
+of communication visibility in social life requires us to broaden the potential sources of social influences
+on CMC use.
+Alternatively, the literature on warranting in CMC contexts demonstrates that individuals assess
+the information contained in communication from third parties on social networking sites as more
+credible compared to when individuals provide information about themselves (Walther et al., 2009).
+The reason that warranting theorists give for this finding is that third-party communication is less
+prone to manipulation—and viewers of communication know it. This is consistent with evidence
+showing that if a person knows that familiar others may be able to view his or her online material,
+they are less likely to provide deceptive communication (Toma, Hancock, & Ellison, 2008). DeAndrea
+(2014) has noted that research is needed to consider the ways individuals assess whether, and how,
+visible communication is open to manipulation by communicators and the ways in which this shapes
+communicative and evaluative practices. Put differently, each dimension of communication visibility
+(i.e., the ease with which one can produce, access, or alter communication online) may influence whether
+visible communication is seen as credible and trustworthy.
+Another example can be found in the application of communication privacy management (CPM)
+theory (Petronio, 1991, 2002) to CMC settings. CPM provides a framework for understanding why individuals reveal or conceal information with others, and proposes that people develop personal rules and
+boundaries regarding information disclosure, and when others violate those rules it creates turbulence
+and uncertainty regarding boundaries. Scholars have extended CPM to a variety of CMC contexts such
+as blogs (Child, Pearson, & Petronio, 2009) and Facebook (Child & Westermann, 2013), and confirmed
+that individuals do indeed have clear privacy expectations that can help predict information disclosure
+behaviors. However, there is also evidence that the third-party effect of contemporary CMC tools may
+be increasing the amount of boundary turbulence individuals experience, that skill in navigating the
+features of CMC can help mitigate the likelihood of experiencing privacy violations, and that unwelcome
+disclosures are often linked to the behaviors of unauthorized third parties (Litt & Hargittai, 2014).
+These findings indicate that changes in communication visibility in CMC may facilitate a greater divide
+between individuals’ desire for distinct privacy boundaries and the ability to manage visibility in a
+manner that retains those boundaries.
+A theory of communication visibility offers an opportunity to revisit a number of existing frameworks for understanding CMC and ask if they should be extended, adapted, or evolved to better
+represent fundamental changes in the ways communication can be made visible in CMC, or our
+
+The Age of Communication Visibility
+
+J.W. Treem et al
+
+differential abilities to manage that visibility. In an effort to present an agenda for how a theory of
+communication visibility can provide novel insights into CMC we offer three broad areas of inquiry
+for ongoing research.
+
+A great deal of CMC scholarship has focused on ways that individuals evaluate the credibility of
+information and messages provided online (DeAndrea, 2014; Flanagin & Metzger, 2007), or how CMC
+might facilitate deceptive communication practices (Hancock, 2007; Hancock, Toma, & Ellison, 2007).
+A common approach in this line of research is to examine how individuals assess a particular form of
+communication in a particular context of CMC use. However, one limitation of this area of work is that
+it often examines the evaluations of those assessing communication, and the intentions and behaviors
+of those producing communication as both separate and bound to a single context. This produces
+knowledge about the ways particular forms of information are viewed as credible or honest, but provides
+limited insight into the assumptions and perceptions about the visible communication that lead to these
+judgments.
+Centering communication visibility reminds us how many forms of CMC operate as technologies
+of accountability—meaning that they both create a visible record of use by individuals, and produce
+communication that individuals are then accountable for in assessments by others (Dourish, 2001;
+Suchman, 1994). For instance, when an individual—whether a public figure or not—is involved in a
+newsworthy event, it has become commonplace for the media to examine his or her previous online
+activity. This practice can surface communication going back years that individuals must now justify, or
+explain, to others. However, the production and distribution of CMC is no longer limited to those with
+access to exclusive resources, technical knowledge, or social standing. The ubiquity of CMC tools and
+the low cost of producing and reproducing information goods, means that individuals can participate
+in visible CMC—as producers or observers—for little cost (Benkler, 2006). Broadly, this means that talk
+on CMC is cheap to produce and visibility alone can no longer serve as an effective proxy for effort or
+ability, thereby necessitating a reconsideration of how individuals evaluate the value of communication.
+
+How do we manage the visibility of our CMC activities and identities?
+CMC greatly increases the opportunities individuals have to perform identities across various contexts and to potential audiences (Hogan, 2010). However, this possible visibility poses challenges as
+individuals are faced with choices regarding how to manage presentations in an environment where
+communication is increasingly accessible to new groups of individuals who might not otherwise interact
+(Marwick & boyd, 2010). Yet the expansion of opportunities to make communication more or less
+visible across contexts is coupled with ambiguity regarding the ways in which CMC is used in conveying
+different social identities.
+An example of this visibility management is demonstrated by Berkelaar’s (2014, 2017) research
+on cybervetting and online self-presentation, which examines how employers use information visible
+on CMC platforms to make assessments about prospective employees and, in turn, how employees
+manage online identities with the knowledge that organizations will be seeking and reviewing their
+activities. She finds that organizations view it as both a right and responsibility to review online
+information about employees. The strategies prospective employees use to manage identities online
+are tied directly to how individuals approach the nature of visibility related to online information.
+For instance, individuals who are worried about online activities being visible will attempt to avoid
+
+How do we interpret communication that is or is not visible?
+
+J.W. Treem et al
+
+The Age of Communication Visibility
+
+How do shifts in socio-material environments alter the meaning and
+meaningfulness of communicative visibility?
+Taking communication visibility seriously means examining the different, and interrelated, social and
+material influences that shape individuals’ abilities to make communication more or less visible in CMC,
+and third parties’ abilities to find, view, and influence communication (Leonardi, 2012; Orlikowski &
+Scott, 2008). Materially, the features of CMC tools, applications, and platforms enable and constrain
+different ways of making communication visible, such as the way Snapchat messages are ephemeral
+(Bayer, Ellison, Schoenebeck, & Falk, 2015). Socially, the meaning of CMC use can shift over time
+and context along with changes in technological acceptance and social norms. An example of this
+sociomaterial shift can be seen in the evolution of social networking sites; communication on Friendster,
+MySpace, LinkedIn, and Facebook has varied significantly in visibility and associated meaning over
+the past two decades (boyd & Ellison, 2007). As the nature of use of social networks changed over
+time (i.e., Facebook evolved from a social networking site only available to those affiliated with elite
+U.S. universities to a publicly available, global environment) the meaning of communicating visibly
+through these CMC platforms has shifted substantially. Furthermore, as new CMC tools emerge
+they may cause us to rethink the role and relevance of communication visibility in communication
+processes. For example, study of the use of Snapchat among college students found that the ephemerality of messages was attractive to those hoping to share contemporaneous experiences with peers
+(Bayer et al., 2015).
+The sociomaterial nature of communication visibility through CMC is also evident in the ways
+different platforms are used to facilitate organizing and sustain organizations. For instance, scholars have
+noted that social media contexts and CMC that allow people to manage privacy, facilitate anonymity,
+and limit access to spaces can serve to support clandestine or hidden organizations (Scott, 2013; Stohl
+& Stohl, 2011). Moreover, the volume of communication visible across CMC contexts means that
+individuals and organizations may be able to hide material in plain sight such that communication is
+accessible, but difficult to sort through, translate, or understand (Flyverborn, Stohl, Stohl, & Leonardi,
+2016). As different CMC becomes associated with various user groups and forms of participation, it will
+be important to take seriously how different platforms operate as legitimate spaces for communication
+(e.g., Hargittai, 2007).
+
+Future directions for the study of communication visibility on CMC
+Accounting for non-visible forms of participation in CMC
+The growth and relevance of third parties capable of viewing communication through CMC means
+researchers must take non-visible forms of participation more seriously. For instance, the vast majority
+of participants on social media platforms are lurkers, who are commonly defined as invisible participants
+in CMC, people who may read and access what is communicated on a CMC platform but do not
+visibly contribute to this communication (Cranefield, Yoong & Huff, 2015). Although lurkers are often
+
+any recorded behaviors; individuals who assume that all communication is visible will put little effort
+into managing their visibility, and others will strategically curate the types of communication that are
+visible in an attempt to garner a desired perception. Additional empirical research is needed to examine
+the specific communicative strategies individuals use to convey desired identities in different CMC
+contexts, why particular strategies proliferate, and how they relate to evaluations of individuals and
+communicative acts.
+
+The Age of Communication Visibilit
+Seeking disjunctures that trigger questions of visibility
+Given the scope and ubiquity of CMC it may be difficult for researchers to find appropriate contexts and
+entry points for research. One avenue is to look for opportunities where the visibility of communication
+through CMC might be disrupted, altered, or shifted. This could come from changes in the material
+features of technologies, such as the privacy settings of social networking sites (e.g., Debatin, Lovejoy,
+Horn, & Hughes, 2009). Alternatively, potential changes in visibility could emerge from ways that
+users appropriate and alter different CMC tools, like the ways Twitter users adopted the @ symbol
+to facilitate conversations (Honeycutt & Herring, 2009). Another possible opportunity for research on
+communication visibility is when organizations make policy changes regarding the use of CMC that
+makes communication more or less visible for members. For example, Leonardi and Treem (2012)
+examined how an organization altered the use of a knowledge management tool in a manner that made
+previously private information visible among coworkers, and found that this shift triggered strategic
+sharing of communication among group members. Seeking potential disruptions in the communication
+visibility of CMC is one way researchers can identify contexts for study beyond focusing on a specific
+technology or platform.
+
+Looking at communication visibility as a multimodal construct
+CMC scholars have long recognized that individuals often use multiple forms of communication
+sequentially, simultaneously, and complementarily in pursuit of communicative goals (Reinsch Jr.,
+Turner, & Tinsley, 2008; Stephens et al., 2008). However, researchers tend to confine studies to
+communication on a single CMC platform or context, making it difficult to develop more generalizable
+theory and leading to empirical findings that are quickly outdated when technologies shift (Baym, 2009).
+For example, a significant majority of studies of social networking sites limit their analysis to use of
+Facebook (Rains & Brunner, 2014). Scholars should look at a broader range of strategies and spaces
+
+conceptualized as inactive or silent participants, even free riders (Kollock & Smith, 1996; Preece,
+Nonnecke & Andrews, 2004), recent research emphasizes that lurking is contextual (i.e., lurkers in
+one community may be very active participants in another one), a very frequent activity, and that
+lurkers actually derive tremendous value from witnessing others’ communication (Arnold & Paulus,
+2010; Cranefield et al. 2015; Ridings, Gefen & Arinze, 2006). Thus far, however, research has paid little
+attention to the influence these lurkers, as third-party actors, exert on the communication taking place
+on CMC platforms. A theory of communication visibility offers a way to broaden our study of CMC to
+consider technology non-use (i.e., lurkers, private accounts, those who opt out) (Baumer, Burell, Ames,
+Brubaker, & Dourish, 2015). Given the interdependence of communication visibility within and across
+contexts it is important to broaden our analysis beyond only active, visible users.
+Studying technology non-use may require methods that are uncommon in studies of CMC. Visible
+communication on CMC is attractive to researchers because it is easily accessible and can be aggregated
+and analyzed through a variety of software tools. However, it is important for scholars to pursue data
+regarding a broader scope of CMC participation including information regarding what communicators
+view or access without actively contributing or interacting with one another. Additionally, observational
+research of CMC use can help document the ways in which individuals edit, revise, and self-censor
+communication before making decisions regarding what to make visible to others. Additionally, scholars
+observing CMC activity can examine how individuals seek out and utilize visible information prior to
+engaging in interactions. These research methods will broaden the set of actors and behaviors examined
+in CMC scholarship
+
+J.W. Treem et al
+
+The Age of Communication Visibility
+
+used to make CMC visible, and how individuals view the interactions and interdependence among these
+spaces.
+
+Conclusion
+
+Note
+1 The three-dimensional model used here is inspired by the three-dimensional model of expertise
+found in Collins (2011).
+
+We propose that scholarship has not sufficiently focused on the multidimensional relationship between
+CMC and the visibility of communicative practices and content. CMC scholarship needs to grapple with
+a fundamental paradox that has emerged: People can make communication more visible in more ways
+than in any time in history, yet they have far less control over how (and by whom) that communication
+is viewed. It is not surprising, then, that much of the scholarship on how CMC alters communication
+visibility characterizes the various contradictions, tensions, conflicts, and complexity present (Gibbs
+et al., 2013; Hardimos, 1997; Oostervink et al., 2016). We believe that the paradoxes inherent in the
+communication visibility of CMC are a feature, not a bug, and we encourage scholars to engage more
+deeply and directly with the issues surrounding this construct. The multidimensional framework we
+have provided in this article should help scholars begin studying these important questions in ways that
+will improve our theorizing about the role of CMC in this emerging age of communication visibility.

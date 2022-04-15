@@ -1,0 +1,1673 @@
+horticulturae
+Review
+
+Plant Tolerance to Drought Stress in the Presence of Supporting
+Bacteria and Fungi: An Efficient Strategy in Horticulture
+Agnieszka Hanaka 1, * , Ewa Ozimek 2 , Emilia Reszczyńska 1 , Jolanta Jaroszuk-Ściseł 2 and Maria Stolarz 1
+
+Citation: Hanaka, A.; Ozimek, E.;
+Reszczyńska, E.; Jaroszuk-Ściseł, J.;
+Stolarz, M. Plant Tolerance to
+Drought Stress in the Presence of
+Supporting Bacteria and Fungi: An
+Efficient Strategy in Horticulture.
+Horticulturae 2021, 7, 390. https://
+doi.org/10.3390/horticulturae7100390
+Academic Editor: Alessandra
+Francini
+
+Department of Plant Physiology and Biophysics, Faculty of Biology and Biotechnology,
+Institute of Biological Sciences, Maria Curie-Skłodowska University, Akademicka 19, 20-031 Lublin, Poland;
+emilia.reszczynska@umcs.pl (E.R.); maria.stolarz@umcs.pl (M.S.)
+Department of Industrial and Environmental Microbiology, Faculty of Biology and Biotechnology,
+Institute of Biological Sciences, Maria Curie-Skłodowska University, Akademicka 19, 20-031 Lublin, Poland;
+ewa.ozimek@umcs.pl (E.O.); jolanta.jaroszuk-scisel@umcs.pl (J.J.-Ś.)
+Correspondence: agnieszka.hanaka@umcs.pl
+
+Abstract: Increasing temperature leads to intensive water evaporation, contributing to global warming and consequently leading to drought stress. These events are likely to trigger modifications
+in plant physiology and microbial functioning due to the altered availability of nutrients. Plants
+exposed to drought have developed different strategies to cope with stress by morphological, physiological, anatomical, and biochemical responses. First, visible changes influence plant biomass and
+consequently limit the yield of crops. The presented review was undertaken to discuss the impact of
+climate change with respect to drought stress and its impact on the performance of plants inoculated
+with plant growth-promoting microorganisms (PGPM). The main challenge for optimal performance
+of horticultural plants is the application of selected, beneficial microorganisms which actively support plants during drought stress. The most frequently described biochemical mechanisms for plant
+protection against drought by microorganisms are the production of phytohormones, antioxidants
+and xeroprotectants, and the induction of plant resistance. Rhizospheric or plant surface-colonizing
+(rhizoplane) and interior (endophytic) bacteria and fungi appear to be a suitable alternative for
+drought-stress management. Application of various biopreparations containing PGPM seems to
+provide hope for a relatively cheap, easy to apply and efficient way of alleviating drought stress in
+plants, with implications in productivity and food condition.
+Keywords: climate change; drought stress; biopreparations; plant stimulation; plant growth-promoting
+microorganisms
+
+Received: 1 September 2021
+Accepted: 5 October 2021
+Published: 11 October 2021
+
+Publisher’s Note: MDPI stays neutral
+with regard to jurisdictional claims in
+published maps and institutional affiliations.
+
+Copyright: © 2021 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+
+1. Introduction
+The horticulture system is affected by various abiotic and biotic stresses which directly
+and indirectly influence soil fertility, plant health and crop yield [1–3]. These stresses result
+in the loss of soil microbial diversity, soil fertility and availability of nutrients [4]. The
+condition of the soil under drought strictly corresponds to plant performance, showing
+consequences in plant morphology, anatomy, physiology, and biochemistry. With reduction
+in seed germination and seedling growth, plant height, nutrition and biomass are weakened
+resulting in yield limitation. The huge variety of changes taking place in horticultural
+plants and the mechanisms of counteracting stress they produce result from a very wide
+range of horticultural plant species, including types of crops such as those distinguished
+by the International Society for Horticultural Science (ISHS): (1) tree, bush and perennial
+fruits, (2) perennial bush and tree nuts, (3) vegetables (roots, tubers, shoots, stems, leaves,
+fruits and flowers of edible and mainly annual plants), (4) medicinal and aromatic plants,
+(5) ornamental plants, (6) trees, shrubs, turf and ornamental grasses propagated and
+produced in nurseries for use in landscaping or for establishing fruit orchards or other
+crop production units [5]. Facing the current, rapid climate changes, the cultivation of
+
+plants is strongly affected by abiotic stresses, which additionally intensify the influence of
+biotic factors such as pests causing serious plant infections [4]. In this dramatic situation,
+plant associations with rhizospheric [6,7] and endophytic [8,9] microorganisms colonizing
+the rhizoplane, rhizosphere and plant tissues should be considered as the main stress
+relievers [10–14]. Three types of effects of microorganisms associated with plants are
+distinguished: beneficial, deleterious and neutral ones. Based on the positive effects of
+microbes, two main groups are listed, plant growth-promoting rhizobacteria (PGPR) or
+more generally, plant growth-promoting bacteria (PGPB) and plant growth-promoting
+fungi (PGPF) [14–19]. All mentioned groups of microorganisms can serve as biocontrol
+agents, biofertilizers, phytostimulators and phytoremediators [2,12,20–22].
+The most frequently described biochemical mechanisms of plant protection against
+drought by microorganisms are the production of phytohormones, antioxidants and xeroprotectants [23]. Trehalose can act as xeroprotectant triggering the plant-defense system to
+counteract the damage caused by drought. It has been shown that microorganisms with
+tolerance to desiccation have the ability to protect some plants from drought. It seems to
+be dependent on the microorganism’s ability to regulate the concentration of trehalose in
+the plant as a signal of drying damage.
+In horticultural production, plant–microbe interactions should be considered the main
+factor of plant growth, protection against abiotic stresses and resistance against adverse
+conditions [24,25] (e.g., in arid and semiarid areas), and these interactions could also be
+beneficial in alleviating drought stress in plants [26]. Profound knowledge about the
+mechanisms of plant–microbe interactions can offer several strategies to increase plant
+productivity in an environmentally friendly manner [27]. Therefore, in the increasing
+market for plant growth-promoting products, it is important to develop a successful
+strategy for microorganism screening [28]. Furthermore, the European Green Deal (EGD),
+provided by the European Commission in December 2019, is currently focused on the
+application of natural products in agriculture and horticulture instead of chemical plantprotection products. To cope with this idea, new efficient biological ingredients in the face
+of changing climate are desired. Nowadays, the most significant consequence of climate
+change is drought stress [29].
+To deal with severe drought stress in the near future, it is strictly necessary to determine the interactions, mechanisms and signaling pathways responsible for increased
+drought tolerance in terrestrial organisms. The concept of drought and water deficit is
+difficult to define, but the literature data [30–32] indicate that drought can be defined as a
+state of the total water capacity being within the range of 12–20% for a period of 16 days.
+Moreover, the drought state can achieve at least two degrees—mild and severe [33]—while
+the water deficit [34] refers to the state of water capacity falling below 30%. To handle the
+drought effect, plants can be supported by both microorganisms inhabiting the rhizoplane
+(i.e., those adhering to the surface of the roots) and rhizosphere (i.e., living at a further distance within the root secretions) [34,35], as well as endophytic microorganisms inhabiting
+the inside of the root [36]. The application of plant growth-promoting microorganisms
+seems to provide hope for a cheap, easy to apply and efficient way of alleviating drought
+stress in plants with implications in productivity and food condition. The presented review
+was undertaken to discuss the impact of climate change with respect to drought stress, and
+to emphasize that modifications in microorganisms composition and their traits should
+indicate new solutions in the search for efficient compounds of biopreparations supporting
+plant growth.
+2. Climate Change
+Global climate change is expected to be considerably critical over the century, leading
+to influences on various parameters of the environment [17]. Not only atmospheric CO2
+concentrations derived from natural and anthropogenic sources, but also surface temperatures will be increasing gradually, likely from 1.0 to 5.7 ◦ C by the end of this century [37].
+Moreover, some regions, such as the Eastern Mediterranean and Middle East (EMME),
+
+have been classified as a climate “global hot-spot”. In the EMME, the temperature is
+predicted to increase from 3.5 to 7 ◦ C by the end of the century [38]. Additionally, it is
+anticipated that rising air temperatures will increase the frequency of extreme weather
+disasters such as heat waves, drought and heavy precipitation occurrence to a level that
+has never been monitored before [37]. These strongly temperature-dependent climate
+changes, combined with water scarcity, will lead to enhanced drought throughout the
+globe, hurting whole ecosystems and different organisms, including the distribution of
+plants and microorganisms [17].
+In climate studies, calculations concerning crop evapotranspiration are also important [17]. For instance, in South East Europe, the mean annual crop evapotranspiration
+in the period 1991–2020 reached from 56 mm to 1297 mm, while averages for the future
+30 years (between 2021 and 2050), are expected to vary from 59 mm to 1410 mm [17]. These
+predictions consider the impact of future climate warming. Global warming increases
+water evaporation and consequently leads to drought stress [39]. High temperature is the
+crucial factor in melting glaciers and increasing the sea level [8]. The changes in polar and
+subpolar climate zones also correspond with climate warming [40–42].
+Climate change results in altered environmental conditions and negative effects on
+natural ecosystems, which are likely to trigger modifications in plant physiology [43] and
+microbial functioning [44] based on the availability of nutrients [4] or signal compounds [2].
+It is certain that not only plants, but also plant-associated microorganisms might be remarkably changed in abundance, diversity and activity [44,45]. Both increased temperature and
+drought may activate correspondent adjustments in plants and microorganisms and their
+mutual interactions [17]. The adaptational challenges of horticultural plants are not only
+associated with long-term average climate change, but also with the short-term changes
+driven by weather extremes and interannual fluctuations [46]. Drought-related cereal
+production losses are increasing by more than 3% yr−1 [46]. In the face of the continuous raise of the world population to an estimated nine billion by 2050 [47], withstanding
+drought stress according to sustainable agriculture/horticulture is a challenge for the 21st
+century [48].
+3. Plants under Drought Stress
+Drought is an uncontrolled stress which affects almost all stages of plant growth and
+development directly or indirectly [43]. Most of the drought effects on plants are associated
+with high temperature. Physiological processes occur mostly in temperatures ranging from
+0 ◦ C to 40 ◦ C. However, the optimal temperatures for the different stages of growth and
+development are narrower and strongly depend on the species and ecological origin [1,49].
+Plants exposed to drought stress develop numerous responses in different areas, from
+morphological and physiological mechanisms to anatomical and biochemical or molecular
+ones [1,39,50] (Figure 1).
+Four types of morphological and physiological response strategies to drought stress
+are highlighted, i.e., tolerance, avoidance, escape and recovery [51] (Figure 2). Tolerance is
+defined as the plant’s ability to resist dehydration using osmoprotectants [52]. Avoidance is
+based on the undisturbed occurrence of physiological processes (such as stomata regulation,
+root system development). Escape is the adjustment of the plant’s life cycle by shortening
+of the life cycle to avoid drought stress. Recovery is the ability of a plant to restart growth
+after the exposure to the extreme drought stress [53].
+The morphological features of drought stress include limited seed germination and
+seedling growth, reduced size, area and number of leaves, restricted number of stomata,
+reduced number of flowers, disturbed stem and root elongation, impaired plant height,
+growth, development and yield, and reduced fresh and dry biomass [7,39,50].
+
+re 1. Some morphological, anatomical, physiological and biochemical plant responses to drought stress (modifie
+asis of [1,39,50]).
+
+Four types of morphological and physiological response strategies to droug
+are highlighted, i.e., tolerance, avoidance, escape and recovery [51] (Figure 2). T
+is defined as the plant’s ability to resist dehydration using osmoprotectants [52
+ance is based on the undisturbed occurrence of physiological processes (such as
+regulation, root system development). Escape is the adjustment of the plant’s life
+shortening of the life cycle to avoid drought stress. Recovery is the ability of a
+restart growth after the exposure to the extreme drought stress [53].
+Figure
+Some morphological,
+anatomical,
+physiological and
+and biochemical
+plant
+responses
+to drought
+stress (modified
+on
+Figure 1.
+Some1. morphological,
+anatomical,
+physiological
+biochemical
+plant
+responses
+to drought
+stress (modified
+on
+the
+basis
+of
+[1,39,50]).
+the basis of [1,39,50]).
+
+Four types of morphological and physiological response strategies to drought stress
+are highlighted, i.e., tolerance, avoidance, escape and recovery [51] (Figure 2). Tolerance
+is defined as the plant’s ability to resist dehydration using osmoprotectants [52]. Avoid
+ance is based on the undisturbed occurrence of physiological processes (such as stomata
+regulation, root system development). Escape is the adjustment of the plant’s life cycle by
+shortening of the life cycle to avoid drought stress. Recovery is the ability of a plant to
+restart growth after the exposure to the extreme drought stress [53].
+
+Figure 2. Response strategies to drought stress (modified on the basis of [1,39,50,51]).
+
+Figure 2. Response strategies to drought stress (modified on the basis of [1,39,50,51]).
+
+The morphological features of drought stress include limited seed germina
+seedling growth, reduced size, area and number of leaves, restricted number of
+
+In order to adapt to the adverse environment, avoid drought and improve water
+availability, plants increase the root length and their number [54]. Drought significantly
+affects the plant’s cell elongation and division, its growth and its development, which is
+mainly caused by the reduction in cellular differentiation, plant growth and yield [50]. The
+negative effect on the leaf area under the drought condition could be dependent on the
+reduction in the leaf number, size and longevity, combined with temperature, leaf turgor
+pressure and assimilation rate [55]. The reduction in plant height and shoot dry weight
+results in a lower quality of yield [54].
+The morphological responses are most frequently combined with anatomical changes
+in plants exposed to drought, e.g., thickening of cell walls, increased cuticle layer on the
+leaf surface and improved development of vascular tissues [8,56]. Drought stress results
+in anatomical changes in the lower and upper epidermis, mesophyll tissue and vascular
+bundle diameter of leaves [57]. The negative anatomical effects on the leaves are based on
+a shortage of water supply from the soil, limitations in nutrients uptake, and reduction
+in photosynthetic rate. Plant hydraulic conductivity is modulated during drought stress
+leading to the disruption of water flow in the xylem vessels (embolism) or modifications in
+the vessel size and function [58]. Consequently, the reduced water flow from the root to
+the shoot causes stomatal closure and transpiration disruption [50].
+Drought affects the physiological traits such as the leaf relative water content and
+water potential, stomatal conductance, transpiration and photosynthetic rates [59,60].
+Reduced water content and water conductivity are responsible for the loss of turgidity and
+limited stomatal conductance resulting in restricted gaseous exchange (the rate of carbon
+assimilation) [8,61]. Furthermore, climatic conditions, e.g., higher temperature, drought
+and soil aeration reduce the movement of nutrients in the soil, their uptake by roots and
+transport in plant tissues [62].
+Photosynthesis can be disrupted through the modulation of the electron transport
+chain and can increase the rate of biochemical reactions catalyzed by different enzymes.
+Above a certain temperature threshold, enzymes lose their function, influencing the plant
+tissue tolerance to drought [1,63,64]. Drought stress also affects the translocation of nutrients and the composition of minerals, antioxidants and proteins [39,52]. Under stress
+conditions, reactive oxygen species (ROS) are highly generated [65,66] causing cell damage
+and plant necrosis [67]. Additionally, plant hormones and primary and secondary metabolites are modified [1]. Drought is the elicitor that can increase the content of secondary
+metabolites in plant tissues such as flavonoids, phenolics or more specific molecules, e.g.,
+glycosides and alkaloids [68,69].
+Crosstalk between drought and salinity stresses results in secondary stresses such as
+oxidative and osmotic ones [66]. Drought stress is a major agricultural problem worldwide and almost all of the main agricultural lands are affected by drought stress. The
+potential mechanisms of drought tolerance include: (1) production of phytohormones
+(such as indole-3-acetic acid (IAA), cytokinins and abscisic acid (ABA)) (2) synthesis of exopolysaccharides (3) activity of 1-aminocyclopropane-1-carboxylic acid (ACC) deaminase
+(4) induced systemic tolerance [66,70].
+4. Mechanisms of Resistance in Plants
+Plants are capable of defending themselves against numerous stress factors, both
+biotic and abiotic ones, by activating very effective pathways of immunity (Figure 3).
+
+Figure 3. Immune response of plants against stress factors (modified on the basis of [71,72]); PAL—phenylalanine ammonia-
+
+Figurelyase;
+3. Immune
+response
+of plants against
+stress factors
+the basis ofacquired
+[71,72]);resistance;
+PAL—phenylalanine
+TAL—tyrosine
+ammonia-lyase;
+ISR—induced
+systemic(modified
+resistance, on
+SAR—systemic
+JA—jasmonic ammonia-lyase;
+TAL—tyrosine
+ammonia-lyase;
+ISR—induced
+systemic
+resistance,
+SAR—systemic
+acquired
+resistance; JA—
+acid; ET—ethylene; SA—salicylic acid; PR proteins—pathogenesis related proteins.
+jasmonic acid; ET—ethylene; SA—salicylic acid; PR proteins—pathogenesis related proteins.
+The plant might acquire resistance against phytopathogenic infection due to the induction of plant defense responses driven by the very wide range of interactions with
+The plant might acquire resistance against phytopathogenic infection due to the in
+above- and below-ground microorganisms [6,73,74]. Several microbial species have disduction
+of plant defense responses driven by the very wide range of interactions wit
+played plant-priming phenomena. The priming process of plants is typically known in
+aboveand
+below-ground
+Several microbial
+induced systemic
+resistancemicroorganisms
+(ISR) and systemic[6,73,74].
+acquired resistance
+(SAR), andspecies
+microbe-have dis
+played
+plant-priming
+phenomena.
+The priming
+process
+ofisplants
+is typically
+associated
+molecular pattern
+(MAMP)-triggered
+immunity.
+ISR
+mediated
+through theknown i
+involvement
+of
+phytohormones,
+e.g.,
+ethylene
+(ET)
+and
+jasmonic
+acid
+(JA),
+and the
+de-microbe
+induced systemic resistance (ISR) and systemic acquired resistance (SAR),
+and
+fense
+responses
+against
+phytopathogenic
+microorganisms
+are
+activated
+very
+quickly.
+SAR
+associated molecular pattern (MAMP)-triggered immunity. ISR is mediated through th
+and MAMP-triggered immunity are induced as a first line, and unlike ISR, they utilize
+involvement of phytohormones, e.g., ethylene (ET) and jasmonic acid (JA), and the de
+salicylic acid (SA) as signal substance of the plant resistance pathways [6,73,74]. The
+fense
+responses against
+phytopathogenic
+microorganisms
+activated
+SA
+nonpathogenic
+microorganisms
+and various
+organic elicitors, are
+mainly
+derivedvery
+fromquickly.
+miandcroorganisms,
+MAMP-triggered
+immunity
+are
+induced
+as
+a
+first
+line,
+and
+unlike
+ISR,
+they
+utiliz
+act by inducing systemic acquired resistance (SAR) [75]. To elicit defense
+salicylic
+acidin(SA)
+as signal
+substancesecrete
+of theseveral
+plant resistance
+pathways
+[6,73,74].
+responses
+plants,
+microorganisms
+molecules such
+as antibiotics
+(i.e.,The non
+2,4-diacetylphloroglucinol,
+phenazines
+synthesized
+by
+Pseudomonas
+species,
+and
+cyclic
+pathogenic microorganisms and various organic elicitors, mainly derived from microo
+lipopeptides
+such
+as surfactin,
+synthesized
+by Bacillus
+strains),(SAR)
+volatiles,
+quorum-sensing
+ganisms,
+act by
+inducing
+systemic
+acquired
+resistance
+[75].
+To elicit defense re
+signals (N-acyl homoserine lactone of Gram-negative bacteria), proteins and small lowsponses in plants, microorganisms secrete several molecules such as antibiotics (i.e., 2,4
+molecular weight compounds [6]. Natural bioactive compounds of microbial, Protist or
+diacetylphloroglucinol,
+phenazines
+synthesized
+by Pseudomonas
+species,
+and cycl
+plant origins with the ability
+to protect plants
+against phytopathogens
+can have
+fungicidal
+lipopeptides
+such
+as
+surfactin,
+synthesized
+by
+Bacillus
+strains),
+volatiles,
+quorum-sensin
+effects (can kill pathogens) or fungistatic effects (can limit development of phytopathogens),
+as well
+as being
+able to induce
+plant defense
+reactions as elicitors
+[71,76].
+Everyand
+factor
+signals
+(N-acyl
+homoserine
+lactone
+of Gram-negative
+bacteria),
+proteins
+small low
+(physical,
+chemical,
+biotic,
+abiotic
+and
+their
+mixture)
+that
+induces
+plant
+immunity
+or
+stimumolecular weight compounds [6]. Natural bioactive compounds of microbial, Protist o
+lates
+the defense
+plant is plants
+called an
+elicitorphytopathogens
+and is defined depending
+on its
+plant
+origins
+withmechanisms
+the ability in
+to aprotect
+against
+can have
+fungicida
+origin and molecular structure [68]. MAMP-type molecules are exoelicitors of microbial
+effects
+(can
+kill
+pathogens)
+or
+fungistatic
+effects
+(can
+limit
+development
+of
+phytopatho
+origin. Pathogen-associated molecular pattern (PAMP)-type molecules are exoelicitors of
+gens),
+as wellorganism
+as being
+ableDamage/danger-associated
+to induce plant defensemolecular
+reactions
+as elicitors
+[71,76]. Ever
+pathogenic
+origin.
+pattern
+(DAMP)-type
+
+factor (physical, chemical, biotic, abiotic and their mixture) that induces plant immunit
+or stimulates the defense mechanisms in a plant is called an elicitor and is defined de
+pending on its origin and molecular structure [68]. MAMP-type molecules are exoelicitor
+of microbial origin. Pathogen-associated molecular pattern (PAMP)-type molecules ar
+
+molecules are endoelicitors of plant origin released during phytopathogen infection or produced under various stresses, [77–79]. Receptor proteins in the plasma membrane-pattern
+recognition receptors (PRRs) recognize particular molecular patterns of MAMP/PAMP
+and DAMP molecules [80,81]. The priming or PAMP-triggered, (PTI)-type local immunity,
+which arises in the absence of virulent pathogens, is due to the rapid onset of intracellularsignaling-pathway activation leading to a very fast and effective defense responses in the
+plant [82].
+In plants, a range of abiotic and biotic elicitors can strengthen tolerance to drought
+stress, including alginate-derived oligosaccharides, ketoconazole, 2-aminoethanol, ABA,
+brassinosteroids, and beneficial microorganisms such as Rhizobium strains, endo- and exomycorrhizal rhizospheric and endophytic nonpathogenic fungi. These elicitors reduced the
+content of monodehydroascorbate, prevented the accumulation of ROS, increased activities
+of antioxidant enzymes, and maintained fresh and dry weights, grain yield, and relative
+water content in a variety of plants in response to drought stress [83]. The term “induced
+systemic tolerance” (IST) has been suggested for PGPB-induced physical and chemical
+alterations that result in enhanced tolerance to abiotic stresses [70,84,85].
+5. Bacteria Supporting Horticultural Crops
+The most promising solution for the future of modern horticulture seems to be the
+skillful use of biopreparations in the conventional crops and not limiting their use to a
+narrow range of ecological or organic farming crops. Biopreparations include at least three
+types of products: (1) biocontrol, or biological plant protection inhibiting directly (antagonism, competition) or indirectly (defense responses) the growth of phytopathogenic fungi
+or bacteria and other pests such as insects and nematodes, (2) biostimulation, positively
+affecting the plant development, increasing the plant biomass and yield, and (3) biofertilization, which provides nutrients and enhances plant nutrient uptake [6,29,71], (Table 1).
+The components of these biopreparations are very diverse, ranging from various inoculum types of microorganisms (either single or consortia of endophytic bacteria, fungi and
+Protista strains belonging to the plant growth-promoting group), through to metabolites,
+including phytohormonal and hormonelike substances or parts of microorganism cells,
+to various metabolites and structural compounds derived from microorganisms, Protista
+and plants often acting as the plant resistance elicitors [6,86]. Interestingly, the components
+of biopreparations are composed in such a way that, while performing biocontrol, biofertilizer and biostimulant functions [87–91], they reduce the impact of stresses caused by
+the numerous and dynamically changing environmental factors. Among these factors are
+rapid shifts in the temperature and humidity leading to the formation of drought, which
+reduces the availability of nutrients.
+A very common approach is the isolation and application of active microorganisms to
+similar or the same plant and conditions, e.g., a Pseudomonas IACRBru1 strain isolated from
+Eruca versicaria (rucola) tissues improved Lactuca sativa (lettuce) biomass (up to 30%) [92].
+One of the critical steps for the successful application of microorganisms is their survival
+and development in the new environment. In drought-stressed soils, the highest efficiency
+of this inoculation could be achieved using drought-tolerant bacteria isolated from arid soils
+or drought-resistant plants [93–95]. Bacteria classified as Bacillus subtilis, Bacillus altitudinis,
+Brevibacillus laterosporus and Bacillus mojavensis were isolated from Cistanthe longiscapa, a
+plant native to Atacama Desert in Chile [94]. A consortium of these microorganisms, with
+various complementary properties such as phosphate solubilization, the ability to grow on
+N-free culture, IAA, ACC-deaminase, and exopolysaccharide (EPS) synthesis, were applied
+onto tomato seeds, improving seedlings growth under drought stress.
+
+Table 1. Selected activities of beneficial bacteria under drought-stress conditions in horticultural plant species; H—higher
+level/content; L—lower level/content; GPX—glutathione peroxidase; CAT—catalase; Chl—chlorophyll; RWC—relative
+water content; Fv/Fm—quantum efficiency of photosystem II; SOD—superoxide dismutase; MDA—malondialdehyde.
+Bacteria
+
+Changes in Plants
+
+Plants
+
+Ref.
+
+Bacillus pumilus
+
+- H total biomass (to 34.9%)
+- H antioxidant enzyme activities
+- H flavonoids, polysaccharide and glycyrrhizic
+acid contents
+
+Glycyrrhiza
+uralensis
+
+[96]
+
+Cucumis
+sativus
+
+[97]
+
+- L GPX activity (to 12.5%)
+
+Mentha pulegium
+
+[98]
+
+- H trehalose [11-fold vs. P. putida KT2440
+(pUCP) without the gen]
+- H fresh and dry weight
+- H fully turgid weight
+- H RWC
+
+Capsicum
+annuum cv. Maor
+
+[23]
+
+- L GPX activity (to 14.7%)
+- H CAT activity (2.6-fold vs. control)
+
+Mentha pulegium
+
+[98]
+
+Solanum
+lycopresicum cv. Boludo F1
+
+[99]
+
+Solanum
+esculentum cv. F144
+
+[23]
+
+Juglans regia
+
+[100]
+
+- H roots and shoots fresh and dry weight
+- H shoot length
+
+Bacillus sp.
+Azotobacter chroococcum
+
+Pseudomonas putida KT2440
+(pUCP22:otsAB)
+
+Azospirillum brasilense
+
+- H shoot dry weight
+- H net photosynthesis
+- H relative Chl content
+- L proline content
+
+Variovorax paradoxus 5C-2
+
+xeroprotectant effect of trehalose
+in preventing the biomolecules
+
+Rhodococcus sp. 4J2A2
+Azotobacter chroococcum
+with
+Azospirilum lipofrum
+
+- H fresh weight
+- H root growth and length
+- H total phenolics content in leaves
+- H peroxidase activity
+
+Azotobacter chroococcum
+with
+Azospirillum brasilense
+
+- H RWC (from 64.6% to 72.1%)
+- H Fv/Fm (from 0.56 to 0.75)
+- H SOD activity (from 34.7% to 57.2%)
+- L GPX activity (to 26.9%)
+
+Mentha pulegium
+
+[98]
+
+- H fresh and dry weight
+- H turgid weight
+- H RWC
+- H roots and stems length
+
+Capsicum
+annuum cv. Maor
+
+[23]
+
+Cucumis
+sativus
+
+[82]
+
+Microbacterium sp. 3J1 or
+Arthrobacter koreensis 5J12A or
+Arthrobacter piechaudii 366-5
+Bacillus cereus AR156 with
+Bacillus subtilis SM21 with
+Serratia sp. XY21
+
+- H proline content in leaves
+- L MDA content in leaves
+- L peroxidation in plasmalemma
+
+It is worth emphasizing that among the most frequently mentioned PGPR strains
+of different genera, e.g., Pseudomonas, Bacillus, Klebsiella, Azotobacter, many Pseudomonas
+species show a very high diversity of traits stimulating plant growth. For this reason,
+many scientific laboratories are looking for such valuable isolates adapted to drought
+conditions [101–103] (Table 1). Pseudomonas putida, isolated by Kumar et al. [101], synthetized IAA, siderophore, ACC-deaminase, formed biofilm and solubilized phosphate.
+Pseudomonas aeruginosa strain, isolated from North East India, additionally showed HCN
+synthesis and endogenous osmolyte accumulation under the drought condition [103].
+Sandhya et al. [102] also selected drought-tolerant Pseudomonas spp.: P. monteilli, P. putida,
+P. stutzeri, P. syringae from the rhizosphere of crop plants.
+Niu et al. [93] isolated drought-tolerant plant growth-promoting bacteria from Setaria
+italica (foxtail millet) cultivated in arid soils. The bacterial strains identified in the roots
+and bulk soil (e.g., Pseudomonas fluorescens DR7 and DR11, Pseudomonas migulae DR35 and
+Enterobacter hormaechei DR16) synthetized ACC-deaminase under drought conditions. All
+
+the isolates produced EPS, but IAA activity was confirmed only in DR35 culture. Similarly,
+Pseudomonas sp. isolated from Californian soil exposed to frequent drought also showed
+significant production of EPS in response to desiccation [104].
+Belonging to the PGPR family, Azospirillum spp. (Table 1) are a group of free-living
+soil bacteria mainly known for their ability to fix atmospheric nitrogen but also for releasing phytohormones, enhancing root growth, water and mineral uptake and plant
+resistance to drought stress [105,106] (Table 1). As a microbial inoculant, Azospirillum spp.
+could be crucial to improve fruit-tree acclimatization when transferred to the post-vitro
+environment [106].
+Mariotti et al. [105] revealed that Azospirillum baldaniorum cells and their metabolites
+promote Ocimum basilicum cv. Red Rubin (purple basil) growth under the water stress
+condition. This action was attributed to the synthesis and transport of phytohormones
+that promoted plant growth and conferred tolerance to the abiotic stress. The plant leaves
+treated with a relevantly high dose of the filtered culture supernatants of A. baldaniorum
+contained significantly higher concentration of chlorophyll a and b, total chlorophyll,
+carotenoids, and anthocyanins. In the presence of these bacteria, in the tissues of purple
+basil, the concentration of stress-related phytohormones, ABA, JA and SA were higher.
+Azospirillum brasilence accompanied by Pseudomonas sp. and Bacillus lentus also caused a
+higher level of chlorophyll content in Ocimum basilicum grown under drought stress [107].
+Moreover, at the end of the growing season, certain soil species, including soil-borne
+endophytic microorganisms promoting plant growth (e.g., including Bacillus, Clostridium
+and Sporolactobacillus genera), form endospores capable of remaining dormant in the soil.
+It is extremely important that in adverse environmental conditions (e.g., drought, very
+high or low temperature or higher amounts of incoming solar radiation) [1,108,109], when
+spores encounter the appropriate conditions (for example in the next growing season),
+they survive, germinate and the vegetative cells develop in the soil and are able to inhabit
+plants [109].
+A mixture of three PGPR strains (Bacillus cereus AR156, Bacillus subtilis SM21, and
+Serratia sp. XY21) (Table 1) stimulated IST in drought stress in cucumber plants by maintaining the root recovery intensity, reducing plasmalemma peroxidation, stabilizing the
+osmotic potential, increasing photosynthesis efficiency and activities of SOD and cytoplasmic ascorbate peroxidase (APX) in the leaves, without involving the action of ACC
+deaminase to the lower plant ethylene levels [83].
+5.1. Bacillus Species in Drought Stress
+Among the features of the soil-aerobic, rod-shaped cells of Bacillus species (Table 1)
+contributing to the biocontrol mechanism is the synthesis and secretion of various antimicrobial peptides and very diverse antibiotics, enzymes, other proteins and organic
+compounds [110,111]. Inoculation of Cucumis sativus (cucumber) with Bacillus cereus and
+Bacillus subtilis strains along with Serratia sp. induced systemic tolerance to drought stress
+in plants by maintaining photosynthetic efficiency, root vigor, increasing proline content
+and enhanced SOD and CAT activities in the leaves [83]. In another experiment, to enhance
+Lycopersicon esculentum (tomato) drought tolerance, Bacillus cereus AR156 supernatant was
+applied. In the treated plants, chlorophyll a and b contents, as well as the activities of SOD,
+POD and CAT were increased markedly after culture supernatant application [112].
+Plant small heat shock proteins (sHSPs) act as molecular chaperones that prevent
+irreversible aggregation of denatured proteins [85]. During drought stress, pepper plants
+inoculated with Bacillus licheniformis K11 exhibited enhanced transcription of Cadhn, VA,
+sHSP, and CaPR-10 genes [113,114]. In the study of Lim and Kim [113], the Capsicum
+annuum (pepper) seedlings were treated with a Bacillus licheniformis strain originated from
+Korean soil. Plants inoculated with drought-tolerant bacteria achieved higher shoot length
+and dry weight, and the analysis of gene expression in pepper roots indicated higher levels
+of expression of four genes related to drought and cold stresses. Bacillus sp. selected for
+high levels of cytokine synthesis was introduced into 12-day old L. sativa grown in dry soil.
+
+After 3 weeks of seedlings inoculation, the increased amount of cytokinin and higher fresh
+and dry weights of shoots were confirmed [115].
+At the beginning of vegetative season, higher temperature induces microbial metabolism
+(including releasing of inorganic available P to the soil solution by phosphate solubilizing
+microorganisms (PSM)) [116]. Gradually, the lack of adequate precipitation, insufficient
+soil moisture and high temperature decreased the soil microbial activity and the movement
+of nutrients in the soil [62]. Bacillus strains are commonly known to be great phosphate
+solubilizers [110]. Ying et al. [18] revealed high phosphatase activity of Bacillus megatherium
+and inorganic phosphate solubilization of Bacillus saryghattati strains under drought stress.
+Bacillus spp. (B. cultidtuctinus, B. subtilis, B. polymyxa and B. mojavensis) isolated from
+the Cistanthe longiscapa rhizosphere grown in the Atacama Desert (Chile) also exhibited
+phosphate-solubilizing activity [94].
+It is worth noting that the activity of phosphate-solubilizing Bacillus strains support
+very energy-consuming processes of nitrogen fixation. Available P is a crucial ingredient of
+the energy source ATP. It can also replace conventional fertilization. An effective action on N
+and P uptake by the Vicia faba (faba bean) seeds and straws was confirmed after inoculation
+with the well-known phosphate-solubilizing bacterium Bacillus megatherium [117]. After
+inoculation of the apple trees cv. ‘Topaz’ with ‘Mycostat’ (containing Bacillus subtilis among
+strains promoting plant growth) the P root content was the same as in the tissues treated
+with chemical NPK fertilizer [89]. In addition, when soil moisture declined, the limited
+diffusion rate of nutrients, particularly P, from the soil matrix into the absorbing surface
+negatively affected nodulation and biological nitrogen fixation [118].
+Plants with symptoms of potassium deficiency show accelerated wilting and lower
+yield, causing the loss of control of turgor-driven leaf movements [119]. Bacillus strains can
+secrete acidic metabolites (e.g., oxalic, fumaric, lemon, tartaric acids) that dissolve various
+minerals. Avakyan [120] demonstrated the ability to produce a thick EPS envelope by the
+strain Bacillus mucilaginosus. Secretion of the acidic metabolites by B. mucilaginosus cells
+creates a zone of strong acidification at the soil minerals’ surface and allows the dissolution
+of mineral compounds. The polysaccharides secreted by these microorganisms additionally
+strongly adsorb SiO3 −2 leaving bioavailable K cations for plants in the soil solution [121].
+The plant root is involved in the perception and transduction of stress signals via
+phytoregulators such as ET [122]. The increased level of ET causes premature aging
+of fruits and vegetables; wilting of flowers and leafy vegetables and defoliation of the
+mature leaves. Additionally, higher concentrations of ET in the rhizosphere inhibits
+arbuscular mycorrhizal fungi colonization and the root nodulation of legumes. A Bacillus
+subtilis (LDR2) strain isolated from the rhizosphere of drought-stressed plants, synthetizes
+ACC deaminase-regulating ET concentration. In the experiment, a LDR2 strain revealed
+protective mechanisms against the low water availability in soil, and improved Trigonella
+plants’ weights (by 56%). Barnawall et al. [122] also demonstrated the enhanced nodulation
+and arbuscular mycorrhizal fungi colonization in the plants, which caused better nutrient
+uptake after inoculation of plants with B. subtilis.
+In the face of climate change, certain future adaptations can be predicted by observing
+the functioning of organisms in extreme environments. In addition, in natural adverse
+ecosystems, except for the ability to form spores, microorganisms support plant growth
+and simultaneously provide an optimal environment for the development of plants tissues [111,117,123], e.g., Bacillus mojavensis was isolated from the very extreme environment
+of the Mojave Desert in California [111]. All the strains belonging to this group are described as endophytic and antagonistic to fungi [124]. The endophytic microorganisms
+(including both obligate and facultative species) are microbial symbionts residing within
+plants, mostly influencing host physiology [36,111].
+The B. mojavensis strain isolated from the soybean plant rhizosphere was a very antagonistic strain, effectively controlling Rhizoctonia solani, a pathogenic fungus causing huge
+harvest losses of horticultural crops [125,126]. The presence of endophytic microorganisms
+with the biocontrol actions of soil-borne pathogens and the ability to stimulate the growth
+
+of cultivated plants from the early stages of its development seems to be a crucial solution
+for plants under unfavorable climate conditions. The inoculation of soybean seeds with the
+Bacillus mojavensis PB 35(R11) strain enhanced the growth of plant inoculated with R. solani
+(about 30% higher plant fresh weight and over 100% higher plant dry weight) [111]. Moreover, quantitative assays of the PB-35(R11) strain showed HCN, ammonia and siderophore
+production, as well as phosphate solubilization and chitinase activity. The treatment of
+seeds gives several advantages for the control of pathogenic fungi as a promising alternative to the use of synthetic pesticides. The endophytic Bacillus inoculants are also known
+for controlling Fusarium species, especially Fusarium verticillioides [124,127].
+5.2. Actinomycetes Species in Drought Stress
+A more advantageous strategy is the selection of microorganisms adapted to functioning in the conditions of temporary lack of water, drought, or rapid changes in temperature,
+because the metabolically active forms of microorganisms may support the growth of
+sensitive horticultural crops. Actinomycetes are Gram-positive, mostly aerobic, saprotrophic
+bacteria of diverse phenotypes (from cocci to highly differentiated mycelia).
+Tangles of filaments grow similarly to filamentous fungi. This pseudomycelial growth
+(surface, plunge or air) provides penetration of a larger soil volume and into pores of
+soil, easing access to valuable minerals and simultaneously making them available to
+plants [128].
+The main place of Actinomycetes occurrence is the soil (warm and humid or dry), but
+they are also identified in desert sands, on leaves and in plant tissues [129]. Reproduction
+of these bacteria occurs by fragmentation of pseudomycelium and spore formation. This
+group of microorganisms are mostly chemoorganotrophs with the ability to break down
+difficult decomposing substrates, e.g., cellulose, chitin, steroids, higher fatty acids or
+aromatic compounds. These activities allow them to survive and outcompete the native
+microflora in various ecological niches [130]. Lawlor et al. [131] revealed a higher number
+of Actinomycetes colony forming units (CFU) (about 106 to 107 g−1 of dry weight of soil)
+than CFU of fungi (104 to 105 g−1 of dry weight of soil).
+Actinomycetes are known to be producers of bioactive compounds (antibacterial, antifungal), exhibiting great potential in promoting plant growth [129]. Sousa et al. [3]
+investigated that the Streptomyces strains produce siderophores, phytohormones (IAA),
+and solubilizing phosphate compounds, and exhibit chitinase, xylanase, cellulase, amylase
+and lipase activities. Additionally, the number of plant growth-promoting Actinobacteria is
+1.3 times higher than that of the other bacteria [132].
+Khamna et al. [133] identified about 30 Streptomyces isolates in Thai soil samples
+collected from the rhizospheres of plants such as Curcuma magga, Zingiber officinale (ginger),
+Ocimum sanctum (holy basil), and Cumbopogon citratus (lemongrass). After 3-day incubation, the Streptomyces CMU-H009 strain synthetized the highest concentration of IAA
+(about 144 µg · mL−1 ) and its culture filtrates stimulated Vigna unguiculata (cowpea) seed
+germination. El-Tarabily [134] isolated over 60 Streptomyces spp. strains from a tomato
+rhizosphere in the United Arab Emirates and some of them revealed ACC-deaminase and
+IAA synthesis. The most efficient Streptomyces filipinensis 15, Streptomyces atrovirens 26 and
+Streptomyces albovinaceus 41 strains increased Lycopersicon esculentum (tomato) root and
+shoot length and dry weight. A higher level of endogenous IAA in the roots and shoots in
+these plants was also confirmed. Actinomycetes exhibited great potential in promoting rice,
+sorghum [135], tomato [134], maize [136] and soybean seedling growth [137].
+It is worth emphasizing that some Actinomycetes (e.g., Frankia sp.) function in a
+symbiosis with higher plants, fixing nitrogen, while the plant provides the bacteria with
+sugars and minerals [136]. Such a favorable relationship has been observed in soybeans,
+peas, Elaeagnus umbellata and Eleangus angustifolia (Russian olive) [138].
+A variety of activities improving plant development have been indicated in the Acitnomycetes species, and their efficiency obtained by adapting to adverse climatic conditions
+enables them to receive commercial products containing PGPA (plant growth-promoting
+
+actinobacteria), such as Streptomyces lydicus strains. Acitnomycetes species (Streptomyces
+kasugaensis, Streptomyces griseus and Streptomyces cacoi var. asoensis) producing antibacterial
+and antifungal bioactive compounds are components of biocontrol products applied against
+plant pathogens [129]. Actinomycetes synthesize enzymes such as lysozyme, glucanases,
+peptide–peptide hydrolases, mannanase and chitinase, which are involved in the lysis of
+the cell walls of other microorganisms [128]. El Tarabily et al. [134] investigated the promotion and biological control of seedlings and the mature plants of C. sativus using endophytic
+Actinomycetes (Actinoplanes campanulatus, Micromonospora chalcea and Streptomyces spiralis).
+Pythium aphanidermatum (oospore-producing soil-borne pathogen) causes seedling and root
+diseases of cucumber, causing damage to horticultural crops. This experiment proved that
+Actinomycetes colonize the roots of inoculated plants, promoted their growth and reduced
+the impact of P. aphanidermatum. Furthermore, El Tarabily et al. [134] compared the impact
+of Actinomycetes with chemical fungicide (metalaxyl) and demonstrated the possibility of
+replacing fungicide with plant inoculation with endophytic Actinomycetes.
+6. Plant Growth-Promoting Fungi in Horticultural Crops
+Among microorganisms, fungi can be much more drought-tolerant than bacteria [139]
+due to a number of mechanisms to overcome drought stress, including osmolytes, thick
+cell walls, and melanin [140]. Yeast cells are encased in a protective cell wall and cells of
+filamentous fungi can be connected, allowing water and solutes to flow between them. The
+filamentous fungi produce extremally long hypha, enabling the extraction of water from
+remote sites in the soil. Fungal abundance in the soil can increase under drought. They can
+remain active and even grow under extremely dry conditions. Their resistance to drought
+allows them to conduct the basic processes of decomposition of polymer compounds and
+the circulation of C and N [139]. Fungi, bacteria, seaweeds and plants are able to accumulate osmoprotectants, for instance amino acids (e.g., proline, glutamate), carbohydrates
+(trehalose), sugar alcohols (inositol, mannitol), quaternary ammonium compounds (glycine
+betaine) and tertiary sulphonium compounds (e.g., dimethylsulphoniopropionate) [141].
+Plants use various mechanisms to protect against water deficiency, but some of them
+are associated with the presence of fungi with special activities (Table 2). Eukaryotic plant
+endophytes belong mainly to the fungi kingdom [142,143] and the most numerous among
+these endophytes are Glomeromycota (40%), Ascomycota (31%), Basidiomycota (20%),
+Zygomycota (0.1%) and unidentified phylla (8%). The Glomeromycota phyllum includes
+only arbuscular mycorrhizal fungi (AMF), whose species protect against phytopathogens,
+promote plant growth and counteract diverse stresses (mainly drought and salinity) by
+activating stress responsive/induced genes in plants. AMF are able to create a symbiosis
+with many horticultural plants belonging to various families, e.g., Alliaceae, Apiaceae,
+Asteraceae, Fabaceae, Solanaceae, Rosaceae, and Oleaceae [144–146]. Arbuscular mycorrhiza
+(AM) is the endomycorrhizal symbiotic association improving the nutrient uptake and
+growth of plants which may protect the host plants from pathogens and the harmful effects
+of drought [144,146,147]. Interactions with AMF, through an extensive network of hyphae,
+supply the plant with water from distant places. Studies have shown that AMF mainly
+use plant-derived carbohydrates in symbiosis with plants, and the plant receives access to
+the bioavailable minerals absorbed by the fungus from the soil (especially phosphorus).
+Moreover, the hyphae of fungal strains can uptake phosphorus and ammonium ions much
+more efficiently than the plant roots [148].
+Moreover, fungi may influence the hormonal balance of plants by producing phytohormones (auxins, gibberellins) and through tolerance and resistance pathways, which protect
+the plant against biotic and abiotic factors. Both ectomycorrhizal (EMF, e.g., Laccaria spp.)and endomycorrhizal-AMF fungi (e.g., belonging to the Glomus, Rhizophagus, Funneliformis
+genera) are capable of inducing the ISR resistance pathways involving JA as a signaling substance, or SAR, in which signaling occurs thanks to the SA molecules [149]. The production
+of auxins by the fungal endophytes increases the growth of plants under stress [150]. After
+the plant under stress is colonized by endophytes, stress-induced levels of ABA and some
+
+genes’ expressions (e.g., zeaxanthin epoxidase, 9-cis-epoxycarotenoid dioxygenase 3 and
+ABA aldehyde oxidase 3) were decreased. Similar effects were achieved in the promotion of
+plant growth and yield under stress conditions, after exogenous phytohormone application
+such as gibberellic acid [151]. Sometimes endophytes do not have positive effects on plant
+growth during drought, but they improve plant recovery after water shortage [152].
+The presence of some fungal endophytes (e.g., in the Nicotiana benthamiana seedlings)
+increased the leaf area, chlorophyll content, photosynthetic rate, antioxidative enzyme
+activities, accumulation of osmoprotectants (sugar, protein and proline) and enhanced
+expression of drought-related genes [153,154]. On the other hand, in drought conditions,
+the relative water content in leaves and soluble protein content in the tissues of Cinnamomum
+migao did not change after 120-day inoculation with Glomus lamellosum [155] (Table 2).
+In drought-suffering plants, after endophyte inoculation, a lower level of biomolecule
+degradation was observed as a consequence of the reduced level of ROS production, e.g.,
+in tomato [156]. In the face of drought stress, inoculation with Piriformospora indica (Table 2)
+mobilized activities of peroxidase (POX), catalase (CAT) and superoxide dismutase (SOD)
+in the leaves [157]. The endophytic fungal strains of Ampelomyces sp. isolated from soil
+exposed to drought enhanced drought tolerance in tomato [143,158]. Inoculation of tomato
+seedlings with Alternaria spp. strains under drought conditions resulted in the maintenance
+of the photosynthetic efficiency and effective reduction of ROS accumulation [156].
+Table 2. Selected activities of beneficial fungi under drought stress conditions in horticultural plant species; H—higher
+level/content; L—lower level/content; Chl—chlorophyll; CAT—catalase; SOD—superoxide dismutase; MDA—malondialdehyde.
+Fungi
+
+Glomus intraradices
+
+Glomus mosesseae
+
+Changes in Plants
+- H content of N in roots and shoots
+- H flower and fruit production
+- H fruit yield
+- H dry root mass
+- slow down the reduction of Chl a+b
+- inhibit the decomposition of carotenoids
+
+Plants
+
+Ref.
+
+Lycopersicum
+esculentum
+
+[159]
+
+Fragaria x
+ananassa
+
+[32]
+
+Glomus etunicatum
+
+- H fresh weight
+- H number of leaves
+- H content of N, P, Zn in leaves
+
+Juglans regia
+
+[100]
+
+Ampelomyces sp.
+
+- H dry weight of root and shoot
+- H fruit weight
+- H stress tolerance
+
+Solanum
+lycopersicum
+var. Better Boy
+
+[158]
+
+Pinus
+tablaeformis
+
+[160]
+
+Brassica rapa subsp. pekinensis
+
+[157]
+
+Theobroma cacao
+
+[160]
+
+Juglans regia
+
+[100]
+
+Cinnamomum migao
+
+[155]
+
+Phoma spp.
+
+Piriformospora indica
+
+Trichodermaharzianum
+
+- H proline content, CAT and SOD activities
+- H chlorophyll content
+- H MDA content
+- H water content in leaves
+- H root and shoot growth
+- H lateral root development
+- H peroxidase, CAT and SOD activities in leaves
+- H fresh and dry weight of roots
+- H osmolyte concentration
+
+Glomus mossae
+with
+Glomus etunicatum
+
+- H height
+- H content of N, P, Zn in leaves
+- L leaves abscission
+
+Glomus lamellosum
+or
+Glomus etunicatum
+
+- H fresh and dry weight
+- H stem fresh weight
+- H water content in leaves
+- L MDA content
+- H CAT activity
+
+Horticulturae 2021, 7, 390
+
+14 of 21
+
+Table 2. Cont.
+Fungi
+Glomus mosseae or
+G. versiforme or
+G. diaphanum
+
+Changes in Plants
+- H enzyme activity in soil
+- L CAT activity in soil
+- H hyphal density
+
+Chaetomium globosum
+or
+Penicillium resedanum
+
+- H shoot dry weight
+- H shoot length
+- H photosynthesis rate
+
+Alternaria sp.
+or
+Trichoderma harzianum
+
+- H root and shoot dry weight
+
+Plants
+
+Ref.
+
+Poncirus
+trifoliata
+
+[161]
+
+Capsicum annum
+
+[151]
+
+Solanum
+lycopersicum
+var. Rutger
+
+[156]
+
+The presence of beneficial fungal strains in soil and plants might specifically induce
+resistance by releasing elicitors belonging to fungal-derived compounds, e.g.: chitin, chitosan, ergosterol, β-glucans [151]. Moreover, among the pathogenic microorganisms, the
+filamentous fungi are responsible for horticultural crop diseases. It should be also noted
+that fungal endophytes belonging to PGP (e.g., Colletotrichum sp., Alternaria sp., Fusarium
+sp. and Aspergillus sp.) induce plant resistance and increase plant tolerance to drought, but
+may also produce mycotoxins in plants [162]. To increase specificity and enhancement of
+the induction, elicitors can be derived from the nonpathogenic fungi belonging to the same
+genus as the pathogenic strains causing plant diseases, e.g., Fusarium or Trichoderma [152].
+In grapevine with black-foot disease (Dactylonectria and Cylindrocarpon genera), the relative
+abundance of the potential biocontrol agent Trichoderma in the root endosphere, rhizosphere,
+and bulk soil under drought stress (25% irrigation regime) was significantly lower than
+in control conditions (50–100% irrigation regime) [163]. Moreover, enrichment in AMF
+Funneliformis during drought was observed.
+Recent and particularly promising studies have focused on the determination of the
+effectiveness and reliability of a mixture of bacterial and fungal strains (Table 3).
+Table 3. Selected activities of beneficial consortia (bacteria with fungi) under drought stress conditions in horticultural plant
+species; H—higher level/content; L—lower level/content; CAT—catalase; APX—ascorbate peroxidase; Chl—chlorophyll.
+Bacteria with Fungi
+Pseudomonas fluorescence
+with
+Trichoderma harzianum
+
+Variovorax paradoxus 5C-2
+with
+Rhizophorus irregularis MULC
+
+Changes in Plants
+- H growth parameters
+- H seedling emergency
+- H root and shoot length
+- H CAT and APX activities
+- H shoot dry weight
+- H net photosynthesis
+- no change: relative Chl content vs. control
+- H oxidative damage
+- L proline content
+
+Plants
+
+Ref.
+
+Cuminum cyminum
+
+[164]
+
+Solanum
+lycopersicum cv. Boludo F1
+
+[99]
+
+7. Conclusions
+The EGD emphasizes sustainable food production by the crucial reduction in the use
+of pesticides, biocides and chemical mineral fertilizers and increase of organic (ecological)
+production. Consequently, in many European countries, continuous research has been
+carried out on natural biopreparations (biocontroling, biofertilizers) containing selected
+microorganisms with different activities, and/or their metabolites.
+The key problems of using biopreparations containing various microorganisms include
+limiting the possibility of introducing the microbial inoculum to the appropriate conditions
+and the low repeatability of their activities. This might be due to drought stress during the
+vegetative period in comparison to microorganisms tested in the optimal conditions.
+
+The resistance of plants that interact with microorganisms in drought conditions is
+enhanced because it is induced by both abiotic (stress factor) and the biotic (microorganism)
+elicitors. In drought conditions, many cultivated horticultural plants use their own numerous mechanisms (morphological, physiological, anatomical, biochemical or molecular) to
+counteract the negative effects and are supported by endophytes that constantly inhabit
+them, and rhizospheric microorganisms existing in the vicinity of roots.
+The use of preparations containing fungal strains, which are more tolerant to drought
+than bacteria, provides many tolerance mechanisms, and their abundance increases in
+water-limiting conditions. Fungi, through their specific growth and traits, allow intensive
+soil exploration, water extraction and penetration of plant tissues influencing the plant and
+might be more effective compared to bacteria with the same activity.
+Studies on the influence of drought stress on horticultural plants have indicated that
+the application of various microorganisms allows efficient protection of plants, despite our
+restricted knowledge about these mechanisms of action. Due to such a high variability of the
+environment, biopreparations should be multicomponent in order to achieve appropriate
+levels of microorganism cooperation and the final desired effect. The combination of fungal
+and bacterial strains into one preparation gives even better effectiveness and reliability,
+allowing us to consider higher crop-specificity, and seems to be particularly promising.
+Author Contributions: Conceptualization, A.H.; E.O. and J.J.-Ś.; writing—original draft preparation,
+E.O.; A.H.; E.R. and J.J.-Ś.; writing—review and editing, A.H.; E.O.; E.R. and M.S.; visualization, A.H.;
+E.O.; E.R. and M.S. All authors have read and agreed to the published version of the manuscript.
+Funding: This research received no external funding.
+Institutional Review Board Statement: Not applicable.
+Informed Consent Statement: Not applicable.
+Conflicts of Interest: The authors declare no conflict of interest.
+
+References
+1.
+2.
+
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+
+Moretti, C.L.; Mattos, L.M.; Calbo, A.G.; Sargent, S.A. Climate changes and potential impacts on postharvest quality of fruit and
+vegetable crops: A review. Food Res. Int. 2010, 43, 1824–1832. [CrossRef]
+Hamid, B.; Zaman, M.; Farooq, S.; Fatima, S.; Sayyed, R.Z.; Baba, Z.A.; Sheikh, T.A.; Reddy, M.S.; El Enshasy, H.; Gafur, A.; et al.
+Bacterial plant biostimulants: A sustainable way towards improving growth, productivity, and health of crops. Sustainability
+2021, 13, 2856. [CrossRef]
+Sousa, C.S.; Soares, A.C.F.; Garrido, M.S. Characterization of Streptomycetes with potential to promote plant growth and biocontrol.
+Sci. Agric. 2008, 65, 50–55. [CrossRef]
+Shah, A.; Nazari, M.; Antar, M.; Msimbira, L.A.; Naamala, J.; Lyu, D.; Rabileh, M.; Zajonc, J.; Smith, D.L. PGPR in agriculture:
+A sustainable approach to increasing climate change resilience. Front. Sustain. Food Syst. 2021, 5, 1–22. [CrossRef]
+International Society for Horticultural Science. Available online: https://www.ishs.org/defining-horticulture (accessed on
+27 September 2021).
+Vishwakarma, K.; Kumar, N.; Shandilya, C.; Mohapatra, S.; Bhayana, S.; Varma, A. Revisiting plant-microbe interactions and
+microbial consortia application for enhancing sustainable agriculture: A review. Front. Microbiol. 2020, 11, 560406. [CrossRef]
+Khan, N.; Ali, S.; Shahid, M.A.; Mustafa, A.; Sayyed, R.Z.; Curá, J.A. Insights into the interactions among roots, rhizosphere, and
+rhizobacteria for improving plant growth and tolerance to abiotic stresses: A review. Cells 2021, 10, 1551. [CrossRef]
+Ullah, A.; Nisar, M.; Ali, H.; Hazrat, A.; Hayat, K.; Keerio, A.A.; Ihsan, M.; Laiq, M.; Ullah, S.; Fahad, S.; et al. Drought tolerance
+improvement in plants: An endophytic bacterial approach. Appl. Microbiol. Biotechnol. 2019, 103, 7385–7397. [CrossRef]
+Yan, L.; Zhu, J.; Zhao, X.; Shi, J.; Jiang, C.; Shao, D. Beneficial effects of endophytic fungi colonization on plants. Appl. Microbiol.
+Biotechnol. 2019, 103, 3327–3340. [CrossRef]
+Cheng, Y.T.; Zhang, L.; He, S.Y. Plant-microbe interactions facing environmental challenge. Cell Host Microbe 2019, 26, 183–192.
+[CrossRef]
+Kavadia, A.; Omirou, M.; Fasoula, D.; Ioannides, I.M. The importance of microbial inoculants in a climate-changing agriculture in
+Eastern Mediterranean region. Atmosphere 2020, 11, 1136. [CrossRef]
+Malik, A.; Mor, V.S.; Tokas, J.; Punia, H.; Malik, S.; Malik, K.; Sangwan, S.; Tomar, S.; Singh, P.; Singh, N.; et al. Biostimulant-treated
+seedlings under sustainable agriculture: A global perspective facing climate change. Agronomy 2021, 11, 14. [CrossRef]
+Porter, S.S.; Bantay, R.; Friel, C.A.; Garoutte, A.; Gdanetz, K.; Ibarreta, K.; Moore, B.M.; Shetty, P.; Siler, E.; Friesen, M.L. Beneficial
+microbes ameliorate abiotic and biotic sources of stress on plants. Funct. Ecol. 2020, 34, 2075–2086. [CrossRef]
+
+14.
+15.
+16.
+
+17.
+18.
+19.
+20.
+21.
+22.
+23.
+24.
+25.
+
+26.
+27.
+28.
+29.
+30.
+31.
+32.
+33.
+34.
+35.
+36.
+37.
+38.
+
+39.
+40.
+
+41.
+
+Fincheira, P.; Quiroz, A.; Tortella, G.; Diez, M.C.; Rubilar, O. Current advances in plant-microbe communication via volatile
+organic compounds as an innovative strategy to improve plant growth. Microbiol. Res. 2021, 247, 126726. [CrossRef] [PubMed]
+Hanaka, A.; Ozimek, E.; Majewska, M.; Rysiak, A.; Jaroszuk-Ściseł, J. Physiological diversity of Spitsbergen soil microbial
+communities suggests their potential as plant growth-promoting bacteria. Int. J. Mol. Sci. 2019, 20, 1207. [CrossRef] [PubMed]
+Hanaka, A.; Nowak, A.; Plak, A.; Dresler, S.; Ozimek, E.; Jaroszuk-Ściseł, J.; Wójciak-Kosior, M.; Sowa, I. Bacterial isolate
+inhabiting Spitsbergen soil modifies the physiological response of Phaseolus coccineus in control conditions and under exogenous
+application of methyl jasmonate and copper excess. Int. J. Mol. Sci. 2019, 20, 1909. [CrossRef] [PubMed]
+Compant, S.; Van Der Heijden, M.G.A.; Sessitsch, A. Climate change effects on beneficial plant-microorganism interactions. FEMS
+Microbiol. Ecol. 2010, 73, 197–214. [CrossRef]
+Ma, Y.; Vosátka, M.; Freitas, H. Editorial: Beneficial microbes alleviate climatic stresses in plants. Front. Plant Sci. 2019, 10, 595.
+[CrossRef] [PubMed]
+Vimal, S.R.; Singh, J.S.; Arora, N.K.; Singh, S. Soil-plant-microbe interactions in stressed agriculture management: A review.
+Pedosphere 2017, 27, 177–192. [CrossRef]
+Gupta, S.; Seth, R.; Sharma, A. Plant Growth-Promoting Rhizobacteria Play a Role as Phytostimulators for Sustainable Agriculture;
+Choudhary, D., Varma, A., Tuteja, N., Eds.; Springer: Singapore, 2016.
+Ma, Y.; Oliveira, R.S.; Freitas, H.; Zhang, C. Biochemical and molecular mechanisms of plant-microbe-metal interactions:
+Relevance for phytoremediation. Front. Plant Sci. 2016, 7, 918. [CrossRef]
+Pirttilä, A.M.; Tabas, H.M.P.; Baruah, N.; Koskimäki, J.J. Biofertilizers and biocontrol agents for agriculture: How to identify and
+develop new potent microbial strains and traits. Microorganisms 2021, 9, 817. [CrossRef]
+Vílchez, J.I.; García-Fontana, C.; Román-Naranjo, D.; González-López, J.; Manzanera, M. Plant drought tolerance enhancement by
+trehalose production of desiccation-tolerant microorganisms. Front. Microbiol. 2016, 7, 1577. [CrossRef]
+Finkel, O.M.; Castrillo, G.; Herrera Paredes, S.; Salas González, I.; Dangl, J.L. Understanding and exploiting plant beneficial
+microbes. Curr. Opin. Plant Biol. 2017, 38, 155–163. [CrossRef] [PubMed]
+Meena, K.K.; Sorty, A.M.; Bitla, U.M.; Choudhary, K.; Gupta, P.; Pareek, A.; Singh, D.P.; Prabha, R.; Sahu, P.K.; Gupta, V.K.; et al.
+Abiotic stress responses and microbe-mediated mitigation in plants: The omics strategies. Front. Plant Sci. 2017, 8, 172. [CrossRef]
+[PubMed]
+Anjum, S.A.; Ashraf, U.; Zohaib, A.; Tanveer, M.; Naeem, M.; Ali, I.; Tabassum, T.; Nazir, U. Growth and developmental responses
+of crop plants under drought stress: A review. Zemdirb. Agric. 2017, 104, 267–276. [CrossRef]
+Sharma, M.; Sudheer, S.; Usmani, Z.; Rani, R.; Gupta, P. Deciphering the omics of plant-microbe interaction: Perspectives and
+new insights. Curr. Genom. 2020, 21, 343–362. [CrossRef]
+Vasseur-Coronado, M.; du Boulois, H.D.; Pertot, I.; Puopolo, G. Selection of plant growth promoting rhizobacteria sharing suitable
+features to be commercially developed as biostimulant products. Microbiol. Res. 2021, 245, 1–10. [CrossRef]
+Pylak, M.; Oszust, K.; Frac,
+˛ M. Review report on the role of bioproducts, biopreparations, biostimulants and microbial inoculants
+in organic production of fruit. Rev. Environ. Sci. Biotechnol. 2019, 18, 597–616. [CrossRef]
+Kränzlein, M.; Geilfus, C.-M.; Franzisky, B.L.; Zhang, X.; Wimmer, M.A.; Zörb, C. Physiological responses of contrasting maize
+(Zea mays L.) hybrids to repeated drought. J. Plant Growth Regul. 2021. [CrossRef]
+Jamil, M.; Ahamd, M.; Anwar, F.; Zahir, Z.A.; Kharal, M.A.; Nazli, F. Inducing drought tolerance in wheat through combined use
+of L-tryptophan and Pseudomonas fluorescens. Pak. J. Agric. Sci. 2018, 55, 331–337. [CrossRef]
+Yin, B.; Wang, Y.; Liu, P.; Hu, J.; Zhen, W. Effects of vesicular-arbuscular mycorrhiza on the protective system in strawberry leaves
+under drought stress. Front. Agric. China 2010, 4, 165–169. [CrossRef]
+Hone, H.; Mann, R.; Yang, G.; Kaur, J.; Tannenbaum, I.; Li, T.; Spangenberg, G.; Sawbridge, T. Profiling, isolation and characterisation of beneficial microbes from the seed microbiomes of drought tolerant wheat. Sci. Rep. 2021, 11, 11916. [CrossRef]
+Zapata, T.; Galindo, D.M.; Corrales-Ducuara, A.R.; Ocampo-Ibáñez, I.D. The diversity of culture-dependent gram-negative
+Rhizobacteria associated with manihot esculenta crantz plants subjected to water-deficit stress. Diversity 2021, 13, 366. [CrossRef]
+Mustafa, S.; Kabir, S.; Shabbir, U.; Batool, R. Plant growth promoting rhizobacteria in sustainable agriculture: From theoretical to
+pragmatic approach. Symbiosis 2019, 78, 115–123. [CrossRef]
+Ozimek, E.; Hanaka, A. Mortierella species as the plant growth-promoting fungi present in the agricultural soils. Agriculture 2021,
+11, 7. [CrossRef]
+IPCC Climate Change. The Physical Science Basis 2021; IPCC Climate Change: Geneva, Switzerland, 2021.
+Lelieveld, J.; Hadjinicolaou, P.; Kostopoulou, E.; Chenoweth, J.; El Maayar, M.; Giannakopoulos, C.; Hannides, C.; Lange, M.A.;
+Tanarhte, M.; Tyrlis, E.; et al. Climate change and impacts in the Eastern Mediterranean and the Middle East. Clim. Chang. 2012,
+114, 667–687. [CrossRef] [PubMed]
+Ilyas, M.; Nisar, M.; Khan, N.; Hazrat, A.; Khan, A.H.; Hayat, K.; Fahad, S.; Khan, A.; Ullah, A. Drought tolerance strategies in
+plants: A mechanistic approach. J. Plant Growth Regul. 2021, 40, 926–944. [CrossRef]
+Hanaka, A.; Plak, A.; Zagórski, P.; Ozimek, E.; Rysiak, A.; Majewska, M.; Jaroszuk-Ściseł, J. Relationships between the properties
+of Spitsbergen soil, number and biodiversity of rhizosphere microorganisms, and heavy metal concentration in selected plant
+species. Plant Soil 2019, 436, 49–69. [CrossRef]
+M˛edrek, K.; Gluza, A.; Siwek, K.; Zagórski, P. The meteorological conditions on the Calypsobyen in summer 2014 on the
+background of multiyear 1986–2011. Probl. Klim. Polar. 2014, 24, 37–50. (In Polish)
+
+42.
+43.
+44.
+45.
+46.
+47.
+
+48.
+49.
+
+50.
+51.
+52.
+
+53.
+54.
+55.
+56.
+
+57.
+
+58.
+59.
+60.
+61.
+62.
+63.
+64.
+
+65.
+66.
+
+67.
+
+Franczak, Ł.; Kociuba, W.; Gajek, G. Runoff variability in the Scott River (SW Spitsbergen) in summer seasons 2012–2013 in
+comparison with the period 1986–2009. QuaGeo 2016, 35, 39–50. [CrossRef]
+Hu, Y.; Xie, G.; Jiang, X.; Shao, K.; Tang, X.; Gao, G. The relationships between the free-living and particle-attached bacterial
+communities in response to elevated eutrophication. Front. Microbiol. 2020, 11, 423. [CrossRef]
+Schimel, J.P. Life in dry soils: Effects of drought on soil microbial communities and processes. Annu. Rev. Ecol. Evol. Syst. 2018,
+49, 409–432. [CrossRef]
+Manzanera, M. Dealing with water stress and microbial preservation. Environ. Microbiol. 2021, 23, 3351–3359. [CrossRef]
+Brás, T.A.; Seixas, J.; Carvalhais, N.; Jagermeyr, J. Severity of drought and heatwave crop losses tripled over the last five decades
+in Europe. Environ. Res. Lett. 2021, 16, 065012. [CrossRef]
+Singh, R.; Parihar, P.; Singh, M.; Bajguz, A.; Kumar, J.; Singh, S.; Singh, V.P.; Prasad, S.M. Uncovering potential applications of
+cyanobacteria and algal metabolites in biology, agriculture and medicine: Current status and future prospects. Front. Microbiol.
+2017, 8, 515. [CrossRef]
+Camaille, M.; Fabre, N.; Clément, C.; Barka, E.A. Advances in wheat physiology in response to drought and the role of plant
+growth promoting rhizobacteria to trigger drought tolerance. Microorganisms 2021, 9, 687. [CrossRef]
+Rysiak, A.; Dresler, S.; Hanaka, A.; Hawrylak-Nowak, B.; Strzemski, M.; Kováčik, J.; Sowa, I.; Latalski, M.; Wójciak, M. High
+temperature alters secondary metabolites and photosynthetic efficiency in Heracleum sosnowskyi. Int. J. Mol. Sci. 2021, 22, 4756.
+[CrossRef]
+Abdelaal, K.; Alkahtani, M.; Attia, K.; Hafez, Y.; Király, L.; Künstler, A. The role of plant growth-promoting bacteria in alleviating
+the adverse effects of drought on plants. Biology 2021, 10, 520. [CrossRef] [PubMed]
+Fang, Y.; Xiong, L. General mechanisms of drought response and their application in drought resistance improvement in plants.
+Cell. Mol. Life Sci. 2015, 72, 673–689. [CrossRef] [PubMed]
+Luo, W.; Xu, C.; Ma, W.; Yue, X.; Liang, X.; Zuo, X.; Knapp, A.K.; Smith, M.D.; Sardans, J.; Dijkstra, F.A.; et al. Effects of extreme
+drought on plant nutrient uptake and resorption in rhizomatous vs bunchgrass-dominated grasslands. Oecologia 2018, 188,
+633–643. [CrossRef] [PubMed]
+Manavalan, L.P.; Guttikonda, S.K.; Phan Tran, L.S.; Nguyen, H.T. Physiological and molecular approaches to improve drought
+resistance in soybean. Plant Cell Physiol. 2009, 50, 1260–1276. [CrossRef] [PubMed]
+Shao, H.B.; Chu, L.Y.; Jaleel, C.A.; Zhao, C.X. Water-deficit stress-induced anatomical changes in higher plants. Comptes Rendus
+Biol. 2008, 331, 215–225. [CrossRef]
+Reddy, A.R.; Chaitanya, K.V.; Vivekanandan, M. Drought-induced responses of photosynthesis and antioxidant metabolism in
+higher plants. J. Plant Physiol. 2004, 161, 1189–1202. [CrossRef]
+Abdelaal, K.A.A.; Hafez, Y.M.; El-Afry, M.M.; Tantawy, D.S.; Alshaal, T. Effect of some osmoregulators on photosynthesis, lipid
+peroxidation, antioxidative capacity, and productivity of barley (Hordeum vulgare L.) under water deficit stress. Environ. Sci.
+Pollut. Res. 2018, 25, 30199–30211. [CrossRef] [PubMed]
+Hafez, Y.; Attia, K.; Alamery, S.; Ghazy, A.; Al-Doss, A.; Ibrahim, E.; Rashwan, E.; El-Maghraby, L.; Awad, A.; Abdelaal, K.
+Beneficial effects of biochar and chitosan on antioxidative capacity, osmolytes accumulation, and anatomical characters of
+water-stressed barley plants. Agronomy 2020, 10, 630. [CrossRef]
+Hargravei, K.R.; Kolb, K.J.; Ewers, F.W.; Davis, S.D. Conduit diameter and drought-induced embolism in Salvia mellifera Greene
+(Labiatae). New Phytol. 1994, 126, 695–705. [CrossRef]
+Liu, F.; Jensen, C.R.; Shahanzari, A.; Andersen, M.N.; Jacobsen, S.E. ABA regulated stomatal control and photosynthetic water
+use efficiency of potato (Solanum tuberosum L.) during progressive soil drying. Plant Sci. 2005, 168, 831–836. [CrossRef]
+Ullah, A.; Mushtaq, H.; Fahad, S.; Hakim; Shah, A.; Chaudhary, H.J. Plant growth promoting potential of bacterial endophytes in
+novel association with Olea ferruginea and Withania coagulans. Microbiology 2017, 86, 119–127. [CrossRef]
+Hussain, H.A.; Hussain, S.; Khaliq, A.; Ashraf, U.; Anjum, S.A.; Men, S.; Wang, L. Chilling and drought stresses in crop plants:
+Implications, cross talk, and potential management opportunities. Front. Plant Sci. 2018, 9, 393. [CrossRef]
+Ragel, P.; Raddatz, N.; Leidi, E.O.; Quintero, F.J.; Pardo, J.M. Regulation of K+ nutrition in plants. Front. Plant Sci. 2019, 10, 281.
+[CrossRef]
+Wang, Z.; Li, G.; Sun, H.; Ma, L.; Guo, Y.; Zhao, Z.; Gao, H.; Mei, L. Effects of drought stress on photosynthesis and photosynthetic
+electron transport chain in young apple tree leaves. Biol. Open 2018, 7. [CrossRef]
+Zhang, Y.B.; Yang, S.L.; Dao, J.M.; Deng, J.; Shahzad, A.N.; Fan, X.; Li, R.D.; Quan, Y.J.; Bukhari, S.A.H.; Zeng, Z.H. Droughtinduced alterations in photosynthetic, ultrastructural and biochemical traits of contrasting sugarcane genotypes. PLoS ONE 2020,
+15, e0235845. [CrossRef]
+Cruz de Calvadio, M.H. Drought stress and reactive oxygen species. Plant Signal. Behav. 2008, 3, 156–165. [CrossRef]
+Verma, G.; Srivastava, D.; Tiwari, P.; Chakrabarty, D. Reactive oxygen, nitrogen and sulfur species in plants: Production,
+metabolism, signaling and defense mechanisms. ROS modulation in crop plants under drought stress. In Reactive Oxygen,
+Nitrogen and Sulfur Species in Plants: Production, Metabolism, Signaling and Defense Mechanisms; Hasanuzzaman, M., Fotopoulos, V.,
+Nahar, K., Fujita, M., Eds.; Wiley: Hoboken, NJ, USA, 2019; pp. 311–336.
+Petrov, V.; Hille, J.; Mueller-Roeber, B.; Gechev, T.S. ROS-mediated abiotic stress-induced programmed cell death in plants. Front.
+Plant Sci. 2015, 6, 1–16. [CrossRef]
+
+68.
+69.
+70.
+71.
+72.
+73.
+74.
+75.
+76.
+77.
+78.
+79.
+80.
+81.
+82.
+83.
+84.
+85.
+86.
+87.
+88.
+89.
+90.
+
+91.
+
+92.
+
+93.
+94.
+95.
+96.
+
+Thakur, M.; Sohal, B.S. Role of elicitors in inducing resistance in plants against pathogen infection: A review. ISRN Biochem. 2013,
+2013, 1–10. [CrossRef]
+Ali, S.; Khan, N. Delineation of mechanistic approaches employed by plant growth promoting microorganisms for improving
+drought stress tolerance in plants. Microbiol. Res. 2021, 249, 126771. [CrossRef] [PubMed]
+Vardharajula, S.; Ali, S.Z.; Grover, M.; Reddy, G.; Bandi, V. Drought-tolerant plant growth promoting Bacillus spp.: Effect on
+growth, osmolytes, and antioxidant status of maize under drought stress. J. Plant Interact. 2011, 6, 1–14. [CrossRef]
+Jamiołkowska, A. Natural compounds as elicitors of plant resistance against diseases and new biocontrol strategies. Agronomy
+2020, 10, 173. [CrossRef]
+Walters, D.; Newton, A.; Lyon, G. (Eds.) Induced Resistance for Plant Defence. A Sustainable Approach to Crop Protection; Blackwell
+Publishing: Oxford, UK, 2007; ISBN 978-1-4051-3447-7.
+Conrath, U.; Beckers, G.J.; Flors, V.; Garcia-Augustin, P.; Jakab, G.; Mauch, F.; Newman, M.-A.; Pieterse, C.M.J.; Poinssot, B.;
+Pozo, M.J.; et al. Priming: Getting ready for battle. Mol. Plant Microbe Interact. 2006, 19, 1062–1071. [CrossRef] [PubMed]
+Martinez-Medina, A.; Flors, V.; Heil, M.; Mauch-Mani, B.; Pieterse, C.M.; Pozo, M.J.; Ton, J. Recognizing plant defense priming.
+Trends Plant Sci. 2016, 21, 818–822. [CrossRef]
+Koziara, W.; Sulewska, H.; Panasiewicz, K. Effect of resistance stimulator application to some agricultural crops. J. Res. Appl.
+Agric. Eng. 2006, 51, 82–86.
+Babosha, A.V. Changes in lectin activity in plants treated with resistance inducers. Plant Physiol. 2004, 31, 51–55. [CrossRef]
+Jones, J.D.G.; Dangl, J.L. The plant immune system. Nature 2006, 444, 323–329. [CrossRef] [PubMed]
+Boller, T.; Felix, G. A renaissance of elicitors: Perception of microbe-associated molecular patterns and danger signals by
+pattern-recognition receptors. Annu. Rev. Plant Biol. 2009, 60, 379–407. [CrossRef] [PubMed]
+Henry, G.; Thonart, P.; Ongena, M. PAMPs, MAMPs, DAMPs and others: An update on the diversity of plant immunity elicitors.
+Biotechnol. Agron. Soc. Environ. 2012, 16, 257–268.
+Schwessinger, B.; Ronald, P.C. Plant innate immunity: Perception of conserved microbial signatures. Annu. Rev. Plant Biol. 2012,
+63, 451–482. [CrossRef]
+Ranf, S. Sensing of molecular patterns through cell surface immune receptors. Curr. Opin. Plant Biol. 2017, 38, 68–77. [CrossRef]
+Bigeard, J.; Colcombet, J.; Hirt, H. Signaling mechanisms in pattern-triggered immunity (PTI). Mol. Plant 2015, 8, 521–539.
+[CrossRef]
+Wang, C.J.; Yang, W.; Wang, C.; Gu, C.; Niu, D.D.; Liu, H.X.; Wang, Y.P.; Guo, J.H. Induction of drought tolerance in cucumber
+plants by a consortium of three plant growth-promoting Rhizobacterium strains. PLoS ONE 2012, 7, e52565. [CrossRef]
+Shrivastava, P.; Kumar, R. Soil salinity: A serious environmental issue and plant growth promoting bacteria as one of the tools for
+its alleviation. Saudi J. Biol. Sci. 2015, 22, 123–131. [CrossRef]
+Singh, H.B.; Keswani, C.; Reddy, M.S.; Sansinenea, E.; García-Estrada, C. Secondary Metabolites of Plant Growth Promoting
+Rhizomicroorganisms: Discovery and Applications; Springer: Singapore, 2019; ISBN 9789811358623.
+Oszust, K.; Pylak, M.; Frac,
+˛ M. Trichoderma-based biopreparation with prebiotics supplementation for the naturalization of
+raspberry plant rhizosphere. J. Mol. Sci. 2021, 22, 6356. [CrossRef]
+Timmusk, S.; Behers, L.; Muthoni, J.; Muraya, A.; Aronsson, A.C. Perspectives and challenges of microbial application for crop
+improvement. Front. Plant Sci. 2017, 8, 49. [CrossRef]
+Sokolova, M.G.; Akimova, G.; Vaishlya, O.; Vedernikova, A. Physiological research of efficiency of biologically safe bacterial
+fertilizers. J. Manuf. Technol. Manag. 2010, 21, 956–970. [CrossRef]
+Abd El-Gleel Mosa, W.F.; Paszt, L.S.; Frac,
+˛ M.; Trzciński, P.; Treder, W.; Klamkowski, K. The role of biofertilizers in improving
+vegetative growth, yield and fruit quality of apple. Hortic. Sci. 2018, 45, 173–180. [CrossRef]
+Anli, M.; Baslam, M.; Tahiri, A.; Raklami, A.; Symanczik, S.; Boutasknit, A.; Ait-El-Mokhtar, M.; Ben-Laouane, R.; Toubali, S.;
+Ait Rahou, Y.; et al. Biofertilizers as strategies to improve photosynthetic apparatus, growth, and drought stress tolerance in the
+date palm. Front. Plant Sci. 2020, 11, 516818. [CrossRef] [PubMed]
+Aseri, G.K.; Jain, N.; Panwar, J.; Rao, A.V.; Meghwal, P.R. Biofertilizers improve plant growth, fruit yield, nutrition, metabolism
+and rhizosphere enzyme activities of pomegranate (Punica granatum L.) in Indian Thar Desert. Sci. Hortic. 2008, 117, 130–135.
+[CrossRef]
+Cipriano, M.A.P.; Lupatini, M.; Lopes-Santos, L.; da Silva, M.J.; Roesch, L.F.W.; Destéfano, S.A.L.; Freitas, S.S.; Kuramae, E.E.
+Lettuce and rhizosphere microbiome responses to growth promoting Pseudomonas species under field conditions. FEMS Microbiol.
+Ecol. 2016, 92, fiw197. [CrossRef]
+Niu, X.; Song, L.; Xiao, Y.; Ge, W. Drought-tolerant plant growth-promoting rhizobacteria associated with foxtail millet in a
+semi-arid and their potential in alleviating drought stress. Front. Microbiol. 2018, 8, 2580. [CrossRef] [PubMed]
+Astorga-Eló, M.; Gonzalez, S.; Acuña, J.J.; Sadowsky, M.J.; Jorquera, M.A. Rhizobacteria from ‘flowering desert’ events contribute
+to the mitigation of water scarcity stress during tomato seedling germination and growth. Sci. Rep. 2021, 11, 13745. [CrossRef]
+Milet, A.; Chaouche, N.K.; Dehimat, L.; Kaki, A.A.; Mounira, K.A.; Philippe, T. Flow cytometry approach for studying the
+interaction between Bacillus mojavensis and Alternaria alternata. Afr. J. Biotechnol. 2016, 15, 1417–1428. [CrossRef]
+Xie, Z.; Chu, Y.; Zhang, W.; Lang, D.; Zhang, X. Bacillus pumilus alleviates drought stress and increases metabolite accumulation
+in Glycyrrhiza uralensis Fisch. Environ. Exp. Bot. 2019, 158, 99–106. [CrossRef]
+
+97.
+98.
+
+99.
+
+100.
+101.
+
+102.
+103.
+104.
+105.
+106.
+107.
+108.
+109.
+110.
+111.
+112.
+113.
+114.
+115.
+116.
+117.
+
+118.
+119.
+
+120.
+121.
+122.
+
+123.
+
+Li, Y.; Shi, H.; Zhang, H.; Chen, S. Amelioration of drought effects in wheat and cucumber by the combined application of super
+absorbent polymer and potential biofertilizer. PeerJ 2019, 7, e6073. [CrossRef]
+Asghari, B.; Khademian, R.; Sedaghati, B. Plant growth promoting rhizobacteria (PGPR) confer drought resistance and stimulate
+biosynthesis of secondary metabolites in pennyroyal (Mentha pulegium L.) under water shortage condition. Sci. Hortic. 2020,
+263, 109132. [CrossRef]
+Calvo-Polanco, M.; Sánchez-Romera, B.; Aroca, R.; Asins, M.J.; Declerck, S.; Dodd, I.C.; Martínez-Andújar, C.; Albacete, A.;
+Ruiz-Lozano, J.M. Exploring the use of recombinant inbred lines in combination with beneficial microbial inoculants (AM fungus
+and PGPR) to improve drought stress tolerance in tomato. Environ. Exp. Bot. 2016, 131, 47–57. [CrossRef]
+Behrooz, A.; Vahdati, K.; Rejali, F.; Lotfi, M.; Sarikhani, S.; Leslie, C. Arbuscular mycorrhiza and plant growth-promoting bacteria
+alleviate drought stress in walnut. HortScience 2019, 54, 1087–1092. [CrossRef]
+Kumar, M.; Mishra, S.; Dixit, V.; Kumar, M.; Agarwal, L.; Chauhan, P.S.; Nautiyal, C.S. Synergistic effect of Pseudomonas putida
+and Bacillus amyloliquefaciens ameliorates drought stress in chickpea (Cicer arietinum L.). Plant Signal. Behav. 2016, 11. [CrossRef]
+[PubMed]
+Sandhya, V.; Ali, S.Z.; Grover, M.; Reddy, G.; Venkateswarlu, B. Effect of plant growth promoting Pseudomonas spp. on compatible
+solutes, antioxidant status and plant growth of maize under drought stress. Plant Growth Regul. 2010, 62, 21–30. [CrossRef]
+Sarma, R.K.; Saikia, R. Alleviation of drought stress in mung bean by strain Pseudomonas aeruginosa GGRJ21. Plant Soil 2014, 377,
+111–126. [CrossRef]
+Roberson, E.B.; Firestone, M.K. Relationship between desiccation and exopolysaccharide production in a soil Pseudomonas sp.
+Appl. Environ. Microbiol. 1992, 58, 1284–1291. [CrossRef] [PubMed]
+Mariotti, L.; Scartazza, A.; Curadi, M.; Picciarelli, P.; Toffanin, A. Azospirillum baldaniorum sp245 induces physiological responses
+to alleviate the adverse effects of drought stress in purple basil. Plants 2021, 10, 1141. [CrossRef]
+Vettori, L.; Russo, A.; Felici, C.; Fiaschi, G.; Morini, S.; Toffanin, A. Improving micropropagation: Effect of Azospirillum brasilense
+Sp245 on acclimatization of rootstocks of fruit tree. J. Plant Interact. 2010, 5, 249–259. [CrossRef]
+Heidari, M.; Mousavinik, S.M.; Golpayegani, A. Plant growth promoting Rhizobacteria (PGPR) effect on physiological parameters
+and mineral uptake in basil (Ociumum basilicum L.) under water stress. ARPN J. Agric. Biol. Sci. 2011, 6, 6–11.
+Jones, P.D.; Lister, D.H.; Jaggard, K.W.; Pidgeon, J.D. Future climate impact on the productivity of sugar beet (Beta vulgaris L.) in
+Europe. Clim. Chang. 2003, 58, 98–103. [CrossRef]
+Gauvry, E.; Mathot, A.-G.; Leguérinel, I.; Couvert, O.; Postollec, F.; Broussolle, V.; Coroller, L. Knowledge of the physiology of
+spore-forming bacteria can explain the origin of spores in the food environment. Res. Microbiol. 2016, 168, 369–378. [CrossRef]
+Radhakrishnan, R.; Hashem, A.; Abd Allah, E.F. Bacillus: A biological tool for crop improvement through bio-molecular changes
+in adverse environments. Front. Physiol. 2017, 8, 667. [CrossRef] [PubMed]
+Prajakta, B.M.; Suvarna, P.P.; Raghvendra, S.P.; Alok, R.R. Potential biocontrol and superlative plant growth promoting activity of
+indigenous Bacillus mojavensis PB-35 (R11) of soybean (Glycine max) rhizosphere. SN Appl. Sci. 2019, 1, 1143. [CrossRef]
+Wang, C.; Guo, Y.; Wang, C.; Liu, H.; Niu, D.; Wang, Y.; Guo, J. Enhancement of tomato (Lycopersicon esculentum) tolerance to
+drought stress by plant-growth-promoting rhizobacterium (PGPR) Bacillus cereus AR. J. Agric. Biotechnol. 2012, 20, 1097–1105.
+Lim, J.H.; Kim, S.D. Induction of drought stress resistance by multi-functional PGPR Bacillus licheniformis K11 in pepper. Plant
+Pathol. J. 2013, 29, 201–208. [CrossRef]
+Kaushal, M.; Wani, S.P. Plant-growth-promoting rhizobacteria: Drought stress alleviators to ameliorate crop production in
+drylands. Ann. Microbiol. 2016, 66, 35–42. [CrossRef]
+Arkhipova, T.N.; Prinsen, E.; Veselov, S.U.; Martinenko, E.V.; Melentiev, A.I.; Kudoyarova, G.R. Cytokinin producing bacteria
+enhance plant growth in drying soil. Plant Soil 2007, 292, 305–315. [CrossRef]
+Kramer, S.; Green, D.M. Acid and alkaline phosphatase dynamics and their relationship to soil microclimate in a semiarid
+woodland. Soil Biol. Biochem. 2000, 32, 179–188. [CrossRef]
+Omer, A.M. Bioformulations of Bacillus spores for using as biofertilizer biovalorization of olive mill waste water for the production
+of natural biofertilizers and antioxidants view project isolation and identification of fungi and bacteria from different Egyptian e.
+Life Sci. J. 2010, 7, 1097–8135.
+O’Hara, G.W.; Boonkerd, N.; Dilworth, M.J. Mineral constraints to nitrogen fixation. Plant Soil 1988, 108, 93–110. [CrossRef]
+Xu, X.; Du, X.; Wang, F.; Sha, J.; Chen, Q.; Tian, G.; Zhu, Z.; Ge, S.; Jiang, Y. Effects of potassium levels on plant growth,
+accumulation and distribution of carbon, and nitrate metabolism in apple Dwarf Rootstock seedlings. Front. Plant Sci. 2020,
+11, 904. [CrossRef] [PubMed]
+Avakyan, Z.A. Silicon compounds in solution bacteria quartz degradation. Mikrobiologiya 1984, 54, 301–307.
+Malinovskaya, I.M.; Kosenko, L.V.; Votselko, S.K.; Podgorsky, V.S. The role of Bacillus mucilaginosus polysaccharide in the
+destruction of silicate minerals. Mikrobiologiya 1990, 59, 70–78.
+Barnawal, D.; Maji, D.; Bharti, N.; Chanotiya, C.S.; Kalra, A. ACC deaminase-containing Bacillus subtilis reduces stress ethyleneinduced damage and improves mycorrhizal colonization and rhizobial nodulation in Trigonella foenum-graecum under drought
+stress. J. Plant Growth Regul. 2013, 32, 809–822. [CrossRef]
+Malusá, E.; Sas-Paszt, L.; Ciesielska, J. Technologies for beneficial microorganisms inocula used as biofertilizers. Sci. World J. 2012,
+1–12. [CrossRef]
+
+124. Roberts, M.S.; Nakamura, L.K.; Cohan, F.M. Bacillus mojavensis sp. nov., distinguishable from Bacillus subtilis by sexual isolation,
+divergence in DNA sequence, and differences in fatty acid composition. Int. J. Syst. Bacteriol. 1994, 44, 256–264. [CrossRef]
+[PubMed]
+125. Cao, L.; Qiu, Z.; You, J.; Tan, H.; Zhou, S. Isolation and characterization of endophytic Streptomyces strains from surface-sterilized
+tomato (Lycopersicon esculentum) roots. Lett. Appl. Microbiol. 2004, 39, 425–430. [CrossRef]
+126. Moussa, T.A. Studies on biological control of sugar beet pathogen Rhizoctonia solani Kühn. J. Biol. Sci. 2002, 2, 800–804.
+127. Snook, M.E.; Mitchell, T.; Hinton, D.M.; Bacon, C.W. Isolation and characterization of Leu 7-surfactin from the endophytic
+bacterium Bacillus mojavensis RRC 101, a biocontrol agent for Fusarium verticillioides. J. Agric. Food Chem. 2009, 57, 4287–4292.
+[CrossRef]
+128. Romano-Armada, N.; Yañez-Yazlle, M.F.; Irazusta, V.P.; Rajal, V.B.; Moraga, N.B. Potential of bioremediation and PGP traits in
+Streptomyces as strategies for bio-reclamation of salt-affected soils for agriculture. Pathogens 2020, 9, 117. [CrossRef] [PubMed]
+129. Hamedi, J.; Mohammadipanah, F. Biotechnological application and taxonomical distribution of plant growth promoting actinobacteria. J. Ind. Microbiol. Biotechnol. 2015, 42, 157–171. [CrossRef]
+130. Chitraselvi, R.P.E. Actinomycetes: Dependable tool for sustainable agriculture. Curr. Investig. Agric. Curr. Res. 2018, 1, 128–130.
+[CrossRef]
+131. Lawlor, K.; Knight, B.P.; Barbosa-Jefferson, V.L.; Lane, P.W.; Lilley, A.K.; Paton, G.I.; McGrath, S.P.; O’Flaherty, S.M.; Hirsch, P.R.
+Comparison of methods to investigate microbial populations in soils under different agricultural management. FEMS Microbiol.
+Ecol. 2000, 33, 129–137. [CrossRef] [PubMed]
+132. Pierzynski, G.M.; Vance, G.F.; Sims, J.T. Soils and Environmental Quality; Taylor and Francis: Boca Raton, FL, USA, 2005.
+133. Khamna, S.; Yokota, A.; Peberdy, J.F.; Lumyong, S. Indole-3-acetic acid production by Streptomyces sp. isolated from some Thai
+medicinal plant rhizosphere soils. Eur. Asian J. Biosci. 2010, 4, 23–32. [CrossRef]
+134. El-Tarabily, K.A. Promotion of tomato (Lycopersicon esculentum Mill.) plant growth by rhizosphere competent 1-aminocyclopropane1-carboxylic acid deaminase-producing Streptomycete Actinomycetes. Plant Soil 2008, 308, 161–174. [CrossRef]
+135. Gopalakrishnan, S.; Srinivas, V.; Vidya, M.S.; Rathore, A. Plant growth-promoting activities of Streptomyces spp. in sorghum and
+rice. Springerplus 2013, 2, 1–8. [CrossRef]
+136. El-Sayed, S.F.; Hassan, H.A.; El-Mogy, M.M. Impact of bio- and organic fertilizers on potato yield, quality and tuber weight loss
+after harvest. Potato Res. 2015, 58, 67–81. [CrossRef]
+137. Wahyudi, A.T.; Priyanto, J.A.; Afrista, R.; Kurniati, D.; Astuti, R.I.; Akhdiya, A. Plant growth promoting activity of Actinomycetes
+isolated from soybean rhizosphere. Online J. Biol. Sci. 2019, 19, 1–8. [CrossRef]
+138. Tredici, P. Del Nitrogen fixation: The story of the Frankia symbiosis. Arnold Arbor. 1995, 55, 26–31.
+139. Treseder, K.K.; Berlemont, R.; Allison, S.D.; Martiny, A.C. Drought increases the frequencies of fungal functional genes related to
+carbon and nitrogen acquisition. PLoS ONE 2018, 13, e0206441. [CrossRef] [PubMed]
+140. Treseder, K.K.; Lennon, J.T. Fungal traits that drive ecosystem dynamics on land. Microbiol. Mol. Biol. Rev. 2015, 79, 243–262.
+[CrossRef] [PubMed]
+141. Jiménez-Arias, D.; García-Machado, F.J.; Morales-Sierra, S.; García-García, A.L.; Herrera, A.J.; Valdés, F.; Luis, J.C.; Borges, A.A.
+A beginner’s guide to osmoprotection by biostimulants. Plants 2021, 10, 363. [CrossRef] [PubMed]
+142. Hardoim, P.R.; van Overbeek, L.S.; Berg, G.; Pirttilä, A.M.; Compant, S.; Campisano, A.; Döring, M.; Sessitsch, A. The hidden
+world within plants: Ecological and evolutionary considerations for defining functioning of microbial endophytes. Microbiol. Mol.
+Biol. Rev. 2015, 79, 293–320. [CrossRef]
+143. Verma, H.; Kumar, D.; Kumar, V.; Kumari, M.; Singh, S.K.; Sharma, V.K.; Droby, S.; Santoyo, G.; White, J.F.; Kumar, A.
+The potential application of endophytes in management of stress from drought and salinity in crop plants. Microorganisms 2021,
+9, 1729. [CrossRef]
+144. Bizos, G.; Papatheodorou, E.M.; Chatzistathis, T.; Ntalli, N.; Aschonitis, V.G.; Monokrousos, N. The role of microbial inoculants
+on plant protection, growth stimulation, and crop productivity of the olive tree (Olea europea L.). Plants 2020, 9, 743. [CrossRef]
+145. Bona, E.; Lingua, G.; Manassero, P.; Cantamessa, S.; Marsano, F.; Todeschini, V.; Copetta, A.; D’Agostino, G.; Massa, N.;
+Avidano, L.; et al. AM fungi and PGP Pseudomonads increase flowering, fruit production, and vitamin content in strawberry
+grown at low nitrogen and phosphorus levels. Mycorrhiza 2015, 25, 181–193. [CrossRef]
+146. Adamec, S.; Andrejiová, A. Mycorrhiza and stress tolerance of vegetables: A review. Acta Hortic. Regiotect. 2018, 21, 30–35.
+[CrossRef]
+147. Marulanda, A.; Barea, J.M.; Azcón, R. Stimulation of plant growth and drought tolerance by native microorganisms (AM fungi
+and bacteria) from dry environments: Mechanisms related to bacterial effectiveness. J. Plant Growth Regul. 2009, 28, 115–124.
+[CrossRef]
+148. Matias, S.R.; Pagano, M.C.; Muzzi, F.C.; Oliveira, C.A.; Carneiro, A.A.; Horta, S.N.; Scotti, M.R. Effect of rhizobia, mycorrhizal
+fungi and phosphate-solubilizing microorganisms in the rhizosphere of native plants used to recover an iron ore area in Brazil.
+Eur. J. Soil Biol. 2009, 45, 259–266. [CrossRef]
+149. Dreischhoff, S.; Das, I.S.; Jakobi, M.; Kasper, K.; Polle, A. Local responses and systemic induced resistance mediated by
+ectomycorrhizal fungi. Front. Plant Sci. 2020, 11, 590063. [CrossRef] [PubMed]
+150. De Battista, J.P.; Bacon, C.W.; Severson, R.; Plattner, R.D. Indole acetic acid production by the fungal endophyte of Tall Fescue.
+Agron. J. 1990, 82, 878–880. [CrossRef]
+
+151. Khan, A.L.; Waqas, M.; Khan, A.R.; Hussain, J.; Kang, S.M.; Gilani, S.A.; Hamayun, M.; Shin, J.H.; Kamran, M.; Al-Harrasi, A.;
+et al. Fungal endophyte Penicillium janthinellum LK5 improves growth of ABA-deficient tomato under salinity. World J. Microbiol.
+Biotechnol. 2013, 29, 2133–2144. [CrossRef] [PubMed]
+152. Ren, A.; Clayy, K. Impact of a horizontally transmitted endophyte, Balansia henningsiana, on growth and drought tolerance of
+Panicum rigidulum. Int. J. Plant Sci. 2009, 170, 599–608. [CrossRef]
+153. Dastogeer, K.M.G.; Li, H.; Sivasithamparam, K.; Jones, M.G.K.; Wylie, S.J. Fungal endophytes and a virus confer drought tolerance
+to Nicotiana benthamiana plants through modulating osmolytes, antioxidant enzymes and expression of host drought responsive
+genes. Environ. Exp. Bot. 2018, 149, 95–108. [CrossRef]
+154. Davies, F.T.; Potter, J.R.; Linderman Davies, R.G.; Ft, R.; Linderman, R. Drought resistance of mycorrhizal pepper plants
+independent of leaf P concentration-response in gas exchange and water relations. Physiol. Plant. 1993, 87, 45–53. [CrossRef]
+155. Liao, X.; Chen, J.; Guan, R.; Liu, J.; Sun, Q. Two arbuscular mycorrhizal fungi alleviates drought stress and improves plant growth
+in Cinnamomum migao seedlings. Mycobiology 2021, 49, 396–405. [CrossRef]
+156. Azad, K.; Kaminskyj, S. A fungal endophyte strategy for mitigating the effect of salt and drought stress on plant growth. Symbiosis
+2016, 68, 73–78. [CrossRef]
+157. Sun, C.; Johnson, J.M.; Cai, D.; Sherameti, I.; Oelmüller, R.; Lou, B. Piriformospora indica confers drought tolerance in Chinese
+cabbage leaves by stimulating antioxidant enzymes, the expression of drought-related genes and the plastid-localized CAS
+protein. J. Plant Physiol. 2010, 167, 1009–1017. [CrossRef]
+158. Morsy, M.; Cleckler, B.; Armuelles-Millican, H. Fungal endophytes promote tomato growth and enhance drought and salt
+tolerance. Plants 2020, 9, 877. [CrossRef]
+159. Subramanian, K.S.; Santhanakrishnan, P.; Balasubramanian, P. Responses of field grown tomato plants to arbuscular mycorrhizal
+fungal colonization under varying intensities of drought stress. Sci. Hortic. 2006, 107, 245–253. [CrossRef]
+160. Bae, H.; Sicher, R.C.; Kim, M.S.; Kim, S.H.; Strem, M.D.; Melnick, R.L.; Bailey, B.A. The beneficial endophyte Trichoderma hamatum
+isolate DIS 219b promotes growth and delays the onset of the drought response in Theobroma cacao. J. Exp. Bot. 2009, 60, 3279–3295.
+[CrossRef]
+161. Wu, Q.S.; Xia, R.X.; Zou, Y.N. Improved soil structure and citrus growth after inoculation with three arbuscular mycorrhizal fungi
+under drought stress. Eur. J. Soil Biol. 2008, 44, 122–128. [CrossRef]
+162. Thirumalai, E.; Venkatachalam, A.; Suryanarayanan, T.S. Fungal endophytes of betel leaves: The need to study mycotoxinproducing endophytes in leafy vegetables. Sydowia 2020, 73, 83–88. [CrossRef]
+163. Carbone, M.J.; Alaniz, S.; Mondino, P.; Gelabert, M.; Eichmeier, A.; Tekielska, D.; Bujanda, R.; Gramaje, D. Drought influences
+fungal community dynamics in the grapevine rhizosphere and root microbiome. J. Fungi 2021, 7, 686. [CrossRef]
+164. Piri, R.; Moradi, A.; Balouchi, H.; Salehi, A. Improvement of cumin (Cuminum cyminum) seed performance under drought stress
+by seed coating and biopriming. Sci. Hortic. 2019, 257, 108667. [CrossRef]
+
+Reproduced with permission of copyright owner. Further reproduction
+prohibited without permission.
