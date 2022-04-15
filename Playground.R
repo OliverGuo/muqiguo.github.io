@@ -1,10 +1,13 @@
 library(quanteda)
 library(readtext)
 library(stringi)
+library(stringr)
+library(readr)
 library(readtext)
-data_char <- texts(readtext("~/relavis/Corpora/mini corpus/RA1-2022-SIAM.txt"))
-names(data_char) <- "test"
-
-stri_sub(data_char, 1, 75)
 data <- readLines("~/relavis/Corpora/mini corpus/RA1-2022-SIAM.txt")
-data[grepl("^2.",data,ignore.case = T)]
+
+
+start_idx = grep("^1\\.\\s.*", data, ignore.case = T)
+end_idx = grep("^2\\.\\s.*", data, ignore.case = T)
+a = paste(data[start_idx:end_idx-1], collapse = '')
+a
