@@ -1,0 +1,253 @@
+One-step preparation of gel-electrolyte-friendly fiber-shaped aerogel
+current collector for solid-state fiber-shaped supercapacitors with
+large capacity 
+
+ABSTRACT
+Fiber-shaped aerogel conductive structures are a promising template for preparing fiber-shaped supercapacitors
+with high length-specific capacitance used in flexible and wearable electronics. The challenge lies in how to
+easily infiltrate enough active mass and gel electrolyte into micropores and achieve intimate contact so that the
+active mass can be fully utilized for large capacitance and small contact resistance to be obtained for fast rate
+response. Here, one-step preparation of gel electrolyte friendly, fiber-shaped conductive and hydrophilic aerogel
+is reported, which was produced from electrospinning poly(3,4-ethylenedioxythiophene):poly(styrenesulfonate)
+(PP) and poly(ethylene oxide) (PEO) on a centering Ti metal wire. Thanks to the high conductivity of PP, high
+hydrophilicity of PEO, high porosity of the aerogel structure and high mass loading of PP, the as-prepared PPPEO/Ti showed a fiber-length-specific capacitance of 68.4 mF cm− 1 and excellent rate performance due to well
+infiltration of gel electrolytes. More interestingly, PP-PEO/Ti was used as a template to load polyaniline (PANI).
+The as-prepared PANI@PP-PEO/Ti fibers were studied as electrodes in solid-state supercapacitors. A fiberlength-specific capacitance is as large as 136.7 mF cm− 1 was measured. These results suggest our PP-PEO/Ti
+is a promising 3D fiber-shaped aerogel structure for high-performance fiber energy storage devices. 
+
+1. Introduction
+With their high flexibility, knittability and other merits, fiber-shaped
+wearable electronics are receiving ever-growing interest such as solar
+cells, triboelectric nanogenerators (NGs), batteries and supercapacitors
+(SCs). They are used in energy harvesting devices [1,2], energy storage
+devices [3,4], medical devices [5] and fitness [6]. Solid-state fiber-shaped supercapacitors (SSFSS) of high performance with durability and
+comfortability have attracted ever-increasing interests [7–11]. However, most reported wet-spinning fiber-shaped electrodes for SSFSS
+generally suffer from a poor length-specific capacitance due to their low
+mass loading of active materials [12–15], as well as insufficient infiltration of a gel electrolyte in the porous electrode [16,17]. In this regard,
+a 3D fiber-shaped conductive aerogel, when used as a template and a
+current collector for high mass loading of the active material and deep
+infiltration of the gel electrolyte, could be a very promising structure for
+developing high-performance SSFSS with high length-specific capacitance [18–22]. So far, very few 3D fiber-shaped aerogel structures as
+current collectors were reported, and their complex fabrication methods
+may also limit their practical applications [23,24].
+Herein, one-step preparation of 3D fluffy fiber-shaped conducting
+structure was reported, which is amenable for gel electrolyte infiltration
+and can be loaded with a sufficient amount of other active mass. Such a
+fiber-shaped structure was made from conductive poly(3,4-
+ethylenedioxythiophene):poly(styrenesulfonate) (PP) and polyethylene
+oxide (PEO) on a centering metal wire in an electrospinning process. In
+this process, conductive nanofibers can be controlled standing up
+vertically on the collecting metal wire due to charging and electric field
+effects, thus forming a fluffy cotton-like aerogel structure. In our work,
+by balancing electric field force and gravity on electrospun nanofibers
+through adjusting its PEO content, large amounts of fluffy PP-PEO
+nanofibers were collected on the rotating Ti wire, resulting in a
+macroscopically fiber-shaped and microscopically aerogel structure,
+named fiber-shaped aerogel. Its highly conductive PP composition offers
+structural conductivity, while its highly hydrophilic PEO renders the
+porous structure easily infiltrated with gel electrolytes or other electrochemically active masses. Therefore, this highly porous, conductive
+and fiber-shaped PP-PEO/Ti structure is promising for developing solidstate fiber-shaped supercapacitors. Furthermore, PP-PEO/Ti was also
+used as the template to load electrochemically active polyaniline
+(PANI). The fiber-shaped solid-state supercapacitors fabricated from
+PANI@PP-PEO/Ti electrodes displayed a fiber-length-specific capacitance as large as 138.7 mF cm− 1 and good rate performance. The results
+demonstrate our PP-PEO/Ti fibers are promising for high-performance
+fiber-shaped energy storage devices.
+
+2. Experimental section
+
+2.1. Materials
+PEDOT:PSS (PP) solution (PH1000) and PEO powder with 600,000
+average molecular weight were purchased from Sigma-Aldrich. Sulfuric
+acid (H2SO4) (98%), hydrochloric acid (HCl) (98%), aniline (98%) and
+poly(vinyl alcohol) (PVA) (MW 89,000–98,000) were all purchased
+from Aladdin.
+
+2.2. Fabrication of PP-PEO/Ti
+0.12 g PEO were dispersed into 4 g PH1000 and the solution was then
+used for electrospinning. In this process, the voltage was set at ~15 kV
+and the rotation rate of the Ti wire was controlled at 600 rpm. Through
+controlling collection time, PP-PEO/Ti electrodes with different PP-PEO
+loading masses of around 0.66, 1.27 and 2.43 mg cm− 1 were achieved.
+They are named as PP-PEO-1/Ti, PP-PEO-2/Ti and PP-PEO-3/Ti
+(Fig. S3), respectively. The reproducibility of the system was checked
+by parallel test (Fig. S2). Relative standard deviation for the attributes of
+PP-PEO-1/Ti fibers was calculated using the following equation:
+
+where S is standard deviation, x is average value, xi is the ith data, n is
+number of samples.
+2.3. Fabrication of PANI@PP-PEO/Ti electrodes
+The electro-polymerization of PANI was carried out in a threeelectrode system with PP-PEO/Ti fiber as the working electrode and Pt
+as the counter electrode, an aqueous solution of 0.5 M aniline and 1 M
+H2SO4 as the electrolyte. The electrodeposition was implemented by
+cycling the working electrode potential in the voltage range of 0–0.8 V at
+a scan rate of 50 mV s
+− 1
+.
+2.4. Fabrication of solid-state supercapacitors
+Two PP-PEO/Ti electrodes were placed in a designed polytetrafluoroethylene (PTFE) plate (Fig. S3) and fixed by conductive silver
+paste and copper tape. The electrodes were then coated with PVA-H2SO4
+gel electrolyte.
+2.5. Characterization
+Surface morphologies of as-prepared samples were characterized by
+a scanning electron microscope (Philips-FEI Quanta 200, America). The
+cyclic voltammetry (CV) and galvanostatic charge-discharge (GCD)
+measurements were carried out using an electrochemical workstation
+(Chen-hua Chi-660E, Shanghai, China). The specific capacitance (mF
+cm− 1
+) for a single electrode was calculated using the following equation:
+
+where I is the discharge current, l is the length of the electrode, Δt is the
+discharge time and ΔV is the potential window during the discharging
+process after excluding the IR drop.
+
+3. Results and discussion
+
+3.1. Preparing 3D PP-PEO/Ti current collector
+One-step process to prepare PP-PEO/Ti with millimeter diameter is
+schematically depicted in Fig. 1. Different from non-conductive PEO,
+electrospun nanofibers of conductive PP-PEO exhibit a standing-up
+phenomenon, as observed in Ref. [25] and illustrated in Fig. 1. When
+ejected from the electrospinning nozzle, the PP-PEO fibers carry excess
+positive charges and electric field force pushes them toward the
+grounded metal collector (Process 1). When one end of the PP-PEO fiber
+touches the ground, electrons will flow into the positively charged fiber.
+These free electrons would gather at the sharply bent tips of the
+conductive fiber, leading to the standing-up of the fiber along the vertical electric field direction (Process 2). The fiber will break into sections at the bent tips when the electrostatic force exceeds its tensile
+strength (Process 3). The charged fibers affect the electric field distribution and they form self-assembled yarns or bird nest structures
+(Figs. S1a and b). Without another counteracting force, these fibers are
+difficult to be collected as a film. In this work, through adjusting the
+content of PEO in fibers, we balanced the gravity and the electric field
+forces on PP-PEO fibers and made them easy to be collected (Fig. S1c),
+leading to the cotton-like morphology and high electrical conductivity
+of the obtained PP-PEO fibers (Process 3). Fiber-shaped PP-PEO/Ti
+electrodes were achieved with different loading masses by controlling
+the collection time (Process 4). The relative standard deviation (RSD) of
+the PP-PEO/Ti fibers’ mass and diameter is 2.1% and 3.5% respectively,
+which leads to the specific capacity of the device with a small RSD
+(2.6%). The result indicates that the system has excellent repeatability
+(Fig. S2). In this work, PP-PEO/Ti electrodes with different loading
+masses of PP-PEO named as PP-PEO-1/Ti, PP-PEO-2/Ti, PP-PEO-3/Ti
+were used, and their diameters reach around 1.4, 2.0 and 2.7 mm
+(Figs. S2b and S3).
+A specifically-designed polytetrafluoroethylene (PTFE) plate
+(Fig. S4) was used as a holder for electrochemical performance tests. The
+process to assemble solid-state supercapacitors was schematically shown
+in Fig. 2a and an assembled device was displayed as an inset in Fig. 2a.
+The diameter of this PP-PEO-3/Ti wire reaches as high as 2.7 mm
+(Fig. 2b) and its cross-section shows a highly porous and curly structure
+(Fig. 2c). This unique structure, in conjunction with the high conductivity of PP and high hydrophilicity of PEO, renders the as-prepared
+highly porose PP-PEO/Ti a promising 3D current collector candidate
+for solid-state electrolyte-based devices. As noted, even though the
+diameter of PP-PEO/Ti is higher than 2 mm, the PVA-H2SO4 gel electrolyte could still be filled into the whole thickness of the PP-PEO layer
+(Fig. 2d), which is an essential requirement to fully use the active mass
+of a thick electrode.
+
+3.2. Characterization of PP-PEO/Ti fiber electrodes
+The properties of the PP-PEO-3/Ti fiber electrodes were further
+characterized in a two-electrode configuration using PVA-H2SO4 as the
+liquid electrolyte. Cyclic voltammetry (CV) measurements were conducted under scan rates from 10 to 200 mV s
+− 1 and the CV curves are
+shown in Fig. 3a. The specific capacitance of the PP-PEO-3/Ti
+electrode reached 68.4 mF cm¡1 at a scan rate of 10 mV s¡1
+,
+while it remained at 52.6 mF cm¡1 under a scan rate of 200 mV s¡1
+(Fig. 3c), suggesting its high-rate performance. The specific capacity of electrode calculated from galvanostatic charge-discharge
+(GCD) curves (Fig. 3b) also shows the high-rate behavior of the
+supercapacitor. It reached 85.5 mF cm¡1 at a current density of
+0.02 mA cm¡1 and it remained at 56.5 mF cm¡1 for a current
+density of 0.5 mA cm¡1 (Fig. 3c). The specific capacitance of electrode with bending angles of 0◦, 30◦, 60◦ and 120◦ under a scan rate
+of 10 mV s
+¡1 is shown in Fig. 3d. The capacitance even increased
+slightly during bending, which may be due to the improved interfacial interaction between the active material and the solid electrolyte. It is noted that the specific capacity of our PP-PEO-3/Ti
+electrode is much higher than those one-step prepared fibershaped electrodes reported in the literature (Fig. 3e) [26–30]. Our
+PP-PEO-3/Ti based supercapacitors also show excellent cycling stability,
+as demonstrated in Fig. S5. More than 86% of the initial capacitance was
+retained after 5000 charge-discharge cycles.
+The PP-PEO-3/Ti based supercapacitors were conducted under
+different temperature, different time with underwater immersion,
+different bending times, and their CV curves were presented in Fig. S6.
+Thanks to the excellent interfacial contact between electrode and electrolyte, the CV curves of the device show almost no change with the
+temperature range from 0 ◦C to 50 ◦C (Fig. S6a). Even socked in water
+for 24 h, the electrochemical performance of the device still remains
+stable, which exhibits its outstanding water stability (Fig. S6b). After
+10,000 bending times, the device keeps 96% of initial capacity
+(Fig. S6c), which demonstrated its outstanding flexibility. All the feature
+indicates our PP-PEO-3/Ti based supercapacitors is promising candidate
+for the wearable energy storage device.
+It is worth emphasizing that due to the excellent interface between
+PVA-H2SO4 and PP-PEO active material layer, the active material even
+under a high mass loading can be efficiently utilized contributing to the
+capacitance. This can be observed in Fig. 3f, where the devices based on
+PP-PEO-1/Ti (thickness: 1.4 mm, mass loading: 0.66 mg cm− 1
+), PP-PEO2/Ti (2.0 mm, 1.27 mg cm− 1
+), PP-PEO-3/Ti (2.7 mm, 2.43 mg cm− 1
+)
+show almost linear dependence of capacitance on the mass loading,
+especially at low scan rates. This so-called thick-independence or massindependence of specific capacitance is favorable when fabricating cost-
+effective devices with high mass loading. CV and GCD characterizations
+of supercapacitors based on the PP-PEO-1/Ti and PP-PEO-2/Ti are
+presented in Fig. S7. 
+
+3.3. Fiber-shaped solid-state supercapacitor
+In our work, PP-PEO-3/Ti electrodes were integrated into light and
+flexible non-woven fabrics to test their application in flexible electronics
+(Fig. 4a and b). They successfully powered the electronic watch and
+electronic thermohydrometer. The device structure and its integrated 
+process were shown in Fig. S8. Multiple-connected supercapacitors were
+also tested. The capacitance of the parallel-connected devices linearly
+depended on the number of devices connected (Fig. 4c and d), while for
+series connection. It is the voltage that linearly depended on the number
+of devices connected. (Fig. 4e and f). These results suggest our PP-PEO/
+Ti fiber-shaped supercapacitor is very promising as flexible energy
+storage for wearable electronics.
+
+3.4. Preparation and characterization of PANI@PP-PEO/Ti electrodes
+With its nanoscale 3D morphology and conductivity, PP-PEO/Ti can
+be applied as a 3D current collector for loading other active materials. In
+the following, it was used as a template to fabricate PANI@PP-PEO-2/Ti
+composited fiber electrodes through introducing the pseudocapacitance
+effect of PANI. With different mass loading of PANI, electrodes of PANI50@PP-PEO-2/Ti, PANI-100@PP-PEO-2/Ti, PANI-200@PP-PEO-2/Ti
+were fabricated. Fourier-transform infrared spectroscopy (FTIR) measurement was conducted in characterizing PANI@PP-PEO-2 and PPPEO-2 fibers (Fig. S10). PP-PEO-2 exhibited peaks at 1429 and 1288
+cm− 1 corresponding to C–C inter-ring stretching and C–
+–C symmetrical
+stretching at 1429 cm− 1 for PEO-blended [31]. In contrast,
+PANI@PP-PEO-2 fiber showed five peaks at 1593, 1454, 1254, 878 and 
+747 cm− 1
+. C–
+–C stretching vibration in PANI can be found at 1593 and
+1494 cm− 1 [32,33]. The peaks at 743 and 879 cm− 1 are associated with
+the vibration of C–H stretching [34]. C–N stretching vibration as the
+characteristic peak of PANI appeared at 1254 cm− 1
+, confirming PANI
+was successfully loaded on PP-PEO fibers [35]. The surface morphology
+of PANI@PP-PEO-2 was also studied, as shown in Fig. S9 a, b. A
+cross-section view of the is shown in Fig. S9c.
+CV measurement of the PANI@PP-PEO-2/Ti electrodes was conducted under a scan rate of 10–200 mV s
+− 1 (Figs. S11a–c) and the
+calculated capacitances are presented in Fig. 5a. Thanks to the pseudocapacitive contribution from PANI, the length-specific capacitance of
+PANI@PP-PEO-2/Ti is as high as 136.7 mF cm− 1 at the scan rate of 10
+mV s
+− 1
+, which is nearly five times larger than that of PP-PEO-2/Ti. It is
+worth mentioning that the length-specific capacity of our PANI@PPPEO-2/Ti is higher than most reported fiber-shaped electrodes
+(Fig. 5b) [23,36–42].
+
+4. Conclusion
+In this work, a one-step process of fabricating gel-electrolyte-friendly
+fiber-shaped aerogel electrodes via electrospinning is reported, with
+curly-like PP-PEO nanofiber aerogel coated on a centering Ti wire. The 
+conductivity of PP-PEO nanofibers in the electrospinning process determines their curly-like aerogel morphology feature. This unique
+structure with high porosity and excellent hydrophilicity is very effective for the absorption PVA-H2SO4 electrolyte to reduce contact resistance. The PP-PEO-3/Ti exhibits a specific capacity as high as 68.4 mF
+cm− 1
+. Using PP-PEO-2/Ti as a 3D current collector, the as-prepared
+PANI@PP-PEO-2/Ti fiber-shaped electrode exhibits a fiber-lengthspecific capacitance as large as 136.7 mF cm− 1
+. The reported structure, with its facile fabrication method, is very promising for fabricating
+all solid-state fiber-shaped energy storage devices.
+
+CRediT authorship contribution statement
+Congrui Bai: Conceptualization, Methodology, Writing – original
+draft, Visualization. Yaqin Wang: Data curation, Validation. Zhaoyang
+Fan: Resources, Writing – review & editing. Long Yan: Resources. Huan
+Jiao: Conceptualization, Project administration, Funding acquisition,
+Supervision. 
+

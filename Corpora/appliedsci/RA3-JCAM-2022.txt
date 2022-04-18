@@ -1,0 +1,2956 @@
+<heading>
+Title: Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+Author: Alessandro Chiesa, Michael A. Forbes, Tom Gur, and Nicholas Spooner
+Journal: Journal of the Association for Computing Machinery
+Year: 2022
+</heading>
+
+Abstract
+Zero knowledge plays a central role in cryptography and complexity. The seminal work of Ben-Or et al.
+(STOC 1988) shows that zero knowledge can be achieved unconditionally for any language in NEXP, as long
+as one is willing to make a suitable physical assumption: if the provers are spatially isolated, then they can be
+assumed to be playing independent strategies.
+Quantum mechanics, however, tells us that this assumption is unrealistic, because spatially-isolated
+provers could share a quantum entangled state and realize a non-local correlated strategy. The MIP* model
+captures this setting.
+In this work, we study the following question: Does spatial isolation still suffice to unconditionally achieve
+zero knowledge even in the presence of quantum entanglement?
+We answer this question in the affirmative: we prove that every language in NEXP has a 2-prover zero
+knowledge interactive proof that is sound against entangled provers; that is, NEXP ⊆ ZK-MIP* .
+Our proof consists of constructing a zero knowledge interactive probabilistically checkable proof with a
+strong algebraic structure, and then lifting it to the MIP* model. This lifting relies on a new framework that
+builds on recent advances in low-degree testing against entangled strategies, and clearly separates classical
+and quantum tools.
+Our main technical contribution is the development of new algebraic techniques for obtaining unconditional zero knowledge; this includes a zero knowledge variant of the celebrated sumcheck protocol, a key
+building block in many probabilistic proof systems. A core component of our sumcheck protocol is a new
+algebraic commitment scheme, whose analysis relies on algebraic complexity theory.
+15:2
+1 INTRODUCTION
+
+Zero knowledge, the ability to demonstrate the validity of a claim without revealing any information about it, is a central notion in cryptography and complexity that has received much attention
+in the last few decades. Introduced in the seminal work of Goldwasser, Micali, and Rackoff [22],
+zero knowledge was first demonstrated in the model of interactive proofs, in which a resourceunbounded prover interacts with a probabilistic polynomial-time verifier to the end of convincing
+it of the validity of a statement.
+Goldreich, Micali, and Wigderson [19] showed that every language in NP has a computational
+zero knowledge interactive proof, under the cryptographic assumption that (non-uniform) oneway functions exist. Ostrovsky and Wigderson [41] proved that this assumption is necessary.
+Unfortunately, the stronger notion of statistical zero knowledge interactive proofs, where both
+soundness and zero knowledge hold unconditionally, is limited. For example, if NP had such proofs
+then the polynomial hierarchy would collapse to its second level [2, 10, 18].
+The celebrated work of Ben-Or et al. [6] demonstrated that the situation is markedly different
+when the verifier interacts with multiple provers, in a classical world where by spatially isolating
+the provers we ensure that they are playing independent strategies—this is the model of multiprover interactive proofs (MIPs). They proved that every language having an MIP (i.e., every
+language in NEXP [4]) also has a perfect zero knowledge MIP. This result tells us that spatial
+isolation implies zero knowledge.
+In light of quantum mechanics, however, we know that spatial isolation does not imply independence, because the provers could share an entangled state and realize a strategy that is beyond that
+of independently acting provers. For example, it is possible for entangled provers to win a game
+(e.g., the magic square game) with probability 1, whereas independent provers can only win with
+probability at most 8/9 [13].
+Non-local correlations arising from local measurements on entangled particles play a fundamental role in physics, and their study goes back at least to Bell’s work on the Einstein–Podolsky–
+Rosen paradox [5]. Recent years have seen a surge of interest in MIPs with entangled provers, which
+correspond to the setting in which multiple non-communicating provers share an entangled state
+and wish to convince a classical verifier of some statement. This notion is captured by MIP* protocols, introduced by Cleve et al. [13]. A priori it is unclear whether these systems should be less
+powerful than standard MIPs, because of the richer class of malicious prover strategies, or more
+powerful, because of the richer class of honest prover strategies.
+Investigating proof systems with entangled adversaries not only sharpens our understanding
+of entanglement as a computational resource, but also contributes insights to hardness of approximation and cryptography in a post-quantum world. However, while the last three decades saw
+the development of powerful ideas and tools for designing and analyzing proof systems with classical adversaries, despite much effort, there are only a handful of tools available for dealing with
+quantum entangled adversaries, and many fundamental questions remain open.
+MIP* protocols were studied in a long line of work, culminating in a breakthrough result of Ito
+and Vidick [28], who in a technical tour-de-force showed that NEXP ⊆ MIP∗ ; However, it is unknown whether these MIP protocols can achieve zero knowledge, which is the original motivation
+behind the classical MIP model. In sum, in this paper we pose the following question:
+To what extent does spatial isolation imply unconditional zero knowledge in a quantum world?
+1.1 Our Results
+Our main result is a strong positive answer to the foregoing question, namely, we show that
+the NEXP ⊆ MIP∗ result of Ito and Vidick [28] continues to hold even when we require zero
+knowledge.
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:3
+
+Theorem 1.1. Every language in NEXP has a perfect zero knowledge 2-prover MIP* . In more detail,
+number of provers:
+⎡⎢
+round complexity:
+NEXP ⊆ PZK-MIP* ⎢⎢communication
+complexity:
+⎢⎣
+soundness error:
+
+2
+⎤
+poly(n) ⎥⎥
+poly(n) ⎥⎥ .
+1/2
+⎦
+
+We stress that the MIP* protocols of Theorem 1.1 enjoy both unconditional soundness against
+entangled provers as well as unconditional (perfect) zero knowledge against any (possibly malicious) verifier.
+1.2 Other Notions of Quantum Zero Knowledge
+To the best of our knowledge, this work is the first to study the notion of zero knowledge with entangled provers, as captured by the MIP* model. Nevertheless, zero knowledge has been studied in
+other settings in the quantum information and computation literature; we now briefly recall these.
+Watrous [48] introduced honest-verifier zero knowledge for quantum interactive proofs (interactive proofs in which the prover and verifier are quantum machines), and studied the resulting
+complexity class QSZKHV . Kobayashi studied a non-interactive variant of this notion [34], and the
+power of public-coin interaction [35].
+Other work has focused on post-quantum zero knowledge for interactive proofs where the honest prover and verifier are classical. In this setting, Damgård, Fehr, and Salvail [14] achieve zero
+knowledge for NP against malicious quantum verifiers, but only via arguments (i.e., computationally sound proofs) in the common reference string model. Subsequently, Watrous [49] constructed
+quantum interactive proofs that remain zero knowledge against malicious quantum verifiers. More
+recent work developed post-quantum proofs of knowledge [45], zero knowledge in the quantum
+random oracle model [46], zero knowledge proof systems for QMA [11], and oracle separations
+for quantum statistical zero knowledge [38].
+All the above works consider protocols between a single quantum prover and a quantum verifier.
+In particular, they do not study entanglement as a shared resource between two (or more) provers.
+In contrast, the MIP* protocols that we study have multiple spatially-isolated provers that share
+an entangled state. Indeed, we show that, analogously to the classical setting, MIP* protocols can
+achieve unconditional zero knowledge for a much larger complexity class (namely, NEXP) than
+possible for QSZK protocols (since QSZK ⊆ QIP = PSPACE).
+2 TECHNIQUES
+We begin by discussing the challenge that arises when trying to prove that NEXP ⊆ PZK-MIP* ,
+by outlining a natural approach to obtaining zero knowledge MIP* protocols, and considering why
+it fails.
+2.1
+
+The Challenge
+
+We know that every language in NEXP has a (perfect) zero knowledge MIP protocol, namely, that
+NEXP ⊆ PZK-MIP [6]. We also know that every language in NEXP has an MIP* protocol, namely,
+that NEXP ⊆ MIP∗ [28]. Is it then not possible to simply combine these two facts and deduce that
+every language in NEXP has a (perfect) zero knowledge MIP* ?
+The challenge is that the standard techniques used to construct zero knowledge MIP protocols
+do not seem compatible with those used to construct MIP* protocols for large classes. In fact, the
+former are precisely the type of techniques that prove to be very limited for obtaining soundness
+against entangled provers.
+In more detail, while constructions of MIP (and probabilistically checkable proof (PCP))
+protocols typically capitalize on an algebraic structure, known constructions of zero knowledge
+
+15:4
+MIPs are of a combinatorial nature. For example, the zero knowledge MIP in [6] is based on a
+multi-prover information-theoretic commitment scheme, which can be thought of as a CHSHlike game. The zero knowledge MIP in [15] is obtained via the standard transformation from zero
+knowledge PCPs, which is a form of consistency game. Unfortunately, these types of constructions
+do not appear resistant to entangled provers, nor is it clear how one can modify them to obtain
+this resistance without leveraging some algebraic structure.
+Indeed, initial attempts to show that NEXP ⊆ MIP∗ (e.g., [26, 27, 32]) tried to apply some black
+box transformation to an arbitrarily structured (classical) MIP protocol to force the provers to
+behave as if they are not entangled, and then appeal to standard MIP soundness. These works
+were only able to obtain limited protocols (e.g., with very large soundness error).
+In their breakthrough paper, Ito and Vidick [28] overcame this hurdle and showed that NEXP ⊆
+MIP∗ by taking a different route: rather than a black box transformation, they modified and reanalyzed a particular proof system, namely the MIP protocol for NEXP in [4], while leveraging and
+crucially using its algebraic structure. (Using subsequent work [29] and parallel repetition, it is
+possible to reduce the number of provers and rounds to a minimum, showing MIP* protocols for
+NEXP with two provers and one round.)
+In sum, the challenge lies in the apparent incompatibility between techniques used for zero
+knowledge and those used for soundness against entangled provers.
+2.2
+
+High-level Overview
+
+Our strategy for proving our main result is to bridge the aforementioned gap by isolating the
+role of algebra in granting soundness against entangled provers, and developing new algebraic
+techniques for zero knowledge. Our proof of Theorem 1.1 thus consists of two parts.
+(I) Lifting lemma: a black box transformation from algebraically-structured classical protocols
+into corresponding MIP* protocols, which preserves zero knowledge.
+(II) Algebraic zero knowledge: a new construction of zero knowledge algebraically-structured
+protocols for any language in NEXP.
+The first part is primarily a conceptual contribution, and it deals with quantum aspects of proof
+systems. The second part is our main technical contribution, and it deals with classical protocols
+(it does not require any background in quantum information). We briefly discuss each of the parts,
+and then provide an overview of the first part in Section 2.3 and of the second part in Section 2.4.
+In the first part of the proof, we build on recent advances in low-degree testing against entangled
+provers, and provide an abstraction of techniques in [28]. We prove a lifting lemma (Lemma 9.1)
+that transforms a class of algebraically-structured classical protocols into MIP* protocols, while
+preserving zero knowledge. This provides a generic framework for constructing MIP* protocols,
+while decoupling the mechanisms responsible for soundness against entangled provers from other
+classical components.
+In the second part of the proof, we construct an algebraically-structured zero knowledge classical protocol, which we refer to as a low-degree interactive PCP, to which we apply the lifting
+lemma, completing the proof. At the heart of our techniques is a strong zero knowledge variant of
+the sumcheck protocol [36] (a fundamental subroutine in many probabilistic proof systems), which
+we deem of independent interest. In turn, a key component in our zero knowledge sumcheck is
+a new algebraic commitment scheme, whose hiding property is guaranteed by algebraic query
+complexity lower bounds [1, 30]. These shed more light on the connection of zero knowledge to
+algebraic complexity theory.
+We summarize the roadmap towards proving Theorem 1.1 in Section 4.
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+2.3
+
+15:5
+
+Part I: Lifting Classical Proof Systems to MIP*
+
+The first step towards obtaining a generic framework for transforming classical protocols into corresponding MIP* protocols is making a simple, yet crucial, observation. Namely, while the result
+in [28] is stated as a white box modification of the MIP protocol in [4], we observe that the techniques used there can in fact be applied more generally. That is, we observe that any “low-degree
+interactive PCP”, a type of algebraically structured proof system that underlies (implicitly and explicitly) many constructions in the probabilistic proof systems literature, can be transformed into
+a corresponding MIP* protocol.
+The first part of the proof of Theorem 1.1 formalizes this idea, identifying sufficient conditions
+to apply the techniques of [28], and showing a lifting lemma that transforms protocols satisfying
+these conditions into MIP* protocols. We relate features of the original protocol to those of the
+resulting MIP* protocols, such as round complexity and, crucially, zero knowledge.
+To make this discussion more accurate, we next define and discuss low-degree interactive PCPs.
+2.3.1 Low-degree Interactive PCPs. An Interactive PCP (IPCP), a proof system whose systematic study was initiated by Kalai and Raz [31], naturally extends the notions of a PCP and an
+interactive proof (IP). An r-round IPCP is a two-phase protocol in which a computationally unbounded prover P tries to convince a polynomial-time verifier V that an input x, given to both
+parties, is in a language L . First, the prover sends to the verifier a PCP oracle (a purported proof
+that x ∈ L ), which the verifier can query at any time. Second, the prover and verifier engage in an
+r-round IP, at the end of which the verifier either accepts or rejects.1 Completeness and soundness
+are defined in the usual way.
+In this work, we consider a type of algebraically-structured IPCP, which we call a low-degree
+IPCPs. This notion implicitly (and semi-explicitly) underlies many probabilistic proof systems in
+the literature. Informally, a low-degree IPCP is an IPCP satisfying the following:
+(1) low-degree completeness, which states that the PCP oracle sent by the (honest) prover is a
+polynomial of low (individual) degree; and
+(2) low-degree soundness, which relaxes soundness to hold only against provers that send PCP
+oracles that are low-degree polynomials.
+Low-degree completeness and soundness can be viewed as a promise that the PCP oracle is
+a low-degree polynomial. Indeed, these conditions are designed to capture “compatibility” with
+low-degree testing: only protocols with low-degree completeness will pass a low-degree test with
+probability 1; moreover, adding a low-degree test to an IPCP with low-degree soundness results
+(roughly) in an IPCP with standard soundness.
+2.3.2 From Low-degree IPCP to MIP* . We show that any low-degree IPCP can be transformed
+into a corresponding MIP* protocol, in a way that preserves zero knowledge (for a sufficiently
+strong notion of zero knowledge IPCP). To this end, we use an entanglement-resistant low degree
+test, which allows us to essentially restrict the provers usage of the entangled state to strategies
+that can be approximately implemented via randomness shared among the provers. Informally,
+the idea is that by carefully invoking such a test, we can let one prover take on the role of the PCP
+oracle, and the other to take the role of the IPCP prover, and then emulate the entire IPCP protocol.
+In more detail, we show a zero-knowledge-preserving transformation of low-degree IPCPs to
+MIP* protocols, which is captured by the following lifting lemma.
+
+1 Alternatively,
+
+an IPCP can be viewed as a PCP that is verified interactively (by an IP, instead of a randomized algorithm).
+15:6
+Lemma 2.1 (Informally Stated, see Lemma 9.1). There exists a transformation T that takes
+an r-round low-degree IPCP (P , V  ) for a language L , and outputs a 2-prover (r + 1)-round MIP*
+(P1 , P2 , V ) := T (P , V  ) for L (with soundness error 1 − 1/ poly(n)). Moreover, this transformation
+preserves zero knowledge.2
+We stress that the simplicity of the lifting lemma is a key feature since, as we describe below, it
+requires us to only make small structural changes to the IPCP protocol. This facilitates the preservation of various complexity measures and properties, such as zero knowledge.
+To prove this lemma, a key tool that we use is the “line-vs-point” low (individual) degree test due
+to Ji, Natarajan, Vidick, Wright and Yuen [29]. A low-degree test is a procedure used to determine
+if a given function f : Fm → F is close to a low-degree polynomial or if, instead, it is far from all
+low-degree polynomials, by examining f at very few locations. In a line-vs-point test, the verifier
+specifies a random line in Fm to one prover and a random point on this line to the other prover;
+each prover replies with the purported value of f on the received line or point; then the verifier
+checks that these values are consistent.3
+Informally, the analysis in [29] asserts that every entangled strategy that passes this test with
+high probably must satisfy an algebraic structure; more specifically, to pass this test the provers
+can only use their shared entangled state to (approximately) agree on a low-degree polynomial
+according to which they answer. We use the following soundness analysis of this protocol.
+Theorem 2.2 ([29, Theorem 2], Informally Stated). For every entangled prover strategy
+(P1 , P2 ) that convinces the verifier in the low-degree test with sufficiently high probability, there is
+a strategy (P1 , PLD2 ) which is “close” to (P1 , P2 ), where PLD2 operates as follows. First, apply a measurement to obtain a low-degree polynomial Q, then answer the verifier’s point query α ∈ Fm with
+Q (α ).
+With the foregoing low-degree test at our disposal, we are ready to outline the simple transformation from low-degree IPCPs to MIP* protocols. We begin with a preprocessing step. Note that the
+low individual degree test provides us with means to assert that the provers can (approximately)
+only use their entangled state to choose a low-degree polynomial Q, and answer the verifier with
+the evaluation of Q on a single, uniformly distributed point. Thus, it is important that the IPCP
+verifier (which we start from) only makes a single uniform query to its oracle. By adapting techniques from [31], we can leverage the algebraic structure of the low-degree IPCP and capitalize on
+the interaction to ensure the IPCP verifier has this property, at essentially the cost of increasing
+the round complexity by 1.4
+Thus we have a low-degree IPCP, with prover P and verifier V , in which the verification takes
+place as follows. Both P and V receive an explicit input x that is allegedly in the language L . In
+addition, V is granted oracle access to a purported low-degree polynomial R, whose full description
+is known to P. The parties engage in an r -round interaction, at the end of which V is allowed to
+make a single uniform query to R and decide whether x ∈ L (with high probability).
+We transform this IPCP into a 2-prover MIP* by considering the following protocol. First, the
+verifier chooses uniformly at random whether to (1) invoke a low-degree test, in which it asks one
+prover to evaluate R on a random plane or axis-parallel line and the other prover to evaluate R on
+a random point on this plane or line, or (2) emulate the IPCP protocol, in which one prover plays
+the role of the IPCP prover and the other acts as lookup for R.
+2 More
+
+accurately, we require the given IPCP to be zero knowledge with a large enough (polynomial) query bound. See
+Section 9.2 for details.
+3 This is actually one of three tests; see Section 8 for more details.
+4 Indeed, if the original IPCP verifier makes a single uniform query to its oracle, then we can save a round in Lemma 2.1;
+that is, we obtain an MIP* with round complexity max(r, 1), rather than r + 1.
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:7
+
+We use the approximate consistency condition of Theorem 2.2 to assert that the lookup prover
+approximately answers according to a low-degree polynomial, and use the self-consistency condition to ensure that both provers are consistently answering according to the same low-degree
+polynomial.5
+2.3.3 Towards Zero Knowledge MIP* for Nondeterministic Exponential Time. Equipped with the
+lifting lemma, we are left with the task of constructing classical zero knowledge low-degree IPCPs
+for all languages in NEXP. We first explain why current constructions do not suffice for this
+purpose.
+The first thing to observe is that the classical protocol for the NEXP-complete language Oracle
+3SAT by Babai, Fortnow, and Lund [4] (neglecting the multilinearity test) can be viewed as lowdegree IPCP. Indeed, in [4] the protocol is stated as an “oracle protocol”, which is equivalent to
+an IPCP. The oracle is encoded as a low-degree polynomial, and so low-degree completeness is
+satisfied. Alas, the foregoing protocol is not zero knowledge. We remark that since the MIP* protocol in [28] relies on the protocol in [4], the former inherits the lack of zero knowledge from the
+latter.
+Proceeding to consider classical zero knowledge proof systems, for example, the protocols in [15,
+23, 33], we observe that while some of these proof systems can be viewed as IPCPs, they are not lowdegree IPCPs. This is because they achieve zero knowledge via combinatorial techniques that do not
+admit the algebraic structure that we require. We stress that the natural way of endowing an IPCP
+with algebraic structure by taking the low-degree extension of the PCP oracle does not necessarily
+preserve zero knowledge.6 Correspondingly, previous MIP* protocols that rely on applying the
+low-degree extension code to a PCP, do not preserve zero knowledge for this reason.
+Finally, we observe that recent advances in algebraic zero knowledge [7] (building on techniques
+from [8]) already provide us with a classical proof system that is compatible with our framework,
+and can thus be used to derive a zero knowledge MIP* protocol, albeit only for languages in #P.
+To strengthen the aforementioned result and show that NEXP ⊆ PZK-MIP* (matching the
+NEXP ⊆ MIP∗ containment, and showing that zero knowledge can, in a sense, be obtained for
+“free” in the setting of MIP* protocols), we need to construct a much stronger zero knowledge lowdegree IPCP. The second part of Theorem 1.1, which is our main technical contribution, provides
+exactly that. We proceed to provide an overview of the techniques that we use to construct such
+protocols.
+2.4
+
+Part II: New Algebraic Techniques for Zero Knowledge
+
+The techniques discussed thus far tell us that, if we wish to obtain a zero knowledge MIP* for NEXP,
+it suffices to obtain a zero knowledge low-degree IPCP for NEXP (an IPCP wherein the oracle is a
+low-degree polynomial). Doing so is the second part of our proof of Theorem 1.1, and for this we
+develop new algebraic techniques for obtaining zero knowledge protocols. Our techniques, which
+build on recent developments [7, 8], stand in stark contrast to other known constructions of zero
+knowledge PCPs and interactive PCPs (such as [15, 23, 33]). We remind the reader that this part
+of our work only deals with classical protocols, and does not require any knowledge of quantum
+information.
+5 Since the players are allowed the use of entanglement, we cannot hope for a single function that underlies their strategy.
+Indeed, the players could measure their entangled state to obtain shared randomness and select a random R according to
+which they answer.
+6 Intuitively, a single point in the encoded oracle can summarize a large amount of information from the original oracle
+(e.g., very large linear combinations).
+15:8
+
+2.4.1 A Zero Knowledge Low-degree IPCP for NEXP. Our starting point is the protocol of Babai,
+Fortnow, and Lund [4] (the “BFL protocol”). We first recall how the BFL protocol works, in order
+to explain its sources of information leakage and how one could prevent them via algebraic techniques. These are the ideas that underlie our algebraic construction of an unconditional (perfect)
+zero knowledge low-degree IPCP for NEXP.
+The BFL protocol, and why it leaks. Oracle 3SAT (O3SAT) is the following NEXP-complete problem: given a boolean formula B, does there exist a boolean function A (a witness) such that
+B(z, b1 , b2 , b3 , A(b1 ), A(b2 ), A(b3 )) = 0
+
+for allz ∈ {0, 1}r , b1 , b2 , b3 ∈ {0, 1}s ?
+
+The BFL protocol is an IPCP for O3SAT that is then (generically) converted to an MIP. In the
+BFL protocol, the honest prover first sends a PCP oracle Â: Fs → F that is the unique multilinear
+extension (in some finite field F) of a valid witness A: {0, 1}s → {0, 1}. The verifier must check that
+(1) Â is a boolean function on {0, 1}s , and
+(2) Â’s restriction to {0, 1}s is a valid witness for B.
+To do these checks, the verifier arithmetizes the formula B into an arithmetic circuit B̂, and reduces
+the checks to conditions that involve Â, B̂, and other low-degree polynomials. A technique in [3]
+allows the verifier to “bundle” all of these conditions into a single low-degree polynomial f such
+that (with high probability over the choice of f ) the conditions hold if and only if f sums to 0 on
+{0, 1}r +3s+3 . The verifier checks that this is the case by engaging in a sumcheck protocol with the
+prover.7
+We observe that the BFL protocol is not zero knowledge for two reasons:
+(1) the verifier has oracle access to Â and, in particular, to the witness A; and
+(2) the prover’s messages during the sumcheck protocol leak further information about A
+(namely, hard-to-compute partial sums of f , which itself depends on A).
+A blueprint for zero knowledge. We now describe the “blueprint” for an approach to achieve zero
+knowledge in the BFL protocol. The prover does not send Â directly, but instead a commitment to
+it. After this, the prover and verifier engage in a sumcheck protocol with suitable zero knowledge
+guarantees; at the end of this protocol, the verifier needs to evaluate f at a point of its choice,
+which involves evaluating Â at three points. Now the prover reveals the requested values of Â,
+without leaking any information beyond these, so that the verifier can perform its check. We explain how these ideas motivate the need for certain algebraic tools, which we later develop and
+use to instantiate our approach.
+(1) Randomized low-degree extension. Even if the prover reveals only three values of Â, these
+may still leak information about A. We address this problem via a randomized low-degree extension.
+Indeed, while the prover in the BFL protocol sends the unique multilinear extension of A, one can
+verify that any extension of A of sufficiently low degree also works. We exploit this flexibility as
+follows: the prover randomly samples Â in such a way that any three evaluations of Â do not reveal
+any information about A. Of course, if any of these evaluations is within the systematic part {0, 1}s ,
+then no extension of A has this property. Nevertheless, during the sumcheck protocol, the prover
+can ensure that the verifier chooses only evaluations outside of {0, 1}s (by aborting if the verifier
+7 The
+
+soundness of the sumcheck protocol depends on the PCP oracle being the evaluation of a low-degree polynomial,
+and so the verifier in [4] checks this using a low-degree test. In our setting of low-degree IPCPs a low-degree test is not
+necessary.
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:9
+
+deviates), which incurs only a small increase in the soundness error.8 With this modification in
+place, it suffices for the prover to let Â be a random degree-4 extension of A: by a dimensionality
+argument, any 3 evaluations outside of {0, 1}s are now independent and uniformly random in F.
+We are thus able to reduce a claim about A to a claim which contains no information about A.
+(2) Algebraic commitments. As is typical in zero knowledge protocols, the prover will send a
+commitment to Â, and then selectively reveal a limited set of evaluations of Â. The challenge in
+our setting is that this commitment must also be a low-degree polynomial, since we require a lowdegree oracle. For this, we devise a new algebraic commitment scheme based on the sumcheck
+protocol; we discuss this in Section 2.4.2.
+(3) Sumcheck in zero knowledge. We need a sumcheck protocol where the prover’s messages leak
+little information about f . The prior work in [7] achieves an IPCP for sumcheck that is “weakly”
+zero knowledge: any verifier learns at most one evaluation of f for each query it makes to the PCP
+oracle. If the verifier could evaluate f by itself, as was the case in that paper, this guarantee would
+suffice for zero knowledge. In our setting, however, the verifier cannot evaluate f by itself because
+f is (necessarily) hidden behind the algebraic commitment.
+One approach to compensate would be to further randomize Â by letting Â be a random extension of A of some well-chosen degree d. Unfortunately, this technique is incompatible with our
+low-degree IPCP to MIP* transformation: such a low-degree extension is at most d-wise independent, whereas our lifting lemma (Lemma 9.1), and more generally low-degree testing, requires zero
+knowledge against any Ω(d 2 ) queries.
+We resolve this by relying on more algebraic techniques, achieving an IPCP for sumcheck with a
+much stronger zero knowledge guarantee: any malicious verifier that makes polynomially-many
+queries to the PCP oracle learns only a single evaluation of f . This suffices for zero knowledge
+in our setting: learning one evaluation of f implies learning only three evaluations of Â, which
+can be made “safe” if Â is chosen to be a random extension of A of sufficiently high degree. Our
+sumcheck protocol uses as building blocks both our algebraic commitment scheme and the “weak”
+zero knowledge sumcheck in [7]; we summarize its construction in Section 2.4.3.
+2.4.2 Algebraic Commitments from Algebraic Query Complexity Lower Bounds. We provide a
+high-level description of an information-theoretic commitment scheme in the low-degree IPCP
+model (i.e., a low-degree interactive locking scheme [23]). See Section 12 for the full details.9
+In this scheme, the prover commits to a message by sending to the verifier a PCP oracle that perfectly hides the message; subsequently, the prover can reveal positions of the message by engaging
+with the verifier in an interactive proof, whose soundness guarantees statistical binding.
+Committing to an element. We first consider the simple case of committing to a single element a
+in F. Let k be a security parameter, and set N := 2k . Suppose that the prover samples a random B
+N
+in FN such that i=1
+Bi = a, and sends B to the verifier as a commitment. Observe that any N − 1
+entries of B do not reveal any information about a, and so any verifier with oracle access to B that
+makes fewer than N queries cannot learn any information about a. However, as B is unstructured
+N
+it is not clear how the prover can later convince the verifier that i=1
+Bi = a.
+Instead, we can consider imbuing B with additional algebraic structure. Namely, the prover
+views B as a function from {0, 1}k to F, and sends its unique multilinear extension B̂ : Fk → F to
+honest verifier will be defined so that it always chooses evaluations outside of {0, 1}s , so completeness is unaffected.
+use the commitment scheme perspective to illustrate the key ideas in our construction. In the technical sections, we
+prove the zero knowledge property directly using algebraic query complexity lower bounds, without explicitly using any
+commitment scheme.
+8 The
+9 We
+
+
+15:10
+the verifier. Subsequently, the prover can reveal a to the verifier, and then engage in a sumcheck
+
+protocol for the claim “ β ∈ {0,1}k B̂( β) = a” to establish the correctness of a. The soundness of the
+sumcheck protocol protects the verifier against cheating provers and hence guarantees that this
+scheme is binding.
+However, giving B additional structure calls into question the hiding property of the scheme.
+Indeed, surprisingly, a result of Juma et al. [30] shows that this new scheme is in fact not hiding
+(in fields of odd characteristic): it holds that B̂(2−1 , . . . , 2−1 ) = a · 2−k for any choice of B, so the
+verifier can learn a with only a single query to B̂!
+Sending an extension of B has created a new problem: querying the extension outside of {0, 1}k ,
+the verifier can learn information that may require many queries to B to compute. Indeed, this
+additional power is precisely what underlies the soundness of the sumcheck protocol. To resolve
+this, we need to understand what the verifier can learn about B given some low-degree extension
+B̂. This is precisely the setting of algebraic query complexity [1].10
+Indeed the foregoing theory suggests a natural approach for overcoming the problem created
+by the extension of B: instead of considering the multilinear extension, we can let B̂ be chosen
+uniformly at random from the set of degree-d extensions of B, for some d > 1. It is not hard to see
+that if d is very large (say, |F|) then 2k queries are required to determine the summation of B̂ on
+{0, 1}k . However, we need d to be small to achieve soundness. Fortunately, a result of [30] shows
+that d = 2 suffices: given a random multiquadratic extension B̂ of B, one needs 2k queries to B̂ to
+
+determine β ∈ {0,1}k B̂( β).11
+Committing to a polynomial. The prover in our zero knowledge protocols needs to commit not
+just to a single element but rather to the evaluation of an m-variate polynomial Q over F of degree
+d > 1. We extend our ideas to this setting. We follow a similar general approach, however, arguing
+the hiding property now requires a stronger algebraic query complexity lower bound than the
+one proved in [30]. Not only do we need to know that the verifier cannot determine Q (
+α ) for a
+α ) for any α ∈ Fm ,
+particular α ∈ Fm , but we need to know that the verifier cannot determine Q (
+or even any linear combination of any such values. We prove that this stronger guarantee holds
+in the same parameter regime: if d > 1 then 2k queries are both necessary and sufficient. See the
+discussion at the beginning of Section 12 for a more detailed overview.
+Decommitting in zero knowledge. To use our commitment scheme in zero knowledge protocols, we must ensure that, in the decommitment phase, the verifier cannot learn any information beyond the value a := Q (
+α ), for a chosen α . To decommit, the prover sends the value a
+
+α , β) = a” is true. However, if the
+and has to convince the verifier that the claim “ β ∈ {0,1}k B̂(
+prover and verifier simply run the sumcheck protocol on this claim, the prover leaks partial sums
+
+B̂(
+α , c 1 , . . . , c i , β), for c 1 , . . . , c i ∈ F chosen by the verifier, which could reveal additional
+β ∈ {0,1}k −i
+information about Q. Instead, the prover and verifier run on this claim the IPCP for sumcheck of
+[7], whose “weak” zero knowledge guarantee ensures that this cannot happen. (Thus, in addition to
+the commitment, the honest prover also sends the evaluation of a random low-degree polynomial
+as required by the IPCP for sumcheck of [7].)
+2.4.3 A Zero Knowledge Sumcheck Protocol. We describe the “strong” zero knowledge variant
+of the sumcheck protocol that we use in our construction. The protocol relies on the algebraic
+10 Interestingly,
+
+in [1] a connection between algebra and zero knowledge is also exhibited. Namely, to show that the result
+NP ⊆ CZK [19] algebrizes, it is necessary to exploit the algebraic structure of the oracle to design a zero knowledge
+protocol for verifying the existence of certain sets of query answers.
+11 This is the main reason why our application to constructing MIP* protocols requires low-degree test against entangled
+provers, rather than just a multilinearity test, as was used in [28].
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:11
+
+commitment scheme described in the previous section. We first cover some necessary background,
+and then describe our protocol.
+Previous sumcheck protocols. The sumcheck protocol [36] is an IP for claims of the form
+
+“ α ∈H m F (
+α ) = 0”, where H is a subset of a finite field F and F is an m-variate polynomial
+over F of small individual degree. The protocol has m rounds: in round i, the prover sends
+
+the univariate polynomial дi (X i ) := α ∈H m−i F (c 1 , . . . , c i−1 , X i , α ), where c 1 , . . . , c i−1 ∈ F were
+
+sent by the verifier in previous rounds; the verifier checks that α i ∈H дi (α i ) = дi−1 (c i−1 ) and
+replies with a uniformly random challenge c i ∈ F. After round m, the verifier outputs the claim
+“F (c 1 , . . . , cm ) = дm (c 1 , . . . , cm )”. If F is of sufficiently low degree and does not sum to a over the
+space, then the output claim is false with high probability. Note that the verifier does not need
+access to F .
+The “weak” zero knowledge IPCP for sumcheck in [7] modifies the above protocol as follows.
+The prover first sends a PCP oracle that (allegedly) equals the evaluation of a random “masking”
+polynomial R; the verifier checks that R is (close to) low degree. Subsequently, the prover and
+verifier conduct the following interactive proof. The prover sends z ∈ F that allegedly equals
+
+α ), and the verifier responds with a uniformly random challenge ρ ∈ F∗ . The prover and
+ ∈H m R(
+α
+
+α ) + R(
+α) =
+verifier now run the (standard) sumcheck protocol to reduce the claim “ α ∈H m ρF (
+ρa + z” to a claim “ρF (c ) + R(c ) = b”, for a random c ∈ Fm . The verifier queries R at c and then
+
+α )  a, then with high probability over ρ and the
+outputs the claim “F (c ) = b−Rρ (c ) ”. If α ∈H m F (
+verifier’s messages in the sumcheck protocol, this claim is false.
+A key observation is that if the verifier makes no queries to R, then the prover’s messages are
+identically distributed to the sumcheck protocol applied to a random polynomial Q. When the verifier does make queries to R, simulating the resulting conditional distribution involves techniques
+from Algebraic Complexity Theory, as shown in [7]. Given Q, the verifier’s queries to R(
+α ), for
+α ) − ρF (
+α ). Thus, the simulator need only make at most
+α ∈ Fm , are identically distributed to Q (
+one query to F for every query to R; that is, any verifier making q queries to R learns no more than
+it would learn by making q queries to F alone.
+As discussed, this zero knowledge guarantee does not suffice for the application that we consider:
+in the NEXP protocol, the polynomial F is defined in terms of the NEXP witness. In this case the
+verifier can learn enough about F to break zero knowledge by making only O (deg(F )) queries
+to R.
+Our sumcheck protocol. The “strong” zero knowledge guarantee that we aim for is the following:
+any polynomial-time verifier learns no more than it would by making one query to F , regardless
+of its number of queries to the PCP oracle.
+The main idea to achieve this guarantee is the following. The prover sends a PCP oracle that
+is an algebraic commitment Z to the aforementioned masking polynomial R. Then, as before, the
+
+α ) + R(
+α ) = ρa + z”
+prover and verifier run the sumcheck protocol to reduce the claim “ α ∈H m ρF (
+m
+to a claim “ρF (c ) + R(c ) = b” for random c ∈ F .
+We now face two problems. First, the verifier cannot simply query R at c and then output the
+claim “F (c ) = b−Rρ (c ) ”, since the verifier only has oracle access to the commitment Z of R. Second,
+the prover could cheat the verifier by having Z be a commitment to an R that is far from low degree,
+which allows cheating in the sumcheck protocol.
+The first problem is addressed by the fact that our algebraic commitment scheme has a decommitment sub-protocol that is zero knowledge: the prover can reveal R(c ) in such a way that no
+other values about R are also revealed as a side-effect. As discussed, this relies on the protocol of
+[7], used as a subroutine.
+15:12
+The second problem is addressed by the fact that our algebraic commitment scheme is “transparent” to low-degree structure; that is, the algebraic structure of the scheme implies that if the
+commitment Z is a low-degree polynomial (as in a low-degree IPCPs), then R must also be low
+degree (and vice versa).
+Overall, the only value that a malicious verifier can learn is F (c ), for c ∈ I m of its choice (where
+I is some sufficiently large subset of F, fixed in advance). More precisely, we prove the following
+theorem, which shows a strong zero knowledge sumcheck protocol.
+Theorem 2.3 (Informally Stated, see Lemma 13.1). There exists a low-degree IPCP for sumcheck,
+with respect to a low-degree polynomial F , that satisfies the following zero knowledge guarantee:
+the view of any probabilistic polynomial-time verifier in the protocol can be perfectly and efficiently
+simulated by a simulator that makes only a single query to F .
+Our sumcheck protocol leaks a single evaluation of F . We stress that this limitation is inherent:
+the honest verifier always outputs a true claim about one evaluation of F , which it cannot do
+without learning that evaluation. Nevertheless, this guarantee is strong enough for our application,
+as we can ensure that learning a single evaluation of F does not harm zero knowledge.
+We remark that our strong zero knowledge sumcheck protocol can be transformed into a standard IPCP, by the standard technique of adding a (classical) low-degree test to the protocol.
+3 DISCUSSION AND OPEN PROBLEMS
+The framework that we use to prove that NEXP ⊆ PZK-MIP* elucidates the role that algebra
+plays in the design of proofs systems with entangled provers. Namely, we show that a large class
+of algebraic protocols (low-degree IPCPs) can be transformed in a black box manner to MIPs with
+entangled provers. This abstraction decouples the mechanisms responsible for soundness against
+entangled adversaries from other classical components in the proof system. In turn, this allows us
+to focus our attention on designing proof systems with desirable properties (zero knowledge, in
+this work), without having to deal with the complications that arise from entanglement, and then
+derive MIP* protocols from these classical protocols.
+These ideas also enable us to re-interpret prior constructions of MIP* protocols at a higher level
+of abstraction. For example, the protocol in [28] can be viewed as applying our lifting lemma to
+the (low-degree) IPCP in [4]. As another example, one can start with any PCP for some language
+L , low-degree extend the PCP, and then apply our lifting lemma to obtain a corresponding MIP*
+protocol for L .
+In more detail, we say that a transformation from IPCP to MIP* is black box if it maps an IPCP
+protocol into an MIP* protocol whose verifier can be expressed as an algorithm that only accesses
+the queries and messages of the IPCP verifier, but does not access its input (apart from its length).
+The following corollary shows that any IPCP protocol can be transformed into an MIP* protocol via
+a black box transformation. While a proof of this fact is implicit in previous works, the framework
+developed in this paper allows us to crystallize its structure and give a compellingly short proof
+of it. (See, also, Figure 1.)
+Corollary 3.1. There is a black box transformation that maps any r-round IPCP protocol for a
+language L to a 2-prover (r + 1)-round MIP* for L .
+The round complexity of r + 1 in Corollary 3.1 is less than in our lifting lemma (r + 2), because
+now we do not require that zero knowledge is preserved. We make the foregoing discussion precise
+in Section B.
+Subsequent to this work, Grilo, Slofstra and Yuen [24] showed that MIP∗ = PZK-MIP* by describing a general method for converting any MIP* protocol into an equivalent protocol with perfect zero knowledge. While qualitatively more general, their result is in fact incomparable to ours.
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:13
+
+Fig. 1. Diagram of the roadmap for proving Theorem 1.1. White blocks correspond to our new contributions,
+while grey blocks correspond to previous works. Building on techniques in algebraic complexity from [7, 42],
+we prove lower bounds on algebraic query complexity of polynomial summation (Lemma 12.1). This allows
+us to construct the perfectly-hiding statistically-binding algebraic commitment scheme that underlies our
+strong perfect zero knowledge sumcheck protocol (Lemma 13.3, which also relies on the weak zero knowledge
+sumcheck protocol in [7]), and in turn, prove that there exists a perfect zero knowledge low-degree IPCP
+for any language in NEXP (Theorem 14.2). Finally, we show a lemma that lifts low-degree IPCPs to MIP*
+protocols (Lemma 9.1), while preserving zero knowledge, and use it to derive our main result (Theorem 1.1);
+namely, a perfect zero knowledge low-degree MIP* for any language in NEXP. Taking an alternative route,
+we can apply our lifting lemma to a zero knowledge low-degree IPCP in [7] to obtain a weaker variant of our
+main result: a zero knowledge low-degree MIP* for any language in #P. We also reframe previous work [28]
+via our framework.
+
+In particular, if we apply their transformation to the [28] MIP* protocol for NEXP, we obtain a 6prover, 1-round PZK MIP* protocol for NEXP where the honest provers are quantum (in particular,
+they share entanglement). On other other hand, our protocol has two provers, polynomially-many
+rounds, and classical honest provers.
+We conclude this section by discussing several open problems. A natural question arising from
+the above discussion is whether there exist PZK MIP* protocols for NEXP (and beyond) with optimal parameters.
+Open Problem 1. Do there exist 2-prover, 1-round PZK MIP* protocols for NEXP? For all of MIP∗ ?
+At the beginning of this section, we reflected on the fact that known results that establish the
+power of MIP* protocols rely on algebraic structure, which enables classical-to-quantum black
+box transformations of protocols. But is algebraic structure inherently required, or does some
+combinatorial structure suffice?
+15:14
+Open Problem 2. Is there a richer class of classical protocols (beyond low-degree IPCPs) that can
+be black-box transformed into MIP* protocols?
+For instance, could we replace low-degree polynomials with, say, error correcting codes with
+suitable local testability and decodability properties? One place to start would be to understand
+whether local testers for tensor product codes [9] are sound against entangled provers.
+Open Problem 3. When suitably adapted to the multi-prover setting, is the random hyperplane
+test in [9] for tensor product codes sound against entangled provers?
+4
+
+ROADMAP
+
+In Section 5, we provide definitions needed for the technical sections, including that for a lowdegree IPCP, which is central to our work. In Section 6, we prove that any low-degree IPCP can be
+transformed into an MIP* protocol, while preserving zero knowledge; see Lemma 9.1. In Section 11,
+we prove that every language in NEXP has a perfect zero knowledge low-degree IPCP; see Theorem 14.2. Combining the results proved in Sections 6 and 11 enables us to derive our main result,
+Theorem 1.1, which shows that every language in NEXP has a perfect zero knowledge 2-prover
+MIP* . Figure 1 summarizes the roadmap towards proving Theorem 1.1.
+5 PRELIMINARIES
+We cover the notation and basic definitions that are shared by both parts of this paper.
+5.1
+
+Notation
+
+For n ∈ N we denote by [n] the set {1, . . . , n}. For m, n ∈ N we denote by m + [n] the set {m +
+1, . . . , m + n}. For a set X , n ∈ N, I ⊆ [n], and x ∈ X n , we denote by xI the vector (x i )i ∈I that is x
+restricted to the coordinates in I .
+Integrality. All (relevant) integers stated as real numbers are implicitly rounded to the closest
+integer.
+Distance. The relative Hamming distance (or just distance), over alphabet Σ, between two strings
+x, y ∈ Σn is Δ(x, y) := |{i ∈ [n] s.t.x i  yi }|/n. If Δ(x, y) ≤ ϵ, we say that x is ϵ-close to y; otherwise
+we say that x is ϵ-far from y. Similarly, the relative distance of x from a non-empty set S ⊆ Σn is
+Δ(x, S ) := miny ∈S Δ(x, y). If Δ(x, S ) ≤ ϵ, we say that x is ϵ-close to S; otherwise we say that x is
+ϵ-far from S.
+Functions, distributions, fields. We use f : D → R to denote a function with domain D and range
+R; given a subset D̃ of D, we use f |D̃ to denote the restriction of f to D̃. Given a distribution D,
+we write x ← D to denote that x is sampled according to D. We denote by F a finite field and by
+Fq the field of size q. Arithmetic operations over Fq take time polylog q and space O (log q).
+Polynomials. We denote by F[X 1, ...,m ] the ring of m-variable polynomials over the field F. Given
+a polynomial P in F[X 1, ...,m ], degX i (P ) is the degree of P in the variable X i . The individual degree of
+a polynomial is its maximum degree in any variable, deg(P ) := max1≤i ≤m degX i (P ). Throughout,
+unless explicitly specified otherwise, we will exclusively work with individual degree and often
+refer to it simply as degree. We denote by F[X 1,≤d...,m ] the subspace of all polynomials P ∈ F[X 1, ...,m ]
+such that deg(P ) ≤ d.
+Low-degree extensions. Given a finite field F, subset H ⊆ F, and number of variables m ∈ N, the
+low-degree extension (LDE) of a function f : H m → F is the unique polynomial of individual degree
+|H |−1
+ = f (h)
+ for all h ∈ H m . In
+] such that fˆ (h)
+|H | − 1 that agrees with f on H m , i.e., fˆ ∈ F[X 1,≤...,m
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:15
+
+particular, fˆ : Fm → F is defined as follows:
+
+fˆ (X ) :=
+I H m (X , β) · f ( β),
+β ∈H m
+
+
+ 
+(X i −γ )(Yi −γ )
+|H |−1
+where I H m (X , Y ) := m
+is the unique polynomial in F[X 1,≤...,m
+]
+γ ∈H \{ω }
+i=1 ω ∈H
+(ω−γ ) 2
+m
+m
+such that, for all (
+α , β) ∈ H × H , I H m (
+α , β) equals 1 when α = β and equals 0 otherwise. Note
+that I H m (X , Y ) can be generated and evaluated in time poly(|H |, m, log |F|) and space O (log |F| +
+log m), so fˆ (
+α ) can be evaluated in time |H |m · poly(|H |, m, log |F|) and space O (m · log |F|).
+Languages and relations. We denote by L a language consisting of instances x, and by R a
+(binary ordered) relation consisting of pairs (x, w ), where x is the instance and w is the witness.
+We denote by Lan(R) the language corresponding to R, and by R |x the set of witnesses in R for
+x (if x  Lan(R) then R |x := ∅). We assume that |w | is bounded by some computable function
+of n := |x |; in fact, we are mainly interested in relations arising from nondeterministic languages:
+R ∈ NTIME(T ) if there exists a T (n)-time machine M such that M (x, w ) outputs 1 if and only if
+(x, w ) ∈ R. We assume that T (n) ≥ n.
+Randomized algorithms and oracle access. We denote by AR (x ) the output of an algorithm A
+when given an input x (explicitly) and query access to an oracle R. If A is probabilistic then AR (x )
+is a random variable and, when writing expressions such as “Pr[AR (x ) = z]”, we mean that the
+probability is taken over A’s internal randomness (in addition to other randomness beyond it).
+The algorithm is said to be b-query if it makes strictly less than b queries to its oracle. Given two
+interactive algorithms (protocols) A and B, we denote by (AR (x ), B R (y))(z) the output of AR (x )
+when interacting with B R (y) on common input z.
+5.2
+
+Low-degree Interactive PCPs
+
+An IPCP [31] is a PCP verifiable via an IP. In more detail, an IPCP protocol for a language L is a pair
+of probabilistic interactive algorithms (P, V ), where the prover P is computationally unbounded
+and the verifier V runs in polynomial time. Both parties receive an (explicit) input x ∈ {0, 1}n ,
+allegedly in the language L , and engage in a two-phase protocol as follows. First, P sends to V
+an oracle proof string π ∈ {0, 1}∗ . Second, P and V π (i.e., V with oracle access to π ) engage in an
+interactive protocol, at the end of which V either accepts or rejects. The completeness property
+requires that, if x ∈ L , then there exists a prover P such that Pr[(P, V )(x ) = 1] = 1. The soundness
+property requires that, if x  L , then for any prover P̃ it holds that Pr[(P̃, V )(x ) = 1] ≤ ε (n),
+where ε is called the soundness error. Unless specified otherwise, we define our IPCP protocols
+with respect to a small constant soundness error, say, ε = 1/2.
+A round of interaction consists of one message from each of the parties. We say that an IPCP
+has round complexity r if the second step of the interaction (the standard IP) consists of r rounds.
+The PCP length of an IPCP is the length of π . The communication complexity is the total number of
+bits exchanged between the parties except for the message that contains π . The query complexity
+is the number of queries that V makes to the PCP π . We write
+round complexity:
+⎡⎢
+PCP length:
+⎢
+L ∈ IPCP ⎢⎢communication complexity:
+query complexity:
+⎢⎣
+soundness error:
+
+r⎤
+ ⎥⎥
+c⎥
+q⎥⎥
+ε⎦
+
+to indicate that a language L has an IPCP with the specified parameters.
+15:16
+
+
+Low-degree IPCPs. A key tool that we use is low-degree IPCPs, a class of algebraically-structured
+IPCPs. Informally, these are IPCPs in which the PCP oracle is promised to be a low-degree polynomial. In more detail, given a field F, number of variables m, and degree d, we say that an IPCP
+protocol (P, V ) is an (F, d, m)-low-degree IPCP if the following conditions hold.
+— Low-degree completeness: The PCP oracle that the (honest) prover P sends is a polynomial Q
+in F[X 1,≤d...,m ].
+— Low-degree soundness: soundness is merely required to hold against provers P̃ that send PCP
+oracles that are polynomials Q̃ in F[X 1,≤d...,m ].
+We remark that the notion of low-degree IPCPs is closely related to holographic IPCPs and IPs
+[25, 43]. However, whereas in holographic proof systems the input is guaranteed to be encoded as a
+low-degree polynomial, in low-degree IPCPs the oracle may not be related to the input in any way.
+Public-coin interaction. Our protocols and transformations refer to public-coin proof systems.
+We remark that the only part wherein we rely on public-coin interaction is in the transformation
+of IPCPs to low-degree IPCPs in Section A. In fact, for this transformation it suffices to rely on
+a weaker condition that is implied by public-coin interaction; namely, all we require is that the
+verifier queries the PCP oracle after the communication with the prover terminates.
+Adaptivity. For simplicity, we assume that all (public-coin) IPCP verifiers make non-adaptive
+queries to their oracle. However, all of our results can be extended, in a straightforward way, to hold
+with respect to verifiers that make adaptive queries, at the cost of an increase in round complexity.
+(See Remark 4.)
+Zero knowledge. We consider the standard notion of (perfect) zero knowledge for IPCPs [7, 23].
+Let A, B be algorithms and x, y strings. We denote by View B(y), A(x ) the view of A(x ) in an
+IPCP protocol with B(y), i.e., the random variable (x, r , s 1 , . . . , sn , t 1 , . . . , tm ) where x is A’s input,
+r is A’s randomness, s 1 , . . . , sn are B’s messages, and t 1 , . . . , tm are the answers to A’s queries to
+the proof oracle sent by B.
+An IPCP protocol (P, V ) for a language L is (perfect) zero knowledge against query bound b if
+there exists a polynomial-time simulator algorithm S such that for every b-query algorithm Ṽ and
+input x ∈ L it holds that S Ṽ (x ) and View P (x ), Ṽ (x ) are identically distributed. We write
+round complexity:
+⎡⎢
+PCP length:
+⎢⎢
+complexity:
+L ∈ PZK-IPCP ⎢⎢communication
+query complexity:
+⎢⎢
+query bound:
+⎣
+soundness error:
+
+r⎤
+ ⎥⎥
+c⎥
+⎥
+q⎥
+b⎥⎥
+ε⎦
+
+to indicate that a language L has a perfect zero knowledge IPCP with the specified parameters.
+Remark 1 (Straightline Simulators). The aforementioned works ([7, 23]) consider a stronger notion of zero knowledge IPCPs in which the simulator is straightline, i.e., the simulator cannot
+rewind the verifier. All of the simulators that we construct in this work are straightline too; even
+so, all of the transformations presented in this work preserve zero knowledge even for simulators
+that rewind the verifier.
+6
+
+PART I: LOW-DEGREE IPCP TO MIP*
+
+In this part, we build on recent advances in low-degree testing against entangled provers [28, 29] to
+prove a lifting lemma that transforms a class of algebraically-structured classical protocols, namely,
+low-degree interactive PCPs, into MIP* protocols, while crucially, preserving zero knowledge.
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:17
+
+Organization. We begin in Section 7 by covering the necessary preliminaries regarding quantum
+information and proof systems with entangled provers. In Section 8, we discuss the main technical
+tool that we need: a low-degree test against entangled provers, which we refine from a total degree
+to an individual degree test. Then, in Section 9, we state and prove our transformation of lowdegree IPCP to MIP* , while preserving zero knowledge. Finally, in Section 10, we prove our main
+result (Theorem 1.1) by applying the foregoing transformation to a zero knowledge low-degree
+IPCP for NEXP, which we construct in Section 11.
+7 PRELIMINARIES: PROOF SYSTEMS WITH ENTANGLED PROVERS
+We begin with standard preliminaries in quantum information. Let H be a finite-dimensional
+Hilbert space, and let r ∈ N.
+States and operators. We define entangled quantum states, which for brevity, we will refer to
+simply as entangled states. An r -register entangled state |Ψ is a unit vector in H ⊗r . We say that
+|Ψ is permutation-invariant if σ |Ψ = |Ψ for every linear operator that permutes the r registers
+of H ⊗r . We denote by ρ = ρ (|Ψ ) the reduced density of |Ψ on a number of registers that will be
+always clear from the context, so that for an operator A we have
+Trρ (A) := Tr(Aρ) = Ψ| A ⊗ Id ⊗ · · · ⊗ Id |Ψ .
+Let L(H ) be the set of linear operators over H . Denote by Id the identity operator in L(H ).
+For r ≥ 2, the entangled state |Ψ induces a bilinear form on L(H ) × L(H ), given by
+A, B
+
+Ψ
+
+= Ψ| A ⊗ B ⊗ Id ⊗(r −2) |Ψ ∈ C,
+
+as well as a semi-norm, given by
+
+
+
+A Ψ =
+
+Ψ| AA† ⊗ Id ⊗(r −1) |Ψ .
+
+Measurements. All measurement in this work are Positive Operator Valued Measures. A measurement on H is a finite set A = {Ai }i ∈S where S is the set of measurement outcomes and the
+
+Ai ’s are non-negative definite operators on H such that i ∈S Ai = Id. A sub-measurement on H
+
+relaxes the aforementioned condition by only requiring that i ∈S Ai ≤ Id. The following standard
+claim provides a quantitive bound on the distance between two measurements as a function of
+their correlation.
+Claim 1 (Approximate Consistency to Trace Distance [47]). Let |Ψ be a permutationinvariant entangled state on r ≥ 2 registers, and let {Az }, {B z } be single-register measurements with
+outcomes in the same set. Then,
+
+
+⎧
+⎫
+⎪
+⎪
+
+Az − B z Ψ2 ≤ O max ⎨
+Az , B z Ψ , 1 −
+Az , Az Ψ ⎬
+⎪1 −
+⎪ .
+z
+z
+z
+⎩
+⎭
+We shall also need a specific variant of Winter’s gentle measurement lemma [50], due to Ogawa
+and Nagaoka [40], which formalizes the intuition that measurements that with high probability
+output a particular outcome on a certain quantum state imply that the post-measurement state is
+close to the original state.
+
+
+Lemma 7.1 ([40]). Let ρ be a density operator on a Hilbert space H , and let A, B ∈ L(H ) be such
+that A†A, B † B ≤ Id. Then,
+
+
+
+AρA† − BρB †  ≤ 2 Tr (A − B)ρ (A − B) † .
+15:18
+MIPs with entangled provers. A multi-prover interactive proof with entangled provers (MIP* ) [13] is
+a MIP in which the spatially-isolated (honest and malicious) provers are allowed to use entangled
+strategies, i.e., any strategy obtained by measuring a shared entangled state.
+In more detail, a k-prover r-round MIP* for a language L is a tuple of probabilistic interactive
+algorithms (P1 , . . . , Pk , V ), where the provers P1 , . . . , Pk are computationally unbounded and the
+verifier V runs in polynomial time. All parties receive an input x ∈ {0, 1}n , and the k provers share
+an entangled state |Ψ ∈ H ⊗k (which may depend on |Ψ ), for a Hilbert space H . The parties
+engage in a protocol of the following type. In each of the r rounds, each prover Pi receives a
+(classical) message from the verifier in a message register, performs a quantum operation on this
+register together with its share of the entangled state |Ψ , measures the message register, and sends
+back the (classical) outcome to the verifier.
+We require perfect completeness and soundness with a given error ε. If x ∈ L then (P1 , . . . , Pk )
+make V accept with probability 1; if x  L then V rejects every prover strategy with probability at least 1 − ε (n), where ε is called the soundness error. We stress that the latter condition,
+soundness, makes no assumptions on the computational power of the provers, nor regarding the
+number of entangled qubits they share. Unless specified otherwise, we allow an MIP* to have any
+constant soundness error. We remark that soundness can be amplified by sequential repetition at
+the cost of increased round complexity. This can be done since our protocols have black-box simulators, and this implies auxiliary-input zero knowledge that is preserved by sequential repetition
+[20].
+We indicate that a language L has a k-prover r-round MIP* with soundness error ε and with
+communication complexity c (the total number of bits exchanged between the verifier and the
+provers) as follows:
+⎡⎢
+number of provers:
+round complexity:
+L ∈ MIP∗ ⎢⎢communication
+complexity:
+⎢⎣
+soundness error:
+
+k⎤
+r ⎥⎥
+.
+c ⎥⎥
+ε⎦
+
+Zero knowledge. We extend the standard definition of perfect zero knowledge MIPs [6] to the
+setting of MIP* in the natural way. Denote by View P1 , . . . , Pk , Ṽ (x ) the view of a (possibly malicious) verifier Ṽ in a k-prover MIP* with provers P1 , . . . , Pk and input x; that is, the verifier’s
+view is the random variable consisting of the input x, the verifier’s random string, and the provers’
+messages to the verifier.
+An MIP* (P1 , . . . , Pk , V ) for a language L is perfect zero knowledge if there exists a probabilistic polynomial-time simulator algorithm S such that for every probabilistic polynomial-time algorithm Ṽ and input x ∈ L it holds that S Ṽ (x ) and View P1 , . . . , Pk , Ṽ (x ) are identically distributed.
+All simulators for MIP* protocols in this work achieve the stronger notion of universal straightline
+simulators [16, 17], in which the simulator do not rewind the verifier. We write
+⎡⎢
+number of provers:
+round complexity:
+L ∈ PZK-MIP* ⎢⎢communication
+complexity:
+⎢⎣
+soundness error:
+
+k⎤
+r ⎥⎥
+c ⎥⎥
+ε⎦
+
+to indicate that a language L has an perfect zero knowledge MIP* with the specified parameters.
+Quantum malicious verifiers. The MIP* model requires quantum entangled provers and classical
+verifiers (in contrast to the QMIP* model, in which both the provers and the verifier are quantum),
+and so our notion of zero knowledge is with respect to classical verifiers. Nevertheless, we remark
+that our results extend to hold against quantum malicious verifiers. This is because:
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:19
+
+(1) the honest verifier is classical, and so the provers can enforce classical communication by
+systematically measuring the verifier’s answers in the computational basis; and
+(2) all of our simulators are straightline (i.e., they do not rewind the verifier), and so they avoid
+the key hurdle for simulators of quantum verifiers, which is that quantum algorithms cannot,
+in general, be rewound (as quantum information cannot be copied, and measurements are
+irreversible processes).
+8
+
+LOW INDIVIDUAL-DEGREE TESTING AGAINST ENTANGLED QUANTUM
+STRATEGIES
+
+A low-degree test is a procedure used to determine if a given function f : Fm → F is close to a
+low-degree polynomial in F[X 1, ...,m ] or if, instead, it is far from all low-degree polynomials, by
+examining f at very few locations. A test typically consists of examining f at random restrictions,
+such as a point, line, or plane.
+Low-degree tests can also be phrased in the setting of multiple non-communicating provers,
+where each prover is (allegedly) answering queries about the same function f that is being tested.
+For example, the celebrated line-vs-point test of Rubinfeld and Sudan [44] can be viewed as a
+2-prover 1-round MIP protocol. The verifier specifies a random line in Fm to one prover and a
+random point on this line to the other prover; each prover replies with the purported value of f
+on the received line or point; then the verifier checks that these values are consistent.
+Loosely speaking, the classical analysis of this test asserts the following conditions:
+(1) approximate consistency with a low-degree polynomial, i.e., each player acts as a lookup for a
+function that is (close to) a low-degree polynomial; and
+(2) self-consistency between the provers, i.e., both players answer according to the same function.
+In this paper we rely on a result due to Ji, Natarajan, Vidick, Wright, and Yuen [29], which provides a quantum analogue of this test. We first recall the construction, and then state its soundness
+guarantee.
+Construction 1. Let F be a finite field, m ∈ N the number of variables, and d ∈ N the chosen
+individual degree. The quantum (F, d, m)-low-individual-degree test is a 1-round MIP* (P1 , P2 , V ) in
+which P1 , P2 claim that a function Q : Fm → F is a polynomial of individual degree at most d. With
+probability 1/2, the verifier assigns the label Pmain to P1 and Plookup to P2 ; otherwise the verifier
+chooses the reverse assignment. The verifier then chooses one of the following three tests uniformly at
+random.
+(1) Axis-parallel line test. The verifier chooses α = (α 1 , . . . , αm ) ∈ Fm and j ∈ [m] uniformly
+at random.
+• Pmain : The verifier sends  := (α 1 , . . . , α j−1 , ∗, α j+1 , . . . , αm ). The prover responds with the
+degree-d univariate polynomial f (X ) := Q (α 1 , . . . , α j−1 , X , α j+1 , . . . , αm ).
+• Plookup : The verifier sends α. The prover responds with z := Q (α ).
+The verifier accepts if f (α j ) = z.
+(2) Self-consistency test. The verifier chooses α ∈ Fm uniformly at random, and sends α to
+both provers. The provers respond with z 1 , z 2 := Q (α ). The verifier accepts if z 1 = z 2 .
+(3) Diagonal line test. The verifier chooses α ∈ Fm and j ∈ [m] uniformly at random. The
+verifier then chooses a uniformly random α  ∈ Fm such that the last m − j coordinates of α 
+are zero. This specifies a line  := {α + t · α  : t ∈ F}. The verifier chooses two distinct points
+(β, β  ) on  uniformly at random; these suffice to specify  (while hiding the specific choices
+of α, α ).
+
+
+15:2
+• Pmain : The verifier sends (β, β  ). The prover responds with the degree-md univariate polynomial д := Q ◦ .
+• Plookup : The verifier sends α. The prover responds with Q (α ).
+It is clear that the honest prover strategy described above causes the verifier to accept with
+probability 1. The following theorem describes the soundness of the test.
+Theorem 8.1 (Quantum Low Individual Degree Test, [29]). There is a universal constant
+C > 0 such that the following holds. Let (P̃1 , P̃2 , |Ψ ) be a projective strategy that passes the (F, d, m)low-individual-degree test with probability at least 1 − ε. For i ∈ {1, 2}, α ∈ Fm , denote by {Azi,α }z ∈F
+the measurement applied by P̃i upon receiving question α. Then there exist projective measurements
+Q
+Q
+{L 1 }Q ∈F[X ≤d ] , {L 2 }Q ∈F[X ≤d ] such that for ν = poly(m, d ) · (d/|F| + ε)C , the following holds.
+1, . . .,m
+
+(1) Consistency with
+
+1, . . .,m
+
+{Az1,α }z ∈F,α ∈Fm
+Eα ∈Fm
+Eα ∈Fm
+
+and {Az2,α }z ∈F,α ∈Fm :
+
+
+
+
+
+Q ∈F[X 1,≤d. . .,m ]
+
+z ∈F
+zQ (α )
+
+
+
+Q ∈F[X 1,≤d. . .,m ]
+Q
+
+
+
+z ∈F
+zQ (α )
+
+Q
+
+Ψ| Az1,α ⊗ L 2 |Ψ ≤ ν,
+Q
+
+Ψ| L 1 ⊗ Az2,α |Ψ ≤ ν .
+
+Q
+
+(2) Consistency of {L 1 }Q and {L 2 }Q :
+
+
+Q
+
+Q
+
+Ψ| L 1 ⊗ L 2 |Ψ ≤ ν .
+
+Q Q  ∈F[X 1,≤d. . .,m ]
+
+Remark 2. A prior version of this work used a different low individual degree test, based on the
+low-degree test of [39]. This latter work was later found to contain an error which invalidated the
+soundness analysis of the test; see [29] for details. The low individual degree test described above
+is from subsequent work that avoids this issue (at the expense of a loss in soundness).
+LIFTING FROM LOW-DEGREE IPCP TO MIP* WHILE PRESERVING ZERO
+KNOWLEDGE
+Recall that low-degree IPCPs are IPCP protocols in which the PCP oracle is promised to be a lowdegree polynomial (see Section 5.2). We prove that any low-degree IPCP can be transformed into
+a corresponding MIP* , while preserving zero knowledge.
+9
+
+Lemma 9.1 (Lifting Lemma). There exists a transformation T that maps any r-round (F, d, m)low-degree IPCP (P , V  ) for a language L with verifier query complexity q, where F is a field of size
+poly(m, d, q) sufficiently large, into a 2-prover (r + 1)-round MIP* (P1 , P2 , V ) := T (P , V  ) for L with
+soundness error 1 − 1/ poly(m, d ).
+Furthermore, if the IPCP (P , V  ) is zero knowledge with query bound b ≥ 2(q + 1)md + 3 (q denotes
+the query complexity of the honest verifier), then the MIP* (P1 , P2 , V ) is zero knowledge.
+In the rest of this section, we prove Lemma 9.1. Specifically, in Section 9.1, we begin with a
+classical preprocessing step (a query reduction); in Section 9.2, we present our transformation; in
+Section 9.3, we prove soundness against entangled provers; and in Section 9.4, we prove preservation of zero knowledge. The conceptual contribution of Lemma 9.1 is that it provides an abstraction
+of techniques in [28].
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+9.1
+
+15:21
+
+Classical Preprocessing
+
+The preprocessing step, which is purely classical, allows us to transform any low-degree IPCP
+into one that makes a single uniform query, at only a small cost in parameters. Crucially, this
+transformation preserves zero knowledge (with minor deterioration in the zero knowledge query
+bound).
+Proposition 9.2. There exists a transformation T such that, for every m, d ∈ N and finite field F,
+if (P , V  ) is a public-coin12 (F, d, m)-low-degree IPCP with parameters
+
+
+round complexity: r
+PCP length: 
+
+
+complexity: c
+ ,
+communication
+query complexity: q
+
+
+oracle ∈ F[X 1,≤d. . .,m ]
+
+
+soundness error: ε
+
+
+
+
+then (P , V ) := T (P , V ) is a low-degree IPCP for L with parameters
+round complexity: r =r+1
+
+
+PCP length:  =
+
+
+
+complexity: c =c+poly(m,d,q) 
+ ,
+communication
+query complexity: q =1
+
+
+≤d
+oracle ∈ F[X 1, . . .,m ]
+
+
+md q
+soundness error: ε  =ε + |F|−q
+
+
+
+where the verifier’s single query is uniformly distributed. Furthermore, if (P , V  ) is (perfect) zero
+knowledge with query bound b, then (P , V  ) is (perfect) zero knowledge with query bound b −
+(mdq + 1).
+The proof of Proposition 9.2 is via a straightforward adaptation of a technique from [31], while
+keeping track of its effect on zero knowledge; we defer this proof to Section A.
+
+Remark 3 (Prover-oblivious Queries). After the preprocessing, the verifier makes a single uniform query, which means that its queries are a random variable that is independent of the prover
+messages (but may be correlated with the verifier messages). We refer to this property as proveroblivious queries. In the MIP* setting this allows the verifier to query one prover before the end of
+its interaction with the other.
+Remark 4 (On Adaptivity). We assumed that all IPCP verifiers make non-adaptive queries to their
+oracle. However, we can extend all of our results, in a straightforward way, to hold with respect to
+verifiers that make adaptive queries, at the cost of an increase in round complexity. Specifically, by
+the public-coin property of our IPCP verifiers, we can assume without loss of generality that the
+verifier performs its queries after the interaction with the prover ceases. After which, the verifier
+can ask the prover for the evaluation of the oracle, instead of actually querying it (at the cost of an
+additional round of interaction per adaptive query), and then perform all queries, non-adaptively,
+at the end.
+9.2
+
+The Transformation
+
+To construct an MIP* for L , we follow the proof overview presented in Section 2. Let m, d ∈ N,
+and let F be a sufficiently large finite field. Let (P , V  ) be an r-round (F, d, m)-low-degree IPCP for
+a language L . Denote its oracle by R, query complexity by q, PCP length by , communication
+12 In
+
+fact, it suffices to satisfy a weaker condition that is implied by public-coin interaction. Specifically, our transformation also works for private-coin IPCPs as long as the verifier queries the PCP oracle after the interaction with the prover
+terminates.
+15:22
+complexity by c, and soundness error by ε  = 1/8.13 If (P , V  ) is zero knowledge with respect to a
+query bound, denote this bound by b.
+We apply Proposition 9.2 to (P , V  ) in order to obtain the (F, d, m)-low-degree IPCP (P , V  ),
+with parameters as stated in the lemma above, whose verifier makes a single uniformly distributed
+query to its PCP oracle. In particular, note that the new zero knowledge query bound is b ≥
+md q
+2(md + 1) and the soundness is ε  = 18 + |F|−q ≤ 1/4. We then proceed to transform (P , V  ) to
+an MIP* in Section 9.2.
+Construction 2. We construct a 2-prover MIP* (P1 , P2 , V ) for the language L . The provers P1
+and P2 share an entangled state |Ψ , and all three parties receive an explicit input x. The (honest)
+interaction starts with the verifier choosing uniformly at random between the following procedures.
+— Low individual degree test. The verifier V performs the low individual degree test of Theorem 8.1.
+— IPCP emulation.
+(1) P1 and V emulate the interaction of the IPCP (P , V  ). This generates a uniformly distributed
+point β ∈ Fm and a field element c ∈ F such that, with probability at least 1 − ε, x ∈ L if
+and only if R( β) = c.
+ P2 replies with an element z̃ ∈ F.
+(2) V asks P2 for an evaluation of R at the point β;
+(3) V accepts if and only if c = z̃.
+The round complexity of the MIP* in Construction 2 is r∗ + 1: the parties either engage in a
+1-round low-degree test protocol or an (r∗ + 1)-round IPCP protocol.14
+For completeness, if x ∈ L , then there exists a low-degree polynomial R ∈ F[X 1,≤d...,m ] that the
+IPCP verifier V  accepts. Hence, if the verifier selects the low-degree test, the provers follow the
+prescribed strategy (Construction 1) with respect to R, and if the verifier choses the IPCP emulation,
+then P1 acts according to the strategy of P , and P2 acts as a lookup for R. In the case of the lowdegree test, the foregoing strategy is accepted with probability 1, whereas in the IPCP emulation,
+the strategy inherits its completeness directly from the IPCP (P , V  ).
+We next argue soundness (Section 9.3) and preservation of zero knowledge (Section 9.4).
+9.3
+
+Soundness Analysis
+
+We argue soundness against entangled quantum provers for the MIP* from Construction 2.
+Let x  L . Let (P̃1 , P̃2 ) be the strategy employed by the provers P1 , P2 , which uses the entangled
+state |Ψ ∈ H ⊗ H . Suppose towards contradiction that the verifier accepts with probability at
+least 1 − δ/2, for sufficiently small δ = 1/ poly(md ) to be chosen later. We show that this implies
+a strategy that fools the (classical) IPCP with probability greater than 1/4.
+The verifier V with probability 1/2 performs the low individual degree test of Construction 1.
+Let {Az1,α }z ∈F,α ∈Fm and {Az2,α }z ∈F,α ∈Fm be the projective measurements describing the strategies
+P̃1 and P̃2 in this test. Since by assumption the verifier accepts with probability at least 1 − δ/2, the
+low-degree test passes with probability at least 1 − δ .
+By Theorem 8.1, there exists an absolute constant C ∈ [0, 1] and a measurement {LQ }Q ∈F[X ≤d ]
+such that for ν = poly(m, d ) · (d/|F| + δ )C it holds that
+
+1, . . .,m
+
+13 The soundness error is reduced, via standard parallel repetition, to 1/8, since we next apply a transformation that slightly
+
+increases the soundness error, and we wish to end up with soundness error at most 1/4 towards the MIP* transformation.
+relies on the IPCP verifier satisfying the prover-oblivious queries property.
+
+14 This
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+Eα ∈Fm
+Eα ∈Fm
+
+
+
+
+
+Q ∈F[X 1,≤d. . .,m ]
+
+z ∈F
+zQ (α )
+
+
+Q ∈F[X 1,≤d. . .,m ]
+
+and
+
+
+
+z ∈F
+zQ (α )
+
+
+
+Q
+
+Ψ| Az1,α ⊗ L 2 |Ψ ≤ ν,
+Q
+
+Ψ| L 1 ⊗ Az2,α |Ψ ≤ ν,
+
+Q
+
+Q
+
+Ψ| L 1 ⊗ L 2 |Ψ ≤ ν .
+
+15:23
+(1)
+
+(2)
+
+(3)
+
+Q Q  ∈F[X 1,≤d. . .,m ]
+
+We choose δ small enough so that ν < 1/2.
+Let P̃LD1 and P̃LD2 be the strategies derived from P̃1 and P̃2 by replacing the (arbitrary) measurements {Az1,α }z ∈F,α ∈Fm and {Az2,α }z ∈F,α ∈Fm , respectively, with the (low-degree) measurement
+{Lzα }z ∈F,α ∈Fm given by
+
+Lzα :=
+LQ .
+Q ∈F[X 1,≤d. . .,m ]
+Q (α )=z
+
+We now consider the IPCP emulation. With probability at least 1/2, the verifier performs IPCP
+emulation; since the success probability of the malicious prover strategy (P̃1 , P̃2 ) is 1 − δ/2, this
+step succeeds with probability at least 1−δ ≥ 3/4. In this setting, P1 acts under strategy P̃1 , whereas
+P2 measures according to {Az2,α }z ∈F,α ∈Fm under strategy P̃2 and according to {Lzα }z ∈F,α ∈Fm under
+strategy P̃LD2 .
+We show that the probability that V (falsely) accepts the strategy (P̃1 , P̃2 ) is close, up to an
+additive ν , to the probability it accepts the strategy (P̃1 , P̃LD2 ). We describe the system via the
+following four registers.
+(1) A is the (classical) register wherein the message from V to P2 is stored.
+(2) B is the register that corresponds to the private space of P2 .
+(3) C is the register that consists of the rest of the system (everything but A, B, and the ancilla,
+including the private space of P1 ).
+(4) D is the ancilla P2 uses to store its answers to V .
+Let σ ∈ H B ⊗ H C be the state of registers B, C prior to the measurement performed by P2 , σ B be
+the global state of the system after P2 measures according to { Az2,α }z ∈F,α ∈Fm , and σT be the global
+
+state of the system after P2 measures according to {LQ }Q ∈F[X ≤d ] , where after the measurements
+1, . . .,m
+Plookup discards the post-measurement state. Note that
+⎡⎢
+⎤⎥
+
+σ B = Tr B ⎢⎢Eα ∈Fm
+|α α | A ⊗ (Az2,α ⊗ Id C )σ (Az2,α ⊗ Id C ) ⊗ |z z| D ⎥⎥ ,
+⎢⎣
+⎥⎦
+z ∈F
+⎡⎢
+⎤
+
+⎥
+σT = Tr B ⎢⎢Eα ∈Fm
+|α α | A ⊗ (Lzα ⊗ Id C )σ (Lzα ⊗ Id C ) ⊗ |z z| D ⎥⎥ ,
+⎢⎣
+⎥⎦
+z ∈F
+where Id C denotes the identity operator over H C . Let ρ := Tr C (σ ).
+Recall that (P̃1 , P̃2 , V )(x ) and (P̃1 , P̃LD2 , V )(x ) denote the random variables representing the output of the verifier V when interacting with provers employing strategies (P̃1 , P̃2 ) and (P̃1 , P̃LD2 ),
+15:24
+respectively, on input x  L . Observe that
+Pr[(P̃ , P̃ , V )(x ) = 1] − Pr[(P̃ , P̃ , V )(x ) = 1]
+1 2
+1 LD2
+
+
+1
+≤ σ B − σT  1
+2
+
+
+
+
+1
+= Tr B Eα ∈Fm
+|α α | ⊗ (Az2,α ⊗ Id C )σ (Az2,α ⊗ Id C ) − (Lzα ⊗ Id C )σ (Lzα ⊗ Id C ) ⊗ |z z|  ,
+2
+
+z ∈F
+
+1
+
+ 
+1
+(Az2,α ⊗ Id C )σ (Az2,α ⊗ Id C ) − (Lzα ⊗ Id C )σ (Lzα ⊗ Id C ) ⊗ |z z| 
+≤ Eα ∈Fm 
+2
+
+z ∈F
+1
+ 
+≤ Eα ∈Fm
+Tr (Az2,α − Lzα )ρ (Az2,α − Lzα ) †
+(by Lemma 7.1)
+z ∈F
+
+≤
+
+Eα ∈Fm
+
+
+z ∈F
+
+≤ν
+
+
+Trρ (Az2,α − Lzα ) 2
+
+(by Jensen’s inequality)
+
+(by Equation (3) and Claim 1).
+
+Therefore we can construct a malicious prover P̃  that will fool the (F, d, m)-low-degree IPCP
+verifier V  for L (which we started from) with probability at least 1−δ −ν > 1/4, by implementing
+the strategy P̃ in the natural way. That is, P̃  samples some Q ∈ F[X 1,≤d...,m ] according to the
+distribution induced by {LQ } and |Ψ and sends Q as the oracle, then interacts with V  according
+to the strategy P̃1 . This contradicts the soundness guarantee of the IPCP.
+9.4 Preserving Zero Knowledge
+We argue that Construction 2 preserves zero knowledge. Suppose that the IPCP (P , V  ) is zero
+knowledge with query bound b ≥ 2(md + 1), and let S  be the corresponding simulator. We
+explain how to construct a simulator S for the MIP* (P1 , P2 , V ).
+Given a malicious verifier Ṽ for the MIP* , we design a “malicious” verifier Ṽ  for the IPCP
+protocol that, when interacting with the IPCP prover P , outputs the view of the malicious MIP*
+verifier Ṽ when interacting with the (honest) MIP* provers P1 , P2 . The simulator S is then given by
+
+running (S  )Ṽ , and returning the output of Ṽ . We first describe the operation of Ṽ .
+(1) Begin simulating Ṽ . Then simulate Ṽ ’s view of the interaction with each prover according to one of the following cases:
+(a) If Ṽ engages in IPCP simulation with P1 , then every message Ṽ sends to P1 is forwarded to P , and the responses of P  are forwarded to Ṽ .
+(b) If Ṽ sends a query point α ∈ Fm to either prover, query the oracle at α, and send the
+answer to Ṽ .
+(c) If Ṽ sends a line  to either prover, query the oracle at (md + 1) points on  in order
+to interpolate R ◦ , and send this polynomial to Ṽ .
+(2) Output the view of the simulated Ṽ .
+It is clear that the output of Ṽ  when interacting with P  is exactly the view of Ṽ in the MIP* .
+The number of queries Ṽ  makes is at most 2(md + 1). By the zero knowledge guarantee for S ,
+since b ≥ 2(md + 1), the view of Ṽ  is perfectly simulated, and so in particular its output in
+simulation is identically distributed to the output of Ṽ  when interacting with P  .
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+10
+
+15:25
+
+ZERO KNOWLEDGE MIP* FOR NONDETERMINISTIC EXPONENTIAL TIME
+
+Recall that our plan is to prove Theorem 1.1 in two steps:
+(1) construct a zero knowledge low-degree IPCP for any language in NEXP;
+(2) invoke the lifting lemma (Lemma 9.1) on this low-degree IPCP in order to obtain a zero
+knowledge MIP* for NEXP.
+So far, in Section 6, we have obtained the tools for deriving a zero knowledge MIP* from a zero
+knowledge low-degree IPCP. The goal of Section 11 is to construct such a zero knowledge lowdegree IPCP for any language in NEXP; that is, in Section 11, we prove the following theorem.
+Theorem 10.1 (Concisely Stated; see Theorem 14.2 for the Full Statement). For every
+query bound function b, language L ∈ NEXP and polynomial p(n) the following holds. There exists
+an (F, d, m)-low-degree IPCP for L , where d, m = O (nc log b) and |F| = poly(n) ≥ p(n), that is
+perfect zero knowledge against all b-query malicious verifiers and has the following parameters:
+round complexity: poly(n)+O (log b) 
+
+
+PCP length: poly(2n ,b)
+
+
+communication
+complexity:
+poly(n,log(b))
+
+query complexity: poly(n,log(b)) .
+
+
+oracle ∈ F[X 1,≤d. . .,m ]
+
+
+soundness error: 1/2
+In this section, we prove Theorem 1.1 by taking the zero knowledge low-degree IPCP in Theorem 10.1 and lifting it via Lemma 9.1 to obtain a 2-prover zero knowledge MIP* , concluding the
+proof of Theorem 1.1.
+Let L be a language in NEXP, and let (P , V  ) be the (F, d, m)-low-degree IPCP for L implied
+by Theorem 10.1, with respect to query bound b := 2n , d, m = O (nc log b), and a sufficiently large
+finite field F of polynomial size.
+The (F, d, m)-low-degree IPCP (P , V  ) satisfies the conditions of the lifting lemma (Lemma 9.1),
+and thus we can apply the transformation T in Lemma 9.1 to the low-degree IPCP (P , V  ) to
+obtain a perfect zero knowledge 2-prover MIP* (P1 , P2 , V ) := T (P , V  ) for L , with round complexity poly(n) + O (log b) = poly(n), communication complexity poly(n, log(b), d, q, m) = poly(n),
+and soundness error 1 − 1/ poly(n). Repeating the protocol poly(n) times in sequence reduces the
+soundness error to 1/2, which concludes the proof of our main result, Theorem 1.1.
+
+Remark 5 (Zero Knowledge MIP* for #P via Known IPCPs). As mentioned in Section 2.3.3, a recent
+work in algebraic zero knowledge [7] (building on techniques from [8]) obtains a zero knowledge
+low-degree IPCP for any language in #P. By replacing our IPCP for NEXP in Theorem 10.1 with
+their IPCP for #P, we can derive a zero knowledge MIP* , albeit only for languages in #P.
+11
+
+PART II: LOW-DEGREE IPCP WITH ZERO KNOWLEDGE
+
+The purpose of this part is to show that there exists a perfect zero knowledge low-degree IPCP for
+any language in NEXP, which is the remaining step in our construction of perfect zero knowledge
+MIP* protocols for NEXP (as discussed in Section 10). To this end we build on advances in algebraic
+zero knowledge [7] and ideas from algebraic complexity theory, and we develop new techniques
+for obtaining algebraic zero knowledge.
+Organization. We begin in Section 12, where we show new algebraic query complexity lower
+bounds on polynomial summation. Then, in Section 13, we construct our strong zero knowledge sumcheck protocol, whose analysis relies on the foregoing algebraic query complexity lower
+bounds. Finally, in Section 14, we use our strong zero knowledge sumcheck protocol to show a
+perfect zero knowledge low-degree IPCP for any language in NEXP.
+15:26
+12
+
+ALGEBRAIC QUERY COMPLEXITY OF POLYNOMIAL SUMMATION
+
+We have outlined in Section 2.4.2 an algebraic commitment scheme based on the sumcheck protocol and lower bounds on the algebraic query complexity of polynomial summation. The purpose
+of this section is to describe this construction in more detail, and then provide formal statements
+for the necessary lower bounds.
+The setting: algebraic commitment schemes. We begin with the case of committing to a single
+N
+element a ∈ F. The prover chooses a uniformly random string B ∈ FN such that i=1
+Bi = a, for
+some N ∈ N. Fixing some d ∈ N, G ⊆ F and k ∈ N such that |G | ≤ d + 1 and |G |k = N , the prover
+views B as a function from G k to F (via an arbitrary ordering on G k ) and sends the evaluation
+of a degree-d extension B̂ : Fk → F of B, chosen uniformly at random from all such extensions.
+The verifier can test that B̂ is indeed (close to) a low-degree polynomial but (ideally) cannot learn
+any information about a without reading all of B (i.e., without making N queries). Subsequently,
+
+the prover can decommit to a by convincing the verifier that β ∈G k B̂( β) = a via the sumcheck
+protocol.
+To show that the above is a commitment scheme, we must show both binding and hiding. Both
+properties depend on the choice of d. The binding property follows from the soundness of the
+sumcheck protocol, and we thus would like the degree d of B̂ to be as small as possible. A natural
+choice would be d = 1 (so |G | = 2), which makes B̂ the unique multilinear extension of B. However
+(as discussed in Section 2.4.2) this choice of parameters does not provide any hiding: it holds that
+
+−1
+−1
+k
+β ∈ {0,1}k B(β ) = B̂(2 , . . . , 2 ) · 2 (as long as char(F)  2). We therefore need to understand
+how the choice of d affects the number of queries to B̂ required to compute a. This is precisely the
+setting of algebraic query complexity, which we discuss next.
+The algebraic query complexity (defined in [1] to study “algebrization”) of a function f is the
+(worst-case) number of queries to some low-degree extension B̂ of a string B required to compute
+f (B). This quantity is bounded from above by the standard query complexity of f , but it may
+be the case (as above) that the low-degree extension confers additional information that helps in
+computing f with fewer queries. The usefulness of this information depends on the parameters d
+and G of the low-degree extension. Our question amounts to understanding this dependence for
+N
+Bi . It is known that if G = {0, 1} and d = 2
+the function Sum : FN → F given by Sum(B) := i=1
+then the algebraic query complexity of Sum is exactly N [30].
+For our purposes, however, it is not enough to commit to a single field element. Rather, we need
+to commit to the evaluation of a polynomial Q : Fm → F of degree dQ , which we do as follows. Let
+K be a subset of F of size dQ + 1. The prover samples, for each α ∈ K m , a random string B α ∈ FN
+such that Sum(B α ) = Q (
+α ). The prover views these strings as a function B : K m × G k → F, and
+takes a low-degree extension B̂ : Fm × Fk → F. The polynomial B̂(X , Y ) has degree dQ in X and
+
+d in Y ; this is a commitment to Q because β ∈G k B̂(X , β) is a degree-dQ polynomial that agrees
+with Q on K m , and hence equals Q.
+Once again we will decommit to Q (
+α ) using the sumcheck protocol, and so for binding we need
+d to be small. For hiding, as in the single-element case, if d is too small, then a few queries to B̂
+can yield information about Q. Moreover, it could be the case that the verifier can leverage the fact
+that B̂ is a joint low-degree extension to learn some linear combination of evaluations of Q. We
+must exclude these possibilities in order to obtain our zero knowledge guarantees.
+New algebraic query complexity lower bounds. The foregoing question amounts to a generalization of algebraic query complexity where, given a list of strings B 1 , . . . , B M , we determine how
+many queries we need to make to their joint low-degree extension B̂ to determine any nontrivial
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:27
+
+M
+linear combination i=1
+c i ·Sum(Bi ). We will show that the “generalized” algebraic query complexity of Sum is exactly N , provided d ≥ 2(|G | − 1) (which is also the case for the standard algebraic
+query complexity).
+In the remainder of the section we state our results in a form equivalent to the above, which
+
+is more useful to us. Denote by F[X 1,≤d...,m , Y1,≤d...,k ] the set of all (m + k )-variate polynomials of individual degree d in the variables X 1 , . . . , Xm and individual degree d  in the variables Y1 , . . . , Yk .
+
+Given an arbitrary polynomial Z ∈ F[X 1,≤d...,m , Y1,≤d...,k ], we ask how many queries are required to
+
+determine any nontrivial linear combination of y ∈G k Z (
+α , y ) for α ∈ Fm . The following lemma is
+more general: it states that not only do we require many queries to determine any linear combination, but that the number of queries grows linearly with the number of independent combinations
+that we wish to learn.
+Lemma 12.1 (Algebraic Query Complexity of Polynomial Summation). Let F be a field,
+m, k, d, d  ∈ N, and G, K, L be finite subsets of F such that K ⊆ L, d  ≥ |G | − 2, and |K | = d + 1.
+m
+If S ⊆ Fm+k is such that there exist matrices C ∈ FL × and D ∈ FS × such that for all
+≤d
+≤d 
+Z ∈ F[X 1, ...,m , Y1, ...,k ] and all i ∈ {1, . . . , }
+
+
+
+C α,i
+Z (
+α , y ) =
+D q,i Z (
+q ),
+ ∈Lm
+α
+
+ ∈S
+q
+
+ ∈G k
+y
+
+then |S | ≥ rank(BC) · (min{d  − |G | + 2, |G |}) k , where B ∈ FK
+indexed by α represents Z (
+α ) in the basis (Z ( β))β ∈K m .
+
+m ×Lm
+
+is such that the column of B
+
+We remark that in Section C we prove upper bounds showing that, in some cases, Lemma 12.1
+is tight.
+Proof of Lemma 12.1. We use a rank argument. First, since Z has individual degree at most d
+in X , we can rewrite any such linear combination in the following way:
+
+
+
+
+
+
+
+ y ) =
+ y ),
+C α,i
+Z (
+α , y ) =
+C α,i
+b β,
+Z ( β,
+C 
+Z ( β,
+α
+
+ ∈Lm
+α
+
+ ∈Lm
+α
+
+ ∈G k
+y
+
+β ∈K m
+
+ ∈G k
+y
+
+β ∈K m
+
+β,i
+
+ ∈G k
+y
+
+where C  := BC ∈ FK × . If d  = |G | − 2, then the bound is trivial. Otherwise, let H be some
+|H |−1
+arbitrary subset of G of size min{d  − |G | + 2, |G |}. Let P0 ⊆ F[X 1,≤d...,m , Y1,≤...,k
+] be such that for all
+p ∈ P0 and for all q ∈ S, p(
+q ) = 0. Since these are at most S linear constraints, P0 has dimension at
+least (d + 1)m |H |k − |S |.
+n×(K m ×H k ) be a matrix whose rows form a basis for the vector space
+ Let A0 ∈ F
+{ p(
+α , y )
+: p ∈ P0 } of evaluations of polynomials in P0 on K m × H k . For y0 ∈ H k ,
+m
+k
+m
+
+ ∈H
+ ∈K , y
+α
+m
+
+α , y0 ) for each α ∈ K m . Then
+let Ay0 ∈ Fn×K be the submatrix of A0 consisting of columns (
+
+0 such that Ay0 has rank at least
+n = rank(A) ≤
+0 ∈K m rank(Ay
+0 ), and so there exists y
+y
+(d + 1)m − |S |/|H |k .
+|G |−1
+] be the polynomial such that q(
+y0 ) = 1, and q(
+y ) = 0 for all y ∈ G k − {
+y0 }.
+Let q ∈ F[Y1,≤...,k
+Then for all i ∈ [n], j ∈ [], it holds that
+
+
+
+
+ y0 ) =
+ y ) =
+C  · pi ( β,
+C 
+q(
+y )pi ( β,
+D q,i · (q · pi )(
+q ) = 0,
+(Ay0 C  )i j =
+β ∈K m
+
+β, j
+
+β ∈K m
+
+β,i
+
+ ∈G k
+y
+
+ ∈S
+q
+
+
+where pi (α, β ))α ∈K m , β ∈H k is the i-th row of A0 , the second-to-last equality follows because q · pi
+has degree at most d in X and d  in Y , and the last equality because pi ∈ P0 .
+15:28
+Thus A β0 C  = 0, and so by Sylvester’s rank inequality, rank(A β0 ) + rank(C  ) − (d + 1)m ≤ 0.
+Hence (d + 1)m − rank(C  ) ≥ rank(A β ) ≥ (d + 1)m − |S |/|H |k , so |S | ≥ rank(C  ) · |H |k , which
+0
+yields the theorem.
+
+Implications. We state below special cases of Lemma 12.1 that suffice for our zero knowledge
+applications.
+Corollary 12.2. Let F be a finite field, G be a subset of F, and d, d  ∈ N with d  ≥ 2(|G | − 1). If
+S ⊆ Fm+k is such that there exist (c α )α ∈Fm and (d β )β ∈Fm+k such that
+
+
+
+
+α , y ) = q ∈S dq Z (
+q ), and
+— for all Z ∈ F[X 1,≤d...,m , Y1,≤d...,k ] it holds that α ∈Fm c α y ∈G k Z (
+
+
+
+≤d
+≤d
+
+
+— there exists Z ∈ F[X 1, ...,m , Y1, ...,k ] such that α ∈Fm c α y ∈G k Z (
+α , y )  0,
+k
+then |S | ≥ |G | .
+Next, we give an equivalent formulation of Corollary 12.2 in terms of random variables that
+we use in later sections. (Essentially, the linear structure of the problem implies that “worst-case”
+statements are equivalent to “average-case” statements.)
+Corollary 12.3 (Eqivalent Statement of Corollary 12.2). Let F be a finite field, G be a
+subset of F, and d, d  ∈ N with d  ≥ 2(|G | − 1). Let Q be a subset of Fm+k with |Q | < |G |k , and let
+
+
+α , y ))α ∈Fm and
+Z be uniformly random in F[X 1,≤d...,m , Y1,≤d...,k ]. Then, the random variables ( y ∈G k Z (
+(Z (
+q ))q ∈Q are independent.
+Proof of Corollary 12.3. We will need a simple fact from linear algebra: that “linear independence equals statistical independence”. That is, if we sample an element from a vector space and
+examine some subsets of its entries, these distributions are independent if and only if there does
+not exist a linear dependence between the induced subspaces. The formal statement of the claim
+is as follows.
+Claim 2. Let F be a finite field and D a finite set. Let V ⊆ FD be an F-vector space, and let v be a
+random variable that is uniform over V . For any subdomains S, S  ⊆ D, the restrictions v |S and v |S 
+are statistically dependent if and only if there exist constants (c i )i ∈S and (di )i ∈S  such that:
+
+ ∈ V such that i ∈S c i w i  0, and
+— there exists w
+
+
+ ∈ V , i ∈S c i w i = i ∈S  di w i .
+— for all w
+
+
+Proof of Claim 2. For arbitrary x ∈ FS , x  ∈ FS , we define the quantity
+px, x  := Pr v |S = x ∧ v |S  = x  .
+ ∈V
+v
+
+be a basis for V . Let B S ∈ FS ×d be B restricted to rows
+Let d := dim(V ), and let B ∈
+
+corresponding to elements of S, and let B S  be defined likewise. Finally, let B S,S  ∈ F ( |S |+ |S |)×d be
+the matrix whose rows are the rows of B S , followed by the rows of B S  . Then
+FD×d
+
+px, x  = Pr B S,S  · z = (
+x , x  ) .
+One can verify that, for any matrix
+
+
+z ∈Fd
+A ∈ Fm×n ,
+
+⎧ F− rank(A) if b ∈ colsp(A), and
+ =⎪
+⎨
+Pr [Az = b]
+⎪0
+n
+
+z ∈F
+otherwise.
+⎩
+Observe that colsp(B S,S  ) ⊆ colsp(B S ) × colsp(B S  ), and equality holds if and only if
+v |S = x ] · Prv ∈V [
+v |S  = x ]
+rank(B S,S  ) = rank(B S ) + rank(B S  ). It follows that px, x  = Prv ∈V [
+if and only if rank(B S,S  ) = rank(B S ) + rank(B S  ). By the rank-nullity theorem and the construction of B S,S  , this latter condition holds if and only if nul(BTS,S  ) ⊆ nul(BTS ) × nul(BTS  ). To conclude
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:29
+
+the proof, it remains only to observe that the condition in the claim is equivalent to the existence
+
+of vectors c ∈ FS , d ∈ FS such that c  nul(BTS ) but (c , −d) ∈ nul(BTS,S  ).
+
+Now, observe that
+⎫
+⎧
+
+⎪
+⎪
+⎪
+
+
+ : Z ∈ F[X ≤d , Y ≤d  ] ⎪
+⎬
+⎨  (Z (
+
+γ
+))
+,
+Z
+(
+α
+,
+y
+)
+m+k
+γ ∈F
+1, ...,m 1, ...,k ⎪
+⎪
+⎪
+⎪
+ ∈G k
+y
+α ∈Fm 
+⎭
+⎩
+is an F-vector space with domain Fm+k ∪ Fm . Consider subdomains Fm and S. Since |S | < |G |k , by
+Lemma 12.1 there exist no constants (c α )α ∈Fm , (dγ )γ ∈S such that the conditions of the claim hold.
+This concludes the proof of Corollary 12.3
+
+13 ZERO KNOWLEDGE SUMCHECK FROM ALGEBRAIC QUERY LOWER BOUNDS
+We leverage our lower bounds on the algebraic query complexity of polynomial summation (Section 12) to obtain an analogue of the sumcheck protocol with a strong zero knowledge guarantee,
+which we then use to obtain a zero knowledge low-degree IPCP for NEXP (Section 14).
+
+x ) = a,
+The sumcheck protocol [36] is an Interactive Proof for claims of the form x ∈H m F (
+where H is a subset of a finite field F, F is an m-variate polynomial over F of individual degree at
+most d, and a is an element of F. The sumcheck protocol is not zero knowledge (unless #P ⊆ BPP).
+Prior work [7] obtains a sumcheck protocol, in the IPCP model, with a certain (weak) zero
+knowledge guarantee. In that protocol, the prover first sends a proof oracle that consists of the
+evaluation of a random m-variate polynomial R of individual degree at most d; after that, the
+prover and the verifier run the (standard) sumcheck protocol on a new polynomial obtained from
+F and R. The purpose of R is to “mask” the partial sums, which are the intermediate values sent by
+the prover during the sumcheck protocol.
+The zero knowledge guarantee in [7] is the following: any verifier that makes q queries to R learns
+at most q evaluations of F . This guarantee suffices to obtain a zero knowledge protocol for #P (the
+application in [7]), because the verifier can evaluate F efficiently at any point (as F is merely an
+arithmetization of a 3SAT formula).
+We achieve a much stronger guarantee: any verifier that makes polynomially-many queries to R
+learns at most a single evaluation of F (that, moreover, lies within a chosen subset I m of Fm ). Our
+application requires this guarantee because we use the sumcheck simulator as a sub-simulator in
+a larger protocol, where F is a randomized low-degree extension of some function that is hard to
+compute for the verifier. The randomization introduces bounded independence, which makes a
+small number of queries easy to simulate (where “small” means somewhat less than the degree).
+The main idea to achieve the above zero knowledge guarantee is the following. Rather than
+sending the masking polynomial R directly, the prover sends a (perfectly-hiding and statisticallybinding) commitment to it in the form of a random (m+k )-variate polynomial Z . The “real” mask is
+
+recovered by summing out k variables: R(X ) := β ∈G k Z (X , β). Our lower bounds on the algebraic
+query complexity of polynomial summation (Section 12) imply that any q queries to Z , with q <
+|G |k , yield no information about R. The prover, however, can elect to decommit to R(c ), for a single
+point c ∈ I m chosen by the verifier. This is achieved using the weak zero knowledge sumcheck
+
+protocol in [7] as a subroutine: the prover sends w := R(c ) and then proves that w = β ∈G k Z (c , β).
+The protocol thus proceeds as follows. Given a security parameter λ ∈ N, the prover sends the
+] and A ∈ F[Y1,≤2λ
+] as proof oracles (A is
+evaluations of two polynomials Z ∈ F[X 1,≤d...,m , Y1,≤2λ
+...,k
+...,k
+the mask for the subroutine in [7]). The prover sends a field element z, which is (allegedly) the
+summation of Z over H m × G k . The verifier replies with a random challenge ρ ∈ F \ {0}. The
+15:3
+prover and the verifier then engage in the standard (not zero knowledge) sumcheck protocol on
+
+the claim “ α ∈H m ρF (
+α ) + R(
+α ) = ρa + z”. This reduces checking the correctness of this claim
+to checking a claim of the form “ρF (c ) + R(c ) = b”, for some c ∈ I m and b ∈ F; the prover then
+decommits to w := R(c ) as above. In sum, the verifier deduces that, with high probability, the claim
+“ρF (c ) = b − w” is true if and only if the original claim was.
+If the verifier could evaluate F , then the verifier could simply check the aforementioned claim
+and either accept or reject. However, we do not give the verifier access to F and, instead, we follow
+[21, 37] and phrase sumcheck as a reduction from a claim about a sum of a polynomial over a large
+product space to a claim about the evaluation of that polynomial at a single point. This view of
+the sumcheck protocol is useful later on when designing more complex protocols, which employ
+sumcheck as a sub-protocol. The completeness and soundness definitions, which we will formally
+define in Section 13.3, are thus modified according to this viewpoint, where the verifier does not
+have access to F and simply outputs the claim at the end of the protocol.
+We state a simplified version of the main theorem of this section; the full version is given as
+Lemma 13.3.
+Theorem 13.1. For every finite field F and d, k, λ ∈ N, 2λ ≤ d, there exists an (F, d, m +k + 1)-lowdegree IPCP system (P, V ), for the sumcheck problem with respect to polynomials in F[X 1,≤d...,m ], which
+is zero knowledge against λk − 1 queries, where the simulator makes a single query to the summand
+polynomial.
+We prove Lemma 13.1 in the next subsections, by showing and analyzing a construction that
+implements the ideas we outlined above. We begin by stating the required preliminaries regarding
+sampling partial sums of random low-degree polynomials.
+13.1 Sampling Partial Sums of Random Low-degree Polynomials
+We recall an algorithm due to Ben-Sasson et al. [7] for adaptively sampling random low-degree
+multivariate polynomials from spaces with exponentially large dimension.
+Let F be a finite field, m, d positive integers, and H a subset of F. Recall that F[X 1,≤d...,m ] is the
+subspace of F[X 1, ...,m ] consisting of those polynomials with individual degrees at most d. We
+denote by F ≤m the set of all vectors over F of length at most m. Given Q ∈ F[X 1,≤d...,m ] and α ∈ F ≤m ,
+
+we define Q (
+α ) := γ ∈H m−|α | Q (
+α , γ ); that is, the answer to a query that specifies only a prefix of
+the variables is the sum of the values obtained by letting the remaining variables range over H .
+In Section 13, we rely on the fact, formally stated below and proved in [7], that one can efficiently sample the distribution R(
+α ), where R is uniformly random in F[X 1,≤d...,m ] and α ∈ F ≤m
+is fixed, even conditioned on any polynomial number of (consistent) values for R(
+α 1 ), . . . , R(
+α  ), for
+any choice of α1 , . . . , α ∈ F ≤m . More precisely, the sampling algorithm runs in time that is only
+poly(log |F|, m, d, |H |, ), which is much faster than the trivial running time of Ω(d m ) achieved
+by sampling R explicitly. This “succinct” sampling follows from the notion of succinct constraint
+detection studied in [7] for the case of partial sums of low-degree polynomials.
+Lemma 13.2 ([7]). There exists a probabilistic algorithm A such that, for every finite field F, positive
+integers m, d, subset H of F, subset S = {(α 1 , β 1 ), . . . , (α  , β  )} ⊆ F ≤m × F, and (α, β ) ∈ F ≤m × F,
+⎡⎢
+⎢⎢
+Pr A (F, m, d, H , S, α ) = β =
+Pr
+⎢R(α ) = β
+≤d
+R←F[X 1, . . .,m ] ⎢⎢
+⎣
+
+
+
+
+ R(α 1 ) = β 1
+
+..
+
+.
+ R(α  ) = β 
+
+⎤⎥
+⎥⎥
+⎥⎥ .
+⎥⎦
+
+Moreover A runs in time m(d|H | + d 3  3 ) · poly(log |F|) =  3 · poly(m, d, |H |, log |F|).
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+13.2
+
+15:31
+
+Strong Zero Knowledge Sumcheck
+
+We present our strong zero knowledge sumcheck protocol within the IPCP model. For brevity,
+throughout, we will refer to the weak zero knowledge IPCP for sumcheck in [7] simply as the
+“weak-ZK sumcheck protocol”.
+Construction 3. Fix a finite field F, and d, m, λ ∈ N with 2λ ≤ d, and a set I ⊆ F. Let G be any
+subset of F of size λ. In the protocol (P, V ):
+— P and V receive an instance (H , a) as common input;
+— P additionally receives a summand polynomial F ∈ F[X 1,≤d...,m ] as an oracle.
+The interaction between P and V proceeds as follows:
+(1) P draws uniformly random polynomials Z ∈ F[X 1,≤d...,m , Y1,≤2λ
+] and A ∈ F[Y1,≤2λ
+], and sends
+...,k
+...,k
+as an oracle the polynomial
+O (W , X , Y ) := W · Z (X , Y ) + (1 − W ) · A(Y ) ∈ F[X 1,≤d...,m+k+1 ];
+note that Z can be recovered as O (1, ·) and A as O (0, 0, ·), and so below we use Z and A
+directly.
+
+
+(2) P sends z := α ∈H m β ∈G k Z (
+α , β) to V .
+(3) V draws a random element ρ 1 in F \ {0} and sends it to P.
+
+α ) = ρ 1a + z”
+(4) P and V run the standard sumcheck IP [36] on the statement “ α ∈H m Q (
+where
+
+Q (X 1 , . . . , Xm ) := ρ 1 F (X 1 , . . . , Xm ) +
+Z (X 1 , . . . , Xm , β),
+β ∈G k
+
+with P playing the role of the prover and V that of the verifier, and the following modification.
+For i = 1, . . . , m, in the i-th round, V samples its random element c i from the set I rather than
+from all of F; if P ever receives c i ∈ F\I , it immediately aborts. In particular, in the m-th round,
+
+P sends a polynomial дm (Xm ) := ρ 1 F (c 1 , . . . , cm−1 , Xm ) + β ∈G k Z (c 1 , . . . , cm−1 , Xm , β) for
+some c 1 , . . . , cm−1 ∈ I .
+(5) V sends cm ∈ I to P.
+
+(6) P sends the element w := β ∈G k Z (c , β) to V , where c := (c 1 , . . . , cm ).
+
+(7) P and V engage in the weak-ZK sumcheck protocol with respect to the claim β ∈G k Z (c , β) =
+w, using A as the masking polynomial. If the verifier in that protocol rejects, so does V .
+д (c )−w
+(8) V outputs the claim “F (c ) = m ρm1
+”.
+Remark 6. Formally, the protocol in Lemma 13.1 is not presented as a proper low-degree IPCP,
+but as a reduction with respect to some fixed, yet inaccessible (to the verifier) low-degree polynomial F . Nevertheless, this reduction perspective is consistent with our application, and indeed
+when in Section 14 we use the protocol in Lemma 13.1 as a sub-procedure, we obtain a low-degree
+IPCP per our definition in Section 5.
+13.3 Analysis of the Protocol
+The following theorem, which is a more elaborate version of Lemma 13.1, provides an analysis of
+Construction 3. We stress that the protocol will satisfy a relaxed notion of soundness, similar to
+low-degree soundness, where the “no” instances are required to be low-degree polynomials. This
+suffices for our applications.
+15:32
+Theorem 13.3. For every finite field F, d, k, λ ∈ N, 2λ ≤ d, and set I ⊆ F, there exists an (F, d, m +
+k + 1)-low-degree IPCP system (P, V ) such that, for every F ∈ F[X 1,≤d...,m ], the following holds.
+
+α ) = a, then V (H , a), when interacting with P (F , H , a), outputs a
+— Completeness. If α ∈H m F (
+true claim of the form “F (
+γ ) = a” (with γ ∈ Fm and a ∈ F) with probability 1.
+
+α )  a, then for any malicious prover P̃ it holds that V (H , a), when
+— Soundness. If α ∈H m F (
+interacting with P̃, outputs a true claim “F (
+γ ) = a” (with γ ∈ Fm and a ∈ F) with probability
+md
+kd +2
+at most |I | + |F|−1 .
+
+— Zero knowledge. There exists a simulator S such that if α ∈H m F (
+α ) = a, then for every
+λk -query malicious verifier Ṽ , the following two distributions are equal
+S Ṽ , F (H , a)
+
+and
+
+View P F (H , a), Ṽ .
+
+Moreover:
+– S makes a single query to F at a point in I m ;
+– S runs in time
+(m + k )((d + λ)qṼ |H | + (d + λ) 3 qṼ3 ) · poly(log |F|) = poly(log |F|, d, m, λ, k, |H |) · qṼ3 ,
+where qṼ is Ṽ ’s query complexity;
+– S’s behavior does not depend on a until after the simulated Ṽ sends its first message.
+Remark 7 (The Set I ). For our application in Section 14, we require for reasons related to zero
+knowledge that the simulator S only query F outside of the set H m , which can be achieved by
+setting I := F \ H . Without this restriction we could simply set I := F.
+Remark 8 (Space Complexity). With two-way access to the random tape, the prover can be made
+to run in space poly(log |F|, d, m, λ, k, |H |).
+Remark 9 (Straightline Simulators). Inspection shows that our simulators, in fact, achieve the
+stronger notion of universal straightline simulation [16, 17], in which the simulator do not rewind
+the verifier.
+Proof. Completeness is immediate from the protocol description and the completeness property of the sumcheck sub-protocols it invokes. Soundness follows from the fact that, fixing F such
+
+that α ∈H m F (
+α )  a, we can argue as follows:
+1
+— For every polynomial Z ∈ F[X 1,≤d...,m+k ], with probability 1 − |F|−1
+over the choice of ρ 1 it
+
+holds that α ∈H m Q (
+α )  ρ 1a + z, i.e., the sumcheck claim is false.
+— Therefore, by the soundness guarantee of the sumcheck protocol, with probability at least
+
+1 − md/|I |, either the verifier rejects or ρ 1 F (c ) + β ∈G k Z (c , β)  дm (cm ).
+
+— Finally, we distinguish between two cases depending on P̃:
+
+– If P̃ sends w  β ∈G k Z (c , β), then by the soundness guarantee of the weak-ZK sumcheck
+protocol, the verifier rejects with probability at least 1 − k ·d|F|+1 .
+
+д (c )−w
+with probability 1.
+– If P̃ sends w = β ∈G k Z (c , β), then F (c )  m ρm1
+
+Taking a union bound on the above cases yields the claimed soundness error.
+To show the perfect zero knowledge guarantee, we need to construct a suitably-efficient simulator that perfectly simulates the view of any malicious verifier Ṽ . We first construct an inefficient
+simulator S slow and prove that its output follows the desired distribution; afterwards, we explain
+how the simulator can be made efficient.
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:33
+
+The simulator S slow , given (straightline) access to Ṽ and oracle access to F , works as follows:
+]. Run the weak-ZK sumcheck simulator S  .
+(1) Draw Z sim ∈ F[X 1,≤d...,m , Y1,≤2λ
+...,k
+(2) Begin simulating Ṽ . Its queries to O are answered by making the appropriate queries to Z sim and
+the simulated A provided by S  .
+
+
+α , β).
+(3) Send z sim := α ∈H m β ∈G k Z sim (
+
+≤d
+α) =
+(4) Receive ρ̃. Draw Q sim ∈ F[X 1, ...,m ] uniformly at random conditioned on α ∈H m Q sim (
+
+ρ̃a + z sim , then engage in the sumcheck protocol on the claim “ α ∈H m Q sim (
+α ) = ρ̃a + z sim ”. If
+in any round Ṽ sends c i  I as a challenge, abort.
+(5) Let c ∈ I m be the point chosen by Ṽ in the sumcheck protocol above. Query F (c ), and set w sim :=
+Q sim (c ) − ρ̃F (c ); send this value to the verifier.
+≤2λ
+ ∈ F[X ≤d
+(6) Draw Z sim
+1, ...,m , Y1, ...,k ] uniformly at random conditioned on
+
+
+Z (c , β) = w sim , and
+•
+β ∈G k
+
+sim
+
+ (
+γ ) = Z sim (
+γ ) for all previous queries γ to Z .
+• Z sim
+ .
+From this point on, answer all queries to Z with Z sim
+
+
+ (
+(7) Use S  to simulate the sumcheck protocol for the claim “ β ∈G k Z sim
+c , β) = w sim ”.
+(8) Output the view of the simulated Ṽ .
+
+To prove that this simulator outputs the correct distribution, we consider the information that
+the verifier receives in each step and show that the corresponding random variable is distributed
+identically to the view of the verifier in the real protocol. It will be convenient to define R(X ) =
+
+Z (X , β), and R sim likewise. We proceed with a step-by-step analysis (the relevant steps are
+β ∈G k
+in ?? 2–7).
+In Step 2 and Step 3, the verifier has query access to a uniformly random polynomial Z and
+receives its summation over H m × G k , exactly as in the real protocol.
+In Step 4, we simulate the (standard) sumcheck protocol on the polynomial Q sim , which is chosen
+
+α ) = ρ 1a + z sim . A key observation is that this
+uniformly at random conditioned on α ∈H m Q sim (
+is the distribution of Q in the real protocol. To see this, note that by Corollary 12.3, we have that ρ̃,
+
+being a function of fewer than λk queries to Z , is independent of R given α ∈H m R(
+α ) = z. Then
+ρ̃F is a random variable conditionally independent of R, and so Q = R + ρ̃F is a uniformly random
+
+α ) = ρ̃a + z.15
+polynomial such that α ∈H m Q (
+In Step 5, we send w sim = Q sim (c ) − ρ̃F (c ) to the verifier. In the real protocol, we send w =
+
+Z (c , β) = Q (c ) − ρ̃F (c ), where the latter equality is by the definition of Q. Since Q and Q sim
+β ∈G k
+are identically distributed, then w and w sim are also identically distributed.
+
+(that is consistent with Z sim on all points in
+In ?? 6, we replace Z sim with a new oracle Z sim
+
+ (
+which it was queried), which is a commitment to R sim
+such that R sim
+c ) = w sim . Consider any
+future query to Z , which happens after this replacement. We show that this query is distributed
+exactly as in the original protocol. By Corollary 12.3, the following holds for any q ∈ Fm+k , a ∈ F,
+where U ⊆ Fm+k × F is the set of previous query-answer pairs.
+ Z  (
+⎡⎢
+γ ) = b ∀(
+γ , b) ∈ U
+ sim
+⎢⎢Z  (
+Pr
+q
+)
+=
+a
+ (
+sim
+
+
+Z
+c
+,
+β
+) = w sim
+Z sim ⎢
+
+β ∈G k sim
+⎣
+15 Note
+
+
+⎤⎥
+⎡
+Z (
+γ ) = b ∀(
+γ , b) ∈ U
+⎥⎥ = Pr ⎢⎢⎢Z (
+q ) = a  
+
+
+Z
+(
+X
+,
+β
+)
+≡
+Q
+(X ) − ρ̃F (X )
+ β ∈G k
+⎥⎦ Z ⎢⎣
+
+⎤⎥
+⎥⎥
+⎥⎦
+
+that if ρ̃ were not independent of R then this may not be true.
+15:34
+Observe that the left hand side describes the distribution of the answer to oracle query q provided by the simulator after we replace the Z -oracle, and the right hand side describes the distribution of the answer to the same query in the real protocol.
+In ?? 7, we make use of the weak-ZK simulator for the decommitment. Since, after the replace , the statement we are proving is true, we can use its zero knowledge guarantee.
+ment of Z sim by Z sim
+This ensures that the only information the verifier gains is the value R(c ) = w, which we already
+simulate, and a number of evaluations of Z equal to the number of queries to A, which we can fold
+into the query bound. This concludes the argument for the correctness of the inefficient simulator
+S slow .
+To complete the proof of zero knowledge, we note that S slow can be transformed into an efficient
+simulator S by using succinct constraint detection for the Reed–Muller code extended with partial
+sums [7]: more precisely, we can use the algorithm of Lemma 13.2 to answer both point and sum
+queries to Z , A, and Q, in a stateful way, maintaining corresponding tables ansZ sim , ansAsim , and
+
+ansQ sim .
+14 ZERO KNOWLEDGE LOW-DEGREE IPCP FOR NEXP
+In this section, we use the zero knowledge sumcheck protocol developed in Section 13 (along with
+the [7] protocol) to build a zero knowledge low-degree IPCP for NEXP, which is the key technical
+component in our proof of Theorem 1.1.
+Our protocol is based on the IPCP for NEXP of [4]. Recall that in this protocol, the prover first
+sends a low-degree extension of a NEXP witness, and then engages in the [36] sumcheck protocol
+on a polynomial related to the instance. To make this zero knowledge, the prover first takes a randomized low-degree extension R of the witness (which provides some bounded independence), and
+then sets the oracle to be an algebraic commitment to R. Namely, the prover draws a polynomial
+uniformly at random subject to the condition that “summing out” a few of its variables yields R,
+and places its evaluation in the oracle.
+The prover and verifier then engage in the zero knowledge sumcheck detailed in Section 13 with
+respect to the [4] polynomial. This ensures that the verifier learns nothing through the interaction
+except for a single evaluation of the summand polynomial, which corresponds to learning a constant number of evaluations of the randomized witness. Bounded independence ensures that these
+evaluations do not leak any information. The prover decommits these evaluations to the verifier,
+using the “weak” zero knowledge sumcheck protocol in [7].
+Following [3], the arithmetization encodes bit strings as elements in H m for some H of size
+poly(|B|), rather than with H = {0, 1} as in [4], for improved efficiency.
+We start by defining the oracle 3-satisfiability problem, which is the NEXP-complete problem
+used in [4] to construct two-prover interactive proofs for NEXP.
+Definition 14.1 (RO3SAT ). The oracle 3-satisfiability relation, denoted RO3SAT , consists of all
+instance-witness pairs (x, w ) = ((r , s, B), A), where r , s are positive integers, B : {0, 1}r +3s+3 →
+{0, 1} is a boolean formula, and A: {0, 1}s → {0, 1} is a function, that satisfy the following condition:
+
+∀ z ∈ {0, 1}r , ∀b1 , b2 , b3 ∈ {0, 1}s , B z, b1 , b2 , b3 , A(b1 ), A(b2 ), A(b3 ) = 1.
+In the rest of this section, we prove the following theorem, which shows that every language in
+NEXP has a perfect zero knowledge low-degree IPCP with polynomial communication and query
+complexity.
+Theorem 14.2 (PZK Low-degree IPCP for NEXP). There exists c ∈ N such that for any query
+bound function b(n), some integers d (n) = Ω(nc ), m(n) = O (nc log b), and any sequence of fields
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:35
+
+F(n) that are extension fields of F2 with |F(n)| = Ω((nc log b) 4 ), the NEXP-complete relation RO3SAT
+has a public-coin, non-adaptive (F, d, m)-low-degree IPCP, with parameters
+round complexity:
+
+PCP length:
+
+complexity:
+communication
+query complexity:
+
+oracle ∈
+
+soundness error:
+
+O (n,b)
+
+poly(2n ,b) 
+poly(n,log b) 
+poly(n,log b)  ,
+
+F[X 1,≤d. . .,m ] 
+
+1/2
+
+which is zero knowledge with query bound b.
+Proof. We begin with the arithmetization of the problem.
+Arithmetization. Let B̂ : Fm → F be the “direct” arithmetization of the negation of the constraint
+B: rewrite B by using ANDs and NOTs; negate its output; replace each AND(a, b) with a · b and
+x ) = 0 if B(
+x ) is true, and B̂(
+x ) = 1 if B(
+x ) is false.
+NOT(a) with 1 − a. For every x ∈ {0, 1}r +3s+3 , B̂(
+Note that B̂ is computable in time poly(|B|) and has total degree O (|B|).
+Note that (r , s, B) ∈ RO3SAT if and only if there exists a multilinear function Â: Fs →
+F (the multilinear extension of the assignment A) that is boolean on {0, 1}s such that
+B̂(z , b1 , b2 , b3 , Â(b1 ), Â(b2 ), Â(b3 )) = 0, for all z ∈ {0, 1}r , b1 , b2 , b3 ∈ {0, 1}s .
+
+ =0
+The requirement that Â is boolean on {0, 1}s can be encoded by 2s constraints: Â(b)(1−
+Â(b))
+s
+
+for every b ∈ {0, 1} . These constraints together can be expressed as follows:
+
+
+д1 (z , b1 , b2 , b3 ) := B̂(z , b1 , b2 , b3 , Â(b1 ), Â(b2 ), Â(b3 )) = 0 
+z ∈ {0,1}r , bi ∈ {0,1}s
+
+
+ := Â(b)(1
+ − Â(b))
+ =0
+д2 (b)
+s
+
+b ∈ {0,1}
+
+Let F be the polynomial over F given by
+
+
+F (X , Y ) :=
+
+
+a )X a + д2 (
+a [s] )Y a ,
+д1 (
+
+ ∈ {0,1}r +3s
+a
+
+where X a := X 1a1 · · · X a  for a ∈ {0, 1}  , and a[s] := (ar +1 , . . . , ar +s ).
+Note that F ≡ 0 if and only if all the above constraints hold. Since F is a polynomial of total
+2(r +3s ) .
+degree r + 3s, if F  0, then F is zero on at most an r +3s
+|F| fraction of points in F
+ai
+For ai ∈ {0, 1} it holds that X i = 1 + (X i − 1)ai , so we can also write
+F (X , Y ) =
+
+
+ ∈ {0,1}r +3s
+a
+
+д1 (
+a) ·
+
+r +3s
+
+r +3s
+
+(1 + (X i − 1)ai ) + д2 (
+a [s] ) ·
+i=1
+
+i=1
+
+(1 + (Yi − 1)ai )  .
+
+
+Let H be a subfield of F of size poly(r +s + log b); define m 1 := r / log |H | and m 2 := s/ log |H | (assuming without loss of generality that both are integers). For i ∈ {1, 2}, let γi : H mi → {0, 1}mi log |H |
+be the lexicographic order on H mi . The low-degree extension γ̂i of γi is computable by an
+arithmetic circuit constructible in time poly(|H |, mi , log |F|) [21, Claim 4.2]. Let γ : H m1 +3m2 →
+α , β1 , β2 , β3 ) = (γ 1 (
+α ), γ 2 ( β1 ), γ 2 ( β2 ), γ 2 ( β3 )) for all α ∈ H m1 , β1 , β2 , β3 ∈
+{0, 1}r +3s be such that γ (
+m
+m
++3m
+r
++3s
+2
+1
+2
+→F
+be its low-degree extension.
+H ; let γ̂ : F
+15:36
+We can use the above notation to write F equivalently as
+F (X , Y ) =
+
+
+
+r +3s
+
+д1 (γ̂ (
+α , β1 , β2 , β3 ))
+
+ ∈H m1
+α
+
+(1 + (X i − 1)γ̂ (
+α , β1 , β2 , β3 )i )
+i=1
+
+β1, β2, β3 ∈H m2
+r +3s
+
++ д2 (γ̂ 2 ( β1 ))
+=:
+
+
+
+(1 + (Yi − 1)γ̂ (
+α , β1 , β2 , β3 )i )
+i=1
+
+f (X , Y , α , β1 , β2 , β3 ),
+
+ ∈H m1
+α
+
+β1, β2, β3 ∈H m2
+
+where f has degree at most d in each variable. We are now ready to specify the protocol.
+Low-degree IPCP for RO3SAT . Let k := log 100b/ log |H |. The interaction is as follows.
+|H |+2
+|H |
+, Y1,≤2...,k
+], subject
+(1) The prover draws a polynomial Z uniformly at random from F[X 1,≤...,m
+2
+
+m
+to the condition that β ∈G k Z (
+α , β) = A(γ 2 (
+α )) for all α ∈ H 2 . It then generates an
+
+oracle π0 for the |H |k -strong zero knowledge sumcheck protocol (Section 13) on input
+(F, m 1 + 3m 2 , d, H , 0) and oracles π1 , π2 , π3 for the invocation of the weak zero knowledge
+sumcheck protocol in [7] on input (F, k, 2|H |, H , ·). (In both zero knowledge sumchecks, the
+oracle message does not depend on the claim itself.) The prover sends an oracle which is the
+“bundling” of the evaluations of Z with (π0 , π1 , π2 , π3 ).16
+(2) The verifier chooses x , y ∈ Fr +3s uniformly at random and sends them to the prover. The
+prover and verifier engage in the zero knowledge sumcheck protocol of Section 13 with
+respect to the claim “F (
+x , y ) = 0” with I = F \ H ,17 using π1 as the oracle message. This
+reduces the claim to checking that f (
+x , y, c , c 1 , c 2 , c 3 ) = a for uniformly random c ∈ (F\H )m1 ,
+
+
+
+m
+c 1 , c 2 , c 3 ∈ (F \ H ) 2 , and some a ∈ F provided by the prover.
+(3) The prover provides hi := A(γ 2 (c i )) for each i ∈ {1, 2, 3}. The verifier substitutes these values
+into the expression for f to check the above claims, and rejects if they do not hold.
+(4) The prover and verifier engage in the zero knowledge sumcheck protocol in [7] with respect
+
+to the claims “ β ∈H k Z (c i, β) = hi ”, for each i ∈ {1, 2, 3}, using πi as the oracle message.
+x , y ) = 0
+Completeness. If ((r , s, B), A) ∈ RO3SAT , then F (X , Y ) is the zero polynomial; hence F (
+for all x , y ∈ Fr +3s . Completeness follows from the completeness of the zero knowledge sumcheck
+protocols.
+Low-degree soundness. Suppose that (r , s, B)  L (RO3SAT ), and let (Z̃ , π̃0 , π̃1 , π̃2 , π̃3 ) be the PCP
+oracle sent by a malicious prover. By the low-degree soundness condition, this is a collection of
+
+polynomials each of individual degree at most d. Let Ã := β ∈H k Z̃ (X , β), which we think of as
+16 By
+
+“bundling” we refer to a standard technique of sending a single low-degree polynomial which encodes a
+ ), . . . , P  (X
+ ) is the polynomial P (W , X
+ ) :=
+list of low-degree polynomials. More precisely, the bundling of P 1 (X
+
+
+α ∈S I S (W , α )Pγ (α ) (X ), for some S ⊆ F such that |S | =  and γ : S → {1, . . . ,  } an ordering of S . Observe that
+ ) ≡ Pi (X
+ ) for all i = 1, . . . , k ;
+(a) P (i, X
+(b) deg(P ) = max{deg(P 1 ), . . . , deg(P  ), |S | − 1};
+(c) any query to P can be answered by querying each Pi at that point, and so the zero knowledge guarantee is unaffected
+except for reducing the query bound by a factor .
+17 This choice of I is necessary for zero knowledge; see below.
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:37
+
+playing the role of Â(γ 2 (·)) (the assignment) in F . Observe that Ã also has individual degree at
+most d.
+If (r , s, B)  L (RO3SAT ), then there is no choice of Â such that F (X , Y ) is the zero polynomial.
+Thus, F (
+x , y ) = 0 with probability at most (r +3s)/|F| over the choice of x , y. By the soundness of the
+zero knowledge sumcheck protocol (Lemma 13.3), the verifier outputs a false claim “f (
+x , y, α ) = a”
+with probability at least 1 − O ((m 1 + 3m 2 + k )d )/(|F| − |H |)). If substituting hi for Â(γ 2 (c i )) in f
+does not yield a, then the verifier rejects. Otherwise, it must be the case that for at least one
+i ∈ {1, 2, 3}, Ã(c i )  hi . By the soundness of the sumcheck protocol in [7], the verifier rejects with
+probability at least 1 − O ( kd
+|F| ). Taking a union bound, the verifier rejects with probability at least
+1 − O ((m 1 + 3m 2 + k )d/|F|) = 1 − O ((r + s + log b)d/|F|), which is at least 1/2 for sufficiently large
+|F| = poly(r , s, log b, d ).
+Zero knowledge. Perfect zero knowledge is achieved via the following (straightline) simulator.
+|H |+2 ≤2 |H |
+(1) Draw a uniformly random polynomial Z sim ∈ F[X 1,≤...,m
+, Y1, ...,k ].
+2
+
+(2) Invoke the |H |k -strong ZK sumcheck simulator on input (F, m 1 + 3m 2 , deg( f ), H, 0), and use it
+to answer queries to π 0 throughout. In parallel, run three copies of the simulator for the weak
+ZK sumcheck in [7], with respect to input (F, k, 2|H |, H, ·), and use them to answer queries to
+π1 , π 2 , π 3 respectively. (Recall that the behavior of each simulator does not depend on the claim
+being proven until after the first simulated message, so we can choose these later.)
+(3) Receive x , y ∈ Fr +3s from Ṽ .
+(4) Simulate the strong ZK sumcheck protocol on the claim “F (
+x , y ) = 0”. The subsimulator will
+x , y, c ), for c = (c 0 , c 1 , c 2 , c 3 ) ∈
+query f at a single location c ∈ (F−H ) r +3s . Reply with the value f (
+(F \ H ) r +3s . Computing this requires the values Â(γ̂ (c i )) for i ∈ {1, 2, 3}; we substitute each of
+these with hisim ∈ F drawn uniformly at random (except that if c i = c j for i  j, then fix
+j
+
+hisim = h sim ).
+(5) For i ∈ {1, 2, 3}, simulate the weak ZK sumcheck protocol in [7] with respect to the claim
+
+α , β) = hisim ”. Whenever the subsimulator queries Z , answer using Z sim .
+“ β ∈H k Z (
+
+The verifier’s view consists of its interaction with P during the four sumcheck protocols it invokes and its queries to the oracle. The strong zero knowledge sumcheck subsimulator in Section 13
+guarantees that the queries to π0 and the first sumcheck are perfectly simulated given a single
+
+|H |+2
+query to f at the point c ∈ (F \ H ) r +3s chosen by Ṽ . Since Â (X ) = β ∈H k Z (X , β) ∈ F[X 1,≤...,m
+],
+the evaluation of Â at any 3 points in I (in particular, outside of H m ) does not determine its value
+at any point in H m . In particular, this means that the values of the hi ’s sent by the prover in the
+original protocol are independently uniformly random in F (except if c i = c j for i  j as above).
+Thus the hisim ’s are identically distributed to the hi ’s, and therefore both the prover message and
+the simulator’s query are perfectly simulated.
+The sumcheck simulator in [7] ensures that the view of the verifier in the rest of the sumchecks
+is perfectly simulated given qṼ queries to Z , where qṼ is the number of queries the verifier makes
+across all πi , i ∈ {1, 2, 3}. Hence, the number of “queries” the simulator makes to Z sim is strictly
+less than 100b (because Ṽ is b-query). By Corollary 12.3, any set of strictly less than 100b queries
+to Z is independent of Â, and so the answers are identically distributed to the answers to those
+queries if they were made to a uniformly random polynomial, which is the distribution of Z sim .
+|H |+2
+|H |
+, Y1,≤2...,k
+] cannot be
+Clearly, drawing a uniformly random polynomial in Z sim ∈ F[X 1,≤...,m
+2
+done in polynomial time. However, we can instead use the algorithm of Lemma 13.2 to draw Z
+(a straightforward modification allows us to handle different degrees in X , Y ; alternatively, we
+
+15:3
+could simply set the degree bound for both to be 2|H |). The running time of the simulator is then
+poly(log |F|, m 1 , m 2 , k, |H |).
+
+APPENDICES
+A REDUCING QUERY COMPLEXITY WHILE PRESERVING ZERO KNOWLEDGE
+We prove Proposition 9.2 by showing that any low-degree IPCP can be transformed into a lowdegree IPCP that makes a single uniform query, at only a small cost in parameters, while preserving
+zero knowledge.
+Let m, d ∈ N, and let F be a finite field. Let (P, V ) be an r-round (F, d, m)-low-degree IPCP for
+a language L . Denote its oracle by R, query complexity by q, PCP length by , communication
+complexity by c, and soundness error by ε.
+We transform (P, V ) into a low-degree IPCP (P , V  ) for L with parameters
+round complexity: r =r+1
+
+
+PCP length:  =
+
+
+
+complexity: c =c+poly(d,q,m) 
+,
+communication
+
+query complexity: q =1
+
+
+oracle ∈ F[X 1,≤d. . .,m ]
+
+
+md
+q
+soundness error: ε  =ε + |F|−q
+
+
+where the new honest verifier’s single query is uniformly distributed. Furthermore, if (P, V ) is
+(perfect) zero knowledge with query bound b, then (P , V  ) is (perfect) zero knowledge with query
+bound b − (mdq + 1).
+We reduce the query complexity of the IPCP verifier V from q to 1 by using the standard approach of leveraging algebraic structure and additional interaction with the prover, while making
+sure that the query reduction preserves zero knowledge and that the (single) query that V makes
+is uniformly distributed. Specifically, if the verifier wants to query the oracle R at every point in a
+set A, the verifier asks the prover to provide the restriction of R to a curve that contains all points
+in A. Since we wish to make a single uniform query, rather than asking for the curve of minimal
+degree (which is unique), we choose the curve at random from all such curves of degree at most
+|A|. This technique is used by [31] to show the same result for general public-coin IPCPs (with
+standard soundness).18 Since we require only low-degree soundness, we can dramatically simplify
+their proof. Consider the following protocol.
+Construction 4. Let (P, V ) be a q-query (F, d, m)-low-degree IPCP for L in which the (honest)
+oracle is some R ∈ F[X 1,≤d...,m ]. We construct an (F, d, m)-low-degree IPCP (P , V  ) for L in which V 
+makes a single uniformly distributed query to R. We may assume that |F| > q, otherwise the stated
+soundness guarantee is trivial.
+(1) Random curve. V  chooses a random r ∈ Fm and a random t ∈ F \ S, for some S ⊆ F with
+|S | = q. V  computes a curve γ : F → Fm of degree q such that {γ (s)}s ∈S = A and γ (t ) = r
+and sends it to P  (in a form that is independent of t). P  replies with the coefficients of the
+polynomial ρ : F → F, of degree at most mdq, that (allegedly) is the restriction of R to γ .
+(2) Consistency. V queries R at r and receives an answer a; it rejects if a  ρ (t ). (Recall that
+r = γ (t ).)
+(3) Emulating the multi-query verifier. V  rules according to the decision predicate of V with respect to the transcript of the “interaction phase” and the answers to the query set A, as indicated
+by the curve γ .
+One can verify that the complexity of the protocol is as stated. Since the evaluation of the curve
+γ (which has degree q) at a random t ∈ F\S is a random variable that is uniformity distributed over
+18 We
+
+remark that the transformation in [31] also implicitly assumes that the IPCP is public coin.
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:39
+
+Fm , the single query that the verifier makes is uniformly distributed. Completeness is immediate
+by construction. For soundness, since ρ is a univariate polynomial of degree at most dq, and P 
+md q
+does not know t, if the check ρ (t ) = R(r ) (in Step 2) passes with probability greater than |F|−q , then
+all the answers to the query set A, as indicated by γ , are consistent with R. Perfect zero knowledge
+is preserved because the polynomial ρ can be computed efficiently by making mdq + 1 queries
+to R, and so the additional information provided by the prover could have been computed by the
+malicious verifier itself within the stated query bound.
+B FROM PCP TO MIP* VIA A BLACK BOX TRANSFORMATION
+We show that any (non-adaptive) PCP, and more generally any IPCP, can be transformed into an
+MIP* in a black box way. While a proof of this fact is implicit in previous works, the machinery
+developed in Section 6 allows us to elucidate its structure and give a compellingly short proof of
+it.
+We first define what we mean by black box. Informally, we call a transformation black box if it
+does not depend on the language being decided.19 The following definition formalizes this notion.
+Definition B.1. A transformation T maps IPCP to MIP* if, given as input an IPCP (P, V ) for
+a language L , outputs an MIP* for the language L . Such a transformation is black box if the
+verifier in the resulting MIP* can be expressed as an algorithm with access only to the queries and
+messages of V (x ) but no access to the input x, apart from its length.
+We stress that ?? B.1 also applies to PCPs (by viewing them as 0-round IPCPs).
+The transformation is in two stages. First, we convert the IPCP into a low-degree IPCP by encoding the oracle as a low-degree polynomial. Second, we apply the transformation in Lemma 9.1
+(which includes invoking the query reduction in Proposition 9.2) to convert the low-degree IPCP
+into an MIP* . Besides being black box in the formal sense, the resulting MIP* verifier is simple to
+describe: it is the original verifier, composed with an interactive query-reduction protocol and a
+low-degree test for entangled provers.
+In sum, the above yields the following corollary.
+Corollary B.2. There exists a black box transformation that maps any r-round IPCP for a language L to a 2-prover (r + 1)-round MIP* for L .
+Proof. Let (P, V ) be an r-round IPCP for L ; denote its PCP oracle by R, query complexity by
+q, and proof length by . Let m, d ∈ N be such that  ≤ d m , and let F be a sufficiently large
+] by
+(polynomial-size) finite field. Encode the oracle R of the IPCP as a polynomial R̂ ∈ F[X 1,≤m
+...,d
+computing the low-degree extension of R (see Section 5.1); the new oracle is the evaluation of R̂
+over Fm . Since this encoding is systematic, the verifier V can directly query R̂ at the positions that
+correspond to its query set. Completeness and soundness are clearly preserved, as are the query
+and communication complexities. Proof length is increased from  to |F|m . The resulting IPCP
+satisfies the conditions of a low-degree IPCP, and so we can apply Lemma 9.1 to obtain the desired
+MIP* . Straightforward inspection shows that all of the applied transformations are indeed black
+box.
+
+Remark 10. Zero knowledge is not preserved by this transformation because taking the lowdegree extension of the oracle may allow the verifier to learn global information that cannot, in
+rules out degenerate “transformations” that ignore the given PCP or IPCP (P, V ) for the language L , and simply
+output an MIP* for L unrelated to (P, V ). (Such degenerate transformations are trivially implied by the inclusion NEXP ⊆
+MIP∗ .)
+
+19 This
+15:40
+general, be simulated via a small number of queries. (For example, a single point of the low-degree
+extension may amount to a summation over exponentially many points; see Section C.)
+If we apply Corollary B.2 to any PCP (i.e., any 0-round IPCP) for NEXP (for example, the one
+in [3]), we immediately recover the following result from [39], which shows that every language
+in NEXP has an MIP* with optimal round complexity and number of provers.
+Corollary B.3. Every language in NEXP has a 1-round 2-prover MIP* .
+C ALGEBRAIC QUERY COMPLEXITY UPPER BOUNDS
+We show that in certain cases the degree constraints in Lemma 12.1 are tight.
+C.1 Multilinear Polynomials
+The first result is for the case of multivariate polynomials over any finite field, where H ⊆ F is
+arbitrary. The proof is a simple extension of a proof due to [30] for the case H = {0, 1}.
+Theorem C.1 (Multilinear Polynomials). Let F be a finite field, H a subset of F, and γ :=
+≤1
+α ∈H α. For every P ∈ F[X 1, ...,m ] (i.e., for every m-variate multilinear polynomial P) it holds that
+ γ
+γ
+m
+
+⎧
+⎪
+P
+if char(F)  |H |
+|H | , . . . , |H | · |H |
+,
+P (
+α) = ⎨
+⎪κ · γ m
+if char(F) | |H |
+⎩
+ ∈H m
+α
+where κ is the coefficient of X 1 · · · Xm in P.
+
+
+
+Proof. First suppose that char(F) does not divide |H |. Let α be uniformly random in H m ; in
+em
+particular, α i and α j are independent for i  j. For every monomial m(X ) = X 1e1 · · · Xm
+with
+e 1 , . . . , em ∈ {0, 1},
+em
+em
+] = E[α 1e1 ] · · · E[αm
+] = E[α 1 ]e1 · · · E[αm ]em = M (E[α 1 ], . . . , E[αm ]).
+E[M (
+α )] = E[α 1e1 · · · αm
+
+Since P is a linear combination of monomials, E[P (
+α )] = P (E[
+α ]). Each α i is uniformly ran
+γ
+γ
+γ
+α ]) = P ( |H | , . . . , |H | ), which imdom in H , so E[α i ] = |H1 | α ∈H α = |H | , and thus P (E[
+γ
+γ
+plies that E[P (
+α )] = P ( |H | , . . . , |H | ). To deduce the claimed relation, it suffices to note that
+
+α ).
+E[P (
+α )] = |H1|m α ∈H m P (
+em
+with
+Next suppose that char(F) divides |H |. For every monomial m(X ) = X 1e1 · · · Xm
+e 1 , . . . , em ∈ {0, 1}:
+— if there exists j ∈ [m] such that e j = 0 then
+
+
+M (
+α ) = |H |
+
+e
+
+α 1, ...,α j−1,α j+1, ...,αm ∈H
+
+ ∈H m
+α
+
+— if instead e 1 = · · · = em = 1 then
+
+
+M (
+α) =
+ ∈H m
+α
+
+m
+
+ ∈H m i=1
+α
+
+m
+
+αi =
+
+e
+
+j−1
+j+1
+em
+α 1e1 · · · α j−1
+α j+1
+· · · αm
+= 0.
+
+
+
+αi = 
+
+i=1 α i ∈H
+
+
+
+m
+
+α .
+α ∈H 
+
+The following corollary shows that for prime fields of odd size, the value of
+computed efficiently for any H ⊆ F using at most a single query to P.
+
+
+
+
+Corollary C.2. Let F be a prime field of odd size, H a subset of F, and γ :=
+P ∈ F[X 1,≤1...,m ] (i.e., for every m-variate multilinear polynomial P) it holds that
+ γ
+γ
+
+⎧
+⎪
+P |H | , . . . , |H | · |H |m if H  {∅, F}
+⎨
+.
+P (
+α) = ⎪
+otherwise.
+⎩0
+ ∈H m
+α
+ ∈H m
+α
+
+
+
+α ∈H
+
+P (
+α ) can be
+α. For every
+
+Spatial Isolation Implies Zero Knowledge Even in a Quantum World
+
+15:41
+
+Proof. Theorem C.1 implies both cases. Since F is a prime field, char(F) = p = |F|. Hence p
+divides |H | if and only if H ∈ {∅, F}. The result for H  F follows immediately. If H = F, then
+
+γ = α ∈H α = (p − 1)p/2, which is divisible by p since 2 must divide p − 1 (as p is odd).
+
+C.2 Subsets with Group Structure
+We show that if H is assumed to have some group structure, then few queries may suffice even for
+polynomials of degree greater than one. In particular, Lemma C.3 shows that if H is a multiplicative
+subgroup of F and d ≤ |H |, then one query suffices; Lemma C.4 shows that if H is an additive
+subgroup of F, then the answer depends on a polynomial related to H .
+Lemma C.3 (Multiplicative Groups). Let F be a field, H a finite multiplicative subgroup of F,
+and m, d positive integers with d < |H |. For every P ∈ F[X 1,≤d...,m ],
+
+P (
+α ) = P (0, . . . , 0) · |H |m .
+ ∈H m
+α
+
+Remark 11. The hypothesis that d < |H | is necessary for the lemma, as we now explain. Choose
+H = K× , where K is a proper subfield of F, m = 1, and d = |H |. Consider the polynomial X |H | ,
+which has degree at least d: X |H | vanishes on 0; however, X |H | evaluates to 1 everywhere on H
+so that its sum over H equals |H |  0. (Note that if H is a multiplicative subgroup of F then
+char(F)  |H | because |H | equals char(F) k − 1 for some positive integer k.)
+Proof. The proof is by induction on the number of variables m. The base case is when m = 1,
+which we argue as follows. The group H is cyclic, because it is a (finite) multiplicative subgroup
+
+of a field; so let ω generate H . Writing P (X 1 ) = dj=0 β j X 1j for some β 0 , . . . , βd ∈ F, we have
+
+α 1 ∈H
+
+P (α 1 ) =
+
+|H
+|−1
+
+
+|H
+|−1 
+d
+
+
+P (ω i ) =
+
+i=0
+
+βj ωi j =
+
+i=0 j=0
+
+d
+
+
+βj
+
+j=0
+
+|H
+|−1
+
+
+(ω j ) i = β 0 |H | = f (0)|H |,
+
+i=0
+
+which proves the base case. The second-to-last equality follows from the fact that for every γ ∈ H ,
+|H
+|−1
+
+i=0
+
+⎧
+if γ = 1
+⎪ |H |
+γi = ⎨
+⎪ γ |H | −1 = 0 if γ  1 .
+⎩ γ −1
+
+For the inductive step, assume the statement for any number of variables less than m; we now
+prove that it holds for m variables as well. Let Pα denote P with the variable X 1 fixed to α. Next,
+apply the inductive assumption below in the second equality (with m − 1 variables) and last one
+(with 1 variable), to obtain
+
+
+
+P (α 1 , . . . , αm ) =
+Pα 1 (α 2 , . . . , αm )
+ ∈H m
+α
+
+α 1 ∈H (α 2, ...,αm ) ∈H m−1
+
+= |H |m−1
+
+
+
+Pα 1 (0m−1 )
+
+α 1 ∈H
+
+= |H |
+
+m−1
+
+
+
+P (α 1 , 0, . . . , 0)
+
+α 1 ∈H
+
+= |H |m P (0, . . . , 0),
+as claimed.
+
+
+15:4
+Lemma C.4 (Additive Groups). Let F be a field, H a finite additive subgroup of F, and m, d positive
+integers with d < |H |. For every v ∈ Fm , P ∈ F[X 1,≤d...,m ],
+
+P (
+α + v ) = κ · am
+0 ,
+ ∈H m
+α
+
+where κ is the coefficient of X 1|H |−1 · · · Xm|H |−1 in P, and a 0 is the (formal) linear term of the subspace
+
+polynomial h ∈H (X − h). In particular, if P has total degree strictly less than m(|H | − 1), then the
+above sum evaluates to 0.
+Proof. Without loss of generality, let d := |H | − 1. The proof is by induction on the number of
+
+variables m. When m = 1, we have that P (X ) = dj=0 β j X j for some β 0 , . . . , βd ∈ F. Then
+d
+d
+
+
+
+
+P (α + v) =
+β j (α + v) j =
+βj
+(α + v) j = βd a 0
+α ∈H
+
+α ∈H j=0
+
+j=0
+
+α ∈H
+
+where the final equality follows by [12, (Proof of) Theorem 1], and the fact that d = |H | − 1.
+For the inductive step, assume the statement for m − 1 variables; we now prove that it holds for
+m variables as well. Let Pα denote P with the variable X 1 fixed to α; we have Pα (X 2 , . . . , Xm ) =
+
+em
+e1 e2
+
+e ∈ {0, ...,d }m β
+e · α X 2 . . . X m . Next, apply the inductive hypothesis below in the second equality
+(with m − 1 variables) to obtain
+
+
+
+
+P (
+α + v ) =
+Pα 1 +v1 (α 2 + v 2 , . . . , αm + vm ) =
+am−1
+κ (α 1 + v 1 ),
+0
+ ∈H m
+α
+
+where κ (X 1 ) :=
+
+d
+
+j=0
+
+α 1 ∈H (α 2, ...,αm ) ∈H m−1
+
+α 1 ∈H
+
+β (j,d, ...,d ) X 1j . Applying the hypothesis again for 1 variable yields
+
+am−1
+κ (α 1 + v 1 ) = am
+0
+0 · β (d, ...,d ) ,
+α 1 ∈H
+
+and the claim follows.

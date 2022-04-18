@@ -1,0 +1,225 @@
+Design of solar powered electric vehicle
+
+Abstract. With the increased trends of industrialization and global economic growth leading to the
+everchanging petrol prices and other price hikes, private transport system has become a costly affair.
+All these problems can be addressed with innovation. One of the most feasible solutions is turning
+towards renewable energies to solve the issues i.e., increasing the use of renewable energies like
+solar power in the place of fossil fuels. Everyone’s dream of owning a commercially viable solar
+vehicle is slowly becoming a reality. Electric vehicles are now available at an affordable price. This
+opportunity is taken towards the design of a Solar powered two-wheeler. Designing a solar vehicle
+is a multidisciplinary subject that covers the broad and complex aspects from various subjects. In the
+designed vehicle, solar panel is used as the power source and developed voltage, stored in the battery,
+is used to the drive the permanent magnet DC motor which drives the rear wheel of the vehicle. 
+
+1. Introduction
+The quests for an everlasting, safer, cleaner and an environmental-friendly fuel is never-ending. The carbonbased fuels, like the fossil fuels that are widely used nowadays are unsustainable and unsafe. They pose a
+serious threat to the environment. The best alternatives to these are renewable energy sources like the sun,
+wind, tides, hydropower and biomass. Amongst these elements, solar power is the most preferred since it
+could provide the cleanest sustainable energy for the longest duration of time – at least for the following few
+billion years. Photovoltaic production doubles every two years globally; it has increased by a mean of 48
+percent annually ever since 2002. Thanks to its innumerable benefits with regards to the environmental,
+economic and social aspects, PV systems have become the world’s fastest-growing energy technology. It
+can be said that the sole limitation to alternative energy as an energy source is our understanding of 
+developing efficient and cost-effective technology which must be used for the implementation. Nothing on
+this planet comes free of cost, but what we could find the simplest way to implement free rides. Indeed it'd be
+wonderful if our two-wheelers could still run without us having to spend billions on fossil fuels each
+year and to pander to natural hazards that their combustion leave behind. If we could drive a solar-powered
+vehicle, that dream would come true. A solar vehicle would harness energy from the sun via solar panels.
+A solar panel is nothing but a packaged, and
+connected assembly of solar cells also called the photovoltaic cells which are the solid-state devices that use
+quantum mechanical transitions to convert the available solar power directly into the needed electric
+power. they're noise-free and pollution-free with no rotating parts and requiring minimum maintenance.
+The electricity thus generated is used to run the vehicle’s motor by storing it in the battery. Thus, we get a
+vehicle driven electrically which travels on “free” energy with no harmful emissions, which could utilize its
+full power at all speeds and would have extremely little maintenance costs [1] – [2].
+The planet Earth has awfully limited amount of energy resources which would soon become extinct.
+Fortunately, population models have suggested that the world's population will level out at two to three
+times the current numbers over the subsequent hundred years. The demands of the population increase as
+the total population count increases. The lingering question is whether the earth's resources will be sufficient
+to sustain the earth’s population with a high standard of living for all. Energy is the key issue in this. 
+Nowa-days, people dealing with natural resources like fuel, coal etc. face a tough time to stay at pace with the
+increasing demand. At one hand, there are more cars and motor vehicles, dominating the transport medium,
+while on the opposite hand these vehicles are being dominated by the fuel. As a result, the limited resources
+are being quashed by the producers and dealers to satisfy this need which is leading us to an uncertain future
+with the scarcity of fuel and minerals. So, it's clear that present trends in energy consumption, especially
+oil, can't be sustained for much longer. Also, these are the most contributing factors for global warming,
+environmental imbalances, depletion of the ozone layer, etc., which eventually challenges the survival of
+humans. The fossil fuels also play the antagonist role with regards to global warming. Therefore, under this
+circumstance, it's quite necessary to create a brand-new exploration of natural resources of energy and
+power. The question now is the need for exploration when the resources are right in front of our eyes. They
+are effective, less costly and specially, they are an endless source of energy. With greatly improved energy
+efficiency, a transition to the present energy based economy capable of sustaining the anticipated
+growth within the world economy is feasible. This effective source is ―Solar Energy.
+This work focuses on designing a solar powered two-wheeler vehicle aiming to tackle the issues that are
+related to pollution and shortage of fuel. When a solar powered vehicle is considered, it removes the burden
+of vehicle maintenance of the shoulders while ensuring both the safety and comfort for drivers as well as
+passengers Delhi, the capital city of India is one of the most heavily polluted cities in India. Recent study
+shows that pollution caused by the road dust and vehicles account for about 50% of total pollution of the
+city. Numerous solutions were proposed to face this which mainly includes afforestation and restriction on
+the usage of the vehicles [3] – [7]. 
+
+2. Existing System
+In the existing systems, solar photon energy is used as the fuel. This solar photon energy is transformed
+into electrical energy by employing a solar panel. This solar energy is used to power the electric vehicle.
+In a case that was studied, a regular IC engine scooter has been modified. This scooter’s engine has been
+replaced by with a 48 V, 0. 33 Hp DC hub motor. This hub motor powered by a 48 V, 7.5 Ah Lead acid
+battery bank. Potentiometric method has been used for the purpose of speed control. A single 75 W solar
+panel is used to charge the battery. The following is observed in the existing system:
+
+ The maximum speed attained at the end of the accelerating period is 45 kmph.
+ The starting acceleration is 6.25 km/s2
+.
+ Distance covered is 3 km.
+ Total time of the run is 280 s.
+ The average speed is 36.3 km.
+3. Proposed System
+The proposed system exhibits a better performance because of the following reasons:
+ The use of two 22,000 mAh batteries which provide a longer lifetime.
+ The hub motors are replaced by a permanent magnet DC motor. The use of PMDC motors has its
+own significance. The absence of field windings in the PMDC motors eliminates the field circuit
+copper losses. This in turn increases their efficiency.
+The output of the proposed system of the solar powered vehicle are as follows:
+ The maximum speed attained at the end of the accelerating period is 50 kmph.
+ The starting acceleration is 10kmphps.
+ Distance covered is above 5 km depending on the speed and acceleration.
+ Total time of the run is above 600 s.
+ Average speed is 45 km. 
+
+3.1 Solar Panel
+Solar panels have been in use since the nineteenth century and since then till today people have been
+employing them for a variety of applications at home, business, for transportation and even for agricultural
+use. Solar panels are considered expensive even today, and their performance needs to be verified without
+blindly trusting the ratings provided by their producers. When a solar powered car is taken into
+consideration, the solar panels act as the ultimate energy supplier for the whole vehicle to function. Hence,
+a complete verification of the performance of the solar panels that has be used for the solar vehicle must be
+carried out. The sun emits its radiated energy in the form of light photons which is then converted into
+electrical energy by the solar panels. Solar panels are made up of silicon-based semiconductor materials and
+when the radiation comes in contact with the silicon atoms, the photons are absorbed separating the electrons
+from the rest of the atoms. There generated electrons take care of creating the electric current and their
+transportation. The generated electricity is then stored in the batteries that are to be used later.
+
+3.2 Battery
+The battery that is to be used is a 24V unsealed Lead acid battery. Lead–acid batteries were invented by the
+French physicist Gaston Planté in 1859. These are the oldest type of the rechargeable batteries available.
+Despite their extremely low energy-to-weight ratio and a low energy-to-volume ratio, their ability to supply
+high surge currents means that the cells can maintain a relatively large power-to-weight ratio. All these
+features of the batteries and their low cost, make them attractive for use in motor vehicles thus providing
+the high current required by the motors. 
+
+As the used permanent magnet DC motor requires a 24 V and a capacity of 42 Ah, two 12 V 42 Ah Lead acid batteries are connected in series thus providing supply to the motor.
+Due to the internal electrochemical mechanism of lead-acid batteries, charging is carried out in 3 distinct stages rather than through a continuous fixed voltage/current supply to the battery.
+Each of these stages varies with the amount of voltage/current that needs to be supplied to the battery. 
+The charge controller will detect voltage from the battery prior to the charging process.
+After reading the output from the battery the charge controller will determine which stage has to be employed to properly charge it.
+
+3.3 PMDC Motor
+A Permanent Magnet DC motor (PMDC motor) is built with a permanent magnet that creates the magnetic field needed for the operation of the DC motor. 
+The use of PMDC motors has its own significance. These permanent magnet DC motors do not require the presence of field windings which in turn 
+reduces their field circuit copper losses. This increases their efficiency. To satisfy the requirements, we use a 24V 42000 mAh permanent magnet DC motor, 
+the speed of rotation of which is controlled by the throttle. 
+
+3.4 Throttle
+The running speed of electric powered vehicles are adjusted under different riding situations with the help of a throttle. 
+There are linear hall sensor integrated circuit and magnetic steel which are installed on the fixed part and rotating part of the throttle respectively. 
+When the throttle is rotated, the movement of the magnetic steel will affect the magnetic field. The output voltage of the hall sensor will change accordingly. 
+The sensor transmits its output voltage signal to the controller, and then the software in the controller will
+analyze this signal to get the suitable PWM to drive the motor. 
+
+4. Vehicle Setup
+The solar panel is connected to the battery through a charge controller which will regulate the supply to
+the battery. The battery is then connected to the throttle.
+The throttle is used to provide supply to the permanent magnet Dc motor through speed regulator which
+consists of MOSFET to provide gate pulse to throttle. The rotor of the PMDC motor is connected using
+the pulley system to the wheel. A smaller pulley is connected to the rotor which is connected to the longer
+pulley attached to the wheel axis
+4.1 Speed Controller
+A speed controller is needed to control the power supplied to the motor. Most of the motors available these
+days have hall sensors that enable them run smoother. They also require a complex controller to dish out
+the power. The function of the speed controller is to make sure that everything runs smoothly. The throttle,
+the motor, the battery and other such components are connected to the controller. The voltage of the
+controller must match with the battery specifications. Also, with the increased amps of the controller, its
+size also increases making its components beefy thus making them expensive. Using a high-quality
+controller enables the quieter, smoother and the most efficient operation of the electric motor. The speed 
+controller circuit is designed with four MOSFETs which provide the gate pulse required to rotate the motor
+with an increase of the throttle. 
+
+4.2 Charge Controller
+The main objective of the charge controller is to act as a battery management system (BMS) regulating the
+charging and discharging of the battery. The charge controller circuit contains a voltage regulator circuit
+which provides a regulated output voltage corresponding to the input from the solar cell. The regulated
+output is conditioned such that the output voltage suffices to charge the battery available. 
+
+5. Design Consideration
+5.1 Calculation of Angular Velocity Of Wheel
+Angular Velocity
+
+=
+
+Linear velocity / Radius of wheel
+Angular Speed = 2 2 * π * frequency
+ Frequency = Angular speed / (2 x π) rpm
+5.2 Calculation of Peak Torque Required for Moving the Vehicle
+Peak Torque = (Mass of the vehicle + Mass of
+the battery) * Acceleration due
+to gravity * Wheel Radius *
+slope%
+Power Required = Torque * Angular Velocity
+5.3 Calculation for Air Resistance
+Air Resistance = (5/100000) * (mass of vehicle) *
+(average speed)3
+5.4 Calculation for Rolling Resistance
+Rolling Resistance = 0.092 * (mass of vehicle) *
+(average speed) 
+
+5.5 Calculation for Continuous Power
+Continuous Power = Air Resistance + Rolling
+Resistance
+5.6 Calculation for Continuous Speed
+Continuous Speed = (Average speed * 60) / (2 * π *
+radius of wheel)
+5.7 Calculation for Continuous Torque Required
+Continuous Torque = (Continuous power * 60) /
+(2 * π * continuous speed)
+5.8 Battery
+5.8.1 Energy Stored in Battery
+Energy Stored = Capacity * Voltage
+5.8.2 Discharging Time of Battery
+Discharge time of
+battery (without
+power loss)
+= Energy stored in battery /
+power of load
+5.8.3 Charging Time of Battery
+Charging Time of
+battery (without
+power loss)
+ = Energy stored in battery / power
+of panel
+6. Concluding Results
+Angular velocity
+
+=
+
+59.52 rad psm
+Frequency = 568.37 rpm
+Peak torque = 22.64 Nm
+Power required = 1347.41 W
+ Air resistance = 108 W
+Rolling resistance = 220.8 W
+Continuous power = 328.8 W
+Continuous speed = 378.94 rpm
+Continuous torque = 8.29 Nm
+Energy stored = 1008 Wh
+Discharge time of
+battery
+ = 90 minutes
+Charging time of battery = 37.84 hrs
+
+7. Conclusion
+
+The presented results as well as the design for a solar powered vehicle makes the usage of these vehicles
+feasible and practicable in developing countries. The solar powered electric vehicle using a PMDC motor
+is a good choice for the Indian market. The solar powered electric vehicle stands with higher safety, high
+performance as well as remains cost efficient. Use of charge controller and speed controller in the vehicle
+improves the efficacy of power system. The presented eco-friendly solar powered electric vehicle can be a
+good choice for future generations. 

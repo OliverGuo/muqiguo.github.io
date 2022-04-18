@@ -1,0 +1,710 @@
+Robust strategic planning of dynamic wireless charging infrastructure for
+electric buses
+
+ABSTRACT
+Electromobility in public bus systems is growing rapidly and experiencing a fundamental transformation in their
+infrastructure and operations. The dilemma of limited driving range and charging time of battery electric buses
+(BEBs) hinders their adoption. A novel approach to address BEB limitations is to utilize dynamic wireless
+charging (DWC) technology that allows buses to charge while in motion. This paper aims to analyze robust
+strategic planning of DWC and BEB fleet scheduling based on a real bus network at Binghamton University. The
+problem is first formulated as a new deterministic mixed-integer linear programming model to simultaneously
+optimize both the charging planning problem and fleet scheduling problem in an integrated fashion. To address
+the uncertainty of energy demand and charging time, a robust counterpart model (RCM) has been derived. To
+increase RCM flexibility, the battery status variable is formulated in a cumulative form. Dependent and independent budget uncertainty sets have been developed to control the robustness. A sensitivity analysis has been
+conducted to study the system behavior in response to different charging types, auxiliary energy demand, depth
+of discharge, charging options at terminals, battery degradation, and electricity cost. The deterministic model
+shows that eight homogeneous BEBs are required to operate on the selected routes with a battery capacity of
+54.01 kWh and a total cost of $3,636,347. The results show that joint planning of charging infrastructure and
+fleet scheduling can save 19.2% of total cost compared to disjoint planning. The RCM results in 10 BEBs to ensure
+feasiblility against uncertainty.
+
+1. Introduction
+
+1.1. Motivation
+The battery electric bus (BEB) system is an integral part of the global
+pollution abatement system. Fuel-based public transportation is a major
+environmental concern worldwide [1]. Since the 1990s, BEBs have been
+utilized in different developed countries, and China is the leading
+country in the adoption of electromobility in public transportation [2]. It
+is estimated that almost half of the world’s total city buses will be
+replaced by BEBs in 2025 [3]. Electromobility is featured by zero
+exhaust gas emission, lower fuel cost, low vibration, low noise, and
+promising future transport [4]. Operational cost is also lower, due to
+cheaper energy, lower repair costs, and longer lifetime [5]. Many
+programs in the United States adopted BEBs, such as TIGER with a
+budget of $1.5 billion [6]; others are dedicated to developing dynamic
+wireless charging (DWC) for electric vehicles, such as the PATH project
+led by researchers at the University of California, and the SELECT program at Utah State University [7]. The first commercialized dynamic
+wireless charging (DWC) BEB system is the On-Line Electric Vehicle,
+developed by KAIST in South Korea in 2009 [8].
+The focus of this article is on DWC as a new technology in charging
+infrastructure planning and fleet scheduling of BEB systems. To facilitate
+understanding the developments and challenges of DWC planning of
+BEBs, the rest of this section is organized as follows. Section 1.2 summarizes the relative work while Section 1.3 demonstrates the literature
+review gaps and the main contributions of this study.
+
+1.2. Literature review
+The literature review is organized as follows. Section 1.2.1 illustrates
+the mechanism and importance of DWC as a promising solution. Section
+1.2.2 demonstrates the state-of-the-art research on DWC planning of
+BEBs. The robust optimization models of DWC planning of BEBs are
+shown in Section 1.2.3. Finally, Section 1.2.4 summarizes related work
+on the energy demand estimation of BEBs.
+
+1.2.1. Dynamic wireless charging mechanism and solutions
+The DWC is a new technology that allows buses to charge in motion
+using electromagnetic pads installed underneath the road [7]. The DWC
+system consists of a power supply system and a pickup system. The
+electricity passes from the grid through transmitters installed underneath the road that transfer the power wirelessly to the pickup system
+installed at the bottom of the BEB [7]. The majority of studies applied
+the OLEV DWC charger with 100-kW power at 80% efficiency and 26-cm
+air gap [9]. For the readers interested in technical details of wireless
+charging technology, refer to the following work on DWC [10] developments and wireless charging technology developments [11].
+A handful of studies have been conducted to compare DWC solutions
+to fuel-based buses or other charging technologies such as battery
+swapping and stationary charging for BEBs. The authors in Ref. [12]
+have investigated the economic feasibility of DWC compared to gasoline
+fuel buses and concluded that DWC is more cost-effective. Another case
+study for BEBs has been conducted in Michigan, USA to show the
+environmental, and cost-efficiency of wireless charging compared to
+stationary plug-in charging [13]. The results indicated that wireless
+charging could reduce bus energy demand by 0.3% and greenhouse gas
+emissions by 0.5%. Battery swapping is an early method to replace an
+empty bus’s battery with a fully charged one [14]. it is found that battery swapping infrastructure is costly in terms of construction and wide
+required land area, which is expensive and sometimes not available in
+metropolitan cities [3]. A very comprehensive study that compares the
+three charging technologies, battery swapping, stationary charging, and
+DWC has been conducted by authors in [15]. The authors have found
+that DWC technology is competitive to the other two technologies and
+more cost-effective for most of the existing bus rapid transit corridors.
+The results showed that DWC is recommended for large-scale bus fleets
+and medium or slower speed profiles such as that buses operate in the
+middle of cities.
+
+1.2.2. System optimization of DWC planning of BEBs
+Despite environmental, economic, and societal co-benefits of public
+electromobility, BEBs suffer from driving range anxiety. To this end,
+sophisticated mathematical models should be developed to optimize
+their infrastructure system management and operational system management, adhering to battery charging constraints. In the literature,
+there are four main chronological developments for optimization
+models of DWC systems of BEBs. The first development started with a
+single route system, in which one bus line is considered in the model, e.
+g., the models in [8,16–18]. However, in practice, buses operate in
+multiple-route systems, which consist of overlapped bus lines. This type
+of challenge leads to developing new multiple-route optimization
+models as the second chronological development, e.g., the models in
+[19–21]. The above-mentioned studies failed to present at least one
+single depot system; therefore, Ref. [22] introduced the first single depot
+optimization model for DWC planning of BEBs as the third chronological
+development in DWC planning of BEBs.
+To this end, all the above-mentioned studies assumed a predefined
+fleet size as an input to the DWC model. However, practically, this
+assumption is not valid because it does not incorporate the charging
+time at terminals, which could cause a delay in normal bus operation.
+Therefore, incorporating charging time at terminals to determine the
+optimal bus fleet is crucial for valid and feasible solutions as the fourth
+chronological development. In 2020, authors in Ref. [22] have developed a nonlinear bi-level model to optimize both infrastructure DWC
+planning and fleet scheduling problem. The upper-level model was used
+to determine the optimal battery size, the number of DWC facilities
+required, and the optimal number of inverters in the system. The second
+model used the battery size as an input to calculate the charging time at
+terminals, then optimize the number of BEBs required in the system.
+Despite the superiority of this bi-level model, it has some limitations.
+First, the model is nonlinear, which hinders its application to real largescale bus network systems. Secondly, the model is not able to capture the
+interrelationship among the battery size, charging time, and fleet size.
+As a result, combining the DWC model and bus fleet schedule model in
+one model is a significant contribution in this area. In 2021, in our
+previous work, we have developed the first mixed-integer linear programming (MILP) model that simultaneously optimizes the DWC model
+and fleet schedule model in an integrated fashion [23]. Although the
+superiority of this model, it is deterministic approach limited its application to real-world bus network systems. Therefore, developing a
+robust model that handles the uncertainty caused by traffic jams, bad
+weather, and passenger demand is inevitable in the public bus transportation systems.
+
+1.2.3. Robust optimization solutions for DWC planning of BEBs
+Robust optimization (RO) is a powerful risk management method
+with high robustness and a low computational burden. RO has wide
+applications in renewable energy integration to electric vehicles [24],
+electric vehicle charging [25], bus scheduling [26], and supply chain
+[27]. In the domain of planning, a deterministic solution could turn out
+to be infeasible or suboptimal [28]. Therefore, RO is practically required
+for the DWC planning of BEBs. Unlike stochastic optimization models,
+RO does not require probability distribution [29]. Additionally, the
+amount of risk can be controlled in RO, which is not possible for other
+approaches. RO is popular due to its computational tractability for many
+classes of uncertainty sets and problem types [30]. Unlike RO, stochastic
+approaches suffer from high execution burdens. To understand the
+theory beyond robust optimization, we refer to the works in [30–32].
+Studies on RO for DWC planning of BEBs are nascent. To the best of
+the authors’ knowledge, there is only one study that investigated a
+robust model of BEB systems that considers the DWC infrastructure
+planning [20].
+
+1.2.4. Electric bus energy demand estimation
+Energy demand estimation of BEBs is one of the main challenges in
+practice due to the complexity of a variety of factors involved. For
+example, bus speed profile, battery size, BEB weight, friction, route
+slope, lights, and air condition (AC). A practical study in Singapore for
+large-scale bus networks found out that heterogeneous BEB fleet size
+leads to a variety of energy demand, which makes the existing mathematical models inaccurate [33]. The results indicate that the energy
+demand is estimated to be in the range of [1.6, 2.6] kWh per km. The
+majority of studies conducted on DWC planning applied the analytical
+model in [34]. However, the energy demand efficiency is varied from
+one bus type to another. Therefore, validating the model for some bus
+types and publish it as a benchmark is very important in the DWC
+planning of BEBs. In 2021, using a real-data bus network collection,
+authors in [35] have built a benchmark of energy demand estimation
+and efficiency for four bus brands, Gillig LCC 29, BYD, Nova Bus L920,
+and New Flyer XE40. In this study, the BYD bus type is chosen for the
+proposed case study.
+
+1.3. Contributions
+This section provides a summary of the literature, its limitations, and
+the main contributions of this study. Although the previous studies bear
+remarkable contributions, they have some downsides as listed below:
+a. Single bus line models presented in [8,16-18] cannot represent realworld bus networks with multiple bus lines; therefore, they are
+practically limited.
+b. Multiple-route models presented in [19-21] have some downsides.
+First, the depot routes are excluded. Thus, if the depot route is longer
+than one of the service routes, the assigned bus could not be able to
+return to the depot. Second, the terminal infrastructure cost is
+ignored despite that it is an integral part of the system cost. Third,
+Ref. [19] have designed a uniform battery size for whole BEBs in the
+system, while Ref. [20] and Ref. [21] have designed a route-specific
+battery approach, in which different bus lines could have different
+optimal battery sizes. However, there was a lack of scientific evidence to show which one is more cost-effective in practice.
+c. The models in Ref. [22] and Ref. [23] were able to address all previous limitations in (a) and (b). Results in Ref. [22] showed that the
+uniform battery size approach is more cost-effective than the routespecific battery size approach due to the operating system that follows joint scheduling, which results in less number of BEBs compared
+to the disjoint scheduling system. However, these studies failed to
+capture the uncertainty that could be caused by traffic jams, bad
+weather, or high service demand.
+d. Although authors in Ref. [20] developed a RO model; however, it has
+some downsides. First, the fleet size is assumed to be constant, which
+is practically invalid. Second, the model disregarded the dependency
+among energy demand and travel time parameters. Third, to obtain a
+tractable mathematical RO formulation, Ref. [20] used conic optimization formulation and affine function, which are computationally
+expensive. Fourth, unlike the route-specific battery approach used in
+Ref. [20], the presented model is a uniform battery approach, which
+is more cost-effective in real bus network systems. 
+
+Table 1 compares the proposed deterministic model with published
+deterministic models. Since single-route models are outage, they have
+been excluded from the comparison. Unlike the model in Ref. [23], the
+proposed model’s structure is a segment-based model with a cumulative
+battery status formulation. This new model design is more flexible for
+deriving the robust counterpart model (RCM) due to its cumulative
+battery status form that assists in reducing the conservatism level of the
+system. Furthermore, more sensitive analysis works were missing in the
+literature such as investigating the impact of auxiliary energy demand,
+e.g., bus lights, air-conditioning, radio, heater, and other inner electric
+devices’ energy, as well as electricity cost, avoidable carbon dioxide
+amount, and model scalability. The model scalability refers to testing the
+model with any potential change in the future. For example, service
+demand increment and adding new routes to the existing system.
+The presented RO model in this study aims to fulfill the gap of the RO
+models in the literature. Due to the lack of studies on RO for BEBs
+considering DWC technology, Table 2 compares the presented RO model
+and the only available model in Ref. [20]. This study aims to fulfill the
+above-mentioned gaps by developing a robust optimization model that
+simultaneously optimizes the DWC model and fleet schedule model in
+one combined model. Unlike the model in Ref. [20], the proposed model
+considers the relationship between energy demand and travel time parameters. Additionally, the conic optimization formulation and affine
+function in Ref. [20] resulted in a complex system with tremendous
+number of constraints and variables. The proposed model can transform
+the intractable RO model into a tractable one using the duality principle
+without the need for conic optimization formulation nor affine function.
+The main contributions of this paper are summarized below: 
+
+a. A novel MILP model has been derived to simultaneously optimize the
+battery capacity, the location and number of transmitters, the
+number of inverters, and the number of BEBs required in the system.
+b. Based on the deterministic model, the RO has been derived to
+address uncertainty in charging time and energy demand. To the best
+of authors’ knowledge, this is the first study to derive a RO model to
+optimize the DWC planning and bus fleet schedule of BEBs in an
+integrated fashion.
+c. Dependent and independent budget uncertainty sets were derived
+and evaluated by the proposed case study.
+d. The proposed real-world case study results demonstrate the effectiveness of the deterministic model and the RO model.
+The remaining sections of this paper are organized as follows: Section 2 demonstrates the problem formulation of the deterministic model,
+while Section 3 shows the presented robust model. Section 4 illustrates
+the case study. Results of both the deterministic model and the robust
+model are illustrated in Section 5. To further analyze the presented
+system, Section 6 discusses the main findings. Section 7 shows the
+conclusions and future work.
+
+2. Deterministic model
+To meet transit agencies’ targets, this section represents the deterministic model to minimize the system cost considering charging
+infrastructure planning and fleet scheduling problems. Three components in the system play an important role in the decision variables,
+energy consumption, charging rate, and fleet size. More energy consumption requires either a larger battery or more dynamic charging
+transmitters. If the charging rate is high, the DWC will be dominant,
+while in a lower charging rate, the model seeks a larger battery to meet
+power demand. Also, it has been proven that a larger fleet size system
+requires a smaller battery size and more transmitters because each bus
+has one battery; therefore more buses indicate the need for more batteries and higher cost [22].
+The proposed model consists of two models, the DWC planning
+model and the bus fleet scheduling model integrated into one combined
+model. The DWC planning model’s job is to secure the routes such that
+buses operate normally and return to the base station without running
+out of power. In the base station, there is always a charging point, so
+buses can charge before starting any new trip. Therefore, regardless of
+the number of trips, the system is secured to complete any trip safely.
+The optimal battery size will determine charging time in the terminal,
+which in turn determines the optimal number of BEBs required in the
+system. 
+
+2.1. Model assumptions
+The assumptions of the presented model are listed below:
+a) This model is designed for a homogeneous BEB fleet size.
+b) In a circle service loop, the base station is the departure point for
+BEBs.
+c) Buses operate on predefined bus lines.
+2.2. Problem formulation
+To understand the system configuration, each route is divided into
+congruent segments; every single segment is a decision variable to install
+a dynamic charging facility or not; see Fig. 1. The number of installed
+charging facilities represents the number of inverters required in the
+system (each facility needs one inverter; one facility can have a sequence
+of chargeable segments).
+Let denotes the set of all routes in the system. Let S be the set of all
+segments in the system and Sr ∈ S be the set of all segments on route r ∈
+R. Let S− be the set of segments that have two or more incoming adjacent segments, S− ⫅S. Let I denotes the set of service trip nodes. Let u
+denotes the depot node. It is assumed that each service trip has the
+connection possibility with the depot node u. Let U = (IUu) be the set of
+all trip nodes in the network. Table 3 illustrates the model decision
+variables while parameters and sets are summarized in Appendix A.
+The proposed optimization model’s constraints can be divided into
+three parts: inverter constraints (1)–(6), battery status constraints (7)–
+(12), and scheduling constraints (13)–(18). The first segment on the base
+station i is represented by si
+b and the first segment on the depot j is
+represented by s
+j
+d. Let Sn be the set of all last segments of all routes in the
+system indexed by ̂sr. Let Ps
+r denotes the set of all traversed segments
+from the beginning to the segment s ∈ Sr. 
+
+The first constraint ensures that an inverter and charging facility
+should be available at the base station and the depot, respectively.
+Constraint (2) makes sure that there is only one inverter for each
+charging facility (sequence of connected chargeable segments).
+Constraint (2) may overestimate the inverters’ number in the system in
+the case of segments’ intersections along different routes. Therefore,
+constraints (3) through (5) are designed to address this overestimating
+issue. Constraint (3) ensures that if there is no facility installed on
+segment s ∈ S− , there will be no inverter required. Constraint (4) eliminates all inverters of incoming segments of a segment s ∈ S− . To have at
+least one inverter for those incoming segments of s ∈ S− and s itself,
+constraint (5) is set up. zs,s = 1 if s&s are adjacent segments; zs,s = 0
+otherwise. To preserve the inverter capacity limit, constraint (6) is
+designed to ensure safe charging for all BEBs within the inverter capacity
+based on the distance that can be covered by the inverter charging
+capability.
+To prolong battery life, constraints (7) and (8) determine the lower
+and upper battery storage and 0 < β < α < 1. While BEB operates along
+the way on the represented segments, its battery status will be updated.
+The battery status on any segment depends on the battery status on the
+previous segment in addition to consumed energy and potential charge
+on the current segment. Constraint (9) ensures a full charge in the
+terminals. The battery status updates are represented in constraint (10)
+in a cumulative form. Constraint (11) prevents overcharging and
+constraint (12) prevents over-discharging.
+To compute charging time in the terminals, we need to know the
+status of the battery when a BEB departs and arrives. If the optimal
+battery is 100 kWh, β = 20%,α = 80%, and the bus departs with a full
+charge of 80 kWh, returns with 20 kWh, then the required amount to be
+charged is 60 kWh. Although the proposed model is designed to have a
+uniform optimal battery size in a flexible joint scheduling approach,
+some routes are longer than others; therefore, some buses could return
+with more power than the lower limit. We consider this situation in Eq.
+(13), in which timing is given in minutes. TTi is the total early time of
+trip i that includes the arrival time (t
+e
+i ), charging time (hr,i), and safety
+margin travel time ST. Therefore, any next trip j after a trip i should be
+later than the total time of trip i as demonstrated in constraint (14).
+Constraint (15) ensures that every trip i is connected to one successor
+trip j. In other words, there are multiple feasible solutions to connect
+trips i and j, the model should choose only one to be connected by one
+bus. Constraint (16) ensures that each trip j is connected to one predecessor trip i; therefore, no two different buses can mistakenly be assigned
+to the same trip j. Constraint (17) prevents a recurrence; once a bus is
+finished trip i, it is not rational to redo it again. We sorted trips based on
+the compound sort by departure and arrival. Constraint (18) eliminates
+infeasible solutions.
+In the literature, the BEB battery is too heavy [13]; therefore, battery
+weight should be explicitly considered in the model. Because the battery
+size is unknown (decision variable), we consider the battery weight as a
+variable in the energy consumption model. Let the battery weight, w =
+wc
+r + wb
+r , bus weight, and variable battery weight, respectively. Let b
+denotes the weight of battery per unit capacity (kg/kWh), wb
+r = b⋅emax
+[34]. The presented energy estimation model in Ref. [22] has been
+developed to consider the variable battery weight and constant BEB
+weight as follows:
+
+The above-presented model is nonlinear due to the nonlinear
+objective function term (
+∑
+u,j∈Uϕu,jCbat∙emax) and nonlinear constraint
+(14). To transfer the above nonlinear model into a MILP model, we
+introduce an auxiliary variable ωu,j, and a big enough constant G as
+follows: 
+
+(25). When trip i is connected to trip j, ϕi,j = 1; therefore constraint (26)
+is valid for feasible trips. When trips i and j are disconnected, then the
+intersection of (26) and (27) is t
+s
+j ≥ 0, valid constraint. Based on the
+above discussion, the objective function (23) can be rewritten as follows:
+
+3. Robust reformulation
+Energy consumption and charging time parameters are inherently
+uncertain parameters. Therefore, the deterministic model solution could
+be suboptimal or infeasible. To this end, energy consumption qc
+r,s and bus
+charging time tr,s parameters are assumed to be uncertain in the robust
+model. The uncertainty parameters reside in interval sets with certain
+lower and upper bounds. To control the level of conservatism, we propose a budget uncertainty set that limits the total number of uncertainty
+parameters that can take their worst-case realization at the same time.
+Let qc
+r,s and tr,s denote the nominal values and q
+̂c
+r,s = α⋅qc
+r,s and t
+̂r,s = β⋅tr,s
+denote the maximum deviation of qc
+r,s and tr,s, respectively, and 0 ≤ α,
+β ≤ 1. The actual realization of qc
+r,s and tr,s yield the following equations: 
+
+The battery status variable (er,s) is significantly influenced by uncertainty caused by energy consumption and potential charging time.
+The cumulative formulation in (10) assists to decrease the level of
+conservatism because RO is a constraint-wise approach. Constraint (10)
+can be eliminated by substituting its right-hand side, er,s, into the other
+corresponding constraints. Likewise, constraint (13) is substituted into
+constraint (26). Hence, constraints (11), (12), and (26) can be rewritten
+as follows: 
+
+4. Numerical study
+To show the effectiveness of the proposed deterministic model and
+RCM, a real-world case study is conducted for the off-campus college
+transportation system at Binghamton University, New York, United
+States. The case study consists of nine roads that include the common
+roads (depot-base station-depot). The methodology used for the proposed case study is shown in Fig. 2. The transportation center at Binghamton university provided the related data. The numerical parameters
+of the charging modeling and bus fleet scheduling modeling are summarized below.
+4.1. DWC parameters
+DWC equipment lifespan is assumed to be 30 years [22]. Lithium-ion
+battery prices dropped in the last couple of years, especially in 2019 and
+2020; bus battery price in China is $100/kWh [36]. Every battery in an
+electric car sold in the U.S. comes with a warranty that lasts for a minimum of eight years or up to 100,000 miles [37]. Electric car battery life
+is assumed to be eight years. It is assumed that the route slop is zero
+because the selected bus lines are almost flat. The BEB of type BYD k9
+costs an average of US $360,438 [38]. The maximum facility length is
+1000 m as the maximum inverter capacity [17]. The commonly used
+battery storage upper limit is 80%, while the lower limit varies from one
+study to another based on the robustness level. For instance, [16] and
+[22] used a 20% battery lower limit value, while [20] and [17] used
+50%. It is known that a 50% battery lower limit is very costly with a 30%
+battery utilization, while a 20% value is not robust enough due to traffic
+and unexpected route conditions; therefore, the battery lower limit ratio 
+is set up at 40%. The energy consumption efficiency rate estimation is
+provided by [35]. Table 4 illustrates the DWC parameters. 
+
+4.2. Scheduling parameters
+Each bus line has a predefined timetable designed to meet service
+demand. Buses spend some layover time at terminals for charging purposes, which leads to a service delay. To solve this problem, the original
+timetable is adjusted to include this extra charging time while preserving the original departure and arrival times to keep customers satisfied.
+Rationally speaking, this strategy may require extra BEBs to meet the
+adjusted timetable depending on the given timetable. Table 5 shows the
+timetable for the seven selected routes. Bus stop stations along the route
+are good candidates for charging due to the dwelling time to pick up/
+drop passengers. There are 70 on-street bus stops in the case study that
+assume a dwelling time of 50 s for boarding/alighting passengers. 
+
+4.3. Case study
+Each route is divided into large pieces of different lengths for visualization purposes based on the geographical location, each piece of that
+route is further divided into congruent segments. The total distance in
+this case study is 47,599 m (~47.5 km), each segment is 100 m. Table 6
+shows the route segmentation process. Fig. 3 represents the real map and
+the corresponding route segmentation network. This case study represents a single depot transportation system with two base stations.
+
+5. Results
+This section concentrates on interpreting the obtained results from
+the deterministic model and the RCM. For convenience, Section 5.1 illustrates the deterministic model results while the RCM results are
+demonstrated in Section 5.2. Gurobi Optimizer version 9.0.3 in Julia
+language and Jupyter interface are used for implementation. The computer used is Intel(R) Core (TM) i7-8700 CPU, 32 GB RAM.
+
+5.1. Deterministic model results
+The model consists of 1,395 continuous variables and 34,503 binary
+variables, which represent nine routes and 182 trips. It takes 174 s to get
+the results with a 0.0000% optimality gap. The obtained results show
+that only eight homogenous BEBs are required with a total cost of
+$3,635,339, see Table 7. Fig. 4 illustrates the optimal locations of the
+transmitters in the system. It is observed that segment 109 on the piece/
+block 21 is chosen for installing the DWC facility before the bus returns
+to the base station to maintain discharging limit within the given range.
+Interestingly, this segment is an intermediate bus stop station for students who alight in front of the School of Management at Binghamton
+University to provide us with a sense of practical results. Fig. 5 shows the
+battery profiles of route 1 and route 2, the charging status near the end
+of the routes represents segment 109 on the block 21 (School of Management stop station), which is shared by the first four routes in the
+system. Charging times at the terminals are shown in Fig. 6. Charging
+time varies based on the remained power at arrival. Route 3 has high
+energy demand, is long-distance, and has no dynamic charging along the
+route; therefore, it requires a longer charging time at the base station.
+However, although route 4 is the longest route with the highest energy
+demand, the available dynamic charging on its bus line increased the
+battery charging status, so it does require less charging time at the terminal. Table 8 assists to understand the system energy demand and
+distance on route level.
+
+5.2. RCM results
+The robust counterpart model consists of additional parameters to
+calibrate the robustness level. More precisely, 0 ≤ α, β ≤ 1 are used to
+measure how much the energy demand and charging time deviate from
+the nominal values. Higher αandβ values lead to higher robustness levels
+and vice versa. Γr,s parameter is used to measure the conservatism level,
+which determines a predefined number of segments to take their worstcase scenario. To measure the model’s response to deviation, the default
+parameters are set up at α = β = 0.1, as reported in the literature [20],
+and only half of the segments take their worst-case scenario. Dependent
+and independent budget uncertainty sets are discussed below.
+
+5.2.1. Dependent budget uncertainty set
+The model consists of 308,680 continuous variables and 34,503 binary variables. The executive time is 1,257 s. Table 9 shows the RCM
+results with the default of 10% deviation of both the energy demand and
+charging time. Half of the segments will take their worst-case scenario as
+a controller of conservativeness. The robust model results indicate that
+only the terminal chargers are chosen (station 1, station 2, depot) as
+chargers because they are hard constraints, while other possible
+locations are not picked up by the model due to the uncertainty that
+requires a larger battery size at this specific conditions.
+
+5.2.2. Independent budget uncertainty set
+In the real-world public transportation system, not all segments on
+the bus line take their worst-case scenario. Furthermore, there could be
+more energy demand due to traffic jams but good charging time when
+the BEB waits in the traffic jam on chargeable segments. Therefore, the
+proposed independent budget uncertainty set of the energy demand and
+potential charging time is established to address this issue. For validation purposes, with setting deviation at zero, the robust model result
+matches the deterministic model result. The independent uncertainty set
+provides more flexibility to test different conservativeness level scenarios for energy demand and potential charging time apart. For
+instance, Table 10 shows the RCM results when energy demand and
+charging time deviates by 10%, while only 20% of the segments take
+their worst-case scenario for the charging time and 80% of the segments
+take their worst-case scenario for the energy demand. It is noteworthy to
+know that the model picks up two locations to install the DWC facilities
+on the selected routes, in addition to, the terminal. Due to the less
+expensive price of the battery and roughly higher DWC facility price, the
+model increases the battery size and reduces the DWC facility numbers
+with the abovementioned settings.
+On the other hand, the results indicated that the energy demand
+deviation impact is higher than its partner charging time parameter due
+to the amount of actual power that transfers in a second. Let 20% of the
+segments take their worst-case scenario for the energy demand and 80%
+of the segments take their worst-case scenario for the charging time
+parameter; the optimal battery size is reduced to 58.79 kWh with a total
+cost of $4,019,540. Besides, by increasing the supply rate from 80-kW to
+170-kw and (20% of segments take worst-case scenario for the energy
+demand, 80% for the charging time), the obtained results indicate a
+reduction in the battery size and charging time at the terminals, which
+leads to a remarkable reduction in the required fleet size (eight EBs) and
+installation of seven DWC facilities for a total cost of $3,303,767. This
+result indicates that a larger charging supply rate leads to overall cost
+reduction and smaller battery sizes.
+
+5.3. Sensitivity analysis
+In this section, a variety of analyses will be conducted to understand
+the system behavior response to different dynamic chargers with
+different energy supply rates, auxiliary energy demand estimation,
+depth of discharge (DOD), charging flexibility, battery degradation, and
+electricity cost. The analysis is conducted on the deterministic model to
+demonstrate interrelationships among battery size, fleet size, cable
+length, and system cost.
+
+5.3.1. Different charging rates
+In practice, it is important to understand the influence of different
+charging rates on system design levels. In dynamic charging system, it
+could reduce the number of transmitters required or reduce the battery
+size. Table 11 illustrates three dynamic chargers with the associated
+mechanical properties. Table 12 shows that higher charging power leads
+to a lower cost, a lower DWC facility length, and could increase the
+battery size as referred to in the PRIMOVE Bombardier charger because
+battery price is generally less expensive than a DWC facility at this
+system. 
+
+5.3.2. Auxiliary energy demand (AED)
+Auxiliary energy demand represents the energy demand required for
+air conditioning, heating, door switch, light, and any added electric
+device inside the BEB. Estimating the AED depends on the bus type, size,
+road conditions, weather, and traffic jam. For instance, in the winter
+semester, a heater is required, and in summer air conditioning is
+required. Also, energy demand in a traffic jam is different than in normal
+uncongested places. The AED is assumed to be 20% of the total energy
+demand as reported out by [40]. Table 13 compares the system decision
+variable results with and without the AED of 20%. Unlike previous
+studies that disregarded the AED rate in the planning stage, this model
+showed that involving the AED rate in the planning stage has a significant impact on the system design level. Therefore, it is recommended to
+include the AED parameter to avoid any potential infeasibility to the
+system.
+
+5.3.3. Depth of discharge (DOD)
+Depth of discharge is the complement of the state of charge (SOC),
+which is an important parameter to estimate battery lifetime. For
+example, if SOC is 60%, then the DOD is 40%. In practice, some bus lines
+are shorter than others, so some of the BEBs will return to the base
+station with extra power. Therefore, for different bus lines, DOD could
+be different as illustrated in Table 14. The lower DOD rate is a good
+indicator for battery lifetime; therefore, it is advised to keep DOD under
+80%.
+
+5.3.4. Charging flexibility
+Most of the abovementioned studies assume that buses should depart
+with a full battery charge for a new trip. This raises the question of what
+if we create a flexible model such that a BEB has the flexibility of chosen
+full or partial charge that aligns with the optimal solution? Table 15
+illustrates the results of the flexible model compared to the proposed
+deterministic model. Since the result of the flexible model matches the
+proposed model, the difference is in the SOC level at the departure and
+arrival, Table 16 shows the SOC and DOD levels of the flexible model. By
+comparing Tables 14,15, and 16, it is practically recommended to use
+the default proposed model due to extra power saved at arrival.
+
+5.3.5. Battery degradation
+Battery degradation is a major problem in electrified public transportation systems. Estimating battery lifetime is a complicated process
+because it depends on different correlated factors, such as temperature,
+high current, fast/slow charging, environmental conditions, operational
+hours, DOD, and the quality of chemical elements used to manufacture
+the battery. The first study that attempted to model battery degradation
+of BEB dynamic charging system is [17], which uses a nonlinear
+regression model. However, there was not enough information about the
+accuracy of this regression model. Also, the followed studies discarded
+adding the degradation model due to the complexity that resulted from
+the integration of the degradation model with the DWC optimization
+model [7]. Batteries are replaced if their capacity drops below 80% of
+the initial value or their internal resistances doubled [41]. Therefore, if
+the battery capacity drops below 80% within the warranty time, the
+battery can be replaced for free. The problem will be if the battery capacity drops by less than 20%. In this case, to ensure normal BEB system
+operation, the battery capacity should be adjusted against this degradation. Table 17 shows the results when the battery capacity size declines by 20% compared to the default model. The results show that a
+larger battery size of 68.09 kWh is required with more inverters and
+transmitters when battery degradation is considered in the system.
+
+5.3.6. Electricity cost
+This section demonstrates mathematical formulations and results of
+incorporating the associated electricity cost to the objective function
+through consideration of the service frequency for each bus line. Let Ec
+be the electricity cost per kWh, Er denotes the total energy demand of
+bus line r per trip, Fr be the service frequency (the number of trips) on
+bus line r per day, DN be the number of days in service, and EC denotes
+the total electricity cost, then the total electricity cost yields the
+following. 
+The average electricity price in New York is 20 cents per kWh [42].
+Assume that buses work 360 days per year, Table 18 illustrates the results. Interestingly, the total electricity cost does not affect the system
+decision variables because the system is already optimized in terms of
+required energy demand and charging time. It is worth knowing that
+based on the standard online calculator [43] (New Zealand government), in 30 years this BEB system can avoid 4044.54 tons of carbon
+dioxide with a total energy demand of 31.43 GWh. 
+
+6. Discussion
+Existing models in the literature are not able to capture the interrelationship among fleet size, battery size, and charging time with potential
+charging and discharging uncertainties. Most studies assume a predefined
+fleet size as an input parameter for DWC modeling [8,16–21]. However,
+assuming a fixed fleet size disregarding the charging time in the terminals
+may lead to an infeasible solution. To address this issue, our model integrates both the fleet size and DWC model in one combined model to
+capture this interrelation. Unlike the presented deterministic model (arcs
+and segments) in Ref. [23], our model structure is based on segments only
+in a cumulative battery status form to facilitate deriving the robust model.
+By tracing back, the remaining power for some BEBs that have shorter bus
+lines or consumed less than other bus lines can be used to reduce charging
+time in the terminals or to resolve potential extra energy consumption due
+to traffic jams. Unlike previous models, robustness, electricity cost, and
+environmental benefit are considered.
+The deterministic model results show that eight homogeneous BEBs are
+required to operate on the selected routes with a battery capacity of 54.01
+kWh and a total cost of $3,636,347 that considers the bus purchase cost. The
+robust model shows that 10 BEBs are required with a battery size of 62.03
+kWh and a total cost of $3,972,512. The price of robustness is equivalent to a
+9.2% increase in the total cost; nevertheless, the network becomes resilient
+against the uncertainties in the problem data that may cause severe infeasibilities for the deterministic plan. The independent budget uncertainty
+set provides flexible robust modeling with different levels of conservatism for
+charging time and energy demand. To understand the system behavior in
+response to different dynamic wireless chargers, AED, DOD, charging options (full or partial), battery degradation, electricity cost, and avoidable
+amounts of carbon dioxide, a sensitivity analysis is conducted. Based on the
+sensitivity analysis, AED can change the entire decision variables in the
+system. For instance, considering the AED, which is an extra 20% of the total
+energy demand, results in more DWC facilities and inverters with extra costs
+of $279,670 and a slightly smaller battery size. The results show that in 30
+years, this BEB system can avoid 4044.54 tons of carbon dioxide with a total
+energy demand of 31.43 GWh.
+To show the superiority of the joint charging and scheduling planning, the corresponding disjoint planning resulted in a higher cost of
+$4,332,950 with 11 BEBs compared to only 8 BEBs in the current system. This study shows that planning the infrastructure charging and fleet
+scheduling together can save 19.2% of the total cost. In order to show
+the superiority of the presented robust model with the budget uncertainty set, Table 19 shows the comparison between the robust optimization with the dpendent budget uncertainty set and the corresponding
+deterministic model when energy demand and charging time parameters deviate by 10%. The results show that the robust model is less
+conservative and leads to a lower cost compared to the corresponding
+conservative determinstic model because only half of segemnts take
+their worst-case scenarios in the robust model.
+Furthermore, the technical viability and scalability have been tested
+by extending the current model to two different scenarios. Fake route 10
+has been added to present the extra involved distance. Route 10 shared
+part of its path with route 2 and route 7.
+Scenario 1: Total distance of 60,000 m, divided into congruent
+segments with 150 m each. The total distance of route 10 in Scenario 1 is
+19,636 m. It is assumed that the bus operates every 15 min with a trip
+length time of half an hour. Bus operation hours start at 7:40 am and
+finish at 3:25 pm.
+Scenario 2: Total distance of 80,000 m, divided into congruent
+segments with 80 m each. The total distance of route 10 in Scenario 2 is
+39,636 m. It is assumed that the bus operates every 30 min with a trip
+length time of one hour. Bus operation hours start at 7:40 am and finish
+at 11:10 pm.
+Table 20 compares the base model results with its extensions.
+Interesting conclusions can be drawn from this result. First, the model
+seeks the optimal solution by considering the new joint route and
+associated timetables. Therefore, not only fleet size will increase, but the
+whole decision variables could change.
+Fig. 7 shows that systems with larger battery sizes incline to consume
+more energy than systems with smaller battery sizes. Also, since the new
+added long route in Scenario 2 has no stop stations, it requires a larger
+battery to arrive safely to the terminal. Therefore, bus stop statons along
+the route can assist the system to install more DWC facilities, reduce the
+battery size, and reduce the total cost.
+To invistigate the impact of the BEB fleet size on the optimization system,
+fleet size was varied from 8 to 56 with an eight BEB increment. The results
+show that when the fleet size increases, the battery size decreases, and cable
+length increases as shown in Fig. 8. As a result, dynamic charging technology
+is more cost-effective with large bus fleet sizes than small fleets.
+
+7. Conclusions
+Electrification of the city public transport system is one of the most
+prominent modern projects to mitigate pollution and improve public health
+systems. However, city public BEB systems operate almost all day, which
+requires frequent charging to maintain a normal operation. To address
+driving range anxiety, DWC is a cost-effective technology to not only reduce
+the battery size and system cost but a convenient method to charge BEBs in
+motion without the need for physical connection. Unlike previous studies,
+which addresses one side of the optimization system such as DWC planning
+without bus fleet size modeling, the presented model optimizes bus fleet size
+and DWC model in an integrated form. Despite the complexity of the proposed nonlinear model, the corresponding linear model has been derived. To
+evaluate the effectiveness of the proposed model, a real-world transportation
+case study at Binghamton University was conducted. Essentially, the proposed model is shown to be superior to the existing models with different
+features, in particular, the robustness and the novel integration of the fleet
+size model and DWC planning model. The proposed two scenario extensions
+show the flexibility and scalability of the presented model. Also, the results
+indicated that DWC is more cost-effective with larger bus fleet sizes than
+small fleets.
+Many future studies can be drawn from this study. The proposed
+single depot model can be extended to the multiple depot model. Also,
+due to the complexity of the model, it is recommended to propose either
+an efficient exact algorithm such as column generation or a heuristic
+algorithm to handle large-scale case studies. The heterogenous bus fleet
+is another topic for future work.
+
+CRediT authorship contribution statement
+Yaseen Alwesabi: Methodology, Software, Data curation, Writing –
+original draft. Farzad Avishan: Methodology. ˙
+Ihsan Yanıkoglu: ˘ Validation, Writing – review & editing. Zhaocai Liu: Writing – review &
+editing. Yong Wang: Conceptualization, Writing – review & editing,
+Supervision, Project administration. 
+
+
+
+

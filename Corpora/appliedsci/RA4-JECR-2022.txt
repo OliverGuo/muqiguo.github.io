@@ -1,0 +1,1603 @@
+<heading>
+Title: Effects of Game-Based Learning on Students’ Achievement in Science: A Meta-Analysis
+Author: Hao Lei, Ming Ming Chiu, Danyi Wang, Chenxin Wang, and Tongwei Xie
+Journal: Journal of Educational Computing Research
+Year: 2022
+</heading>
+
+Abstract
+This meta-analysis examines the effects of game-based learning (GBL), compared with traditional instructional methods, on the science achievement of students, ranging from primary school to university. Results from the 41 primary studies of 6256 participants showed heterogeneity among effect sizes. The random effects model results showed a positive effect (g = .705, 95% CI = [.603, .807], p < .001), suggesting that students
+learned substantially more via GBL than traditional instruction. Additionally, moderation analysis found that the link between GBL and science achievement was stronger (a) among students in Eastern countries than Western countries; (b) among primary school students than undergraduates, junior or senior secondary school students; (c) on quizzes, ﬁnal exams, and course grades than assignment scores; (d) for interventions between 4 hours and 1 week, smaller for those less than 4 hours, and smallest for those over 1 week; and (e) slightly in later publication years.
+2
+Introduction
+Game-based learning (GBL) combines subgoals, autonomy, feedback, and multiple iterations to motivate students to learn (Burke, 2014), often resulting in higher academic achievement than otherwise (as shown in meta-analyses, e.g., Duan, 2017; Karakoç et al., 2020). We propose that GBL’s processes especially ﬁt science inquiry processes, which might increase GBL’s effect on science achievement. Furthermore, societal, demographic, and assessment factors might moderate the link between GBL and science achievement. We test our theoretical model via a meta-analysis of 41 studies (60 effect sizes) of GBL and science achievement.
+
+Game-Based Learning Processes
+GBL processes involve specifying an overall goal, subgoals, student autonomy, immediate feedback, and multiple iterations (Burke, 2014). First, students have a simple overall goal (e.g., ﬁnd out “who can vote in United States (US) elections?”; selfdetermination theory; Ryan & Deci, 2017). Second, educators divide this overall goal into many smaller subgoals (Mayer, 2014): (a) can foreigners vote? (b) can children vote? (c) can white women vote? (d) can racial minorities vote? and so on. Ideally, achieving earlier easier subgoals (e.g., can foreigners vote?) aids attainment of later, more challenging goals (can racial minorities vote?). Third, students have the freedom (autonomy) to choose actions to achieve their subgoals and overall goal (e.g., read textbook, search the internet, etc.; Ryan & Deci, 2017). Fourth, students receive an immediate evaluation of their success or failure from a computer program, teacher, or knowledgeable peer (immediate feedback; Burke, 2014). Early successes (e.g., “foreigners can’t vote” → Correct) increase student conﬁdence to proceed with harder subgoals. Meanwhile failures provide information (“white women could always vote” → Incorrect) that a student can use to try again in later iterations to improve their subsequent likelihood of success (Yan & Brown, 2017). These game elements encourage students to persist through failure to eventually succeed and to learn (Hanus & Fox, 2015). All of these GBL processes can increase student learning outcomes (e.g., meta-analysis by Karakoç et al., 2020).
+
+Game-Based Learning Processes Fit Science Inquiry Processes
+While educators can organize any subject matter content (e.g., US history) to adopt GBL, we propose that science inquiry processes (Fleer, 2015) ﬁt GBL processes well. So this ﬁt might (a) increase student understanding of science inquiry processes (b) facilitate GBL design for science lessons, or (c) increase student autonomy in science GBL—all of which might yield a stronger link between science GBL and science achievement. Science inquiry entails specifying a question, making predictions/hypotheses, gathering data, analyzing them, and drawing conclusions (Fleer, 2015). A student or a teacher specifying a question (e.g., why do some things ﬂoat in water (and others sink)?) corresponds to the overall goal. Then, a student can autonomously specify predictions/subgoals (e.g., light objects ﬂoat? hollow objects ﬂoat?). Furthermore, a student can choose which objects to drop into water to test predictions. Unlike many other academic subjects, such a science experiment yields immediate feedback without adult evaluations (e.g., a paper clip sinks), helping this student draw a conclusion (e.g., not all light objects ﬂoat). Then, students conduct further experiments with different objects (multiple iterations). This ﬁt between science inquiry and GBL might facilitate (a) student understanding of science inquiry processes or (b) educators’ design of science GBL to yield more effective science GBL and greater science achievement. Furthermore, both GBL and science inquiry reinforce greater student autonomy during many of these processes, with less teacher assistance than in other academic subjects. Speciﬁcally, a student can identify/choose a question/goal, create predictions/ subgoals, and design multiple experiments (iterations) that provide its own feedback (without human intervention) to inform conclusions. Hence, the greater student autonomy in science GBL might increase their motivation and learning outcomes (Ryan & Deci, 2017). Together, these three aspects of science inquiry might yield more effective science GBL and greater science achievement, compared to GBL in other
+academic subjects. Indeed, an examination of meta-analyses of GBL for different academic subjects supports this claim. GBL meta-analyses with larger proportions of studies or of participants with science achievement outcomes show larger effect sizes (r = .45 or .55, respectively, see Table 1). Hence, we expect this meta-analysis of GBL and science achievement to yield a larger effect size than meta-analyses of GBL and other subject achievement outcomes.
+
+Moderators
+Furthermore, we test societal, demographic, GBL, assessment, and study factors that might moderate the link between GBL and science achievement: culture, grade level, duration of game intervention, science achievement measure, and publication year. Culture. Cultural values differ across countries and might moderate GBL’s effect on academic achievement. For example, when group goals and individual goals conﬂict, collectivist countries (e.g., China, Japan) value group goals more while individualistic countries (e.g., US, Europe) value individual goals more (De Mooij & Hofstede, 2010). In collectivist cultures, people value group interests and rely on others more, especially on extended family members who often live nearby (Shah, 2015). As a result, parents in collectivistic cultures enhance their children’s extrinsic motivation by reminding them of how learning outcomes at school affect their subsequent lives, and these children value it more and are more receptive to it, compared to those in individualistic cultures (Ni et al., 2010). Hence, extrinsic motivation has negative effects on academic achievement in individualistic countries but not in collectivist countries (Chiu & Chow,
+
+
+Table 1. Comparison of past meta-analyses’ numbers of studies and participants and their
+subsets with science outcomes, along with the overall effect sizes.
+Studies
+Study
+
+All
+
+Science
+
+Byun and Joung (2018)
+Chen et al. (2020)
+Chen, Tseng, et al. (2018b)
+Chiu et al. (2012)
+Duan (2017)
+Girard et al. (2013)
+Karakoç et al. (2020)
+Liao (2011)
+Mao et al. (2021)
+Thompson and von Gillern (2020)
+Tokac et al. (2019)
+Wu et al. (2012) b
+
+17
+25
+10
+14
+48
+9
+38
+26
+20
+19
+24
+91
+
+0
+8
+0
+0
+8
+1
+20
+9
+0
+0
+0
+n/a
+
+Participants
+All
+1912
+2710
+635
+1116
+5275
+1341
+2494
+2345
+1947
+1298
+n/a
+n/a
+
+Science
+
+Overall
+effect size
+
+0
+906
+0
+0
+1690
+n/a
+1459
+806
+0
+0
+0
+n/a
+
+0.37
+0.38
+1.03
+0.74
+0.80
+n/a (0)a
+1.70
+0.64
+0.86
+0.70
+0.13
+n/a
+
+NOTE: Some meta-analyses did not report all of these values (n/a).
+a
+Only 3 of 11 effect sizes were positive and signiﬁcant.
+b
+Although this study has “meta-analysis” in its title, it is not a meta-analysis and reports no statistics.
+
+2010; d’Ailly, 2003). As GSL uses both intrinsic and extrinsic motivation, GSL might motivate students in collectivist countries more than those in individualistic countries, and yield greater corresponding learning outcomes. Grade Level. As primary school students spend more time on games and less time on homework than older students do (Dettmers et al., 2009; Murillo & Martinez-Garrido, 2014), GBL might beneﬁt them more than older students. Before primary school, children spend most of their time playing (Vygotsky, 2016), so GBL might be more familiar to them, be more enjoyable, and motivate them to learn more than other activities (e.g., arithmetic exercises). By contrast, secondary school students and older students are more acclimated to these other forms of learning, so they might value GBL less, be less motivated by it, and learn less, compared to primary school students. Thus, we expect GBL to beneﬁt primary school students much more than older students. Duration of Game Intervention and Science Achievement Measures. Past studies of duration intervention show mixed results. On one hand, longer immediate interventions (on the order of minutes) can increase their intensities to yield larger results (Ross & Begeny, 2015). On the other hand, interventions across long periods of time (e.g., weeks) are vulnerable to other events diluting the intervention impact and yield weaker results (Nahmias et al., 2019). These sets of results suggest that an intermediate duration might show an optimal peak effect (e.g., days) but fade over time (Racey et al., 2016).
+Lei et a
+Similarly, achievement measures across time might also show a peak effect. On one hand, students learning new ideas often require multiple learning experiences across time to integrate and consolidate their understanding (Chiu et al., 2001; Gisquet-Verrier & Riccio, 2018), so immediate assessments (e.g., assignment) might not allow enough time to do so and show weaker learning effects. On the other hand,
+delayed assessments and infrequent use of this knowledge raise the likelihood of forgetting (Gisquet-Verrier & Riccio, 2018; Racey et al., 2016), so long-term assessments (e.g., ﬁnal exam, course grade) might show weaker effects. Hence, we expect medium-term assessments (quiz) to show the strongest GBL effects on science
+achievement. Publication Year. As people develop more technology and pedagogical innovations over time (Compayré & Payne, 2015; Edgerton, 2010), GBL interventions likely also improve over time. Thus, we expect GBL effects on achievement to be larger for studies in later years.
+
+Purpose of Study
+This meta-analysis synthesizes the results of previous studies of GBL and science achievement to calculate an overall effect size. Then, we determine whether the following factors moderate these effects: culture, grade level, achievement indicators, duration of game intervention, and publication year. (We also test whether effect size differs for controlled experiments, compared to other studies. Many studies did not report other common demographics, such as gender, so we could not test them for moderation effects).
+
+Method
+Literature Search and Coding Literature Search. This meta-analysis includes all studies published in Chinese or English that examined the effect of GBL on students’ science achievement. As the ﬁrst
+such study appeared in 2009, our studies are from January 2009 to February 2021 inclusive. Studies published in Chinese were collected from Chongqing VIP Information, Wanfang DATA, Chinese Selected Doctoral Dissertations and Master’s Theses Full-Text Databases (CDMD), and China National Knowledge Infrastructure (CNKI). Studies published in English were collected from ERIC, ProQuest Dissertations and Theses Global, PubMed, PsycINFO, Web of Science, and Google Scholar. The search keywords for GBL were computer game, electronic game, video game, computer software, GBL, and serious game. The search keywords for science achievement were science achievement, science performance, and science success. The preliminary search retrieved 465 articles.
+
+
+Figure 1. PRISMA 2009 ﬂow diagram.
+
+Inclusion. To sharpen the scope of this meta-analysis, we established six exclusion
+criteria and cited excluded examples as follows (see ﬂow chart in Figure 1):
+(1) Study does not examine GBL (e.g., Olson, 2010);
+(2) Study does not measure science achievement outcome (e.g., Adams, 2012);
+(3) Study does not report quasi-experimental/experimental design, procedures, and
+research methods (e.g., Uzun, 2012);
+(4) Study does not report the effect size and lacks statistical information for
+calculating it (such as the sample size, mean, standard deviation or t-value,
+p-value, etc. of the experimental group and the control group (e.g., Miller et al.,
+2011); and
+(5) Study includes participants in poor health, with physical inﬁrmities, or with
+psychological impairments (e.g., Kim et al., 2009 had participants with
+autism).
+
+Lei et al
+The ﬁrst and second authors abstracted the data for included papers into a standardized form, resolving discrepancies in decisions regarding study inclusion/ exclusion via consultation with the senior author, as needed. After reading the title, abstract, and full text of the literature and deleting repeated publications and studies without clear data, we selected 41 articles that met the above requirements, including 6 Chinese and 35 English articles, with a total of 60 effect sizes. Coding. After screening, we feature-coded the collected articles for: author (year), sample size, collectivist (China, Hong Kong, Taiwan, Japan, Turkey, Africa; vs. individualist: US, Europe), grade (primary school, junior secondary school, senior secondary school, and university), duration of GBL intervention (≤45 minutes; > 45 minutes and ≤4 hours; > 4 hours and ≤1 week; > 1 week and ≤4 weeks; > 4 weeks and ≤8 weeks; > 8 weeks), science assessment (assignment score, quiz, ﬁnal exam, course grade), and study design (controlled experiment vs. other; see Table 2). Intercoder reliability exceeded 92%, and Krippendorf’s alpha exceeded 0.82. (Ranging from 1 to 1, an α exceeding 0.66 shows satisfactory agreement).
+
+Meta-Analysis
+We conducted the meta-analysis with Comprehensive Meta-Analysis (CMA 3.3; Borenstein et al., 2005). Assessment of Study Quality. We assess the quality of each study with the revised Jadad
+scale, based on randomization, blinding, and attrition (Brouwers et al., 2005). A study that speciﬁes the process of randomly assigning participants into speciﬁc conditions scores 2 points; a study that only mentions randomization scores 1 point; and a study without randomization scores 0 points. When a study speciﬁes measures to prevent the participants and the scorers from learning which people are in the experimental versus control conditions (double-blinding), it scores 2 points; a study that only mentions double-blinding scores 1 point; and a study without double-blinding scores 0 points. A study that speciﬁes the number of participants who did not fully complete the study (attrition) and their reasons receives 1 point (0 otherwise). Ranging from 0 to 5 points, Jadad scores exceeding 2 are high quality studies, and others are low-quality studies. All 52 articles scored more than 2 points, so all of these studies were of high quality. The ﬁrst and second author critically appraised the methodological quality of each study in this meta-analysis using Downs’s validated checklist (Downs & Black, 1998). This checklist has 27 questions in ﬁve categories of threat to validity: (a) reporting, (b) external validity, (c) internal validity/bias, (d) internal validity/confounding/selection bias, and (e) statistical power. As Downs and Black’s (1998) article did not deﬁne the threshold for a high quality study, we applied Carter et al.’s (2017) criteria of receiving the majority of the points available in at least four of these ﬁve categories to be designated a high quality study. All studies met the criteria for high quality, and their scores ranged from 12 to 27 (median = 21; interquartile range = 16–22).
+
+
+Effect Size Computation. For each study, we computed the effect size Hedge’s g (Vøllestad et al., 2012) from the sample sizes (nC, nE), means (MC, ME), and standard deviations (SDC, SDE) of the post-tests of the control and experimental groups (positive g indicates a higher score by experimental participants than by control participants). When there were multiple effect sizes (e.g. multiple experimental groups) in the same
+sample, we used the total effect size of GBL students versus non-GBL students. (2) We coded the research effects in different experiments separately. (3) If a study used multiple methods to measure the effect of GBL on science achievement (e.g., t-test, regression coefﬁcient), then we conservatively used the one that controlled for the most variables (which typically had the smallest effect size). Heterogeneity Test. We tested for heterogeneity of effect sizes by computing Cochrane’s Q and its I2 value. If I2 ≥ 75, the studies show substantial heterogeneity, which suggests a random effects model rather than a ﬁxed effects model, and the need to test for moderators (Huedo-Medina et al., 2006). Also, the populations and measures differ across studies and might inﬂuence the effect size, which also suggests a random effects model and testing for moderators. For multiple comparisons in a moderation analysis, we used Fisher’s least signiﬁcant difference (LSD) test (Williams & Abdi, 2010). Evaluation of Publication Bias. We assessed the risk of publication bias via the funnel chart, fail-safe number (Nfs) method (Khoury et al., 2013), and Egger et al.’s (1997) linear regression. The following indicate low risk of publication bias: effect sizes mostly within the funnel and symmetric to its axis; Nfs < 5k + 10 (k = number of original studies); and Egger’s linear regression intercept is not signiﬁcant and near zero.
+
+Results
+Results of Data Description Our literature search yielded 41 suitable studies with 6256 participants (ranging from 16 to 257 participants per study). These studies had 60 independent effect sizes (see Table 2 and forest plot in Figure 2).
+
+Effect Size and the Homogeneity Test Meta-analysis of the 60 independent effect sizes yielded an overall Hedge’s g of 0.705 (95% CI = 0.603 … 0.807; z = 13, p < .001), showing a substantial positive effect of GBL on
+science learning outcomes. Cochrane’s Q was 285 and signiﬁcant (p <.001, I2 = 75.4), indicating heterogeneous effect sizes across studies and the need for a random effects model.
+
+Assessment of Publication Bias
+The results of the funnel plot, Nfs, and Egger’s regression all show low risk of publication bias. In the funnel plot, the 60 effects were mostly within the funnel and
+
+Lei et a
+Table 2. Characteristics of the 41 studies included in the meta-analysis.
+
+Author (year)
+Al-Tarawneh,
+2016
+Baran et al.,
+2018
+Barzilai &
+Blau, 2014
+Barzilai &
+Blau, 2014
+Brom et al.,
+2011a
+Brom et al.,
+2011b
+Brom et al.,
+2011c
+Brom et al.,
+2011d
+Cagiltay et al.,
+2015
+Cao, 2014
+Chado et al.,
+2016
+Charlier & De
+Fraine, 2013
+Chen et al.,
+2018a
+Chen et al.,
+2019
+Chen et al.,
+2015a
+Chen et al.,
+2015b
+Chen et al.,
+2019
+Cheng et al.,
+2014
+Chu & Chang,
+2014
+
+Control
+group
+Duration of Achievement Study
+Hedges’s
+g
+Culturea Gradeb interventionc indicatorsd designe learning
+3.889
+
+1
+
+1
+
+3
+
+3
+
+2
+
+1
+
+0.253
+
+2
+
+3
+
+5
+
+4
+
+2
+
+1
+
+0.462
+
+2
+
+5
+
+6
+
+3
+
+1
+
+3
+
+0.016
+
+2
+
+5
+
+6
+
+3
+
+1
+
+3
+
+0.226
+
+2
+
+3
+
+4
+
+4
+
+2
+
+1
+
+2
+
+3
+
+4
+
+4
+
+2
+
+1
+
+2
+
+3
+
+4
+
+4
+
+2
+
+1
+
+0.661
+
+2
+
+3
+
+4
+
+4
+
+2
+
+1
+
+0.423
+
+1
+
+4
+
+1
+
+3
+
+1
+
+2
+
+0.473
+1.148
+
+1
+1
+
+2
+2
+
+4
+2
+
+3
+3
+
+2
+1
+
+1
+1
+
+0.503
+
+2
+
+2
+
+5
+
+3
+
+1
+
+2
+
+0.469
+
+1
+
+2
+
+1
+
+3
+
+1
+
+4
+
+0.250
+
+1
+
+2
+
+2
+
+3
+
+1
+
+4
+
+1.016
+
+1
+
+2
+
+2
+
+3
+
+1
+
+2
+
+0.782
+
+1
+
+2
+
+2
+
+3
+
+1
+
+2
+
+0.368
+
+1
+
+2
+
+4
+
+3
+
+1
+
+4
+
+0.219
+
+1
+
+2
+
+4
+
+3
+
+2
+
+1
+
+0.818
+
+1
+
+1
+
+2
+
+3
+
+1
+
+3
+
+0.301
+0.162
+
+(continued)
+
+1
+Table 2. (continued)
+
+Author (year)
+Daubenfeld &
+Zenker,
+2015
+DeLeeuw &
+Mayer, 2011
+Gauthier et al.,
+2015
+Han, 2014
+Hong, 2013
+Hsiao et al.,
+2014
+Hsu & Tsai,
+2013
+Hwang et al.,
+2012a
+Hwang, Wu et
+al., 2012b
+Hwang et al.,
+2014
+Hwang &
+Chen, 2017
+Kaya & Elgün,
+2015
+Khan et al.,
+2017
+Klisch et al.,
+2012
+Kourakli et al.,
+2017a
+Kourakli et al.,
+2017b
+Kourakli et al.,
+2017c
+Kourakli et al.,
+2017d
+Law & Chen,
+2016
+Liu & Chen,
+2013
+
+Control
+group
+Duration of Achievement Study
+Hedges’s
+g
+Culturea Gradeb interventionc indicatorsd designe learning
+0.151
+
+2
+
+4
+
+4
+
+2
+
+2
+
+1
+
+1
+
+4
+
+1
+
+3
+
+1
+
+3
+
+0.246
+
+2
+
+4
+
+5
+
+3
+
+1
+
+2
+
+1.753
+0.518
+1.084
+
+1
+1
+1
+
+3
+2
+4
+
+1
+6
+6
+
+3
+3
+3
+
+2
+2
+2
+
+1
+1
+1
+
+0.516
+
+1
+
+1
+
+1
+
+3
+
+1
+
+1
+
+0.696
+
+1
+
+1
+
+2
+
+3
+
+1
+
+4
+
+2.389
+
+1
+
+1
+
+2
+
+3
+
+1
+
+4
+
+0.270
+
+1
+
+1
+
+2
+
+3
+
+1
+
+4
+
+1.095
+
+1
+
+1
+
+4
+
+3
+
+1
+
+4
+
+1.322
+
+2
+
+1
+
+6
+
+2
+
+2
+
+3
+
+1.774
+
+1
+
+2
+
+3
+
+3
+
+2
+
+1
+
+0.742
+
+2
+
+2
+
+2
+
+3
+
+1
+
+1
+
+0.795
+
+2
+
+1
+
+5
+
+3
+
+2
+
+1
+
+0.979
+
+2
+
+1
+
+5
+
+3
+
+2
+
+1
+
+1.337
+
+2
+
+1
+
+5
+
+3
+
+2
+
+1
+
+0.376
+
+2
+
+1
+
+5
+
+3
+
+2
+
+1
+
+1.046
+
+1
+
+2
+
+1
+
+3
+
+2
+
+1
+
+1.110
+
+1
+
+1
+
+2
+
+3
+
+2
+
+1
+
+0.064
+
+(continued)
+
+Lei et a
+Table 2. (continued)
+
+Author (year)
+Liu et al., 2014a
+Liu et al.,
+2014b
+Liu, 2016
+Liu, 2018a
+Liu, 2018b
+Martin and
+Ertzberger,
+2013a
+Martin and
+Ertzberger,
+2013b
+Meluso et al.,
+2012
+Papastergiou,
+2009
+Rastegarpour
+and Marashi,
+2012a
+Rastegarpour
+and Marashi,
+2012b
+Sadiq, 2010
+Sindre et al.,
+2008a
+Sindre et al.,
+2008b
+Sindre et al.,
+2008c
+Spires et al.,
+2011
+Su & Cheng,
+2013a
+Su & Cheng,
+2013b
+Su and Cheng,
+2013c
+Su et al., 2014a
+Su et al., 2014b
+
+Control group
+Duration of Achievement Study
+Hedges’s
+g
+Culturea Gradeb interventionc indicatorsd designe learning
+1.160
+0.678
+
+2
+2
+
+1
+1
+
+4
+4
+
+3
+3
+
+2
+2
+
+1
+1
+
+0.871
+0.825
+0.612
+0.575
+
+1
+1
+1
+2
+
+4
+3
+3
+4
+
+6
+1
+1
+1
+
+1
+3
+3
+3
+
+2
+1
+1
+1
+
+1
+1
+1
+3
+
+0.668
+
+2
+
+4
+
+1
+
+3
+
+1
+
+3
+
+0.528
+
+2
+
+1
+
+3
+
+3
+
+2
+
+3
+
+0.536
+
+1
+
+3
+
+6
+
+1
+
+2
+
+3
+
+0.789
+
+1
+
+3
+
+4
+
+3
+
+1
+
+1
+
+0.969
+
+1
+
+3
+
+4
+
+3
+
+1
+
+1
+
+0.355
+1.256
+
+2
+2
+
+4
+4
+
+4
+2
+
+4
+3
+
+2
+1
+
+1
+1
+
+0.927
+
+2
+
+4
+
+2
+
+3
+
+1
+
+1
+
+0.565
+
+2
+
+4
+
+2
+
+3
+
+1
+
+1
+
+0.902
+
+2
+
+2
+
+2
+
+3
+
+2
+
+3
+
+0.758
+
+1
+
+4
+
+5
+
+4
+
+2
+
+1
+
+0.749
+
+1
+
+1
+
+6
+
+1
+
+2
+
+1
+
+0.866
+
+1
+
+1
+
+6
+
+1
+
+2
+
+1
+
+0.710
+0.500
+
+1
+1
+
+3
+3
+
+6
+6
+
+2
+2
+
+2
+2
+
+1
+1
+(continued)
+
+1
+Table 2. (continued)
+
+Author (year)
+Su et al., 2014c
+Su et al., 2014d
+Sung and
+Hwang,
+2013a
+Sung and
+Hwang,
+2013b
+Twumasi &
+Hanson,
+2018
+Wang, 2018
+Carolyn Yang
+& Chang,
+2013
+Yien et al.,
+2011
+ZejnilagićHajrić &
+Pezo, 2015
+Zetou et al.,
+2014
+Zhang, 2016
+
+Control
+group
+Duration of Achievement Study
+Hedges’s
+g
+Culturea Gradeb interventionc indicatorsd designe learning
+0.710
+0.500
+0.909
+
+1
+1
+1
+
+3
+3
+1
+
+6
+6
+2
+
+2
+2
+3
+
+2
+2
+1
+
+1
+1
+3
+
+0.903
+
+1
+
+1
+
+2
+
+3
+
+1
+
+3
+
+1.629
+
+1
+
+3
+
+1
+
+3
+
+1
+
+1
+
+0.447
+0.585
+
+1
+1
+
+3
+2
+
+6
+6
+
+4
+1
+
+1
+2
+
+1
+1
+
+0.169
+
+1
+
+1
+
+4
+
+3
+
+2
+
+1
+
+0.456
+
+2
+
+3
+
+3
+
+3
+
+1
+
+1
+
+0.986
+
+2
+
+1
+
+4
+
+3
+
+1
+
+1
+
+0.449
+
+1
+
+2
+
+1
+
+3
+
+1
+
+1
+
+a
+
+1 = collectivist countries, 2 = individualistic countries;
+1 = primary, 2 = junior secondary school, 3 = senior secondary school, 4 = college, 5 = mixed;
+c
+1 = Up to 45 minutes, 2 = between 45 minutes and 4 hours, 3 = between 4 hours and 1 week, 4 = between 1
+week and 4 weeks, 5 = between 4 weeks and 8 weeks, 6 = over 8 weeks;
+d
+1 = course grade, 2 = ﬁnal examination scores, 3 = quiz, 4 = assignment grade;
+e
+1 = controlled experiment, 2 = other studies
+f
+1 = listen to teacher lecture, 2 = read a book, 3 = solve problems alone, 4 = solve problems with
+classmate.
+b
+
+symmetrically distributed on both sides of its axis (see Figure 3). The Nfs of 8422 far exceeded the fail-safe criteria of 310 (= [5 x 60] + 10). The intercept of Egger’s regression was near zero (0.84) and not signiﬁcant (p = .134).
+
+Moderator Analysis
+As the effect sizes showed substantial heterogeneity (see Table 3), we tested for moderators (see Table 4).
+
+Lei et al.
+
+Figure 2. Forest plot for the random effects model.
+
+
+Figure 3. Funnel plot of effect sizes of the betas between educational game and science achievement.
+
+Table 3. Random-model of the effect of educational game on science achievement.
+Homogeneity test
+k
+
+Mean g
+Effect size
+
+71
+
+0.705
+
+95% CI for r
+
+Q(g)
+
+p
+
+I2
+
+0.603 … 0.807 285.048 .000 75.443
+
+Tau-squared
+Tau2
+.132
+
+SE
+
+Tau
+
+Test of null
+(two tailed)
+z
+
+p
+
+.038 .363 13.539 .000
+
+Culture. Culture of a country (collectivist countries vs individualistic countries) moderated the effect of GBL on science achievement (QBET = 4.413, df = 1, p < .05; see Table 4). This effect was stronger among students in collectivist countries (g = 0.782, 95% CI = 0.650 … 0.914) than in individualistic countries (g = 0.563, 95% CI = 0.399 … 0.727).
+Grade. Grade level also moderated the effect of GBL on science achievement (QBET = 10.8, df = 4, p < .05; see Table 4). Primary school students showed the strongest effect (g = 0.940, 95% CI = 0.751 … 1.129), with smaller effects for junior secondary school students (g = 0.686, 95% CI = 0.483 … 0.890), senior secondary school students (g = 0.602, 95% CI = 0.404 … 0.801) and undergraduates (g = 0.586, 95% CI = 0.346 …
+0.827). Studies with students across these categories had a much smaller effect size (g = 0.210, 95% CI = 0.356 … 0.776).
+
+p < .05, **p < .01, ***p < .001.
+
+Culture
+Collectivist
+Individualistic
+Grade
+Primary
+Junior secondary school
+Senior secondary school
+University
+Mixed
+Duration of game intervention
+Up to 45 mins
+Between 45 mins and 4 hr
+Between 4 hr and 1 weeks
+Between 1 weeks and 4 weeks
+Between 4 weeks and 8 weeks
+Over 8 weeks
+Achievement indicators
+Course grade
+Final examination scores
+Quiz
+Assignment grade (test)
+Study design
+Controlled experiments
+Other studies
+.218
+
+9.097*
+
+13.755*
+
+10.855*
+
+4.413*
+
+Between-group
+effect
+(QBET)
+
+35
+36
+
+5
+6
+52
+8
+
+12
+16
+4
+16
+8
+15
+
+22
+16
+18
+13
+2
+
+43
+28
+
+k
+
+N
+
+0.681
+0.730
+
+0.726
+0.647
+0.772
+0.267
+
+0.714
+0.865
+1.386
+0.504
+0.644
+0.640
+
+0.940
+0.686
+0.602
+0.586
+0.210
+
+0.782
+0.563
+
+Mean g
+effect
+size
+
+0.042
+0.065
+
+0.032
+0.077
+0.048
+0.076
+
+0.093
+0.066
+1.368
+0.078
+0.062
+0.039
+
+0.105
+0.047
+0.071
+0.063
+0.162
+
+0.053
+0.048
+
+SE
+
+.962]
+1.087]
+1.862]
+.716]
+.976]
+.862]
+
+[.534, .827]
+[.585, .875]
+
+[.363, .1.090]
+[.299, .994]
+[.656, .889]
+[ .005, .583]
+
+[.467,
+[.644,
+[.909,
+[.291,
+[.311,
+[.418,
+
+[.751, 1.129]
+[.483, .890]
+[.404, .801]
+[.346, .827]
+[ .356, .776]
+
+[.650, .914]
+[.399, .727]
+
+95% CI for r
+
+110.658***
+171.671***
+
+2.342
+9.359
+226.897***
+18.822**
+
+51.402**
+53.289***
+51.993***
+70.806***
+9.555
+29.018**
+
+101.372***
+52.719***
+66.321***
+30.671**
+2.925
+
+186.455***
+95.690***
+
+Homogeneity test
+within each
+group (QW)
+
+69.275
+79.612
+
+.000
+46.574
+77.523
+68.810
+
+78.600
+71.852
+94.230
+78.815
+26.737
+51.754
+
+79.284
+71.547
+74.367
+60.875
+65.811
+
+77.474
+71.784
+
+I2
+
+Table 4. Educational game and students’ science academic achievement: univariate analysis of variance for moderator variables (categorical variables).
+1
+Achievement Indicators. Furthermore, achievement indicators moderated the effect of GBL on science achievement (QBET = 9.1, df = 3, p < .05). This GBL effect was stronger when measured by quiz (g = 0.772, 95% CI = 0.656 … 0.889), ﬁnal exam (g = 0.647, 95% CI = 0.299 … 0.994) or course grade (g = 0.726, 95% CI = 0.363 … 1.090), than by assignment grade (g = 0.267, 95% CI = 0.005, 0.583). Duration of Game Intervention. The duration of game intervention also moderated the effect of GBL on science achievement (QBET = 13.755, df = 5, p < .05). Interventions between four hours and one week had the largest effect size (g = 1.386, 95% CI = 0.909 … 1.862), followed by those between 45 minutes and four hours (g = 0.865, 95% CI = 0.644 … 1.087). Longer interventions showed smaller effects: one to four weeks (g = 0.504, 95% CI = 0.291 … 0.716), four to eight weeks (g = 0.644, 95% CI = 0.311 … 0.976); and over eight weeks (g = 0.640, 95% CI = 0.418 … 0.862). Study Design. The effect sizes did not different signiﬁcantly between controlled experiments and other studies (QBET = .218, df = 1, p > .05). So, study design did not moderate the effect of GBL on science achievement. Publication Year. Meta-regression of g onto publication year showed slightly stronger, signiﬁcant effects GBL on science achievement in later years (QModel [1, k = 69] = 3.611, p < .05; see Table 5).
+
+Discussion
+This meta-analysis of 41 studies of 6256 participants and 60 effect sizes showed an overall GBL effect of .705 on science achievement, which supports the use of GBL for learning science. Furthermore, collectivism, grade level, intervention duration, science assessment, and publication year all moderated the effect of GBL on science achievement, helping to explain non-signiﬁcant or even negative effects.
+
+Game-Based Learning and Science Achievement
+The overall GBL effect size of .705 on science achievement is in the upper end of metaanalysis results (see Table 1 summary of past GBL meta-analyses). This large result is consistent with our theoretical claim that GBL processes (goal, subgoals, autonomy, Table 5. Univariate regression analysis of continuous variables (random effect model).
+Parameter
+Publication year (%)
+
+Estimate
+
+SE
+
+35.878
+19.227
+β0
+β1
+0.018
+0.010
+Q Model (1, k=69) =3.611, p < .05
+
+Z-value
+1.866
+1.900
+
+95% CI for b
+[ 73.563, 1.806]
+[ 0.001, 0.037]
+
+Lei et a
+feedback, and multiple iterations; Burke, 2014) ﬁt science inquiry processes (specifying a question, making predictions/hypotheses, gathering data, analyzing it, and drawing predictions; Fleer, 2015), so GBL is especially beneﬁcial for learning science. The ﬁt between science inquiry and GBL might facilitate student understanding of science inquiry processes or might facilitate educators’ design of science GBL and
+increase its effectiveness. Furthermore, both GBL and science inquiry might reinforce greater student autonomy, which can increase student motivation and learning outcomes. Any or all of these reasons might explain the large overall GBL effect on science achievement. In any case, the substantial effect size suggests investing in design and implementation of GBL of science to improve students’ science learning.
+
+Collectivism
+The effect size of GBL on science achievement was larger in collectivist societies than in individualistic societies. This result is consistent with our theoretical model that students in collectivist cultures value group interests, their nearby family members, and their extrinsic motivation more than students in individualistic cultures do (Ni et al., 2010); hence, the results support the claim that along with GSL’s intrinsic motivation, its extrinsic motivation beneﬁts students in collectivist countries more than those in individualistic countries. These results suggest that while GBL helps students learn science in individualistic societies, it is even more beneﬁcial in collectivist societies, which have greater incentive to invest in GBL for its students.
+
+Grade Level
+The effect size of GBL on science achievement was much larger for primary school students than for older students. This result is consistent with our claim that primary school students are accustomed to frequent play and little homework (Dettmers et al., 2009; Murillo & Martinez-Garrido, 2014; Vygotsky, 2016), so the familiar play aspects of GBL appeals to them, is more enjoyable, and motivates them more than older students to learn science. This result suggests prioritizing development of GBL of science in primary schools, before developing GBL of science for older students (whose primary school GBL experiences might also support their later GBL).
+
+Duration of Game-Based Learning Intervention and Science Achievement
+Measures
+The peak effect of GBL had a medium duration of four hours to one week. Shorter intervention durations (up to 45 minutes; between 45 minutes and 4 hours) showed small effects, and much longer interventions (between one to four weeks; between four weeks to eight weeks; over eight weeks) showed much smaller effects. These results are consistent with the combination of both (a) past studies showing that a longer immediate intervention increases its intensity for a bigger result (Ross & Begeny, 2015), and (b) past studies
+1
+suggesting that very long interventions (e.g., weeks) are vulnerable to other events diluting its impact (Nahmias et al., 2019). If future studies validate this peak result, it suggests that GBL instruction designers avoid extremely short or extremely long interventions. The science achievement measures also showed the largest GBL effect for quizzes, with much smaller effects for assignments, and slightly smaller but not signiﬁcantly different effects for ﬁnal exams and course grades. These results are consistent with the view that immediate assessments (e.g., assignment) do not allow enough time for integration of multiple learning experiences of similar content (Chiu et al., 2001; Gisquet-Verrier & Riccio, 2018), while delayed assessments can raise the likelihood of forgetting (Gisquet-Verrier & Riccio, 2018; Racey et al., 2016). These results suggest that researchers and educators allow students more time to consolidate their GBL learning of new science ideas before assessing them, especially as the effects of later assessments are small and not signiﬁcant.
+
+Publication Year
+Studies in later years showed slightly larger, signiﬁcant GBL effects on science achievement. This result is consistent with the view that technology or pedagogical innovations (Compayré & Payne, 2015; Edgerton, 2010) improves GBL and thus science achievement outcomes. Although the estimated annual effect is small, comparisons of studies across decades should consider its cumulative effect. Also, drastic (rather than minor) innovations in technology or pedagogy in the future might radically change GBL’s effect on science achievement.
+
+Limitations and Future Research Directions
+This study has ﬁve major limitations: publication language, data collection year inaccuracy, few countries, lack of explanatory variables, and lack of process data. As the authors can only read Chinese and English, this meta-analysis does not include studies in other languages. Future meta-analyses can include authors who can read other languages for more comprehensive coverage of GBL science studies. Some studies might be completed many years before than their publication date, so the publication year result might be less accurate than otherwise. Study authors can include the date(s) of their data collection, and journal editors can require it, so that future meta-analyses of publication year moderation effects can be more accurate. As these GBL science studies occurred in few countries, more such studies in other countries are needed to validate this country-level effect (collectivism and extrinsic motivation) and allow testing of other country-level attributes (e.g., other cultural values, economic, political). As many studies lacked sufﬁcient information on other potential explanatory variables (e.g., gender, game attributes, science topics), this meta-analysis could not test for other moderation effects. For example, past studies suggest that boys often have more interest than girls in physics or chemistry (but not biology; Krapp & Prenzel, 2011), so GBL science might show gender effects. Also, the difﬁculty of a game can
+Lei et a
+
+affect student participation in GBL and their academic performance (Wang et al., 2010). Insufﬁcient information about the science content in the assessment precludes testing for moderation effects of different science topics (e.g., evolution vs. food web). Further studies can test whether the peak intervention duration result applies generally across science topics or only to a few of them. In either case, further studies can narrow the intervention duration more precisely and recommend its duration for future GBL instruction designers. Lastly, this meta-analyses’ raised questions that require process data to answer. Three processes might account for the greater GBL effects in science (e.g., compared to mathematics). The ﬁt between science inquiry and GBL might facilitate (a) student understanding of science inquiry processes or (b) educators’ design of science GBL and increase its effectiveness. Also, both GBL and science inquiry reinforce greater student autonomy, which can increase student motivation and learning outcomes. Future studies can further distinguish the impact of each of these three processes on students’ GBL of science.

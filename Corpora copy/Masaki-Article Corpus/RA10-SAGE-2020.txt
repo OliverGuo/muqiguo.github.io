@@ -1,0 +1,464 @@
+<heading>
+Title: More Than Wargaming: Exploring the Miniaturing Pastime
+Author: Mikko Meriläinen, Jaakko Stenros, and Katriina Heljakka
+Journal: Simulation & Gaming
+Year: 2020
+</heading>
+
+Abstract
+Background. Miniaturing, or painting, collecting, and gaming with miniature
+wargaming figurines, is a popular, yet vastly underresearched subject.
+Previous research suggests a multitude of practices and ways of engaging with
+miniatures.
+Aim. This qualitative study explores the various elements of miniaturing to both
+map the phenomenon and build a foundation for further research.
+Method. Miniaturing is explored through a thematic analysis of 127 open-ended
+survey responses by adult Finnish miniature enthusiasts.
+Results. Responses suggest a dual core to miniaturing, consisting of crafting and
+gaming. In addition to these core activities, storytelling, collecting, socializing
+and displaying and appreciating appear commonly, with considerable individual
+variation. The different elements are closely intertwined, based on individual
+preferences and resources.
+Discussion. As a pastime, miniaturing occupies an interesting position with elements
+of crafting, toy play and gaming, and escapes easy situating. The considerable
+individual variation in enthusiasts’ preferences suggests a multitude of fruitful
+approaches in further research.
+Keywords
+crafting, miniaturing, role-playing, toy play, wargaming, Warhammer
+
+Introduction
+Miniature wargaming is a pastime with a long history stretching back centuries. Emerging from CHESS, wargaming was not only a recreational pursuit, but a way to simulate battles and train military officers. While the history of miniature wargaming has been covered in existing research (e.g. Lewin, 2012; Peterson, 2012), current play practices and the culture around them have received scarce attention in academia. The
+contemporary miniature pastime is intimately influenced by the role-playing game boom of the mid-to-late 1970s and early 1980s. The first commercial role-playing game product, DUNGEONS & DRAGONS (1974), emerged from the wargaming tradition, and the first edition of the definitive miniature wargame WARHAMMER was labeled a “Mass Combat Fantasy Role-Playing Game”. However, over the years these two traditions have again diverged and today they are two very distinct pastimes, albeit with often considerable overlap as shown by our results. Since its inception in the 1980s, the contemporary miniature industry and the associated pastime have grown immensely. Games Workshop, the world’s largest miniature game producer, is a publicly traded company with sales of £256.6 million in 2019 (Games Workshop, 2019) and there are countless thriving global and local communities for miniature enthusiasts. Despite this, there is scarce research on miniatures and people who collect, game, and play with them. While academic interest in games has exploded since the turn of the Millennium, miniature wargamers have been almost ignored while neighboring areas of digital games, role-playing games, board games, and learning simulation have garnered attention. The research conducted by Bernard Cova, Stefano Pace, and David J. Park (2007) as well as Marcus Carter, Martin Gibbs, and Mitchell Harrop (Carter, Gibbs, & Harrop, 2014; Carter, Harrop, & Gibbs, 2014; Harrop et al., 2013) on the WARHAMMER miniature games and their players, comprise a significant portion of the academic literature on the modern miniature pastime. Another important contribution is Ville Kankainen’s (2016) exploration of the physical and digital versions of the miniature board game BLOOD BOWL. Earlier research suggests that while gaming is often a prominent part of the miniature pastime, there are many other ways to engage with miniatures. Rather than being a single, clearly delineated hobby, the miniature pastime appears to be a collection of diverse interlinked activities (Carter, Gibbs, & Harrop, 2014; Kankainen, 2016). In this study we examine how Finnish enthusiasts engage with miniatures. We call this collection of hobbyist practices miniaturing. Through a thematic analysis of qualitative survey data (N=127) consisting of open-ended questions we identify different aspects of miniature pastime culture to chart this largely unexplored phenomenon.
+
+Background
+The roots of miniature wargaming are long and deep, and the genre has numerous
+important turning points. The origins of wargames lie in 17th and 18th century variants of CHESS, which were elaborated on and rendered more “realistic” by numerous
+designers – often with the aim to simulate battle and to teach military strategy and
+
+thinking. A key turning-point in breaking away from CHESS, and towards establishing KRIEGSSPIEL, was scholar of natural sciences and mathematics Johann C. L.
+Hellwig (1743–1831), whose 1780 ruleset created the foundation for wargaming (e.g.
+movement, displacement, victory conditions, concrete setting, terrain). During the
+19th century, KRIEGSSPIEL became quite popular in Prussia and the rest of German
+speaking Europe, especially among military men. Georg Leopold von Reiswitz (1760–
+1828) and later his son Georg H. R. J. von Reiswitz (1794–1827) are key figures in this
+development. They introduced KRIEGSSPIEL to King Wilhelm III and developed the
+gaming implements and rules by, for example, introducing the umpire and unit hitpoints. It was the younger Reiswitz’s version of the game that was adopted as a training tool in the Preussian army (Murray, 1952; Peterson, 2012).
+Representative figurines, tin soldiers, were married to wargaming in Britain in the
+late 19th century. Previously accurately-scaled blocks had stood in for troops. The
+turning-point for wargaming in the English-speaking world was science fiction author
+H.G. Wells’ (1866–1946) wargaming rule-book LITTLE WARS (1913). Some contemporary designers consider LITTLE WARS as the starting point of miniature
+wargaming, since Wells’ rules give primacy to figurines and terrain (Pirinen, personal
+communication, 2019). Wells was also a pacifist, interested in wargaming as a hobby,
+not as training. During the 20th century miniature wargaming developed especially in
+the United States in devoted hobby communities. These communities cross pollinated
+with board game communities, military simulations, and therapeutic psychodramas
+leading to the development of DUNGEONS & DRAGONS in 1974 by Gary Gygax
+(1938–2008) and Dave Arneson (1947–2009) (Peterson, 2012, 2018).
+DUNGEONS & DRAGONS developed from the wargaming tradition, but it
+became the first commodified role-playing game. It had an important influence on the
+miniature wargaming tradition as well, since it brought in the fantasy settings. There
+has always been a tension between realism and playability in wargames, between
+accurate simulation of combat situations and the recreational flow of the wargaming
+experience (see Schuurman, 2017). Bringing in fantastic settings, characters, and
+equipment is only the latest extension of that. However, there is still a tension in the
+hobby communities between realistic simulations and fantastic recreation. The idea of
+creating a serial game or a continuous campaign also became important at this time –
+for commercial reasons. It was not enough to buy just the rule set, but also ever more
+complex additions to the lore and rules (Dunnigan, 2005). In a similar vein, new miniatures, rules and lore were introduced in hobby magazines such as Games Workshop’s
+White Dwarf.
+The most successful, and most important to our survey responders, contemporary
+miniature wargame is WARHAMMER, originally published as WARHAMMER:
+THE MASS COMBAT FANTASY ROLE-PLAYING GAME (commonly referred to
+as WARHAMMER FANTASY BATTLE or simply as WARHAMMER FANTASY) in
+1983 and written by Bryan Ansell, Richard Halliwell, and Rick Priestley. This fantasy
+game, and its science fiction sibling, WARHAMMER 40,000 (originally published as
+WARHAMMER 40,000 ROGUE TRADER in 1987, designed by Rick Priestley),
+have been the definitive fantasy miniature wargames for decades. Games Workshop,
+
+the company behind WARHAMMER, has been actively creating and fostering a
+hobby around miniature wargaming: building and painting figurines for gaming and
+displaying, creating dioramas, competing in tournaments, as well as creating expansive fictional settings detailed in source books, novels, digital games, and comics. The
+company magazine, White Dwarf (since 1977), has been an important part of this, as
+have their chain of stores and events. In addition to the core Warhammer titles, Games
+Workshop has published a wide range of other miniature games and miniature board
+games, such as LORD OF THE RINGS (2001), MORDHEIM (1999), BLOOD BOWL
+(first edition 1986), SPACE HULK (first edition 1989), and the current rebooted version of WARHAMMER FANTASY, WARHAMMER AGE OF SIGMAR (2015).
+With the exception of LORD OF THE RINGS, these games usually expand the setting
+of one of the core WARHAMMER games, BLOOD BOWL for example being a game
+akin to rugby or American football set in the fantasy world of WARHAMMER.
+Games Workshop is obviously not the only company in the miniature gaming market, but with its games, magazines, figurines, and a large established fanbase, it is the
+largest and most visible. A multitude of miniature gaming companies exists, as do
+companies that create miniatures without a specific target game system. Furthermore,
+historical miniature gaming has not disappeared either, but has a strong following,
+with titles such as SAGA (2011) and BOLT ACTION (2012) popular among players
+and modern plastic tooling enabling hobbyists to build large armies with ease.
+While wargaming is a prominent part of the miniature pastime, it does not encompass it. Miniatures are also bought for purposes other than wargaming, such as painting, modelling, and collecting without intention to use the miniatures for gaming or
+playing. As per their history, miniatures are a common feature of the role-playing
+game hobby, where they are used as both playing pieces to visualize combat and as
+physical representations of imaginary characters. Several miniature companies specifically cater to these non-wargaming purposes, for example by explicitly making
+miniatures for role-playing game characters and by releasing limited edition miniatures for collectors and miniature busts for painters.
+
+The Finnish Context
+Leading up to this study we were unable to find any existing research on Finnish miniature wargaming or miniaturing as a hobby, not even popular histories. However,
+based on our data, exhibitions in museums featuring disconnected objects of (miniature) wargaming (e.g. Clerc, 2018; Kunttu, 2018; Suomen pelimuseo, n.d.), online
+hobby forums, personal communications with industry professionals as well as personal experience we can broadly outline the Finnish context on miniaturing.
+What we view as contemporary miniaturing mostly started to emerge in Finland
+during the mid-to-late 1980s when bookstores and later specialty role-playing game
+stores started selling fantasy figurines and game rules. Miniaturing and role-playing
+games were closely connected during this so-called first wave of Finnish miniaturing.
+Of note during this time are also the board games HEROQUEST and SPACE CRUSADE.
+Both were produced by board game company Milton Bradley, featured plastic
+Meriläinen et al.
+miniatures and were made in collaboration with Games Workshop. Finnish language
+editions of these two games were produced in 1990 and marketed to a wide audience,
+and our data suggests that they served as an entry point for many miniature enthusiasts. Based on our data, a second wave of Finnish miniaturing came about in the earlyto-mid 1990s, with the releases of the 4th (1992) and 5th (1996) editions of
+WARHAMMER FANTASY BATTLE and the 2nd (1993) edition of WARHAMMER
+40,000. All of these games came in boxed sets with enough plastic miniatures to start
+gaming out of the box. The vast majority of our respondents had started their miniaturing in one of these two waves. It should be noted, however, that the two waves outlined
+above primarily deal with fantasy and science fiction miniature gaming, in effect
+focusing on Games Workshop titles.
+As an interesting side note, there is a tradition of miniature wargaming in the
+Finnish military, combining influences from the German Kriegsspiel tradition and
+from Russian wargaming. Later influences have also come from the United Kingdom
+and the United States. Some of these simulations used figurines and terrain, others
+used maps and tokens. This tradition was strongest before the Second World War,
+although recently military interest in non-digital simulation has increased. Recreational
+miniature gaming has also existed, but information on this is even more scarce. The
+Finnish Museum of Games features Reijo Paulus’ SOTAPELI (Eng. Wargame), which
+is a homegrown system with intricate painted figurines carved from wood. It is currently not known how these traditions – and maybe others as well – have influenced
+each other over the years in Finland.
+Today Finland, a nation of 5.5 million inhabitants, has a vibrant, if small community
+of miniature wargamers and other miniaturing enthusiasts. Miniatures feature prominently in Finland’s biggest annual role-playing game convention Ropecon, with painting
+contests, wargaming tournaments and painting workshops. Miniatures are sold by most
+stores that stock tabletop gaming supplies and there is a dedicated Games Workshop
+store in Helsinki. There is also a thriving online community with several active Finnishspeaking Facebook groups as well as the online forum Sotavasara.net (Eng. Warhammer.
+net). It is difficult to estimate how many miniature wargamers there are in Finland, but
+based on the Finnish Player Barometer data from 2018 (Kinnunen et al., 2018), approximately 2% of the 10-75 year olds in Finland play miniature wargames at least occasionally, and 0.5% play regularly. This would mean a population of approximately 88,000
+people who have at least tried miniature wargaming at some point with a possible population of 22,000 active players in Finland, although we feel these numbers very probably
+overestimate the number of players due to selection bias in the barometer.
+Men and boys play wargames much more actively than women and girls (the distribution of genders in this study does not conflict with the Barometer data). These
+numbers are problematic since all of them are lower than the 3% margin of error in the
+study – and since not all people who do miniaturing play games with them. However,
+the amount of miniature wargamers has stayed relatively constant in the five previous
+Player Barometers conducted since 2009 (Karvinen & Mäyrä, 2009, 2011; Kuronen &
+Koskimaa, 2010; Mäyrä & Ermi, 2014; Mäyrä et al., 2016).
+6
+Methods
+This study is a qualitative exploration of miniaturing, a broader pastime that also
+encompasses miniature wargaming, with the intention of mapping the phenomenon
+and identifying different facets of it. While it most accurately describes the pastime in
+Finland, both author experience and previous research (e.g. Carter et al., 2014) suggest
+that the pastime is similar internationally as well.
+The analysis in this paper is based on a data set that was collected in May 2019. An
+online survey with seven open questions (e.g. “Tell us your miniaturing history?”,
+“Where and when does your miniaturing take place?”) and six specific or demographic
+questions (e.g. age, gender, year when miniaturing started) was distributed through
+social media (Facebook groups, hobby forums, Twitter). The link to the survey garnered considerable interest; it was shared by key actors in the Finnish miniature
+wargaming hobby, such as the largest annual convention Ropecon and the biggest
+hobby store chain Fantasiapelit, as well as being tweeted by prominent people in the
+community. As a result we received a total of 127 answers. The data set is rich, and it is
+obvious that many people spent significant effort in filling out the questionnaire. The
+data corpus from the open questions is 53,000 words long in Finnish, with over 420,000
+characters. 7.9% (N=10) of the respondents identified as women, 91.3% (N=116)
+reported they were men, and 0,8% (N=1) elected not to disclose the information. The
+ages of the respondents ranged from 18 to 56, with a mean of 35.7 and a median of 35.
+As we wanted to focus on adults, the minimum age for participation was 18.
+The range of starting years for miniaturing was very broad, with 1970 being the
+earliest reported year and 2018 the latest. The median year was 1998. In effect this
+meant that our respondents were quite experienced, which most likely contributed to
+the long answers given in the questionnaire. This broad range also gave us some historical perspective into the development of the pastime in Finland. The emphasis on
+the survey was on capturing a detailed map of the miniature pastime. For that reason
+we used the emic vernacular in our survey, referring to the activity as figuilu. This
+Finnish term can be translated as ‘engaging with (miniature gaming) figurines’. In this
+paper we have decided to use the term miniaturing as the English translation of figuilu
+to communicate the vernacular. ‘Figuring’, which would be a more direct translation,
+was deemed too confusing in English.
+We conducted a thematic analysis on our data. Thematic analysis is a flexible
+research method that allows researchers to systematically identify and organize data
+into patterns of meaning, or themes (Braun & Clarke, 2012). We conducted our analysis on the semantic level, focusing on what the respondents explicitly reported. We
+adopted an inductive, exploratory approach as there was scant previous research on
+miniaturing. In other words, rather than following an established framework or theory,
+our codes and themes derived from the data (see Braun & Clarke, 2006, 2012).
+The results of the Finnish language questionnaire were coded using the Atlas.ti 8
+software. We identified and coded elements in the responses where the participants
+either described their miniaturing activities and interests (e.g. “My hobby mainly consist
+of collecting and gaming”) or explicitly defined miniaturing or aspects of it (e.g. “A
+Meriläinen et al
+miniature is not a toy”, “Miniaturing is a way of life”). Similar codes were then combined into broader ones for a final total of 30 codes describing and defining miniaturing.
+As per the instructions by Braun and Clarke (2006, pp. 19–20), these 30 codes were then
+sorted and grouped together with similar ones (e.g. “displaying miniatures at home” and
+“displaying miniatures online” were both interpreted to reflect aspects of a larger whole)
+to create six broader, overarching themes: gaming, crafting, collecting, storytelling, displaying and appreciating, and socializing. These themes are discussed below in detail.
+
+Results: Miniaturing as a Pastime
+In this section we discuss the results of our study. All the quotes are direct quotes from
+the data and they have been translated from Finnish by the authors. Obvious typing or
+spelling errors have not been carried over in the translation. The respondent ID is listed
+at the end of each quote.
+One of the key issues we set out to map, was the shape of miniaturing as a pastime.
+Earlier research both in Australia (Carter, Gibbs, & Harrop, 2014) and in Finland
+(Kankainen, 2016) has shown that even when the focus is on gaming, miniaturing
+should not be understood simply as gaming. Instead it is a collection of interlinked
+practices that are better characterized as a pastime or a hobby. As an obvious example,
+painting miniatures is a key aspect of miniaturing, regardless of whether the miniatures are for gaming purposes or not. Based on the themes we identified in the data,
+miniaturing activities can roughly be divided into six broad, overlapping categories.
+First, there is gaming. Miniatures are often created for the purpose of using them in
+a game, be it miniature wargames or role-playing games. In both cases the game, its
+rules and traditions, frame the activity of crafting miniatures. The miniatures are primarily crafted to fit the game, and in the case of wargames, competition is a common
+element.
+For me the most important part of miniaturing is gaming and the development of gaming
+skills. It’s also essential to play face to face, unlike computer games. Painting, making
+terrain, and putting miniatures together is less important to me. R116
+The emphasis is on gaming. Building, converting, painting, and building scenery come
+with it, but without gaming I wouldn’t do them either. R11
+
+This activity also includes reading and understanding the rules of the games played.
+Interestingly, gaming can also overlap with storytelling (see below) as players familiarise themselves with the game setting by not just reading the rules, but also consuming transmedially connected media such as novels, films, tv series, and comic books
+set in the gaming world (see Booth, 2015), whether fictional or historical. In miniature
+wargames the units are created with specific rules, and the miniatures need to fit the
+concept and statistics of the unit. This means that part of the preparation for the gaming is drafting specifications for new units and optimizing the usefulness of the unit
+according to the rules.
+
+The second category is crafting. We use this term to include all the activities around
+assembling, painting, making, and modifying miniatures. This goes from painting
+existing full figurines to combining parts from different miniatures to create a new
+individual one (typically called “converting”), to sculpting new parts of figurines or
+even full miniatures. In our data, crafting was most often mentioned as the core of the
+miniaturing hobby.
+The core of miniaturing for me lies in modeling, converting, and painting. After this it’s
+important to get your miniatures onto the battlefield to perform heroics and look great as
+a whole. R20
+Little by little during the years the focus of the hobby shifted clearly more to painting
+rather than gaming. I do game weekly, but it’s mostly using old miniatures and most new
+miniatures are painted just for fun to put in the display case. R21
+
+Crafting is not necessarily about crafting a miniature figurine, but also extends to
+creating terrain such as hills or buildings for gaming and displaying purposes as well
+as creating dioramas and vignettes. In all crafting skills are implied. Our respondents
+also mentioned trying out new techniques, styles, and approaches in crafting, often
+picked up from social media, videos, podcasts, and magazines.
+The third category is collecting. A majority of our respondents somehow signalled
+that they had more figurines than they had painted, sometimes even more miniatures
+that they felt they could ever paint. Collecting miniatures is part of the hobby; it
+includes browsing catalogues and stores, hunting for old figurines, ordering miniatures online, browsing online flea markets and eBay, and so on. Sometimes our respondents were looking for specific figurines that had left an impression on them at an
+early age, sometimes they were looking for miniatures for a specific edition of a game
+or representing a particular aesthetic. The criteria for worthwhile miniatures to purchase varied, but collecting, even hoarding, figurines appears common.
+For me miniaturing is primarily collecting. I want good-looking miniatures on the shelf
+and the gaming table. Buying is a large part of miniaturing. Cleaning up, putting together
+and basecoating miniatures is a dreary chore that just needs to be done. I have never liked
+it. R19
+Obviously I cannot ignore the fact that I’m a collector by nature. Books, records, comics,
+apple tree species...little figures suit this frenzy better than well. R97
+
+Fourth, we have storytelling. This is a different kind of crafting endeavour, where
+people create backstories for the miniatures and units. It is common to think up a specific, possibly even quite detailed, history for a miniature. Sometimes this only manifests in the colours chosen in painting, but it can extend to naming and even writing out
+full life stories fitting the fictional world. Sometimes miniatures’ stories are shaped by
+the games they participate in – and the scars the fighting leaves can be made visible in
+the miniature. There is a fair bit of imaginative play and daydreaming happening around
+Meriläinen et al
+miniaturing, for example in planning how to physically craft a miniature. However, this
+play of the imagination is most obvious in the creative creation of life stories for miniatures. While often invisible to others, many respondents reported that this kind of
+activity is what makes miniaturing special and sets it apart from other activities.
+I like making up stories in my mind around the miniatures; I imagine while posing them
+and when I make bases, I think about the environment they live and do battle in. R12
+I’d like for each of my painted miniatures to reflect the personality that I have tried to
+give them. Especially so-called heroes, miniatures that “lead” the troops or are the most
+important tokens on the table, are all named. For me I think it’s more about pride in my
+own work than immersion in the game or a created backstory. However, for the small
+armies that I paint I always make up some kind of a story and background in my mind,
+because it is not only fun but also provides ideas for the army’s paint scheme: are they
+maybe veterans of a long campaign, with plunder mixed with their dirty gear? Or are they
+maybe pawns of evil, whose pale skin and clothing colour reflect their alliance with evil?
+The colour scheme, painting style and the mini’s story, “fluff”, are all tied together. R72
+
+The fifth broad category is displaying and appreciating. Many of our respondents
+reported putting up their miniatures for show in glass cabinets and other showcases in
+their homes. Even more common was taking photographs of the miniatures or dioramas and sharing the images online. Correspondingly, many also reported that they
+followed not only discussions about the hobby, but specifically photographs and videos of other people’s creations, or what has been recognized in earlier research as
+photoplay (see e.g. Heljakka, 2012). According to the responses, partly this watching
+is about learning and bettering one’s own craft, but there is also a major component of
+simply appreciating and enjoying the mastery of others’ creativity and skill. Displaying
+also ties into interactions with non-miniature enthusiasts: according to the respondents, even people who are not otherwise interested in miniatures, such as friends,
+co-workers and family members, often appreciate seeing painted miniatures and comment on the skill involved.
+I often share my end results in FB groups, because it’s nice to get compliments. Not so
+much on the painting, but more on the clever conversions. R5
+I look at other people’s miniatures on Insta[gram] every day and find inspiration and
+ideas for my own work as well. R10
+Miniatures are obviously photographed, and often the working phases as well. I browse
+a lot of other people’s versions of my miniatures before putting them together and
+painting them. It’s sometimes a little demotivating as the web is full of very talented
+individuals, but even more I get excited when I discover cool ideas. R19
+
+The sixth category is socializing around miniaturing. While much of the crafting
+was done as a solitary pursuit, many respondents reported that getting together with
+
+their friends for gaming was the best part of the miniaturing pastime for them.
+Socializing was not limited to gaming, as other reported social activities included
+painting miniatures socially, traveling to events together with fellow hobbyists and
+running gaming clubs. Crafting aspects of miniaturing were sometimes done in the
+same space with other family members.
+In gaming I appreciate the social interaction and friendships made through it. [...] Painting
+is usually done alone, but I share the process both live and digitally with family, friends
+and a broader social media community. The social portion is an important part of my
+current hobby. R21
+Miniaturing for me is very social. I game with by brother, my circle of friends and
+strangers. I’ve also found new friend groups through gaming. I don’t hide my miniaturing geek culture is pop nowadays. R116
+
+There is considerable overlap with the categories. Based on our data, a typical example of the wargaming hobby has several overlaps such as gaming and collecting (collecting particular miniatures or armies explicitly for gaming purposes), gaming and
+socializing (playing miniature games together with friends) and crafting and socializing
+(social painting or scenery building sessions). As another example, sharing photos of
+painted miniatures in online communities is an activity with elements of crafting (in the
+form of painting and photography), displaying and appreciating and socializing (in the
+form of sharing photos and discussing them in online communities).
+The results highlight the nature of miniaturing as a collection of different elements.
+These elements can be analytically separated, but in actual practice they bleed into
+each other. However, these categories clearly show a multitude of ways of engaging
+with miniatures, sometimes starkly contrasting with each other. As an example, an
+almost polar difference exists between miniaturists who collect out of production miniatures for painting and displaying purposes, and role-playing game enthusiasts who
+use miniatures to illustrate tactical combat situations in games. In the former, miniatures are approached as display items, valuable collectibles, and sometimes works of
+art, whereas in the latter the role of miniatures is very much functional: they are first
+and foremost gaming pieces, visually interesting pawns.
+Indeed, according to our respondents, while there are numerous ways to engage
+with miniatures, two approaches are more central than others. This is the dual core to
+miniaturing: Many reported miniature gaming as the most important part of the hobby,
+but it was even more common to see the crafting of the miniatures as the core. While
+gaming may frame the hobby – be it miniature wargaming or role-playing games – for
+most of the respondents the time spent playing was much lower than the time spent on
+preparing to play or other miniature-related pursuits. To illustrate, many reported that
+their focus had shifted from the anticipation of play to enjoying the crafting of the
+miniatures. Some had even stopped playing altogether or had played very seldom in
+the first place.
+
+I play with miniatures quite seldom nowadays, only a few times a year. Once finished, they
+go in the display case, direct to storage or some as gifts. Miniaturing also ties in with a
+general history hobby, on the gaming side I’m nowadays more of a theoretician and a rules
+collector (I have something like two hundred plus rulesets) than a gamer as such. R32
+
+This means that the dual core of miniaturing is object play (crafting, imagining) and
+social play (gaming, displaying) (see Burghardt, 2005). The pastime cannot be reduced
+to either one of these, both are central.
+
+Situating Miniaturing
+Our rich data corpus and analysis reveals a wide variety of ways people engage with
+miniatures. Our respondents contextualized miniaturing in numerous different ways.
+Miniaturing is a hobby, it is crafting, it is playing, and it is gaming. Nowadays there is
+also an important element of sharing on social networks online.
+In this article we have opted to discuss miniaturing primarily with the neutral term
+‘pastime’. Clearly, playing and games are traditionally thought of as (occasional)
+activities of leisure and could therefore be seen as pastimes. As a pastime, playing with
+miniatures may take either toy-play or game-play like forms. In line with Carter,
+Gibbs, and Harrop (2014), who described the miniature game WARHAMMER 40,000
+as a playful pastime, our results suggest that the description is appropriate for miniaturing, i.e. engagement with miniatures, more broadly as well.
+Miniature-related activities are plural, making the situating of miniaturing difficult.
+As the pastime is heterogeneous, it cannot neatly be placed in any one context.
+Miniaturing is a family of interlinked practices, with a dual core of gaming and crafting, that different individuals engage in according to both their preferences as well as
+situational variables such as the availability of time, money, or social connections.
+Furthermore, there are a number of contentious areas. It is, for example, common to
+describe miniaturing as both a social and a solitary activity, memorable gaming nights
+with friends contrasting with solitary painting sessions, repeatedly described as “meditative” or “therapeutic”. The miniatures themselves are seen as game pieces, implements of play, collectibles, decorative items, and a medium of self-expression.
+Interestingly, our respondents characterize them as both toys and not-toys, the latter
+view being more common.
+The social side is a big part of my enjoyment of gaming, but putting miniatures together
+and painting is primarily my private hobby that I have at times shared with my companion
+and on some occasions also with my children. R23
+Gaming is play. But miniatures are not toys. R38
+I guess after all it’s a certain type of play. Playing is a lifelong process, the toys just
+become nicer. Motorcycles and the like are toys as well. R34.
+
+Toys are often defined solely as objects related to childhood, not as playthings for
+all ages (Heljakka, 2013), marking both the toy objects and play as unfitting, even
+shameful for adults. Toy play, as a type of object play (see Smith, 2010), has been
+traditionally associated with children’s use of various physical materials in their play.
+Nevertheless, there is evidence that mature players engage in various ways with physical objects meant for playing purposes, such as dolls, action figures and figurines. This
+play that includes personalization, role-play and aspects of storytelling can be understood both as world-building, as well as world-play (Heljakka & Harviainen, 2019).
+Just as there is tension between toys and not-toys, there is tension between the
+framings of ‘gaming’ and ‘playing’. Many respondents reported playing, in contrast to
+gaming, with miniatures. This took different forms such as imagining, making up stories, setting up miniatures for photography, and generally adapting a playful state of
+mind (see Heljakka, 2013, 2018; Stenros, 2015) when engaging with miniatures. On
+the other hand, some respondents stressed that they were gaming, not playing, and this
+framing was connected to seeing miniatures as game pieces, not toys. The element of
+competition was present in some of these responses, suggesting a traditional distinction between ludus, or structured, rule-constrained play, and paidia, or playful and
+more free-form play (Caillois, 2001). Some respondents mentioned using miniatures
+to play with their children, sometimes with the hope of getting their children interested
+in miniatures in general.
+This friction between toys and not-toys as well as games and play is particularly
+interesting, as it has a long history. Wargaming has been conducted with ‘toy soldiers’,
+yet done by adults engaged in a serious pursuit. These tensions perhaps tell us more
+about the societal framing and acceptance of adult play (see e.g. Heljakka, 2016;
+Riezler, 1941), than about wargaming or miniaturing, but it continues to frame the way
+miniaturing is thought of and talked about to this day. Some respondents mentioned
+not discussing their miniaturing publicly for fear of mockery especially when they
+were younger. A few respondents reported currently keeping their miniaturing mostly
+private, but motives for this varied. Many respondents mentioned situations in which
+they had received compliments and praise from non-miniaturists. Interestingly one
+respondent specifically made a distinction between their miniaturing hobby and their
+toy hobby, with the former being highly social and the latter much more private.
+It is noteworthy, that while gaming featured prominently in our data, our respondents did not position their miniaturing pastime as a continuation of a centuries long
+practice of wargaming. Instead, and perhaps unsurprisingly, our respondents situated
+themselves in relation to the post-role-playing game phase of miniature wargaming,
+where fantasy is a key component. Imaginative play in a coherent fantasy story-world
+(see Saler, 2012) appears to be an important ingredient in the pastime. This brings
+miniaturing, for many participants, closer to world-building, storytelling, and fan
+practices such as fan fiction. Indeed, perhaps the separation of playing with toys from
+the playing of games is not useful, since these practices exist on a continuum (cf.
+Burghardt, 2005). Rules emerge in free-form play and rule-based game play interlinks
+with creative endeavors. Miniaturing can be argued to resemble world-building or
+world-play that includes aspects of toy-play and game-play (see Heljakka &
+
+Harviainen, 2019), as well as transmedia-based play patterns inspired by other media
+products (see Booth, 2015).
+The strong prominence of crafting elements in miniaturing is an important result.
+The practice of converting (i.e. customizing) miniatures clearly resembles customization of character toys, such as dolls or action figures. A trend connecting with the doit-yourself (DIY) and maker cultures, the customization and personalisation of toys
+represents an important direction of creative play practices over the past years (see
+Godwin, 2015; Heljakka, 2016). Many players want to personalise their dolls through
+physical interventions, such as modifying facial features through painting or changing
+the hairdo by ‘re-rooting’ hair. Toys are in this way given a new, individual, and customised appearance as a result of the player’s handicraft. Consequently, creative
+manipulation of toys may build a player’s, or a miniature enthusiast’s, crafting skills
+(see e.g. Heljakka, 2015; Hills, 2010). Customizing miniatures can also be seen as an
+expression of mimetic fandom (Hills, 2010) with both transformative elements, such
+as when a miniaturist creates a novel physical rendition of a character described in
+fiction or reinterprets an existing model or character, and affirmative elements, such as
+accurately replicating historical or fictional uniforms and gear or painstakingly reproducing a piece of two-dimensional artwork with miniatures (see Godwin, 2015).
+In our data, the most common way of talking about miniaturing in a broad fashion
+was as a ‘hobby’. This connects miniaturing activities with similar endeavours of
+organized ‘toy-enthusiasts’. For example, people involved in toy-related associations
+do not typically address their activity with toys as play, or even as necessarily collecting, but as a hobby (Heljakka, 2016). Hobbying comes out as a more structured and
+goal-driven form of leisure. The Industrial Revolution made way to leisure time and in
+this way opened a larger space in Western life for hobbies, ‘‘the work-like play’’
+(Maines, 2009). When hobbying with miniatures, the respondents of our study showed
+a tendency to have articulated aims in relation to their specific activities. These goals
+connected, for example, to the painting of miniatures or competitive gaming.
+Finally, the element of collecting, even hoarding, is so widespread in miniaturing,
+that it cannot be ignored. This observation finds purchase in previous literature on
+fandom and toy collecting, in which it has been argued that not only can collecting in
+itself be a creative act (Hills, 2009) or an expression of playfulness (Heljakka, 2017),
+but that an individual’s collection identifies their level of fandom (Geraghty, 2014) and
+defines their qualities as a player (Heljakka, 2017). It is apparent from our data, that
+the reasons for accumulating miniatures go not only beyond simple utilitarian uses,
+but also more complex goals determined by collecting or hoarding. According to our
+data, miniatures have value as commercial products, collectibles, game character representations, and even as pieces of art. For some respondents, the cost of miniatures
+was prohibitive and limited their participation in the activity, whereas others had hundreds, if not thousands, of unpainted miniatures, which they assumed they might never
+get around to painting. A deeper analysis of this dimension of the pastime, i.e. collecting and consumer behaviour, will be presented in a future article.
+
+Conclusions
+The data presented in this paper illustrates how miniaturing is a multifaceted activity
+with a dual core. Gaming with miniatures and crafting new ready figurines, scenery,
+and dioramas are central to miniaturing, but collecting, storytelling, socializing as well
+as displaying and appreciating are also important parts of the pastime. The pastime can
+be situated and framed in numerous fashions: for example as gaming, as playing, as
+toying, and as crafting. None of these framings apply to all of our respondents, but all
+of them are relevant to some subsection. Some of them are actively contested, such as
+viewing miniaturing as playing with toys, but even the contested approaches seem like
+fertile angles of approach in future research.
+The findings are based on Finnish qualitative data. This, as well as the self-selected
+sample, needs to be minded when considering the generalizability of the results.
+Nevertheless, based on previous research, personal experience and numerous discussions with miniature enthusiasts from both Finland and other countries, we believe
+that our study is an accurate, if limited, exploration of miniaturing. By examining the
+various aspects of miniaturing and situating them in relation to concepts such as play,
+game, and hobby, our study lays essential groundwork for further exploration of both
+our data and the broader phenomenon.
+Declaration of Conflicting Interests
+The authors declared no potential conflicts of interest with respect to the research, authorship,
+and/or publication of this article.
+
+

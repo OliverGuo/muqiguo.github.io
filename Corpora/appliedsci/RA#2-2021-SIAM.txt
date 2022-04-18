@@ -1,0 +1,1589 @@
+Affinely Adjustable Robust
+Linear Complementarity Problems
+
+arXiv:2008.05784v3 [math.OC] 22 Oct 2021
+
+Christian Biefel, Frauke Liers, Jan Rolfes, Martin Schmidt
+Abstract. Linear complementarity problems are a powerful tool for modeling many practically relevant situations such as market equilibria. They also
+connect many sub-areas of mathematics like game theory, optimization, and
+matrix theory. Despite their close relation to optimization, the protection of
+LCPs against uncertainties—especially in the sense of robust optimization—is
+still in its infancy. During the last years, robust LCPs have only been studied
+using the notions of strict and Γ-robustness. Unfortunately, both concepts
+lead to the problem that the existence of robust solutions cannot be guaranteed. In this paper, we consider affinely adjustable robust LCPs. In the latter,
+a part of the LCP solution is allowed to adjust via a function that is affine
+in the uncertainty. We show that this notion of robustness allows to establish
+strong characterizations of solutions for the cases of uncertain matrix and vector, separately, from which existence results can be derived. Our main results
+are valid for the case of an uncertain LCP vector. Here, we additionally provide sufficient conditions on the LCP matrix for the uniqueness of a solution.
+Moreover, based on characterizations of the affinely adjustable robust solutions, we derive a mixed-integer programming formulation that allows to solve
+the corresponding robust counterpart. If, in addition, the certain LCP matrix
+is positive semidefinite, we prove polynomial-time solvability and uniqueness
+of robust solutions. If the LCP matrix is uncertain, characterizations of solutions are developed for every nominal matrix, i.e., these characterizations
+are, in particular, independent of the definiteness of the nominal matrix. Robust solutions are also shown to be unique for positive definite LCP matrix
+but both uniqueness and mixed-integer programming formulations still remain
+open problems if the nominal LCP matrix is not positive definite.
+
+1. Introduction
+Linear complementarity problems (LCPs) are an important tool both in mathematical theory as well as in applied mathematics. On the one hand, they serve as
+a bridge between mathematical ﬁelds such as optimization, game theory, and matrix theory—on the other hand, they provide one of the main modeling concepts for
+market equilibrium problems in energy applications like power or gas networks. For
+an overview of these connections, we refer to the seminal textbook [13]. Most likely,
+its strongest connection can be drawn to quadratic programming (QP) via the fact
+that the Karush–Kuhn–Tucker (KKT) conditions of many QPs can be represented
+as LCPs, which is also the key aspect for the applicability of LCPs in contexts such
+as energy markets; see, e.g., [15–17, 25].
+One very active sub-area of mathematical optimization in the last decades was
+and is optimization under uncertainty, i.e., the study of optimization problems in
+which all or a certain number of parameters of the model are unknown or subject
+to perturbations. In order to hedge against uncertainties, two major approaches
+Date: October 25, 2021.
+2010 Mathematics Subject Classification. 90C33, 91B50, 91A10, 90Cxx, 90C34.
+Key words and phrases. Linear Complementarity Problems, Adjustable Robustness, Robust
+Optimization, Existence, Uniqueness.
+1
+
+2
+
+C. BIEFEL, F. LIERS, J. ROLFES, M. SCHMIDT
+
+have been established: stochastic optimization (see, e.g., [8, 18]) and robust optimization (see, e.g., [3, 5, 30]). While the former assumes knowledge about the
+distributions of the uncertain parameters and considers, e.g., the maximization of
+expected returns or the minimization of expected costs, the latter makes no distributional assumptions but protects against the worst-case uncertainty realization
+within a prescribed uncertainty set.
+Although the relation between LCPs and optimization is pretty close, comparably few research papers focus on LCPs under uncertainty. Most of the related
+papers tackle the stochastic case and consider the minimization of the expected
+residual gap function of the LCP; see, e.g., [10–12, 23] and the references therein.
+In contrast to stochastic LCPs, the robust treatment of LCPs under uncertainty is
+still in its infancy. To the best of our knowledge, the ﬁrst paper on robust LCPs
+is [31], in which the authors consider strict robustiﬁcations of LCPs. The same
+concept has been studied in [32, 33]. In these contributions, the authors consider
+strictly robust counterparts of uncertain LCPs for the case of diﬀerent uncertainty
+sets such as box or ellipsoidal uncertainties. In particular, these papers focus on
+tractability of the corresponding robust counterparts. The results are applied to the
+case of Cournot–Bertrand equilibria in power networks in [24]; see also [9, 20] for
+related studies of Nash–Cournot and perfect competition equilibria in comparable
+settings.
+The concept of strict robustness in optimization has received criticism due to
+the high degree of conservatism of the solutions that it may deliver. Consequently,
+several less conservative notions of robustness have been developed during the last
+twenty years; see, e.g., [6, 7, 29] for Γ-robustness, [14] for light robustness, [3, 4,
+34] for adjustable robustness, or [2] for deciding robustness in a fully adjustable
+setting with an empty ﬁrst stage. Following the idea of studying less conservative
+notions of robustness, the concept of Γ-robustness has been applied to LCPs in
+[22] for the case of ℓ1 -and box-uncertainty sets and in [21] for the case of ellipsoidal
+uncertainties. Applications of Γ-robust LCPs in the area of power markets or traﬃc
+equilibrium problems can be found in [9, 20, 21]. To the best of our knowledge, the
+given and rather short list of papers on robust LCPs is complete.
+Besides the study of algorithms for their solution, the most classic topic regarding LCPs is the consideration of characterizations, existence, and uniqueness of
+solutions. These topics closely link the ﬁeld to the area of matrix classes in applied
+linear algebra; see again [13] and the many references therein. Unfortunately, almost all the papers on robust LCPs cited above make the observation that strong
+characterizations and, thus, existence of robust solutions to LCPs cannot be ensured because the requirement that a point is a complementarity solution for all
+realizations of uncertainty is very strong. This observation is made in [32] for strict
+robustness and in [21, 22] for Γ-robustness. As a remedy, the authors study the
+LCP’s quadratic gap function and consider the existence and uniqueness of solutions or the tractability of problems in which the complementarity condition is not
+strictly demanded but in which its violation is penalized in the LCP’s gap function.
+Thus, there is one major gap in the existing literature on robust LCPs, namely:
+Is there a robustification concept that (i) allows to derive strong
+characterizations of solutions of the uncertain LCP itself—instead
+of the LCP’s gap formulation—and that (ii) allows to establish nontrivial robust solutions of an uncertain LCP?
+To the best of our knowledge, only the concepts of strict and Γ-robustness have
+been studied for robust LCPs. Both do not satisfy the conditions in the question
+above.
+
+AFFINELY ADJUSTABLE ROBUST LINEAR COMPLEMENTARITY PROBLEMS
+
+3
+
+In order to cure this, it is necessary to go beyond single-stage robustness
+concepts—in particular, to go to two-stage robust models. Thus, in this paper,
+we carry over the concept of adjustable robustness to the ﬁeld of LCPs under box
+uncertainty. The main rationale of doing so is that the split of variables into hereand-now as well as wait-and-see variables that can be adjusted to the uncertainty
+indeed allows to characterize robust LCP solutions and to establish non-trivial solutions. In adjustable-robust optimization, one usually ﬁrst needs to specify the class
+of functions that can be used to adjust the wait-and-see variables in dependence
+of the uncertainty. The easiest functions to tackle are aﬃne functions. Although
+this may be a rather restrictive choice, it is a natural modelling approach that can
+lead to algorithmically tractable robust counterparts [1, 26, 28]. It already gives
+us enough ﬂexibility to derive strong characterizations of robust LCP solutions as
+well as existence results. Thus, we ﬁrst focus on aﬃne adjustability in this paper
+and postpone more complicated uncertainty-dependent decision rules to our future
+work. The class of adjustable robust LCPs is introduced in Section 2 and an illustrating example is given in Section 3. Afterward, we consider the cases of uncertain
+LCP vector and LCP matrix separately. Our main results are given in Section 4
+for the case of uncertain LCP vector. We derive strong characterizations of robust
+solutions, from which an existence result is derived. The used characterizations do
+not require any further assumptions on the LCP matrix. This holds both for the
+case of full- and lower-dimensional uncertainty sets. Moreover, we illustrate exemplarily the existence of non-trivial robust LCP solutions. Uniqueness of solutions is
+shown for the case of positive (semi-)deﬁnite LCP matrix, in which we also obtain
+polynomial-time solvability. We additionally present a mixed-integer programming
+formulation that can be used to compute aﬃnely adjustable robust LCP solutions
+by using standard solvers. Characterizations of solutions can also be derived in
+the case of uncertain LCP matrix; see Section 5. Here, uniqueness and tractability
+are shown for the case of positive deﬁnite nominal LCP matrix, whereas both remain open problems for arbitrary matrices. The paper closes with some concluding
+remarks and a brief discussion of possible topics of future work in Section 6.
+2. Problem Statement
+Given a matrix M ∈ Rn×n and a vector q ∈ Rn , the linear complementarity
+problem LCP(q, M ) is the problem to ﬁnd a vector z ∈ Rn satisfying the conditions
+z ≥ 0,
+
+M z + q ≥ 0,
+
+z ⊤ (M z + q) = 0
+
+(1)
+
+or to show that no such vector exists. In the following, we use the standard ⊥notation and abbreviate (1) as
+0 ≤ z ⊥ M z + q ≥ 0.
+
+(2)
+
+In real-world applications, the parameters M and q may be uncertain. In order
+to model this, we deﬁne uncertainty sets UM ⊆ Rk1 as well as Uq ⊆ Rk2 with
+suitable k1 and k2 . We then consider M (ζ) and q(u) with ζ ∈ UM and u ∈ Uq . The
+speciﬁc deﬁnition of the uncertainty sets will be given in the corresponding sections.
+Since these deﬁnitions will be qualitatively diﬀerent for M and q we choose to use
+a Greek letter to parameterize M and a Latin letter to parameterize q.
+We follow the robust paradigm for dealing with such uncertain parameters. In
+the strictly robust model, we want to ﬁnd a vector z ∈ Rn that fulﬁlls the conditions
+in (2) for every possible realization of uncertainty (ζ, u) ∈ UM × Uq , i.e.,
+0 ≤ z ⊥ M (ζ)z + q(u) ≥ 0
+
+for all
+
+(ζ, u) ∈ UM × Uq .
+
+We call such a vector z a strictly robust solution of the uncertain LCP. This
+approach is discussed in [32, 33]. The Γ-robust approach is discussed in [21, 22].
+
+4
+
+C. BIEFEL, F. LIERS, J. ROLFES, M. SCHMIDT
+
+The main conceptual problem with strictly as well as Γ-robust LCPs is that one
+usually cannot prove the existence of a solution.
+The goal of this paper is to study the well established and typically less conservative approach of (aﬃnely) adjustable robustness in the context of LCPs. For
+adjustable robustness, a part of the solution is allowed to adapt to a given realization of uncertainty. The task thus is to ﬁnd a vector r ∈ Rn , which can be adjusted
+for all uncertainties (ζ, u) ∈ UM × Uq by a vector y(ζ, u) so that z(ζ, u) := r + y(ζ, u)
+satisﬁes
+0 ≤ z(ζ, u) ⊥ M (ζ)z(ζ, u) + q(u) ≥ 0
+
+for all
+
+(ζ, u) ∈ UM × Uq .
+
+(3)
+
+We call such a point z(ζ, u) an adjustable robust solution of the uncertain LCP.
+In many applications, further restrictions need to be imposed on the adjustable
+solution. For instance, one usually has to distinguish between adjustable and nonadjustable, or “here-and-now”, variables. To this end, we introduce a parameter h ∈
+{0, . . . , n} and require that the ﬁrst h entries of y(ζ, u) are zero. This means that
+the ﬁrst h entries are non-adjustable here-and-now decisions.
+In general, the adjustable robust approach without further assumptions on the
+adaptability leads to intractable problems; see, e.g., [4], where this is shown for the
+easiest possible case of uncertain linear programs. In this paper, we impose an assumption that is often used in adjustable robustness. Namely, we restrict ourselves
+to consider aﬃnely adjustable robust solutions, i.e., we restrict the solutions to be
+of the form
+z(ζ, u) = D1 ζ + D2 u + r
+
+with
+
+D1 ∈ Rn×k1 , D2 ∈ Rn×k2 , r ∈ Rn .
+
+We call an aﬃne function z(ζ, u) = D1 ζ + D2 u + r solving Problem (3) an aﬃnely
+adjustable robust (AAR) solution of the uncertain LCP. Hence, we search for aﬃne
+decision rules given by D1 , D2 , and r that specify how to react to a given realization
+of uncertainty. To model h here-and-now variables, we w.l.o.g. require that the ﬁrst
+h rows of D1 and D2 are zero.
+We close this section by briefly introducing some notation that is required in
+the remainder of this paper. Let A ∈ Rn×n , b ∈ Rn , and index sets I, J ⊆ [n] :=
+{1, . . . , n} be given. Then, AI,J ∈ R|I|×|J| denotes the submatrix of A consisting
+of the rows indexed by I and the columns indexed by J. Moreover, bI denotes the
+subvector with components speciﬁed by entries in I. If I = J, we also write AI
+instead of AI,I . For i, j ∈ [n] let δij be the Kronecker delta, i.e., δij = 1 if i = j
+and δij = 0 otherwise. Finally, the identity matrix of size k × k is denoted by Ik .
+3. Illustrating Example: Adjustable Robust Energy Market
+Equilibrium Modeling
+In this section, we consider a stylized energy market equilibrium problem to illustrate the applicability of adjustable robustness in a practically relevant application
+of market modeling. To this end, we start with a simple market model based on
+the one given in [13] and we also follow the notation used there. First, let the
+production sector of our energy market model be given by the linear program
+min
+
+x∈Rn
+
+c⊤ x
+
+s.t. Ax ≥ b,
+
+(4a)
+(4b)
+
+Bx ≥ r∗ ,
+
+(4c)
+
+x ≥ 0,
+
+(4d)
+
+with vectors c ∈ Rn , b ∈ Rm , r∗ ∈ Rk as well as matrices A ∈ Rm×n and B ∈ Rk×n .
+The variable vector x models production levels that should be cost-minimal but that
+also need to satisfy certain technological constraints (4b) and demand satisfaction
+
+AFFINELY ADJUSTABLE ROBUST LINEAR COMPLEMENTARITY PROBLEMS
+
+5
+
+constraints (4c). The demand r∗ itself depends on market prices p∗ , which is
+modeled by an aﬃne demand function, i.e.,
+r∗ = Dp∗ + d with
+
+D ∈ Rk×k , d ∈ Rk .
+
+In many applications, one assumes that the matrix D is negative semi-deﬁnite to
+model that demand is non-increasing in dependence of the prices. For diagonal
+matrices D this then leads to monotonically decreasing and univariate demand
+functions, which is a very classic economic modeling. As usual in standard microeconomic settings, we need the additional equilibrating condition p∗ = π ∗ with π ∗
+being the optimal dual multiplier of the demand constraint (4c). By using this
+condition as well as the (necessary and suﬃcient) Karush–Kuhn–Tucker (KKT)
+conditions of Problem (4), the market equilibrium can be modeled using the LCP
+0 ≤ x ⊥ c − A⊤ λ − B ⊤ p∗ ≥ 0,
+0 ≤ λ ⊥ −b + Ax ≥ 0,
+0 ≤ p∗ ⊥ −Dp∗ − d + Bx ≥ 0,
+which is obtained by simplifying the KKT complementarity conditions and solving
+for r∗ and π ∗ . The dual multiplier of the technology constraint (4b) is denoted
+by λ. The corresponding LCP data is given by
+ 
+
+
+ 
+x
+0 −A⊤ −B ⊤
+c
+z = λ  , M =  A
+0
+0  , q =  −b  .
+p
+−d
+B
+0
+−D
+
+If this rather general market equilibrium problem is considered as an abstract setting for an energy market, adjustable robustness in the context of LCPs shows up
+rather naturally. Here, the electricity demand r∗ depends on prices but also has a
+price-insensitive part d. This vector can, for instance, be estimated from historical
+data. However, the demand parameter d is uncertain due to, e.g., unknown future
+weather conditions, which leads to an uncertain LCP vector q = q(u) with u in some
+properly chosen uncertainty set Uq . These uncertainties in demand can usually be
+tackled by adjustments in production, i.e., not the “nominal” market equilibrium
+production is used but production is adjusted in dependence of the realization of
+demand uncertainty. Since, on the other hand, certain generators such as wind
+or solar power plants cannot be adjusted as easily as, e.g., coal power plants, this
+additionally leads to a rather natural split between adjustable and non-adjustable
+LCP variables. Note that for D being negative semideﬁnite, the bisymmetric matrix M is positive semideﬁnite. Thus, this practically relevant example belongs to
+the class of robust LCPs for which we present the strongest theoretical results in
+this paper—namely robust LCPs with uncertain vector q and positive semi-deﬁnite
+matrix M .
+Similarly, uncertainty in the coeﬃcients of the (technological as well as demand
+satisfaction) constraints leads to an uncertain LCP matrix, where again some part
+of the solution corresponds to variables that can be adjusted, the other to those
+that are non-adjustable.
+4. Uncertainty in q
+Throughout this section we assume that the matrix M is ﬁxed and not aﬀected by
+uncertainty. For a given nominal vector q̄ ∈ Rn and an uncertainty set U = Uq ⊆ Rn ,
+we deﬁne q(u) := q̄ + u for every u ∈ U. The uncertain LCP (3) then reads
+0 ≤ z(u) ⊥ M z(u) + q(u) ≥ 0
+
+for all
+
+u ∈ U.
+
+(5)
+
+6
+
+C. BIEFEL, F. LIERS, J. ROLFES, M. SCHMIDT
+
+We are interested in determining AAR solutions of (5) of the form z(ζ, u) = z(u) =
+Du + r with D ∈ Rn×n and r ∈ Rn . To this end, we consider a box uncertainty set
+U := {u ∈ Rn : − ūi ≤ ui ≤ ūi }
+that is, w.l.o.g., centered around zero. Moreover, we split the index set [n] into the
+set of uncertain entries
+U :={i ∈ [n] : ūi > 0},
+and the set of certain entries
+S :={i ∈ [n] : ūi = 0},
+i.e., [n] = U ∪ S. For notational reasons we do not remove the columns in D
+corresponding to S but ﬁx D·,S = 0.
+Recall that we require D[h],· = 0 in an AAR solution, since the ﬁrst h variables
+are non-adjustable. For a given aﬃne function z(u) = Du + r, we deﬁne the sets
+I := {i ∈ [h] : ri 6= 0},
+J := {i ∈ [n] \ [h] : ri 6= 0},
+K := {i ∈ [n] : ri 6= 0} = I ∪ J,
+N := {i ∈ [n] : ri = 0} = [n] \ K.
+The assumption that the uncertainty is centered around zero immediately leads to
+the following key observations.
+Observation 1. Let z(u) = Du + r be an AAR solution of (5). Then, r is a
+solution of the nominal LCP(q̄, M ).
+Observation 2. Let z(u) = Du + r be an AAR solution of (5). Since z(u) ≥ 0
+holds for all u ∈ U, the inclusion
+{i ∈ [n] : Di,U 6= 0} ⊆ J
+holds because, otherwise, there would exist an index i ∈
+/ J and an uncertainty
+u′ ∈ U with zi (u′ ) = Di,· u′ < 0.
+These observations and notations will be helpful to derive the results in the
+following sections.
+4.1. Characterization and Existence of Solutions. In this section, we show
+some general properties and characterizations of AAR solutions. In Lemma 2, we
+derive a system of equations that has to be satisﬁed by every AAR solution. This
+system of equations will be used to obtain more speciﬁc characterizations under
+further assumptions on the uncertainty set. Moreover, it admits an algorithmic
+approach to compute an AAR solution, which is addressed in Section 4.2.
+First, we prove a basic lemma that reformulates the constraints in the uncertain
+LCP.
+Lemma 1. Let z(u) = Du + r and assume D[h],· = 0. Then, the function z(u) is
+an AAR solution of (5) if and only if
+zK (u) ≥ 0
+
+for all
+
+u ∈ U,
+
+(6a)
+
+(M z(u) + q(u))K = 0
+
+for all
+
+u ∈ U,
+
+(6b)
+
+(M z(u) + q(u))N ≥ 0
+
+for all
+
+u ∈ U.
+
+(6c)
+
+Proof. We show that the conditions in (6) are equivalent to the uncertain LCP. By
+deﬁnition of N and Observation 2, zN (u) = 0 holds for all u ∈ U. Thus, (6a) is
+
+AFFINELY ADJUSTABLE ROBUST LINEAR COMPLEMENTARITY PROBLEMS
+
+7
+
+equivalent to z(u) ≥ 0 for all u ∈ U. If z(u) satisﬁes (6b) and (6c), this implies
+M z(u) + q(u) ≥ 0 for all u ∈ U. Additionally, for all u ∈ U we have
+z(u)⊤ (M z(u) + q(u)) = zK (u)⊤ (M z(u) + q(u))K + zN (u)⊤ (M z(u) + q(u))N = 0,
+where the last equality is due to (6b) and zN (u) = 0. Thus, z(u) satisﬁes (5).
+It remains to show that (6b) is a necessary condition. To this end, let z(u) =
+Du + r be an AAR solution. As noted before, zK (u) ≥ 0 holds for all u ∈ U. Let
+us now assume that there is an index i ∈ K such that there exists u′ ∈ U with
+zi (u′ ) = 0. This implies that u′ minimizes zi (u) = Di,· u + ri . Since Di,· u + ri is an
+aﬃne function in u, the minimum is attained at the boundaries, i.e.,
+(
+ūj ,
+if Di,j < 0,
+u′j =
+−ūj , if Di,j > 0,
+for all j with Di,j 6= 0. As rK > 0, we obtain zK (u) > 0 for all u contained in
+the relative interior relint(U). Furthermore, the uncertain LCP conditions imply
+(M z(u) + q(u))K = 0 for all u ∈ relint(U), which immediately yields (6b) since
+(M z(u) + q(u))K is an aﬃne function in u as well.
+
+In the following, we use Condition (6b) to derive characterizations and properties
+of AAR solutions. In Lemma 2, we reformulate the LCP conditions and obtain a
+system of equations that needs to be satisﬁed by D and r.
+Lemma 2. The function z(u) = Du + r satisfies (6b) if and only if D and r satisfy
+the system of equations
+MK∩S,J DJ,U = 0,
+
+(7a)
+
+MK∩U,J DJ,K∩U = −IK∩U ,
+
+(7b)
+
+MK∩U,J DJ,N ∩U = 0,
+
+(7c)
+
+MK rK = −q̄K .
+
+(7d)
+
+Proof. Let i ∈ K. We show that (M z(u) + q(u))i = 0 holds for all u ∈ U if and
+only if (7) are satisﬁed. We have
+(M z(u) + q(u))i = Mi,· z(u) + qi (u)
+= Mi,· Du + Mi,· r + q̄i + ui
+= Mi,J DJ,· u + Mi,· r + q̄i + ui ,
+where the last equality follows from Di,· = 0 for all i ∈
+/ J by Observation 2. If
+i ∈ K ∩ S, we have ui = 0 and thus
+(M z(u) + q(u))i = Mi,J DJ,· u + Mi,· r + q̄i = 0
+holds for all u ∈ U if and only if
+Mi,J DJ,U = 0 and Mi,· r = −q̄i .
+If i ∈ K ∩ U ,
+(M z(u) + q(u))i = Mi,J DJ,· u + Mi,· r + q̄i + ui = 0
+holds for all u ∈ U if and only if
+Mi,J DJ,j = −δij
+Mi,· r = −q̄i .
+
+for all j ∈ U,
+
+
+If the uncertainty set U is full-dimensional, i.e., S = ∅, the system of equations (7)
+is rich enough to derive a complete characterization of an AAR solution as we will
+show in the following. To this end, we ﬁrst assume S ⊆ [h], meaning that only
+the entries of q(u) corresponding to the non-adjustable variables might be certain.
+
+8
+
+C. BIEFEL, F. LIERS, J. ROLFES, M. SCHMIDT
+
+Thus, the entries of q(u) corresponding to adjustable variables are all uncertain.
+Under this assumption, we derive conditions that are equivalent to (7a)–(7c) in the
+following lemma.
+Lemma 3. Let S ⊆ [h]. Then, D and r satisfy (7a)–(7c) if and only if they satisfy
+the conditions
+DJ = −MJ−1 ,
+DJ,i = 0
+
+for all i ∈ N ∩ U,
+
+(8a)
+(8b)
+
+I ∩ U = ∅,
+
+(8c)
+
+MI,J = 0.
+
+(8d)
+
+Proof. We ﬁrst note that S ⊆ [h] implies J ⊆ U and thus J ⊆ K ∩ U . Let D
+and r satisfy (7a)–(7c). We show that they satisfy (8a)–(8d). Since J ⊆ K ∩ U ,
+(7b) implies MJ DJ = −IJ and thus DJ = −MJ−1 , which is (8a). Furthermore, (7b)
+and (7c) imply MJ DJ,i = 0 for all i ∈ (I ∪N )∩U . Since MJ has full rank, it follows
+DJ,i = 0 for all i ∈ (I ∪N )∩U and thus (8b) holds as well. To show (8c), we assume
+that there exists an i ∈ I ∩ U . However, I ⊆ K and (7b) imply Mi,J DJ,i = −1 and
+thus DJ,i 6= 0, contradicting the previously proved statements. From I ∩ U = ∅ and
+S ⊂ [h] it follows I = K ∩ S and thus (7a) implies MI,J DJ,U = 0. In particular,
+MI,J DJ = 0 holds. Since rank(DJ ) = |J|, from MI,J DJ = 0 we obtain MI,J = 0
+and thus (8d).
+Now, let D and r satisfy (8a)–(8d). By direct insertion, it is easy to verify that D
+and r satisfy (7a)–(7c).
+
+We can now combine Lemma 3 and Condition (7d) in Lemma 2 to obtain the
+desired results for the case of full-dimensional uncertainty sets, i.e., for S = ∅. The
+ﬁrst one states that all non-adjustable variables necessarily need to have a value of
+zero.
+Corollary 1. Let S = ∅ and suppose that z(u) = Du+r is an AAR solution of (5).
+Then, all non-adjustable variables are zero, i.e., I = ∅ and K = J.
+Moreover, we can use the characterizations of D and r from Lemma 2 and
+Lemma 3 to obtain a complete characterization of AAR solutions for the case of
+full-dimensional uncertainty sets.
+Theorem 1. Let S = ∅. Then, z(u) = Du + r is an AAR solution of (5) if and
+only if D and r are given by
+DJ = −(MJ )−1 ,
+−1
+
+rJ = −(MJ )
+
+q̄J ,
+
+DJ,i = 0, Di,· = 0 for all i ∈
+/ J,
+ri = 0 for all i ∈
+/J
+
+and if the following conditions are fulfilled:
+(a) MJ is invertible,
+(b) −(MJ )−1 qJ (u) ≥ 0 for all u ∈ U,
+(c) −MN,J (MJ )−1 qJ (u) + qN (u) ≥ 0 for all u ∈ U.
+The last theorem establishes a one-to-one correspondence between an AAR solution and the set of indices of nonzero variables J. Hence, to compute an AAR
+solution, it suﬃces to ﬁnd a set J that fulﬁlls the conditions (a)–(c) of the theorem. Moreover, this characterization also allows to establish a ﬁnite and compact
+existence result for AAR solutions.
+Corollary 2. Let S = ∅. For every J ⊆ [n] \ [h], for which MJ is invertible, we
+define
+AJi,j := −|(MJ−1 )i,j ūj |
+
+AFFINELY ADJUSTABLE ROBUST LINEAR COMPLEMENTARITY PROBLEMS
+
+9
+
+for all i, j ∈ J and
+
+J
+:= −|Mi,· (MJ−1 )·,j ūj |
+Ci,j
+for all i ∈ N, j ∈ J. If there exists a subset J ⊆ [n] \ [h] such that MJ is invertible
+and
+X
+AJJ,j − (MJ−1 )q̄J ≥ 0,
+j∈J
+
+X
+
+J
+CN,j
+
+− ūN − MN,J (MJ−1 )q̄J + q̄N ≥ 0,
+
+j∈J
+
+holds, then there exists an AAR solution.
+The uniqueness, however, of an AAR solution is not given in general as shown
+in the following example, which also illustrates the existence of non-trivial AAR
+solutions.
+Example 1. Consider the uncertain LCP with parameters
+
+
+
+
+4 10
+−100
+M=
+, q̄ =
+, U = [−1, 1]2 ,
+1 2
+−22
+
+h = 0.
+
+There are two diﬀerent AAR solutions corresponding to diﬀerent index sets. For
+J1 = {1}, we obtain
+
+ 
+ 1
+25
+−4 0
+, r=
+D=
+0 0
+0
+and for J2 = {2}, we have
+
+
+ 
+0 0
+0
+D=
+,
+r
+=
+.
+0 − 21
+11
+
+Note that the matrix M is not positive semideﬁnite. We later show in Section 4.3
+that being positive semideﬁnite is a suﬃcient condition for an AAR solution to be
+unique in the case of S = ∅.
+
+4.2. A Mixed-Integer Programming Formulation. In this section we make
+use of the reformulations given in Lemma 2 and state a mixed-integer feasibility
+problem with binary variables that can be used to compute an AAR solution of the
+uncertain LCP (5).
+Theorem 2. Let B ∈ R be sufficiently large and consider the mixed-integer feasibility problem
+Find
+s.t.
+
+x ∈ {0, 1}n, r ∈ Rn , A, C, D ∈ Rn×n
+
+(9a)
+
+Bxi ≥ ri ≥ 0,
+
+i ∈ [n],
+
+(9b)
+
+B(1 − xi ) ≥ Mi,· r + q̄i ≥ 0,
+
+i ∈ [n],
+
+(9c)
+(9d)
+
+D[h],· = 0, D·,S = 0,
+i ∈ S, j ∈ U
+
+(9e)
+
+j ∈ U,
+
+(9f)
+
+i 6= j ∈ U,
+
+(9g)
+
+Ai,j ≤ −Di,j ūj ,
+
+i ∈ [n], j ∈ U,
+
+(9h)
+
+Ai,j ≤ Di,j ūj ,
+X
+Ai,j + ri ≥ 0,
+
+i ∈ [n], j ∈ U,
+
+(9i)
+
+i ∈ [n],
+
+(9j)
+
+Ci,j ≤ −(Mi,· D·,j + δij )ūj ,
+
+i ∈ [n], j ∈ U,
+
+(9k)
+
+Ci,j ≤ (Mi,· D·,j + δij )ūj ,
+
+i ∈ [n], j ∈ U,
+
+(9l)
+
+B(1 − xi ) ≥ Mi,· D·,j ≥ −B(1 − xi ),
+B(1 − xj ) − 1 ≥ Mj,· D·,j ≥ −B(1 − xj ) − 1,
+B(1 − xi ) ≥ Mi,· D·,j ≥ −B(1 − xi ),
+
+j∈U
+
+10
+
+C. BIEFEL, F. LIERS, J. ROLFES, M. SCHMIDT
+
+X
+
+Ci,j + Mi,· r + q̄i ≥ 0,
+
+i ∈ [n].
+
+(9m)
+
+j∈U
+
+If (9) is feasible, it returns an AAR solution of the form z(u) = Du + r to (5). If
+it is infeasible, then no AAR solution exists.
+Proof. It suﬃces to show that every solution of (9) corresponds to an AAR solution
+and vice versa. First, let (x, r, A, C, D) be a solution of (9). Note that D fulﬁlls
+the basic requirements D[h],· = 0 and D·,S = 0 by (9d). We now show that z(u) =
+Du + r is an AAR solution. The inequality
+X
+Ai,j ≤ min {Di,· u}
+u∈U
+
+j∈U
+
+holds for all i ∈ [n] by (9h) and (9i). It follows
+X
+min {zi (u)} ≥
+Ai,j + ri ≥ 0
+u∈U
+
+j∈U
+
+for all i ∈ [n], where the last inequality follows from (9j). This implies z(u) ≥ 0 for
+all u ∈ U. In particular, since rN = 0, we also obtain DN,U = 0 and hence zN (u) = 0
+for all u ∈ U. Due to (9b), we have xi = 1 if i ∈ K. Thus, (9c) implies (7d) and
+(9e)–(9g) imply the conditions (7a)–(7c). Hence, (6b) holds due to Lemma 2, i.e.,
+(M z(u) + q(u))K = 0 for all u ∈ U. From zN (u) = 0 and (M z(u) + q(u))K = 0 for
+all u ∈ U it immediately follows z(u)⊤ (M z(u) + q(u)) = 0 for all u ∈ U.
+It remains to show that (M z(u) + q(u))N ≥ 0 holds for all u ∈ U. The inequalities
+(9k) and (9l) imply
+Ci,j ≤ min {Mi,· D·,j uj + δij uj }
+u∈U
+
+for all i ∈ [n], j ∈ U . Hence, we obtain
+X
+Ci,j ≤ min {Mi,· Du + ui }
+j∈U
+
+u∈U
+
+for all i ∈ N ⊆ [n]. It follows
+
+min {(M z(u) + q(u))i } ≥
+u∈U
+
+X
+
+Ci,j + Mi,· r + q̄i ≥ 0
+
+j∈U
+
+for all i ∈ N , where the last inequality follows from (9m). Thus, (M z(u)+q(u))N ≥
+0 holds for all u ∈ U.
+Now, let z(u) = Du + r be an AAR solution of (5). Next, we construct x, A,
+and C such that (x, r, A, C, D) is a solution of (9). For all i ∈ K, we set xi = 1
+and for all i ∈ N we set xi = 0. Since r is a nominal solution, the constraints (9b)
+and (9c) are satisﬁed for suﬃciently large B. Since D fulﬁlls the basic requirements
+Dh,· = 0 and D·,S = 0, Condition (9d) is satisﬁed. Furthermore, D is a solution of
+the equations (7a)–(7c) in Lemma 2 and, thus, D satisﬁes (9e)–(9g) for suﬃciently
+large B. Next, we deﬁne Ai,j := −|Di,j ūj | for all i, j ∈ [n]. Then, (9h) and (9i) are
+satisﬁed, implying
+X
+Ai,j + ri = min {zi (u)} ≥ 0
+j∈U
+
+u∈U
+
+for all i ∈ [n]. Hence, (9j) is satisﬁed. Lastly, we deﬁne
+
+Ci,j := −|(Mi,· D·,j + δij )ūj |
+for all i, j ∈ [n]. Then, (9k) and (9l) are satisﬁed, implying
+X
+Ci,j + Mi,· r + q̄i = min {(M z(u) + q(u))i } ≥ 0
+j∈U
+
+for all i ∈ [n]. Hence, (9m) is satisﬁed.
+
+u∈U
+
+
+
+AFFINELY ADJUSTABLE ROBUST LINEAR COMPLEMENTARITY PROBLEMS
+
+11
+
+Remark 1. One crucial aspect regarding the correctness of the binary feasibility
+problem in Theorem 2 is that the constant B needs to be suﬃciently large. For
+general LCPs, it can be computationally expensive to compute this constant; see,
+e.g., [27]. However, for speciﬁc instances, problem-speciﬁc structure can often be
+exploited to obtain such constants; see, e.g., [19], where similar constants are derived
+by using the speciﬁc structure of a market equilibrium problem that can also be
+modeled as a complementarity problem.
+4.3. Positive Semidefinite M . In the remainder of this section, we assume that
+the matrix M is positive semideﬁnite. In this case, we attain polynomial-time solvability and uniqueness results under further assumptions on the uncertainty set U.
+First, we review the following well established theorem on linear complementarity
+problems.
+Lemma 4 (Theorem 3.1.7 (a), (c) in [13]). Let M ∈ Rn×n be positive semidefinite
+and let q ∈ Rn be chosen arbitrarily. Then, the following assertions hold.
+(a) If z 1 and z 2 are two solutions of the LCP(q, M ), then
+(z 1 )⊤ (q + M z 2 ) = (z 2 )⊤ (q + M z 1 ) = 0.
+(b) If the LCP(q, M ) has a solution, then the set SOL(q, M ) of solutions is
+polyhedral and given by
+SOL(q, M ) = {z ∈ Rn≥0 : q + M z ≥ 0, q ⊤ (z − z̄) = 0,
+(M + M ⊤ )(z − z̄) = 0},
+where z̄ is an arbitrary solution.
+For what follows, we deﬁne
+P := {j ∈ [n] : ∃z ∈ SOL(q̄, M ) : zj > 0} ,
+
+L := [n] \ P.
+
+For the following results, we need to know the index set P explicitly. Note that
+SOL(q̄, M ) can be explicitly stated via Part (b) of the previous lemma since the
+special solution z̄ can be computed by solving a single convex quadratic program.
+The set P can then be obtained by solving n linear programs in which zj , j ∈ [n], is
+maximized over the polyhedral feasible set SOL(q̄, M ) and by checking afterward,
+whether the solution is strictly positive. Thus, P can be computed in polynomial
+time.
+We now use Lemma 4 to strengthen Lemma 2.
+Lemma 5. Let M be positive semidefinite. If z(u) = Du + r is an AAR solution
+of (5), the system of equations
+MP ∩S,P DP,U = 0,
+
+(10a)
+
+MP ∩U,P DP,P ∩U = −IP ∩U ,
+
+(10b)
+
+MP ∩U,P DP,L∩U = 0.
+
+(10c)
+
+is satisfied.
+Proof. From Observation 1 we know that r is a nominal solution. Thus, due to
+Lemma 4 (a), MP,· r + q̄P = 0 holds. Since z(u) = Du + r is an AAR solution, we
+know
+M z(u) + q(u) = M Du + M r + q̄ + u ≥ 0
+for all u ∈ U. In particular, we have
+(M Du + M r + q̄ + u)P = MP,· Du + MP,· r + q̄P + uP = MP,· Du + uP ≥ 0
+
+12
+
+C. BIEFEL, F. LIERS, J. ROLFES, M. SCHMIDT
+
+for all u ∈ U. Since we set D·,S = 0, we have DP,· u = DP,U uU and from Observation 2 it follows MP,· D = MP DP,· . Hence, the inequality
+MP,P DP,U uU + uP ≥ 0
+holds for all u ∈ U.
+For i ∈ P ∩ S, we have ui = 0 and, thus, Mi,P DP,U uU ≥ 0 holds for all u ∈ U.
+This implies Mi,P DP,U = 0 as otherwise there would exist an element u′ ∈ U from
+the uncertainty set deﬁned by u′U = −λ(Mi,P DP,U )⊤ for some λ > 0 and u′S = 0
+so that Mi,P DP,U u′U = −λ||Mi,P DP,U ||2 < 0. Thus, (10a) holds.
+Next, for i ∈ P ∩ U we have Mi,P DP,U uU + ui ≥ 0 for all u ∈ U. For the
+same reasons as in the previous case, this implies Mi,P DP,U uU = −ui , as otherwise
+we could again construct an uncertainty u′ in the box uncertainty set U so that
+Mi,P DP,U u′U + u′i < 0. We obtain (10b) and (10c).
+
+We now combine Lemma 4 and 5 to obtain a linear feasibility problem that can
+be used to solve the uncertain LCP with positive semideﬁnite M . Thus, in this case,
+there is no need to solve the mixed-integer feasibility problem from Theorem 2.
+Theorem 3. Let M be positive semidefinite and suppose further that z̄ is a solution
+of the nominal LCP(q̄, M ). Consider the linear feasibility problem
+Find
+s.t.
+
+r ∈ Rn , A, C, D ∈ Rn×n
+(11a)
+
+r ≥ 0, q̄ + M r ≥ 0,
+⊤
+
+q̄ (r − z̄) = 0,
+
+(11b)
+
+(M + M ⊤ )(r − z̄) = 0,
+
+(11c)
+
+DL,· = 0, D[h],· = 0, D·,S = 0,
+
+
+
+
+0
+MP ∩S,P 
+DP,P ∩U DP,L∩U =
+−IP ∩U
+MP ∩U,P
+Ai,j ≤ −Di,j ūj ,
+
+i ∈ P, j ∈ U,
+
+Ai,j ≤ Di,j ūj , i ∈ P, j ∈ U,
+X
+Ai,j + ri ≥ 0, i ∈ P,
+
+(11d)
+
+0
+,
+0
+
+(11e)
+(11f)
+(11g)
+(11h)
+
+j∈U
+
+Ci,j ≤ −(Mi,· D·,j + δij )ūj ,
+
+i ∈ L, j ∈ U,
+
+Ci,j ≤ (Mi,· D·,j + δij )ūj , i ∈ L, j ∈ U,
+X
+Ci,j + Mi,· r + q̄i ≥ 0, i ∈ L.
+
+(11i)
+(11j)
+(11k)
+
+j∈U
+
+Every feasible point of (11) corresponds to an AAR solution of the form z(u) =
+Du + r. If (11) is infeasible, then no AAR solution exists.
+As parts of the proof of Theorem 3 are similar to that of Theorem 2, we keep
+the following proof rather short.
+Proof. Let (r, A, C, D) be a solution of (11). We show, that z(u) = Du + r is an
+AAR solution. First, we note that D satisﬁes the basic requirements D[h],· = 0
+and D·,S = 0 by (11d). Since r satisﬁes (11a)–(11c), it is a solution of the nominal
+LCP(q̄, M ) by Lemma 4 (b). Therefore, we obtain rL = 0 by the deﬁnition of P
+and L, DL,· = 0 by (11d) and thus zL (u) = 0 holds for all u ∈ U. Furthermore, we
+know (M r + q̄)P = 0 due to Lemma 4 (a). From (11e) it follows (M Du)P = −uP
+and thus
+(M z(u) + q(u))P = (M Du)P + uP + (M r + q̄)P = 0
+
+AFFINELY ADJUSTABLE ROBUST LINEAR COMPLEMENTARITY PROBLEMS
+
+13
+
+holds for all u ∈ U. From zL (u) = 0 and (M z(u) + q(u))P = 0 for all u ∈ U it
+follows z(u)⊤ (M z(u) + q(u)) = 0 for all u ∈ U.
+It remains to show that zP (u) ≥ 0 and (M z(u) + q(u))L ≥ 0 holds for all u ∈ U.
+The constraints (11f)–(11h) imply zP (u) ≥ 0 for all u ∈ U and the constraints
+(11i)–(11k) imply (M z(u) + q(u))L ≥ 0 for all u ∈ U for the same reasons as in the
+proof of Theorem 2.
+Now, let z(u) = Du + r be an AAR solution. We construct A and C such that
+(r, A, C, D) is a solution of (11). We know that r is a nominal solution and, thus,
+(11a)–(11c) are satisﬁed by Lemma 4(b). By deﬁnition of P and L, we have rL = 0
+and thus DL,U = 0 due to Observation 2. The requirements Dh,· = 0 and D·,S = 0
+hold by deﬁnition. Hence, (11d) is satisﬁed. The constraint (11e) holds due to
+Lemma 5. For all i, j ∈ [n], we now deﬁne
+Ai,j := − |Di,j ūj |,
+Ci,j := − |(Mi,· D·,j + δij )ūj |.
+Then, (11f)–(11k) are satisﬁed for the same reasons as in the proof of Theorem 2. 
+If the matrix M is positive semideﬁnite, the nominal LCP can be solved by
+solving a convex quadratic program. Therefore, a solution z̄ for the nominal LCP,
+which we need as a precondition in Theorem 3, can be computed in polynomial
+time. Since the linear feasibility problem (11) can be solved in polynomial time as
+well, we obtain the following complexity result.
+Corollary 3. Let M be positive semidefinite. Then one can find an AAR solution
+of (5) or correctly state that there is no AAR solution in polynomial time.
+We now use Lemma 5 to obtain uniqueness results under additional assumptions
+on the uncertainty set. As in the general case in Section 4.1, we ﬁrst consider the
+case S ⊆ [h].
+Lemma 6. Let M be positive semidefinite and S ⊆ [h]. If z(u) = Du + r is an
+AAR solution of (5), the matrix D is uniquely determined by DP ∩U = −(MP ∩U )−1
+and Di,j = 0 for all i, j ∈
+/ P ∩ U.
+Proof. From Lemma 5 we know
+
+
+
+−IP ∩U 0 = MP ∩U,P DP,P ∩U
+
+
+DP,L∩U .
+
+Since D[h],· = 0 and S ⊆ [h] holds, we have DP ∩S,· = 0, which implies
+
+
+
+
+
+
+−IP ∩U 0 = MP ∩U,P DP,P ∩U DP,L∩U = MP ∩U DP ∩U DP ∩U,L∩U .
+
+Thus, the equation MP ∩U DP ∩U = −IP ∩U implies DP ∩U = −(MP ∩U )−1 . Furthermore, since MP ∩U is invertible and MP ∩U DP ∩U,L∩U = 0 holds, it follows
+DP ∩U,L∩U = 0. As Di,· = 0 for all i ∈
+/ P due to Observation 2, this ﬁnishes
+the proof.
+
+The previous lemma asserts the uniqueness of the matrix D. If we now assume
+that all entries of q(u) are uncertain, i.e., S = ∅, Lemma 6 leads to uniqueness of
+the entire AAR solution.
+Theorem 4. Let M be positive semidefinite and S = ∅.
+(a) If there are multiple solutions to the nominal LCP(q̄, M ), there is no AAR
+solution.
+(b) If there exists an AAR solution, it is unique.
+Proof. We ﬁrst note that P ∩ U = P holds since S = ∅. Any solution r to the
+nominal LCP(q̄, M ) satisﬁes MP rP = −q̄P due to Lemma 4(a) and the deﬁnition
+of P . If there are multiple solutions, MP cannot be invertible and, thus, there
+
+14
+
+C. BIEFEL, F. LIERS, J. ROLFES, M. SCHMIDT
+
+cannot exist an AAR solution according to Lemma 6. Hence, if there is an AAR
+solution z(u) = Du + r, r is unique due to the previous argument and D is unique
+
+due to Lemma 6.
+We close this section with some remarks on the connection between our results
+and the classical LCP theory as well as on the limits of aﬃne adjustability. If
+the matrix M is positive semideﬁnite, the nominal LCP can be solved by solving
+a convex QP, which can be done in polynomial time. This is also the underlying
+reason for our complexity result Corollary 3. As for nominal LCPs, uniqueness of
+solutions cannot be guaranteed in the case of an arbitrary matrix M . Under the
+assumption that M is a P matrix, i.e., all principal minors of M are positive, the
+uniqueness of the solution of the nominal LCP is guaranteed for every q; see, e.g.,
+[13, Chapter 3]. This statement directly carries over to uncertain LCPs with general
+uncertainty sets. If the solution z(u) for every realization of the uncertainties u ∈ U
+is unique, an AAR solution is unique as well. However, Theorem 4 states that, in
+the case of full-dimensional uncertainty sets, we only need positive semideﬁniteness
+of the matrix M to guarantee the uniqueness of an AAR solution, which is a less
+strong condition than M being a P matrix.
+Note that we illustrated the existence of non-trivial solutions, see Example 1,
+and stated conditions for the existence of a solution in Corollary 2. However, let
+us also note that there exist uncertain LCPs that have an adjustable but not an
+aﬃnely adjustable robust solution as the following example shows.
+Example 2. Consider the uncertain LCP given by
+
+ 
+
+−5
+1 1
+, U = [−1, 1]2 ,
+M = 1 2 ≻ 0, q̄ =
+1
+−3
+2
+
+h = 0.
+
+Since all principal minors of M are positive, M is a P matrix. Hence, for any
+realization u′ ∈ U, there exists a solution of the nominal LCP(q(u′ ), M ). Therefore,
+a fully adjustable solution would map every realization to its respective unique
+solution. However, the uncertain LCP does not have an AAR solution, which can
+be veriﬁed by applying Theorem 1.
+Solving the uncertain LCP with other decision rules than aﬃne ones is left for
+future research.
+5. Uncertainty in M
+In this section, we assume that the vector q is certain and consider uncertainty
+only in the matrix M . In particular, we are given matrices M 0 , M 1 , . . . , M k ∈ Rn×n
+as well as U = UM = [−1, 1]k and deﬁne
+M (ζ) := M 0 +
+
+k
+X
+
+ζi M i .
+
+i=1
+
+The uncertain LCP (3) then reads
+
+0 ≤ z(ζ) ⊥ M (ζ)z(ζ) + q ≥ 0
+
+for all
+
+ζ ∈ U.
+
+(12)
+
+For this problem, we are interested in computing an AAR solution of the form
+z(ζ) = Dζ + r with D ∈ Rn×k and r ∈ Rn . As before, we assume that the ﬁrst
+h rows of D are zero for some ﬁxed h to distinguish between adjustable and nonadjustable variables. However, the results presented in this section are independent
+of the speciﬁc choice of h.
+Remark 2. We can interpret M 0 as the nominal matrix that is perturbed by the
+matrices M 1 , . . . , M k . This deﬁnition of a matrix uncertainty set is considered
+in [33] for the ﬁrst time in the context of LCPs and is also used in [22].
+
+AFFINELY ADJUSTABLE ROBUST LINEAR COMPLEMENTARITY PROBLEMS
+
+15
+
+For an AAR solution z(ζ) = Dζ + r we deﬁne the sets
+J := {j ∈ [n] : rj > 0} ,
+
+N := [n] \ J.
+
+As in Observation 2 for the case of uncertain q, we have {j ∈ [n] : Dj,· 6= 0} ⊆ J
+and, thus, DN,· = 0. Analogously to the proof of Lemma 1, we have zJ (ζ) > 0 for
+all ζ ∈ int(U).
+We now prove necessary conditions that every AAR solution satisﬁes.
+Theorem 5. Let z(ζ) = Dζ + r be an AAR solution for (12). Then,
+MJ0 rJ + qJ = 0,
+MJi rJ
+
+MJ0 DJ,i
+MJi DJ,i
+
+(13a)
+
+=0
+
+for all
+
+i ∈ [k],
+
+(13b)
+
+=0
+
+for all
+
+i ∈ [k],
+
+(13c)
+
+MJi DJ,j + MJj DJ,i = 0
+
+for all
+
+i, j ∈ [k], i 6= j
+
+(13d)
+
++
+
+holds.
+Proof. Since 0 ∈ U, the vector z(0) = r is a solution of the nominal LCP(q, M 0 )
+and thus (13a) holds. For i ∈ [k], we deﬁne
+Ui := {ζ ∈ U : ζi ∈ (−1, 1), ζj = 0 for all j 6= i} ⊆ int(U).
+We have zJ (ζ) > 0 for all ζ ∈ Ui and thus (M (ζ)z(ζ) + q)J = 0 holds for all ζ ∈ Ui .
+We obtain
+0 = (MJ0 + ζi MJi )(rJ + ζi DJ,i ) + qJ
+
+= MJ0 rJ + ζi MJi rJ + MJ0 DJ,i + ζi2 MJi DJ,i + qJ
+
+for all ζi ∈ (−1, 1). Hence, the conditions (13b) and (13c) follow.
+Now, for i, j ∈ [k] with i 6= j, we deﬁne
+
+/ {i, j}} ⊆ int(U).
+Ui,j := {ζ ∈ U : ζi , ζj ∈ (−1, 1), ζp = 0 for all p ∈
+As before, zJ (ζ) > 0 holds for all ζ ∈ Ui,j and thus
+0 = (M (ζ)z(ζ) + q)J
+= M (ζ)J (Dζ + r)J + qJ
+= MJ0 (ζi DJ,i + ζj DJ,j + rJ ) + ζi MJi (ζi DJ,i + ζj DJ,j + rJ )
++ ζj MJj (ζi DJ,i + ζj DJ,j + rJ ) + qJ
+= (MJ0 rJ + qJ ) + ζi (MJ0 DJ,i + MJi rJ ) + ζj (MJ0 DJ,j + MJj rJ )
++ ζi2 MJi DJ,i + ζj2 MJj DJ,j + ζi ζj (MJi DJ,j + MJj DJ,i ) = (∗)
+for all ζ ∈ Ui,j . The ﬁrst term is zero due to (13a). Applying (13b) and (13c), all
+other terms except for the last one are zero as well. It follows
+0 = (∗) = ζi ζj (MJi DJ,j + MJj DJ,i )
+for all ζ ∈ Ui,j and thus (13d) holds.
+
+
+
+Since the systems of equations of the last theorem might allow for multiple solutions, they are not suﬃcient to fully characterize an AAR solution. However, under
+the additional assumption that MJ0 is invertible, it is possible to derive a complete
+characterization. For example, this assumption is satisﬁed if M 0 is positive deﬁnite
+as in this case every submatrix MI0 , I ⊆ [n], is invertible.
+We ﬁrst introduce some notation and subsequently present the complete characterization in Corollary 4. To this end, let MI0 be invertible for a subset I ⊆ [n].
+Then, we deﬁne
+M̃ I,i := (MI0 )−1 MIi (MI0 )−1 .
+
+16
+
+C. BIEFEL, F. LIERS, J. ROLFES, M. SCHMIDT
+
+Corollary 4. Let z(ζ) = Dζ + r be an AAR solution for (12). If MJ0 is invertible,
+then D and r are given by
+DJ,i = M̃ J,i qJ , i ∈ [k],
+
+rJ = −(MJ0 )−1 qJ ,
+
+DN,· = 0,
+
+rN = 0.
+
+Proof. Since MJ0 is invertible, (13a) is equivalent to rJ = −(MJ0 )−1 qJ . By using this
+equation for qJ , (13b) can be equivalently reformulated as MJ0 DJ,i = MJi (MJ0 )−1 qJ
+for all i ∈ [k]. Thus, for all i ∈ [k] we obtain
+DJ,i = (MJ0 )−1 MJi (MJ0 )−1 qJ = M̃ J,i qJ .
+
+
+
+In the next example, we illustrate that indeed solutions characterized by this
+corollary exist.
+Example 3. Let
+
+
+
+
+4 1
+0
+M (ζ) =
++ζ
+0 4
+0
+
+
+1
+,
+0
+
+q=
+
+
+
+
+−8
+,
+−16
+
+h = 0.
+
+As M 0 is invertible, we consider the set J = [n]. It follows
+
+
+
+
+1 4 −1
+1 0 1
+0 −1
+J,1
+0 −1
+1
+0 −1
+(M ) =
+and M̃ = (M ) M (M ) =
+.
+16 0 4
+16 0 0
+Using Corollary 4, we obtain
+ 
+ 
+1
+−1
+0 −1
+J,1
+r = −(M ) q =
+, D = M̃ q =
+.
+4
+0
+It is easy to verify that z(ζ) = (1 − ζ, 4)⊤ is an AAR solution.
+
+For what follows, let z(ζ) = Dζ + r be an AAR solution and suppose that MJ0
+is invertible. The conditions (13c) and (13d) can be reformulated similarly as in
+the proof of Corollary 4 by using the characterizations of r and D. We obtain that
+(13c) is equivalent to
+MJi M̃ J,i qJ = 0
+
+for all
+
+i ∈ [k].
+
+Expression (13d) is equivalent to
+(MJi M̃ J,j + MJj M̃ J,i )qJ = 0
+
+for all
+
+i, j ∈ [k], i 6= j.
+
+We combine these conditions and obtain
+
+
+\
+ker MJi M̃ J,j + MJj M̃ J,i .
+qJ ∈
+
+(14)
+
+i,j∈[k]
+
+In the following, we derive a reformulation of the uncertain LCP conditions
+in (12) such that they only depend on the LCP parameters M and q. To this end,
+we use Corollary 4. The equation
+DJ,· ζ =
+
+k
+X
+
+ζi M̃ J,i qJ
+
+(15)
+
+i=1
+
+holds for all ζ ∈ U. Thus, the requirement that zJ (ζ) ≥ 0 for all ζ ∈ U is equivalent
+to
+
+
+X
+
+(16)
+ζi M̃ J,i − (MJ0 )−1  qJ ≥ 0 for all ζ ∈ U.
+i∈[k]
+
+Furthermore, (M (ζ)z(ζ) + q)N ≥ 0 for all ζ ∈ U is equivalent to
+
+
+X
+ζi M̃ J,i − (MJ0 )−1  qJ + qN ≥ 0 for all
+MN,J (ζ) 
+i∈[k]
+
+ζ ∈ U.
+
+(17)
+
+AFFINELY ADJUSTABLE ROBUST LINEAR COMPLEMENTARITY PROBLEMS
+
+17
+
+The following theorem summarizes that these conditions lead to a full characterization.
+Theorem 6. Let D and r be characterized as in Corollary 4 for J ⊆ [n] such that
+M0J is invertible. Furthermore, suppose that D[h],· = 0 holds. Then, z(ζ) = Dζ + r
+is an AAR solution for (12) if and only if M (ζ) and q fulfill the conditions (14),
+(16), and (17).
+Proof. It only remains to show that (M (ζ)z(ζ) + q)J = 0 for all ζ ∈ U is implied
+by (14). For all ζ ∈ U we have
+(M (ζ)z(ζ) + q)J = MJ (ζ)zJ (ζ) + qJ
+= MJ (ζ)(DJ,· ζ + rJ ) + qJ
+= MJ0 DJ,· ζ +
+
+k
+X
+
+ζi MJi DJ,· ζ + MJ0 rJ +
+
+= MJ0 DJ,· ζ +
+
+ζi MJi DJ,· ζ +
+
+where we used
+(∗) =
+
+MJ0
+
+k
+X
+
+k
+X
+
+ζi M̃
+
+J,i
+
+qJ +
+
+k
+X
+
+ζi MJi (MJ0 )−1 qJ +
+
+i=1
+
+By (14) we know
+
+ζi MJi
+
+k
+X
+
+ζj M̃
+
+J,j
+
+qJ +
+
+X
+
+ζi ζj MJi M̃ J,j qJ +
+
+k
+X
+
+=
+
+i=1
+
+k
+X
+
+ζi MJi rJ = (∗∗).
+
+= 0. Thus,
+
+ζi MJi (MJ0 )−1 qJ +
+
+k
+X
+
+ζi MJi rJ
+
+i=1
+
+i=1
+
+k
+X
+
+ζi MJi rJ
+
+i=1
+
+i,j∈[k]
+i
+J,j
+qJ
+i,j∈[k] ζi ζj MJ M̃
+
+(∗∗) =
+
+k
+X
+i=1
+
+j=1
+
+i=1
+
+P
+
+ζi MJi rJ = (∗),
+
+= −qJ . We apply (15) and obtain
+
+i=1
+
+=
+
+k
+X
+i=1
+
+i=1
+
+MJ0 rJ
+
+ζi MJi rJ + qJ
+
+i=1
+
+i=1
+
+k
+X
+
+k
+X
+
+ζi MJi (MJ0 )−1 qJ −
+
+k
+X
+
+ζi MJi (MJ0 )−1 qJ = 0.
+
+
+
+i=1
+
+We conclude this section with some ﬁnal remarks on the derived results and the
+uniqueness of solutions. Corollary 4 shows that we can fully characterize an AAR
+solution if the nominal matrix MJ0 is invertible. In general, the diﬃculty lies in
+ﬁnding the set J of nonzero entries in the solution. Therefore, there might exist
+diﬀerent AAR solutions even if MI0 is invertible for every I ⊆ [n]. However, if
+M 0 is positive deﬁnite, r is unique and therefore the set J is unique, yielding the
+uniqueness of an AAR solution if it exists at all.
+Note that we do not state a general existence result here for the case of uncertain M as we did in Corollary 2 for uncertain q. We think that an analogous
+result can be obtained, in principle, by using Theorem 6 and by checking all vertices of the box-uncertainty set for ζ in (16) and (17). Although ﬁnite, the number
+of conditions in such an existence result most likely would be exponential in the
+dimension of the uncertainty set. We think that the same also holds for the size of
+a corresponding mixed-integer programming formulation, which is why we omit to
+state it here.
+Finally, let us also comment on the case in which both the LCP vector q as well as
+the LCP matrix M are uncertain. The easier setting then is the one in which both
+uncertainties are independent. However, already this case is rather challenging for
+aﬃnely adjustable robust LCPs. Consider, for instance, Condition (14), which is
+
+18
+
+C. BIEFEL, F. LIERS, J. ROLFES, M. SCHMIDT
+
+also part of the ﬁnal characterization in Theorem 6. A simultaneous consideration
+of q and M would require that the null-space condition in (14) is satisﬁed for qJ (u)
+for all u ∈ Uq . Our hypothesis is that this extended condition alone would already
+be rather hard to satisfy in practically meaningful LCP settings, which is why we
+postpone the consideration of uncertainty in q and M to future research.
+6. Conclusion
+In this paper, we studied aﬃnely adjustable robust linear complementarity problems with box-uncertainties either in the LCP matrix M or in the LCP vector q.
+We addressed the topics of characterization, existence, and uniqueness of solutions
+completely for the case of uncertain q. Moreover, we developed a mixed-integer
+linear model that allows to compute aﬃnely adjustable robust LCP solutions with
+standard solvers. For the case of uncertain M , characterizations are established as
+well and uniqueness of solutions is shown under the assumption that the nominal
+LCP matrix is positive deﬁnite.
+While the standard single-stage modeling assumptions of strict as well as of Γrobustness both fail to enable the study of robust solutions directly (instead, the
+LCP’s gap function formulation is usually considered), imposing the assumption of
+aﬃne adjustability in the second stage is suﬃcient. Thus, adjustable robustness is
+the ﬁrst established concept of robust optimization that has been carried over to
+LCPs, which allows for studying the robust LCP solutions directly instead of considering the gap function formulation as a replacement. However, several problems
+remain open. For instance, a compact existence result and a compact mixed-integer
+programming formulation for the case of uncertain LCP matrix is missing. Moreover, the consideration of other uncertainty sets like ellipsoids or the consideration
+of non-aﬃne decision rules is part of our future research.
+Acknowledgments
+This research has been performed as part of the Energie Campus Nürnberg
+(EnCN) and is supported by funding of the Bavarian State Government. The authors thank the Deutsche Forschungsgemeinschaft for their support within project
+A05, B06, and B08 in the Sonderforschungsbereich/Transregio 154 “Mathematical
+Modelling, Simulation and Optimization using the Example of Gas Networks”.
+References
+[1] I. I. Almaraj and T. B. Trafalis. “Aﬃnely adjustable robust optimization under dynamic uncertainty set for a novel robust closed-loop supply
+chain.” In: Computers & Industrial Engineering 145 (2020), p. 106521. doi:
+10.1016/j.cie.2020.106521.
+[2] D. Aßmann, F. Liers, M. Stingl, and J. Vera. “Deciding Robust Feasibility
+and Infeasibility Using a Set Containment Approach: An Application to Stationary Passive Gas Network Operations.” In: SIAM Journal on Optimization
+28 (2018), pp. 2489–2517. doi: 10.1137/17M112470X.
+[3] A. Ben-Tal, L. El Ghaoui, and A. Nemirovski. Robust Optimization. Princeton
+University Press, 2009.
+[4] A. Ben-Tal, A. Goryashko, E. Guslitzer, and A. Nemirovski. “Adjustable robust solutions of uncertain linear programs.” In: Mathematical Programming
+99.2 (2004), pp. 351–376. doi: 10.1007/s10107-003-0454-y.
+[5] D. Bertsimas, D. B. Brown, and C. Caramanis. “Theory and Applications
+of Robust Optimization.” In: SIAM Review 53.3 (2011), pp. 464–501. doi:
+10.1137/080734510.
+
+REFERENCES
+
+19
+
+[6] D. Bertsimas and M. Sim. “Robust discrete optimization and network
+ﬂows.” In: Mathematical Programming 98.1 (2003), pp. 49–71. doi:
+10.1007/s10107-003-0396-4.
+[7] D. Bertsimas and M. Sim. “The Price of Robustness.” In: Operations Research
+52.1 (2004), pp. 35–53. doi: 10.1287/opre.1030.0065.
+[8] J. R. Birge and F. Louveaux. Introduction to Stochastic Programming.
+Springer Science & Business Media, 2011. doi: 10.1007/978-1-4614-0237-4.
+[9] E. Çelebi, V. Krebs, and M. Schmidt. “Γ-Robust Electricity Market Equilibrium Models with Transmission and Generation Investments.” In: Energy
+Systems (2020). doi: 10.1007/s12667-020-00411-x. Forthcoming.
+[10] X. Chen and M. Fukushima. “Expected Residual Minimization Method for
+Stochastic Linear Complementarity Problems.” In: Mathematics of Operations Research 30.4 (2005), pp. 1022–1038. doi: 10.1287/moor.1050.0160.
+[11] X. Chen, R. J.-B. Wets, and Y. Zhang. “Stochastic Variational Inequalities: Residual Minimization Smoothing Sample Average Approximations.” In: SIAM Journal on Optimization 22.2 (2012), pp. 649–673. doi:
+10.1137/110825248.
+[12] X. Chen, C. Zhang, and M. Fukushima. “Robust solution of monotone stochastic linear complementarity problems.” In: Mathematical Programming 117.1
+(2009), pp. 51–80. doi: 10.1007/s10107-007-0163-z.
+[13] R. W. Cottle, J.-S. Pang, and R. E. Stone. The Linear Complementarity Problem. Society for Industrial and Applied Mathematics, 2009. doi:
+10.1137/1.9780898719000.
+[14] M. Fischetti and M. Monaci. “Light Robustness.” In: Robust and Online Large-Scale Optimization: Models and Techniques for Transportation
+Systems. Ed. by R. K. Ahuja, R. H. Möhring, and C. D. Zaroliagis.
+Berlin, Heidelberg: Springer Berlin Heidelberg, 2009, pp. 61–84. doi:
+10.1007/978-3-642-05465-5_3.
+[15] S. A. Gabriel, A. J. Conejo, J. D. Fuller, B. F. Hobbs, and C. Ruiz. Complementarity modeling in energy markets. Vol. 180. Springer Science & Business
+Media, 2012.
+[16] B. F. Hobbs. “LCP models of Nash-Cournot competition in bilateral and
+POOLCO-based power markets.” In: IEEE Power Engineering Society. 1999
+Winter Meeting. Vol. 1. 1999, pp. 303–308. doi: 10.1109/PESW.1999.747471.
+[17] B. F. Hobbs and U. Helman. “Complementarity-Based Equilibrium Modeling
+for Electric Power Markets.” In: Modeling Prices in Competitive Electricity
+Markets. Ed. by D. Bunn. London: Wiley, 2004.
+[18] P. Kall and S. W. Wallace. Stochastic Programming. Wiley-Interscience Series
+in Systems and Optimization. New York: Wiley, 1994.
+[19] T. Kleinert and M. Schmidt. “Global Optimization of Multilevel
+Electricity Market Models Including Network Design and Graph
+Partitioning.” In: Discrete Optimization 33 (2019), pp. 43–69. doi:
+10.1016/j.disopt.2019.02.002.
+[20] A. Kramer, V. Krebs, and M. Schmidt. Strictly and Γ-Robust Counterparts of
+Electricity Market Models: Perfect Competition and Nash-Cournot Equilibria.
+Tech. rep. 2018. url: http://www.optimization-online.org/DB_HTML/2018/07/6709.html.
+[21] V. Krebs, M. Müller, and M. Schmidt. “Γ-Robust Linear Complementarity
+Problems with Ellipsoidal Uncertainty Sets.” In: International Transactions
+in Operational Research (2021). doi: 10.1111/itor.12988. Forthcoming.
+[22] V. Krebs and M. Schmidt. “Γ-Robust Linear Complementarity
+Problems.” In: Optimization Methods and Software (2020). doi:
+10.1080/10556788.2020.1825708. Forthcoming.
+
+20
+
+REFERENCES
+
+[23] G.-H. Lin and M. Fukushima. “New reformulations for stochastic nonlinear complementarity problems.” In: Optimization Methods and Software 21.4
+(2006), pp. 551–564. doi: 10.1080/10556780600627610.
+[24] J. Mather and E. Munsing. “Robust Cournot-Bertrand equilibria on power
+networks.” In: American Control Conference (ACC), 2017. IEEE. 2017,
+pp. 2747–2754. doi: 10.23919/ACC.2017.7963367.
+[25] C. B. Metzler, B. F. Hobbs, and J.-S. Pang. “Nash-Cournot Equilibria in
+Power Markets on a Linearized DC Network with Arbitrage: Formulations
+and Properties.” In: Networks and Spatial Economics 3.2 (2003), pp. 123–150.
+doi: 10.1023/A:1023907818360.
+[26] A. Ouorou. “Aﬃne Decision Rules for Tractable Approximations to Robust
+Capacity Planning in Telecommunications.” In: Network Optimization. Ed. by
+J. Pahl, T. Reiners, and S. Voß. Berlin, Heidelberg: Springer Berlin Heidelberg,
+2011, pp. 277–282. doi: 10.1007/978-3-642-21527-8_32.
+[27] P. M. Pardalos. “Linear complementarity problems solvable by integer programming.” In: Optimization 19.4 (1988), pp. 467–474. doi:
+10.1080/02331938808843365.
+[28] M. Poss and C. Raack. “Aﬃne Recourse for the Robust Network Design Problem: Between Static and Dynamic Routing.” In: Network Optimization. Ed.
+by J. Pahl, T. Reiners, and S. Voß. Berlin, Heidelberg: Springer Berlin Heidelberg, 2011, pp. 150–155. doi: 10.1007/978-3-642-21527-8_19.
+[29] M. Sim. “Robust Optimization.” PhD thesis. Massachusetts Institute of Technology, 2004.
+[30] A. L. Soyster. “Technical Note–—Convex Programming with Set-Inclusive
+Constraints and Applications to Inexact Linear Programming.” In: Operations
+Research 21.5 (1973), pp. 1154–1157. doi: 10.1287/opre.21.5.1154.
+[31] D. Wu, J.-Y. Han, and J.-H. Zhu. “Robust solutions to uncertain linear complementarity problems.” In: Acta Mathematicae Applicatae Sinica, English
+Series 27.2 (2011), pp. 339–352. doi: 10.1007/s10255-010-0033-y.
+[32] Y. Xie and U. V. Shanbhag. “On Robust Solutions to Uncertain Linear Complementarity Problems and their Variants.” In: SIAM Journal on Optimization 26.4 (2016), pp. 2120–2159. doi: 10.1137/15M1010427.
+[33] Y. Xie and U. V. Shanbhag. “On robust solutions to uncertain monotone linear
+complementarity problems (LCPs) and their variants.” In: 2014 IEEE 53rd
+Annual Conference on Decision and Control (CDC). IEEE. 2014, pp. 2834–
+2839. doi: 10.1109/CDC.2014.7039824.
+[34] İ. Yanıkoğlu, B. Gorissen, and D. den Hertog. “A Survey of Adjustable Robust Optimization.” In: European Journal of Operational Research 277 (2019),
+pp. 799–813. doi: 10.1016/j.ejor.2018.08.031.
+(C. Biefel, F. Liers, J. Rolfes) Friedrich-Alexander-Universität Erlangen-Nürnberg,
+Discrete Optimization, Cauerstr. 11, 91058 Erlangen, Germany; Energie Campus
+Nürnberg, Fürther Str. 250, 90429 Nürnberg, Germany
+Email address: {christian.biefel,frauke.liers,jan.rolfes}@fau.de
+(M. Schmidt) Trier University, Department of Mathematics, Universitätsring 15,
+54296 Trier, Germany
+Email address: martin.schmidt@uni-trier.de
+
+

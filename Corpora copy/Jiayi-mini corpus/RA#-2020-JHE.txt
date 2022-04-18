@@ -1,0 +1,2041 @@
+The internet and children’s psychological wellbeing
+Emily McDool a, Philip Powell a,b, Jennifer Roberts a, Karl Taylor a,c,∗
+a Department of Economics, University of Sheffield, UK b School of Health and Related Research, University of Sheffield, UK c IZA Bonn, UK
+a r t i c l e i n f o
+Article history:
+Received 12 December 2018
+Received in revised form 31 July 2019
+Accepted 7 December 2019
+Available online 13 December 2019
+JEL classification:
+D60
+I31
+J13
+Keywords:
+Digital society
+Social media
+Wellbeing
+Children
+Happiness
+
+a b s t r a c t
+Late childhood and adolescence is a critical time for social and emotional development.
+Over the past two decades, this life stage has been hugely affected by the almost universal
+adoption of the internet as a source of information, communication, and entertainment.
+We use a large representative sample of over 6300 children in England over the period
+
+2012–2017, to estimate the effect of neighbourhood broadband speed, as a proxy for inter-
+net use, on a number of wellbeing outcomes, which reflect how these children feel about
+
+different aspects of their life. We find that internet use is negatively associated with well-
+being across a number of domains. The strongest effect is for how children feel about their
+
+appearance, and the effects are worse for girls than boys. We test a number of potential
+
+causal mechanisms, and find support both for the ‘crowding out’ hypothesis, whereby inter-
+net use reduces the time spent on other beneficial activities, and for the adverse effect of
+
+social media use. Our evidence adds weight to the already strident calls for interventions
+that can reduce the adverse effects of internet use on children’s emotional health.
+© 2019 The Authors. Published by Elsevier B.V. This is an open access article under the CC
+BY license (http://creativecommons.org/licenses/by/4.0/).
+
+1. Introduction
+
+Late childhood and adolescence is a critical and poten-
+tial vulnerable time for social and emotional development.
+
+One aspect of this life-stage that has changed dramatically
+in the past 20 years is the almost universal adoption of the
+internet as a source of information, communication, and
+entertainment. United Nations research has estimated that
+3.5 billion people (47 per cent of the world population) use
+the internet globally; one third of these are under 18.1 In
+the UK, today’s teenagers have grown up with the internet
+and now spend more time online than they do watching
+television (Ofcom, 2015). Almost all 12−15 year olds (98
+
+∗ Corresponding author at: Department of Economics, University of
+Sheffield, UK.
+E-mail address: k.b.taylor@sheffield.ac.uk (K. Taylor). 1 www.un.org/apps/news/story.asp?NewsID=54931#.WLlbn8pXUpE
+
+%) use the internet; with 96 % accessing it at home via a
+fixed broadband (BB) connection, and a large proportion
+also using a mobile network signal (Ofcom, 2015). “The
+internet is not just something children access when they want
+certain bits of information; it is an essential and intrinsic part
+of the world they inhabit” (House of Lords, 2017).
+Internet use can have both beneficial and detrimental
+effects on children’s wellbeing because ofthe wide range of
+activities that are undertaken online.2 Jackson et al. (2008)
+describes a ‘utopian’ view, where the internet provides a
+
+chance to develop the skills needed for the modern work-
+place, as well as new opportunities for self-expression,
+
+2 The same argument can be made for adults. Fujiwara et al. (2018), in
+their analysis of the wellbeing effects of the UK Superfast BB programme,
+find a negative association between BB speed and adult life satisfaction
+
+using Annual Population Survey data; although they find a positive asso-
+ciation using UKHLS data.
+
+https://doi.org/10.1016/j.jhealeco.2019.102274
+0167-6296/© 2019 The Authors. Published by Elsevier B.V. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/
+4.0/).
+
+2 E. McDool, P. Powell, J. Roberts et al. / Journal of Health Economics 69 (2020) 102274
+communication and access to information. However, she
+contrasts this with a ‘dystopian’ perspective where time
+
+online ‘crowds out’ other beneficial activities such as read-
+ing, playing sports and face-to-face interaction with friends
+
+and family, as well as exposing children to potentially
+
+inaccurate and harmful content, and sexual and commer-
+cial exploitation. Early empirical studies, largely based on
+
+cross section surveys of teenagers, lend support to an over-
+all negative effect of internet use on wellbeing (Brenner,
+
+1997; Kraut et al., 1998). However, more recent evidence
+is inconclusive, with, for example, Bauernschuster et al.
+(2014) finding a positive association between internet use
+and social capital, but Lohmann (2015) finding a negative
+influence of internet use of wellbeing, operating largely via
+relative income effects.
+The potentially detrimental effects of online activity
+have prompted concern in the UK among a number of
+
+bodies responsible for the mental health and wellbe-
+ing of young people.3 A recent enquiry on ‘children and
+
+the internet’ by the House of Lords (2017) concluded
+that the current regime of self-regulation very often put
+commercial considerations first, with scant regard for
+wellbeing.4 The enquiry acknowledged the association
+
+between increasing numbers of unhappy and anxious chil-
+dren and the growth in internet use, but also called formore
+
+robust research into the possible causal relationships.5 Our
+study is an attempt to respond to that call; we explore the
+
+association between children’s emotional health and inter-
+net use, and also consider a number of potential causal
+
+channels, which we investigate empirically.
+Children’s use of the internet is an important topic for
+study because it is a significant component of time use, and
+its effects on wellbeing and mental health are ambiguous
+(Kalmus et al., 2014). Most of the existing evidence comes
+from samples of adults, or students in higher education (see
+for example Cotton, 2008; Bhuller et al., 2013). There is
+very little evidence for children, and that which does exist
+tends to comemainly fromcross sectiondata, andrelatively
+small, bespoke samples (see for example Gross et al., 2002;
+Jackson et al., 2008).
+In this study we use neighbourhood BB speed (as
+reported by Ofcom) as a proxy for internet access. There is
+increasing evidence to suggest that children do not regard
+the internet as a separate, distinct entity that they access;
+rather it is woven ubiquitously throughout all aspects of
+3 The National Society for the Prevention of Cruelty to Children
+recently cited social media as a major cause of the dramatic increase
+
+in the numbers of children admitted to hospital as a result of self-
+harming (www.nspcc.org.uk/). An inquiry into cyberbullying by the
+
+charity Young Minds and The Children’s Society was carried out in 2017
+https://youngminds.org.uk/resources/policy/cyberbullying-inquiry/.
+Barnardo’s, the children’s charity, produced a ‘youth and the internet’
+guide for policymakers in 2015 (Barnardo
+s, 2015). 4 In 2019, the government published a White Paper setting out their
+recommendations for reducing online harms, particularly among children
+(HM Government, 2019). 5 Recently, a cross-parliamentary enquiry on ‘the impact of social
+media and screen-use on young people’s health’, again cited the lack
+of evidence of causal relationships: www.parliament.uk/business/
+
+committees/committees-a-z/commons-select/science-and-technology-
+committee/inquiries/parliament-2017/impact-of-social-media-young-
+people-17-19/
+
+their life. For this reason, self-reported data on time spent
+on the internet may be misleading. In addition, children
+use the internet for a wide range of diverse activities, and
+it is likely that the impact on their wellbeing depends on
+the quality and type of activities they are engaged in. Our
+data contains only limited information on what children
+are doing online. Instead, we assume that faster BB speeds
+mean that children can access more content in a given
+
+amount oftime.Hence, wemight expectto observe anasso-
+ciation between BB speed and child wellbeing because of
+
+the enhanced internet access enabled by faster BB speeds.
+We improve on the majority of existing evidence on the
+
+effects of internet use, firstly, using a large nationally rep-
+resentative sample of children, rather than a small survey
+
+of a selective group. Secondly, we utilise measures of emo-
+tional health across different domains, which enable us to
+
+explore which aspects of children’s lives are most affected.
+
+Thirdly, we explore a number of potential causal mecha-
+nisms that can help to explain why internet use affects
+
+emotional health. Fourthly, we use longitudinal data and
+
+fixed effects (FE) models, in order to eliminate endoge-
+nous selection bias arising from time-invariant unobserved
+
+variables, such as childhood circumstances or neighbour-
+hood characteristics, which influence both wellbeing and
+
+BBspeed.We also explore indetailthe assumptionof quasi-
+random assignment of BB speed, which is necessary for us
+
+to identify the effect of BB speed on psychological wellbe-
+ing. Finally, we also consider which groups of children are
+
+most affected by use of the internet.
+Our results are worrying for anyone concerned with
+
+children’s emotional health. We find a negative relation-
+ship between internet use and wellbeing domains. In our
+
+most stringent specification, children feel worse about
+their schoolwork, appearance, friends and the school they
+attend, as internet use increases. For example, a 1 % increase
+
+in BB speed reduces how children feel about their appear-
+ance by approximately 0.6 per cent. The adverse effects
+
+of the internet are worse for girls than boys, and the
+strongest effect (for both sexes) is for how they feel about
+their appearance. Our evidence also suggests that these
+
+results can be explained via the ‘crowding out’ hypothe-
+sis, whereby internet use reduces the time spent on other
+
+beneficial activities, and from the adverse effect of social
+media use.
+2. Broadband speed and children’s wellbeing
+The potential influence of the internet on the emotional
+health and wellbeing of children is attracting increased
+attention across a range of disciplines. Castellacci and
+Tveito (2018) review this disparate literature and classify
+the relevant mechanisms through which the internet can
+affect wellbeing into four distinct channels. Their review
+
+does not consider children explicitly, but all of these chan-
+nels have particular implications for children, which we
+
+attempt to draw out here; we also test a number of these
+
+causal channels in our empirical work. Children’s wellbe-
+ing can be affected directly in the ways described below,
+
+but also indirectly via intergenerational effects; parents’
+behaviours and wellbeing can be shaped by internet use
+and this will in turn affect their children (see Pfeffer and
+
+E. McDool, P. Powell, J. Roberts et al. / Journal of Health Economics 69 (2020) 102274 3
+
+Schoeni, 2014). Further, there are reasons to expect that
+children may be particularly vulnerable to some of the
+mechanisms described below. As well as being at a critical
+stage of social and emotional development, children often
+adopt technological innovations before parents, schools or
+policy makers can consider the lasting implications of this
+technology. This problem is exacerbated by the fact that
+internet content is increasingly consumed via a tablet or
+
+phone, and this move to smaller, portable devices is mak-
+ing adult supervision much more difficult than when the
+
+internet was largely accessed via a single family computer.
+The internet can influence wellbeing firstly because it
+changes time use patterns. On one hand, this can make
+existing tasks, like shopping, coursework and job search,
+more efficient, thus freeing up time for other activities. For
+example, by aiding job search the internet could improve
+parents’ labour market outcomes, helping them to find jobs
+that better match their skills or exit unemployment spells
+more quickly, which in turn affects the child’s wellbeing.
+
+Gürtzgen et al. (2018) found that, in Germany, digital tech-
+nologies helped the unemployed find a job. On the other
+
+hand, there is evidence that the internet can crowd-out
+other activities known to be beneficial for wellbeing, such
+as playing sport and having face-to-face interactions with
+friends and family (Moreno et al., 2013; Wallsten, 2013).
+Further, in evidence given to the House of Lords (2017)
+
+enquiry, Barnardo’s, the children’s charity, warns that chil-
+dren are far from being fully informed, rational consumers
+
+when it comes to online commercial transactions. Ofcom
+research suggests that less than half of 12−15 year olds
+
+were aware of paid endorsements by vloggers or person-
+alised advertising; they also could not spot advertising in
+
+online search results (Ofcom, 2015).
+Secondly, the internet facilitates new activities, which
+can have positive or negative effects on wellbeing. The
+
+internet has enabled online gaming and digital social net-
+works, whicharenow almostubiquitous intheiruse among
+
+children; it also facilitates access to on demand entertain-
+ment via traditional media sites such as online television,
+
+as well as specialist online sites such as YouTube and
+music streaming apps like Spotify. While these activities
+
+can have important positive effects such as enabling chil-
+dren to develop creativity and social skills, and providing
+
+opportunities both for stimulation and relaxation, there is
+increasing concern about the potentially negative effects
+such as addiction, commercial exploitation and increased
+chances of exposure to inappropriate content (Kuss and
+Griffiths, 2012). In addition, there is some evidence that
+
+new activities such as gaming and streaming entertain-
+ment displace time spent on schoolwork (Kaiser Family
+
+Foundation, 2010).
+
+Thirdly, the internet enables greater access to infor-
+mation; this can contribute to social and educational
+
+development.However,theproliferationofinaccurate con-
+tent, ‘fake news’ and inappropriate sexual and/or violent
+
+content on the internet can be damaging to children’s
+wellbeing. Further, while there is no conclusive evidence
+yet, there are suggestions that overwhelming exposure to
+information in itself may be affecting concentration and
+decreasing attention spans, in adults as well as children
+
+(Carr, 2010). Also, in common with many adults, chil-
+dren do not have an understanding of how search engines
+
+work and have limited knowledge to enable them to judge
+the accuracy or providence of online information (Ofcom,
+2016). In a review of the effects of computers, software
+and the internet on education, Bulman and Fairlie (2016)
+argue that, while increased availability is associated with
+
+increased use, few studies find positive effects on educa-
+tional outcomes. Faber et al. (2015) explore the effects of
+
+internet speed on test scores for English primary and sec-
+ondary school students over the period 2002–2008, and
+
+find no significant effects on student time spent studying
+online or offline, or on their educational outcomes.
+Much of the material that children are exposed to
+online can be classified as inappropriate (Martellozzo et al.,
+
+2016), and pornography has emerged as a particular con-
+cern. The British Board of Film Censors argue that “This
+
+has led to the normalisation of largely unfettered access to
+the strongest, sometimes unlawful, pornography by children
+online”.6 Young people themselves are also expressing their
+concerns about pornography on the internet; in a survey
+of 500 young people, 80 % said that it was too easy to
+
+access pornography online, and 72 % felt that this was lead-
+ing to unrealistic views about sex, particularly among boys
+
+(Institute for Public Policy Research, 2014).7
+Fourthly, the internet provides new communication
+tools, such as email, instant messaging, social media, Skype
+and Facetime. These tools have the potential to increase
+both the scope and intensity of social interactions, both
+
+of which are among the strongest predictors of wellbe-
+ing (Kahneman et al., 1999). Social media use has grown
+
+extremely rapidly, and is a core part of young people’s
+lives. A survey in 2015 revealed that, in the UK, 92 % of
+
+16–24 year olds had used social networks, such as Face-
+book, Snapchat, WhatsApp and Instagram, in the last three
+
+months.8 Younger children are also increasingly users of
+social media; while most sites stipulate a minimum user
+age of 13, few require any validation, and a survey for
+the children’s BBC television channel found that more
+than three quarters of 10–12 year olds had social media
+accounts.9 Social networks are children’s primary interface
+with the internet. These portals are generally used in an
+‘always on’ state, often via smartphones and tablets, such
+that many children are permanently connected to their
+virtual social network, continually receiving and checking
+feed, and regularly posting their own updates (Boyd, 2014).
+
+For this reason, we believe that social media use is poten-
+tially a very important mechanism through which internet
+
+use can influence children’s emotional health. The results
+that we present in section 4 below lend support to this
+
+6 House of Lords (2017) para. 130. 7 Online bullying (discussed below) is also intertwined with the nor-
+malisationof online sexual content.Almosthalf of 18 year-oldsquestioned
+
+in the same survey stated that sending naked pictures to each other
+(known as ‘sexting’) was part of everyday life; and thatthese pictures were
+often shared more widely in an attempt to bully and shame individuals. 8 www.ons.gov.uk/ons/guide-method/method-quality/specific/
+business-and-energy/e-commerce-and-ict-activity/social-networking/
+index.html
+9 www.bbc.co.uk/news/education-35524429
+
+4 E. McDool, P. Powell, J. Roberts et al. / Journal of Health Economics 69 (2020) 102274
+view. For this reason, we spend some time here considering
+this mechanism in more detail.
+
+Digital social networks serve a multiplicity of func-
+tions. They are a tool for developing and maintaining
+
+interpersonal relationships, a real-time portal for access-
+ing information, news, advice and social support, as well
+
+as a canvas for sketching a selective and idealised self-
+portrait. While it is generally acknowledged that social
+
+media can have a positive impact on social capital, for
+
+example by enhancing friendships and decreasing loneli-
+ness (Franzen, 2003; Antoci et al., 2012),there are concerns
+
+that ‘excessive’ time spent on social media is associated
+with low self-esteem, common mental health problems,
+and socioemotional difficulties (e.g., Beardsmore, 2015;
+Kross et al., 2013). Evidence is also emergingdemonstrating
+a detrimental effect of social media use on sleep (Levenson
+
+et al., 2016).10 There is also evidence that online commu-
+nication substitutes for face-to-face interactions (Sabatini
+
+and Sarracino, 2017). Helliwell and Huang (2013) compare
+face-to-face friends with online social networks in an adult
+Canadian sample; they find a positive correlation between
+the size of real and online social networks, but that only
+
+increases in the number of face-to-face friends are associ-
+ated with improved wellbeing.
+
+There are two additional complementary theories that
+can help to explain why extensive social media use may
+have a negative effect on children’s emotional health, on
+top of the ‘crowding out’ hypothesis discussed above in
+
+relation to internet access in general. First, ‘social compari-
+son’ theory, posits that increased social media use is linked
+
+to more frequent social comparisons, which are more likely
+to be ‘upward’ (negative) in direction. The material people
+choose to present online represents selectively idealised
+versions of their true lives (Mendelson and Papacharissi,
+2010), and there is evidence that young social media users
+
+act naively, in that they fail to understand that the mate-
+rial is not representative (Royal Society for Public Health,
+
+2017).11 Sabatini and Sarracino (2016) find that social net-
+work users in Italy have a higher probability of making
+
+social comparisons than non-users, and that this tendency
+is greatest in younger people. In related work, Clark and
+Senik (2010) found that, in Europe, people with internet
+access attach more importance to income comparisons
+than those without, and Lohmann (2015) finds that people
+
+who regularly use the internet as a source of informa-
+tion derive less satisfaction from their income. Chou and
+
+Edge (2012) found that students who spent more time
+on Facebook were more likely to think that other people
+
+were happier and had better lives than their own. Further-
+more, a growing body of research attests to the mediating
+
+role of envy in the relationship between Facebook use and
+decreased affective wellbeing (e.g., Tandoc et al., 2015;
+Verduyn et al., 2015). Issues of body image and self-esteem
+10 ‘Fear of missing out’ is linked to obsessive checking of social media
+feeds and sleep problems, with almost of half of pupils questioned in
+a survey admitting to checking their mobile devices after going to bed.
+
+www.hmc.org.uk/wp-content/uploads/2016/10/Mobile-Device-Media-
+Brief-FINAL.pdf
+
+11 Enke (2017) presents experimental evidence that this irrationality is
+also present in adult behaviour.
+
+have been raised as a particularly negative aspect of greater
+social media use, especially among girls (Kleemans et al.,
+2016; Children’s Society, 2018a). While, these concerns are
+not a new development(and have been linked in the pastto
+women’s magazines for example), the internet and social
+
+media increase the accessibility and immediacy of unreal-
+istic body images, thus intensifying their effect.
+
+Secondly, ‘cyberbullying’ theory, relates to the fact that
+children who spend more time on social networks have a
+greater chance of being the victim of direct attacks from
+others on their sense of self, wellbeing, and self-esteem
+(Cowie, 2013). Childline counselling services reported a 12
+
+percentincrease inthenumber of cases related to cyberbul-
+lying in 2016/17 compared to the previous year (Children’s
+
+Society, 2018b). Sampasa-Kanyinga and Hamilton (2015)
+
+reported a significant increase in the odds of being vic-
+timised for every hour spent using social networking sites.
+
+While cyberbullying oftenoverlaps withtraditional‘offline’
+bullying,the formermay beparticularlypernicious because
+children’s continual connectedness means they cannot
+escape (Slonje et al., 2012).12 Arecent study for the US using
+micro data from the Youth Risk Behaviour Survey, found
+that cyberbullying influences suicidal behaviour (Nikolaou,
+2017), and there have been a number of high profile cases
+involving teenagers taking their own lives in part because
+of being harassed over the internet (Hinduja and Patchin,
+2010).
+3. Data and methodology
+In this paper, we use data from Understanding Society
+
+– The UK Household Longitudinal Study (UKHLS), a repre-
+sentative sample of over 40,000 households across the UK
+
+(University of Essex, 2018). Eight waves are currently avail-
+able, starting with wave 1 in 2009, which provided data on
+
+over 50,000 individuals, andthe latest wave 8 (atthe time of
+writing) where over 39,000 individuals were interviewed
+
+between 2016 and 2018. All adult members of each house-
+hold are interviewed, along with children aged 10–15 years
+
+old. In this analysis, waves 3–8 are used;these provide data
+on just over 6300 children residing in England, who are the
+focus of the empirical analysis.13
+Children’s data comes from the Youth Self-completion
+Questionnaire, which is used alongside data from the adult
+surveys, giving information on household characteristics
+such as income, homeownership and parental education.
+
+The outcomes of interest are obtained by asking chil-
+dren how they feel about different aspects of their life,
+
+specifically: school work; appearance; family; friends; school
+attended; and life as a whole (see Appendix, Table A1 (In
+Supplementary material)). Internet use may affect these
+
+12 A number of economic studies have illustrated the negative and per-
+sistent effects of being bullied in childhood. For example, Eriksen et al.
+
+(2014) find detrimental effects of being bullied on educational attainment
+in a large Danish sample. Brown and Taylor (2008) find that being bullied
+at school in the UK has an adverse effect on human capital accumulation
+both at and beyond school. 13 We do not use UKHLS waves 1 and 2 because Ofcom data on BB speed
+are not available for those years at the level of disaggregation required.
+Similarly, the Ofcom data is available for LSOAs in England only.
+
+E. McDool, P. Powell, J. Roberts et al. / Journal of Health Economics 69 (2020) 102274 5
+
+domains of children’s wellbeing differently, and perhaps
+even in opposing directions, hence it is useful to be able to
+disaggregate wellbeing in this way.We order the responses
+
+to range from “1=not happy at all” through to “7= com-
+pletely happy”. We interpret these measures as indicators
+
+of psychological wellbeing or emotional health (see Clark
+et al., 2018).After conditioning onmissing values, we create
+an unbalanced panel of 6310 children for the period 2012
+(wave 3) through to 2017 (wave 8). Out of this sample 36 %
+of children are observed once, 27 % twice, 17 % three times,
+11 % four times, 6 % five times and 3 % in all waves, giving
+a total number of observations 13,938 across children and
+over time.
+
+Data are available from Ofcom, the UK communica-
+tions regulator, on the average synchronisation speed of
+
+existing BB connections, measured in megabits per sec-
+ond (mbps). This is defined at the neighbourhood level,
+
+where neighbourhoods are classified via Lower Layer Super
+Output Areas (LSOA).14 LSOAs are very small areas; there
+are 32,844 LSOAs in England, with an average size of
+650 households; and the children in our sample reside in
+3765 LSOAs. The UKHLS provides LSOA identifiers for each
+household, enabling us to match neighbourhood BB speed
+
+to our sample of children. The BB speed data are avail-
+able across all years 2012–2017 and are matched to the
+
+LSOA-year in which the child was interviewed. The sam-
+ple of children we draw on live in households that do not
+
+change address during the period, which is important as
+the analysis is based upon location FE.
+3.1. Reduced form approach
+For ease of interpretation we standardize each outcome
+to have a mean of zero and standard deviation of unity,15
+and condition on a set of covariates and BB speed. The
+reduced form models we estimate are of the following
+form:
+yijw = X’
+ijwˇ + Zjw +  ̨i + j + w + εijw (1)
+where i(= 1,.., 6310), j(= 1,.., 3765), w (= 3,.., 8) denote
+the child, the neighbourhood in which the child lives
+(LSOA), and wave of interview respectively; the outcome
+
+of interest is denoted by yijw and Zjw is the average neigh-
+bourhood BB speed. The error term is normally distributed
+
+εijw∼N (0,  ̇) and  ̨i, j, w denote child, neighbourhood
+and time specific FE, respectively. Eq. (1) is estimated
+using FE analysis, where the inclusion of FE eliminates
+endogenous selection bias arising from time-invariant
+unobserved variables, e.g. childhood circumstances or
+
+neighbourhood characteristics, which influence both well-
+being and BB speed. Our interest lies in the sign and
+
+statistical significance ofthe estimate ˆ, which, based upon
+the quasi-random assignment of BB (considered in detail
+below) gives the intention-to-treat (ITT) effect of BB speed
+14 The average synchronisation speed is the average speed at which the
+modem connects with the internet; itis a key BB performance metric used
+by Ofcom. The data are available from www.ofcom.org.uk 15 Ferrer-i-Carbonell and Frijters (2004) show that assuming cardinality
+
+for ordinal measures of wellbeing is acceptable in models where individ-
+ual effects are included, as is the case in our analysis.
+
+on psychological wellbeing, capturing the causal effect
+of being assigned to treatment (see Angrist and Pischke,
+2009).
+The covariates in vector Xijw control for individual child,
+
+parent, household and local area characteristics and com-
+prise: age, specifically whether aged 10, 11, 12, 13 or 14
+
+(with aged 15 as the omitted category); whether male; the
+number of children aged 0–2, 3–4, 5–11 or 12–15 in the
+household16; whether either of the child’s parent(s) own
+
+their house, are employed, or have a degree or equiva-
+lent qualification; whether the child lives in a single parent
+
+household; the natural logarithm of real equivalized net
+
+household income; and local area characteristics (includ-
+ing the unemployment rate, gross value added (GVA) per
+
+capita, the share of females, the share of the population
+over 65, and the share of the population of working age)
+defined at the Local Authority District (LAD) level, to proxy
+for local economic conditions.17
+Full variable definitions are given in the Appendix, Table
+A1. Summary statistics are shown in Table 1. Fig. 1 shows
+histograms of the distribution of each dependent variable
+
+prior to standardization. Clearly, across each of the psy-
+chological wellbeing outcomes, on average children report
+
+towards the upper of the scale, although for feelings about
+their school work and appearance the mean response is
+lower and the standard deviation higher in comparison
+to the other domains; approximately 20 % of respondents
+state that they are ‘completely happy’ with their school
+work and/or appearance.
+Approximately 51 % of children are aged 13–15 and just
+under half are male. In terms of family background, 77 % of
+children have atleast one parent who is either an employee
+or self-employed, 33 % of parents have a degree; 22 % of
+children live in a single parent household; the average real
+net equivalized household income is £1326 per month; and
+67 % of parents own their home either outright or with a
+mortgage. Table 1 shows that the average BB speed over
+the period was just under 26 mbps. Fig. 2 provides kernel
+density plots of the neighbourhood average BB speeds for
+each year, where clearly the average speed, and also the
+
+variance, has increased over time. Fig. 3 shows the distri-
+bution in growth in BB at the LSOA level for each wave as a
+
+complement to Fig. 2, where growth occurred between all
+waves.
+Fig. 4 shows a map of England split into LSOAs where
+white areas are not included in our sample. The map shows
+London along with the eight core cities of England with
+boundaries given in blue. By considering quartile ranges
+of average BB speed over time at the LSOA level, the map
+highlights where the variation in BB speed comes from. It
+
+would appear that BB speeds are highly dispersed, not con-
+centrated in any one particular region, and not dominated
+
+by large cities, e.g. London (noticeably there is evidence of
+variation in BB speed across quartiles within London).
+
+16 For the categories 5-11 and 12-15 the number of children excludes
+the respondent. 17 In the UKHLS there are 330 LADs in England. The LAD variables are
+obtained from www.nomisweb.co.uk which is a service provided by the
+Office for National Statistics containing official labour market statistics.
+
+6 E. McDool, P. Powell, J. Roberts et al. / Journal of Health Economics 69 (2020) 102274
+
+Fig. 1. Distribution of dependent (wellbeing) variables.
+
+Fig. 2. Density plots of neighbourhood (LSOA) broadband speed (mbps) by wave, Zjw.
+
+E. McDool, P. Powell, J. Roberts et al. / Journal of Health Economics 69 (2020) 102274 7
+
+Table 1
+Summary statistics – dependent variables, key explanatory variables and broadband speed.
+
+MEAN ST. DEV. MIN MAX
+
+DEPENDENT VARIABLES, y, Level of Happiness with: @
+School work 5.5177 1.233 1 7
+Appearance 5.3448 1.431 1 7
+Family 6.3804 1.021 1 7
+Friends 6.2409 1.026 1 7
+School 5.6366 1.445 1 7
+Life 5.8497 1.183 1 7
+EXPLANATORY VARIABLES, X
+Child Aged 10 0.1566 0.363 0 1
+11 0.1653 0.371 0 1
+12 0.1706 0.376 0 1
+13 0.1732 0.378 0 1
+14 0.1695 0.375 0 1
+Child male 0.4999 0.500 0 1
+Parent(s) employed 0.7726 0.419 0 1
+Parent(s) has degree 0.3295 0.470 0 1
+Single parent household 0.2233 0.417 0 1
+Natural logarithm of real equivalized net monthly household income 7.0404 0.512 3.24 12.07
+No. of other children in household aged 0–2 0.0761 0.289 0 3
+3-4 0.0884 0.298 0 3
+5–11 0.9310 0.880 0 5
+12–15 1.0753 0.703 0 5
+Parent(s) own home 0.6675 0.471 0 1
+Natural logarithm of unemployment rate # 1.8261 0.444 0.26 2.80
+Natural logarithm of GVA per capita # 10.0033 0.366 9.40 11.51
+Natural logarithm of share of females # 3.9356 0.023 3.83 4.01
+Natural logarithm of share of population 16–65 # 4.2903 0.084 4.06 4.51
+Natural logarithm of share of population 65+ # 3.2378 0.382 1.92 4.24
+Average synchronization speed (mbps), Zjw $ 25.6419 14.783 1.84 87.89
+Number of children (N) 6310
+Observations (NT) 13,938
+@ Denotes variables that are categorical; in the empirical analysis these variables are standardized to have a mean zero and standard deviation of unity. # Defined at the local authority district (LAD) level. $ Defined at the neighbourhood (LSOA) level. See Appendix Table A1 for full definitions.
+
+Fig. 3. Density plots of neighbourhood (LSOA) growth in broadband speed over time, Zjw.
+
+8 E. McDool, P. Powell, J. Roberts et al. / Journal of Health Economics 69 (2020) 102274
+
+Fig. 4. Map showing the average broadband speed by quartile (produced in ArcGIS using Ofcom data).
+
+3.2. Random allocation
+The empirical approach adopted relies only on an
+assumption of quasi-random assignment of BB and does
+
+not require an exclusion restriction. BB rollout in England
+has been a complex mix of commercial and government
+initiatives. The bulk of commercial rollout, which was
+
+E. McDool, P. Powell, J. Roberts et al. / Journal of Health Economics 69 (2020) 102274 9
+
+largely demand driven, was completed before our analy-
+sis period starts in 2012 (Department for Digital, Culture
+
+Media andSport, 2018). Existing service quality was a result
+of a number of factors including poor home wiring, long
+telephone lines and random network effects (Department
+for Business Innovation and Skills and Department for
+
+Culture Media and Sport, 2009). The government sub-
+sidised superfast BB programme was announced in 2010
+
+in response to concerns that commercial deployment
+would fail to reach many parts of the country where
+
+installation would not be profitable for a number of rea-
+sons (Department for Business Innovation and Skills and
+
+Department for Culture Media and Sport, 2010).18 The
+
+government provided £780 m of public resources for a sub-
+stantial programme developed in partnership with Local
+
+Authorities, who were expected to match central govern-
+ment funds on a one-to-one basis. Local Authorities were
+
+also responsible for procurement and management of con-
+tracts with local suppliers, resulting in a large amount of
+
+local variation (Department for Digital, Culture Media and
+
+Sport, 2018). Recently published evaluation evidence sug-
+gests that the areas that benefitted from this subsidised
+
+rollout had features that were expected to reduce the com-
+mercial viability of upgrading local infrastructure; these
+
+included, being further from the exchange, having a higher
+share of ‘exchange only’ lines and having a low density of
+premises (Department for Digital, Culture Media and Sport
+(2018).19 The evaluation also reveals that schemes were
+primarily concentrated in rural areas with comparatively
+low population densities but any differences in economic
+performance were less apparent (Department for Digital,
+Culture Media and Sport (2018).
+Overall, the subsidised programme, which was rolled
+out in the period coinciding with our analysis period,
+substantially distorted commercial demand driven BB
+installation. As a result, we do not expect BB speed in our
+
+analysis period to be systematically related to local socio-
+economic characteristics. We also explore this assumption
+
+empirically following Bhuller et al. (2013), who investi-
+gate whether increased internet access triggers sex crimes,
+
+and Akerman et al. (2015), who estimate whether or not
+
+the adoption of BB internet by firms enhances labour pro-
+ductivity. Firstly, we regress BB speed on neighbourhood
+
+(LSOA) and time FE, and area (LAD) level time varying char-
+acteristics (unemployment, population shares, education
+
+and GVA per head). We find that 83 percent of the variation
+
+in BB speed is attributable to time-invariant neighbour-
+hood characteristics and common time effects, whilst less
+
+than 1 percent is due to time-varying covariates (which
+might pick up demand and supply effects associated with
+improving BB speeds). Secondly, we consider the timing of
+
+increasing BB speed, as revealed in Fig. 2, and baseline char-
+acteristics, which are evaluated at the start of the sample
+
+18 Superfast BB is usually interpreted as meaning download speeds of at
+least 24 megabits per second. 19 BB connections are made over a copper cable, which can either be
+connected to a roadside cabinet near the premises, or directly to the
+local telephone exchange. This latter type of ‘exchange only’ connection
+requires a more expensive upgrade procedure to enable the premises to
+access superfast BB.
+
+period, by estimating the following at the neighbourhood
+level:
+Zjw = j + 
+ıw × X ̄ j,2012
+
+’ w + εjw (2)
+where Zjw is the first difference in average BB speed
+across waves, i.e. Zjw = Zjw − Zjw−1, shown in Fig. 3, ıw is a
+vector of time fixed effects and the vector X ̄ j,2012 contains
+
+the 2012 mean of all child-family and area level covari-
+ates averaged at the neighbourhood level. Table 2 reports
+
+estimates of w and joint tests for each covariate of w
+
+across waves. It would appear that generally there is no sys-
+tematic relationship between improving BB performance
+
+and the control variables. More importantly, there is lit-
+tle correlation with area-level background variables such
+
+as the unemployment rate, GVA per capita,20 and popula-
+tion shares. This suggests that service expansion was not
+
+concentrated in those locations where the economy was
+growing fastest (or slowest). Moreover, the variation in the
+growth of BB speed shown in Fig. 3 did not just occur in
+
+years where the covariates predict the change in BB con-
+nection, see Table 2, and indeed perhaps not surprisingly
+
+thepredictivepower ofthemodelis weak where the overall
+model F-statistic only has a p-value of 0.42.
+Furthermore, we require that increasing BB speed is
+uncorrelated with the time-varying factors that influence
+psychological wellbeing. Following the approach of Altonji
+et al. (2005a, 2005b) we also test this by considering
+selection on observables as an indication of selection on
+unobservable effects. This is undertaken for the full sample
+of children and sub-samples of potential interest, e.g. males
+and females, since the effect of gender cannot be recovered
+in the FE framework of Eq.(1), where we explore the extent
+
+to which the BB speed is correlated with the part ofthe out-
+come explained by the covariates. Specifically we estimate
+
+the following for each outcome:
+cov
+
+X’
+ijwˇ, Zjw
+
+ ̨i
+
+/var 
+Zjw
+
+ ̨i
+ (3)
+Table 3 shows the results of this where it is clear that
+for each domain across the full sample and the sub-groups,
+the correlation between X
+
+ijwˇ and Zjw is very low and
+
+practically indistinguishable from zero. This result is con-
+sistent with the assumption that increasing BB speed is
+
+uncorrelated with the time-varying factors that influence
+psychological wellbeing. To summarise we conclude that
+
+quasi-random assignment of BB in our data is a reason-
+able assumption, whereby the estimate of , from Eq. (1),
+
+provides the intention-to-treat (ITT) effect of BB speed on
+psychological wellbeing.
+4. Results
+In this section, we firstly estimate the reduced form
+model of Eq. (1) for the full sample of children, before
+20 The only exception, albeit at the 10 per cent level, is for GVA per head,
+consistent with the finding of Bauernschuster et al. (2014) for Germany.
+
+Moreover, contrary to expectations, results show that where individu-
+ally statistically significant the effect is associated with lower growth in
+
+internet speed, e.g. between 2012-13, ˆ 3, a 1% increase in GVA per head
+is associated with 0.086 per cent reduction in the growth of BB speed.
+
+10 E. McDool, P. Powell, J. Roberts et al.
+/ Journal of Health Economics 69 (2020) 102274
+
+Table 2
+Relationship between changing broadband speed and baseline average neighbourhood (LSOA) characteristics.
+MEAN OF COVARIATE 2012 ˆ 3 ˆ 4 ˆ 5 ˆ 6 ˆ 7 ˆ 8 H0 : 3 = . . . = 8 = 0
+Male −2.05 (1.80) −0.18 (0.85) 0.20 (0.87) −0.01 (0.02) −0.05 (0.12) −0.44 (0.71) 0.93, p=[0.475]
+Age10 3.02 (1.35) 0.19 (0.56) −0.13 (0.39) 0.16 (0.42) 0.11 (0.21) −0.64 (0.72) 0.53, p=[0.790]
+Age 11 0.42 (0.16) −0.18 (0.56) −0.32 (0.89) −0.16 (0.43) 0.19 (0.35) −0.39 (0.46) 0.24, p=[0.965]
+Age 12 0.78 (0.37) 0.17 (0.56) 0.25 (0.79) −0.01 (0.03) 0.55 (0.95) 0.03 (0.05) 0.32, p=[0.929]
+Age 13 −1.69 (0.68) −0.29 (1.01) −0.44 (1.35) 0.31 (0.75) 0.18 (0.29) −0.44 (0.59) 0.70, p=[0.651]
+Age 14 0.18 (0.12) 0.07 (0.23) −0.33 (0.95) −0.23 (0.54) −0.12 (0.19) −0.65 (0.63) 0.29, p=[0.944]
+0-2 children 1.02 (0.53) 0.94 (1.71) 0.53 (1.16) 0.23 (0.62) 0.34 (0.57) −0.75 (1.06) 1.69, p=[0.121]
+3-4 children 0.35 (0.13) −0.29 (0.98) −0.04 (0.11) −0.91 (1.69) −0.84 (1.68) −0.98 (1.47) 0.60, p=[0.661]
+5–11 children −0.29 (0.26) −0.06 (0.43) −0.15 (0.94) −0.23 (1.29) 0.09 (0.34) −0.34 (0.94) 0.56, p=[0.759]
+12–15 children 0.44 (0.30) −0.04 (0.18) −0.22 (0.88) 0.13 (0.47) −0.31 (0.74) −1.07 (1.87) 0.78, p=[0.587]
+Parent(s) own home −1.08 (0.49) 0.28 (1.11) −0.05 (0.18) 0.07 (0.23) 0.55 (1.28) −0.21 (0.34) 0.59, p=[0.741]
+Parent(s) employed 3.46 (0.95) 0.13 (0.50) 0.00 (0.00) 0.73 (2.34) 0.24 (0.56) 0.44 (0.79) 1.23, p=[0.289]
+Parent(s) have degree −1.72 (1.38) −0.13 (0.57) −0.22 (0.90) −0.23 (0.86) 0.04 (0.09) −0.03 (0.05) 0.58, p=[0.745]
+Single parent household 2.04 (2.49) 0.21 (0.87) 0.32 (1.17) −0.00 (0.01) 0.25 (0.54) −0.69 (1.11) 1.60, p=[0.143]
+Log real equiv. hh income 0.80 (0.61) −0.36 (1.49) −0.28 (1.00) −0.09 (0.31) −0.18 (0.34) −1.21 (1.94) 1.11, p=[0.356]
+Log unemployment rate −1.99 (0.70) −0.98 (1.43) 0.02 (0.02) −0.83 (1.41) −2.57 (2.28) −1.06 (1.05) 1.13, p=[0.341]
+Log GVA per capita −8.60 (1.99) −7.01 (1.40) −5.87 (1.01) −6.55 (2.22) −7.62 (1.56) −7.37 (1.45) 2.53, p=[0.079]
+Log share of females −3.61 (1.09) −1.43 (0.43) 1.21 (0.76) 0.57 (0.04) −3.66 (0.93) −2.68 (0.73) 1.76, p=[0.103]
+Log share of population 65+ −1.25 (1.06) −6.15 (1.54) −6.16 (1.56) −7.41 (1.93) −8.78 (1.97) −8.52 (1.63) 0.95, p=[0.461]
+Log share of population 16–65 2.00 (0.71) 1.72 (1.20) 2.36 (1.66) 2.39 (1.70) 2.55 (1.81) 0.28 (0.19) 1.43; p=[0.200]
+F-statistic H0 : ıw = w = 0 1.02; p = 0.4159
+Number of LSOAs (N) 2,368
+Observations (NT) 4,766
+This table considers the relationship between improving BB performance and the control variables based upon their mean value in 2012, X
+ ̄
+j,2012, including the area level controls to ascertain whether service
+expansion was concentrated in those locations where the economy was growing fastest. Figures reported are coefficients and those in parenthesis are t-statistics. The final column shows an F-statistic, which
+tests the null hypothesis that the parameters are jointly equal to zero across time for each covariate in turn.
+
+E. McDool, P. Powell, J. Roberts et al. / Journal of Health Economics 69 (2020) 102274 11
+
+Table 3
+The role of selection on observables – full sample and heterogeneity.
+
+FULL SAMPLE GENDER AGE URBAN-RURAL
+Boys Girls Aged ≥13 Aged <13 Urban Rural
+SCHOOL WORK −0.00095 −0.00188 −0.00136 −0.00089 −0.00117 −0.00017 −0.00050
+APPEARANCE 0.00139 0.00275 −0.00073 0.00372 0.00038 0.00013 0.00018
+FAMILY −0.00097 −0.00057 −0.00152 −0.00748 0.00384 0.00005 −0.00015
+FRIENDS −0.00086 −0.00132 −0.00134 0.00016 0.00073 0.00013 0.00054
+SCHOOL −0.00171 −0.00031 −0.00362 0.00035 −0.00149 −0.00001 0.00041
+LIFE OVERALL −0.00093 −0.00119 −0.00160 0.00093 0.00055 0.00016 0.00017
+Number of children (N) 6310 3,179 3,131 4,082 4,154 5,346 993
+Observations (NT) 13,938 6964 6974 7073 6865 11,637 2,301
+This table considers whether BB speed is uncorrelated with time-varying factors which are associated with psychological wellbeing, by considering selection
+on observables as an indication of selection on unobservable effects, where cov
+
+X
+ijwˇ, Zjw | ̨i
+
+/var 
+Zjw | ̨i
+
+is shown for each outcome.
+
+considering heterogeneity across a number of sub-groups.
+Finally, we explore potential mechanisms that may be
+capable of explaining the results.
+4.1. Reduced form analysis
+Table 4 presents the coefficients on Zjw, i.e. ˆ the ITT,
+showing the effect of BB speed on each of the wellbeing
+
+domains reported in each column. We report four differ-
+ent specifications of Eq. (1): (i) Panel A with no control
+
+variables, just child FE; (ii) Panel B incorporating covari-
+ates, Xijw, which include child and family characteristics as
+
+well as local economy controls (unemployment rate; GVA
+per head; share of females; share of population over 65;
+and the share of the population aged 16–65) and child FE;
+(iii) Panel C also incorporating time FE; and (iv) Panel D,
+incorporating the full set of covariates, time, area and child
+FE.
+Focusing initially on the FE models in Panels A and
+B, across each domain there is a negative association
+
+with BB speed, i.e. ˆ < 0. The inclusion of covariates gen-
+erally reduces the parameter estimate on Zjw but the
+
+effect remains statistically significant. Looking at Panel B
+a 1 % increase in BB speed decreases happiness in each
+of the domains ranging from 0.008 standard deviations
+(around 0.8 per cent) for appearance to 0.005 standard
+deviations for life overall. In Panel D, which is the most
+
+stringent specification, BB speed remains statistically sig-
+nificant for four out of the six domains, where a 1 %
+
+increase in BB speed decreases happiness with appearance
+by 0.006 standard deviations (i.e. an ITT of around 0.6 per
+cent).
+
+We compare the effect of BB speed to the other con-
+trol variables in Table 5, which reports the full results from
+
+Panel C of Table 4. Interestingly, where statistically signif-
+icant, younger children generally feel happier than those
+
+aged 15 (the omitted category) across each domain, whilst
+there are no effects stemming from household income. In
+related work, Anand and Roope (2016), who consider child
+wellbeing in Germany, also found no income effect, whilst,
+analysis from the US reveals that parental earnings are
+positively associated with a number of childhood health
+outcomes (Mazumder and Davis, 2013). Those children
+
+residing in a single parent household have lower psycho-
+logical wellbeing for appearance and life overall. What is
+
+evident is that in a FE framework few child level and area
+level covariates are statistically significant, yet BB speed
+has a negative effect on four of the wellbeing domains.
+Focusing upon appearance the coefficient on Zjw is on
+average approximately a tenth of the magnitude of the
+
+coefficient associated with whether the child lives in a sin-
+gle parent household, so arguably not a trivial effect. This
+
+is consistent with concerns about the negative influence of
+the internet on body image.
+In Eq. (1) BB speed is assumed to have a linear effect
+on each domain. We now relax this by replacing Zjw in
+Eq. (1) with a set of binary indicators for whether the BB
+
+speed is between: 10 and less than 20 megabits per sec-
+ond (mbps); 20 and less than 30 mbps; 30 and less than
+
+40 mbps; 40 and less than 50 mbps; 50 and less than 60
+mbps; and 60 mbps and above, respectively. The results
+of this analysis are shown in Table 6, which incorporates
+
+full controls, area, year and child FE. Clearly, there is evi-
+dence of linearity in that the higher BB speed is associated
+
+with worse wellbeing across all domains where statisti-
+cally significant and the effect is monotonic, i.e. increasing
+
+in magnitude. For example, considering appearance hav-
+ing a BB speed between 20 and 30 mbps is associated with
+
+0.11 lower standard deviations, but this rises in magnitude
+to a 0.36 standard deviation reduction in wellbeing for BB
+speeds at 60 mbps and above.
+4.2. Sub-group analysis
+By looking at the entire sample of children, we may
+be missing important differences across the distribution
+
+of children – i.e. the effects of BB speed may have het-
+erogeneous impacts across different groups of children.
+
+Hence, we also consider the following sub-groups: male
+and females; children aged below 13 and those aged 13 and
+above; and urban and rural areas. Eq. (1) is re-estimated
+
+for each of these groups. Table 7 shows the results split-
+ting the sample of 6310 children by gender (Panels A and
+
+B), age (Panels C and D), and urban-rural location (Pan-
+els E and F). All estimates incorporate controls as well as
+
+area, time and child FE. Considering gender differences,
+
+where statistically significant, the largest effects are appar-
+ent for girls, hence it would seem that BB speed is more
+
+detrimental for wellbeing across each domain for girls –
+with the largest effect stemming from how girls feel about
+
+12 E. McDool, P. Powell, J. Roberts et al.
+/ Journal of Health Economics 69 (2020) 102274
+
+Table 4
+Coefficients for the reduced form relationship between wellbeing domains and broadband speed.
+PANEL A SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+BB speed −0.0095 (9.70) −0.0156 (15.80) −0.0162 (15.84) −0.0114 (10.11) −0.0174 (16.37) −0.0139 (13.76)
+Controls × × × × × ×
+Area fixed effects × × × × × ×
+Year fixed effects × × × × × ×
+Child fixed effects √√ √ √ √ √
+R-squared 0.0140 0.0424 0.0417 0.0169 0.0446 0.0301
+PANEL B SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+BB speed −0.0061 (4.07) −0.0080 (5.50) −0.0076 (5.04) −0.0059 (3.54) −0.0073 (4.61) −0.0054 (3.57)
+Controls √√ √ √ √ √
+Area fixed effects × × × × × ×
+Year fixed effects × × × × × ×
+Child fixed effects √√ √ √ √ √
+R-squared 0.0180 0.0527 0.0518 0.0225 0.0586 0.0419
+PANEL C SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+BB speed −0.0045 (2.70) −0.0061 (3.53) −0.0026 (1.50) −0.0037 (2.92) −0.0037 (2.93) −0.0025 (1.50)
+Controls √ √ √ √ √ √
+Area fixed effects × × × × × ×
+Year fixed effects √√ √ √ √ √
+Child fixed effects √√ √ √ √ √
+R-squared 0.0191 0.0562 0.0582 0.0236 0.0623 0.0440
+PANEL D SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+BB speed −0.0041 (2.40) −0.0062 (3.60) −0.0024 (1.36) −0.0037 (2.91) −0.0035 (2.89) −0.0024 (1.43)
+Controls √ √ √ √ √ √
+Area fixed effects √√ √ √√√
+Year fixed effects √√ √ √ √ √
+Child fixed effects √ √ √ √ √ √
+R-squared 0.0283 0.0612 0.0609 0.0314 0.0659 0.0494
+Number of children (N) 6310
+Observations (NT) 13,938
+Controls include: age of child; number of children in household aged 0–2; number of children in household aged 3–4; number of children in household aged 5–11; number of children in household aged 12–15;
+whether live in a single parent household; whether parent(s) own home; whether either parent has a degree; log equivalized real household income and the following LAD level covariates, the natural logarithm
+of: the unemployment rate; GVA per capita; share of females; share of population over 65; and share of population aged 16–65. In Panel C we also include year fixed effects and in Panel D 320 Local Authority
+indicators, i.e. area fixed effects, are also included.
+
+E. McDool, P. Powell, J. Roberts et al.
+/ Journal of Health Economics 69 (2020) 102274 13
+
+Table 5
+Coefficients for all covariates (from Table 4 panel C).
+
+SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+BB speed −0.0045 (2.70) −0.0061 (3.53) −0.0026 (1.50) −0.0037 (2.92) −0.0037 (2.93) −0.0025 (1.50)
+Age 10 0.1927 (1.34) 0.3014 (2.17) 0.4255 (3.13) 0.4556 (2.99) 0.4965 (3.40) 0.3111 (2.17)
+Age 11 0.2237 (1.92) 0.2638 (2.33) 0.3618 (3.31) 0.3495 (2.81) 0.4205 (3.52) 0.3009 (2.55)
+Age 12 0.1480 (1.73) 0.1116 (1.36) 0.2014 (2.44) 0.2985 (3.29) 0.2955 (3.34) 0.2034 (2.37)
+Age 13 0.1198 (1.99) 0.0086 (0.15) 0.1234 (2.14) 0.1858 (2.91) 0.1417 (2.27) 0.1299 (2.15)
+Age 14 0.0732 (1.94) −0.0274 (0.79) 0.0351 (0.93) 0.1049 (2.58) 0.0354 (0.92) 0.0494 (1.29)
+0-2 children −0.0688 (1.15) −0.0138 (0.24) −0.0477 (0.87) 0.0279 (0.42) −0.0161 (0.25) −0.0874 (1.57)
+3-4 children 0.0407 (0.76) 0.0131 (0.24) −0.0589 (0.99) 0.0217 (0.33) −0.0268 (0.45) 0.0038 (0.07)
+5–11 children −0.0477 (1.13) −0.0155 (0.39) −0.0885 (1.94) −0.0305 (0.65) −0.0236 (0.55) −0.0262 (0.62)
+12–15 children −0.0283 (0.95) 0.0292 (1.06) −0.0024 (0.07) 0.0195 (0.60) −0.0117 (0.39) 0.0076 (0.25)
+Parent(s) own home 0.1076 (1.02) −0.0848 (0.96) 0.0433 (0.44) 0.0157 (0.18) 0.0458 (0.49) 0.0277 (0.30)
+Parent(s) employed −0.0729 (1.59) −0.0456 (1.20) −0.0699 (1.72) −0.0274 (0.64) −0.1028 (2.17) −0.1042 (2.54)
+Parent(s) have degree −0.1787 (1.97) −0.0512 (0.46) −0.0222 (0.21) 0.1375 (1.26) −0.0992 (1.00) 0.0520 (0.45)
+Single parent household −0.0790 (0.91) −0.0606 (2.04) −0.1039 (1.03) 0.1671 (1.52) −0.1366 (1.43) −0.2203 (2.67)
+Log real equiv. hh income 0.0024 (0.08) −0.0318 (1.18) 0.0288 (0.93) −0.0513 (1.52) −0.0200 (0.68) −0.0285 (0.95)
+Log unemp. rate 0.0529 (1.46) 0.0236 (0.69) −0.0296 (0.83) 0.0537 (1.31) 0.0241 (0.66) −0.0928 (2.45)
+Log GVA per capita −0.1815 (0.55) 0.1639 (0.55) −0.4040 (1.25) −0.4028 (1.14) −0.0287 (0.08) −0.2203 (0.73)
+Log share females 0.4910 (0.49) −0.1815 (0.19) 0.5060 (0.49) −0.1570 (0.14) 1.6044 (1.64) 0.3306 (0.34)
+Log share pop. 16–65 0.1618 (0.59) 0.4988 (2.00) −0.2863 (1.07) −0.0083 (0.03) 0.2458 (0.90) 0.0394 (0.15)
+Log share pop. 65+ −0.0925 (0.85) −0.2073 (2.11) −0.0139 (0.14) −0.0550 (0.47) −0.1504 (1.42) −0.0845 (0.77)
+R-squared 0.0191 0.0562 0.0582 0.0236 0.0623 0.0440
+Number of children (N) 6310
+Observations (NT) 13,938
+Controls as per Table 4 Panel C.
+
+14 E. McDool, P. Powell, J. Roberts et al.
+
+/ Journal of Health Economics 69 (2020) 102274
+
+Table 6
+Coefficients for the reduced form relationship between wellbeing domains and broadband speed – non-linearity.
+SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+BB ≥10 and <20 mbps −0.0598 (1.19) −0.0693 (1.43) −0.0546 (1.06) −0.0378 (0.76) −0.0331 (0.66) −0.0794 (1.65)
+BB ≥20 and <30 mbps −0.0961 (1.56) −0.1135 (1.95) −0.0388 (0.63) −0.0318 (0.50) −0.0335 (0.06) −0.1091 (1.80)
+BB ≥30 and <40 mbps −0.1605 (2.18) −0.1327 (1.94) −0.0161 (0.22) −0.0222 (0.29) −0.0290 (0.39) −0.1189 (1.73)
+BB ≥40 and <50 mbps −0.1906 (2.28) −0.2238 (2.87) −0.1136 (1.36) −0.1261 (1.46) −0.0705 (0.84) −0.1876 (2.28)
+BB ≥50 and <60 mbps −0.2483 (2.65) −0.2938 (3.30) −0.0948 (1.02) −0.1327 (1.34) −0.1029 (1.08) −0.2240 (2.44)
+BB ≥60 mbps −0.2635 (2.41) −0.3671 (3.35) −0.0562 (0.50) −0.2103 (1.76) −0.2033 (1.78) −0.2300 (2.18)
+Controls √√√√√ √
+Area fixed effects √√√√√√
+Wave fixed effects √ √ √ √ √ √
+Child fixed effects √ √ √ √ √ √
+R-squared 0.0288 0.0619 0.0618 0.0323 0.0667 0.0503
+Number of children (N) 6310
+Observations (NT) 13,938
+Notes: 1 BB refers to broadband speed which is defined as a set of binary indicators for whether the average synchronization speed is between: ≥10 and <20 megabits per second (mbps); ≥20 and <30 mbps;
+≥30 and <40 mbps; ≥40 and <50 mbps; ≥50 and <60 mbps; and ≥60 mbps, respectively. 2 Controls include: age; number of children in household aged 0–2; number of children in household aged 3–4; number
+of children in household aged 5–11; number of children in household aged 12–15; whether live in a single parent household; whether parent(s) own home; whether either parent has a degree; log equivalized
+real household income; and year of interview. We also include 320 Local Authority indicators, i.e. area fixed effects, and the following LAD level covariates, the natural logarithm of: the unemployment rate; GVA
+per capita; share of females; share of population over 65; and share of population aged 16–65.
+their appearance
+
+; again consistent with body image con-
+cerns. In Panels C and D, the sample of children is split
+
+by age, specifically whether aged below 13 or aged 13 and
+above.21 The largest effects are all for those children aged
+13 and over. The only significant effects of BB speed for
+those children under the age of 13 are on appearance and
+family
+, where
+a
+1
+
+% increase in BB speed reduces happi-
+ness in these domains by around 0.007 and 0.006 standard
+
+deviations respectively.
+Although we have controlled for area (LAD) level
+covariates and area FE, it is possible that children in
+more geographically isolated localities have worse internet
+
+access, and also fewer opportunities to engage in activi-
+ties (such as sports, or interacting with friends) that could
+
+affect their psychological well-being. To investigate this,
+in Table
+7 Panels
+E and
+F we split the sample according
+to whether the child lives in an urban or rural location.22
+
+No significant effects are found for children in rural house-
+holds, but the negative effect of BB speed holds across each
+
+domain, for those children living in urban areas.
+4.3. Potential mechanisms
+This section explores the potential mechanisms that
+may explain the negative association between BB speed
+and wellbeing domains, discussed in Section
+2
+. Firstly, for
+
+children living in
+
+a household with unemployed parent(s)
+a faster internet connection may help parents find jobs
+that better match their skills or exit unemployment spells
+more quickly. Secondly,
+
+a faster internet connection may
+
+affectthe happiness ofthe parents, which in turn may influ-
+ence the happiness of their children. Thirdly, an improved
+
+internet connection may be associated with children’s aca-
+demic outcomes. Fourthly, the internet may crowd-out
+
+other activities that the child would otherwise have under-
+taken which in turn reduces wellbeing. Finally, we consider
+
+whether BB speed is associated with children’s use of social
+media.
+To investigate each of the above channels we take
+a
+two-step approach. Firstly, we explore whether each of
+the mechanisms has
+
+a direct influence on each domain of
+children’s wellbeing, to do this we estimate the following: yijw = X
+ijw
+
+1
++ mechanismijw
++
+ ̨
+1
+i
++
+1
+j
++
+
+1
+w
++
+
+1ijw
+(4a)
+
+where the results are shown in Table
+8
+, which, for brevity,
+
+only report
+ˆ
+. Theninthenext stage we investigate whether
+BB speed
+(
+Zjw
+
+) is associated with the mechanism in ques-
+tion, by estimating:
+
+mechanismijw
+=
+X
+
+ijw
+
+2
++ Zjw
++
+ ̨
+2
+i
++
+2j
++
+
+2
+w
++
+
+2ijw
+(4b)
+21 Given that BB deployment increases over time (see Fig.
+2
+) as does age
+of the children, splitting into age categories may help to disentangle these
+two effects. 22 Urban areas are defined as settlements with
+
+a population of 10,000 or
+more according to Department for Environment, Food and Rural Affairs
+www.gov.uk/government/collections/rural-urban-classification
+.
+
+E. McDool, P. Powell, J. Roberts et al. / Journal of Health Economics 69 (2020) 102274 15
+
+Table 7
+Coefficients for the reduced form relationship between wellbeing domains and broadband speed – heterogeneity.
+PANEL A: Males SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+BB speed −0.0017 (0.74) −0.0051 (2.29) −0.0013 (0.53) −0.0015 (0.60) −0.0041 (1.63) −0.0001 (0.05)
+R-squared 0.0185 0.0339 0.0446 0.0247 0.0428 0.0241
+Observations (NT) 6964
+PANEL B: Females SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+BB speed −0.0057 (2.27) −0.0063 (2.43) −0.0031 (1.19) −0.0052 (1.90) −0.0024 (0.87) −0.0040 (1.50)
+R-squared 0.0514 0.1047 0.0890 0.0503 0.0966 0.0941
+Observations (NT) 6974
+PANEL C: Aged <13 SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+BB speed −0.0026 (0.75) −0.0068 (2.02) −0.0060 (1.96) −0.0060 (1.53) −0.0006 (0.20) −0.0020 (0.58)
+R-squared 0.0164 0.0494 0.0533 0.0196 0.0344 0.0293
+Observations (NT) 6865
+PANEL D: Aged ≥13 SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+BB speed −0.0137 (4.26) −0.0090 (3.10) −0.0029 (0.89) −0.0072 (2.86) −0.0006 (0.17) −0.0061 (1.92)
+R-squared 0.0292 0.0183 0.0281 0.0226 0.0294 0.0307
+Observations (NT) 7073
+PANEL E: Rural SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+BB speed −0.0052 (1.12) −0.0017 (0.35) 0.0042 (0.94) −0.0047 (0.83) 0.0006 (0.15) −0.0011 (0.21)
+R-squared 0.0244 0.0813 0.0581 0.0350 0.0802 0.0603
+Observations (NT) 2,301
+PANEL F: Urban SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+BB speed −0.0039 (2.06) −0.0085 (4.41) −0.0040 (2.69) −0.0039 (1.72) −0.0052 (2.41) −0.0036 (1.95)
+R-squared 0.0274 0.0580 0.0637 0.0318 0.0634 0.0471
+Observations (NT) 11,637
+Controls include: age of child; number of children in household aged 0–2; number of children in household aged 3–4; number of children in household
+aged 5–11; number of children in household aged 12–15; whether live in a single parent household; whether parent(s) own home; whether either parent
+has a degree; log equivalized real household income; and year of interview. We also include 320 Local Authority indicators, i.e. area fixed effects, and the
+following LAD level covariates, the natural logarithm of: the unemployment rate; GVA per capita; share of females; share of population over 65; and share
+of population aged 16–65.
+The results of this analysis are shown in Table 9, where
+
+for brevity we only report ˆ. From an empirical perspec-
+tive, for a mechanism to be capable of explaining the link
+
+between BB speed and children’s wellbeing one would
+expect the estimates of both  and to be statistically
+significant.
+Initially, focusing upon on transitions in labour market
+
+state, we consider transitions of either parent from unem-
+ployment in the previous time-period into employment in
+
+the current year, giving a sample size of 5668 based on 2987
+
+children. Table 8 Panel A shows that there is no associa-
+tion between parental transition into employment and any
+
+child wellbeing domain, and in Table 9 Panel A clearly BB
+speed has no significant effect on this potential mechanism
+(where Eq. 4b is estimated as a linear probability model).
+Next turning to the duration of the parents unemployment
+spell, based upon a sample of 5047 covering 2716 children
+who currently have an unemployed parent, there is some
+evidence of an inverse relationship between the length
+of time that the parent has been unemployed and their
+child’s feelings about school work and school (Table 8 Panel
+B). However, it would appear that parental labour market
+experience is not a potential mechanism as BB speed has
+
+no significant effect on the duration of parental unemploy-
+ment. Moreover, the coefficient is positive where a priori
+
+we would expect it to be negative, with faster internet con-
+nection allowing parents to exit unemployment quicker,
+
+perhaps due to enabling a better job match (maybe due to
+improved job search through online resources or through
+being able to obtain additional formal job interviews, e.g.
+see Gürtzgen et al., 2018).
+We now consider the wellbeing of the parent as a
+potential mechanism for the effect on child wellbeing. We
+
+measure parental psychological wellbeing using the Gen-
+eral Health Questionnaire (GHQ-12), which covers various
+
+dimensions, including: depression; anxiety; somatic symp-
+toms; feelings of incompetence; difficulty in coping; and
+
+sleep disturbance (Goldberg and Williams, 1988).23 The
+GHQ-12 score is onthe scale 0 (the leastdistressed)through
+
+to 12 (the most distressed). After removing missing val-
+ues on parental GHQ-12 the focus is upon a sample of
+
+13,227 observations comprising 6069 children. The results
+shown in Table 8 Panel C reveal an inverse relationship
+
+between the parents GHQ-12 score and children’s well-
+being across the domains school work, appearance and life
+
+overall, i.e. parents in more distressed states have children
+
+with lower wellbeing in these domains,  <ˆ 0. This is con-
+sistent with an intergenerational correlation in wellbeing.
+
+However, whether this is the mechanism through which
+BB speed is operating is doubtful given the estimate of the
+
+23 The GHQ-12 is a widely used screening instrument for common
+mental disorders, in addition to being a general measure of psychiatric
+wellbeing.
+
+16 E. McDool, P. Powell, J. Roberts et al.
+/ Journal of Health Economics 69 (2020) 102274
+
+Table 8
+Potential mechanisms and children’s wellbeing.
+PANEL A: Transitions 1 SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+UE to employed −0.0374 (0.82) 0.0130 (0.31) −0.0580 (1.20) −0.0214 (0.41) −0.0194 (0.40) 0.0092 (0.21)
+R-squared 0.0335 0.0510 0.0461 0.0405 0.0561 0.0454
+Observations (NT) 5668
+PANEL B: Duration of UE spell 1 SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+UE duration −0.0459 (2.63) −0.0234 (1.49) −0.0270 (1.52) −0.0189 (1.09) −0.0452 (2.61) −0.0326 (0.68)
+R-squared 0.0365 0.0479 0.0520 0.0448 0.0661 0.0513
+Observations (NT) 5047
+PANEL C: Parental wellbeing 1 SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+GHQ12 −0.0110 (2.32) −0.0110 (2.35) −0.0067 (1.41) 0.0032 (0.58) −0.0042 (0.91) −0.0120 (2.54)
+R-squared 0.0302 0.0613 0.0646 0.0319 0.0677 0.0519
+Observations (NT) 13,227
+PANEL D: Key stage 2 2 SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+GCSE attainment 0.0100 (0.38) 0.0227 (0.78) −0.0097 (0.32) −0.0103 (0.39) −0.0062 (0.22) −0.0035 (0.13)
+R-squared 0.5285 0.5281 0.4879 0.5186 0.4881 0.5221
+Observations (NT) 778
+PANEL E: Key stage 4 2 SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+Hours spent online −0.0001 (0.01) 0.0043 (0.32) 0.0026 (0.20) −0.0016 (0.13) 0.0002 (0.02) 0.0107 (0.79)
+R-squared 0.3376 0.3484 0.3497 0.3269 0.3210 0.3379
+Observations (NT) 1096
+PANEL F: Activities 3 SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+Number of activities 0.0542 (3.58) 0.0447 (3.26) 0.0036 (0.25) 0.0557 (3.58) 0.0221 (1.48) 0.0229 (1.79)
+R-squared 0.0426 0.0979 0.0632 0.0513 0.0928 0.0754
+Observations (NT) 7389
+PANEL G: Social media 3 SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+Hours spent online −0.0331 (3.95) −0.0284 (3.77) −0.0232 (2.87) −0.0038 (0.42) −0.0368 (3.94) −0.0374 (4.54)
+R-squared 0.0372 0.0586 0.0620 0.0386 0.0733 0.0624
+Observations (NT) 9948
+PANEL H: Social media 3 SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+≥5 hours spent online −0.1646 (4.24) −0.1348 (3.81) −0.1310 (3.59) −0.0343 (0.84) −0.1697 (4.07) −0.1593 (4.31)
+R-squared 0.0302 0.0607 0.0624 0.0309 0.0679 0.0517
+Observations (NT) 9948
+PANEL I: Social media 3 SCHOOL WORK APPEARANCE FAMILY FRIENDS SCHOOL LIFE
+
+Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat Coef t-stat
+Belong to social media site −0.0812 (3.29) −0.0653 (2.90) −0.0386 (1.65) 0.0538 (2.10) −0.0131 (0.54) −0.0163 (0.66)
+R-squared 0.0288 0.0596 0.0609 0.0313 0.0650 0.0491
+Observations (NT) 13,938
+Notes: 1 controls include: age of parent(s); age of child; number of children in household aged 0–2; 3–4; 5–11; 12–15; whether live in a single parent household; whether parent(s) own home; whether either
+parent has a degree; log equivalized real household income; and year of interview. Local Authority indicators, i.e. area fixed effects, are also included as well as the following LAD level covariates, the natural
+logarithm of: the unemployment rate; GVA per capita; share of females; share of population over 65; and share of population aged 16–65. 2 Regressions are at LAD level based on mean characteristics including
+area fixed effects, but excluding the age of the child and parent(s). Key Stage 2 tests are taken when children are aged 10–11, where the measure is the percentage of children obtaining level 4 or more in reading,
+writing and mathematics SATs (test score ranges from 1–100). Key Stage 4 (GCSE) tests are usually taken when children are aged 15/16, where the measure is the percentage of children who achieve five or more
+A* to C grades, including Mathematics and English. 3 Controls include: age of child; number of children in household aged 0–2; 3–4; 5–11; 12–15; whether live in a single parent household; whether parent(s)
+own home; whether either parent has a degree; log equivalized real household income; and year of interview. Local Authority indicators, i.e. area fixed effects, are also included as well as the following LAD level
+covariates, the natural logarithm of: the unemployment rate; GVA per capita; share of females; share of population over 65; and share of population aged 16–65. Each model includes child fixed effects, with the
+exception of Panels D and E.
+
+E. McDool, P. Powell, J. Roberts et al. / Journal of Health Economics 69 (2020) 102274 17
+
+Table 9
+How broadband influences potential mechanisms.
+
+EFFECT OF BROADBAND SPEED ON POTENTIAL MECHANISMS
+Coef t-stat R-squared Observations (NT)
+PANEL A: Transitions 1 −0.0011 (0.83) 0.0875 5668
+PANEL B: Duration of UE spell 1 0.0091 (1.60) 0.2400 5047
+PANEL C: Parental wellbeing 1 −0.0044 (0.99) 0.0191 13,227
+PANEL D: Key stage 2 – SATs 2 0.1832 (9.52) 0.8742 778
+PANEL E: Key stage 4 – GCSEs 2 −0.3761 (8.25) 0.5534 1096
+PANEL F: Number of activities −0.0100 (3.01) 0.0810 7389
+PANEL G: Social media – hours spent online 3 0.0088 (2.73) 0.1298 9948
+PANEL H: Social media – ≥5 hours spent online 3 0.0016 (2.42) 0.0650 9948
+PANEL I: Social media – Belong to social media site 3 0.0045 (5.37) 0.0184 13,938
+Each row represents a separate regression model; notes as per Table 8.
+association of the speed of the internet connection with
+GHQ-12; ˆ, is statistically insignificant, as can be seen from
+Table 9 Panel C.24
+A key potential mechanism through which BB speed
+may be operating is that ofthe child’s educational progress.
+As part of the National Curriculum assessment in England,
+statutory Standard Attainment Tests (SATs) are undertaken
+throughout a child’s school years. We explore attainment
+via two alternative outcome measures relevantfor children
+of different ages. Key Stage 2 tests are taken when children
+are aged 10–11, and Key Stage 4 (GCSE) tests are usually
+taken when children are aged 15/16.25 For Key Stage 2 our
+outcome is the percentage of children obtaining level 4
+or more in reading, writing and mathematics SATs where
+the test score ranges from 1 to 100.26 For Key Stage 4 our
+outcome is the percentage of children who achieve five or
+more A* to C grades, including Mathematics and English.27
+Unfortunately, these educational outcome measures are
+not available at the child level. Instead, we use LAD area
+level outcomes (for the LAD of pupil residence), which are
+defined consistently over the period 2013–2015 for Key
+Stage 2 and 2012-17 for Key Stage 4.28 For this area level
+
+analysis we average child wellbeing scores (for the appro-
+priately aged children) for each domain at the LAD-year
+
+level and all other covariates are also averaged accord-
+ingly. These data are then matched at the LAD-year level
+
+to the Key Stage test results. For the Key Stage 2 results we
+
+24 In terms of the mechanisms considered so far: labour market transi-
+tions are based upon either the mother or father exiting unemployment
+
+into a state of employment; the duration of the unemployment spell is
+the average across both parents; and the GHQ-12 score is also averaged
+across both parents, where applicable (i.e. couple households). The same
+results hold if we consider the father only, the mother only, or single
+parent households. Results are available upon request. 25 Note thatinformation on Key Stage 3, SATs taken between ages 11 and
+14, stopped being collected in 2011 with information from 2009 based
+solely upon on-going teacher assessment. 26 https://www.gov.uk/government/collections/statistics-key-stage-2.
+The national expectation for children in English schools is that children
+reach a level 2/3 by the end of Year 2 (Key Stage 1 SATs) and a level 4/5
+
+by the end of Year 6 (Key Stage 2 SATs). 27 https://www.gov.uk/government/collections/statistics-gcses-key-
+stage-4
+
+28 Ideally, the analysis would be at the child level. However, currently
+this is not possible by matching in the National Pupil Database (NPD) to
+the UKHLS as the matched NPD data is only available for those children
+interviewed in UKHLS wave 1, and the NPD data for these children is only
+available up to 2012/13.
+
+focus on children aged 10 and 11, yielding a sample of 778
+
+observations. For the Key Stage 4 results we focus on chil-
+dren aged 15 giving a sample of 1096 observations. For this
+
+analysis, the regressions in Eqs. (4a) and (4b) are based at
+the LAD level conditional on annual mean characteristics
+incorporating area FE.
+The results are shown in Table 8 Panels D (Key Stage
+2) and E (Key Stage 4); these reveal no relationship
+between test scores in reading, writing and mathematics
+(Key Stage 2 performance), or GCSE attainment (Key Stage
+4 performance) and any of the child wellbeing domains.
+However, interestingly BB speed is strongly positively
+associated with Key Stage 2 attainment, and negatively
+associated with Key Stage 4 attainment, as can be seen
+from Table 9 Panel D (E). This evidence suggests that
+the effect of faster internet speeds on child wellbeing
+domains is not operating through educational attainment.
+This is consistent with the findings of Faber et al. (2015)
+who report that even very large changes in available
+
+internet speeds have an estimated zero effect on educa-
+tional attainment (i.e. when summed across different Key
+
+Stages).
+
+Next, we consider whether a faster internet connec-
+tion potentially crowds out beneficial activities that the
+
+child might otherwise engage in. In waves 4, 6 and 8 of
+
+the UKHLS children were asked a series questions regard-
+ing the activities that they undertake, including: playing
+
+sports; face-to-face interaction with friends and family;
+
+going to youth clubs or other organised events; undertak-
+ing voluntary or community work; and attending out of
+
+school classes such as art, music etc. Focusing upon a sub-
+sample of 5150 children (7389 observations) present in
+
+these waves, we sum the number of activities thatthe child
+
+undertakes at least once per week. The number of activi-
+ties ranges from zero (13.5 %) to six or more (2.5 %) where
+
+on average children undertake two activities at least once
+
+a week. Table 8 Panel F shows that the number of activi-
+ties that the child undertakes is positively associated with
+
+wellbeing, and significantly so for four out of six domains.
+
+In Table 9 Panel F, we explore whether BB speed is poten-
+tially crowding out face-to-face interaction. The estimate
+
+onBBspeedisnegative andstatistically significant, whichis
+consistent with the crowding out hypothesis whereby the
+
+internet reduces the number of activities the child under-
+takes, which ultimately results in lower wellbeing (Moreno
+
+et al., 2013; Wallsten, 2013).
+
+18 E. McDool, P. Powell, J. Roberts et al. / Journal of Health Economics 69 (2020) 102274
+The final mechanism we explore is the role of social
+
+media. Given that social media sites are children’s pri-
+mary interface with the internet, we believe that they may
+
+represent a key channel for the effects of internet use on
+wellbeing. In the Youth Self-completion Questionnaire of
+the UKHLS children are asked: Do you belong to a social
+website such as Bebo, Facebook or Myspace? 65 % of the
+respondents were members of a social network and were
+
+subsequently asked: How many hours do you spend chat-
+ting or interacting with friends through a social website like
+
+that on a normal school day? The responses to this question
+are coded into the variable range from “1=none”, “2=less
+than an hour”, “3 = 1–3 h”, “4 = 4–6 h”, and “5 = 7 or more
+hours”. We replace the 1–5 scale with “midpoints” of the
+ranges (i.e. 0, 0.5, 2, 5, and 8) since arguably this is a better
+
+approximation of the linear effect and also enables inter-
+pretation of the impact an additional hour spent online.29
+
+In Tables 8 and 9 Panels G to I we consider: the number
+of hours spent online; non-linearity by exploring whether
+children spend 5 or more hours online; and then whether
+the child is a member of a social media site, respectively.
+For hours spent online and intense time spent using social
+
+media (i.e. 5 h or above), the sample size is 9948 com-
+prising 5235 children; whilst for membership of a social
+
+network the corresponding observations are 13,938 and
+6310 respectively (the sample size for time spent online
+is slightly lower due to missing values on hours).
+Focusing on hours spent online and the association with
+children’s wellbeing, Table 8 Panel G reveals thattime spent
+online is inversely related to each domain and statistically
+significant, with the exception of friends. For example, an
+extra hour spent online decreases the wellbeing score of
+
+appearance and school work by around 0.03 standard devi-
+ations (i.e. approximately 3 per cent). Similarly, spending
+
+a large amount of time online (5 h or more), has a large
+inverse association with all wellbeing domains apart from
+
+friends, see Table 8 Panel H; thus it appears that the neg-
+ative effects of social media use are intensified with high
+
+use.
+Another aspect which we investigate is the decision to
+
+use social media, where again there is an inverse relation-
+ship across three of the six domains, see Table 8 Panel
+
+I, although perhaps not surprisingly, the magnitude of
+the effect is not as large as that seen in Panel G from
+extremely high daily time spent online. It would appear
+
+that time spent online using social media sites is a plau-
+sible mechanism, but empirically this rests upon > 0,
+
+i.e. faster internet speed should a priori result in more
+time spent using online sites, and moreover whether the
+estimate is statistically significant. This is investigated by
+estimating Eq. (4b), with the results reported in Table 9
+Panels G to I, where greater internet speed is associated
+with more time spent online, intense usage (five or more
+
+hours) and membership of social media sites. This is evi-
+dence in favour of social media being a key mechanism
+
+that could link BB speed to child wellbeing;30 in contrast,
+
+29 We are grateful to an anonymous referee for this suggestion. 30 These results might also explain why in the sub-group analysis the
+effects of BB speed were only observed for older children, given the
+
+evidence of other mechanisms possibly operating through
+
+parental outcomes, e.g. in the labour market or intergener-
+ationaltransmission of wellbeing, or the child’s educational
+
+progress, are not evident in the data.
+5. Conclusion
+
+In this paper we have explored the effect of inter-
+net use on the psychological wellbeing of children aged
+
+10–15, measured by the way they feel about five differ-
+ent aspects of their life, and their life overall. Internet use
+
+is proxied by the BB speed available in the neighbour-
+hood. We employ a FE framework where, based upon the
+
+quasi-random allocation of BB speed, we recover the ITT
+
+effect, which shows that even in the most stringent spec-
+ifications estimated there is evidence of a negative causal
+
+relationship between faster BB speed and domains of chil-
+dren’s wellbeing. The largest effect from a 1 % increase
+
+in BB speed is for how children feel about their appear-
+ance, decreasing the score by approximately 0.6 per cent on
+
+average. A number of potential channels are investigated
+
+as possible mechanisms capable of explaining this phe-
+nomenon. The empirical analysis provides supportfor both
+
+the ‘crowding out’ hypothesis (whereby beneficial activ-
+ities are sacrificed for more time spent on the internet)
+
+and also for the adverse effect of increased social media
+use.
+The internet, and social media in particular, are hugely
+important phenomena of the past decade. Given the extent
+of use among children and adolescents, concern with the
+potential adverse (and long-term) effects on children’s
+
+emotional health is increasing. The results of our analy-
+sis are important given the central role of these platforms
+
+in children’s lives, and the fact that childhood wellbeing
+has been shown in previous research to have persistent
+effects into adult life (e.g. Lindeboom et al. (2010); Conti
+
+and Heckman (2014) and Bertoni (2015)). Our results sug-
+gest that interventions to appropriately limit internet and
+
+social media use during childhood may help to improve
+emotional health.
+Acknowledgements
+This research was funded by the UK EPSRC research
+
+grant EP/L003635/1Creating and Exploring Digital Empa-
+thy (CEDE). The main Understanding Society data set is
+
+an initiative by the Economic and Social Research Council,
+
+withscientific leadershipby the Institute for Social andEco-
+nomic Research, University of Essex, and survey delivery
+
+by the National Centre for Social Research and TNS BRMB.
+The data was accessed via the UK Data Service; some of
+it under Special Licence. We would like to thank Cristina
+Sechel for her help and expertise with ArcGIS. We are also
+grateful to Sarah Brown, Andy Dickerson and Gurleen Popli
+
+for comments on an earlier draft of this paper; also semi-
+nar participants at Clark University, Monash University and
+
+minimum age stipulation on social media use; and similarly, when we
+considered gender differences the wellbeing of girls was more adversely
+affected by BB speed (consistent with Booker et al., 2018), see Table 7.
+
+E. McDool, P. Powell, J. Roberts et al. / Journal of Health Economics 69 (2020) 102274 19
+
+the University of York; and to attendees at the 2017 Royal
+Economic Society annual conference, 2017 Understanding
+
+Society scientific conference and 2018 International Soci-
+ety for Quality of Life Research conference for their input.
+
+We are also extremely grateful to the comments received
+from two anonymous referees and the editor.
+Appendix A. Supplementary data
+Supplementary material related to this article can be
+found, in the online version, at doi:https://doi.org/10.
+1016/j.jhealeco.2019.102274.
+References
+Akerman, A., Gaarder, I., Mogstad, M., 2015. The skill complementarity of
+broadband internet. Q. J. Econ. 130, 1781–1824.
+Altonji, J.G., Elder, T.E., Taber, C.R., 2005a. An evaluation of instrumental
+variable strategies for estimating the effects of Catholic schooling. J.
+Hum. Resour. 40, 791–821.
+Altonji, J.G., Elder, T.E., Taber, C.R., 2005b. Selection on observed and
+unobserved variables: assessing the effectiveness of Catholic schools.
+J. Polit. Econ. 113, 151–184.
+Anand, P., Roope, L., 2016. The development and happiness of very
+young children. Soc. Choice Welfare 47, 825–851.
+Angrist, J., Pischke, J.-S., 2009. Mostly Harmless Econometrics: An
+Empiricists Companion. Princeton University Press.
+Antoci, A., Sabatini, F., Sodini, M., 2012. See you on Facebook! A
+framework for analyzing the role of computer-mediated interaction
+in the evolution of social capital. J. Socio- Econ. 41, 541–
+547.
+Barnardo
+s, 2015. Youth and the Internet: A Guide for Policy Makers.
+www.barnardos.org.uk/youth and the internet report.pdf.
+Bauernschuster, S., Falck, O., Woessmann, L., 2014. Surfing alone? The
+internet and social capital: evidence from an unforeseeable
+technology mistake. J. Public Econ. 117, 73–89.
+Bertoni, M., 2015. Hungry today, unhappy tomorrow? Childhood hunger
+and subjective wellbeing later in life. J. Health Econ. 40, 40–53.
+Beardsmore, R., 2015. Measuring National Well-being: Insights Into
+Children’s Mental Health and Well-being. Office for National
+Statistics, London.
+Bhuller, M., Havnes, T., Leuven, E., Mogstad, M., 2013. Broadband
+internet: An information superhighway to sex crime? Rev. Econ.
+Stud. 80, 1237–1266.
+Booker, C., Kelly, Y., Sacker, A., 2018. Gender differences in the
+associations between age trends of social media interaction and
+well-being among 10-15 years olds in the UK. BMC Public Health 18
+(321).
+Boyd, D., 2014. It’s Complicated: The Social Lives of Networked Teens.
+Yale University Press.
+Brenner, V., 1997. Psychology of computer use: XLVII. Parameters of
+internet use, abuse, and addiction: the first 90 days of the internet
+usage survey. Psychol. Rep. 80, 878–882.
+Brown, S., Taylor, K., 2008. Bullying, education and earnings: evidence
+from the national child development study. Econ. Educ. Rev. 27,
+387–401.
+Bulman, G., Fairlie, R.W., 2016. Technology and education: computers,
+software, and the internet. In: Hanushek, E.A., Machin, S.,
+Woessmann, L. (Eds.), Handbook of the Economics of Education, vol.
+5. Elsevier, pp. 239–280.
+Carr, N., 2010. The Shallows: How the Internet Is Changing the Way We
+Think, Read and Remember. Atlantic Books.
+Castellacci, F., Tveito, V., 2018. Internet use and well-being: a survey and
+a theoretical framework. Res. Policy 47, 308–325.
+Children’s Society, www.childrenssociety.org.uk/ 2018a. Safety Net:
+Cyberbullying’s Impact on Young People’s Mental Health: Inquiry
+Report.
+Children’s Society, www.childrenssociety.org.uk 2018b. The Good
+Childhood Report.
+Chou, H.G., Edge, N., 2012. “They are happier and having better lives than
+I am”: the impact of using Facebook on perceptions of others’ lives.
+Cyberpsychol. Behav. Soc. Netw. 15, 117–121.
+Clark, A.E., Flèche, S., Layard, R., Powdthavee, N., Ward, G., 2018. The
+Origins of Happiness: The Science of Well-being Over the Life
+Course. Princeton University Press.
+
+Clark, A.E., Senik, C., 2010. Who compares to whom? The anatomy of
+income comparisons in Europe. Econ. J. 120, 573–594.
+Conti, G., Heckman, J.J., 2014. Economics of child well-being. In:
+Ben-Arieh, A., Casas, F., Frones, I., Korbin, J.E. (Eds.), Handbook of
+Child Well-Being: Theories, Methods and Policies in Global
+Perspective. Springer, pp. 363–401.
+Cotton, S.R., 2008. Students’ technology use and the impacts on
+well-being. New Dir. Stud. Serv. 124, 55–70.
+Cowie, H., 2013. Cyberbullying and its impact on young people’s
+emotional health and well-being. Psychiatrist 37,
+167–170.
+Department for Business Innovation and Skills and Department for
+Culture Media and Sport, 2009. Digital Britain: Final report.
+Cm7650.
+Department for Business Innovation and Skills and Department for
+Culture Media and Sport, 2010. Britain’s Superfast Broadband Future.
+Department for Digital, Culture Media and Sport, 2018. Evaluation of the
+Economic Impact and Public Value of the Superfast Broadband
+Programme.
+Enke, B., 2017. What You See Is All There Is. Harvard University, Mimeo.
+Eriksen, T., Nielsen, H., Simonsen, M., 2014. Bullying in elementary
+school. J. Hum. Resour. 49, 839–871.
+Faber, B., Sanchis-Guarner, R., Weinhardt, F., 2015. ICT And Education:
+Evidence From Student Home Addresses. CEP Discussion Paper No.
+1359.
+Ferrer-i-Carbonell, A., Frijters, P., 2004. How important is methodology
+for the estimate of the determinants of happiness? Econ. J. 114,
+641–659.
+Franzen, A., 2003. Social capital and the Internet: evidence from Swiss
+panel data. Kyklos 56, 341–360.
+Fujiwara, D., Houston, R., Keohane, K., Gramatki, I., Maxwell, C., 2018.
+Subjective Wellbeing Analysis of the Superfast Broadband
+Programme. Simetrica.
+Goldberg, D.P., Williams, P., 1988. A User’s Guide to the GHQ.
+NFER-Nelson, Windsor.
+Gross, E.F., Juvonen, J., Gable, S.L., 2002. Internet use and well-being in
+adolescence. J. Soc. Issues 58, 75–90.
+Gürtzgen, N., Nolte, A., Pohlan, L., van den Berg, G., 2018. Do Digital
+Information Technologies Help Unemployed Job Seekers Find a Job?
+Evidence From the Broadband Internet Expansion in Germany. IZA
+Discussion Paper No. 11555.
+Helliwell, J., Huang, H., 2013. Comparing the happiness effects of real and
+on-line friends. PLoS One 8, 1–17.
+Hinduja, S., Patchin, J.W., 2010. Bullying, cyberbullying, and suicide.
+Arch. Suicide Res. 14, 206–221.
+HM Government, 2019. Online Harms White Paper. CP57.
+House of Lords, 2017. Growing up With the Internet. HL 130.
+Institute for Public Policy Research, 2014. Young People, Sex and
+Relationships: The New Norms. IPPR, London.
+Jackson, L.A., Fitzgerald, H.E., Zhao, Y., Kolenic, A., von Eye, A., Harold, R.,
+2008. Information Technology (IT) use and children’s psychological
+well-being. Cyberpsychology Behav. 11, 755–758.
+Kahneman, D., Diener, E., Schwarz, N., 1999. Well-being: The
+Foundations of Hedonic Psychology. Russell Sage Foundation.
+Kaiser Family Foundation, 2010. Generation M2: Media in the Lives of 8-
+to 18-Year Olds. Kaiser Family Foundation Study.
+Kalmus, V., Siibak, A., Blinka, L., 2014. Internet and child well-being. In:
+Ben-Arieh, A., Casas, F., Frones, I., Korbin, J.E. (Eds.), Handbook of
+Child Well-Being: Theories, Methods and Policies in Global
+Perspective. Springer, pp. 2093–2133.
+Kleemans, M., Daalmans, S., Carbaat, I., Anshutz, D., 2016. Picture
+perfect: the direct effect of manipulated Instagram photos on body
+image in adolescent girls. Media Psychol. 21, 93–110.
+Kraut, R., Patterson, M., Lundmark, V., Kiesler, S., Mukopadhyay, T.,
+Scherlis, W., 1998. A social technology that reduces social
+involvement and psychological wellbeing? Am. Psychol. 53,
+1017–1031.
+Kross, E., Verduyn, P., Demiralp, E., Park, J., Lee, D.S., Lin, N., 2013.
+Facebook use predicts declines in subjective well-being in young
+adults. PLoS One 8, 1–6.
+Kuss, D.J., Griffiths, M.D., 2012. Online gaming addiction in children and
+adolescents: a review of empirical research. J. Behav. Addict. 1,
+3–22.
+Levenson, J.C., Shensa, A., Sidani, J.E., Colditz, J.B., Primack, B.A., 2016. The
+association between social media use and sleep disturbance among
+young adults. Prev. Med. 85, 36–41.
+Lindeboom, M., Portrait, F., van den Berg, G.J., 2010. Long-run effects on
+longevity of a nutritional shock early in life: the Dutch potato famine
+of 1846-1847. J. Health Econ. 29, 617–629.
+
+20 E. McDool, P. Powell, J. Roberts et al. / Journal of Health Economics 69 (2020) 102274
+Lohmann, S., 2015. Information technologies and subjective well-being:
+Does the internet raise material aspirations? Oxf. Econ. Pap. 67,
+740–759.
+Martellozzo, E., Monaghan, A., Adler, J.R., Davidson, J., Leyva, R., Horvath,
+M.A.H., 2016. I Wasn’t Sure It Was Normal to Watch It. . . NSPCC.
+Middlesex University, London.
+Mazumder, B., Davis, J.M.V., 2013. Parental earnings and children’s
+well-being: An analysis of the Survey of Income and Programme
+Participation matched to social security administrative earnings
+data. Econ. Inq. 51, 1795–1808.
+Mendelson, A.L., Papacharissi, Z., 2010. Look at us: collective narcissism
+in college student facebook photo galleries. In: Papacharissi, Z. (Ed.),
+The Networked Self: Identity, Community and Culture on Social
+Network Sites. Oxford University Press, New York, pp.
+251–273.
+Moreno, M.A., Jelenchick, L.A., Koff, R., Eickhoff, J.C., Goniu, N., Davis, A.,
+Young, H.N., Cox, E.D., Christakis, D.A., 2013. Associations between
+internet use and fitness among college students: an experience
+sampling approach. J. Interact. Sci. 1, 4.
+Nikolaou, D., 2017. Does cyberbullying impact youth suicidal behaviors?
+J. Health Econ. 56, 30–46.
+Ofcom, www.ofcom.org.uk/ 2015. Children and Parents: Media Use and
+Attitudes Report.
+Ofcom, www.ofcom.org.uk/ 2016. Children and Parents: Media Use and
+Attitudes Report.
+Pfeffer, F., Schoeni, R., 2014. Intergenerational transmission of
+well-being. Focus 31, 39–43.
+
+Royal Society for Public Health, London 2017. #StatusofMind: Social
+Media and Young People’s Mental Health and Wellbeing.
+Sabatini, F., Sarracino, F., 2016. Keeping up With the e-Joneses: Do
+Online Social Networks Raise Social Comparisons? Munich Personal
+RePEc Archive, pp. 69201.
+Sabatini, F., Sarracino, F., 2017. Online social networks and subjective
+wellbeing. Kyklos 70, 456–480.
+Sampasa-Kanyinga, H., Hamilton, H.A., 2015. Use of social networking
+sites and risk of cyberbullying victimization: a population-level
+study of adolescents. Cyberpsychol. Behav. Soc. Netw. 18, 704–
+710.
+Slonje, R., Smith, P.K., Frisén, A., 2012. The nature of cyberbullying, and
+strategies for prevention. Comput. Human Behav. 29, 26–32.
+Tandoc Jr., E.C., Ferrucci, P., Duffy, M., 2015. Facebook use, envy, and
+depression among college students: Is Facebook depressing?
+Comput. Human Behav. 43, 139–146.
+University of Essex, 2018. Institute for Social and Economic Research,
+NatCen Social Research, Kantar Public. Understanding Society:
+Waves 1-8, 2009-2017 and Harmonised BHPS: Waves 1-18,
+1991-2009. [data collection], 11th edition., pp. 6614, UK Data
+Service. SN.
+Verduyn, P., Lee, D.S., Park, J., Shablack, H., Orvell, A., Bayer, J., Ybarra, O.,
+Jonides, J., Kross, E., 2015. Passive Facebook usage undermines
+affective well-being: experimental and longitudinal evidence. J. Exp.
+Psychol. Gen. 144, 480–488.
+Wallsten, S., 2013. What Are We Not Doing When We’re Online? NBER
+Working Paper No. 19549.

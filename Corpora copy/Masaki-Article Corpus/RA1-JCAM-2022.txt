@@ -1,0 +1,2794 @@
+<heading>
+Title: Fooling Polytopes
+Author: Ryan O’Donnell, Rocco A. Servedio, and Li-Yang Tan
+Journal: Journal of the Association for Computing Machinery
+Year: 2022
+</heading>
+
+Abstract
+We give a pseudorandom generator that fools m-facet polytopes over {0, 1} n with seed length polylog(m) · logn. The previous best seed length had superlinear dependence on m. An immediate consequence is a deterministic quasipolynomial time algorithm for approximating the number of solutions to any {0, 1}-integer program.
+
+1 INTRODUCTION
+Unconditional derandomization has been a major focus of research in computational complexity
+theory for more than 30 years. A significant line of work in this area has been on developing
+unconditional pseudorandom generators (PRGs) for various types of Boolean functions. Early
+seminal results in this vein focused on Boolean circuits [1, 43, 45] and branching programs [22,
+44, 46], but over the past decade or so a new strand of research has emerged in which the goal
+is to construct PRGs against halfspaces and various generalizations of halfspaces. This work has
+included a sequence of successively more efficient PRGs against halfspaces [9, 15, 27, 29, 35, 39],
+low-degree polynomial threshold functions [10, 24, 25, 27, 28, 39], and, most relevant to this article,
+intersections of halfspaces [8, 18, 19, 56].
+Since intersections of m halfspaces correspond to m-facet polytopes, and also to {0, 1}-integer
+programs with m constraints, these objects are of fundamental interest in high-dimensional geometry, optimization, and a range of other areas. A pseudorandom generator that δ -fools intersections
+of m halfspaces can equivalently be viewed as an explicit discrepancy set for m-facet polytopes: a
+9:2
+small subset of {0, 1}n that δ -approximates the {0, 1}n -volume of every m-facet polytope. (Discrepancy sets are stricter versions of hitting sets, which are only required to intersect every polytope
+of volume at least δ .) The problem of constructing a PRG for intersections of m halfspaces is also
+a stricter version of the algorithmic problem of deterministically approximating the number of
+solutions of a {0, 1}-integer program with m constraints. It is stricter because a PRG yields an
+input-oblivious algorithm: The range of a PRG is a single fixed set of points that gives approximately the right answer for every {0, 1}-integer program. Beyond pseudorandomness, intersections of halfspaces also play a significant role in other fields such as concrete complexity theory
+[4, 26, 40, 48, 58, 59] and computational learning theory [6, 16, 30, 32–34, 57, 64].
+The main result of this article is a new PRG for intersections of m halfspaces. Its seed length
+grows polylogarithmically with m, which is an exponential improvement of the previous best PRG
+for this class. Before giving the precise statement of our result, we briefly describe the prior stateof-the-art-for this problem.
+1.1 Prior work on PRGs for Intersections of Halfspaces
+A halfspace F (x ) = 1[w · x ≤ θ ] is said to be τ -regular if |w j | ≤ τ w 2 for all j ∈ [n]; intuitively,
+a τ -regular halfspace is one in which no coefficient w j is too large relative to the overall scale of
+all the coefficients. Harsha, Klivans, and Meka [19] gave a PRG that δ -fools any intersection of m
+many τ -regular halfspaces with seed length poly(log m, 1/δ ) · log n, where τ has to be sufficiently
+small relative to m and δ (specifically, τ ≤ some poly( logδ m ) is required). While this seed length
+has the desirable property of being polylogarithmic in m, due to the regularity requirement this
+result cannot be used to fool intersections of even two general halfspaces. We note that there are
+very basic halfspaces, such as F (x ) = 1[x 1 ≤ 1/2], that are highly irregular.
+Recently, Reference [56] built on the work of Reference [19] to give a PRG that fools a different
+subclass of intersections of halfspaces. They give a PRG that δ -fools any intersection of m many
+weight-W halfspaces with seed length poly(log m,W , 1/δ ) · polylog n; a halfspace has weight W if
+it can be expressed as 1[w · x ≤ θ ] where each coefficient w j is an integer of magnitude at most
+W . Unfortunately, many n-variable halfspaces require weight polynomially or even exponentially
+large in n; in fact, a counting argument shows that almost all halfspaces require exponentially large
+weight. Therefore, the Reference [56] result also cannot be used to fool even two general halfspaces.
+In Reference [18], Gopalan, O’Donnell, Wu, and Zuckerman gave a PRG that can fool intersections of m general halfspaces. However, various aspects of their approach each necessitate a seed
+length that is at least linear in m, and indeed their overall seed length is O ((m log(m/δ ) + log n) ·
+log(m/δ )).1 So, while this PRG is notable for being able to handle intersections of general halfspaces, its seed length becomes trivial (greater than n) for intersections of m ≥ n many halfspaces.
+(Indeed, this PRG of Reference [18] fools arbitrary monotone functions of m general halfspaces,
+with intersections (i.e., Ands) being a special case. Due to the generality of this class—which of
+course includes every monotone function over {0, 1}m —it can be shown that any PRG for it has to
+have at least linear seed length dependence on m.)
+1.1.1 PRGs over Gaussian Space. There has also been work on PRGs for functions over Rn endowed with the n-dimensional Gaussian distribution. Analyses in this setting are often facilitated
+by the continuous nature of Rn and rotational invariance of the Gaussian distribution, useful
+technical properties not afforded by the standard setting of Boolean space. For halfspaces and polytopes, PRGs over Gaussian space can be viewed as a first step towards PRGs over Boolean space; as
+we describe below, Boolean PRGs even for restricted subclasses of halfspaces and polytopes yield
+1 Their
+
+seed length improves to O (m log(m/δ ) + log n) if m/δ is bounded by any polylog(n).
+Fooling Polytopes
+
+9:3
+Table 1. PRGs for Intersections of Halfspaces Over {0, 1}n
+
+Reference
+
+Function class
+
+Seed length of PRG
+
+[18]
+
+Monotone functions of m halfspaces
+
+O ((m log(m/δ ) + log n) · log(m/δ ))
+O (m log(m/δ ) + log n), if m/δ ≤ any polylog(n)
+
+[19]
+
+Intersections of m τ -regular halfspaces
+
+poly(log m, 1/δ ) · log n, if τ ≤ some poly( logδ m )
+
+[56]
+
+Intersections of m weight-W halfspaces
+
+poly(log m,W , 1/δ ) · polylog n
+
+This work
+
+Intersections of m halfspaces
+
+poly(log m, 1/δ ) · log n
+
+Gaussian PRGs for general halfspaces and polytopes, but the converse does not hold. We also note
+that the correspondence between polytopes and {0, 1}-integer programs is specific to Boolean
+space, and in particular, Gaussian PRGs do not yield algorithms for counting solutions to these
+programs.
+For halfspaces, Meka and Zuckerman [39] showed that any PRG for the subclass of O ( √1n )regular halfspaces over Boolean space yields a PRG for all halfspaces over Gaussian space. Note
+that O ( √1n )-regular halfspaces are “the most regular” ones; every halfspace is τ -regular for some
+
+τ ∈ [ √1n , 1]. Reference [19] generalized this connection to polytopes: They showed that any PRG
+√
+for intersections of m many O ((log m)/ n)-regular halfspaces over Boolean space yields a PRG
+for intersections of m many arbitrary halfspaces over Gaussian space. Combining this with their
+Boolean PRG for intersections of regular halfspaces discussed above, Reference [19] obtained a
+Gaussian PRG for intersections of m halfspaces with seed length poly(log m, 1/δ ) · log n. Recent
+work of Reference [8] gives a different Gaussian PRG with seed length poly(log m, 1/δ ) + O (log n).
+The focus of the current work is on the standard setting of PRGs over Boolean space, and the
+rest of the article addresses this (more challenging) setting.
+1.2 This Work: A PRG for Intersections of General Halfspaces
+Summarizing the prior state-of-the-art on PRGs over Boolean space, there were no PRGs that could
+fool intersections of m = n many general halfspaces, and relatedly, the best PRG for intersections of
+m ≤ n general halfspaces had a superlinear seed length dependence on m. The PRGs that could fool
+intersections of m ≥ n halfspaces imposed technical restrictions on the halfspaces: either regularity
+(hence excluding simple halfspaces such as 1[x 1 ≤ 1/2]) or small weights (hence excluding almost
+all halfspaces). Please refer to Table 1.
+The main result of this article is a PRG that fools intersections of m general halfspaces with a
+polylogarithmic seed length dependence on m:
+Theorem 1.1 (PRG for Polytopes). For all n, m ∈ N and δ ∈ (0, 1), there is an explicit pseudorandom generator with seed length poly(log m, 1/δ ) · log n that δ -fools the class of intersections of m
+halfspaces over {0, 1}n .
+
+In particular, this PRG fools intersections of quasipoly(n) many halfspaces with seed length
+polylog(n), and its seed length remains non-trivial for intersections of exponentially many halfspaces (exp(nc ) where c > 0 is an absolute constant).
+An immediate consequence of Theorem 1.1 is a deterministic algorithm that runs in time
+npolylog(m) and additively approximates the number of solutions to any n-variable {0, 1}-integer
+program with m constraints. Prior to our result, no non-trivial deterministic algorithm (running
+in time < 2n ) was known even for general {0, 1}-integer programs with m = n constraints.
+9:4
+Theorem 1.1 also yields PRGs with comparable seed lengths for intersections of halfspaces over
+a range of other domains, such as the n-dimensional hypergrid {0, 1, . . . , N }n and the solid cube
+[0, 1]n (details are left to the interested reader).
+1.3 Discussion
+Since the initial conference publication of a preliminary version of this article [50], several works
+have appeared that are relevant to the topic of this article. One line of work has been on obtaining pseudorandom generators for functions of halfspaces (including intersections of halfspaces,
+i.e., polytopes) with a better dependence on the error parameter but a worse dependence on other
+parameters. Kabanets et al. [23] gave a PRG that δ -fools the class of n-variable size-s de Morgan
+formulas with halfspace gates at the bottom and has seed length O (n1/2s 1/4 log(n) log(n/δ )), and
+Hatami et al. [20] gave a PRG that δ -fools the class of arbitrary functions of m halfspaces over n
+variables with seed length Õ ( n(m + log(1/δ ))). The techniques employed in these works are very
+different from the methods of our article; even for the special case of intersections of m halfspaces,
+each of these results has a seed length that is polynomial in n and m (rather than logarithmic or
+polylogarithmic as in our work), but these results have a much better seed length dependence on
+the error parameter δ . Achieving a polylogarithmic dependence on all three parameters n, m, and
+1/δ is an interesting challenge for future work.
+In a different related line of work, Arunachalam and Yao [2] have considered the problem of constructing explicit PRGs for positive spectrahedrons. A positive spectrahedron is a Boolean function
+1[x 1A1 + · · · + x n An  B], where the Ai ’s are k × k positive semidefinite matrices. Building on
+some of the ideas and ingredients in this article and in prior work [19], they establish invariance
+principles and give a PRG that δ -fools “sufficiently regular” positive spectrahedrons over {0, 1}n
+with seed length poly(log k, 1/δ ) · log n.
+2 OVERVIEW OF OUR PROOF
+Our proof of Theorem 1.1 involves several novel extensions of the central technique driving this
+line of work, namely, Lindeberg-style proofs of probabilistic invariance principles and derandomizations thereof. We develop these extensions to overcome challenges that arise due to the generality of our setting; specifically, the fact that we are dealing with intersections of arbitrary halfspaces,
+with no restrictions whatsoever on their structure. One of the key new ingredients in our analysis, which we believe is of independent interest, is a sharp high-dimensional generalization of the
+classic Littlewood–Offord anticoncentration inequality [12, 37] that we establish. We now describe
+our proof and the new ideas underlying it in detail.
+2.1 Background: The Reference [19] PRG for Regular Polytopes
+We begin by recalling the arguments of Harsha, Klivans, and Meka [19] for fooling regular polytopes. At a high level, Reference [19] builds on the work of Meka and Zuckerman [39], which gave
+a versatile and powerful framework for constructing pseudorandom generators from probabilistic
+invariance principles; the main technical ingredient underlying the Reference [19] PRG for regular
+polytopes is a new invariance principle for such polytopes, which we now describe.
+Reference [19]’s invariance principle and the Lindeberg method. At a high level, the Reference [19] invariance principle for regular polytopes is as follows: Given an m-tuple of regular
+linear forms over n input variables x = (x 1 , . . . , x n ) (denoted by Ax, where A is an m-by-n matrix),
+the distribution (over Rm ) of Au, where u ∼ {−1, 1}n is uniform random, is very close to the distribution of Aд, where д ∼ N (0, 1) n is distributed according to a standard n-dimensional Gaussian.
+Here, closeness is measured by multidimensional CDF distance; we observe that multidimensional
+Fooling Polytopes
+9:5
+
+CDF distance corresponds to test functions of the form 1[Ax ≤ b] where b ∈ Rm , which syncs up
+precisely with an intersection of m halfspaces 1[A1x ≤ b1 ] ∧ · · · ∧ 1[Am x ≤ bm ]. To prove this
+invariance principle, Reference [19] employs the well-known Lindeberg method (see, e.g., Chapter
+§11 of References [47] and [61]) and proceeds in two main conceptual steps. The first step establishes a version of the result for smooth test functions, proxies for the actual “hard threshold” test
+functions 1[Ax ≤ b], and the second step relates distance with respect to these smooth test functions to multidimensional CDF distance via Gaussian anticoncentration. We outline each of these
+two steps below.
+The first step is to prove an invariance principle for smooth test functions. Here, instead of
+measuring the distance between Au and Aд using test functions that are orthant indicators
+Ob (v 1 , . . . , vm ) = 1[v ≤ b] (corresponding to multidimensional CDF distance), distance is meab : Rm → [0, 1] of Ob . Such mollifiers, with useful
+sured using a sufficiently smooth mollifier O
+properties that we now discuss, were proposed and analyzed by Bentkus [5]. In more detail, Referb (Aд) is bounded
+b (Au) and O
+ence [19] proves that the difference between the expectations of O
+b ’s derivatives. In fact, as in standard in Lindeberg-style proofs of
+by a certain function involving O
+invariance principles, Reference [19] actually bounds this difference with respect to any smooth
+test function ϒ : Rm → R in terms of ϒ’s derivatives; the only specific property of Bentkus’s molb that is used is that its derivatives are appropriately small. At a high level, the proof of this
+lifier O
+smooth invariance principle proceeds by hybridizing from ϒ(Au) to ϒ(Aд), using the multidimensional Taylor expansion of ϒ to bound the error incurred in each step. (The regularity of the linear
+forms is used in a crucial way to control the approximation error that results from truncating the
+Taylor expansion at a certain fixed degree.)
+The second step is to establish the desired bound on multidimensional CDF distance using the
+aforedescribed smooth invariance principle applied to Bentkus’s mollifier. This step relies on a
+b agrees with the orthant indicator Ob except on
+second key property of Bentkus’s mollifier: O
+a small error region near the orthant boundary. With this property in hand, a fairly simple and
+standard argument shows that it suffices to bound the anticoncentration of the Gaussian random
+variable Aд; intuitively, such anticoncentration establishes that Aд does not place too much probb disagrees with Ob . In Reference [19], the required
+ability weight on the error region where O
+anticoncentration for Aд follows immediately from a result of Nazarov [33, 42] on the Gaussian
+surface area of m-facet polytopes.
+The Reference [19] PRG via a derandomized invariance principle. Having proved this invariance principle for regular polytopes, Reference [19] then establishes a pseudorandom version by
+derandomizing its proof. That is, they argue that their proof in fact establishes multidimensionalCDF-closeness between Az and Aд, where д ∼ N (0, 1) n is distributed according to a standard
+Gaussian as before, but z ∼ {−1, 1}n is the output of a suitable pseudorandom suitable generator G : {−1, 1}r → {−1, 1}n (rather than uniform random). Combining the “full-randomness”
+invariance principle (establishing closeness between Au and Aд) with this pseudorandom version
+(establishing closeness between Az and Aд), it follows from the triangle inequality that Az and Au
+are close. Recalling that multidimensional CDF distance corresponds to test functions of the form
+1[Ax ≤ b] = 1[A1x ≤ b1 ] ∧ · · · ∧ 1[Am x ≤ bm ], this is precisely equivalent to the claim that G
+fools the intersection of m halfspaces with weight matrix A ∈ Rm×n (and an arbitrary vector of
+thresholds b ∈ Rm ).
+For later reference, we close this section with an informal description of the Reference [19]
+generator (for fooling intersections of m many τ -regular halfspaces):
+(1) Pseudorandomly hash the n variables into L  poly(1/τ ) buckets using an (r hash  2 log m)wise uniform hash function h : [n] → [L].
+9:6
+(2) Independently across buckets, assign values to the variables within each bucket using an
+(r bucket  4 log m)-wise uniform distribution.
+We remark that this is the structure of the Meka–Zuckerman generator [39] for fooling a single regular halfspace, the only difference being that the relevant parameters L, r hash , and r bucket are larger
+in Reference [19] than in Reference [39] (naturally so, given that the Reference [19] generator fools
+intersections of m regular halfspaces instead of a single one).
+Our analysis in this article can be used to show that the Reference [39] generator, instantiated
+with suitable choices of L, r hash , and r bucket , fools intersections of m general halfspaces. However,
+for technical reasons (that are not essential for this high-level discussion), this results in a seed
+length that is poly(log m, 1/δ, log n). To achieve our seed length of poly(log m, 1/δ ) · log n, we
+slightly extend the Reference [39] generator in two ways. First, within each bucket the variables
+are assigned using an r bucket -wise uniform distribution Xor-ed with an independent draw from
+a generator that fools small-width CNF formulas [17]. Second, we Xor the entire resulting n-bit
+string with an independent draw from a k-wise independent generator. (See Section 4 for a detailed
+description of our PRG.)
+2.2 Some Key New Ingredients in our Analysis
+A fundamental challenge in extending the Reference [19] PRG result from regular to general polytopes stems from the fact that an invariance principle simply does not hold for general polytopes
+Ax ≤ b. Without the regularity requirement on A, it is not true that Au and Aд are close in CDF
+distance; indeed, even a single non-regular linear form such as x 1 is distributed very differently
+under u ∼ {−1, 1}n versus д ∼ N (0, 1) n . This therefore necessitates a significant conceptual departure from the Meka–Zuckerman framework for constructing pseudorandom generators from
+invariance principles: Rather than establishing closeness between Au and Az (where z ∼ {−1, 1}n is
+the output of a suitable pseudorandom generator) through Aд by means of an invariance principle,
+one has to establish closeness between Au and Az “directly” without using invariance.
+Somewhat surprisingly, even though an invariance principle does not hold in our setting of general polytopes, our proof nonetheless proceeds via the Lindeberg method for proving invariance
+principles. Following the two main conceptual steps of the method (as outlined in the previous
+b
+section), we first prove that Au and Az are close with respect to Bentkus’s smooth mollifiers O
+for the orthant indicators Ob , and then use this to establish closeness in multidimensional CDF
+distance. However, the fact that we are dealing with matrices A ∈ Rm×n whose rows are arbitrary
+linear forms (corresponding to the facets of general m-facet polytopes) instead of regular linear
+forms poses significant challenges in both steps of the Lindeberg method. We discuss some of these
+challenges, and the new ideas that we employ to overcome them, next. For concreteness, we will
+discuss these challenges and new ingredients by contrasting our proof with that of Reference [19],
+but we remark here that these are in fact qualitative differences between our approach and the
+Lindeberg method in general.
+Step 1: Fooling Bentkus’s mollifier. Recall that Reference [19] first proves a general invariance
+principle establishing closeness in expectation (with a quantitative bound that depends on ϒ’s
+derivatives) between ϒ(Au) and ϒ(Aд) for any smooth test function ϒ. They then apply this general
+b being the test function, using the bounds
+invariance principle with Bentkus’s orthant mollifier O
+b .
+
+on Ob ’s derivatives established in Reference [5] but no other properties of O
+In contrast, we do not prove closeness between Au and Az for all smooth test functions;
+b ’s
+our argument is carefully tailored to Bentkus’s specific mollifier. In addition to bounds on O
+
+derivatives, we crucially rely on the specific structure of Ob , in particular, the fact that it is the
+
+Fooling Polytopes
+
+9:7
+
+b (v) = m ψb (vi ), where each
+product of m univariate functions, one for each coordinate (i.e., O
+i
+i=1
+ψbi maps R to [0, 1]). A high-level intuition for why such product structure is useful is as follows:
+By doing some structural analysis of halfspaces (see Section 5), we can decompose each of our m
+halfspaces into a small “head” portion, consisting of at most k variables, and a remaining “tail” portion that is regular. From this point of view, the difference between regular and general polytopes
+is therefore the presence of these size-at-most-k head portions in each of the m halfspaces. Very
+b allows us to handle these head portions using pseuroughly speaking, the product structure of O
+dorandom generators for small-width CNF formulas [17]. (To see the relevance of CNF formulas
+in this context, at least at a conceptual level, observe that a product of {0, 1}-valued k-juntas is a
+width-k CNF formula.)
+Our proof incorporates these PRGs for CNFs into Reference [19]’s analysis of the regular tail
+portions. We highlight one interesting aspect of our analysis: In all previous instantiations of the
+Lindeberg method that we are aware of, expressions like | E[ϒ(v + Δ)] − E[ϒ(v + Δ )]| are bounded
+by considering two Taylor expansions of ϒ, both taken around the “common point” v. Lindeberg
+method arguments analyze the difference of these Taylor expansions using moment-matching
+properties of Δ and Δ and the fact that they are “small” in a certain technical sense, which is
+directly related to the regularity assumptions that underlie these invariance principles. In contrast,
+in our setting, since we are dealing with arbitrary linear forms rather than regular ones, we end up
+having to bound expressions like | E[ϒ(v + Δ)]−E[ϒ(v + Δ )]|. Note that this involves considering
+the Taylor expansions of ϒ around two distinct points v and v , which may be far from each
+other—indeed, a priori it is not even clear that | E[ϒ(v)] − E[ϒ(v )]| will be small. Because of these
+differences from the standard Lindeberg scenario, moment-matching properties of Δ and Δ and
+their “smallness” no longer suffice to ensure that the overall expected difference is small. Instead,
+as alluded to above, our analysis additionally exploits the product structure of Bentkus’s mollifier
+via PRGs for CNFs to bound | E[ϒ(v + Δ)] − E[ϒ(v + Δ )]| (see Section 8).
+b (Au) and O
+b (Az) in
+Step 2: Anticoncentration. The next step is to pass from closeness of O
+expectation, to closeness of Au and Az in multidimensional CDF distance. We recall that in the
+b (Au)
+analogous step in Reference [19]’s proof, the starting point was closeness in expectation of O
+n
+
+and Ob (Aд), where д ∼ N (0, 1) is a standard Gaussian (instead of Ob (Az) where z ∼ {−1, 1}n is
+pseudorandom). For this reason, it sufficed for Reference [19] to bound the Gaussian anticoncentration of Aд and, as mentioned, such a bound is an immediate consequence of Nazarov’s bound
+on the Gaussian surface area of m-facet polytopes.
+In contrast, since the Gaussian distribution does not enter into our arguments at all (by necessity, as explained above), we instead have to bound the Boolean anticoncentration of Au where
+u ∼ {−1, 1}n is uniform random. This task, which is carried out in Section 7, requires significantly
+more work; indeed, Boolean anticoncentration formally contains Gaussian anticoncentration as
+a special case. At the heart of our arguments for this step is a new Littlewood–Offord-type anticoncentration inequality for m-facet polytopes, a high-dimensional generalization of the classic
+Littlewood–Offord theorem [12, 37]. We discuss this new theorem, which we believe is of independent interest, next.
+2.2.1 A Littlewood–Offord Theorem for Polytopes. We first recall the classic Littlewood–Offord
+anticoncentration inequality.
+Theorem 2.1 (Littlewood–offord). For all θ ∈ R and w ∈ Rn such that |w j | ≥ 1 for all
+j ∈ [n],
+ 
+1
+Pr[w · u ∈ (θ − 2, θ ]] = O √ ,
+n
+where u ∼ {−1, 1}n is uniformly random.
+9:8
+√
+Littlewood and √
+Offord [37] first proved a bound of O ((log n)/ n); Erdös [12] subsequently sharpened this to O (1/ n), which is optimal by considering w = 1n and θ = 0. (We observe that the
+question trivializes without the assumption on the magnitudes of w’s coordinates; for instance,
+the relevant probability is 1/2 for w = (1, 0, . . . , 0) and θ = 1.)
+Theorem 2.1 has the following natural geometric interpretation: The maximum fraction of hypercube points that can√fall within the “width-2 boundary” of a halfspace 1[w · x ≤ θ ] where
+|w j | ≥ 1 for all j is O (1/ n). Given this geometric interpretation, it is natural to seek a generalization from single halfspaces (i.e., 1-facet polytopes) to m-facet polytopes:
+What is the maximum fraction of hypercube points u ∈ {−1, 1}n that can lie within the
+“width-2 boundary” of an m-facet polytope Ax ≤ b where |Ai j | ≥ 1 for all i and j?
+In more detail, we say that u lies within the “width-2 boundary” of the polytope Ax ≤ b provided
+Au ≤ b and Ai ·u > bi −2 for some i ∈ [m]; equivalently, u lies in the difference of the two polytopes
+Ax ≤ b and Ax ≤ b − 2 · 1m , where 1m denotes the all-1’s vector in Rm . The Littlewood–Offord
+√
+theorem (Theorem 2.1), along with a naive union bound, implies a bound of O (m/ n); we are not
+aware of any improvement of this naive bound prior to our work.
+We give an essentially complete answer to this question, with upper and lower bounds that
+match up to constant factors. In Section 7, we prove the following “Littlewood–Offord theorem for
+polytopes”:
+Theorem 2.2 (Littlewood–offord Theorem for Polytopes). For all m ≥ 2, b ∈ Rm , and
+A ∈ Rm×n with |Ai j | ≥ 1 for all i ∈ [m] and j ∈ [n],
+√
+
+ 5 2 ln m
+Pr Au ≤ b & Ai · u > bi − 2 for some i ∈ [m] ≤
+,
+√
+n
+where u ∼ {−1, 1}n is uniformly random.
+Our proof of Theorem 2.2 draws on and extends techniques from Kane’s bound on the Boolean
+average sensitivity of m-facet polytopes [26]. We complement Theorem 2.2 with
+lower
+√ a matching
+√
+bound, which establishes the existence of an m-facet polytope with an Ω( ln m/ n)-fraction of
+hypercube points lying within its width-2 boundary.√(In fact, our lower bound is slightly stronger:
+√
+It establishes the existence of a polytope with an Ω( ln m/ n)-fraction of hypercube points lying
+on its surface, corresponding to its width-0 boundary.)
+Theorem 2.2 does not suffice for the purpose of passing from closeness with respect to Bentkus’s
+b to closeness in multidimensional CDF distance (i.e., Step 2 in Section 2.2):
+orthant mollifier O
+While the assumption on the magnitudes of A’s entries is essential to Theorem 2.2 (just as the analogous assumption on w’s coordinates is essential to the Littlewood–Offord theorem), the weight
+matrix of a general m-facet polytope need not have this property. In Section 7, we establish various
+technical extensions of Theorem 2.2 that are required to handle this issue.
+Remark 2.3. Our generalization of the Littlewood–Offord theorem (Theorem 2.2) is, to our
+knowledge, incomparable to other high-dimensional generalizations that have been studied in the
+literature. In particular, References [14, 31, 62] (see also the references therein) study the probability that Au falls within a ball of fixed radius in Rm , where A ∈ Rm×n is a matrix whose columns
+have 2-norm at least 1 (i.e., Au is the random ±1 sum of n many m-dimensional vectors of length
+at least 1).
+2.3
+
+Relation to Reference [56]
+
+We close this section with a discussion of the connection between our techniques and those of
+the recent work cited in Reference [56]. Recall that the main result of Reference [56] is a PRG for
+
+Fooling Polytopes
+
+9:9
+
+δ -fooling intersections of m weight-W halfspaces using seed length poly(log m,W , 1/δ ) · polylog n
+(whereas our main result, which is strictly stronger, is a PRG for δ -fooling intersections of m
+general halfspaces using seed length poly(log m, 1/δ ) · log n, with no dependence on the weights
+of the halfspaces).
+A key structural observation driving Reference [56] is that every intersection of m low-weight
+halfspaces can be expressed as H ∧ G, where H is an intersection of m regular halfspaces and G is
+a small-width CNF. (The width of G grows polynomially with the weights of the halfspaces, and
+this polynomial growth is responsible for the polynomial dependence on W in the seed length
+of the Reference [56] PRG.) From this starting point, it suffices for Reference [56] to bound the
+multidimensional CDF distance between the (Rm × {±1})-valued random variables (Au, G (u))
+and (Az, G (z)), where A ∈ Rm×n is the weight matrix of H , u is uniform random, and z is the
+output of the Reference [56] PRG (which is a slight variant of Reference [19]’s pseudorandom
+generator). Since H is an intersection of regular halfspaces, the fact that Au and Az are close in
+multidimensional CDF distance is precisely the main result of Reference [19]; the crux of the work
+in Reference [56], therefore, lies in dealing with the additional distinguished (m + 1) st coordinate
+corresponding to the CNF G. Very roughly speaking, Reference [56] employs a careful coupling
+(
+u, 
+z ) (whose existence is a consequence of the fact that bounded independence fools CNFs [3,
+52]) to ensure that G (
+u ) and G (
+z ) almost always agree, and hence these (m + 1) st coordinates
+“have a negligible effect” throughout Reference [19]’s Lindeberg-based proof of the regular case
+establishing closeness between Au and Az.
+Because of the aforementioned structural fact (that an m-tuple of low-weight halfspaces is equivalent to “an m-tuple of regular halfspaces plus a CNF”), the low-weight case analyzed in Reference
+[56] did not require as significant a departure from Reference [19]’s approach, and from the Lindeberg method as a whole, as the general case that is the subject of this article. In particular, the new
+ideas discussed in Section 2.2 that are central to our proof were not present in Reference [56]’s
+analysis for the low-weight case. To elaborate on this,
+b to
+◦ Reference [56] did not have to exploit the product structure of Bentkus’s orthant mollifier O
+fool it. Like Reference [19], the arguments of Reference [56] establish closeness in expectation
+between ϒ(Au, G (u)) and ϒ(Az, G (z)) for all smooth test functions ϒ, and the only properties of
+Bentkus’s mollifier that are used are the bounds on its derivatives given in Reference [5] (which
+are used in a black box way). The simpler setting of Reference [56] also did not necessitate
+comparing the Taylor expansions of ϒ around distinct points, as discussed in Section 2.2.
+◦ Reference [56] did not have to reason about Boolean anticoncentration, which, as discussed
+above, requires significant novel conceptual and technical work, including our new Littlewood–
+Offord theorem for polytopes. Like Reference [19], Reference [56] was able to apply Nazarov’s
+Gaussian anticoncentration bounds as a black box to pass from fooling Bentkus’s mollifier to
+closeness in multidimensional CDF distance.
+3
+
+PRELIMINARIES
+
+For convenience, in the rest of the article, we view halfspaces as having the domain {−1, 1}n rather
+than {0, 1}n . We remind the reader that a halfspace F : {−1, 1}n → {0, 1} is a function of the form
+F (x ) = 1[w · x ≤ θ ] for some w ∈ Rn , θ ∈ R.
+For an n-dimensional vector y and subset B ⊆ [n], we write y B to denote the |B|-dimensional
+vector obtained by restricting y to the coordinates in B. For an m × n matrix A and subset B ⊆ [n],
+we write AB to denote the m × |B| matrix obtained by restricting A to the columns in B. For indices
+i ∈ [m] and j ∈ [n], we write Ai to denote the n-dimensional vector corresponding to the ith row
+of A, and Aj to denote the m-dimensional vector corresponding to the j-column of A.
+
+9:10
+3.1
+
+Regularity, Orthants, and Taylor’s Theorem
+
+Definition 3.1 ((k, τ )-regular Vectors and Matrices). We say that a vector w ∈ Rn is τ -regular if
+|w j | ≤ τ w 2 for all j ∈ [n]. More generally, we say that w is (k, τ )-regular if there is a partition
+[n] = Head  Tail where |Head| ≤ k and the subvector w Tail is τ -regular. We say that w is
+
+(k, τ )-standardized if w is (k, τ )-regular and j ∈Tail w j2 = 1. We say that a matrix A ∈ Rm×n is τ regular (respectively: (k, τ )-regular, (k, τ )-standardized) if all its rows are τ -regular (respectively:
+(k, τ )-regular, (k, τ )-standardized). We also use this terminology to refer to polytopes Ax ≤ b.
+Translated orthants and their boundaries. For b ∈ Rm , we write Ob ⊂ Rm to denote the translated
+orthant
+Ob = {v ∈ Rm : vi ≤ bi for all i ∈ [m]}.
+We will overload notation and also write “Ob ” to denote the indicator Rm → {0, 1} of the orthant Ob (i.e., Ob (v) = 1[v ≤ b]). We write Ob ⊂ Ob to denote Ob ’s surface,
+Ob = {v ∈ Ob : vi = bi for some i ∈ [m]}.
+For Λ > 0, we write −Λ Ob and +Λ Ob to denote the inner and outer Λ-boundaries of Ob ,
+−Λ Ob = Ob \ Ob−(Λ, ...,Λ) ,
+
++Λ Ob = Ob+(Λ, ...,Λ) \ Ob ,
+
+(1)
+
+and ±Λ Ob to denote the disjoint union ±Λ Ob = +Λ Ob  −Λ Ob .
+Derivatives and multidimensional Taylor expansion. We write ψ (d ) to denote the dth derivative
+of a Cd function ψ : R → R. For an m-dimensional multi-index α = (α 1 , . . . , αm ) ∈ Nm , we write
+|α | to denote α 1 + · · · + αm , and α! to denote α 1 !α 2 ! · · · αm !. Given a vector Δ ∈ Rm , the expression
+
+αi
+m
+Δα denotes m
+i=1 Δi . Given a function ϒ : R → R, the expression ∂α ϒ denotes the mixed partial
+derivative taken α i times in the ith coordinate.
+The following is a straightforward consequence of the multidimensional Taylor theorem, upperbounding the error term by the L 1 -norm of the derivatives times the L ∞ -norm of the offset-powers:
+Fact 3.2 (Multidimensional Taylor Approximation). Let d ∈ N and let ϒ : Rm → R be a
+function. Then for all v, Δ ∈ Rm ,
+
+Cd
+
+ϒ(v + Δ) =
+0≤ |α | ≤d −1
+
+∂α ϒ(v) α
+Δ + err(v, Δ),
+α!
+
+where
+⎫
+⎧
+⎪
+∗ ⎪
+d
+⎬ · Δ∞
+|∂
+ϒ(v
+)|
+.
+|err(v, Δ)| ≤ sup ⎨
+α
+⎪
+⎪
+v ∗ ∈Rm ⎩ |α |=d
+⎭
+3.2
+
+Pseudorandomness Preliminaries
+
+Throughout this work we use boldface for random variables and random vectors. If D is a probability distribution, then we write x ∼ D to denote that x is drawn from that distribution. For
+example, N (0, 1) will denote the standard normal distribution, so д ∼ N (0, 1) means д is a standard Gaussian random variable. In case S is a finite set, the notation x ∼ S will mean that x is
+chosen uniformly at random from S. The most common case for this will be u ∼ {−1, 1}n , meaning
+that u is chosen uniformly from {−1, 1}n . We will reserve u for this specific random vector.
+Journal of the ACM, Vol. 69, No. 2, Article 9. Publication date: January 2022.
+
+Fooling Polytopes
+
+9:11
+
+We recall the definition of a pseudorandom generator:
+Definition 3.3 (Pseudorandom Generator). A function G : {−1, 1}r → {−1, 1}n is said to δ -fool a
+function F : {−1, 1}n → R with seed length r if
+E
+
+s ∼{−1,1}r
+
+F (G (s)) −
+
+E
+
+u∼{−1,1}n
+
+F (u)
+
+≤ δ.
+
+Such a function G is said to be an explicit pseudorandom generator (PRG) that δ -fools a class F
+of n-variable functions if G is computable by a deterministic uniform poly(n)-time algorithm and
+G δ -fools every function F ∈ F . We will also use the notation z ∼ G to mean that z = G (s) for
+s ∼ {−1, 1}r .
+Bounded independence and hash families. A sequence of random variables x 1 , . . . , x n is said
+to be r -wise independent if any collection of r of them is independent. In case the x i ’s are uniformly
+distributed on their range, we say the sequence is r -wise uniform. We will also use this terminology
+for distributions D on {−1, 1}n . An obvious but useful fact about r -wise uniform PRGs G is that
+they 0-fool the class of degree-r polynomials {−1, 1}n → R.
+A distribution H on functions [n] → [L] is said to be an r -wise uniform hash family if, for
+h ∼ H , the sequence (h(1), . . . , h(n)) is r -wise uniform. Such a distribution also has the property
+that for any  ∈ [L], the sequence (1h (1)= , . . . , 1h (n)= ) is r -wise independent on {0, 1}n , with each
+individual random variable being Bernoulli(1/L). Well-known constructions (see, e.g., Section 3.5.5
+of Reference [63]) give that for every n, L and r , there is an r -wise uniform hash family H of
+functions [n] → [L] such that choosing a random function from H takes O (r log(nL)) random
+bits (and evaluating a function from H takes time poly(r , log n, log L)), and consequently there
+are known efficient constructions of r -wise uniform distributions over {0, 1}n with seed length
+O (r log n).
+Fooling CNFs. Gopalan, Meka, and Reingold [17] have given an efficient explicit PRG that fools
+the class of small-width CNFs:
+Theorem 3.4 (PRG for Small-Width CNFs). There is an explicit PRG GGMR = GGMR (w, δ CNF )
+that δ CNF -fools the class of all width-w CNF formulas over {−1, 1}n and has seed length
+O (w 2 log2 (w log(1/δ CNF )) + w log(w ) log(1/δ CNF ) + log log n).
+4
+
+OUR PRG
+
+The Meka–Zuckerman generator. As stated earlier, the PRG that we will analyze is a slight
+variant of a PRG first proposed by Meka and Zuckerman for fooling a single halfspace [39]. We
+begin by recalling the Meka–Zuckerman PRG.
+Definition 4.1 (Meka–Zuckerman Generator). The Meka–Zuckerman generator with parameters
+L, r hash , r bucket ∈ [n], denoted GMZ , is defined as follows: Let h : [n] → [L] be an r hash -wise uniform hash function. Let y 1 , . . . , y L ∼ {−1, 1}n be independent random variables, each r bucket -wise
+uniform. A draw from GMZ = GMZ (L, r hash , r bucket ) is z ∼ {−1, 1}n where
+zh −1 () = yh −1 ()
+
+for all  ∈ [L].
+
+In words, an r hash -wise uniform hash h is used to partition the variables x 1 , . . . , x n into L “buckets,” and then independently across buckets, the variables in each bucket are assigned according
+to an r bucket -wise uniform distribution.
+We note in passing that the generators of References [19, 56] also have this structure (though
+the choice of parameters L, r bucket , and r hash are different than those in Reference [39]).
+
+9:12
+
+
+Our generator. Now we are ready to describe our generator and bound its seed length. Roughly
+speaking, our generator extends the Meka–Zuckerman generator by (i) additionally Xor-ing each
+bucket with an independent pseudorandom variable that fools CNF formulas; and (ii) globally Xoring the entire resulting n-bit string with an independent draw from a 2k-wise uniform distribution.
+Definition 4.2 (Our Generator). Our generator, denoted G , is parameterized by values
+L, r hash , r bucket , k, w ∈ [n], δ CNF ∈ (0, 1) and is defined as follows: Let:
+◦ h, y 1 , . . . , y L be defined as in the Meka–Zuckerman generator with parameters L, r hash , and
+r bucket .
+◦ ỹ 1 , . . . , ỹ L ∼ {−1, 1}n be independent draws from GGMR (w, δ CNF ).
+◦ y  ∼ {−1, 1}n be 2k-wise uniform.
+Define the random variable y̆ ∼ {−1, 1}n by
+y̆h −1 () = y  ⊕ ỹ 
+
+h −1 ()
+
+for all  ∈ [L],
+
+where ⊕ denotes bitwise Xor. A draw from our generator G = G (L, r hash , r bucket , k, w, δ CNF ) is
+z ∼ {−1, 1}n where z = y̆ ⊕ y  .
+Recalling the standard constructions of r -wise uniform hash functions and random variables
+described at the end of Section 3, we have the following:
+Fact 4.3 (Seed Length). The seed length of our PRG G with parameters L,r hash ,r bucket ,k, w,δ CNF is
+≤ O (r hash · log(nL) + L · r bucket · log n
+
+(Seed length for GMZ )
+
++ L · (w log (w log(1/δ CNF )) + w log(w ) log(1/δ CNF ) + log log n)
+2
+
+2
+
++ k log n).
+
+(L copies of GGMR )
+(2k-wise uniform string)
+
+4.1 Setting of Parameters
+We close this section with the parameter settings for fooling intersections of m halfspaces over
+{−1, 1}n . Fix ε ∈ (0, 1) to be an arbitrarily small absolute constant; the parameters we now specify
+will be for fooling to accuracy O ε (δ ) = O (δ ). We first define a few auxiliary parameters:
+δ
+λ=
+log(m/δ ) log m
+δ 1+ε
+τ =
+(log m) 2.5+2ε
+d = constant depending only on ε.
+
+(Dictated by Equation (31))
+(Dictated by Equation (30))
+(Dictated by Equation (30))
+
+The precise value of d = d (ε) will be specified in the proof of Theorem 8.1. We will instantiate our
+generator G = G (L, r hash , r bucket , k, w, δ CNF ) with parameters:
+L=
+
+(log m) 5
+δ 2+ε
+
+
+(Constrained by Equation (30),
+
+chosen to optimize seed length)
+
+Fooling Polytopes
+
+9:13
+r hash = C 1 log(Lm/δ )
+r bucket = log(m/δ )
+
+(Dictated by Proposition 8.11)
+(Dictated by Lemma 8.10)
+
+C 2 log(m/δ ) log log(m/δ )
+(Dictated by Theorem 5.1)
+τ2
+2k
+w=
+(Dictated by Proposition 8.11)
+L
+
+ d −1
+λ
+δ
+δ CNF = ·
+,
+(Dictated by Equation (30))
+√
+L m n
+where C 1 and C 2 are absolute constants specified in the proofs of Proposition 8.11 and Theorem 5.1,
+respectively.
+k=
+
+Our seed length: By Fact 4.3, our overall seed length is
+polylog(m) · δ −(2+ε ) · log n
+
+(2)
+
+for any absolute constant ε ∈ (0, 1).
+Remark 4.4. As alluded to in the introduction, our techniques can also be used to show that the
+Meka–Zuckerman generator itself fools the class of intersections of m halfspaces over {−1, 1}n .
+However, this would require setting the parameters L, r hash , and r bucket to be somewhat larger than
+the values used above and would result in a slightly worse seed length of poly(log m, 1/δ, log n)
+than our poly(log m, 1/δ ) · log n. Briefly, such an analysis would use the fact that boundeduniformity distributions fool CNF formulas [3, 52]; our analysis instead uses the (more efficient)
+Reference [17] generator for this purpose.
+5 REDUCTION TO STANDARDIZED POLYTOPES
+5.1 A Reduction from Fooling Polytopes to Fooling Standardized Polytopes
+In this section, we reduce from the problem of fooling general m-facet polytopes to the problem of
+fooling m-facet (k, τ )-standardized polytopes (Definition 3.1). The main technical result we prove
+in this section is the following:
+Lemma 5.1 (Approximating Arbitrary Polytopes by (k, τ )-standardized Polytopes Under
+Bounded-uniformity Distributions). There is a universal constant C 2 > 0 such that the following
+holds: Fix m ≥ 1 and 0 < δ, τ < 1/2 such that
+C 2 log(m/δ ) log log(m/δ ) n
+(3)
+≤ .
+k
+τ2
+2
+For every m-facet polytope Ax ≤ b in Rn , there is an m-facet (k, τ )-standardized polytope A x ≤ b
+in Rn such that if y ∼ {−1, 1}n is 2k-wise uniform, then
+
+
+(4)
+Pr 1[Ay ≤ b]  1[A y ≤ b ] ≤ δ .
+Remark 5.2. Had we been content in this theorem with the worse value of k = O log2 (m/δ )/τ 2 ,
+then the result would essentially be implicit in Reference [9, Theorem 5.4] (and Reference [18,
+Theorem 7.4]), using only (k + 2)-wise uniformity. To save essentially a log(m/δ ) factor, we give
+a modified proof in Appendix A.
+We stress that Lemma 5.1 establishes that 1[Ax ≤ b] is well-approximated by 1[A x ≤ b ] under
+both the uniform distribution and the pseudorandom distribution constructed by our generator,
+since both of these distributions are 2k-wise uniform. (Note that a draw z = y̆ ⊕ y  from our
+generator is indeed 2k-wise uniform, since y  is; indeed,Lemma 5.1 is the motivation for why our
+
+9:14
+
+
+construction includes a bitwise-Xor with y  .) This is crucial: In general, given a function F and
+an approximator F that is close to F only under the uniform distribution (i.e., Pr[F (u)  F (u)] is
+small), fooling F does not suffice to fool F itself.
+Given Lemma 5.1, to prove Theorem 1.1 it is sufficient to prove the following:
+Theorem 5.3 (Fooling (k, τ )-standardized Polytopes). Let G be our generator with parameters as set in Section 4.1. For all m-facet (k, τ )-standardized polytopes A x ≤ b ,
+Pr
+
+u∼{−1,1}n
+
+A u ∈ Ob
+
+− Pr A z ∈ Ob
+z ∼G
+
+= O (δ ).
+
+Proof of Theorem 1.1 Assuming Theorem 5.3 and Lemma 5.1. Let Ax ≤ b be any m-facet
+polytope in Rn . Given δ > 0, we recall that τ = δ 1+ε /(log m) 2.5+ε . If the quantity (3) is greater
+than n/2, then the claimed seed length from Fact 4.3 is greater than n and the conclusion of
+Theorem 1.1 trivially holds, so we suppose that (3) is less than n/2. Let A x ≤ b be the m-facet
+(k, τ )-standardized polytope given by Lemma 5.1. We have
+Pr
+
+u∼{−1,1}n
+
+[Au ∈ Ob ] =
+
+Pr
+
+u∼{−1,1}n
+
+[A u ∈ Ob ] ± δ
+
+(Lemma 5.1 applied to u)
+
+= Pr [A z ∈ Ob ] ± δ ± δ
+
+(Theorem 5.3)
+
+z ∼G
+
+= Pr [Az ∈ Ob ] ± δ ± δ ± δ
+z ∼G
+
+(Lemma 5.1 applied to z)
+
+and Theorem 1.1 follows by rescaling δ appropriately.
+
+
+
+The rest of the article is devoted to proving Theorem 5.3.
+6 BENTKUS’S MOLLIFIER AND ITS PROPERTIES
+b : Rm → (0, 1), which is a
+In this section we introduce and analyze Bentkus’s orthant mollifier O
+smoothed version of the translated orthant indicator function Ob : Rm → {0, 1} from Section 3.1.
+Definition 6.1 (Gaussian-mollified Halfline). For θ ∈ R and λ > 0, we define the C ∞ function
+
+1θ, λ : R → (0, 1),
+
+E
+1θ, λ (t ) =
+1[t + λд ≤ θ ] .
+д∼N (0,1)
+
+Definition 6.2 (Bentkus’s Orthant Mollifier). For b ∈ Rm and λ > 0, the Bentkus λ-mollifier for
+b, λ : Rm → (0, 1),
+Ob is defined to be the C ∞ function O
+b, λ (v) =
+O
+
+E
+
+д∼N (0,1)m
+
+Ob (v + λд) .
+
+
+m
+
+Since Ob (v) = m
+i=1 1[v i ≤ bi ] and N (0, 1) is a product distribution, the mollifier Ob, λ can be
+equivalently defined as follows:
+b, λ (v) =
+O
+
+m
+
+
+1bi , λ (vi ).
+
+(5)
+
+i=1
+
+This product structure of Bentkus’s mollifier will be crucially important for us in the analysis that
+we carry out in Section 8.1. We note the following translation property of Bentkus’s mollifier:
+b, λ (v + Δ) = O
+b−v, λ (Δ).
+Fact 6.3. For all b, v, Δ ∈ Rm and λ > 0, we have O
+In Section 8.1 we will also use the following global bound on the magnitude of the derivatives
+of the Gaussian-mollified halfline:
+
+Fooling Polytopes
+
+9:15
+
+Fact 6.4 (Standard; see Exercise 11.41 in Reference [47]). For all θ ∈ R, λ > 0, and integer
+d ≥ 1,
+1 d
+(d ) 
+
+
+=
+O
+.
+1
+d
+ θ, λ ∞
+λ
+The following result, from Bentkus [5, Theorem 3(ii)], can be viewed as a multidimensional generalization of Fact 6.4. (Strictly speaking, Reference [5] only considers b’s of the form (θ, θ, . . . , θ ),
+but by translation-invariance the bound holds for all b ∈ Rm .)
+Theorem 6.5 (Bounded Sum of Derivatives). For all m ≥ 2, b ∈ Rm , λ > 0, and integer d ≥ 1,
+
+d
+⎫
+⎧
+log m 
+⎪
+⎪
+
+
+⎬
+⎨
+sup ⎪
+|∂α Ob, λ (v)| ⎪ = Od
+.
+v ∈Rm ⎩ |α |=d
+ λ 
+⎭
+Recall from (1) that −Λ Ob = Ob \ Ob−(Λ, ...,Λ) and +Λ Ob = Ob+(Λ, ...,Λ) \ Ob . We will use the
+following notions of approximation for translated orthants:
+Definition 6.6 (Inner and Outer Approximators for Orthants). We say that ϒ : Rm → [0, 1] is a
+(Λ, δ )-inner approximator for Ob if
+|ϒ(v) − Ob (v)| ≤ δ
+
+for all v  −Λ Ob .
+
+Similarly, we say that ϒ is a (Λ, δ )-outer approximator for Ob if
+|ϒ(v) − Ob (v)| ≤ δ
+
+for all v  +Λ Ob .
+
+The connection between Bentkus’s mollifier and these notions of approximation is established
+in the following claim:
+Lemma 6.7 (Bentkus’s Mollifier, Appropriately Translated, Yields Inner and Outer
+Approximators for Translated Orthants). For all b ∈ Rm and λ, δ ∈ (0, 1), there are
+b in, λ , O
+b out, λ are (Λ, δ )-inner and -outer approximators for Ob , respectively,
+b in , b out ∈ Rm such that O
+
+where Λ = Θ(λ log(m/δ )).
+
+Proof. Let b in = b − β1m where β = Θ(λ log(m/δ )) < Λ will be specified in more detail later.
+b in, λ is an (Λ, δ )-inner approximator for Ob ; an analogous argument in which
+We show below that O
+b out, λ is a (Λ, δ )-outer approximator for Ob ,
+the v ∈ Ob and v  Ob cases switch roles shows that O
+out
+where b = b + β1m .
+Fix v  −Λ Ob . There are two possibilities: either v ∈ Ob or v  Ob . We first consider the case in
+which v lies in Ob . Since v  −Λ Ob , we have vi ≤ bi − Λ for all i ∈ [m]. Since Ob (v) = 1, we must
+b in, λ (v) ≥ 1 − δ . Recalling Equation (5) and the fact that the function 
+show that O
+1θ, λ : R → (0, 1)
+
+is monotone decreasing for all θ ∈ R and λ > 0, it suffices to show that Ob in, λ (b − Λ1m ) ≥ 1 − δ .
+Again by Equation (5) this holds if and only if
+m
+
+
+1bi −β, λ (bi − Λ) ≥ 1 − δ,
+
+i=1
+
+which is equivalent to
+
+
+
+m
+
+Pr
+
+
+
+д ≤ (Λ − β )/λ
+
+Pr
+
+[д ≤ (Λ − β )/λ] ≥ 1 − δ/m.
+
+д∼N (0,1)
+
+≥ 1 − δ,
+
+which holds if
+д∼N (0,1)
+
+(6)
+
+
+9:16
+
+R. O’Donnell et al.
+2
+√1 e −t /2
+t 2π
+
+for t > 0 (see, e.g., Reference
+
+ln(m/δ ) for
+[13], Section 7.1), we see that to achieve Equation
+(6)
+it
+suffices
+to
+have
+Λ
+−
+β
+≥
+Cλ
+
+an absolute constant C > 0, and hence Λ = Θ(λ log(m/δ )) suffices.
+Now, we turn to the case in which v  Ob , and hence for some i ∈ [m], we have vi > bi ;
+without loss of generality, we suppose that v 1 > b1 . Since Ob (v) = 0 in this case, we must show
+b in, λ (v) ≤ δ . By Equation (5) this holds if and only if
+that O
+By the well-known Gaussian tail bound Pr[д ≥ t] ≤ 1 −
+
+m
+
+
+1bi −β, λ (vi ) ≤ δ,
+
+i=1
+
+which holds if
+
+
+1b1 −β, λ (v 1 ) ≤ δ,
+
+which is equivalent to
+Pr
+
+д∼N (0,1)
+
+[v 1 + λд ≤ b1 − β] ≤ δ .
+
+Recalling that v 1 > b1 , it suffices to have
+Pr
+
+д∼N (0,1)
+
+[д ≤ −β/λ] ≤ δ,
+
+which holds (with room to spare) for our choice of β by the standard Gaussian tail bound.
+6.1
+
+
+
+The Connection between Inner/outer Approximators and CDF Distance
+
+The following elementary properties of inner/outer approximators will be useful for us:
+Fact 6.8. Fix b ∈ Rm and let ϒin , ϒout be (Λ, δ )-inner and -outer approximators for Ob . Then
+(1) ϒin (v) − δ ≤ Ob (v) ≤ ϒout (v) + δ for all v ∈ Rm .
+(2) ϒin is a (Λ, δ )-outer approximator for Ob−Λ1m , and similarly ϒout is a (Λ, δ )-inner approximator for Ob+Λ1m .
+The next lemma is straightforward but very useful for us. Intuitively, it says that for an Rm valued random variable ṽ to fool a translated orthant Ob relative to another Rm -valued random
+variable v, it suffices to (i) have ṽ fool both inner and outer approximators for Ob , and (ii) establish
+anticoncentration of the original random variable v at the inner and outer boundaries of Ob . We
+explain in detail how we will use this lemma after giving its proof below.
+Lemma 6.9. Let ϒin , ϒout : Rm → [0, 1] be (Λ, δ )-inner and -outer approximators for Ob . Let v
+and ṽ be Rm -valued random variables satisfying:
+E ϒ(v) − E ϒ(ṽ)
+
+≤γ
+
+(7)
+
+for both ϒ ∈ {ϒout , ϒin }. Then
+Pr v ∈ Ob − Pr ṽ ∈ Ob
+
+≤ γ + 2δ + Pr v ∈ ±Λ Ob .
+
+Proof. The proof follows similar lines to the arguments used to prove Lemma 3.3 in Reference
+[19]. We first note that
+Pr ṽ ∈ Ob ≤ E ϒout (ṽ) + δ
+≤ E ϒout (v) + γ + δ
+≤ Pr v ∈ Ob+Λ1m + γ + 2δ .
+
+(Item 1 of Fact 6.8)
+(Equation (7) with ϒ = ϒout )
+(Item 2 of Fact 6.8)
+
+Fooling Polytopes
+
+9:17
+
+Combining this with a symmetric argument for the lower bound, we have:
+Pr v ∈ Ob−Λ1m − γ − 2δ ≤ Pr ṽ ∈ Ob ≤ Pr v ∈ Ob+Λ1m + γ + 2δ .
+
+(8)
+
+To convert this type of closeness into CDF closeness, we observe that
+Pr v ∈ Ob+Λ1m = Pr v ∈ Ob + Pr v ∈ +Λ Ob
+Pr v ∈ Ob−Λ1m = Pr v ∈ Ob − Pr v ∈ −Λ Ob .
+Plugging these identities into Equation (8), we conclude that
+Pr ṽ ∈ Ob = Pr v ∈ Ob ± γ + 2δ + Pr v ∈ +Λ Ob + Pr v ∈ −Λ Ob
+= Pr v ∈ Ob ± γ + 2δ + Pr v ∈ ±Λ Ob
+
+,
+
+
+thus completing the proof of Lemma 6.9.
+
+6.1.1 Applying Lemma 6.9 in the context of Theorem 5.3, and the organization of the rest of this
+article. Applying Lemma 6.9 with v and ṽ being Au and Az, respectively, the task of bounding
+Pr
+
+u∼{−1,1}n
+
+Au ∈ Ob − Pr
+
+z ∼GMZ
+
+Az ∈ Ob
+
+reduces to the following two-step program:
+(1) Establishing anticoncentration within orthant boundaries: bounding Pr[Au ∈ ±Λ Ob ]; and,
+b in, λ }, the
+
+
+ ∈ {O
+b out, λ , O
+(2) Fooling Bentkus’s mollifier: bounding | E[O(Au)]
+− E[O(Az)]|
+for O
+inner and outer approximators for Ob given by Lemma 6.7.
+Section 7 is devoted to the former and Section 8 the latter. In Section 9, we put these pieces together
+to prove Theorem 5.3.
+7 BOOLEAN ANTICONCENTRATION WITHIN ORTHANT BOUNDARIES
+The main result of this section is Theorem 7.1, which provides the first step of the two-step program
+described at the end of Section 6:
+Theorem 7.1 (Boolean Anticoncentration within Orthant Boundaries). Assume A ∈
+Rm×n satisfies the following property: Each of its row vectors has a τ -regular subvector of 2-norm 1,
+where τ is as set in Section 4.1.2 Then for all b ∈ Rm and Λ ≥ τ , we have
+
+Pr n [Au ∈ ±Λ Ob ] = O Λ log m .
+u∼{−1,1}
+
+En route to proving Theorem 7.1, we will establish a “Littlewood–Offord theorem for polytopes,”
+Theorem 2.2, that was stated in Section 2.2.1. Theorem 2.2 will in fact be obtained as a special case
+of a more general result about intersections of m arbitrary unate functions (namely, Lemma 7.13).
+Definition 7.2 (Unateness). A function F : {−1, 1}n → {0, 1} is unate in direction σ ∈ {−1, 1}n
+if the function G (x 1 , . . . , x n ) = F (σ1x 1 , . . . , σn x n ) is a monotone Boolean function, meaning that
+G (x ) ≤ G (y) whenever x j ≤ y j for all j ∈ [n]. We refer to σ as the orientation of F .
+Our analysis, dealing as it does with intersections of unate functions, is somewhat reminiscent
+of that of Reference
+[26], and indeed we will establish the main result of Reference [26]—an upper
+
+bound of O ( n log m) on the average sensitivity of any intersection of m unate functions—in the
+course of our analysis.
+2 Equivalently,
+
+A is (n, τ )-standardized.
+
+9:18
+
+
+Fig. 1. Illustration of a cap and body.
+
+7.1 Caps and Their Boundary Edges
+Let G and H be subsets of {−1, 1}n . We typically think of G as a General/arbitrary set and H as
+a H alfspace, though formally H will only need to be unate. Throughout this section, we write
+σ ∈ {−1, 1}n to denote the orientation of H .
+We call the set G \H the cap, the set G ∩H the body, and the complement of G the exterior. Please
+refer to Figure 1, where G is the union of the two regions with blue shading and H is the grayshaded region (depicted as a halfspace in the figure). The upward arrows in the diagram illustrate
+some edges of the hypercube. We have oriented these edges according to σ : For an edge {x, y} in
+the jth direction in which x j = −1 and y j = 1, the tail of the corresponding arrow represents x if
+σ j = −1 and y if σ j = 1. Note in particular that the edges are oriented “away” from H (i.e., so that
+H is antimonotone with respect to the edge orientations).
+We will be concerned with the boundary edges for the cap G \ H ; these are edges that have one
+endpoint inside G \ H and one endpoint outside it.
+Definition 7.3 (Edge Boundary). For a general set F ⊆ {−1, 1}n , let E (F ) denote the fraction of
+all n2n−1 hypercube edges that are boundary edges for F .
+We distinguish the three possible types of boundary edges of the cap G \ H :
+◦ Body→Cap (BC) edges: the red edges in the diagram. Formally, these are edges where the
+tail is in the body G ∩ H and the head is in the cap G \ H .
+◦ Exterior→Cap (EC) edges: the green edges in the diagram. Formally, these are edges where
+the tail is not in G, and the head is in the cap G \ H .
+◦ Cap→Exterior (CE) edges: the purple edges in the diagram. Formally, these are edges
+where the tail is in the cap G \ H and the head is not in G.
+Remark 7.4. Note that there are no Cap→Body (CB) edges. Formally, these would be the last
+possibility for G \ H boundary edges, namely, ones with tail in the cap G \ H and head in the body
+G ∩ H . But these cannot exist due to the antimonotonicity of H vis-à-vis the edges; if the tail is
+already not in H , then the head cannot be in H .
+
+Fooling Polytopes
+
+9:19
+
+Given a cap C = G \ H , we write BC(G, H ), EC(G, H ), CE(G, H ) for the fraction of hypercube
+edges of each of the three above types. Therefore, E (C) = BC(G, H ) + EC(G, H ) + CE(G, H ).
+We will also be interested in the directed edge boundary of caps:
+Definition 7.5 (Directed Edge Boundary). For a cap G \ H , define
+ (G, H ) = BC(G, H ) + EC(G, H ) − CE(G, H ),
+E
+
+(9)
+
+the fraction of inward boundary edges minus the fraction of outward boundary edges.
+It will be very useful for us to have an upper bound on E (G∩H )−E (G), the change in E (G) when
+we intersect G with H (note that this quantity can be either positive or negative). The following
+fact is immediate from the definitions:
+Fact 7.6 (Change in Boundary Size). If G \ H is a cap, then
+E (G ∩ H ) − E (G) = BC(G, H ) − EC(G, H ) − CE(G, H ).
+
+(10)
+
+Comparing Equations (10) and (9), we plainly have:
+ (G, H ).
+Fact 7.7. E (G ∩ H ) − E (G) ≤ E
+To get a quantitative bound, we have the following lemma:
+Lemma 7.8. For any cap C = G \ H ,
+ (G, H ) ≤ U (vol(C))
+,
+E
+√
+n
+
+where vol(C) = |C |/2n and U denotes the function U (p) = 2p 2 ln(1/p).
+Proof. This is a basic fact in analysis of Boolean functions. Identifying C with its indicator
+function C : {−1, 1}n → {0, 1}, we have vol(C) = E[C (u)] and
+ (G, H ) = 2
+E
+
+2
+E [C (u)σ ju j ] =
+u∼{−1,1}n
+n
+j∼[n]
+
+n
+
+σ j C({j}),
+
+j=1
+
+where C({j}) denotes the degree-1 Fourier coefficient of C corresponding to coordinate j. It is well
+
+known and elementary that for F : {−1, 1}n → {0, 1} with E[F ] = p, one has nj=1 | F({j})| ≤
+
+√
+O (p ln(1/p)) n; see, e.g., Kane’s paper [26, Lemma 6] for the short proof. For the sake of an
+asymptotically tight constant, we can use the Cauchy–Schwarz inequality and the Fourier “Level1 Inequality” [7, 21, 60] to get
+
+ n
+n
+
+√
+√
+C({j}) 2 ≤ n · p 2 ln(1/p).
+σ j C({j}) ≤ n ·
+
+j=1
+
+j=1
+
+7.1.1 Reproving the Main Result of Reference [26]. We can now reprove the main result of Reference [26] (which we will use later):
+Theorem 7.9 ([26]). Let F be the intersection of m ≥ 2 unate functions over {−1, 1}n . Then
+√
+2 2 ln m
+E (F ) ≤
+.
+(11)
+√
+n
+√
+√
+(Equivalently, an intersection of m ≥ 2 unate functions has average sensitivity at most 2 2 ln m n.)
+9:20
+
+Proof. Let H 1 , . . . , Hm be unate functions and define associated caps
+Ci = (H 1 ∩ · · · ∩ Hi−1 ) \ Hi ,
+
+(12)
+
+with C 1 = {−1, 1}n \H 1 (i.e., H 0 = {−1, 1}n ). Letting F = H 1 ∩· · ·∩Hm , we have that the complement
+F c = {−1, 1}n \ F of F can be expressed as a disjoint union of caps:
+F c = C 1  · · ·  Cm .
+
+(13)
+
+For intuition, we may think of the intersection of m unate sets F as being formed in m stages,
+starting with {−1, 1}n and successively intersecting with each Hi ; given this interpretation, Ci is
+the portion of {−1, 1}n that is removed in the ith stage. With this notation in hand, we have that
+m
+
+E (F ) =
+
+E ((H 1 ∩ · · · ∩ Hi−1 ) ∩ Hi ) − E (H 1 ∩ · · · ∩ Hi−1 )
+i=1
+m
+
+ (H 1 ∩ · · · ∩ Hi−1 , Hi )
+E
+
+≤
+
+(Fact 7.7 with G = H 1 ∩ · · · ∩ Hi−1 and H = Hi )
+
+i=1
+
+1
+≤ √ ·
+n
+
+m
+
+U (vol(Ci )).
+
+(Lemma 7.8)
+
+i=1
+
+Finally,
+ m
+
+m
+
+U (vol(Ci )) ≤ m · U
+i=1
+
+i=1 vol(C i )
+
+m
+
+
+
+
+=m ·U
+
+
+√
+vol(F c )
+≤ m · U ( m1 ) = 2 2 ln m,
+m
+
+where we used concavity of U , then Equation (13), then the fact that U is increasing on [0, 1/2].
+This completes the proof of Theorem 7.9.
+
+7.2 A Littlewood–Offord Theorem for Polytopes (Theorem 2.2)
+In this section we prove Theorem 2.2:
+Theorem 7.10. For all m ≥ 2, b ∈ Rm and A ∈ Rm×n with |Ai j | ≥ 1 for all i ∈ [m] and j ∈ [n],
+√
+5 2 ln m
+.
+Pr [Au ∈ −2 Ob ] ≤
+√
+u∼{−1,1}n
+n
+We note in passing that the anticoncentration bound given by Theorem 2.2 is best possible up
+to constant factors. Indeed, our matching lower bound applies even to the stricter event of falling
+on the surface of Ob :
+Claim 7.11 (Optimality of Theorem 2.2). For 2 ≤ m ≤ 2n , there is a matrix A ∈ {−1, 1}m×n
+and a vector b ∈ Rm such that
+√
+ln m
+Pr n [Au ∈ Ob ] = Ω  √ .
+u∼{−1,1}
+ n 
+We prove Claim 7.11 in Appendix B.
+7.2.1 Proof of Theorem 2.2. As mentioned at the beginning of this section, we will obtain
+Theorem 2.2 as a corollary of a more general result about intersections of unate functions. Let
+H 1 , . . . , Hm ⊆ {−1, 1}n be unate sets, m ≥ 2, and further suppose that we have additional unate
+sets H 1 , . . . , H m such that Hi ⊆ H i for all i. (For intuition, it may be helpful to think of Hi as the
+
+Fooling Polytopes
+
+9:21
+
+“interior” of H i ; see the proof of Theorem 2.2 using Lemma 7.13 just below for a typical example
+of sets Hi and H i .) We define the following subsets of {−1, 1}n :
+F = H 1 ∩ · · · ∩ Hm
+F ◦ = H 1 ∩ · · · ∩ Hm
+∂F = F \ F
+
+(interior of F )
+
+◦
+
+(boundary of F )
+
+F = {−1, 1} \ F
+c
+
+n
+
+(exterior of F )
+
+∂Hi = H i \ Hi (for each i ∈ [m]).
+
+(boundary of H i )
+
+Definition 7.12 (Thin Sets). We say that ∂Hi is thin if it does not contain any induced edges of
+the hypercube.
+Lemma 7.13. If ∂Hi is thin for each i ∈ [m], then vol(∂F ) ≤
+
+√
+5 2√ln m
+.
+n
+
+Proof of Theorem 2.2 Assuming Lemma 7.13. Fix any b ∈ Rm and A ∈ Rm×n such that |Ai j | ≥
+1 for all i ∈ [m] and j ∈ [n], and let
+
+
+
+
+H i = x ∈ {−1, 1}n : Ai · x ≤ bi ,
+Hi = x ∈ {−1, 1}n : Ai · x ≤ bi − 2 ,
+so
+
+
+
+∂Hi = x ∈ {−1, 1}n : bi − 2 < Ai · x ≤ bi
+and
+
+
+∂F = x ∈ {−1, 1}n : Ax ≤ b & Ai · x > bi − 2 for some i ∈ [m]
+
+
+= x ∈ {−1, 1}n : Ax ∈ −2 Ob .
+
+Since |Ai j | ≥ 1 for all i, j, it follows that each ∂Hi is thin, and hence Lemma 7.13 directly gives
+Theorem 2.2.
+
+The rest of this section will be devoted to the proof of Lemma 7.13. Recalling that F ◦ is called the
+interior of F and ∂F is called the boundary of F , we say that an edge in the hypercube is boundaryto-interior if it has one endpoint in ∂F and the other endpoint in F ◦ , and we write ν BI for the
+fraction of all edges that are of this type. We similarly define boundary-to-exterior edges and ν BE ,
+with F c . Note that every boundary-to-interior edge is a boundary edge for F ◦ = H 1 ∩ · · · ∩ Hm ,
+which is an intersection of m unate sets. By applying Theorem 7.9 to F ◦ , we get that
+√
+2 2 ln m
+ν BI ≤
+.
+(14)
+√
+n
+Similarly, every boundary-to-exterior edge is a boundary edge for F = H 1 ∩ · · · ∩ H m ; applying
+Theorem 7.9 to this intersection yields
+√
+2 2 ln m
+ν BE ≤
+.
+(15)
+√
+n
+Next, we bound the fraction of edges that have both endpoints in ∂F and go between “two different
+parts of ∂F . More precisely, for x ∈ ∂F , define i  (x ) to be the least i for which x ∈ ∂Hi (equivalently,
+the least i for which x  Hi ). We say that an edge {x, y} is boundary-to-boundary if x, y ∈ ∂F but
+i  (x )  i  (y); we write ν BB for the fraction of such edges.
+Observation 7.14. If every ∂Hi is thin, then every edge with both endpoints in ∂F is boundaryto-boundary . In this case, ν BI + ν BE + ν BB is exactly the fraction of edges in the cube that touch ∂F ,
+which in turn is an upper bound on vol(∂F ).
+
+9:22
+
+Thus, Lemma 7.13 follows from Equations (14) and (15) and the following claim:
+√
+2 ln m
+.
+Claim 7.15 (Boundary-to-boundary Edges). ν BB ≤ √
+n
+Proof. We define the caps C 1 , . . . , Cm with respect to the Hi ’s as in Equation (12) in the proof of
+Theorem 7.9. Subtracting Equation (10) from Equation (9) for each Ci and summing over i ∈ [m],
+m
+
+m
+
+EC(H 1 ∩ · · · ∩ Hi−1 , Hi ) =
+
+2
+i=1
+
+ (H 1 ∩ · · · ∩ Hi−1 , Hi )
+E
+i=1
+
+
+
+
+
+m
+
+−
+
+E ((H 1 ∩ · · · ∩ Hi−1 ) ∩ Hi ) − E (H 1 ∩ · · · ∩ Hi−1 )
+i=1
+
+m
+
+ (H 1 ∩ · · · ∩ Hi−1 , Hi ) − E (H 1 ∩ · · · ∩ Hm )
+E
+
+=
+i=1
+m
+
+=
+
+ (H 1 ∩ · · · ∩ Hi−1 , Hi ) − E (F ◦ ).
+E
+
+i=1
+
+Since
+
+E (F ◦ )
+
+≥ 0, it follows that
+m
+
+EC(H 1 ∩ · · · ∩ Hi−1 , Hi ) ≤
+i=1
+
+1
+2
+
+m
+
+ (H 1 ∩ · · · ∩ Hi−1 , Hi ) ≤
+E
+i=1
+
+√
+2 ln m
+,
+√
+n
+
+(16)
+
+where the derivation of the second inequality is exactly as in the proof of Theorem 7.9. By Equation (16), it suffices to show
+m
+
+ν BB ≤
+
+EC(H 1 ∩ · · · ∩ Hi−1 , Hi ).
+
+(17)
+
+i=1
+
+Let {x, y} be a boundary-to-boundary edge and assume without loss of generality that i  (x ) <
+i  (y). We now show that edge {x, y} contributes to EC(H 1 ∩· · ·∩Hi  (y )−1 , Hi  (y ) ). For brevity, write
+G = H 1 ∩ · · · ∩ Hi ∗ (y )−1 , H = Hi ∗ (y ) , and C = G \ H = Ci  (y ) . Since x ∈ ∂Hi  (x ) = H i  (x ) \ Hi  (x ) (in
+particular, x  Hi  (x ) ) and i  (x ) < i  (y), we have that x  G. However, y ∈ G \H = C by definition
+
+of i  (y). Since x  G and y ∈ G \ H , we conclude that indeed {x, y} ∈ EC(G, H ), as claimed.
+This completes the proof of Lemma 7.13 and hence Theorem 2.2.
+7.3 A Robust Generalization of the Littlewood–Offord Theorem for Polytopes
+In the previous section, we proved Theorem 2.2, which establishes anticoncentration of Au under
+the assumption that all its entries have magnitude at least 1. The goal of this section is to prove
+the following robust generalization of Theorem 2.2:
+Theorem 7.16. Let A ∈ Rm×n have the property that in every row, at least an α fraction of the
+entries have magnitude at least λ. Then for any b ∈ Rm ,
+√
+5 2 ln m
+Pr[Au ∈ −2λ Ob ] ≤
+.
+√
+α n
+√
+5 2 log m
+√
+Recall that Theorem 2.2 followed as an easy consequence of the fact that vol(∂F ) ≤
+n
+when all ∂Hi ’s are “thin” (Lemma 7.13). We slightly generalize this notion here.
+Fooling Polytopes
+
+9:23
+
+Definition 7.17 (Semi-thin). For α ∈ [0, 1], say that ∂Hi is α-semi-thin if the following holds:
+For each x ∈ ∂Hi , at least an α fraction of its hypercube neighbors are outside ∂Hi . (Note that
+“1-semi-thin” is equivalent to “thin.”)
+Example 7.18. Suppose H = {x ∈ {−1, 1}n : a · x ≤ b1 } and H = {x ∈ {−1, 1}n : a · x ≤ b2 } where
+b1 ≤ b2 , so ∂H = {x ∈ {−1, 1}n : b1 < a · x ≤ b2 }. If |a j | ≥ (b2 − b1 )/2 for at least an α fraction of
+the coordinates j ∈ [n], then ∂H is α-semi-thin.
+Theorem 7.16 follows as a direct consequence of the following lemma (by the same reasoning
+that derives Theorem 2.2 as a corollary of Lemma 7.13):
+Lemma 7.19 (Robust Version of Lemma 7.13). In the setup of Section 7.2.1, suppose each ∂Hi is
+α-semi-thin. Then
+√
+5 2 ln m
+.
+vol(∂F ) ≤
+√
+α n
+Proof. Our proof of Lemma 7.13 (a combination of Equation (14), Equation (15), and Claim 7.15)
+shows that
+√
+5 2 ln m
+ν BI + ν BE + ν BB ≤
+.
+(18)
+√
+n
+However, in our current setting the left-hand side of the above is not a bound on vol(∂F ); Observation 7.14 no longer holds and we now may have edges (x, y) where i  (x ) = i  (y). Given an x ∈ ∂F
+and y a Hamming neighbor of x, we say that y is x-bad if y ∈ ∂F and i  (y) = i  (x ); otherwise, we
+say that y is x-good. With this terminology, we can rewrite Equation (18) as
+√
+5 2 ln m
+⊕j
+,
+(19)
+Pr u ∈ ∂F & u is u-good ≤
+√
+n
+where u ∼ {−1, 1}n and j ∼ [n] are uniformly random, and u ⊕j denotes u with its jth coordinate
+flipped. By the α-semi-thin property, for any x ∈ ∂F , the fraction of j’s such that x ⊕j is x-good is
+at least α. Therefore,
+Pr u ∈ ∂F & u ⊕j is u-good ≥ Pr[u ∈ ∂F ] · α,
+and the lemma follows by combining Equations (19) and (20).
+
+(20)
+
+
+7.4 Proof of Theorem 7.1
+In this section, we prove Theorem 7.1 using Lemma 7.19 established in the previous section. In
+more detail, we use a bound on the anticoncentration of Au under the assumption that at least an
+α fraction of entries of each row of A have magnitude at least τ (given by Lemma 7.19) to establish
+a bound on the anticoncentration of Au under the assumption that each of A’s rows has a τ -regular
+subvector of 2-norm 1 (Theorem 7.1).
+The following result regarding τ -regular linear forms is fairly standard:
+Proposition 7.20. Let w ∈ Rn be a τ -regular vector with w 2 = 1. Let π : [n] → [B] be
+a random hash function that independently assigns each coordinate in [n] to a uniformly random
+
+1
+.
+bucket in [B]. For b ∈ [B], write σb2 = j ∈π −1 (b ) w j2 , and say that bucket b is good if σb2 > 2B
+2
+Assume B ≤ 1/τ . Then
+
+
+B
+B
+buckets b ∈ [B] are good ≤ exp −
+Pr at most
+.
+16
+64
+9:24
+
+
+Proof. Let X b = 1[σb2 >
+
+1
+2B ]
+
+be the indicator that the bth bucket is good. Since E[σb2 ] =
+
+1
+B
+
+and
+
+2⎤
+⎡⎢ n
+⎥ 1 n
+1
+1
+τ2
+2
+⎢
+
+
+2
++ 2 ≤ 2,
+= E ⎢⎢ w j 1[π (j) = b] ⎥⎥⎥ =
+w j4 + 2
+w j2w j2 ≤
+B j=1
+B jj
+B
+B
+B
+⎢⎣ j=1
+ ⎥⎦
+the Paley–Zygmund inequality implies that E[X b ] = Pr[σb2 > 12 E[σb2 ]] ≥ 18 .
+The joint random variables σ12 , . . . , σ B2 are of “balls in bins” type (where the jth “ball” has “mass”
+2
+w j ) and are therefore negatively associated (see, e.g., Reference [11, Example 3.1]; the fact that the
+balls have different “masses” does not change the argument). Since 1 ( 1 ,∞) is a nondecreasing
+2B
+function, it follows that the random variables X 1 , . . . , X B are also negatively associated. Thus, we
+B
+may apply the Chernoff bound to k=1 X k , which has mean at least B8 . The result follows.
+
+
+E[σb4 ]
+
+Recall the following fact, which can also be easily proven using Paley–Zygmund (see, e.g., Proposition 3.7 of the full version of Reference [18]):
+Fact 7.21. For all w ∈ Rn and u ∼ {−1, 1}n , we have Pr[|w · u | ≥ 12 w 2 ] ≥
+
+1
+16 .
+
+We combine these as follows:
+Proposition 7.22. Let w ∈ Rn and assume that some subvector w of w is τ -regular with w 2 =
+1. Let π : [n] → [B] be as in Proposition 7.20, where B ≤ 1/τ 2 . Let u ∼ {−1, 1}n , and define w ∈ RB
+
+by w b = j ∈π −1 (b ) w j u j . Call a bucket b ∈ [B] big if |w b | > √1 . Then
+2 2B
+
+
+B 
+B
+buckets are big ≤ exp −
+Pr fewer than
+.
+512
+2048
+Proof. First apply Proposition 7.20 to w and observe that the presence of additional coordinates
+from w cannot harm “goodness.” Then apply Fact 7.21 to the good buckets. Each becomes “big”
+1
+, and the proof follows from another Chernoff bound. 
+independently with probability at least 16
+We take B = 1/τ 2  in the above. This yields the following:
+Corollary 7.23. Assume A ∈ Rm×n satisfies the following property: Each of its row vectors has
+a τ -regular subvector of 2-norm 1. Fix B = 1/τ 2  and let A ∈ Rm×B be the matrix obtained from A
+by randomly partitioning its columns into B buckets and adding them up with uniformly random ±1
+1
+signs within each bucket. Say that a row of A is spread if at least a 512
+-fraction of its entries exceed √τ .
+2 2
+
+Then except with probability at most m · exp(−Ω(1/τ 2 )), all of A’s rows are spread.
+7.4.1 Proof of Theorem 7.1. We can now prove Theorem 7.1, which we restate here for convenience:
+Theorem 7.24. Assume A ∈ Rm×n satisfies the following property: Each of its row vectors has a
+τ -regular subvector of 2-norm 1, where τ is as set in Section 4.1. Then for all b ∈ Rm and Λ ≥ τ , we
+have
+
+Pr n [Au ∈ ±Λ Ob ] = O Λ log m .
+u∼{−1,1}
+
+Proof. By union-bounding over 2Λ/τ  choices of b, it suffices to prove the following: WheneverA ∈ Rm×n has a τ -regular subvector of 2-norm 1 in each row, it holds that Pr[Au ∈ −τ Ob ] ≤
+O (τ log m). Note that the distribution of Au is the same as that of Au , where A is as in Corollary 7.23, and u ∼ {−1, 1} B is uniform. Thus, applying Corollary 7.23 and then Theorem 7.16 (with
+1
+and λ = τ2 ≥ √τ ), we conclude that
+α = 512
+2 2
+
+Pr[Au ∈ −τ Ob ] = O τ log m + m · exp −Ω(1/τ 2 ) .
+Fooling Polytopes
+
+9:25
+
+By our choice of τ as set in Section 4.1, we get the desired overall bound of O (τ log m) and the
+proof is complete.
+
+8
+
+FOOLING BENTKUS’S MOLLIFIER
+
+The main result of this section is the following theorem, which provides the second step of the
+two-step program described at the end of Section 6:
+Theorem 8.1 (G Fools Bentkus’s Mollifier). Let G be our generator with parameters as given
+in Section 4.1, and likewise let λ > 0 be as set in Section 4.1. For all (k, τ )-standardized matrices
+A ∈ Rm×n and all b ∈ Rm ,
+E
+
+u∼{−1,1}n
+
+b, λ (Au) −
+O
+
+E
+
+z ∼GMZ
+
+b, λ (Az)
+O
+
+= O (δ ).
+
+At a very high level, in line with the usual Lindeberg approach, Theorem 8.1 is proved by hybridizing between u and z via a sequence of intermediate distributions. In our setting there are
+L + 1 such distributions, the first of which is u and the last of which is z, and the th of which may
+be viewed as “filling in buckets , . . . , L according to u and filling in buckets 1, . . . ,  − 1 according
+to z,” where the L buckets correspond to the partition of [n] induced by the choice of the random
+hash function in the Meka–Zuckerman generator.
+In Section 8.1, we upper bound the error incurred by taking a single step through this sequence
+of hybrid distributions. The upper bound given there (see Lemma 8.3) has a first component corresponding to the terms of order 0, . . . , d −1 in a (d −1)-st order Taylor expansion, and a second component corresponding to the error term in Taylor’s theorem. The first component is upper bounded
+in Section 8.1, and the second component is upper bounded in Section 8.2. Section 8.3 formalizes
+the hybrid argument and uses the results of these earlier subsections to establish Theorem 8.1.
+Remark 8.2 (Head and Tail Matrices). Recalling the definition of a (k, τ )-standardized matrix A
+(Definition 3.1), for every i ∈ [m] there is a partition [n] = Headi  Taili such that |Headi | ≤ k
+and (Ai )Taili is τ -regular with 2-norm (Ai )Taili 2 equal to 1. Therefore, we may write A as H + T
+where
+Hi j = Ai j · 1[ j ∈ Headi ]
+
+and Ti j = Ai j · 1[ j ∈ Taili ]
+
+for all j ∈ [n] and i ∈ [m]. Note that every row of H is k-sparse, and every row of T is τ -regular
+with 2-norm 1.
+8.1
+
+Single Swap in the Hybrid Argument
+
+Lemma 8.3 (Error Incurred by a Single Swap). Fix B ⊆ [n]. Let H B ,T B ∈ Rm×B , where every
+row of H B is w-sparse and every row of T B has 2-norm at most 1. Let u, y be random variables over
+{−1, 1} B , where u is uniform and y δ CNF -fools the class of width-w CNFs. For all b ∈ Rm , λ > 0, and
+all integers d ≥ 2
+b, λ (H B y + T B y)
+b, λ (H B u + T B u) − E O
+E O
+
+ √  d −1
+d
+log m 
+n
+d −1
+d
+d
+
+= δ CNF · m
+· Od
++ Od
+E T B u ∞
++ E T B y ∞
+λ
+λ
+
+
+
+(21)
+.
+
+As we will see later, Equation (21) is a useful bound because we can (and will) take δ CNF to be
+very small, and when we apply Lemma 8.3, we will be able to ensure that both expectations on the
+right-hand side of Equation (21) are small as well.
+9:26
+The main ingredient in the proof of Lemma 8.3 is the following claim:
+Claim 8.4. For all integers c ≥ 1 and α ∈ Nm such that |α | = c,
+b, λ (H B u) · (T B u) α − E ∂α O
+b, λ (H B y) · (T B y) α
+E ∂α O
+
+ √ c
+n
+= δ CNF · O c
+.
+λ
+
+(22)
+
+Remark 8.5. Recalling the discussion of Step 1 in Section 2.2, we remark that Claim 8.4 provides
+the key ingredient of the arguments sketched there. This claim plays an essential role in enabling us
+to get a strong bound on the magnitude of the difference of two expectations (which was denoted
+“| E[ϒ(v + Δ)] − E[ϒ(v + Δ )]|” in Section 2.2 and corresponds precisely to the left-hand side
+of Lemma 8.3 above) through an application of Taylor’s theorem around two different points. As
+b by using
+will be seen in Section 8.1.1, the proof of Claim 8.4 exploits the product structure of O
+pseudorandom generators for small-width CNF formulas.
+Before proving Claim 8.4, we observe that Lemma 8.3 follows as a consequence:
+Proof of Lemma 8.3 Assuming Claim 8.4. By the multidimensional Taylor expansion (Fact 3.2)
+b, λ , we have
+applied twice to O
+(21) ≤
+
+1
+b, λ (H B u) · (T B u) α − 1 E ∂α O
+b, λ (H B y) · (T B y) α
+E ∂α O
+α!
+α!
+0≤ |α | ≤d −1
+
+
+
+
++ E err(H B u,T B u) + E err(H B y,T B y)
+b, λ (H B u) · (T B u) α − E ∂α O
+b, λ (H B y) · (T B y) α
+E ∂α O
+
+≤
+
+(23)
+
+0≤ |α | ≤d −1
+
+⎫
+⎧
+⎪
+d
+d
+b, λ (v)| ⎪
+⎬ · E T B u ∞
++ sup ⎨
+|∂
+O
++ E T B y ∞
+α
+⎪
+⎪
+v ∈Rm ⎩ |α |=d
+⎭
+
+.
+
+√
+By Claim 8.4, each of the O (md −1 ) summands of Equation (23) is at most δ CNF · O ( n/λ)d −1 . This
+b, λ ’s derivatives given by Theorem 6.5,
+along with the bound on O
+
+d
+⎫
+⎧
+log m 
+⎪
+⎪
+
+
+⎬
+=
+O
+sup ⎨
+O
+|∂
+(v)|
+α b, λ
+d
+⎪
+⎪
+v ∈Rm ⎩ |α |=d
+ λ 
+⎭
+yields Lemma 8.3.
+
+
+
+8.1.1 Proof of Claim 8.4.
+Definition 8.6. We say that a function ξ : {−1, 1} B → R is Boolean if its range is contained in
+
+{0, 1}. For ξ 1 , . . . , ξm : {−1, 1} B → R, we say that the associated product function Ξ = i ∈[m] ξ i is
+a Boolean product function in case all the ξ i ’s are Boolean.
+Definition 8.7. We say that ξ is a weight-W combination of Boolean functions if it is expressible
+
+
+as a linear combination ξ =  c  ξ  where each ξ  is a Boolean function and where  |c  | ≤ W .
+Likewise, Ξ is a weight-W combination of Boolean product functions if it is expressible as a linear
+
+
+combination Ξ =  c  Ξ where each Ξ is a Boolean product function and where  |c  | ≤ W .
+The following facts are easy to establish:
+Fact 8.8. (1) A function ξ : {−1, 1} B → [0, 1] is a weight-1 combination of Boolean functions.
+(2) A function ξ : {−1, 1} B → [−W ,W ] is a weight-(2W ) combination of Boolean functions.
+Fooling Polytopes
+
+9:27
+
+(3) A weight-W1 combination of weight-W2 combinations of Boolean functions is a weight-(W1W2 )
+combination of Boolean functions.
+(4) If ξ 1 and ξ 2 are weight-W1 and weight-W2 combinations of Boolean product functions, respectively, then ξ 1 · ξ 2 is a weight-(W1W2 ) combination of Boolean product functions.
+We are now ready to prove Claim 8.4.
+Proof of Claim 8.4. We define the function G α : {−1, 1} B → R,
+b, λ (H B x ) · (T B x ) α
+G α (x )  ∂α O
+
+
+=
+1bi , λ (HiB x )
+1b(αi ,iλ) (HiB x )  ·
+i ∈S
+ iS
+
+
+(TiB x ) α i ,
+
+(24)
+
+i ∈S
+
+where S denotes supp(α ) = {i ∈ [m] : α i > 0}. (Equation (24) crucially relies on the product
+b, λ : Rm → (0, 1); recall Equation (5).)
+structure of O
+√
+Note that Claim 8.4 is equivalent to the claim that y δ -fools G α for δ = δ CNF · O c ( n/λ) c . We
+analyze the three types of functions in Equation (24) in turn:
+◦ Recalling the assumptions of Lemma 8.3, by Item 1 of Fact 8.8, the function x → 
+1bi , λ (HiB x )
+B
+is a weight-1 combination of Boolean functions. Furthermore, since |supp(Hi )| ≤ w, it is in
+fact a weight-1 combination of Boolean w-juntas.
+1b(αi ,iλ) ∞ ) com◦ Similarly, by Item 2 of Fact 8.8, the function x → 
+1b(αi ,iλ) (HiB x ) is a weight-(2
+bination of Boolean
+√ w-juntas. √
+√
+◦ Since TiB 1 ≤ B · TiB 2 ≤ B ≤ n and x j ∈ {−1, 1} for all j ∈ B, by Items 2 and
+√
+3 of Fact 8.8 the function x → TiB x is a weight-(2 n) combination of Boolean functions.
+√
+Furthermore, it is a weight-(2 n) combination of Boolean 1-juntas.
+Combining the above with Item 4 of Fact 8.8, it follows that G α : {−1, 1} B → R is a weight-W
+combination of Boolean product functions Ξ : {−1, 1} B → {0, 1}, where
+√
+2 
+1b(αi ,iλ) ∞  ·  (2 n) α i 
+W =
+ i ∈S
+  i ∈S
+
+
+√
+1
+=  O α i α  ·  (2 n) α i 
+i
+λ   i ∈S
+ i ∈S
+
+ √ c
+n
+= Oc
+.
+λ
+
+( Fact 6.4)
+(|α | = α 1 + · · · + αm = c)
+
+Furthermore, every Ξ in this combination is the product of m Boolean w-juntas and |α | Boolean 1junta(s). Since each such Ξ is computable by a width-w CNF, and y δ CNF -fools the class of width-w
+CNFs, we conclude that y δ -fools G α where δ = δ CNF ·W . This completes the proof of Claim 8.4. 
+8.2
+
+Bounding the Error Terms
+
+We will use the following technical result:
+Claim 8.9 (Rosenthal’s Ineqality). Let β ∈ [0, 1] and let x 1 , . . . , x n be independent {0, ±1}valued random variables, each being 0 with probability 1 − β and ±1 with probability β/2 each. Let
+w ∈ Rn be a τ -regular vector of 2-norm 1. Then for any q ≥ 2,
+ q
+√
+E[|w · x |q ] = O qτ · (β/τ 2 ) 1/q + q β .
+9:28
+
+Of course, if q is an even integer, then the above continues to hold even if x 1 , . . . , x n are merely q-wise
+independent.
+Proof. This is an almost immediate consequence of a refinement of an inequality due to Rosenthal [53]. The exact version we use is due to Nagaev and Pinelis [41] (see also Reference [[51], (4)]);
+in our context, it states that
+E[|w · x | ] ≤ 2
+q
+
+O (q)
+
+
+· qq
+
+
+n
+
+E[|w j x j | ] + q
+q
+
+j=1
+
+≤ 2O (q) · qq β
+
+
+n
+j=1
+
+q/2
+
+n
+
+ E[(w j x j ) ]
+
+ j=1
+
+q/2 
+
+2
+
+
+
+
+
+|w j |q + (qβ ) q/2  .
+
+
+ 2
+
+q−2 = βτ q−2 , using x q + y q ≤ (x + y) q for positive x, y we get the
+Since β j |w j |q ≤ β
+j wj · τ
+claimed bound.
+
+The following lemma will be used to bound the expectations on the right-hand side of Equation (21):
+Lemma 8.10. Let L, r hash , r bucket , and τ be as set in Section 4.1. Let h : [n] → [L] be an r hash -wise
+uniform hash function, and fix a bucket  ∈ [L]. Let y ∼ {−1, 1}n be an r bucket -wise uniform random
+variable. Let T ∈ Rm×n be a τ -regular matrix in which each row has 2-norm 1. Then for all integers
+d ≥ 2,
+
+d
+
+
+−1
+d
+E T h ()yh −1 () ∞
+= Od τ log m + (log m)/L .
+h,y
+
+Proof. Let q be the largest even integer smaller than both r hash and r bucket ; note that q =
+Θ(log(m/δ )). For notational brevity, we let X denote the Rm -valued random variable X 
+
+−1
+T h ()yh −1 () . Since r bucket , r hash ≥ q, we can express X as nj=1 x j T j where x 1 , . . . , x n ∼ {−1, 0, 1}
+are q-wise independent random variables distributed as in Claim 8.9, with β = 1/L.
+Since q > d for sufficiently large m, we have that
+E
+
+d
+X ∞
+
+≤E
+
+X qd
+
+≤E
+
+q d /q
+X q
+
+m
+
+d /q
+
+q
+=  E[X i ]
+ i=1
+
+
+.
+
+q
+
+Applying Claim 8.9 to bound each E[X i ], we conclude that
+
+q
+d
+E X ∞
+= m · O qτ · (1/Lτ 2 ) 1/q + q/L
+
+d
+= md /q · O qτ + q/L
+
+d
+log(m/δ ) 
+
+= Od τ log(m/δ ) +
+,
+L
+
+
+
+d /q
+
+where the second inequality uses the fact that ( Lτ1 2 ) 1/q = ( logδ m ) O (1/q) = O (1). This completes the
+proof of Lemma 8.10.
+
+Fooling Polytopes
+8.3
+
+9:29
+
+Proof of Theorem 8.1: The Hybrid Argument
+
+In this subsection, we put together the two main results of the two previous subsections (Lemma 8.3
+and Lemma 8.10) to prove Theorem 8.1.
+Recalling Remark 8.2, we can write A as H +T , where every row of H is k-sparse and every row
+of T is τ -regular with 2-norm 1. Let us say that a hash h : [n] → [L] is H -good if
+2k
+(25)
+L
+for all buckets  ∈ [L] and rows i ∈ [m]. Equivalently, for all  ∈ [L], every row of the the submatrix
+−1
+H h () is w-sparse.
+|h −1 () ∩ supp(Hi )| ≤ w 
+
+Proposition 8.11 (Even Distribution of Head Variables). There is a universal constant C 1 >
+0 such that the following holds: If h : [n] → [L] is r hash -wise uniform where r hash ≥ C 1 log(Lm/δ ),
+then
+
+
+Pr h is not H -good ≤ δ .
+Proof. Fix any  ∈ [L] and i ∈ [m]. The quantity |h −1 () ∩ supp(Hi )| is a sum of |supp(Hi )| ≤
+k many r hash -wise independent {0, 1}-valued random variables, each of which takes the value 1
+with probability 1/L. To bound the probability that |h −1 () ∩ supp(Hi )| is larger than w, we apply
+the well-known tail bounds for sums of limited-independence random variables due to Schmidt,
+Siegel, and Srinivasan [54], specifically their Theorem 5(I)(a). Taking the “δ ” of their paper to be
+1 and observing that their “μ” is our k/L and their “k” is our r hash = Θ(log(Lm/δ )), we get that
+Pr[|h −1 () ∩ supp(Hi )| > w] ≤ δ/(Lm). The proposition follows by a union bound over all  ∈ [L]
+and i ∈ [m].
+
+We are now ready to prove Theorem 8.1, which we restate here for convenience:
+Theorem 8.12. Let G be our generator with parameters as given in Section 4.1, and likewise let
+λ > 0 be as set in Section 4.1. For all (k, τ )-standardized matrices A ∈ Rm×n and all b ∈ Rm ,
+E
+
+u∼{−1,1}n
+
+b, λ (Au) −
+O
+
+E
+
+z ∼GMZ
+
+b, λ (Az)
+O
+
+= O (δ ).
+
+Proof. Let h, y 1 , . . . , y L , ỹ 1 , . . . , ỹ L , y̆, and y  be the random hash function and random variables associated with our generator G , as defined in Definition 4.2. Recall that a draw from z ∼ G
+is z  y̆ ⊕ y  . We will show that in fact y̆ alone satisfies:
+E
+
+u∼{−1,1}n
+
+b, λ (Ay̆)
+b, λ (Au) − E O
+O
+
+= O (δ ).
+
+(26)
+
+Since y  and y̆ are independent, Theorem 8.1 follows as a consequence of Equation (26).
+We recall the definition of y̆:
+y̆h −1 () = (y  ⊕ ỹ  )h −1 ()
+
+for all  ∈ [L].
+
+We observe first that for each  ∈ [L], the random variable y  ⊕ ỹ  ∼ {−1, 1}n
+(i) is r bucket -wise uniform (since y  is); and
+(ii) δ CNF -fools the class of width-w CNF formulas (since ỹ  does).
+We will use both properties in this proof. For each hash h : [n] → [L] and index  ∈ {0, 1, . . . , L},
+we define the hybrid random variable x h,  ∼ {−1, 1}n ,
+⎧
+⎪uh −1 (c )
+x hh,−1 (c ) = ⎨
+⎪ (y  ⊕ ỹ  ) −1
+h (c )
+⎩
+
+if c > 
+if c ≤ .
+
+9:30
+
+Averaging over h, we get that x h,0 ≡ u and x h, L ≡ y̆, and so we may write
+b, λ (Au) − E O
+b, λ (Ay̆)
+LHS of Equation (26) = E O
+= E
+
+≤E
+h
+
+≤E
+h
+
+b, λ (Ax h,0 ) − E O
+b, λ (Ax h, L )
+O
+b, λ (Ax h,0 ) − E O
+b, λ (Ax h, L )
+E O
+
+
+
+b, λ (Ax h,0 ) − E O
+b, λ (Ax h, L ) · 1 h is H -good
+E O
+
+
+
++ Pr h is not H -good
+
+
+b, λ (Ax h,0 ) − E O
+b, λ (Ax h, L ) · 1 h is H -good +δ .
+≤E E O
+h
+
+
+
+♥
+
+b, λ is (0, 1)-valued (and hence the difference in its exThe penultimate inequality uses the fact that O
+pectations under any two distributions is at most 1), and the final inequality is by Proposition 8.11
+(note that we indeed have r hash ≥ C 1 log(Lm/δ )).
+It remains to bound ♥ by O (δ ). Fix a H -good hash h. By the triangle inequality,
+b, λ (Ax h,0 ) − E O
+b, λ (Ax h, L )
+E O
+
+L
+
+≤
+
+b, λ (Ax h, −1 ) − E O
+b, λ (Ax h,  ) .
+E O
+
+(27)
+
+=1
+
+Fix  ∈ [L] and consider the corresponding summand
+b, λ (Ax h, −1 ) − E O
+b, λ (Ax h,  ) .
+E O
+
+(28)
+
+For notational clarity, let us write B for h −1 () and B to denote [n] \ B. Furthermore, since these
+“adjacent” hybrid random variables x h, −1 and x h,  agree on all coordinates outside B, we introduce
+≡ x hh,−1 (c ) for all c  . Note that s, u B , and
+the random variable s ∼ {−1, 1} B where sh −1 (c ) ≡ x hh,−1−1
+(c )
+(y  ⊕ ỹ  )B are mutually independent. We have that
+
+
+b, λ (AB s + AB u B ) − E O
+b, λ (AB s + AB (y  ⊕ ỹ  )B )
+(28) = E E O
+s u
+y  , ỹ 
+
+
+b, λ (AB s + AB u B ) − E O
+b, λ (AB s + AB (y  ⊕ ỹ  )B )
+≤E E O
+s
+u
+y  , ỹ 
+
+
+ B (AB u B ) − E O
+ B (AB (y  ⊕ ỹ  )B )
+=E E O
+(Fact 6.3)
+b−A
+s,
+λ
+b−A
+s,
+λ
+s
+u
+y  , ỹ 
+
+
+ B (H B u B + T B u B ) − E O
+ B (H B (y  ⊕ ỹ  )B + T B (y  ⊕ ỹ  )B ) .
+=E E O
+b−A s, λ
+b−A s, λ
+s
+
+y  , ỹ 
+
+u
+
+Since h is H -good, every row of H B is indeed w-sparse, and since every row of T has 2-norm 1,
+every row of T B has 2-norm at most 1. Recalling (ii) from above, we may apply Lemma 8.3 to each
+outcome s of s, and we get that this quantity is at most
+δ CNF · m
+
+d −1
+
+
+ √  d −1
+
+d
+log m 
+n
+B
+d
+B 
+
+d
+
+·O
++O
+E T u B ∞ + E T (y ⊕ ỹ )B ∞ ,
+u
+λ
+y  , ỹ 
+ λ 
+
+Fooling Polytopes
+
+9:31
+
+and therefore
+
+ √  d −1
+n
+λ
+
+d
+L
+
+
+log m 
+−1
+d
++ O
+·
+E T h ()uh −1 () ∞
+u
+ λ  =1
+
+
+−1
+d
++ E T h () (y  ⊕ ỹ  )h −1 () ∞
+.
+
+RHS of Equation (27) ≤ L · δ CNF · md −1 · O
+
+y  , ỹ 
+
+(29)
+
+Since Equation (29) holds for every H -good hash h, we have shown that
+♥ ≤ E (RHS of Equation (27)) · 1[ h is H -good ]
+h
+
+≤ E (RHS of Equation (29)) · 1[ h is H -good ]
+h
+
+≤ E (RHS of Equation (29))
+h
+
+ √  d −1
+n
+λ
+
+d
+L 
+
+
+
+
+log m 
+h −1 ()
+d
+h −1 () 
+
+d
+
++O
+·
+uh −1 () ∞ + E
+(y ⊕ ỹ )h −1 () ∞ .
+T
+E T
+h,y  , ỹ 
+ λ  =1 h,u
+
+
+
+
+= L · δ CNF · md −1 · O
+
+♦
+
+Applying Lemma 8.10 to bound each of the 2L many summands of ♦, we have that
+
+
+d
+ √  d −1
+d
+log m 
+log(m/δ ) 
+n
+d −1
+
+
+·O
++O
+· 2L · O τ log(m/δ ) +
+♥ ≤ L · δ CNF · m
+λ
+L
+ λ 
+
+
+
+
+ √  d −1
+d
+τ log(m) log(m/δ )
+log(m) log(m/δ ) 
+n
+d −1
+
++
+= L · δ CNF · m
+·O
++L ·O
+.
+(30)
+√
+λ
+λ
+λ L
+
+
+By our choice of parameters as set in Section 4.1,
+
+d
+1.5+ε
+(log m) 5
+ε log(m)(log(m/δ ))
+ε /2 log(m) log(m/δ )
+(30) = O (δ ) +
+·O δ ·
++δ ·
+.
+δ 2+ε
+(log m) 2.5+ε
+(log m) 2.5
+Taking d to be sufficiently large relative to ε, the above expression can be bounded by O (δ ). This
+establishes Equation (26), and the proof of Theorem 8.1 is complete.
+
+9 PROOF OF THEOREM 5.3
+Having completed both steps of the two-step program described at the end of Section 6, we are
+finally ready to prove Theorem 5.3, which we restate here for convenience:
+Theorem 9.1. Let G be our generator with parameters as set in Section 4.1. For all m-facet (k, τ )standardized polytopes Ax ≤ b,
+Pr
+
+u∼{−1,1}n
+
+Au ∈ Ob − Pr Az ∈ Ob
+z ∼G
+
+= O (δ ).
+
+Proof. Let λ ∈ (0, 1) be as set in Section 4.1. By Lemma 6.7, there are b in , b out ∈ Rm
+ in , O
+ out are (Λ, δ )-inner and -outer approximators for Ob , respectively, where
+such that O
+ b ,λ b ,λ
+Λ = Θ(λ log(m/δ )). Next, we apply Lemma 6.9 with v and ṽ being Au and Az, respectively,
+
+9:32
+
+
+b out, λ with γ = O (δ ).
+b in, λ and O
+using Theorem 8.1 to show that Equation (7) is satisfied for both O
+We conclude that:
+Pr
+
+u∼{−1,1}n
+
+[Au ∈ Ob ] − Pr [Az ∈ Ob ]
+z ∼G
+
+= O (δ ) + Pr[Au ∈ ±Λ Ob ]
+
+= O (δ ) + O Λ log m)
+
+
+= O (δ ) + O λ log(m/δ ) log m
+
+(Lemma 6.9 and Theorem 8.1)
+(Theorem 7.1; note that Λ ≥ τ is indeed satisfied)
+
+= O (δ ).
+
+(31)
+
+This completes the proof of Theorem 5.3.
+
+
+
+APPENDICES
+A
+In this section, we prove Theorem 5.1. The proof uses the “critical index” theory for Boolean halfspaces, introduced in Reference [55] and used in several subsequent works on halfspaces.
+Definition A.1 (Critical Index). Let w ∈ Rn and assume for notational simplicity that |w 1 | ≥
+|w 2 | ≥ · · · ≥ |w n |. The τ -critical index of w is the least j such that the “tail” (w j , w j+1 , . . . , w n ) is
+τ -regular, or ∞ if no such j exists.
+Given A as in Theorem 5.1, the rows that are already (k, τ )-regular pose no difficulty as a simple
+rescaling of any such row (and the corresponding entry of b) makes it (k, τ )-standardized. The
+remaining rows Ai have τ -critical index exceeding k. The critical index theory [49, 55] says that
+such halfspaces 1[Ai x ≤ bi ] are very close to k-juntas, and in fact Reference [9] shows that this is
+true even under (k + 2)-wise uniform distributions (for a slightly larger choice of k as alluded to in
+Remark 5.2). We tweak the quantitative aspects of these arguments below to work for the choice
+of k given in Equation (3). It will be convenient to follow the treatment in Reference [18].
+The first lemma below says that if the “head” variables are set uniformly, then the resulting
+random variable has good anticoncentration at the scale of the two-norm of the tail:
+Lemma A.2. Let τ ∈ (0, 1), ε ∈ (0, 1/2), s > 1. Then for a certain  = O (log(s) log(1/ε)/τ 2 ) the
+following holds: If w ∈ Rn as in Definition A.1 has τ -critical index at least , then for all θ ∈ R,
+Pr
+
+u∼{−1,1} 
+uniform
+
+where σ 
+
+[|w 1u 1 + · · · + w u  − θ | ≤ s · σ ] ≤ ε + O (log(1/ε) exp(−s 2 /2)),
+
+
+2 + · · · + w2 .
+w +1
+n
+
+Proof. We refer directly to the proof of the almost identical Reference [18, Theorem
+√ 5.3] in the
+full version of that paper. In that proof we may take “δ ” to be τ 2 , and “η” to be 1/ 3, since we
+work with uniform ±1 bits (see Fact 3.3.5 therein). The only change needed in the proof occurs
+before “inequality (10).” That inequality uses the fact that a certain random variable z satisfies the
+tail bound Pr[|z| ≥ sρ] ≤ O (1/s 4 ) when ρ is at most the standard deviation of z. But in our current
+setting, the random variable z equals w 1u 1 + · · · + w u  , i.e., it is a weighted sum of independent
+uniform ±1 bits, and so we have the improved tail bound 2 exp(−s 2 /2) using Hoeffding. Carrying
+through the remainder of the proof with this change yields the conclusion of Lemma A.2.
+
+Lemma A.3. Let τ ∈ (0, 1) and let ε ∈ (0, 1/2). Then for a certain k = O (log(1/ε) log log(1/ε)/τ 2 )
+and r = O (log(1/ε)), the following holds for every w ∈ Rn that is not (k, τ )-regular:
+
+Fooling Polytopes
+
+9:33
+
+Let H ⊆ [n] be the set of k coordinates i for which |w i | is largest and let T = [n] \ H . Assume
+w ∈ Rn has w H = w H and wT 2 ≤ wT 2 . Then for any θ ∈ R,
+
+
+Pr 1[w · y ≤ θ ]  1[w · y ≤ θ ] = O (ε)
+y
+
+provided y ∼
+
+{−1, 1}n
+
+is (k + r )-wise uniform.
+
+Proof. Suppose w is not (k, τ )-regular. By reordering coordinates we may assume that H = [k];
+then the non-(k, τ )-regularityof w means the τ -critical index of w exceeds k. We may therefore
+apply Lemma A.2 with s = O ( log(1/ε)). Using the fact that yH is fully uniform, we get
+
+
+(32)
+Pr |w H · yH − θ | ≤ s · wT 2 = O (ε)
+(and note that w H · yH = w H · yH ).
+Conditioned on any outcome of yH , the distribution of yT remains r -wise uniform. We claim that
+it remains to show the following:
+Pr[|wT · yT | ≥ s · wT 2 ] = O (ε).
+
+(33)
+
+To see that this suffices, observe that by Equation (32) we have that |w H ·yH −θ | = |w H ·yH −θ | >
+s · wT 2 except with probability O (ε). Also, by applying Equation (33) with w and with w = w,
+we get both |wT · yT |, |wT · yT | ≤ s · wT 2 except with another probability at most O (ε). When
+all of these events occur, 1[w · y ≤ θ ] and 1[w · y ≤ θ ] agree.
+Finally, we can establish Equation (33) by
+√ appealing to, e.g., Reference [47, Theorem 9.23]. That
+theorem (with k = 1) shows that for t ≥ 2e, any linear form f (x ) in uniform ±1 random variables x has Pr[| f (x )| ≥ t  f 2 ] ≤ exp(−O (t 2 )). If we could directly apply this to the linear form
+wT · yT , then we would be done by taking t = s and using wT 2 ≤ wT 2 . We cannot directly apply this theorem, because the bits yT are not uniformly random. However, inspecting the proof of
+Reference [47, Theorem 9.23] shows that it suffices for those bits to be O (t 2 )-wise uniform, which
+they are provided that r = O (log(1/ε)) = O (s 2 ) = O (t 2 ). The reason that this suffices is because the
+√
+proof only uses (2, q, 1/ q − 1)-hypercontractivity of f (x ) for q = O (t 2 ), and (for even integer q)
+this condition only involves the first q moments of f (x ), which do not change if x is assumed to
+be merely q-wise uniform rather than truly uniform.
+
+We can now prove Theorem 5.1:
+Proof. We will use Lemma A.3 with ε = cδ/m for small constant c > 0. This leads to the choice
+of k in the statement of Theorem 5.1; also, r  k and so 2k ≥ r + k.
+Given A ∈ Rm×n , as noted earlier the rows that are (k, τ )-regular are not a problem, so we
+consider all rows Ai that are not (k, τ )-regular. For these rows, we apply Lemma A.3, taking Ai
+to agree with Ai on the appropriate “head” coordinates Hi , and taking Ai to simply be 0 on the
+remaining “tail” coordinates. Note that Ai is now trivially (k, τ )-regular. By Lemma A.3, we have
+that
+
+
+Pr 1[Ai · y ≤ bi ]  1[Ai · y ≤ bi ] ≤ δ/m.
+y
+
+Taking bi = bi for these i’s, and union-bounding over the at most m of them, we are almost at
+the point of establishing Equation (4) from the theorem statement. We now have that all Ai are
+(k, τ )-regular; the only deficiency is that the “tail” of each row need not have 2-norm 1, as required.
+Whenever the “tail” of Ai has nonzero 2-norm, we can simply scale Ai and b by the same
+positive factor to make the tail of Ai have 2-norm 1; this scaling does not change the Boolean
+function 1[Ai · x ≤ bi ] at all. The only (very minor) difficulty now remaining is that some of the
+rows Ai may have tail with 2-norm zero. It is well known, however, that one can always slightly
+
+9:34
+perturb the coefficients and threshold in a halfspace without changing it as a Boolean function.3
+We can perturb in such a way that the tail coefficients all become equal to some sufficiently small
+η > 0. After this perturbation, the row Ai is (k, τ )-regular (this holds, recalling that k ≤ n/2, since
+n − k ≥ k ≥ 1/τ 2 ) and its tail has positive 2-norm. Now we can scale up (Ai , bi ) as before to make
+the tail have 2-norm 1.
+
+B
+We recall Claim 7.11:
+Claim B.1 (Claim 7.11 Restated). For 2 ≤ m ≤ 2n , there is a matrix A ∈ {−1, 1}m×n and a vector
+b ∈ Zm such that
+√
+ln m
+
+Pr[Au ∈ Ob ] = Ω √ .
+ n 
+Proof. The proof is a simple probabilistic existence argument that follows the approach used
+to prove Theorem 2 in Reference [26]. For a polytope K = 1[Ax ≤ b] we define
+Inside(K ) = {x ∈ {−1, 1}n : Ax ∈ Ob \ Ob ,
+Surface(K ) = {x ∈ {−1, 1} : Ax ∈ Ob ,
+n
+
+i.e., Ai x < bi for all i ∈ [m]},
+i.e., Ax ≤ b and Ai x = bi for some i ∈ [m]}.
+
+< 10, then the one-facet polytope 1[x 1 + · · · +x n ≤ 0] does the job (more
+Given 2 ≤ m ≤
+formally, we take A to be the m × n all-1’s matrix and b to be the zero vector in Rm ). It is also clear
+that proving our result for m ≤ 2n/10 also proves it for 2n/10 ≤ m ≤ 2n . So, we henceforth assume
+that 10 ≤ m ≤ 2n/10 . Let k ≥ n/2 be an integer to be chosen later, and let F : {−1, 1}n → {0, 1}
+denote the halfspace F (x ) = 1[x 1 + · · · + x n ≤ k]. Now define the following quantities:
+ 
+ 
+n
+n n
+pI  |Inside(F )|/2n =
+/2n ,
+pS  |Surface(F )|/2n =
+/2 .
+<k
+k
+2n , if m
+
+Let σ = (σ 1 , . . . , σ m ) where each σ i is an independent uniform string in {−1, 1}n . Let A ∈
+{−1, 1}m×n be the matrix whose ith row is σ i , and let b be the vector (k, . . . , k ) ∈ Zm . It is easy to
+see that to prove our result it suffices to show that there is a fixed outcome A of A such that
+
+log m
+
+Pr[Au ∈ Ob ] = Ω √ ,
+(34)
+n 
+
+and this is what we show below. Towards this end, for each i ∈ [m], let us define the matrix A\i ∈
+{−1, 1} (m−1)×n obtained by removing the ith row of A, and further define b = (k, . . . , k ) ∈ Zm−1 .
+For each fixed z ∈ {−1, 1}n and each i ∈ [m] we have
+Pr z ∈ Inside(1[A\i x ≤ b ]) = pm−1
+I
+σ
+
+and
+Pr z ∈ Surface(1[σ i · x ≤ k]) = pS .
+σ
+
+Since σ i and (σ i )i
+
+∈[m]\{i }
+
+are independent for each i ∈ [m], it follows that
+
+Pr z ∈ Inside(1[A\i x ≤ b ]) & z ∈ Surface(1[σ i · x ≤ k]) = pS · pm−1
+,
+I
+σ
+
+a halfspace 1[w · x ≤ θ ], there is a smallest value θ > θ achievable as w · x for x ∈ {−1, 1}n ; first perturb θ
+upward to (θ + θ )/2. Now no input x achieves w · x = θ exactly, so we can perturb the coefficients of w by sufficiently
+small amounts.
+3 Given
+Fooling Polytopes
+
+9:35
+
+and since the events
+z ∈ Inside(1[A\i x ≤ b ]) & z ∈ Surface(1[σ i · x ≤ k])
+and
+
+z ∈ Inside(1[A\i x ≤ b ]) & z ∈ Surface(1[σ i · x ≤ k])
+
+are mutually exclusive for i  i ∈ [m], by a union bound we have that
+Pr z ∈ Surface(1[Ax ≤ b ]) = Pr[Az ∈ Ob ] = m · pS · pm−1
+.
+I
+σ
+
+σ
+
+It follows that there is an outcome of σ such that the resulting matrix A ∈ Rm×n has at least an
+fraction of all points in {−1, 1}n satisfying Az ∈ Ob ; i.e.,
+m · pS · pm−1
+I
+Pr[Au ∈ Ob ] ≥ m · pS · pm−1
+.
+I
+
+(35)
+
+It remains only to argue that for any 10 ≤ m ≤ 2n/10 , there is a value k such that, for pI =
+and pS =
+
+n
+k
+
+, we have
+=Ω
+m · pS · pm−1
+I
+
+n
+<k
+
+
+√
+log m/ n .
+
+Towards this end we choose k to be the largest integer such that
+n
+k
+
+n
+<k
+
+/2n ≤ 1 −
+
+1
+m.
+
+Recalling that
+
+n
+k−1
+
+10 ≤ m ≤
+we have that n/2 ≤ k ≤ 0.99n, and hence
+and
+are within an absolute
+constant multiplicative factor of each other. It follows that
+ 
+n
+/2n = 1 − Θ(1/m),
+pI =
+<k
+which implies that
+pm−1
+= Ω(1).
+I
+√
+2
+Writing k = n/2+ ( n/2)t, we have the elementary binomial
+√ tail lower bound 1−pI ≥ exp(−O (t ))
+(see, e.g., Reference [36, inequality (4.2)])); hence t ≥ Ω( ln m). The desired bound
+ 
+√
+n n
+/2 = Ω(t/(m n))
+pS =
+k
+√
+now follows from asymptotically tight estimates (up to universal constants for all 0 ≤ t ≤ n) for
+the Mills ratio of the binomial distribution; see Reference [38].
+
+2n/10 ,
+
+

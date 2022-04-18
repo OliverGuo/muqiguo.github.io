@@ -1,0 +1,523 @@
+New organic-air flow fuel cell and electrolyser for stationary energy storage
+
+ABSTRACT
+In this work, we propose an innovative hybrid flow battery using anthraquinone disulfonic acid (AQDS) based
+negolyte in an AQDS-oxygen fuel cell and AQDS-oxygen electrolyser as a discharging and charging devices,
+respectively. The performance of the system is studied under defined conditions (SoC, temperature) using a
+complex methodology including EIS, dynamic load curves, steady-state galvanostatic loads and galvanostatic
+charge-discharge cycles. The internal components of both devices are optimised with respect to performance and
+its stability. When compared to a standard vanadium-based negolyte, the AQDS-based fuel cell shows lower
+ohmic resistance and lower capacity fade due very slow AQDS permeation through the cation-exchange membrane. On the other hand, its open circuit voltage is approx. 0.48 V lower and the fuel cell shows higher overall
+resistance due to deteriorating performance of oxygen gas diffusion electrode, which is most probably related to
+the adsorption of the permeated AQDS on the platinum electro-catalyst. The method of performance restoration
+by applying opposite polarization to the fuel cell is successfully tested and optimised enabling stable battery
+operation. 
+
+1. Introduction
+Energy storage technologies can solve the problems associated with
+electricity generation - consumption imbalance, both in time and
+geographically. The vanadium redox flow battery (VRFB) is one of the
+most matured large-scale stationary energy storage technologies thanks
+to its decoupled power and capacity, long lifetime and high efficiency.
+However, the capital costs of VRFB are still too high for the market
+without subsidies. The high price is mainly caused by the expensive
+inner components of the battery stack and by the price of vanadium
+electrolyte. This issue might be solved by replacing of vanadium with
+alternative electroactive species. The actual attention of research and
+development in RFB has recently moved to organic-based redox couples.
+There are several perspective candidates for RFB electrolytes such as
+derivatives of quinones [1–6], viologens [7–10], ferrocenes [11–13],
+metal complexes [14–16], nitroxyl radicals [17] or alloxazine [18]. Most
+of these redox compounds (such as anthraquinones and viologens) have
+a sufficiently negative redox potential and reasonable stability to be
+used in negolytes, however, the number of suitable and stable posilyte
+chemistries is limited [19]. Besides the limited molecular stability of the
+electroactive compounds, the mutual contamination of the battery
+electrolyte by permeation of the electroactive compounds contributes to
+the capacity decay. Although the permeation of organic compounds
+across the membrane [20] is typically much slower than the permeation
+of vanadium ions [21], as organic compounds are typically much larger,
+the capacity fade caused by the permeation is irreversible as the possibility of electrolyte remixing is typically excluded.
+Both problems can be partially solved by hybridization of the
+negative organic redox flow battery half-cell with the positive half-cell
+based on an air electrode, where oxygen evolution reaction (OER) and
+oxygen reduction reaction (ORR) proceed during charging and discharging, respectively. In this organic-air battery, only oxygen and
+water are the active compounds of positive half-cells which may
+significantly reduce the cost of the capacity and increases the energy
+density. Moreover, the negolyte active compound permeating into the
+posilyte through the ion-exchange membrane can be easily separated
+and recovered.
+In the concept of an organic-air hybrid flow battery, the charging and
+discharging reactions might proceed in a single device (a secondary flow
+battery) or in two separate devices where a fuel cell is used for discharging and a flow electrolyser is used for charging of the electrolyte.
+So far, hybridization of the flow battery negative half-cell with an air
+electrode has been reported mainly for a vanadium-based electrolyte,
+either as a secondary battery [22–25] or as a fuel cell [26–30]. So far, the
+main attention has been focused on the development of the fuel cell,
+while charging process (reduction of V3+ ions to V2+) was realised in the
+standard VRFB where waste VO2
++ is produced as well. Currently, there
+are only two articles [31,32], in which the development of an electrolyser for rebalancing of the vanadium electrolyte is discussed, although
+some relevant literature on the construction of the electrolysis cell might
+be found in the field of electrochemical organic synthesis [33–36].
+Replacement of expensive vanadium with some cheaper inorganic or
+organic-based electrolytes can further reduce the investment costs of the
+storage. Li et al. [37] recently proposed a super cheap Air-breathing
+aqueous sulfur flow battery, showing 12 h of stable operation, however, the maximal power density achieved was only 3.5 mW cm− 2 due to
+the huge resistance of the cell. Leung et al. [38] developed a rechargeable organic-air redox flow battery using alkaline quinoxaline-based
+negolyte. However, resistance of the system was also relatively high
+and a problem with stability of the carbon felt electrode with the quinoxaine electrolyte was observed.
+Among various organic redox-active compounds, quinone derivatives represent one of the most studied groups tested for application
+in RFB negolyte. For the acidic environment the use of 9,10-anthraquinone-2,7-disulfonic acid has been suggested by Huskinson et al. [1]
+showing fast electron transfer kinetics, suitable redox potential and
+solubility in acidic media. The combination of AQDS-based negolyte
+with HBr/Br2 posilyte provided aqueous RFB with relatively high power
+and energy densities [40–43]. However, the capacity fade related to the
+cross-over of bromine to negolyte and negative toxicological aspects
+related to the bromine evaporation prevent the broader commercialization of the technology. Despite several studies reporting insufficient
+chemical stability of AQDS (particularly in its reduced form) [44–47],
+the AQDS-based acidic and neutral negolytes have been further tested in
+combination with several alternative posilytes such as FeSO4 [48],
+ferrocyanide [49,50], benzoquinone derivatives [51] and bromide [52].
+In this paper, we propose an innovative hybrid AQDS-oxygen flow
+battery, where reduction of the acidic AQDS-based negolyte is combined
+with the OER in the organic-oxygen electrolyser (charging device),
+while AQDS oxidation is combined with ORR on the gas diffusion
+electrode of the organic-oxygen fuel cell (discharging device). Our
+concept is partially similar to an AQDS-based photo-rechargeable fuel
+cell, recently proposed by Ishii et al. [39], which, however, focused
+mainly on the preliminary investigation of photo-induced reduction/protonation of AQDS. In contrast, in our study, the performance of
+the fuel cell/electrolyser system is systematically studied under defined
+conditions (SoC, temperature, current load) using a complex methodology including EIS, galvanostatic loads and charge-discharge cycling.
+
+2. Experimental part
+2.1. Chemicals
+The following chemicals were used: AQDS-based acidic electrolyte
+prepared by sulfonation of anthraquinone (described in Ref. [47])
+containing 0.8 mol dm− 3 of AQDS (consisting mainly of 2,6-AQDS and 2,
+7-AQDS isomers, the composition of the electrolyte before and after
+battery testing is shown in Table S1) in 1 mol dm− 3 sulfuric acid) and
+sulfuric acid based counter electrolyte of the electrolyser containing 2.8
+mol dm− 3 sulfuric acid. The composition of counter electrolyte was
+optimised to minimize the osmotic water fluxes between both tanks.
+
+2.2. Experimental setup
+The apparatus for testing of the fuel cell and the electrolyser is shown
+in Fig. 1. It contains a fuel cell used for the discharging and a flow
+electrolyser used for the charging. The electrolyser has two electrolyte
+circuits: a negative one with AQDS negolyte, which is circulating
+through the negative half-cell, and a positive one with aqueous sulfuric
+acid solution, which is circulating through the positive half-cell. The fuel
+cell shares the negolyte with the electrolyser. Air for the positive halfcell of the fuel cell was supplied from an air pressure bottle (mixture
+of nitrogen and oxygen produced by the SIAD company with an output
+pressure of 2 bars). The flow rate of the air was controlled by a mass flow
+meter. This experimental set-up enables long-term operation of the fuel
+cell under constant and defined conditions as the negolyte can be
+simultaneously charged in the electrolyser and discharged in the fuel
+cell, without altering the negolyte composition. The entire apparatus
+was placed in a temperature insulated box tempered at a given temperature of 40 ◦C. The working electrolyte was kept under a nitrogen
+atmosphere to suppress the undesired oxidation of the reduced form of
+anthraquinone (anthrahydroquinone) by oxygen.
+
+2.3. Construction of the cells
+The cells provided by Pinflow energy storage, s.r.o.are composed of
+aluminium end plates, copper collectors, elastomeric PP-based flat
+gaskets, PVC distribution frames, ion-exchange membrane (F1050 in the
+fuel cell and F1850 in the electrolyser, both provided by Fumatech) and
+carbon-polymer composite plates PPG 86 (purchased from Eisenhuth).
+Polyacrylonitrile based felt (5 mm thick) acts as negative electrode both
+in the fuel cell and in the electrolyser with flow-through distribution of
+electrolytes. The active area of the cells was 4 × 5 cm. In both cases, the
+felt was compressed to 75% of the original thickness. Thermal treatment
+of the felts under air atmosphere was optimised with respect to the
+catalytic activity of negative electrode reactions using the methodology
+published by Mazúr et al. [53].
+For the air distribution within a positive electrode of the fuel cell, a
+serpentine flow-field was milled into a composite plate (flow channels of
+1 mm × 1 mm cross-sectional area with a rib width of 1 mm between the
+channels). Carbon cloth-based gas diffusion electrode (GDE) with a
+platinum catalyst loading of 0.5 mg cm− 2 (60 wt% of platinum nanoparticles deposited on carbon black support, manufacturer FuelCellsEtc)
+was used as the fuel cell positive electrode and it was compressed
+approximately to 70% of the original thickness. Platinized titanium
+plate and mesh or titanium plate and mesh covered by Ir–Ru oxide
+(purchased from Magneto or WG limited) act as a current collector and
+3D electrode in the positive half-cell of the electrolyser. Mercurosulphate reference electrode (MSE) with potential of 0.65 V vs. SHE
+was positioned on the outlet of the negative half-cell of the electrolyser
+via a Lugin capillary.
+2.4. Characterization procedure
+The fuel cell and the electrolyser were characterised by 
+electrochemical impedance spectroscopy (EIS), dynamic load curves,
+galvanostatic charge and discharge steps and galvanostatic chargedischarge cycles. For electrochemical characterization we used a
+potentiostat/galvanostat BCS-815 and a VSP-300 potenciostat/galvanostat with 4A booster (both by BioLogic). The AQDS electrolyte was
+charged (reduced) in the electrolyser from the initial discharge state to
+50% SoC by a given charge at a constant current density of 150 mA
+cm− 2
+. During this period, the positive half-cell of the fuel cell was
+flushed with deionized water in order to moisten the catalytic layer of
+the GDE. After 50% SoC was reached, the fuel cell and the electrolyser
+were characterized by EIS and a dynamic load curve and subsequently
+the fuel cell was galvanostatically loaded at various current densities. To
+maintain a constant SoC, the electrolyte has been continuously charged
+in the electrolyser with a current density required to maintain the constant potential of the negative electrode of the electrolyser. During this
+initial period, the fuel cell was regularly characterized by EIS in a galvanostatic mode and by dynamic load curve measurement.
+EIS in potentiostatic mode was measured at open-circuit voltage
+(OCV) in the frequency range from 10 kHz to 50 mHz with a sinus
+amplitude of 5 mV. EIS in galvanostatic mode were measured in the
+frequency range from 10 kHz to 50 mHz with a sinus amplitude of 1.25
+mA cm− 2 oscillating around a given current density of the galvanostatic
+discharge load. EIS spectra were fitted equivalent circuit model
+(Fig. S1b). Load curves were measured with a linearly increasing current
+with a slope of 1.25 mA cm− 2 s
+− 1 going from OCV to 0.1 V for the fuel
+cell and from 0 to 200 mA cm− 2 for the electrolyser.
+Charge-discharge galvanostatic cycling of the hybrid battery was
+performed. The charging was terminated when the potential of the
+negative electrode of the electrolyser dropped below − 0.9 V vs. MSE.
+Discharging was terminated when voltage of the fuel cell dropped below
+0.1 V. For all experiments, the flow rate of the electrolytes was 40 ml
+min− 1 and the flow rate of the air was 200 ml min− 1
+. The charging
+current density was 150 mA cm− 2 and the discharging current density
+was 25 mA cm− 2.
+From the cycling the following parameters were evaluated: The
+discharge capacity (Qdis) was evaluated as the maximal capacity of the
+discharging part of the cycles. Capacity utilization (CU) was evaluated as
+the ratio of Qdis vs. theoretical capacity Qtheor calculated by Faraday’s
+law, Coulombic efficiency (ηc) was calculated as a ratio of discharge
+capacity to charge capacity within the individual cycles, voltage 
+efficiency (ηV) was calculated as a ratio of mean voltage of electrolyser
+during charging and mean voltage of fuel cell during discharging within
+the individual cycle and energy efficiency (ηE) was calculated as a
+multiple of ηc and ηV.
+2.5. Regeneration of the fuel cell
+The regeneration of the fuel cell performance was tested by applying
+voltage pulses of the reversed polarity on the fuel cell. The voltage was
+increased from OCV to the required value (within the 0.7–1.2 V region)
+with a linearly increasing voltage scan with a slope of 20 mV s
+− 1 followed by a constant voltage hold for 300 s. After this regeneration, the
+fuel cell characterization was performed (according to the procedure
+described in 2.4) to see the effect of regeneration on the cell
+performance.
+2.6. Cyclic voltammetry on platinum disc electrode
+The cyclic voltammetry (CV) of the platinum disc working electrode
+in 1 mol dm− 3 sulfuric acid solution was performed to see the effect of
+AQDS adsorption on the electrocatalytically active surface area (ECSA)
+of the platinum catalyst. The MRSE reference electrode and the platinum
+sheet counter electrode were used in 3-electrode set-up. VSP 300
+potentiostat/galvanostat (by Biologic) was used for the measurement.
+Prior to the measurements the platinum working electrode was ultrasonicated in isopropanol (5 min) and water (5 min) and subsequently it
+was electrochemically pre-cleaned by 20 CV cycles in a broad potential
+range (− 0.7 to +1.1 V vs. MRSE). Subsequently, five CV scans were
+recorded in a more narrow potential range (− 0.67 to + 1.0 V vs. MRSE)
+to assess the ECSA by hydrogen adsorption/desorption peaks. Subsequently, the working electrode was rinsed with water and stored for 12 h
+in AQDS negolyte (in discharged state). After the required time, the
+electrode was flushed with demineralized water and the CV characterization in a narrow potential window was repeated.
+
+3. Results
+
+3.1. OCV of the fuel cell and the electrolyser
+At pH 0, the standard redox potential E◦ of AQDS oxidation/reduction reaction (Fig. 1) is 0.18 V vs. SHE and the standard redox potential
+of O2/H2O reaction (Fig. 1) is 1.23 V vs. SHE. These potentials suggest
+that OCV of the fuel cell should be approximately 1 V. However, in reality the observed OCV was much lower. Shortly after the fuel cell
+assembling, the measured OCV was only approximately 0.65 V, most
+probably due to the mixed potential on the GDE positive electrode due to
+the permeation of active compounds from the negolyte. The reduced
+OCV compared to the theoretical value has also been reported for VOFC.
+Noack et al. [27] observed that the positive electrode potential was
+approximately 360 mV lower than the theoretical one and they refer it to
+the formation of a mixed potential of oxygen and vanadium on the
+positive electrode due to vanadium permeation across the ion-exchange
+membrane from negolyte. In fact, the permeation of AQDS across the
+cation-exchange membrane is much slower. In Refs. [5,20,54] no or
+negligible permeation of AQDS was observed across the homogeneous
+cation-exchange membranes, while permeation of vanadium ions across
+the membrane is measured in many articles [21,55]). In fact, we
+observed light orange water that releases the fuel cell positive half-cell
+when flushed by deionized water indicating the presence of AQDS in
+positive half-cell. To prove the presence of AQDS in positive half-cell,
+the UV–vis spectrum of the flush water (25 ml) after a day of the fuel
+cell operation is compared with the spectrum of the diluted AQDS
+electrolyte in Fig. S2. In the case of AQDS fuel cell, the effect of the
+mixed potential is probably even higher, compared to VOFC, as vanadium ions can be oxidized to VO2+ or even VO2
++ at the positive half-cell
+of the VOFC by the oxygen, and thus the potential of vanadium ions is
+much higher than in the case of the AQDS negolyte.
+OCV of the electrolyser might be affected in the similar way. Theoretical potential of OER should be approximately 1.23 V vs. SHE (at pH
+0) but the measured potential of the platinized electrode in the electrolyser after charging of the electrolyte to 50% SoC was only 0.8 V vs.
+SHE. This suggests that potential of the positive electrode was also
+lowered by permeated AQDS in the same way as in the case of the fuel
+cell. However, after the charge-discharge cycling the measured potential
+of the electrode increased to 1.35 V vs. SHE, which is probably caused by
+saturation of posilyte electrolyte by the generated oxygen and thus the
+measured potential does not correspond to the standard state.
+
+3.2. Performance of the fuel cell
+All experiments within this study were measured at 40 ◦C in order to
+decrease the activation losses of ORR by increased temperature [56]. In
+the same time, this enabled us to directly compare the results with our
+previous study dealing with VOFC which was also measured at 40 ◦C
+[30].
+Initial performance of the fuel cell evaluated from EIS (corresponding Nyquist diagrams and equivalent circuit model are presented in
+Fig. S1) and load curve measurement are presented in Fig. 2. From the
+load curves obtained after initial charging (Fig. 2a), it can be seen that
+the fuel cell starts at an OCV of 650 mV (the reasons for the low OCV are
+explained above). Moreover, there is a relatively large voltage drop
+(approximately 150 mV) at low current densities caused by GDE activation polarization (in contrast, the linear load curve for the AQDS reaction on the same felt electrode was observed in our previous
+publication [47]). However, the resistance obtained from the linear part
+of the load curve is only 1.29 Ω cm2
+, which is approximately two times
+lower than for VOFC published in our previous article [30], indicating a
+lower ohmic resistance (RΩ) of the fuel cell with AQDS-based negolyte.
+Maximal achieved power density obtained in 50% SoC at 40 ◦C was 50
+mW cm− 2
+, which is approximately half compared to our previous article
+about VOFC [30].
+From the results of galvanostatic EIS measurements at various current loads it can be seen that the RΩ is constant for all applied current
+densities while the charge transfer resistance (RCT) decreases with
+increasing current density due to increased overpotential on the positive
+electrode characterized by a decreased share of activation losses.
+Compared to VOFC, the RΩ of the fuel cell is approximately half for the
+identical internal components (electrodes, membrane) and thus it is
+most probably related to the higher ionic conductivity of the negolyte
+(400 mS cm− 1 for the AQDS electrolyte and 250 mS cm− 1 for the vanadium electrolyte (at 50% SoC and 20 ◦C). On the other hand, the RCT
+of the cell is approximately double (for galvanostatic EIS at current load
+of 12.5 mA cm− 2
+), which is most probably related to the lower utilization of the catalyst layer of the GDE positive electrode in the case of the
+AQDS-based fuel cell. The AQDS has been reported to undergo fast 1 step
+2 electron redox process on glassy carbon planar electrode (k◦ of 7.2 ×
+10 − 3 cm s
+− 1
+) [43]. Moreover, high power density operation has been
+reported for AQDS-Br RFB using carbon fibre-based 3D electrode [41].
+Thus, the RCT of the fuel cell negative electrode should be even lower
+compared to the negative vanadium electrolyte half-cell. Thus, the
+higher polarization of the AQDS-based fuel cell evidently relates to the
+worse performance of ORR GDE. This can be related to either insufficient or excessive hydration of the catalytic layer of the GDE. The
+importance of water management on the GDE performance of VOFC was
+in detail described in our previous publication, where osmotic water flux
+to negolyte was identified as the main mechanism preventing flooding of
+the catalytic layer under higher current loads [30]. However, within the
+experiments with AQDS electrolyte we did not observe signs of catalyst
+layer flooding as observed in the case of VOFC (instability and sudden
+drop in performance at increased current). In contrast, performance of
+the AQDS-based fuel cell slowly but continuously decreases during the
+operation. Thus, it seems that the performance of the GDE was 
+deteriorated by the strong sorption of AQDS on the platinum electrocatalytic sites in the CL. This will be in detail discussed in section 3.4.
+
+3.3. Performance of the electrolyser
+For the construction of the electrolyser with the AQDS-based negolyte we tested two different positive electrode materials: titanium mesh
+and plate covered either by platinum or by Ir–Ru oxide electrocatalyst.
+The performance comparison at 50% SoC and 40 ◦C is presented in
+Fig. 3a. The electrolyser with platinized electrode exhibits a larger
+activation polarization (approximately 700 mV) and most of this polarization originates from water splitting reaction on the positive electrode as is evident from the cell voltage and electrode potential
+development profiles of load curve measurements (electrode potential
+was measured versus MRSE positioned on the electrolyte outlets). In
+fact, negative electrode activation polarization of AQDS reaction on
+carbon felt is negligible, while for OER the polarization is approximately
+the same as for the whole electrolyser. Some part of the activation polarization of the water splitting reaction might be assigned to the fact
+that OCV of the electrolyser does not correspond to the theoretical value
+as was explained in section 3.2. From the results obtained from EIS
+(Fig. 3b) it is clear that RCT is dominant as the RΩ is only 1 Ω cm2 for the
+Pt electrode or 1.5 Ω cm2 for the Ir–Ru electrode. Generally better
+performance was observed for the electrolyser with positive electrode
+based on Ir–Ru oxide (also Fig. 3a) due to a significantly lower activation
+polarization although the RΩ was lower for the electrolyser with platinized electrode as might be seen from the EIS spectrum or from the slope
+of the full-cell load curves. The slight noise observed on the load curve
+for the Ir–Ru OER electrode is probably due to release of oxygen bubbles
+from the structure of the Ir–Ru electrode and associated changes in
+cross-sectional area of the electrolyser. As the structures of Pt and Ir–Ru
+meshes are different, this effect is not observed for Pt electrode. Precise
+estimation of the activation polarization from load curves was not
+possible due to the significantly different OCV of both electrolysers in
+50% SoC. According to our expectations, the performance of the negative half-cell was not significantly affected by the selection of the positive electrode material.
+
+3.4. Stability of fuel cell performance
+In our previous article about VOFC [30] we showed, that all observed
+performance decay of the fuel cell were fully reversible and were
+probably mostly related to the water regime of the catalytic layer of GDE
+and only partially by the permeation of vanadium ions across the
+membrane as permeating vanadium ions might affect GDE as is discussed in Ref. [57]. However, with the AQDS-based fuel cell the situation is diametrically different: we see continuous performance
+degradation over time as well as in the case of VOFC, but it is not fully
+reversible as it was in the case of VOFC. In a time scale of several hours,
+the performance of the fuel cell is slowly but continuously decreasing, as
+can be demonstrated by the dynamic load curve of the AQDS-based fuel
+cell (Fig. 4). The best performance is achieved right after assembling the
+cell and initial charging of the electrolyte to 50% SoC and for all other
+measurements, the performance is significantly worse, the further load
+curves start at lower OCV in comparison with the first measurement and
+the initial activation loss is higher for them and even the slope of the
+linear part of the U-j curve is slightly steeper. More importantly, this
+performance decay seemed to be irreversible as we were unable to
+regain the initial performance by flushing the positive half-cell with
+water, changing humidity of the air or by exchange of AQDS electrolyte
+which always help to fully restore the performance of the VOFC [30].
+Importantly, this performance decay cannot be caused by degradation of 
+negative electrolyte as in our previous publication we have reported
+sufficient electrochemical stability of AQDS under the identical conditions [54].
+From the EIS measurements of the cell (Fig. 4b) we can see that the
+decay is caused only by increased RCT while the RΩ is even slightly
+decreasing over time. A slight decrease of RΩ is probably caused by
+swelling of the membrane by the electrolyte and its increased ionic
+conductivity. The fact that RCT increases only slightly might be
+explained by the fact that EIS was measured in galvanostatic mode at a
+given current load and thus for different measurements it was probably
+measured at different overpotential of positive electrode.
+
+3.5. Regeneration of the fuel cell performance
+As the performance decay of the fuel cell, described in Section 3.4,
+seemed to be independent of the water management in GDE, we
+hypothesised that this performance degradation is probably related to
+the deactivation of the catalytic layer of the positive electrode by the
+permeating AQDS ions, which might block the catalytically active sites.
+This hypothesis was also supported by the fact that the gradual performance degradation was found to be more or less independent of the fuel
+cell operation and it occurs at a similar rate under current load and at
+OCV. Moreover, the gradually increasing amount of permeated AQDS is
+probably also the reason for the decreased OCV due to the mixed potential, as is discussed in Chapter 3.1.To support the hypothesis of AQDS
+adsorption/deactivation of the catalytically active, we performed the
+specific experiment where, prior to the assembling of the fuel cell, GDE
+was immersed into vanadium electrolyte. When compared to a reference
+experiment (without GDE soaking) we observed significantly worse fuel
+cell performance right after assembling (Fig. S3) and its further decay
+within the next operation. This behaviour of organic-air FC is substantially different to the VOFC, where for the same experiment (GDE soaked
+in vanadium electrolyte), the performance was worse but after several
+days of operation and few flushes of the cathode half-cell of the fuel cell
+with deionized water the performance was restored to the reference
+values [30]. Although AQDS permeates across the membrane in significantly lower rate than vanadium ions, its negative effect on GDE performance is more pronounced and cannot be removed by water.
+In order to further prove this hypothesis, we performed a simple
+electrochemical experiment in which a planar platinum disc electrode
+was exposed to the AQDS electrolyte and its effect was evaluated by CV
+measured in 1 mol dm− 3 sulfuric acid electrolyte. The charge of the
+hydrogen adsorption-desorption peaks is standardly used to evaluate the
+electrochemically active surface area of platinum electrocatalysts [58].
+According to our assumptions, after 12 h immersion of platinum disc in
+AQDS electrolyte and a rinse by demineralized water, we observed
+significantly decreased intensity of hydrogen adsorption peaks (in the
+potential range from 0 to 0.2 V vs. SHE), see Fig. 5a), implying platinum
+deactivation. Moreover for the first cycle there is a reduction peak
+around 0.2 V vs. SHE (labelled as R1 in Fig. 5a), which fits within the
+potential region of AQDS reduction. Interestingly, this peak is not present in the next cycles. Hydrogen adsorption-desorption peaks reappeared on CV Fig. 5b) when the Pt electrode was cycled in a broader
+potential region, i.e. above 1.25 V vs. SHE. These results confirmed that
+AQDS is effectively decreasing electrochemically active surface area of
+the platinum electrode and that applying of positive potentials can lead
+to the reactivation of the catalytic activity. Difference between first,
+second and twentieth reactivation cyclovoltammogram shows
+decreasing intensity of an oxidation process (labelled as O1 in Fig. 5b)
+taking place at potentials around 1.3 V vs. SHE, which might correspond
+to the AQDS desorption.
+On the basis of these ex-situ measurements, the possibility of in-cell
+reactivation of the GDE performance of the fuel cell was tested by
+applying reverse polarization on the fuel cell as is described in the
+experimental part. The load curves before and after the polarity reversal
+at different cell voltages are presented in Fig. 6. The first load curve 
+measured after the galvanostatic cycling starts at a very low OCV of 0.42
+V and the voltage drops below 0.1 V before reaching a current density of
+50 mA cm− 2
+. After the cell is hold at 750 mV for 300 s there is a significant increase of OCV, but the slope of the linear part of the load curve
+is not altered. Furthermore, the applied voltage was increased from 800
+mV to 1100 mV (each voltage was again applied for 300 s) and a gradual
+increase in performance was reached after each step. Finally, the voltage
+increase to 1200 mV did not bring any further performance increase.
+After the second performance decay of the fuel cell caused by the second
+series of galvanostatic cycling, we were unable to regenerate the performance to the original values anymore, however, the performance was
+still better than after initial 12 h of current load. This permanent performance decay might be caused by a decrease in the concentration of
+negolyte active compounds, as is presented in Tab S1, caused by the
+permeation across the membranes and degradation. More detailed information on AQDS permeation and decomposition might be found in
+our previous article [47]. The values of RΩ obtained from the EIS measurements of the fuel cell were 0.25 Ω cm2 for all measurements and the
+values of RCT were probably influenced by galvanostatic-mode measurement at different overpotentials, as is discussed in 3.4, and thus are
+not used for the discussion.
+3.6. Stability of electrolyser performance
+When compared to the fuel cell we observed significantly better
+performance stability of the electrolyser within the tested time interval,
+although after approximately two weeks of the operation its performance also slightly decreased, which is for the Pt-based electrolyser
+shown in Fig. 7. From the comparison of voltage and electrode potential
+development within the load curves measured in 50% SOC and 40 ◦C, it
+is clear that the performance degradation of the electrolyser is attributed
+to increased polarization of OER on the positive platinized titanium
+mesh electrode, as the polarization of the negative carbon felt electrode
+with AQDS reaction remains unchanged. In contrast, for the electrolyser
+with Ir–Ru oxide positive electrode, we did not observe any performance
+degradation after approximately two weeks of measurement. From these
+results, it is evident that the Ir–Ru oxide titanium electrode is more
+suitable for construction of the acidic electrolysers than the platinized
+one, as it shows better performance (Chapter 3.3) and, moreover, it is
+even more stable.
+
+3.7. Galvanostatic cycling
+Galvanostatic cycling was performed with the use of the fuel cell as
+the discharging device and the electrolyser as the charging device using
+different charging and discharging current densities as described in
+Chapter 2.4. The results presented in Fig. 8 show that the ηV is
+decreasing during the cycling which corresponds well with our previous
+findings that the performance of the fuel cell is decreasing over time. The
+ηV decreased from 13% to 8.5% within only 20 charge-discharge cycles.
+The decrease in the efficiency is mainly caused by the performance
+degradation of the fuel cell as it is discussed in Chapter 3.4. The high cell
+resistance limits the utilization of the available capacity of the AQDS
+electrolyte to 72% within the set voltage limits used for the cycling.
+Moreover, increasing polarization of the fuel cell during battery cycling
+results in a further gradual decay of the available capacity with the slope
+of 38.5 mAh/cycle, i.e. 1.25% of Qtheor./cycle. This is a substantially
+higher capacity fade than would correspond to the reported stability of
+AQDS electrolyte below 0.1%/cycle for complete charge-discharge cycle
+[47]. The permeation of AQDS into posilyte of electrolyser can also
+partially contribute to the capacity decay.
+In contrast, stable and high values of ηC around 96% were observed,
+which is approximately by 20% higher than with VOFC [30], mainly due
+to the slower permeation of AQDS across the membrane. I addition, the
+parasitic hydrogen evolution reaction, which is thermodynamically
+favourable for negative vanadium electrolyte, is here prevented by less
+negative redox potential of AQDS.
+Slightly better performance was observed with the iridium-based
+electrolyser and when the fuel cell was reversely polarized during the
+charging process (fuel cell voltage was held at 1.1 V). During this held
+we observed a continuous decrease of the current density from
+approximately 0.5 mA cm− 2 to zero, indicating the complete oxidation
+of permeated AQDS on GDE. The results from this cycling are presented
+in Fig. 8b.
+During first cycles the ηV is around 13% as in the case of previous
+experiment, but it is stable during the whole experiment. Interestingly,
+within the cycling with fuel cell regeneration we observed generally
+lower ηC and, moreover, ηC was oscillating probably due to periodic
+water replenishment into the AQDS electrolyte. In this experiment, we
+observed much faster water overflow into the positive electrolyte of
+electrolyser and thus we replenished water to the original volume
+several times. Interestingly, after each replenishment we observed
+relatively significant prolonging of the cycles due to improved performance of fuel cell (approximately from 7 h to 9 h, corresponding to the 
+increase of discharge capacity by 0.6 Ah).
+Despite this, compared to the results with the platinum-based electrolyser without fuel cell regeneration, the utilization of the available
+capacity of AQDS electrolyte after 15 cycles was 76% instead of 62%.
+
+4. Conclusions
+In this contribution, we proposed and studied a hybrid flow battery
+using acidic anthraquinone-based negolyte and oxygen reduction/evolution reaction proceeding in the fuel cell and the electrolyser for the
+application as a stationary energy storage. The fuel cell with AQDS
+negolyte shows relatively low ohmic resistance because of the high ionic
+conductivity of the electrolyte, but relatively high activation polarization and low fuel cell OCV resulting in low power density and efficiency
+of the device. For the electrolyser construction, two different commercially available electrodes were tested for oxygen evolution reaction,
+based on platinized titanium and titanium covered with Ir–Ru oxide.
+Although the Ir–Ru electrode shows better and more stable performance
+than the platinized one, the overpotential was still relatively high and
+thus the optimization of the electrode is still needed for to increase the
+efficiency of the electrolyser operation.
+As the main drawback of AQDS electrolyte we identified the
+continuous decrease of the fuel cell performance, which is probably
+caused by the permeation of AQDS ions across the membrane and their
+adsorption on the platinum particles leading to decreased electrocatalytic activity. This was proven by ex-situ experiments on platinum
+disc electrode. We developed of the method for in situ electrochemical
+performance regeneration by reversed polarization of the fuel cell. The
+optimal regeneration conditions were identified and further used within
+the battery cycling. With this system, we were able to achieve a peak
+power density of 50 mW cm− 2
+. From charge-discharge cycling, we
+observed 12% energy efficiency of the galvanostatic cycling for charging
+current density of 150 mA cm− 2
+, discharging current density of 25 mA
+cm− 2
+, temperature of 40 ◦C, flow rate of the electrolyte of 40 ml min− 1
+and flow rate of the air of 200 ml min− 1
+. The performance of the current
+hybrid flow battery is mainly limited by the performance of positive
+electrodes of both fuel cell and electrolyser. Their optimization thus
+deserves further attention. 
+
+

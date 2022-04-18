@@ -1,0 +1,162 @@
+
+
+Assessment of the microbiome duringbacteriophage therapy in combination withsystemic antibiotics to treat a case of staphylococcal device infection 
+Andre Mu1,2, Daniel McDonald3, Alan K. Jarmusch4,5, Cameron Martino3,6,7, Caitriona Brennan3, Mackenzie Bryant3, Gregory C. Humphrey3, Julia Toronczak3, Tara Schwartz3, Dominic Nguyen3, Gail Ackermann3, Anthony D＊Onofrio8, Steffanie A. Strathdee9, Robert T. Schooley9, Pieter C. Dorrestein3,4,5,7, Rob Knight3,7,10,11* 
+and Saima Aslam9 
+
+
+Abstract 
+
+Background: Infectious bacterial diseases exhibiting increasing resistance to antibiotics are a serious global health issue. Bacteriophage therapy is an anti-microbial alternative to treat patients with serious bacterial infections. However, the impacts to the host microbiome in response to clinical use of phage therapy are not well understood. 
+Results: Our paper demonstrates a largely unchanged microbiota profile during 4 weeks of phage therapy when added to systemic antibiotics in a single patient with Staphylococcus aureus device infection. Metabolomic analyses suggest potential indirect cascading ecological impacts to the host (skin) microbiome. We did not detect genomes of the three phages used to treat the patient in metagenomic samples taken from saliva, stool, and skin; however, phages were detected using endpoint-PCR in patient serum. 
+Conclusion: Results from our proof-of-principal study supports the use of bacteriophages as a microbiome-sparing approach to treat bacterial infections. 
+Keywords: Bacteriophages, Phage therapy, Microbiome, Metabolomics, Staphylococcus aureus 
+
+
+Background 
+Staphylococcus aureus is a common commensal of the skin and anterior nares which can cause an array of ser-ious human diseases, ranging from mild skin infection to life-threatening endocarditis and septicemia. The ability of S. aureus to rapidly adapt to selective pressures, such as antibiotics, is exacerbated by biofilm formation on im-planted medical devices [1]. With increasing incidence 
+* Correspondence: robknight@ucsd.edu 3Department of Pediatrics, University of California San Diego, La Jolla, CA, USA 7Center for Microbiome Innovation, University of California San Diego, La Jolla, CA, USA Full list of author information is available at the end of the article 
+of antimicrobial resistance (AMR) and few new antibi-otics in the pipeline, there is a growing need to consider non-antibiotic alternatives to treat serious bacterial in-fections [2]. One such alternative is the use of bacterio-phage therapy (BT) [3, 4]. Bacteriophages are viruses that selectively infect and, in the case of lytic phages, kill their target bacterial host. Some have anti-biofilm activ-ity as well which may be helpful for treating device in-fections. Additional potential advantages include synergy of phage-antibiotic combinations to either directly lyse bacterial host cells, or apply selective pressure that at-tenuate virulence (e.g., biofilm formation), and/or re-sensitize bacteria to specific antibiotics [5]. 
+
+
+. The Author(s). 2021 Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons 
+licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/. The Creative Commons Public Domain Dedication waiver (http://creativecommons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated in a credit line to the data. 
+We previously reported the case of a 65-year-old male with left ventricular assist device (LVAD) implantation in 2014 for non-ischemic cardiomyopathy. He developed a persistent Staphylococcus aureus LVAD infection in 2015 associated with sternal osteomyelitis and recurrent bacteremia despite multiple surgical debridements and prolonged courses of intravenous (IV) antibiotics. The infection persisted and precluded heart transplant sur-gery, and so the patient was treated with BT as an ad-junct to antibiotics initiated in April 2018 [6]. A combination of three anti-staphylococcal bacteriophages (AB-SA01; NCT03395769; Armata Pharmaceuticals) at a dose of 3 ℅ 109 plaque forming units was administered intravenously (IV) as an outpatient every 12 h for 28 days. The patient received concomitant IV cefazolin 2 g every 8 h and oral minocycline 100 mg twice daily [6]. Of note, the patient had been on IV cefazolin for the past 2.5 months prior to the initiation of BT; he also re-ceived multiple courses of prolonged IV antibiotics over the past approximately 2.5 years prior to BT. The patient was successfully treated when BT was combined with antibiotics, had negative sternal wound bacterial culture at end of therapy (day 28), and underwent successful heart transplantation a week after completion of BT [6]. In this proof-of-principle study, we aimed to understand possible cascading ecological effects to the patient-microbiome as potential effects of BT on the host-microbiome during phage therapy are not well characterized. 
+Results 
+Patient samples were self-collected throughout the dur-ation of BT, which represented gut, saliva, and skin (nares, axillary, and forehead) microbiomes for analysis; samples were collected every 12 h with the exception of fecal samples, which were once daily. The first set of pa-tient samples was collected within 24 h of commencing BT, and extended to 7 days post-phage therapy (i.e., the day before heart transplant surgery). Amplicon 16S rRNA gene sequencing generated 29,633 reads per sample on average post-quality control processes, while paired-end metagenome sequencing yielded on average 1,547,826 reads at 150 bp per sample at 45% GC content, and with an average Phred score of 38. Weekly serum samples were also collected prior to phage administration, and 15, 30, and 60 min following a dose for qualitative PCR of the phages. End-point PCR of bacteriophage DNA concentrations in patient serum indicated the presence of the three AB-SA01 phages throughout treatment; concentrations peaked on day 29 pre-dose collection for each phages: J-Sa36 at 71.2 ng/PCR reaction, Sa83 at 166 ng/PCR reaction, and Sa87 at 10.8 ng/PCR reaction (Supplementary Table 5). 
+In an effort to contextualize microbiome data from a single patient, comparative analyses were computed using reference cohorts from the American Gut Project (AGP) [7]. Patient microbiome samples were analyzed in the context of the following cohorts: (i) healthy partici-pants from the AGP with no recent antibiotics, (ii) AGP participants with antibiotic exposure in the past week, and (iii) intensive care unit (ICU) participants [8]. The rationale for including healthy AGP and ICU partici-pants was to determine the spectrum of severity of dys-biosis in the patient＊s microbiome. 
+First-order analyses revealed a clear separation of pa-tient samples according to body site as measured by un-weighted UniFrac distances [9] (Fig. 1a). The distinct grouping of patient microbiota within respective body sites is also supported by significant pairwise differences in community richness (Shannon＊s index) between sam-ple types; however, there were no significant differences in community richness between nares and stool samples (Fig. 1b and Supplementary Table 2). Samples represent-ing gut and saliva microbiomes demonstrated low level variance in Shannon＊s index score across the study, sug-gesting minimal collateral damage to community rich-ness in response to BT. Comparative microbiota analyses revealed phage-patient samples to be distinct from both ICU and AGP microbiomes; however, they tended to group with ICU samples (albeit not as ex-treme; Fig. 1c). 
+Longitudinal analyses, including pairwise distance cal-culations from baseline (pre-treatment) and mixed ef-fects statistical testing, of patient microbiome and metabolomes showed significant changes in axilla skin samples over time (Fig. 2a); the remaining sample types were relatively unchanged over time (Fig. 2a). Specific-ally, log-ratio calculations of the sub-operational taxo-nomic unit (sOTU) classified as Staphylococcus, and the highly proliferative skin commensal Corynebacterium demonstrated significant changes over time (P < 0.001), and within the phage treatment phase (P< 0.001) (Sup-plementary Figure 3A). Metabolites with opposing load-ings (refer to Supplementary data for biplot data) revealed significant (P = 0.03) temporal and phage treat-ment responses (Supplementary Figure 3B). Analysis be-tween the longitudinal rolling mean (window size of 6) of log-ratios of metabolite and microbes identified a temporal separation in profile (Supplementary Figure 4). Additionally, a list of key metabolites and their corre-sponding annotations based on spectral library matching in Global Natural Products Social Molecular Networking (GNPS) are provided in supplementary material. The majority of the metabolites remain unidentified; how-ever, the measured m/z, retention time, and data are available. Genes detected in patient shotgun metage-nomic data from fecal (n = 25), and representative skin 
+
+
+
+
+Fig. 1 (See legend on next page.) 
+
+
+
+
+
+
+(See figure on previous page.) Fig. 1 Microbiota analysis of a patient undergoing adjunctive phage therapy, and analysis of patient samples with respect to intensive care unit (ICU) patients, a subset of the American Gut Project (AGP) population that have taken antibiotics within the past week, and a subset of the AGP population who have not taken antibiotics in the past year. a Patient microbiota profile. A principal coordinate plot of unweighted UniFrac distances of skin (forehead, blue; nares, green; axilla, red;), oral (mouth, orange), and fecal (stool, purple) samples from phage patient. b Comparison of alpha diversity across sample type. Shannon＊s diversity for skin (forehead, nares, axilla), oral (mouth), and fecal (stool) samples from phage patient. Boxplots are showing the quartiles (25th and 75th percentiles) on the box, and ㊣ 1.5 interquartile ranges for the whiskers. P-values of pairwise Kruskal-Wallis testing are shown for fecal samples compared to other sample types on the figure. A complete list of p-values for pairwise comparisons of each sample type is provided in supplementary file. c Comparative microbiota analyses. A principal coordinate plot of unweighted UniFrac distances of phage patient (orange) skin (ring), oral (diamond), and fecal (sphere) samples in the context of ICU (green) and AGP (purple or yellow) samples. The sample type is denoted by shape, while sample cohort is denoted by the different colors, within the plot 
+
+
+(n = 4) and saliva (n = 1) samples, include those pre-dicted to encode resistance to the following classes of antibiotics: aminoglycosides, chloramphenicol, extended spectrum beta-lactams, lincosamides, trimethoprim, macrolide, fosfomycin, and vancomycin (vanG). Of note is the presence of tet genes encoding resistance to tetra-cyclines (e.g., minocycline) in patient fecal samples. 
+Discussion 
+The novelty and rarity of extensive microbiome assess-ments of BT patients underpins the importance of our current work towards informing wide-spread clinical use of bacteriophages for treating multidrug resistant bacter-ial infections. Our main finding was that the case pa-tient＊s gut and saliva microbiomes did not change significantly over time when BT was added to pre-existing systemic antibiotics. However, we noted a sig-nificant decrease in staphylococci from axillary skin specimens during the course of BT. 
+Our comparative microbiome analyses take advantage of the dynamic American Gut Project (AGP) data set, which sampled 230 AGP samples at random to represent the core ※healthy§ sample set, and 115 intensive care unit (ICU) patients totaling 230 samples [7]. The base-line microbiome profile of the case patient at the start of BT was perturbed when compared to control AGP data-set but not as perturbed as the ICU data (Fig. 1c). This observation may be related to the fact that the patient had already been on systemic cefazolin for 2.5 months prior to BT and had been on prolonged courses of sys-temic antibiotics for more than a year. The severity of impact to the patient microbiome in response to pro-longed antibiotic exposure would have profound effects on microbial community composition relative to individ-uals whom have not taken antibiotics in the past year (AGP control). However, BT was self-administered as an outpatient; patient was not critically ill and received ad-equate enteral nutrition〞this may explain why his microbiome profile was not as ※extremely§ perturbed as those patients in the ICU (Fig. 1c). We acknowledge that the AGP control samples may not be an optimal com-parison for our case patient; however, the comparison allows for semi-quantitative assessment of such a rare dataset. While our results suggest that IV phage therapy directed at S. aureus does not impact the gut microbiota in a single patient (Fig. 1), more research is required to better understand the true extent (e.g., leaky gut and translocation of bacterial metabolites through the blood circulatory system) of downstream collateral damage. For example, Hsu et al. [10]demonstratedin a mouse model that phage predation on target bacter-ial pathogens has cascading effects on the remaining microbial community members and consequences on the gut metabolome. Our metabolomic analyses sug-gest minimal temporal shift in gut metabolome throughout thecourseof adjunct phagetherapy(Sup-
+plementary data); however, downstream ecological ef-fects〞particularly, metabolic ※hand-off§ interactions〞 including impacts to host immune responses remain to be determined [11]. 
+We noted a significant decrease in staphylococci from axillary skin specimens during the course of BT, which we ascribe to the S. aureus-specific phages used for BT. Of note, we detected cefazolin in patient peripheral skin sites; as the patient had been on cefazolin for 2.5 months prior to BT initiation, we do not think that temporal change of staphylococci at this site is related to cefazolin use (Supplementary file). Figure 2a alludes to the select-ive specificity of AB-SA01 phages for staphylococci as the log-ratios between staphylococci and the highly pro-liferative skin commensal, Corynebacterium, changes sig-nificantly in time and during the phage-treatment phase; specifically, a decrease in Staphylococcus relative to Cor-ynebacterium was observed to be the key driver of mi-crobial shifts (Supplementary Figure 3A). Similarly, we observed significant changes in key metabolites over time (Supplementary Figure 3B) that correlate signifi-cantly with staphylococci (Supplementary Figure 4). However, the molecular mechanisms driving the chan-ging metabolite profile remain to be determined and warrant further investigation as phage therapy is more widely utilized; for example, the majority of metabolite features were unannotated, and given these are axilla samples, the changes could reflect the use of different 
+
+Fig. 2 Pairwise distance plots from baseline (pre-treatment) for skin (axilla) microbiome and metabolome samples. a Pairwise distances from baseline pre-treatment sample as calculated by a mixed-effects model. The only sample type with significance during phage-treatment is the skin (axilla) microbiome (P<0.001). Significance was evaluated by a linear mixed effect model and error bars represent standard error from the mean. b Heatmap. Presence of antimicrobial resistance genes and/or its homologs detected in metagenomic samples. Present is defined as 90% gene coverage and 90% nucleotide identity; homolog is defined as 70% gene coverage and 70% nucleotide identity. ^Sample time point, and sample type. #Qiita study ID followed by Qiita sample ID. This ID can be used to search https://qiita.ucsd.edu/ for the primary derived data and associated metadata 
+personal care products. Further research is needed as AMR genes in the patient＊s gut microbiome. Of note is part of clinical trials to better understand the effects of the presence of genes encoding resistance to tetracy-phage therapy. clines (oral minocycline, Fig. 2b) in the patient＊s gut 
+The need for non-antibiotic alternatives in treating in-microbiome, highlighting the unintended outcomes of fectious diseases is compounded by the detection of long-term antibiotic exposure. This implicates the host ecosystem as a reservoir of AMR that could present as a major risk factor for subsequent disease(s) and exacer-bate AMR transmission. While phages were detected by end-point PCR in patient sera samples to concentrations as high as 166 ng per PCR reaction (Supplementary Table 5), our shotgun metagenomic analyses were un-able to detect whole-genome nucleic acid material asso-ciated with the AB-SA01 phage genomes across patient microbiome samples. Serial S. aureus isolates were tested for phage sensitivity and there was no detectable resist-ance development (Supplementary Table 1); this further supports the viability of adjunct BT as a non-antibiotic alternative to treating multidrug-resistant bacterial infec-tions. Our microbiome analyses highlight several key considerations when implementing a multi-omics ap-proach to understanding phage therapy in clinical set-tings. For example, the depth of metagenomic sequencing required to quantitatively track temporal changes in phage abundance is cost prohibitive for rou-tine analysis and needs to be supplemented with quanti-tative PCR assays (in place of end-point PCR) targeting the conserved regions of the primase genes of the three AB-SA01 phages [12]. Future studies need to include whole-genome sequencing (WGS) of bacterial isolates; for example, WGS data from patient＊s methicillin sensi-tive S. aureus isolate collected over a time-series could facilitate comparative genomics to track the succession of variant acquisition (e.g., single nucleotide polymor-phisms) in response to BT. This has implications to-wards understanding the molecular mechanisms driving resistance to phage activity and critically informs phage-cocktail designs. 
+Conclusions 
+Although we assessed only one patient in this study, the safety and efficacy of AB-SA01 was shown to have no adverse reactions (measured by host inflam-matory responses and clinical outcome) when treating 13 patients in an Australian hospital with severe S. aureus infections [12], as well as in a pilot trial for chronic rhinosinusitis [13]. Our report presents a proof-of-principle framework demonstrating that clin-ical use of S. aureus BT may have minimal collateral damage to the patient＊smicrobiome〞especially the gut microbiome. This may be an important benefit vis a vis systemic antibiotics for treatment of infec-tions, as alterations in gut flora can be associated with multiple adverse events including Clostridiodes difficile colitis and increase in multidrug resistant or-ganisms. The effect of BT on the microbiome will need to be assessed in prospective phage therapy tri-als and warrants investigation specifically as a micro-biome sparing therapeutic approach. 
+Methods 
+Samples for microbiome analyses, including samples representative of gut, saliva, and skin (nares, axillary, and forehead) microbiomes, were stored at .20～C and brought to weekly research clinic visits by the patient. The swabs were delivered to the research team and stored at . 20～C until processed for high throughput se-quencing and metabolomic analyses. Samples were proc-essed for amplicon 16S rRNA gene sequencing following protocols from the Earth Microbiome Project using primers targeting the V4 hypervariable region (515F bar-coded 5∩-AATGATACGGCGACCACCGAGATCTA CACGCT XXXXXXXXXXXX TATGGTAATT GT GTGYCAGCMGCCGCGGTAA-3∩; and 806R 5∩-CAAG CAGAAGACGGCATACGAGAT AGTCAGCCAG CC GGACTACNVGGGTWTCTAAT-3∩)[14], and metab-olite profiling following protocols detailed in the supple-
+mentary material compatible with understanding the microbiome response(s) to phage therapy. Unsupervised longitudinal analyses including pairwise distances and LME statistical testing were computed using q2-longitudinal [15]. The LME models with log-ratio as the response variable were carried out with treatment period (i.e., baseline/treatment), time in days, and current treat-ment as the predictor variables. The LME models with distance from baseline as the response variable were the same but without the treatment period (i.e., baseline/ treatment) as predictor variable. Fecal samples were add-itionally processed for shotgun metagenomics and se-quenced on a MiSeq system (Illumina Inc., San Diego, CA, USA) (300 cycles) following manufacturer＊s proto-col. Amplicon sequencing data were processed using the Qiita [16] platform and QIIME2 [17] software, while metabolomic data were processed using the GNPS plat-form [18]. Metabolomics methodologies are detailed ex-tensively in the supplementary file. All amplicon sequence data were filtered for blooms [PMID: 28289733] for cross-study assessments. The presence of acquired AMR genes was identified in silico using ABRi-cate [19] on shotgun metagenomic contig data. 
+Phage therapy was administered under a single use IND obtained from the FDA and under local regulatory authorization of UCSD Human Research Protection Pro-gram (IRB). The patient signed informed consent for phage therapy and for research sample collection, in-cluding microbiome analyses. PCR assays for bacterio-phages were conducted by Armata Pharmaceuticals (formerly AmpliPhi Biosciences) using proprietary and confidential methods. Patient microbiome and metabo-lomic data for this current study are deposited to publicly available databases: microbiome study number 10317 (qiita.ucsd.edu) and metabolomics, MSV000083300 (massive.ucsd.edu). The published AB-SA01 phage ge-nomes are publicly available [20]. 
+
+Abbreviations 
+AGP: American Gut Project; AMR: Antimicrobial resistance; GNPS: Global Natural Products Social Molecular Networking; ICU: Intensive care unit; 
+IV: Intravenous; LME: Linear mixed effects; PCR: Polymerase chain reaction; QIIME: Quantitative Insights Into Microbial Ecology; rRNA: Ribosomal ribonucleic acid; sOTU: Sub-operational taxonomic unit; WGS: Whole-genome sequencing 
+Supplementary Information 
+The online version contains supplementary material available at https://doi. org/10.1186/s40168-021-01026-9. 
+
+
+Additional file 1: Supplementary figure 1. Supplementary figure 
+2. Supplementary figure 3. Supplementary figure 4. Supplementary Table 1. Supplementary Table 2. Supplementary table 5. METHODS〞Metabolomics. 
+Additional file 2: Supplementary table 3. Annotation information 
+from GNPS analysis of metabolomic data. 
+Additional file 3: Supplementary table 4. Annotation information from GNPS analysis of metabolomic data, including weblinks to information regarding molecular network components. 
+
+
+Acknowledgements 
+The authors would like to acknowledge Antonio Gonz芍lez, the extended team involved with patient care throughout the bacteriophage therapy including the team of clinicians and members of the research team along with colleagues at Armata Pharmaceuticals (formerly AmpliPhi Biosciences). Armata Pharmaceuticals/AmpliPhi Biosciences provided end-point PCR re-sults; however, they were not involved in the design and collection of micro-biome samples, microbiome analyses, nor manuscript writing. 
+Authors＊ contributions 
+AM analyzed and interpreted the patient data and was a major contributor in writing the manuscript. DM, AKJ, and CM analyzed and interpreted the data and provided critical feedback. CB, MB, GCH, JT, TS, DM, and GA played a key role in processing patient samples for microbiome analyses. AD contributed to comparative microbiome analyses. RTS and SA were the lead clinicians for this case. SAS provided critical feedback on data interpretation and structure of the manuscript. RK and PCD conceived experimental designs and reviewed and provided critical feedback. All authors read and approved the final manuscript. 
+Funding 
+A.M. was funded by the Endeavour Research Fellowship (Australia Awards) to collaborate with the Department of Pediatrics, UCSD, CA, USA (ERF PDR 6735_2018). R.K. and D.M. was funded by QIIME2 (NSF DBI-1565057). The fol-lowing authors contributed to this work through funding from the American Gut Project: G.A., C.B., M.B., G.C.H., R.K., D.M., D.N., and J.T. 
+Availability of data and materials 
+Patient microbiome and metabolomic data for this current study are deposited to publicly available databases: microbiome study number 10317 (qiita.ucsd.edu) and metabolomics, MSV000083300 (massive.ucsd.edu). 
+Declarations 
+Ethics approval and consent to participate 
+The patient signed a consent form for phage therapy, and for having research samples collected and processed, including microbiome analyses. This treatment was approved by the FDA and UCSD IRB. 
+Consent for publication 
+Not applicable for the reason that patient data have been de-identified for the purpose of this publication. 
+Competing interests 
+The authors have no conflicts of interest to declare. 
+Author details 
+1Doherty Applied Microbial Genomics, Department of Microbiology and Immunology at the Peter Doherty Institute for Infection and Immunity, University of Melbourne, Melbourne, Australia. 2Microbiological Diagnostic Unit Public Health Laboratory, Department of Microbiology and Immunology at the Peter Doherty Institute for Infection and Immunity, University of Melbourne, Melbourne, Australia. 3Department of Pediatrics, University of California San Diego, La Jolla, CA, USA. 4Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California San Diego, La Jolla, USA. 5Collaborative Mass Spectrometry Innovation Center, Skaggs School of Pharmacy and Pharmaceutical Sciences, University of California San Diego, La Jolla, USA. 6Bioinformatics and Systems Biology Program, University of San Diego, La Jolla, USA. 7Center for Microbiome Innovation, University of California San Diego, La Jolla, CA, USA. 8Antimicrobial Discovery Center, Department of Biology, Northeastern University, Boston, USA. 9Division of Infectious Diseases and Global Public Health, Department of Medicine, University of California San Diego, La Jolla, USA. 10Department of Bioengineering, University of California San Diego, La Jolla, CA, USA. 11Department of Computer Sciences and Engineering, University of California San Diego, La Jolla, CA, USA. 
+Received: 9 June 2020 Accepted: 5 February 2021 
+
+References 
+1. 
+Giulieri SG, Holmes NE, Stinear TP, Howden BP. Use of bacterial whole-genome sequencing to understand and improve the management of invasive Staphylococcus aureus infections. Expert Rev Anti Infect Ther. 2016; 14(11):1023每36. https://doi.org/10.1080/14787210.2016.1233815. 
+
+2. 
+World Health Organization. Antimicrobial Resistance: Global Report on Surveillance 2014. http://www.who.int/drugresistance/documents/surveilla ncereport/en/ Accessed on 22 July 2019 
+
+3. 
+Schooley RT, Biswas B, Gill JJ, et al. Development and use of personalized bacteriophage-based therapeutic cocktails to treat a patient with a disseminated resistant Acinetobacter baumannii infection. Antimicrob. Agents Chemother. 2017;61(10):e00954每17. https://doi.org/10.1128/AAC. 00954-17. 
+
+4. 
+Aslam S, Lampley E, Wooten D, et al. Lessons learned from the first 10 consecutive cases of intravenous bacteriophage therapy to treat multidrug-resistant bacterial infections at a single center in the United States. Open Forum Infect Dis. 2020;7(9):ofaa389. https://doi.org/10.1093/ofid/ofaa389. 
+
+5. 
+Segall AM, Roach DR, Strathdee SA. Stronger together? Perspectives on phage-antibiotic synergy in clinical applications of phage therapy. Curr Opin Microbiol. 2019;51:46每50. https://doi.org/10.1016/j.mib.2019.03.005. 
+
+6. 
+Aslam S, Pretorius V, Lehman SM, Morales S, Schooley RT. Novel Bacteriophage therapy for treatment of left ventricular assist device infection. J Heart Lung Transplant. 2019;38(4):475每6. https://doi.org/10.1016/ j.healun.2019.01.001. 
+
+7. 
+McDonald D, Hyde E, Debelius JW, et al. American Gut: an open platform for citizen science microbiome research. mSystems. 2018;3:e00031每18. 
+
+8. 
+McDonald D, Ackermann G, Khailova L, et al. Extreme dysbiosis of the microbiome in critical illness. mSystems. 2016;1(4):e00199每16. 
+
+9. 
+Lozupone C, Knight R. UniFrac: a new phylogenetic method for comparing microbial communities. Appl Environ Microbiol. 2005;71(12):8228每35. https://doi.org/10.1128/AEM.71.12.8228-8235.2005. 
+
+10. 
+Hsu BB, Gibson TE, Yeliseyev V, et al. Dynamic modulation of the gut microbiota and metabolome by bacteriophages in a mouse model. Cell Host Microbe. 2019;25:1每12. 
+
+11. 
+Tanoue T, Morita S, Plichta DR, et al. A defined commensal consortium elicits CD8 T cells and anti-cancer immunity. Nature. 2019;565(7741):600每5. https://doi.org/10.1038/s41586-019-0878-z. 
+
+12. 
+Fabijan AP, Lin RCY, Ho J, et al. Safety of bacteriophage therapy in severe Staphylococcus aureus infection. Nat. Micro. 2020;5:465每72. https://doi.org/1 0.1038/s41564-019-0634-z. 
+
+13. 
+Ooi ML, Drilling AJ, Morales S, et al. Safety and tolerability of bacteriophage therapy for chronic rhinosinusitis due to Staphylococcus aureus. JAMA Otolaryngol. Head Neck Surg. 2019;145(8):723每9. https://doi.org/10.1001/ja maoto.2019.1191. 
+
+14. 
+Thompson LR, Sanders JG, McDonald D, et al. A communal catalogue reveals Earth＊s multiscale microbial diversity. Nature. 2017;551(7681):457每63. https://doi.org/10.1038/nature24621. 
+
+
+
+15. 
+Bokulich NA, Dillon MR, Zhang Y, et al. q2-longitudinal: Longitudinal and paired-sample analyses of microbiome data. mSystems. 2018;3(6):e00219每8. https://doi.org/10.1128/mSystems.00219-18. 
+
+16. 
+Gonzales A, Navas-Molina JA, et al. Qiita: rapid, web-enabled microbiome meta-analysis. Nat Methods. 2018;15(10):796每8. https://doi.org/10.1038/s41 592-018-0141-9. 
+
+17. 
+Bolyen E, Rideout JR, Dillon MR, et al. Reproducible, interactive, scalable and extensible microbiome data science using QIIME2. Nat Biotechnol. 2019; 37(8):848每57. https://doi.org/10.1038/s41587-019-0209-9. 
+
+18. 
+Wang M, Carver JJ, Phelan VV, et al. Sharing and community curation of mass spectrometry data with Global Natural Products Social Molecular Networking. Nat Biotechnol. 2016;34(8):828每37. https://doi.org/10.1038/nbt.3 597. 
+
+19. 
+Github page for ABRicate, https://github.com/tseemann/abricate. Accessed 29 Nov 2019 
+
+20. 
+Lehman SM, Mearns G, Rankin D, et al. Design and preclinical development of a phage product for the treatment of antibiotic-resistant Staphylococcus aureus infections. Viruses. 2019;11:88. https://doi.org/10.2290/v11010088. 
+
+
+Publisher＊sNote 
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations. 
+
+
+

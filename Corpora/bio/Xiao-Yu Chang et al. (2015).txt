@@ -1,0 +1,722 @@
+RESEARCH ARTICLE
+
+Effects of Climate Change on Plant
+Population Growth Rate and Community
+Composition Change
+Xiao-Yu Chang, Bao-Ming Chen*, Gang Liu, Ting Zhou, Xiao-Rong Jia, Shao-Lin Peng*
+State Key Laboratory of Biocontrol, School of Life Sciences, Sun Yat-Sen University, Guangzhou, 510006,
+China
+* chbaoming@163.com (BMC); lsspsl@mail.sysu.edu.cn (SLP)
+
+Abstract
+
+OPEN ACCESS
+Citation: Chang X-Y, Chen B-M, Liu G, Zhou T, Jia
+X-R, Peng S-L (2015) Effects of Climate Change on
+Plant Population Growth Rate and Community
+Composition Change. PLoS ONE 10(6): e0126228.
+doi:10.1371/journal.pone.0126228
+Academic Editor: Runguo Zang, Chinese Academy
+of Forestry, CHINA
+Received: January 15, 2015
+Accepted: March 31, 2015
+Published: June 3, 2015
+Copyright: © 2015 Chang et al. This is an open
+access article distributed under the terms of the
+Creative Commons Attribution License, which permits
+unrestricted use, distribution, and reproduction in any
+medium, provided the original author and source are
+credited.
+
+The impacts of climate change on forest community composition are still not well known.
+Although directional trends in climate change and community composition change were reported in recent years, further quantitative analyses are urgently needed. Previous studies
+focused on measuring population growth rates in a single time period, neglecting the development of the populations. Here we aimed to compose a method for calculating the community composition change, and to testify the impacts of climate change on community
+composition change within a relatively short period (several decades) based on long-term
+monitoring data from two plots—Dinghushan Biosphere Reserve, China (DBR) and Barro
+Colorado Island, Panama (BCI)—that are located in tropical and subtropical regions. We
+proposed a relatively more concise index, Slnλ, which refers to an overall population
+growth rate based on the dominant species in a community. The results indicated that the
+population growth rate of a majority of populations has decreased over the past few decades. This decrease was mainly caused by population development. The increasing temperature had a positive effect on population growth rates and community change rates.
+Our results promote understanding and explaining variations in population growth rates
+and community composition rates, and are helpful to predict population dynamics and population responses to climate change.
+
+Data Availability Statement: All relevant data are
+within the paper and its Supporting Information files.
+Funding: This study was supported by the National
+Natural Science Foundation of China (31030015,
+31070481) and the Scientific Research Fund of
+Hongda Zhang, Sun Yat-sen University. The funders
+had no role in study design, data collection and
+analysis, decision to publish, or preparation of the
+manuscript.
+Competing Interests: The authors have declared
+that no competing interests exist.
+
+Introduction
+It has been widely predicted that global climate change will affect biodiversity [1–3], species
+distribution and population growth [4–6]. Forests, as indispensable resources on Earth, have
+tremendous ecological, economic, social, and aesthetic value. Tree species distribution and forest composition will undergo substantial shifts in the future [7–11]. Changes in forest community composition may exert impacts on net primary productivity and carbon storage [12, 13].
+It is essential to determine how climate factors influence forest population growth and community composition [14].
+
+Average population growth rates are usually expected to be stable, but patterns of variation
+in population growth rates are different for different species. Variation in population growth
+rates is related to species birth, growth, reproduction and death [8, 15–17]. A recent study considered forest population dynamics, particularly the rate at which forest distributions might
+shift under climate change [6]. Change in a forest community is related to species-specific responses of the tree species in that community to climate change. In terms of population dynamics, dominant species respond differently to changing environmental conditions [18, 19],
+thereby giving rise to a change in community composition. For instance, Feeley et al. (2007)
+[20] found a widespread decrease in tree growth rates for species occurring in large forested dynamic plots at Barro Colorado Island, Panama (BCI), and the changes in growth were significantly associated with regional climate changes. Not long after, the authors revealed that, in
+this same plot, there have been consistent, directional changes in the tree species composition
+towards a significantly greater representation of species with greater drought tolerance, which
+was consistent with long-term climate change [21]. Declines of population growth rates were
+found in other studies, and these declines were usually climate-correlated [22]. Furthermore,
+traditional analyses usually assume that tree species composition or population growth rate is
+constant and fail to capture the temporal dynamics of these factors, making it difficult to attribute the change to environmental conditions [20, 22]. Thus, quantifying the temporal growth
+dynamics of population in the context of community change when the influences of climate
+variations are of interest is necessary.
+Tropical and subtropical forests are major biodiversity hotspots harbouring many species and
+are recognised as important global carbon sinks and sources [18, 19, 23–25]. Long-term directional changes in the community composition of tropical forests have been reported recently, and
+these changes have been attributed to climate change [21, 26]. Studies have analysed the effects of
+climate change on the composition of various plant communities in many areas, including deserts
+[27], grasslands [28]and lowland forests [29]. Actually, climate-driven impacts on long-term community changes are difficult to disentangle from changes driven by stand development [30]. Although, the causes underlying these changes, specifically the contribution of long-term climate
+change vs. successional recovery from past disturbances, remain debated [21]. To increase the accuracy and reliability of the assessment, the community development process should be considered when one examines the effects of climate change on community composition change.
+To understand the effects of temporal environmental changes on community composition,
+it is important to identify the rates at which species have already responded to recent climate
+change [31]. Studies have indicated that climate change influences community composition
+[32, 33], but few quantified the influence of climate change on community composition
+change. To better understand the dynamics of community composition in a changing world, it
+is necessary to quantify community composition change rate.
+Herein, we aimed first to compose a method for calculating the community composition
+change rate and to examine the influence of climate factors on community composition change
+using two long-term forest datasets (the observation data from DBR and BCI). Second, we aimed
+to conduct a linear model to separate the impacts of climate factors and time factors on speciesspecific population growth rate and to testify the impacts of relatively faster climate change on
+community composition change rate within a relatively short period (several decades).
+
+Methods
+Database
+We employed two long-term datasets for use in our analysis. One is a dataset containing
+30 years of data from DBR (Dinghushan Biosphere Reserve, Guangdong province, China); the
+
+other contains approximately 25 years of data from BCI (Barro Colorado Island, Panama).
+DBR has a subtropical climate, and BCI has a tropical climate. Rare species were not included
+in this study, because they are more sensitive to disturbance and the variations of their numbers are more stochastic.
+The DBR (23°100 N, 112°350 E) has a monsoon climate and is located in a subtropical, moist
+forest life zone. The annual mean temperature is 22.3°C and the annual mean rainfall is 1678
+mm with a distinct seasonal pattern. Monthly average air temperature and precipitation,
+representing DBR's climatic regime, were obtained from the Gaoyao weather station [34]. The
+reserve is dominated by regional climax, evergreen broadleaf forest represented by the Cryptocarya community, which is dominated by Cryptocarya chinensis, Cryptocarya concinna and
+Castanopsis chinensis. Abundance of the 3 dominant species in two communities was investigated 9 times from 1955 to 1985. One community was Cryptocarya community, which was at
+the relatively stable stage; the other community was Pinus-Castanopsis-Schima community,
+which was at a relatively early stage of succession. There were very few human activities in the
+study area until 1980s and there was no big pest outbreak before 1985[35]. More than twelve
+10×10 m2 quadrates were investigated in each of the communities. The average abundance
+(number of individuals) of 3 species in 2 communities for every investigation was recorded
+[36] (S1 Table). The climate data for monthly temperature and precipitation in DBR were provided by Guoyi Zhou (2012, pers. comm., 5 September).
+The BCI plot (9°9'N, 79°51'W) covers an area of 50 ha; it was the first plot established by the
+CTFS (Center for Tropical Forest Science) and is undoubtedly one of the best-studied forests
+in the world [21]. The island receives an average of 2634 mm of rain per year, with a pronounced four-month dry season from mid-December through mid-April [37]. Daytime temperatures reach an average of 32°C, with night-time lows of approximately 23°C. This island
+has 1500 ha of diverse, moist, lowland, tropical forest, and has been protected from human disturbance for 70 years [38]. Abundance data collected from 1981 to 2005 on the 50 ha plot were
+obtained from the Center for Tropical Forest Science (http://www.ctfs.si.edu/) and monthly climate data were provided by Steven Paton (2012, pers. comm., 23 October). There were 319
+species recorded for woody stems  10 mm diameter at breast height. Among these species,
+only species with an average of at least 10 individuals per ha for 6 censuses were included in
+our analysis because large percentage changes in abundance of rare species could be caused by
+minor, chance events [39]. Consequently, we finalised a list of 77 species for analysis (S2
+Table). The total abundance of 77 species accounted for 91 percent of the total individuals on
+the plot.
+
+Calculation of population growth rate
+To quantify population growth, we calculated relative population growth rate as:
+ln l ¼ lnðN2 =N1 Þ=ðt2  t1 Þ
+
+ð1Þ
+
+Where t2-t1 is the time interval between two investigations; N1 and N2 are the numbers of
+individuals for a species in year t1 and t2. This is a common equation to calculate population
+growth rate [40, 41] and this model structure has been used to calculate the change of cover
+[27, 42]. We obtained 8 sequential intervals in DBR and 5 sequential intervals in BCI to estimate the species-specific population growth rate. Once the population growth rates were estimated, we determined the direction and rates of change in the parameters by calculating the
+linear least-squares regression coefficient (β) of lnλ vs. time separately for each of the species.
+For BCI, we also analysed the distribution of β to see the overall trend of population growth.
+
+We also analysed the relationship between the correlation coefficient and the abundance of
+each species to explore whether there is any influence of abundance on population growth rate.
+
+Calculation of community composition change rate
+Based on the population growth rate, lnλ, of each species in a community, we composed a
+method to calculate the community composition change rate. The expression is as follows:
+S ln l ¼
+
+Here, Slnλ is the community composition change rate, expressed as the average of changes
+in population growth rate for the dominant species in a community, S is the number of species
+counted in the analysis and lnλi is the population growth rate of the ith species. The index Slnλ
+is a combination of the changes in biodiversity and population dynamics and reflects the rate
+of community change over a relatively short period. A larger Slnλ value indicates a greater
+change in community composition.
+
+Climatic factors in population growth and community composition
+change
+Two basic models (the unrestricted exponential growth model and the restricted logistic
+growth model) are often used to simulate continuous population growth. Almost all populations undergo three phases: the increasing phase, the stabilising phase and the decreasing
+phase, but neither of the two models is able to describe the population declining stage. The interaction of three fundamental processes—(i) competition for resources, (ii) the effect of body
+size on resource use and (iii) the effect of plant density on growth and mortality—will affect
+the development of plant populations [43]. Given enough time, every population will decline.
+The limitation may come from the external environment or the self-limiting of a species. Although the logistic growth model has frequently been used in forest ecology, species replacement during forest development makes the population growth of the majority of species more
+likely to resemble a Gaussian curve (Eq 3).
+f ðtÞ ¼ Ae
+
+In this equation, μ is the time when a species reaches its maximum abundance, σ is the time
+distance between μ and its maximum growth rate, and A is an adjusting parameter. We
+adopted both a logistic model and a Gaussian model to ﬁt population growth for single species
+in each plot. We used the Akaike’s Information Criterion corrected for small sample size
+(AICc) to compare the ﬁt results of the two models. Finally, we chose the Gaussian model as
+the population growth model for our analysis because the Gaussian model was a better ﬁt than
+the logistic model for most species (3:1) (S1 and S2 Figs, S3 Table). We adopted the Gaussian
+model (Eq 3) to the model of population growth rate (Eq 1) and obtained the following model:
+ln l ¼
+
+If σ2 = -1 / (2B) and μ = -A/ (2B), we acquire a simple model structure of population growth
+rate:
+ln l ¼ A þ Bðt1 þ t2 Þ
+
+Here, A and B are aggregate variables and theoretically can be determined by any factor that
+affect population growth. The linearity of this model structure makes the modelling process
+and the interpretation of each parameter more simple and accessible.
+The annual mean temperature and precipitation adopted in our analysis are the most common and important climatic factors. It is very difficult to tell how climatic factors influence A
+and B with current knowledge. Thus, we constructed several possible models and compared
+their simulation results. We used two indices, Adjusted R-Squared and Akaike’s Information
+Criterion corrected for small sample size (AICc), to compare the fit results for six models. We
+planned to use the simplest model with the best fit for exploring the effects of climate on population growth (S4–S6 Tables). Finally, we chose the following model to test the influence of
+temperature and precipitation on population growth:
+ln l  T þ P þ ðt1 þ t2 Þ
+
+Here T is the annual average temperature and P is the annual precipitation. The time factor
+here t1+t2 was derived by introducing Gaussian curve (Eq 3) to a common population growth
+rate model (Eq 1) in Ecology. A bigger value of the index can imply a bigger time interval, a
+more recent observation along a time sequence, or both. When one of them is fixed, the index
+can be interpreted by the other time factor.
+If species-specific population growth is influenced by climatic factors, the community composition will be indirectly affected as well. To examine how climate influences community
+composition, we used linear regression analysis between the community composition change
+rate, Slnλ, and 6 different climatic factors (Tavg-annual mean temperature, Tmax-maximum
+temperature, Tmin-minimum temperature, Pavg-annual precipitation, Pmax-maximum precipitation and Pmin-minimum precipitation).
+
+Results
+Trends in air temperature and precipitation
+In DBR, the annual average temperature and the precipitation increased during the observation
+period (1955–1985) (Fig 1A and 1B), while in BCI, they showed different trends over time. In
+BCI, the annual average temperature increased while the annual average precipitation decreased from 1981 to 2005 (Fig 1C and 1D). The rate of increasing temperature in BCI was
+greater than that in DBR. When we compared the trend of annual average temperature at the
+two sites across a similar period (1981–2005), we found that the annual average temperature of
+both DBR and BCI showed a similar upward trend.
+
+Population growth rate
+Population growth rates declined over time for most species in both DBR and BCI (Fig 2). In
+DBR, except for C. chinensis and C. concinna in community II (the Pinus-Castanopsis-Schima
+community), the population growth rates of the other species in the two communities decreased over time (Fig 2A and 2B). We analysed the distribution of the change rates for population growth rate in BCI, and the results showed that the population growth rates for most
+species (84.4%; 65 of 77 species) decreased (Figs 2C and 3A), with 27.7% of those species showing a significant decrease. Based on the 77 species in BCI, we carried out a correlation analysis
+between the population growth rate (lnλ) and time (the median of each five-year interval) to
+explore the relationship between the correlation coefficients and the abundances of species.
+The results indicated that many species with higher abundance showed decreasing trends of
+population growth rate (Fig 3B).
+
+Fig 1. Trends in climate change (annual precipitation and annual mean temperature) in DBR and BCI.
+Temperature data were unavailable for a few months in the years 1983, 1986, 1987 and 1988 for BCI. There
+are 5 intervals for community I of DBR (1955–1963, 1963–1967, 1967–1978, 1978–1982, and 1982–1985),
+two intervals for community II of DBR (1978–1982 and 1982–1985) and 5 intervals for BCI (1981–1985,
+1985–1990, 1990–1995, 1995–2000, and 2000–2005).
+doi:10.1371/journal.pone.0126228.g001
+
+Species in the two communities on DBR responded differently to the time factor (t1+t2).
+Population growth rate of the 3 species showed a negative response to time in community I,
+while showing a positive response in community II (Fig 4). The annual precipitation had a positive effect on community I but had a negative effect on community II. The annual average
+temperature had a positive effect on C. concinna in community I and on the 3 species in community II. For the 77 species in BCI, the population growth rate, lnλ, showed a negative response to the time factor (t1+t2) (87%, significant), a negative association with the annual
+average precipitation (62.3%, significant) and a positive association with the annual average
+temperature (85.7%, significant).
+
+Community composition change rate
+We calculated the community composition change rate, Slnλ, based on the census data and the
+fitted data, separately. The fitted data were estimated based on the Eq 3. At first we calculated
+Slnλs for every adjacent census. The results showed that the fitted value and the true value displayed approximately the same variations over time in BCI (Fig 5E), while the variations of the
+fitted value and the true value for the two communities in DBR appeared to be different (Fig
+5A and 5B). We noticed that the census intervals of DBR were very different, from 1 to 11
+years for community I and 1 to 23 years in community II. So we combined some short intervals
+and recalculated the values and found that the fitted value and the true value displayed approximately the same variations (Fig 5C and 5D). The results suggest that when the community
+
+Fig 2. Changes in population growth rate, lnλ, over time in DBR and BCI. Vertical lines indicate census
+years, and points indicate the population growth rate, lnλ, per interval. Community I: Cryptocarya community;
+Community II: Pinus-Castanopsis-Schima community.
+
+composition change rate is used as an index to compare different communities or different census times for one community, the time intervals should be identical.
+The linear regression analysis between climate factors and community composition change
+rate, Slnλ, showed that climate factors had no significant effects on Slnλ except on the maximum and minimum temperature in DBR and the minimum temperature in BCI. The
+
+Fig 3. Distribution of the rate of change in population growth rate for 77 dominant species in BCI. (a)
+Distribution of the liner regression coefficient β of lnλ over time. (b) Relationship between abundance and the
+correlation coefficient for lnλ and time.
+
+maximum temperature had a positive effect on Slnλ, while the minimum temperature had a
+positive effect in DBR but a negative effect in BCI. The overall trend seems to link increasing
+temperature with increasing community composition change rate (5 in 6 regressions) (Fig 6).
+
+Fig 4. A multivariate linear regression revealed the effects of climate and time factors on population
+growth rate in DBR and BCI. The climate factors are annual mean precipitation (mm) and annual mean
+temperature (°C) for each time interval. The time factor is t1+t2 (year), which is the sum of two observation
+years. All 3 models in community I, the model of C. chinensis in community II of DBR, and the 77 models in
+BCI are significant (P<0.05). Estimates and 95% confidence intervals of coefficients for three variables
+are indicated.
+
+Fig 5. Variations of community composition change rate, Slnλ, during the study periods for DBR and
+BCI. The solid lines are based on the true values and the dashed lines are based on the fitted values. (a)
+Community I in DBR, (b) Community II in DBR, (c) Community I in DBR with adjusted intervals, (d)
+Community II in DBR with adjusted intervals, and (e) BCI.
+
+Discussion
+Impacts of climate change on population growth rate
+Population growth rate is the unifying variable linking the various facets of population ecology.
+It is the summary parameter of trends in population density or abundance [40]. For 3 species
+
+Fig 6. Effects of climate factors on community composition change rate, Slnλ, for DBR and BCI.
+Climate factors are the annual mean, maximum and minimum temperature (Tavg, Tmax and Tmin) and the
+annual mean, maximum, and minimum precipitation (Pavg, Pmax and Pmin). They were calculated based on
+monthly climate data. *P<0.05.
+
+in DBR and 77 species in BCI, the population growth rate, lnλ, is negatively correlated with
+time for most species. This is consistent with previous studies [15, 21, 22, 44]. However, these
+studies could not determine the underlying causes of a declining population growth rate over
+time [15], or attributed this decline to environmental factors such as rainfall patterns [22] and
+survival variation [15]. The present study, however, indicates that this decreasing trend of population growth rate may be mainly a consequence of community development. When we use
+the exponential growth model, logistic growth model and Gaussian curve to simulate population growth, the population growth rate, lnλ, decreased over time except in the exponential
+growth model, where lnλ is constant (Fig 7). In addition, our multiple regression analysis
+showed that lnλ was negatively correlated with time for the majority of species (Fig 4). It can be
+concluded that for most species in a community, a decreasing population growth rate is
+
+Fig 7. Models describing population growth and population growth rate. Changes in abundance and
+population growth rate, lnλ, over time simulated by the exponential growth model, logistic growth model, and
+Gaussian curve.
+
+inevitable. This is because the plant abundance and species richness will be close to the maximum environment carrying capacity with increasing population density and plant size. In the
+present study, community I in DBR was a mature forest; community II was in an earlier stage
+of succession than community I. The BCI forest was mature and relatively stable throughout
+the study period [21]. In addition to species-specific properties, the stage of population development is important in determining how the population growth rate of one species will respond to climatic factors.
+However, previous studies usually measured the population growth rate by focusing on one
+time period and neglected to study the development of a population. Such neglect may affect
+predicted results because population growth rates change, and usually decrease, over time. Recently, using a specific database extracted from collected literature, a synthesis study examined
+how population growth rates varied within and among 50 plant species [15]. They found that
+population growth rates could vary greatly from species to species even within the same genus.
+However, population growth rates of different populations within the same species were similar, particularly if geographic distances among the populations were small and environmental
+factors were similar. These results can be explained by the present study, which demonstrates
+that the population growth rate of one species is not constant and is likely determined by the
+stage of community development and population growth. Different species usually appear at
+different stages of community development and have their own individual population growth
+parameters, even if they belong to the same genus [15]. Consequently, population growth rates
+vary greatly when species from different communities of different development stages are compared. Alternatively, nearby populations of the same species always belong to similar communities of nearly the same development stage. Therefore, populations with similar population
+growth rates may be geographically closer to each other.
+Variations in environmental factors have substantial effects on plant population dynamics
+and are considered essential for realistic models of population dynamics [45, 46]. Temporal
+variation in environmental factors is important to population dynamics in terms of both longterm trends and short-term fluctuations [47]. Experimental warming has consistently produced an increase in vascular plant growth across the Arctic [48]. A recent study assessed the
+climate drivers of recent unfavourable silversword population dynamics and found that the declining population growth rates of silversword were associated with changing climatic conditions. Annual population growth rates were strongly tied to rainfall patterns [22]. A modelling
+study of a steppe plant community from eastern Idaho, USA, found strong effects of climate on
+
+the population growth in 2 of 3 target species. A 1% decrease in the previous year’s precipitation would lead to a 0.6% decrease in population growth for one species, and a 1% increase in
+summer temperature would result in a 1.3% increase in population growth for the other species
+[49].
+Similarly, our study shows that an increasing annual mean temperature would increase population growth rates for the majority of species. However, a decreasing annual precipitation would
+also increase population growth rate in both DBR and BCI. This conflicts with other studies.
+One explanation is the persistent directional change in the flora toward an increased abundance
+of drought-tolerant species, possibly due to increasing temperature and/or a past decrease in
+rainfall, at least in BCI [21]. Another possible explanation is that during succession, as shade intolerant tree species gradually decline, the community tends to approach a climax that is dominated by mesophytic tree species [50], which might be favoured by less precipitation.
+
+Impacts of climate change on community composition change rate
+Altered population growth of dominant species could have profound effects on community
+structure and ecosystem function [49]. Most previous studies on succession rate only considered the species composition change of a community [51–53], but did not take population dynamics into account. In fact, community change not only indicates the species composition
+change but also implies a proportional change of each species relative to one another [54]. One
+could not say a community is unchanged when no old species disappears and no new species
+established over years because the community composition often changes with different proportions of each species. Therefore, using the index Slnλ is more precise for detecting the rate
+of community change. Slnλ is determined by population growth rates of dominant species of a
+community, which can be predicted by environmental and temporal factors. Thus, community
+composition change rate, Slnλ, in a relatively short time period is predictable.
+The community composition change rate, Slnλ, is determined by population growth rates of
+all species in a community. Accordingly, it can be inferred that at the stages when vast species
+replacement takes place, Slnλ should be very high. This new index can be very useful when we
+want to compare the stability of different communities during a time period or different stages
+of community changing process.
+We used linear regression analysis to detect the relationship between climate and community change rate, Slnλ (Fig 6). Because species respond to climate individually, it is very difficult
+to predict the collective response. Our results suggest that a positive relationship exists between
+increasing temperature and increasing community change rate. Although decreasing precipitation has a positive effect on population growth rate for most populations, the overall effect on
+the community composition change rate seems complicated in our study. As we know, changes
+in precipitation can affect community composition by altering germination, seedling establishment, growth, and survival [55, 56]. In some studies, changes in the timing of rainfall have a
+greater influence on community composition than the amount of rainfall [57]. Another experimental study found that drought and warming treatments slowed down secondary succession
+in a Mediterranean climate, and indicated that future drier and warmer conditions may severely affect plant succession due to the existence of both abundance-dependent and species-specific responses [58]. For the BCI plot in our analysis, the impact of El Niño event in early 1983
+caused immediate increases in tree mortality, and since then there has been a persistent directional change in the flora toward and increased abundance of drought-tolerant species[21].
+These changes in composition were reflected by the community composition change rate Slnλ,
+which was extremely high in the 1980~1985 interval (Fig 5E).
+
+From a long-term perspective, range shifts due to global warming will alter the structure
+and composition of communities and change the function of ecosystems [59]. As different species respond to climate change in various ways, species previously regarded as aliens will begin
+to appear in new communities. Species that can quickly adapt to new environmental conditions
+will outpace those that cannot [60]. Studies in Siberia revealed that a warmer climate will likely
+convert deciduous larch to evergreen conifer forests [61, 62]. When species diversity and abundance increase, community composition change rate generally will be accelerated. However, in
+a relatively short time period of 20 to 30 decades, species composition will not change significantly. Although climate changes influence population growth of each species, these changes
+will not fundamentally affect community change rate within a few decades.
+To detect the community composition change rate over decades, we propose a relatively
+more concise index, Slnλ, which refers to an overall population growth rate based on the dominant species in a community. The variation of Slnλ over time is mainly determined by community development. Climate factors can influence the population growth rate and accordingly
+affect the community composition change rate. The present study indicates that increasing
+temperature has a positive effect on population growth rate and community change rate. Decreasing precipitation has a positive effect on population growth, but shows a complex effect
+on community change. As global warming will bring more precipitation to high latitudes in
+both winter and summer and less precipitation to low latitudes [63], further study is needed to
+reveal the relationships between the historical variations in climate and population dynamics
+in broader areas.
+
+Supporting Information
+S1 Fig. Change in abundance for 3 species from 2 plots in DBR.
+(DOC)
+S2 Fig. Change in abundance for 77 species from BCI.
+(DOC)
+S1 Table. Abundance (number/m2) of three dominant tree species from 1955 to 1985 in
+two communities for DBR, China.
+(DOC)
+S2 Table. List of 77 dominant species and their abundances from the BCI (Barro Colorado
+Island, Panama) tropical forest.
+(DOC)
+S3 Table. Comparisons of Logistic model and Gaussian model depending on the smallsample-size corrected version of Akaike information criterion (AICc).
+(DOC)
+S4 Table. Significance, Adjusted R-squared (Adj-R2), and the small-sample-size corrected
+version of Akaike information criterion (AICc) of 6 Models for 3 species from 2 plots in
+DBR.
+(DOC)
+S5 Table. Significance, Adjusted R-squared (Adj-R2), and the small-sample-size corrected
+version of Akaike information criterion (AICc) of 6 Models for 77 species in BCI.
+(DOC)
+S6 Table. Significance of coefficients, Adjusted R-squared (Adj-R2), and the Akaike information criterion (AIC) of 6 Models fitted with all species from each of the 3 plots (DBR,
+
+DBR and BCI), separately.
+(DOC)
+
+Acknowledgments
+We thank Steve Paton, Donald M. Windsor and Guoyi Zhou for providing the climate records,
+and thank Michel Loreau, Joseph Yavitt for their comments and advice. This study was supported by the National Natural Science Foundation of China (31030015) and the Scientific Research Fund of Hongda Zhang, Sun Yat-sen University.
+
+Author Contributions
+Conceived and designed the experiments: XYC BMC SLP. Performed the experiments: XYC.
+Analyzed the data: XYC GL XRJ. Contributed reagents/materials/analysis tools: SLP. Wrote
+the paper: XYC BMC TZ SLP.
+
+References
+1.
+
+Parmesan C, Yohe G. A globally coherent fingerprint of climate change impacts across natural systems. Nature. 2003; 421(6918):37–42. PMID: 12511946
+
+2.
+
+Pereira HM, Leadley PW, Proença V, Alkemade R, Scharlemann JPW, Fernandez-Manjarrés JF, et al.
+Scenarios for Global Biodiversity in the 21st Century. Science. 2010; 330(6010):1496–501. doi: 10.
+1126/science.1196624 PMID: 20978282
+
+3.
+
+Bellard C, Bertelsmeier C, Leadley P, Thuiller W, Courchamp F. Impacts of climate change on the future of biodiversity. Ecol Lett. 2012; 15(4):365–77.
+
+4.
+
+Fernandez-Going BM, Anacker BL, Harrison SP. Temporal variability in California grasslands: Soil type
+and species functional traits mediate response to precipitation. Ecology. 2012; 93(9):2104–14. PMID:
+23094382
+
+5.
+
+Conlisk E, Syphard AD, Franklin J, Flint L, Flint A, Regan H. Uncertainty in assessing the impacts of
+global change with coupled dynamic species distribution and population models. Global Change Biol.
+2013; 19(3):858–69. doi: 10.1111/gcb.12090 PMID: 23504842
+
+6.
+
+Vanderwel MC, Purves DW. How do disturbances and environmental heterogeneity affect the pace of
+forest distribution shifts under climate change? Ecography. 2014; 37(1):10–20.
+
+7.
+
+Morin X, Viner D, Chuine I. Tree species range shifts at a continental scale: new predictive insights
+from a process-based model. J Ecol. 2008; 96(4):784–94.
+
+8.
+
+Purves D, Pacala S. Predictive Models of Forest Dynamics. Science. 2008; 320(5882):1452–3. doi: 10.
+1126/science.1155359 PMID: 18556548
+
+9.
+
+Fang J, Shen Z, Tang Z, Wang X, Wang Z, Feng J, et al. Forest community survey and the structural
+characteristics of forests in China. Ecography. 2012; 35(12):1059–71.
+
+10.
+
+Iverson LR, Prasad AM. Potential changes in tree species richness and forest community types following climate change. Ecosystems. 2001; 4(3):186–99.
+
+11.
+
+Allen CD, Macalady AK, Chenchouni H, Bachelet D, McDowell N, Vennetier M, et al. A global overview
+of drought and heat-induced tree mortality reveals emerging climate change risks for forests. Forest
+Ecol Manag. 2010; 259(4):660–84.
+
+12.
+
+Loudermilk EL, Scheller RM, Weisberg PJ, Yang J, Dilts TE, Karam SL, et al. Carbon dynamics in the
+future forest: the importance of long-term successional legacy and climate–fire interactions. Global
+Change Biol. 2013; 19(11):3502–15. doi: 10.1111/gcb.12310 PMID: 23821586
+
+13.
+
+Lenihan JM, Drapek R, Bachelet D, Neilson RP. Climate change effects on vegetation distribution, carbon, and fire in California. Ecol Appl. 2003; 13(6):1667–81.
+
+14.
+
+Clark JS, Melillo J, Mohan J, Salk C. The seasonal timing of warming that controls onset of the growing
+season. Global Change Biol. 2014; 20(4):1136–45. doi: 10.1111/gcb.12420 PMID: 24115181
+
+15.
+
+Buckley YM, Ramula S, Blomberg SP, Burns JH, Crone EE, Ehrlén J, et al. Causes and consequences
+of variation in plant population growth rate: a synthesis of matrix population models in a phylogenetic
+context. Ecol Lett. 2010; 13(9):1182–97. doi: 10.1111/j.1461-0248.2010.01506.x PMID: 20561015
+
+16.
+
+Rüger N, Huth A, Hubbell SP, Condit R. Determinants of mortality across a tropical lowland rainforest
+community. Oikos. 2011; 120(7):1047–56.
+
+17.
+
+Shen Y, Santiago LS, Ma L, Lin G- J, Lian J- Y, Cao H- L, et al. Forest dynamics of a subtropical monsoon forest in Dinghushan, China: recruitment, mortality and the pace of community change. J Trop
+Ecol. 2013; 29(02):131–45.
+
+18.
+
+Lewis SL, Malhi Y, Phillips OL. Fingerprinting the impacts of global change on tropical forests. Philosophical Transactions of the Royal Society of London B: Biological Sciences. 2004; 359(1443):437–62.
+PMID: 15212095
+
+19.
+
+Zuidema PA, Baker PJ, Groenendijk P, Schippers P, van der Sleen P, Vlam M, et al. Tropical forests
+and global change: filling knowledge gaps. Trends Plant Sci. 2013; 18(8):413–9. doi: 10.1016/j.tplants.
+2013.05.006 PMID: 23809291
+
+20.
+
+Feeley KJ, Joseph Wright S, Nur Supardi MN, Kassim AR, Davies SJ. Decelerating growth in tropical
+forest trees. Ecol Lett. 2007; 10(6):461–9. PMID: 17498145
+
+21.
+
+Feeley KJ, Davies SJ, Perez R, Hubbell SP, Foster RB. Directional changes in the species composition
+of a tropical forest. Ecology. 2011; 92(4):871–82. PMID: 21661550
+
+22.
+
+Krushelnycky PD, Loope LL, Giambelluca TW, Starr F, Starr K, Drake DR, et al. Climate-associated
+population declines reverse recovery and threaten future of an iconic high-elevation plant. Global
+Change Biol. 2013; 19(3):911–22. doi: 10.1111/gcb.12111 PMID: 23504847
+
+23.
+
+Malhi Y, Grace J. Tropical forests and atmospheric carbon dioxide. Trends Ecol Evol. 2000; 15(8):332–
+7. PMID: 10884705
+
+24.
+
+Bonan GB. Forests and Climate Change: Forcings, Feedbacks, and the Climate Benefits of Forests.
+Science. 2008; 320(5882):1444–9. doi: 10.1126/science.1155121 PMID: 18556546
+
+25.
+
+Körner C. Responses of humid tropical trees to rising CO2. Annu Rev Ecol Evol Syst. 2009; 40:61–79.
+
+26.
+
+Laurance WF, Oliveira AA, Laurance SG, Condit R, Nascimento HE, Sanchez-Thorin AC, et al. Pervasive alteration of tree communities in undisturbed Amazonian forests. Nature. 2004; 428(6979):171–5.
+PMID: 15014498
+
+27.
+
+Munson SM, Webb RH, Belnap J, Andrew Hubbard J, Swann DE, Rutman S. Forecasting climate
+change impacts to plant community composition in the Sonoran Desert region. Global Change Biol.
+2012; 18(3):1083–95.
+
+28.
+
+Vittoz P, Randin C, Dutoit A, Bonnet F, Hegg O. Low impact of climate change on subalpine grasslands
+in the Swiss Northern Alps. Global Change Biol. 2009; 15(1):209–20.
+
+29.
+
+Bertrand R, Lenoir J, Piedallu C, Riofrio-Dillon G, de Ruffray P, Vidal C, et al. Changes in plant community composition lag behind climate warming in lowland forests. Nature. 2011; 479(7374):517–20. doi:
+10.1038/nature10548 PMID: 22012261
+
+30.
+
+Lenoir J, Gegout JC, Dupouey JL, Bert D, Svenning JC. Forest plant community changes during 1989–
+2007 in response to climate warming in the Jura Mountains (France and Switzerland). J Veg Sci. 2010;
+21(5):949–64.
+
+31.
+
+Chen I- C, Hill JK, Ohlemüller R, Roy DB, Thomas CD. Rapid Range Shifts of Species Associated with
+High Levels of Climate Warming. Science. 2011; 333(6045):1024–6. doi: 10.1126/science.1206432
+PMID: 21852500
+
+32.
+
+Thuiller W, Lavorel S, Sykes MT, Araújo MB. Using niche-based modelling to assess the impact of climate change on tree functional diversity in Europe. Divers Distrib. 2006; 12(1):49–60.
+
+33.
+
+Allen CD, Macalady AK, Chenchouni H, Bachelet D, McDowell N, Vennetier M, et al. A global overview
+of drought and heat-induced tree mortality reveals emerging climate change risks for forests. Forest
+Ecol Manag. 2010; 259(4):660–84.
+
+34.
+
+Zhou G, Wei X, Wu Y, Liu S, Huang Y, Yan J, et al. Quantifying the hydrological responses to climate
+change in an intact forested small watershed in Southern China. Global Change Biol. 2011; 17
+(12):3736–46.
+
+35.
+
+Huang Z. The interactions of population dynamics of Thalassodes quadraria and the plant community
+structure and climate factors in Dinghushan. Chinese Journal of Ecology. 2000; 19(3):24–7.
+
+36.
+
+Wang B, Peng S. Quantitative Dynamics of the Dominant Population in the Forest Communities of Dinghushan. Acta Ecologica Sinica. 1987; 7(3):214–21.
+
+37.
+
+Comita LS, Engelbrecht BM. Seasonal and spatial variation in water availability drive habitat associations in a tropical forest. Ecology. 2009; 90(10):2755–65. PMID: 19886485
+
+38.
+
+Condit R, Hubbell SP, Foster RB. Assessing the response of plant functional types to climatic change
+in tropical forests. J Veg Sci. 1996; 7(3):405–16.
+
+39.
+
+Condit R, Hubbell SP, Foster RB. Changes in tree species abundance in a Neotropical forest: impact of
+climate change. J Trop Ecol. 1996; 12(02):231–56.
+
+40.
+
+Sibly RM, Hone J. Population Growth Rate and Its Determinants: An Overview. Philosophical Transactions: Biological Sciences. 2002; 357(1425):1153–70. PMID: 12396508
+
+41.
+
+Tuljapurkar S. Population Dynamics in Variable Environments. New York: Springer-Verlag; 1990.
+
+42.
+
+Foster BL, Tilman D. Dynamic and static views of succession: Testing the descriptive power of the
+chronosequence approach. Plant Ecol. 2000; 146(1):1–10.
+
+43.
+
+Deng J, Zuo W, Wang Z, Fan Z, Ji M, Wang G, et al. Insights into plant size-density relationships from
+models and agricultural crops. Proc Natl Acad Sci U S A. 2012; 109(22):8600–5. doi: 10.1073/pnas.
+1205663109 PMID: 22586097
+
+44.
+
+Clark DA, Piper SC, Keeling CD, Clark DB. Tropical rain forest tree growth and atmospheric carbon dynamics linked to interannual temperature variation during 1984–2000. Proc Natl Acad Sci U S A. 2003;
+100(10):5852–7. PMID: 12719545
+
+45.
+
+Morris WF, Pfister CA, Tuljapurkar S, Haridas CV, Boggs CL, Boyce MS, et al. Longevity can buffer
+plant and animal populations against changing climatic variability. Ecology. 2008; 89(1):19–25. PMID:
+18376542
+
+46.
+
+Dahlgren JP, Ehrlen J. Incorporating environmental change over succession in an integral projection
+model of population dynamics of a forest herb. Oikos. 2011; 120(8):1183–90.
+
+47.
+
+Nicolè F, Dahlgren JP, Vivat A, Till-Bottraud I, Ehrlén J. Interdependent effects of habitat quality and climate on population growth of an endangered plant. J Ecol. 2011; 99(5):1211–8.
+
+48.
+
+Henry GHR, Walker MD, Wahren CH, Hollister RD, Ahlquist LE, Alatalo JM, et al. Plant community responses to experimental warming across the tundra biome. P Natl Acad Sci USA. 2006; 103(5):1342–
+6. PMID: 16428292
+
+49.
+
+Dalgleish HJ, Koons DN, Hooten MB, Moffet CA, Adler PB. Climate influences the demography of three
+dominant sagebrush steppe plants. Ecology (Washington D C). 2011; 92(1):75–85.
+
+50.
+
+Peng S-L, Hou Y-P, Chen B-M. Establishment of Markov successional model and its application for forest restoration reference in Southern China. Ecological Modelling. 2010; 221(9):1317–24.
+
+51.
+
+Shugart HH, Hett JM. Succession: Similarities of Species Turnover Rates. Science. 1973; 180
+(4093):1379–81. PMID: 17831104
+
+52.
+
+Jassby AD, Goldman CR. A Quantitative Measure of Succession Rate and Its Application to the Phytoplankton of Lakes. Am Nat. 1974; 108(963):688–93.
+
+53.
+
+Anderson KJ. Temporal Patterns in Rates of Community Change during Succession. Am Nat. 2007;
+169(6):780–93. PMID: 17479464
+
+54.
+
+Huston M, Smith T. Plant succession: life history and competition. Am Nat. 1987; 130(2):168–98.
+
+55.
+
+Wu Z, Dijkstra P, Koch GW, Penuelas J, Hungate BA. Responses of terrestrial ecosystems to temperature and precipitation change: a meta-analysis of experimental manipulation. Global Change Biol.
+2011; 17(2):927–42.
+
+56.
+
+Yang H, Li Y, Wu M, Zhang ZHE, Li L, Wan S. Plant community responses to nitrogen addition and increased precipitation: the importance of water availability and species traits. Global Change Biol. 2011;
+17(9):2936–44.
+
+57.
+
+Kimball S, Angert AL, Huxman TE, Venable DL. Contemporary climate change in the Sonoran Desert
+favors cold-adapted species. Global Change Biol. 2010; 16(5):1555–65.
+
+58.
+
+Prieto P, Penuelas J, Lloret F, Llorens L, Estiarte M. Experimental drought and warming decrease diversity and slow down post-fire succession in a Mediterranean shrubland. Ecography. 2009; 32
+(4):623–36.
+
+59.
+
+Walther G-R, Post E, Convey P, Menzel A, Parmesan C, Beebee TJC, et al. Ecological responses to recent climate change. Nature. 2002; 416(6879):389–95. PMID: 11919621
+
+60.
+
+Walther GR, Roques A, Hulme PE, Sykes MT, Pysek P, Kuhn I, et al. Alien species in a warmer world:
+risks and opportunities. Trends Ecol Evol. 2009; 24(12):686–93. doi: 10.1016/j.tree.2009.06.008 PMID:
+19712994
+
+61.
+
+Lloyd AH, Bunn AG, Berner L. A latitudinal gradient in tree growth response to climate warming in the
+Siberian taiga. Global Change Biol. 2011; 17(5):1935–45.
+
+62.
+
+Shuman JK, Shugart HH, O'Halloran TL. Sensitivity of Siberian larch forests to climate change. Global
+Change Biol. 2011; 17(7):2370–84.
+
+63.
+
+Kerr RA. Global Warming Is Changing the World. Science. 2007; 316(5822):188–90. PMID: 17431148
+
+© 2015 Chang et al. This is an open access article distributed under the terms
+of the Creative Commons Attribution License:
+http://creativecommons.org/licenses/by/4.0/ (the “License”), which permits
+unrestricted use, distribution, and reproduction in any medium, provided the
+original author and source are credited Notwithstanding the ProQuest Terms
+and Conditions, you may use this content in accordance with the terms of the
+License.

@@ -1,0 +1,3403 @@
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+SIAM J. SCI. COMPUT.
+Vol. 44, No. 1, pp. A77–A102
+
+© 2022 Society for Industrial and Applied Mathematics
+
+GAUSSIAN BELIEF PROPAGATION SOLVERS FOR
+NONSYMMETRIC SYSTEMS OF LINEAR EQUATIONS∗
+VLADIMIR FANASKOV†
+Abstract. In this paper, we argue for the utility of deterministic inference in the classical problem of numerical linear algebra, that of solving a linear system. We show how the Gaussian belief
+propagation solver, known to work for symmetric matrices, can be modified to handle nonsymmetric
+matrices. Furthermore, we introduce a new algorithm for matrix inversion that corresponds to the
+generalized belief propagation derived from the cluster variation method. We relate these algorithms
+to LU and block LU decompositions and provide certain guarantees based on theorems from the
+theory of belief propagation. The proposed solvers can be accelerated within a framework of geometric multigrid. We benchmark the resulting multigrid method with a set of classical multigrid
+solvers based on incomplete LU, Chebyshev, and pattern Gauss–Seidel smoothers. The results indicate that Gaussian belief propagation can be used to construct competitive solvers, smoothers, and
+preconditioners for selected elliptic test problems.
+Key words. numerical linear algebra, belief propagation, LU decomposition, linear systems,
+geometric multigrid
+AMS subject classifications. 65F10, 65F50, 62M99
+DOI. 10.1137/19M1275139
+
+1. Introduction. A basic problem of numerical linear algebra is to solve a linear
+equation
+(1.1)
+
+Ax = b
+
+with an invertible matrix A. The textbook technique is the LU decomposition, equivalent to Gaussian elimination [13, Chapter 3]. However, when A is large and sparse,
+algorithms that exploit sparsity are used instead of direct elimination [9]. Among
+iterative methods for sparse systems, one can mention classical relaxation techniques
+such as Gauss–Seidel, Jacobi, Richardson, and projection methods such as conjugate
+gradient, GMRES, biconjugate gradient, and others [28], [27].
+An easy way to understand the projection methods is to reformulate the original
+equation as an optimization problem [30]. For example, for a symmetric positivedefinite matrix A, one has
+
+ T
+x Ax
+T
+⋆
+(1.2)
+−x b .
+x = arg min
+x
+2
+Such a reformulation allows one to apply new techniques and leads to methods of
+steepest descent, conjugate directions, and cheap and efficient conjugate gradient
+[18].
+Another reformulation of the problem is known but is less explored. It also goes
+back to Gauss and his version of elimination. To derive an LU solution of (1.1), one
+∗ Submitted to the journal’s Methods and Algorithms for Scientific Computing section July 15,
+2019; accepted for publication (in revised form) September 29, 2021; published electronically January
+5, 2022.
+https://doi.org/10.1137/19M1275139
+† Center for Design, Manufacturing, and Materials, Skolkovo Institute of Science and Technology,
+Bolshoy Boulevard 30, bld. 1, Moscow, Russia (Vladimir.Fanaskov@skoltech.ru, https://crei.skoltech.
+ru/cdmm/people/vladimirfanaskov).
+
+A77
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+A78
+
+VLADIMIR FANASKOV
+
+can consider the probability density function p(x) of multivariate normal distribution
+(see also (2.9) below):
+
+xT Ax
+T
+p(x) ∼ exp −
++b x .
+2
+
+
+(1.3)
+
+We can consider the first component x1 of x and integrate it out in (1.3) (a process
+called “marginalization”). The resulting marginal distribution for the remaining components x2 , x3 , . . . is again multivariate normal but with the covariance matrix given
+by the Schur complement of A11 and the mean vector modified accordingly, i.e.,1
+(1.4)
+
+A22 ← A22 −
+
+A21 b1
+A21 A12
+, b2 ← b2 −
+.
+A11
+A11
+
+It is well known that the LU decomposition consists of the very same steps [31]. When
+x1 is not a scalar but a subset of variables, marginalization of multivariate normal
+distribution results in a block LU decomposition.
+Thus, the most popular direct technique for the solution of linear equations with
+dense matrices is intimately connected with the marginalization problem, which belongs to the class of inference problems. Recently, many other intriguing connections
+between statistical inference and linear algebra have been pointed out. For instance,
+in [8], [16], and [3], the authors provide a method to recover the Petrov–Galerkin
+condition from the Bayesian update and construct a Bayesian version of the conjugate gradients. Paper [22] constructs a state-of-the-art multigrid solver using game
+theory and statistical inference. These works demonstrate that ideas from statistical
+inference allow for new and useful insights into problems of linear algebra. It is thus
+reasonable to explore how other inference algorithms are translated to the realm of numerical linear algebra. Among them are expectation propagation [21], Markov chain
+Monte Carlo, mean field, other variational Bayesian approximations ([5, Chapters 8
+and 10], [34]), and belief propagation with its generalized counterparts. The latter
+two are the focus of the present work.
+The first comparison between classical methods and belief propagation appeared
+in [35]. Then in [29], the authors argued explicitly for belief propagation as a solver,
+and later, Bickson [4] presented a more systematic treatment of Gaussian belief propagation (GaBP) in the same context. Among other proposed methods was an algorithm
+that treats nonsymmetric matrices through diagonal weighting [4, section 5.4] and the
+usual trick from linear algebra, A → AT A. Both techniques are of limited use because of slow convergence in the first case and fill-in in the second. We improve on
+these results and propose several new algorithms.
+In particular, in this work we
+• explain how belief propagation can be applied to nonsymmetric matrices with
+no computation overhead compared to the original belief propagation (which
+was limited to symmetric matrices) (Algorithm 2.1);
+• design a family of linear solvers based on the generalized belief propagation
+(Algorithm 3.1) and relate them to the block LU decomposition (see subsection 3.3);
+1 In the article we use boldface for matrices or matrix blocks and regular font for scalar values
+and matrix components. In this case A11 is an element of the matrix A in the first row and the first
+column, and A22 is a square matrix that contains all elements of A excluding the first row and the
+first column.
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+GAUSSIAN BELIEF PROPAGATION SOLVERS
+
+A79
+
+• show how proofs of sufficient conditions for convergence and consistency for
+the original GaBP can be modified to hold for the new algorithms (for GaBP
+see sections SM1, SM2; for generalized GaBP see sections SM3, SM4);
+• explain how one can speed up GaBP using multigrid methodology which
+results in a robust solver (see Figure 3);
+• implement the new algorithms (https://github.com/VLSF/GaBP solvers) and
+benchmark them against several classical multigrid solvers.
+The rest of the paper is organized as follows. In subsection 2.1, we start with the
+intuitive explanation of GaBP based on the connection between the algorithm and
+Gaussian elimination. The general description of how to treat the problem (1.1)
+as an inference problem together with the basic terminology and main facts about
+GaBP are introduced in section 2. In subsection 2.3 we introduce GaBP that can
+be used for nonsymmetric matrices, prove consistency of the proposed algorithm,
+and establish a sufficient condition for convergence in appendices SM1 and SM2. In
+section 3, the block version of GaBP is discussed. After the introduction of setdecomposition in subsection 3.1 we describe generalized GaBP from the statistical
+perspective in subsection 3.2 and as a block Gaussian elimination in subsection 3.3.
+Using the correspondence between generalized GaBP and elimination, we explain how
+to extend GaBP on nonsymmetric matrices in subsection 3.4. The consistency and
+sufficient condition for convergence are proved in sections SM3 and SM4. Section 4
+explains how to use GaBP within a multigrid scheme. Also, we here discuss smoothing
+properties and complexity. In section 5 we compare GaBP with classical iteration and,
+in context of multigrid, with a diverse set of standard smoothers including ILU(0),
+Chebyshev, and various pattern relaxation schemes. In section 6, we summarize the
+main results and discuss possible future research.
+2. GaBP.
+2.1. GaBP from the elimination perspective. To build intuition about
+GaBP, we consider connection with Gaussian elimination first. Ideas of this section
+are similar to those in [24], but the presentation is more straightforward and, after
+appropriate modifications (see subsection 2.3), applies to nonsymmetric matrices as
+well.
+To illustrate the main ideas, consider a linear problem Ax = b with the matrix
+and right-hand side defined as
+
+
+A11
+0
+A13
+0
+0
+ 0
+A22 A23
+0
+0 
+
+
+5
+
+0
+A35 
+A = A31 A32 A33
+(2.1)
+, b ∈ R .
+ 0
+
+0
+0
+A44 A45
+0
+0
+A53 A54 A55
+For simplicity, require that A be positive definite and that all elements of A, not
+explicitly indicated as zeros, be nonzero.
+To obtain GaBP rules, we introduce a graph of the matrix (2.1). For this section,
+it is sufficient to associate the set of vertices with the set of diagonal terms and the
+collection of edges with nonzero entries Aij , i ̸= j. One can find the resulting graph
+in Figure 1. The correspondence between graphs and matrices is discussed in detail
+in subsection 2.2 and subsection 2.3.
+Suppose we want to calculate variable x5 . To do it, we exclude variables x1 , x2
+from the equation for x3 and then eliminate variables x3 , x4 from the equation for x5 :
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+A80
+
+VLADIMIR FANASKOV
+
+5
+
+3
+
+M53
+
+M54
+
+3
+
+4
+
+M31
+
+M32
+
+1
+
+2
+
+M31
+
+M35
+M32
+
+1
+
+5
+
+2
+
+M54
+4
+
+(a)
+
+(b)
+
+Fig. 1. Both (a) and (b) sketch the graph, corresponding to the matrix A from (2.1). We use
+Mji to represent the pair of messages (Λji , µji ) (see (2.4)) from the node i to j. Panels (a) and (b)
+show different orders of elimination. For example, in the case of (a) one first excludes x1 and x2
+from the equation for x3 and then solves resulting equation to obtain x5 .
+
+
+
+(2.2a)
+
+
+A31 A13
+A31 b1
+A32 A23
+A32 b2
+;
+A33 −
+x3 + A35 x5 = b3 −
+−
+−
+A11
+A22
+A11
+A22
+{z
+}
+|
+{z
+}
+|
+=e
+b3
+
+e33
+=A
+
+
+(2.2b)
+
+A55 −
+
+A53 A35
+A54 A45
+−
+e
+A44
+A33
+
+
+x5 = b5 −
+
+A54 b4
+A53eb3
+−
+.
+e
+A44
+A33
+
+Figure 1(a) captures this particular elimination order. In the same vein, to find x3
+one may follow the order presented in Figure 1(b). The resulting equations are
+
+
+A53 b4
+A54 A45
+(2.3a)
+x5 + A53 x3 = b5 −
+;
+A55 −
+A44
+A
+{z 44 }
+|
+{z
+}
+|
+e55
+=A
+
+(2.3b)
+
+=e
+b5
+
+
+
+A35 A53
+A31 A13
+A32 A23
+A31 b1
+A32 b2
+A35eb5
+A33 −
+−
+.
+−
+x3 = b3 −
+−
+−
+e55
+e55
+A11
+A22
+A11
+A22
+A
+A
+
+From these calculations, one can make two observations:
+1. In the course of elimination one successively changes the diagonal elements
+Ajj and the right-hand side bj .
+2. The exclusion schemes in Figure
+1(a) and(b) share the same
+
+ computations.
+For example, terms A31 A13 A11 , A32 A23 A22 , and A54 A45 A44 appear on
+the way to (2.3b) as well as to (2.2b). It would be more advantageous to reuse
+the same computations, not to redo them each time one needs to eliminate a
+variable.
+The first observation suggests that one can introduce corrections to the diagonal terms
+and bj that come from the elimination of variable i. For the sake of convenience, we
+denote them Λij and µij Λij , respectively. For example, (2.2a) becomes
+(2.4)
+
+(A33 + Λ13 + Λ23 ) x3 + A35 x5 = b3 + Λ23 µ23 + Λ13 µ13 .
+
+Since corrections are the same for any order of elimination, to reuse them, we can
+regard Λij and µij as a message that node i sends to node j along the edge of the
+graph. Once computed, these messages are in use in expressions like (2.4) and (2.5).
+To complete rewriting the elimination in terms of messages, one needs to introduce
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+GAUSSIAN BELIEF PROPAGATION SOLVERS
+
+A81
+
+the rules to update messages when a new variable is excluded. To derive the rules,
+we rewrite (2.2b) using the definition of messages
+(2.5)
+
+(A55 + Λ35 + Λ45 ) x5 = b5 + Λ35 µ35 + Λ45 µ45 .
+
+Now, the elimination step that leads from (2.2a) to (2.2b) can be written in the form
+of a message update rule using the definition of Λ35 , Λ35 µ35 , and (2.4):
+(2.6)
+
+Λ53 = −
+
+b3 + Λ31 µ31 + Λ32 µ32
+A35 A53
+, µ53 =
+.
+A33 + Λ31 + Λ32
+A35
+
+It is easy to see that one needs to accumulate all messages from neighbors of i except
+for j to send the message from node i to node j. The solution can be computed from
+all incoming messages as follows:
+P
+bj +
+Λkj µkj
+k∈neighbors of j
+P
+(2.7)
+.
+xj =
+Ajj +
+Λkj
+k∈neighbors of j
+
+Note that (2.3) and (2.2) have exactly this form. Equations for the update of messages
+that we deduced in this section coincide with the GaBP update rules given by (2.17),
+which are derived from the probabilistic perspective below.
+To summarize, the GaBP rules can be understood as a scheme that propagates
+messages on the graph, corresponding to the matrix of the linear system under consideration. These messages, namely, Λji and µji , represent the corrections to the
+diagonal terms of matrix A and to the right-hand side b, resulting from the elimination of variable xi from the jth equation, Ajj xj + Aji xi + · · · = bj . Consistency,
+convergence, stopping criteria, and other practical matters are discussed in the following two sections.
+2.2. Conventional belief propagation. Here we give a more traditional introduction to GaBP as a technique for statistical inference in graphical models. Following
+[4], [29], we reformulate (1.1) as an inference problem. For this purpose, consider a
+small subset of undirected graph models that are known as Gauss–Markov random
+fields. First, we define a pairwise Markov random field. The graph Γ is the set of
+edges E and vertices V. Each vertex i corresponds to the random variable xi (discrete
+or continuous), and each edge corresponds to interactions between variables. The set
+of nonnegative integrable functions {ϕi , ψij } together with the graph Γ completely
+specifies the form of the probability density function of a pairwise Markov random
+field:
+Y
+1 Y
+1
+p(x) =
+(2.8)
+ϕi (xi )
+ψij (xi , xj ) ≡ exp (−E(x)) .
+Z
+Z
+i∈V
+
+(ij)∈E
+
+Here, Z is a normalization constant (known in statistical physics as a partition function). The second equation in (2.8) (that is, the Gibbs distribution) should be considered as a definition of energy E(x). The Gauss–Markov random field is a particular
+instance of a pairwise Markov model with a joint probability density function given
+by a multivariate normal distribution:
+!
+
+
+1
+xT Ax
+T
+−1
+−1
++ b x ≡ N x|A b, A
+(2.9)
+p(x) = exp −
+,
+mean covariance
+Z
+2
+matrix
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+A82
+
+VLADIMIR FANASKOV
+
+where A is a symmetric positive-definite matrix. The edges of Γ correspond to the
+nonzero Aij , and note that the splitting of the product in (2.8) into ϕi and ψij is
+not unique. A common task in the inference P
+process is a computation of a partial
+distribution (or a marginalization) pr (xr ) = x\xr p(x). Integrals replace sums if
+x ∈ RN . For the Gauss–Markov model, marginal distributions are known explicitly.
+For individual components of the vector x, which is distributed according to (2.9),
+one can obtain distributions in closed form:
+
+ 
+pi (xi ) = N xi | A−1 b i , A−1 ii ≡ N (xi |µi , βi ) .
+(2.10)
+As the means of marginal distributions for the model (2.9) coincide with the elements
+of the solution vector for (1.1), methods from the domain of probabilistic inference
+can be applied directly to obtain the solution.
+A popular algorithm that exploits the structure of the underlying graph to find the
+marginal distribution efficiently is Pearl’s belief propagation [23]. Pearl’s algorithm
+operates with local messages that spread from node to node along the graph edges,
+and beliefs (approximate or exact marginals) are computed as a normalized product
+of all incoming messages after the convergence. More precisely, belief propagation
+consists of (i) the message update rule
+Y
+X
+(2.11)
+mij (xj ) ←
+ϕi (xi )ψij (xi , xj )
+mki (xi ),
+xi
+
+k∈N (i)\j
+
+where mij is a message from node i to node j and N (i) is the set of neighbors2 of the
+node i, and (ii) the formula for marginals
+Y
+(2.12)
+bi (xi ) ∼ ϕi (xi )
+mki (xi ).
+k∈N (i)
+
+Although for continuous random variables the problem of marginalization and the
+algorithm of belief propagation are harder in general, it is not the case for the normal
+distribution. Namely, for the Gauss–Markov model, one can parametrize messages in
+the form of the normal distribution,
+!
+2
+Λji (xi − µji )
+(2.13)
+,
+mji (xi ) ∼ exp −
+2
+and derive a message update rule directly from (2.11) using message parametrization
+and (2.12). However, to gain additional intuition we use only (2.12) and the consistency condition. Consider two variables xi and xj such that Aij ̸= 0. According to
+(2.12) the joint probability density function is multivariate normal:
+P
+ 
+
+
+
+bi + k∈N (i)\j Λki µki
+xi
+P
+b (xi , xj ) = N
+m, Σ , Σ−1 m =
+,
+xj
+bj + k∈N (j)\i Λkj µkj
+(2.14)
+P
+
+
+Aii + k∈N (i)\j Λki
+Aij
+−1
+P
+Σ =
+.
+Aji
+Ajj + k∈N (j)\i Λkj
+2 Here we work with a pairwise Markov random field, so there is a underlying undirected
+graph Γ = {V, E}. For such graph, the number of neighbors for node i is defined as N (i) =
+{j : j ∈ V, ∃(i, j) = (j, i) ∈ E}.
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+A83
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+GAUSSIAN BELIEF PROPAGATION SOLVERS
+
+Joint probability density (2.14) also prescribes probability density functions for individual variables:
+b(xi ) = N (xi |m11 , Σ11 ) , b(xj ) = N (xj |m22 , Σ22 ) .
+
+(2.15)
+
+On the other hand, we can compute the probability density function for xj applying
+(2.12) directly, which gives
+(2.16)
+
+X
+X
+m
+= bj +
+Λkj µkj , Σ = Ajj +
+Λkj .
+Σ
+
+b(xj ) = N (xj |m, Σ) ,
+
+k∈N (i)
+
+k∈N (j)
+
+Since b(xj ) is the same in (2.15) and (2.16) we conclude that m22 = m and Σ = Σ22 .
+We see that (2.15) does not contain Λij , µij as well as Λji , µji , so using (2.16) we
+can express Λji and µji as a function of other messages and interpret this relation as
+(k)
+(k)
+an update rule. Namely, we supplement messages with superscripts Λji , µji that
+correspond to iteration k and from the consistency condition m22 = m, Σ = Σ22 find
+the following update rules:
+
+(n+1)
+
+µji
+
+(n) (n)
+
+P
+
+bj +
+
+Λkj µkj
+
+k∈N (j)\i
+
+=
+
+(n+1)
+
+, Λji
+
+Aji
+
+=−
+Ajj +
+
+Aij Aji
+P
+
+(n)
+
+;
+
+Λkj
+
+k∈N (j)\i
+
+(2.17)
+bi +
+(n)
+µi
+
+=
+
+(n) (n)
+Λji µji
+
+P
+j∈N (i)
+
+Aii +
+
+P
+
+(n)
+
+(n)
+Λji
+
+, βi
+
+= Aii +
+
+X
+
+(n)
+
+Λji .
+
+j∈N (i)
+
+j∈N (i)
+
+From the derivation of the update rules it is clear that the only role of messages
+is to enforce the consistency condition, that is, to make sure that b(xi , xj ) =
+R
+dxi b(xi , xj ).
+These update rules correspond to the fully parallel schedule such that at the
+current iteration step, each node sends messages to all its neighbors based on messages
+received at the previous step. Equations for the mean and precision should be put to
+use only after saturation according to some criteria, for example, |µ(n+1) − µ(n) | ≤
+tolerance, and the same for Λ. Rules (2.17) are collectively known as GaBP.
+Belief propagation was designed to give an exact answer if Γ has no loops. In
+the presence of loops, the result appears to be approximate if delivered at all. In the
+case of GaBP, the situation is more optimistic. We briefly recall some useful facts
+about GaBP that we discuss later in more detail. If GaBP converges on the graph
+of arbitrary topology, the means are exact, but variances can be incorrect [35]. The
+best sufficient condition for convergence of the Gauss–Markov model with symmetric
+positive-definite matrix can be found in [20]; we discuss it later in greater detail. The
+fixed point of GaBP is unique [17]. On the tree, GaBP is equivalent to Gaussian
+elimination [24].
+Many different schemes that extend belief propagation and GaBP have been developed ([40], [10], [32], [21], [11]). Here, we are mainly interested in generalized belief
+propagation proposed in [40] and subsequently developed in [39], [38], [41]. This new
+algorithm is significantly more accurate [41, Figure 15] than Pearl’s algorithm, but at
+the same time it can be computationally costly. In what follows, we show how to use
+the generalized belief propagation in the context of numerical linear algebra.
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+A84
+
+VLADIMIR FANASKOV
+
+2.3. GaBP for a nonsymmetric linear system. As explained in subsection 2.1, the GaBP rules can be understood as corrections to the right-hand side
+and the diagonal elements of the matrix under successive elimination of variables. It
+means that in principle, one can apply the rules to solve at least some nonsymmetric
+systems. However, there are two problems specific to the nonsymmetric case. First,
+it is possible to have Aij = 0 and Aji ̸= 0. In this case, rules (2.17) lead to singularity
+as Aij appears in the denominator. Since parametrization of messages is not unique
+from both the elimination and probabilistic perspectives, it is possible to define a new
+
+e and m as follows: m(n) ≡ µ(n) Λ(n) , Λ
+e (n) ≡ Λ(n) Aji . Note that
+set of messages Λ
+ji
+ji
+ji
+ji
+ji
+this reparametrization has a problem in that it is not one-to-one if Aji = 0. However,
+a quick look at (2.2), (2.3) makes clear that indeed it is possible to define messages
+in that way. That is, if Ajk = 0, one does not need to eliminate xk from the second
+equation, so the message Λkj is indeed zero.
+Second, the undirected graph used to derive rules (2.17) is unsuitable for nonsymmetric matrices. To establish rules for given nonsymmetric matrix A ∈ RN ×N ,
+we construct a directed graph with N vertices v ∈ V corresponding to the variables
+x1 , . . . , xN and the set of directed edges E. The edge pointing from the vertex j to
+the vertex i belongs to the set of edges iff Aij ̸= 0, i.e., Aij ̸= 0 ⇔ eji ∈ E. The
+example is given in Figure 2. We also define a set of in-neighbors and out-neighbors
+as Nin (i) = {k : k ∈ V, eki ∈ E} and Nout (i) = {k : k ∈ V, eik ∈ E}. For example,
+Nin (1) = {2, 4} and Nout (1) = {3, 4} for the matrix in Figure 2.
+The direction of edges is chosen to coincide with a flow of messages. Indeed,
+from subsection 2.1 we know that for variable xi the elimination of variable xj can
+be regarded as a message sent from j to i that contains Aij , which, according to
+our definitions, is related to the directed edge eji . This observation allows us to put
+forward a modified form of update rule,
+
+(2.18)
+
+(n+1)
+mji
+
+=
+
+e (n+1)
+Λ
+ji
+
+
+X
+
+bj +
+
+(n)
+mkj  ,
+
+e (n+1) = −
+Λ
+ji
+
+k∈Nin (j)\i
+
+Ajj +
+
+Aij
+P
+
+e (n) Akj
+Λ
+kj
+
+,
+
+k∈Nin (j)\i
+
+and the expression for the approximate solution,
+(n)
+
+(2.19)
+
+µi
+
+(n)
+
+P
+
+bi +
+
+mji
+
+j∈Nin (i)
+
+=
+Aii +
+
+P
+
+(n)
+
+e (n) Aji
+Λ
+ji
+
+, βi
+
+
+
+6
+0
+A=
+0.3
+0.2
+
+0.3
+5
+0
+0
+
+0
+0.5
+7
+0.1
+
+
+0.7
+0
+
+0.4
+6
+
+e (n) Aji .
+Λ
+ji
+
+j∈Nin (i)
+
+j∈Nin (i)
+
+2
+
+X
+
+= Aii +
+
+0.5
+
+3
+
+0.3
+0.3
+
+0.1
+
+0.4
+
+0.7
+1
+
+14
+
+123
+
+34
+
+1
+
+4
+
+3
+
+4
+0.2
+
+(a)
+
+(b)
+
+(c)
+
+Fig. 2. The figure exemplifies the correspondence between nonsymmetric matrix A given in
+(a) and a directed graph in (b); (c) contains a region graph corresponding to the partition P =
+{{1, 2, 3} , {1, 4} , {3, 4}} (see subsection 3.1). Note that the direction of edge eij corresponds to the
+entry Aji . In Algorithm 2.1 we use a graph to represent a sparsity pattern of A and do not use
+directed weighted graphs. Weights on this figure are given for the sake of illustration.
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+GAUSSIAN BELIEF PROPAGATION SOLVERS
+
+A85
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+Algorithm 2.1. GaBP for a nonsymmetric linear system.
+1:
+2:
+
+Input: invertible matrix A, vector b.
+Output: approximate solution x.
+
+3:
+4:
+5:
+6:
+7:
+
+12:
+
+e = 0, m = 0.
+Form directed graph G = {V, E} based on A, initialize Λ
+while not converge do
+for j ∈ V do
+m = bj , Λ = Ajj
+for k ∈ Nin (j) do
+e kj Akj
+m = m + mkj , Λ = Λ + Λ
+end for
+xj = m Λ
+for k ∈ Nout (j) 
+do
+
+
+e
+e kj Akj , mjk = Λ
+e jk (m − mkj )
+Λjk = −Akj Λ − Λ
+
+13:
+14:
+15:
+
+end for
+end for
+end while
+
+8:
+9:
+10:
+11:
+
+(n+1)
+
+Note that mji
+in (2.18) corresponds to the edge (j, i) of directed graph Γ. The
+form of update that put more emphasis on the structure of the underlying directed
+graph appears in Algorithm 2.1.
+Algorithm 2.1 is sequential but can run in parallel after some modifications. The
+parallel version can be discussed in two contexts.
+The first parallel version is related to the order of message update. In Algorithm 2.1 index j in the first for-loop (line 5) also defines the iteration number (n)
+in rules (2.17). That is, vertex k = 2 receives messages from j = 1 if there is an
+edge (1, 2). Said another way, messages are used immediately after they are updated.
+e (n+1) ,
+Instead of the “in-place” update of messages we can write the new messages Λ
+m(n+1) in different containers. The resulting algorithm is related to Algorithm 2.1 as
+Jacobi iteration is related to Gauss–Seidel iteration.
+The other option is to consider a parallel version of Algorithm 2.1 with no modification. To do that, one needs to use specific techniques for parallel computations
+on graphs. Relevant details can be found in [14]. We further discuss the parallel
+properties of solvers in subsection 5.1.
+The stopping criteria, not specified in Algorithm 2.1, can be chosen in many
+different ways. For example, it is possible to use some norm of residual, e1 ≡ ∥b −
+e (n+1) − Λ
+e (n) ∥,
+Ax(n) ∥, or e2 ≡ max(e3 , e4 ), where e3 ≡ ∥m(n+1) − m(n) ∥, e4 ≡ ∥Λ
+and stop when ei ≤ tolerance, i = 1, . . . , 4.
+e decouples from the one for m. So it is possible to
+Note that the update of Λ
+e and returns diagonal elements
+construct an algorithm that computes only messages Λ
+for the inverse matrix. Later, these messages can be used in the course of all successive
+iterations if one resorts to the error correction scheme. We discuss how an algorithm
+of this kind can be utilized to decrease the number of floating point operations in the
+context of a multigrid scheme.
+One of the central results of the present work is that two classical theorems
+from GaBP theory, summarized below, can be readily established for nonsymmetric
+matrices.
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+A86
+
+VLADIMIR FANASKOV
+(N +k)
+
+(N ) e (N +k)
+e (N ) for
+= mij , Λ
+=Λ
+ij
+ij
+
+= A−1 b i .
+
+Theorem 2.1. If there is N ∈ N such that mij
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+(N +k)
+
+all eij ∈ E and for any k ∈ N, then µi
+
+(N )
+
+= µi
+
+The analogous result for symmetric matrices first appeared in [35]. In section
+SM1, we show how to extend the proof for the nonsymmetric case.
+f = (1 − δij ) |Aij | , and ρ(|R|)
+f < 1, then
+Theorem 2.2. If Aii ̸= 0 for all i, |R|
+ij
+|Aii |
+−1
+Algorithm 2.1 converges to the solution x = A b for arbitrary b.
+A sufficient condition for symmetric positive-definite matrices was established in
+[20]. Section SM2 contains the proof with necessary modifications that holds for
+nonsymmetric matrices. It should be noted that we do not provide a necessary and
+sufficient condition for GaBP convergence or the convergence rate. The reason is
+that unlike classical linear iterative methods like Gauss–Seidel and Jacobi, GaBP
+cannot be presented in a form x(n+1) = M x(n) + N b. We will see in section 4 that
+GaBP modifies matrices M and N . Namely, GaBP can be presented as x(n) =
+M (n) x(0) + N (n) b, where M (n) and N (n) depend on entries of A, iteration n, and do
+not depend on x(0) . As such, standard tools for analysis of iterative methods cannot
+be applied. We further discuss the matter in subsection 4.1.
+To make connections with the classical theory of iterative methods, we give another (less general) sufficient condition.
+Corollary 2.3. If A is an M -matrix (defined in the proof below; see also [27,
+Definition 1.30, Theorem 1.31]), Algorithm 2.1 converges to the solution x = A−1 b
+for any b.
+Proof. A is an M -matrix if ρ(I − D−1 A) < 1, Aij ≤ 0, i ̸= j, and Aii > 0, where
+e = I − D−1 A = |R|
+e and ρ(|R|)
+e < 1.
+D is a diagonal of A. It means that R
+3. Generalized GaBP solvers. One way to generalize classical iterative methods like Jacobi and Gauss–Seidel is to consider a partition of the matrix, right-hand
+side, the solution vector on p blocks
+
+ 
+ 
+
+A11 . . . A1p
+b1
+x1
+ ..
+
+
+
+
+.
+.
+..  , b =  ..  , b =  ... 
+(3.1)
+A= .
+,
+Ap1
+
+...
+
+App
+
+bp
+
+xp
+
+to apply the splitting of choice and form a consistent iteration. The resulting iteration
+is called a block-relaxation scheme. For example, block Jacobi iteration reads
+
+
+p
+X
+(n+1)
+(n)
+(n)
+−1
+(3.2)
+xi
+= xi + (Aii ) bi −
+Aij xj  , i = 1, . . . , p.
+j=1
+
+Block iterative methods typically converge faster and serve as better smoothers for
+multigrid schemes (see [27, section 4.1.1] for a general description of block-relaxation
+methods and [33, Chapter 5] for application in multigrid).
+GaBP iteration considered previously can be generalized in the same way. In this
+section we construct a block version of GaBP.
+3.1. Set-decompositions and the region graph. In the case of GaBP the
+analogue of blocks described above is given by a set-decomposition. Namely, having
+variable set S = {1, . . . , N } we define a collection of subsets P = {Si : i = 1, . . . , p}
+such that Si ⊂ S and ∪pi=1 Si = S. In principle, GaBP can be applied with a
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+GAUSSIAN BELIEF PROPAGATION SOLVERS
+
+A87
+
+sufficiently general set-decomposition, but the rules for message update become cumbersome (see [41] for details). Because of that we consider only partitions that obey
+the following rules:
+1. For arbitrary k = 1, . . . , p there is no l = 1, . . . , p, l ̸= k such that Sk ⊂ Sl .
+2. For arbitrary i = 1, . . . , p, j = 1, . . . , p the intersection is not in the setdecomposition Si ∩ Sj ∈
+/ P.
+3. If Aij ̸= 0 there is a subset in P that contains both i and j, i.e., there exists
+k : {i, j} ⊂ Sk .
+4. The intersection of two arbitrary subsets αjk ≡ Sj ∩ Sk cannot be a subset of
+any other distinct intersection αlm , i.e., for all j = 1 . . . , p, for all k = 1, . . . , p
+there is no l = 1, . . . , p, m = 1, . . . , p such that (Sj ∩ Sk ) ⊂ (Sl ∩ Sm ) given
+that among Sj , Sk , Sl , Sm there are at least three distinct subsets.
+A set-decomposition is called admissible if it obeys the rules above. We postpone the
+intuitive explanation of these technical requirements to the next section where the
+consistency condition will be introduced.
+To exemplify the application of the rules above, we consider five set-decompositions
+for the matrix given in Figure 2:
+P1 = {{1, 2, 3} , {1, 4} , {3, 4} , {1, 3}} , P2 = {{1, 2, 3} , {1, 3, 4} , {1, 3}} ,
+(3.3) P3 = {{1, 2} , {1, 4} , {3, 4} , {2, 3}} , P4 = {{1, 2} , {1, 3} , {2, 3, 4} , {1, 3, 4}} ,
+P5 = {{1, 2, 3} , {1, 3, 4}} .
+Set-decomposition P1 breaks the first rule because {1, 3} ⊂ {1, 2, 3}. If one removes
+set {1, 3} the decomposition becomes valid. The second set-decomposition P2 is not
+apt because the intersection of the first and the second sets gives the third set. Setdecomposition P3 is not valid according to the third criterion because it does not
+contain a set that includes {1, 3} as a subset, despite the fact that A31 ̸= 0. The
+fourth set-decomposition P4 violates rule four because {1, 3} ∩ {2, 3, 4} = {3} ⊂
+{3, 4} = {1, 3, 4}∩{2, 3, 4}. The last decomposition P5 is admissible. In a more general
+version of GaBP described in [41] all set-decompositions excluding P2 can be used.
+Besides set-decomposition we need to define a region graph. For a given admissible
+set-decomposition P we define a collection of all intersections of subsets from P, i.e.,
+LP = {S1 ∩ S2 : S1 ̸= S2 , S1 ∈ P, S2 ∈ P}. Next, we define a set of vertices VR such
+that there is a one-to-one correspondence between each set from P ∪ LP and a given
+vertex, i.e., if v ∈ VR there is S ∈ P ∪ LP such that v ∼ S. Finally, we define a
+set of directed edges ER such that eij ∈ ER iff Sj ⊂ Si . So, we call a directed graph
+R = {VR , ER } a region graph of a given admissible set-decomposition. The region
+graph is illustrated in Figure 2(c).
+For convenience we also define two additional sets:
+1. P (i) ≡ {vj : vj ∈ VR , eji ∈ ER } is a set of parents of vertex i ∈ VR .
+2. C(i) ≡ {vj : vj ∈ VR , eij ∈ ER } is a set of children of vertex i ∈ VR .
+For example, for a region graph in Figure 2(c) we can find C(1) = {∅}, P (1) =
+{{1, 4} , {1, 2, 3}}, C(123) = {{1} , {3}}.
+We use the same notation for the variable sets:
+1. P (a) ≡ {b : a ̸= b, a ⊂ b, b ∈ P ∪ LP }.
+2. C(a) ≡ {b : a ̸= b, b ⊂ a, b ∈ P ∪ LP }.
+Lastly, for a variable set b ∈ P ∪ LP we define a block matrix Ab : (Ab )ij =
+Aij , i, j ∈ b. So, for the other variable set c we can find (Ab )c = Ab∩c . The last
+expression is defined iff b ∩ c ̸= ∅. The same notation is used for vectors.
+3.2. Message update rules for the generalized GaBP. In this section we
+suppose that a pairwise Markov random field (2.9) is given along with its graph
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+A88
+
+VLADIMIR FANASKOV
+
+Γ = {V, E} (see subsection 2.2). Besides that we use an arbitrary admissible setdecomposition P.
+As we discussed Rin subsection 2.2, messages for GaBP enforce consistency, i.e.,
+ensure that b(xj ) = dxi b(xi , xj ). Based on this idea the messages are defined for
+a generalized GaBP (see [41, equation 114]). Namely, variables in the set a receive
+message Rfrom variables in the set b iff a ⊂ b, because in this case we should have
+b(xa ) = dxb\a b(xb ). So, messages propagate along edges of region graph defined in
+the previous section. Following the case of GaBP we parametrize messages from b to
+a as multivariate normal variables:
+!
+T
+(xa − µba ) Λba (xa − µba )
+(3.4)
+.
+mba (xa ) ∼ exp −
+2
+Each message is uniquely defined by the precision matrix Λba and the mean vector
+µba .
+We also define a belief for a set of variables a from the intersection a ∈ LP as
+Y
+Y
+Y
+(3.5)
+b(xa ) ∼
+ϕi (xi )
+ψi (xi , xj )
+mba (xa )
+i∈a
+
+i,j∈a, (i,j)∈E
+
+b∈P (a)
+
+and a belief for a set of variables c from the set-decomposition f ∈ P:
+Y
+Y
+Y
+(3.6)
+b(xf ) ∼
+ϕi (xi )
+ψi (xi , xj )
+mda (xa ).
+i∈f
+
+i,j∈f, (i,j)∈E
+
+d∈P (a)\f, a∈C(f )
+
+Note that variables f do not receive messages directly because there is no d such
+that c ⊂ d. However, because f and d may contain joint a, belief b(xf ) depends on
+messages sent from d to a.
+R
+Suppose a ⊂ f ; then a consistency condition is simply b(xa ) = dxf \a b(xf ).
+Since all variables are multivariate normal, we can derive a compact expression for
+belief (3.5):
+(3.7)
+b(xa ) = N (xa |Σa µa , Σa ) , Σ−1
+a = Aa +
+
+X
+
+Λda , µa = ba +
+
+d∈P (a)
+
+X
+
+Λda µda .
+
+d∈P (a)
+
+The expression for (3.6) is slightly more complex:
+(3.8)
+
+b(xf ) = N xf Σf µf , Σf ,
+
+
+∀a ∈ C(f ) : Σ−1
+= Af ∩a +
+f
+a
+
+
+
+Σ−1
+f
+
+
+f \∪a∈C(f ) a
+
+X
+
+X
+
+Λda , µf ∩a = bf ∩a +
+
+d∈P (a)\f
+
+Λda µda ,
+
+d∈P (a)\f
+
+= Af \∪a∈C(f ) a , µf \∪a∈C(f ) a = bf \∪a∈C(f ) a .
+
+From the standard identities for multivariate normal distribution
+we can conclude that
+
+the consistency condition gives (Σf )a = Σa and Σf µf a = Σa µa . So, introducing
+the iteration index n, we obtain the following message update rules:
+
+ −1
+(n+1)
+(n)
+(n)
+Λf a
+= Λf a + Σf
+− Λ(n)
+a ,
+a
+(3.9)
+
+ −1 
+
+(n+1) (n+1)
+(n) (n)
+(n)
+(n) (n)
+Λf a µf a
+= Λf a µf a + Σf
+Σf µ f
+− µ(n)
+a ,
+a
+
+a
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+A89
+
+GAUSSIAN BELIEF PROPAGATION SOLVERS
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+(n)
+
+(n)
+
+(n)
+
+−1
+where Λ(n)
+= (Σ(n)
+, Σ(n)
+with µa are defined as in (3.7), and Σf with µf
+a
+a )
+a
+are as in (3.8).
+We want to emphasize three points about message update rules (3.9). First, in
+the case when P consists of all sets {i, j} : Aij ̸= 0, rules (3.9) reduce to (2.17) (see
+[40]). Second, to compute updated messages one needs to perform three potentially
+(n) (n)
+computationally intensive operations: solve linear system Σf µf , find a diagonal
+(n)
+
+subblock of the inverse matrix (Σf )a , and invert this subblock. To still have a
+complexity O(N ) per iteration we must restrict ourselves to a particular partition for
+which matrix Σf has simple structure that enables us to perform the above operations
+with reasonable computational complexity. In what follows we will chose f in such
+(n)
+a way that Σf is a tridiagonal matrix. Third, the validity of the presented rules
+for nonsymmetric linear problems does not follow from the derivation above. In the
+two following sections we will show that (3.9) can be applied to the nonsymmetric
+problems as well.
+At this stage it is appropriate to clarify the meaning of requirements for setdecomposition given in subsection 3.1. The first requirement simply reduces the
+number of unnecessary operations. When we compute a distribution p(xf ) of larger
+set f we do not need to send a message to the subset u because the computation
+of p(xu ) is trivial. The same is true for the second condition because we obtain a
+distribution for the intersection of the two sets as a byproduct of rules (3.9). The
+third condition ensures that partition captures the whole structure of A. Suppose the
+third condition fails for some pair i, j : Aij ̸= 0. This would mean that Aij never
+appears in the rules defined in subsection 3.1, so we cannot guarantee that marginal
+distribution are correct. The last condition allows us to obtain compact update rules
+(3.9) (see [41] for more general result).
+3.3. Elimination perspective. To motivate the applicability of (3.9) to a nonsymmetric system we consider the following block matrix, right-hand-side vector, and
+the solution vector:
+
+ 
+ 
+
+b1
+x1
+A11 A12
+0
+(3.10)
+A = A21 A22 A23  , b = b2  , x = x2  .
+0
+A32 A33
+b3
+x3
+If A33 is invertible we can exclude x3 from the second equation and obtain the modified system
+(3.11)
+
+A11
+A=
+A21
+
+
+ 
+b1
+A12
+e 22 = A22 − A23 A−1 A32 , e
+, A
+b2 = b2 − A23 A−1
+33
+33 b3 .
+e 22 , b = e
+A
+b2
+
+Now, let α and β be variable sets such that xα = x1 x2
+It is easy to find the first messages from β to β ∩ α are
+
+T
+
+and xβ = x2
+
+x3
+
+T
+
+.
+
+(3.12)
+ 
+b2 ,
+Λβ β∩α µβ β∩α = A22 −
+B
+− b2 = −A23 A−1
+33 b3
+b3
+β∩α
+
+
+A22 A23
+−1
+Λβ β∩α = B −1
+−
+A
+=
+−A
+A
+A
+,
+B
+=
+,
+22
+23 33
+32
+β∩α
+A32 A33
+A23 A−1
+33 A32
+
+
+
+
+
+−1
+
+where we use zero starting messages, (3.9), and standard formulæ for block matrix
+inverse.
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+A90
+
+VLADIMIR FANASKOV
+
+As we can see, messages coincide with corrections that the second equation receives when the third variable is eliminated. Since Gaussian elimination works for
+nonsymmetric matrices, the results of this section suggest that we can use generalized
+GaBP for nonsymmetric matrices.
+3.4. Generalized GaBP for a nonsymmetric linear system. Based on the
+considerations above we formally define Algorithm 3.1. A few comments are in order.
+First, line 14 of Algorithm 3.1 contains Λ−1
+v which should not be considered literally.
+Because only diagonal subblocks of Λ−1
+are
+used later, it is preferable to compute and
+v
+store only them. Second, Algorithm 3.1 is sequential. The most natural parallelization
+strategy is to compute mu such that C(u) = ∅ and after that update messages from
+v : C(v) ̸= ∅. We use this strategy in line GaBP smoothers in section 5. Third, the
+computational complexity of Algorithm 3.1 strongly depends on set-decomposition P
+and matrix A. We provide estimates for a concrete partition in subsection 4.2.
+Algorithm 3.1 can be justified theoretically on the basis of the following two
+theorems.
+(N +k)
+
+(N )
+
+(N +k)
+
+(N )
+
+= Λe for
+= me , Λe
+Theorem 3.1. If there is N ∈ N such that me
+all e ∈ ER and for any k ∈ N, then for each set v : C(v) ̸= ∅ we obtain Λ−1
+v mv =
+A−1 b v (see Algorithm 3.1 for details).
+That is, the steady state of the message flow, if it exists, corresponds to the exact
+solution. The proof is given in section SM3.
+For the sufficient condition for convergence we need to construct a particular
+block matrix based on set-partition P and matrix A. First, we define a set of variable
+subsets:
+
+(3.13)
+F ≡ L ∪ S\ ∪a∈C(S) a : S ∈ P .
+Algorithm 3.1. Generalized GaBP for a nonsymmetric linear system.
+1:
+2:
+3:
+4:
+5:
+6:
+7:
+8:
+9:
+10:
+11:
+12:
+13:
+14:
+15:
+16:
+17:
+18:
+19:
+
+Input: invertible matrix A, vector b, admissible set-decomposition P .
+Output: approximate solution x.
+Form region graph R = {VR , ER } based on A and P , initialize Λe = 0, µe = 0
+for all e ∈ ER .
+while not converge do
+for v ∈ VR , C(v) ̸= ∅ do
+mv = bv , Λv = Av
+for u ∈ C(v) do
+mu = bu , Λu = Au
+for y ∈ P (u)\v do
+mu = mu + myu , Λu = Λu + Λyu
+end for
+(mv )u = (mv )u + mu , (Λv )u = (Λv )u + Λu
+end for
+−1
+xv = Λ−1
+v mv , Λv = Λv
+for u ∈ C(v) do
+−1
+−1
+Λvu = ((Λv )u ) − Λu , mvu = ((Λv )u ) (xv )u − mu
+end for
+end for
+end while
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+A91
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+GAUSSIAN BELIEF PROPAGATION SOLVERS
+
+Using F , we form a partition of the matrix A and the right-hand-side vector b:
+ 
+
+
+bi
+Aii Aij . . .
+bj 
+Aji Ajj . . .
+(3.14)
+A=
+,b =  ,
+..
+..
+..
+..
+.
+.
+.
+.
+where each diagonal block corresponds to the element of the set F . We also define
+(3.15)
+
+e ij = A−1 Aij ≡ Iij − R
+e ij ;
+A
+ii
+
+e
+R
+
+ij
+
+e i = A−1 bi .
+e ij , b
+≡ R
+ii
+
+Note that the first equality after the semicolon in the preceding equation contains a
+e which depends on the operator norm ∥ · ∥ (see [19, Chapter
+definition of matrix ∥R∥,
+5, Definition 5.6.3]).
+The following statement gives sufficient conditions for convergence.
+Theorem 3.2. If for matrix (3.14) which is based on partition (3.13) det Aii ̸=
+e < 1 in some operator norm, then two-layer generalized GaBP
+0 for all i and ρ(∥R∥)
+(Algorithm 3.1) converges to the exact solution x = A−1 b.
+The proof of this theorem appears in section SM4. From the second part of the
+argument in subsection SM4.2, one can deduce the following.
+Corollary 3.3. Generalized GaBP (Algorithm 3.1) converges whenever GaBP
+converges (Theorem 2.2) and all submatrices corresponding to the large blocks are
+invertible (see (3.13), (3.14)).
+The opposite does not hold. For example, consider a matrix
+
+
+10 1.5 2
+2
+0 2 0
+2
+4 2.5 0
+2 0 0
+ 
+
+2
+A11 A12
+3
+5
+0
+0 0 1
+
+
+ = A21 A22
+2
+0
+0
+10
+0.5
+1
+0
+A=
+
+
+(3.16)
+0
+2
+0 0.5 5 0 1
+A31 A32
+
+
+2
+0
+0
+1
+0 7 1
+0
+0
+1
+0
+1 1 2
+
+
+A13
+A23  ,
+A33
+
+A11 ∈ R3×3 , A22 ∈ R2×2 , A33 ∈ R2×2 .
+e defined in Theorem 2.2 equals ∼ 1.03,
+In this case, the spectral radius of matrix |R|
+3
+e defined by (3.15)
+and GaBP diverges. On the other hand, the spectral radius of ∥R∥
+and the partition given in (3.16) are smaller than those in l∞ and spectral norms [19,
+Examples 5.6.5 and 5.6.6] (see https://github.com/VLSF/GaBPsolvers for further
+details).
+4. GaBP as a smoother for the multigrid method. The most straightforward view on the geometric multigrid is to describe it as an acceleration scheme for
+classical iterative methods. For completeness, we briefly recall the main ideas.
+′
+The multigrid consists of four essential elements: a projection operator IVV :
+′
+′
+V → V (V , V are linear spaces) that reduces the number of degrees of freedom,
+′
+an interpolation operator IVV ′ : V → V that acts in the “inverse” way, a smoothing
+3 Note that the divergence of GaBP does not follow from R
+e > 1 as Theorem 2.2 provides only
+sufficient conditions. For this particular case, the pathological behavior of GaBP follows from the
+numerical experiment (see https://github.com/VLSF/GaBPsolvers for details).
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+A92
+
+VLADIMIR FANASKOV
+
+operator SV : V → V which is usually a classical relaxation method, and a set of
+′
+linear operators AV ′ that approximate A on coarse spaces V . What we describe
+next is a two-grid cycle.
+• For the current approximation xn of solutions of Ax = b, one performs
+several relaxation steps x = Sν (xn , b, A).
+′
+• Then, based on properties of S, the linear space V and the transfer operator
+′
+′
+IVV : V → V are constructed. The purpose of this space is to represent
+the residual r = b − Ax and an error e = xexact − x accurately using fewer
+′
+degrees of freedom |V | < |V |.
+′
+′
+• Having the space V , one constructs an operator A that approximates A
+′
+′ ′
+and solves the error equation A e = IVV r.
+• The error, after projection back to V , gives the next approximation to the
+′
+exact solution, xn+1 = Sµ (xn + IVV ′ e , b, A).
+′
+
+′
+
+′
+
+The multigrid utilizes a two-grid cycle to solve the error equation A e = IVV r itself. It
+produces the chain of spaces (grids in the geometric setup), projection operators that
+allow moving between them, and a set of approximate linear operators. For more
+details, we refer the reader to other resources: a simple introduction to geometric
+multigrid can be found in [28, Chapter 13]; for the algebraic multigrid a recent review
+can be found in [37]; physical considerations about algebraic multigrid can be found
+in the introduction of [25]; and among other books on the subject, [33] provides a
+comprehensive introduction for practitioners.
+The smoother should be a mapping S : xn → xn+1 . Although GaBP is not of this
+form, one can use an error correction scheme as explained in Algorithm 4.1. The part
+“Apply k sweeps of Algorithm 2.1” means that one should replace a while-loop with a
+for-loop specifying k iterations. In the next two subsections we analyze properties of
+GaBP in the error correction regime (Algorithm 4.1) and estimate its computational
+complexity.
+4.1. GaBP in error correction scheme. As we discussed in subsection 2.3,
+GaBP modifies error propagation matrix M which makes the analysis of convergence
+nontrivial. Because in Algorithm 4.1 we perform a fixed predetermined number of
+sweeps, it is possible to exclude messages and find explicit representation of the GaBP
+(k)
+smoother. For convenience we write SGaBP (x, b, A) as a shortcut for k iterations of
+Algorithm 2.1 applied as a smoother Algorithm 4.1. Besides the sequential version
+of GaBP (Algorithm 2.1) we also consider a parallel version. In the parallel variant
+we compute all incoming messages simultaneously and do not transverse the graph
+node by node. The difference between sequential and parallel GaBP is similar to the
+difference between multiplicative and additive solvers.
+For the parallel version of Algorithm 2.1 the following result holds.
+Lemma 4.1. Parallel GaBP with k = 1, 2 iterations is equivalent to the following
+linear iteration:
+
+Algorithm 4.1. GaBP as a smoother.
+Compute a residual rn = b − Axn .
+Apply k sweeps of Algorithm 2.1 or Algorithm 3.1 to the linear system Ae = rn .
+Perform an error correction xn+1 = xn + eµ .
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+GAUSSIAN BELIEF PROPAGATION SOLVERS
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+(4.1)
+
+A93
+
+(k)
+
+Sparallel GaBP (x, b, A) = x + D(B (k) A)−1 B (k) (b − Ax),
+
+where D(B (k) A) is a diagonal part of B (k) A, B (1) = I, and B (2) = 2I − AD(A)−1 .
+We see that k = 1, 2 sweeps of parallel GaBP coincides with preconditioned Jacobi iteration where matrix B (k) serves as a preconditioner. It is certainly possible to
+exclude messages for k > 2, but the resulting smoother cannot be represented in a compact form. From the result Lemma 4.1 and the standard multigrid theory [33, sections
+2.1.2 and 4.3] we can conclude that smoothing properties of parallel GaBP are poor.
+For the sequential version of Algorithm 2.1 the following result holds.
+Lemma 4.2. Sequential GaBP with k = 1 iteration is equivalent to the following
+linear iteration:
+(4.2)
+
+(1)
+
+Ssequential GaBP (x, b, A) = x + L(C)−1 (b − Ax),
+
+where L(C) is a lower-triangular (diagonal is included) part of C, Cij = Aij for
+i ̸= j, and the diagonal elements of C are defined recursively as
+X
+
+i = 1 : C11 = A11 ; i > 1 : Cii = Aii −
+Aij Aji Cjj .
+(4.3)
+j<i
+
+So one sweep of sequential GaBP resembles Gauss–Seidel iteration but with modified lower part of matrix A. Note that (4.2) cannot be regarded as a Gauss–Seidel
+method with a left preconditioner because the residual is not modified. It is also easy
+to see that the diagonal of C is exactly the same as the diagonal of U in incomplete LU decomposition with zero fill-in (ILU(0) in what follows) [7]. As we will see
+momentarily, this form of C explains a robustness of GaBP.
+To observe practical implications of the difference between GaBP and Gauss–
+Seidel, we consider the matrix following from standard finite difference approximation
+
+of the elliptic boundary value problem (5.1) with Cf = −ϵ1 0 0 −ϵ2 0 0 0 .
+We solve the resulting linear problem with geometric multigrid with one presmoothing and one postsmoothing step (see section 5 for the detailed description of
+the multigrid used). We use two types of smoothers: line Gauss–Seidel smoothers [33,
+section 5.1.3] and GaBP. In Figure 3(a) we can see the results for ϵ1 = 1, ϵ2 = 10−5 ,
+
+(a)
+
+(b)
+
+Fig. 3. Convergence histories for different anisotropies ϵ1 , ϵ2 in (5.1) with coefficients Cf =
+(−ϵ1 0 − ϵ2 0 0 0): (a) ϵ1 = 1, ϵ2 = 10−5 ; (b) ϵ1 = 10−8 , ϵ2 = 1. In both cases, the fine
+grid consists of (25 − 1) points, and the coarsest grid consists of (23 − 1) points along each coordinate
+line. GaBP (k), k = 1, 2, 3, refers to Algorithm 4.1 with k sweeps; line-x GS (1) and line-y GS (1)
+are block Gauss–Seidel smoothers. We can see that depending on the direction of anisotropy either
+line-x GS (1) or line-y GS (1) stagnates, whereas GaBP remains efficient.
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+A94
+
+VLADIMIR FANASKOV
+
+and in Figure 3(a) the results for ϵ1 = 10−8 , ϵ2 = 1 are given. There are three things
+we want to stress. First, from results in Figure 3 we can see that GaBP is robust, unlike line Gauss–Seidel smoothers the performance of which depends on the direction of
+anisotropy. Second, with the increase of anisotropy, convergence of GaBP improves.
+This can be explained as follows. Recall that GaBP coincides with Gaussian elimination when the graph of a matrix is a tree. When we increase anisotropy, lines
+decouple from each other, which removes loops from the graph, so GaBP becomes an
+exact solver. Third, from convergence histories of GaBP we can observe a number of
+iterations m corresponding to the sharp drop of the relative error, namely, m ≃ 16,
+m ≃ 8, m ≃ 5 for GaBP (1), GaBP (2), GaBP (3), respectively. To explain this
+behavior we recall that for the anisotropic equation under consideration GaBP essentially performs Gaussian elimination. As such,√after the first presmoothing step of
+GaBP (1) we obtain an almost exact solution in N points corresponding to variables
+u(x1 , 1−h) or u(1−h, x2 ) (depending on the direction of the anisotropy), where h is a
+grid spacing and N is a total number of unknown. After the first postsmoothing step
+of GaBP (1) we will recover u(x1 , 1−2h) or u(1−2h, x2 ) almost exactly. Since the grid
+consists of 25 − 1 points in each
+direction, elimination recovers an almost correct so
+lution after m ≃ (25 − 1)/2 = 16 iterations. The same analysis works for GaBP (2)
+and GaBP (3). From this behavior we expect that the convergence rate of GaBP
+will deteriorate with the increase of number of variables N and will improve with the
+increase of the anisotropy. We further study the anisotropic problem in section 5.
+The results obtained in this section suggest a way to analyze the smoothing properties of GaBP. The strategy is to, first, exclude messages and present GaBP in the
+form of standard smoother x(n+1) = x(n) + N b − Ax(n) . After that, local (or rigorous) Fourier analysis can be performed the same way as it is done for other linear
+iterations (see, for example, [33, Chapter 4, section 7.5]). Having the assurance that
+the GaBP smoother can be analyzed by standard means, we do not pursue this topic
+further.
+4.2. Reducing computational complexity. The number of floating point operations per iteration for Algorithm 2.1 and Algorithm 3.1 depends on the graph of
+the matrix A and the set-decomposition P. As an example we compute the number
+of floating point operations in Algorithm 2.1 in the case when A corresponds to the
+operator with the five-point stencil, i.e., the standard second order discretization of
+the Laplace operator. For convenience, we split Algorithm 2.1 (sequential version)
+into three parts:
+• Accumulation stage. Λ and m are computed (line 8).
+e and m are constructed from the previous
+• Update stage. New messages Λ
+ones (line 12).
+• Termination stage. The final answer m/Σ is obtained (line 10).
+We also neglect all effects from boundaries. Under these assumptions, the number of
+floating point operations for the single sweep GaBP is
+(4.4)
+
+#GaBP(1) =
+
+10N
+|{z}
+
+r=b−Ax0
+
++ 2N + 4N + 4N + 6N + |{z}
+N
++ |{z}
+N = 28N.
+| {z } | {z }
+accumulate
+
+update
+
+terminate
+
++x0
+
+Here we take into account that we do not need to receive messages from nodes that
+we have not visited yet, nor send messages to already visited nodes.
+In the context of multigrid, it is important to have a cheap smoother, so to reduce
+e which depend only
+computational complexity we precompute all required messages Λ,
+on the matrix A and not on the right-hand-side vector. The number of operations is
+modified as follows:
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+GAUSSIAN BELIEF PROPAGATION SOLVERS
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+(4.5)
+
+#GaBP(1) =
+
+10N
+|{z}
+
+r=b−Ax0
+
++
+
+2N
+|{z}
+
+accumulate
+
+A95
+
+N
++ |{z}
+N = 18N.
++ |{z}
+4N + |{z}
+update
+
+terminate
+
++x0
+
+Here we used the fact that some messages are absent or need not be computed. In
+Table 1, where computational complexity for the solvers is listed, we compute number
+of operations for the worst case scenario.
+5. Numerical examples. We consider linear systems of equations arising from
+finite difference and bilinear finite element discretizations of elliptic equations with
+smooth coefficients in two space dimensions. Model equations are given in subsection 5.2. The multigrid solver is constructed
+as follows. The finest uniform grid along
+
+x direction contain 2J + 1 points GJ = ih : h = 2−J , i = 0, . . . , 2J . The coarsening
+scheme is such that the next grid GJ−1 contains each second point. The full grid
+is a direct product of two unidimensional grids. The coarsest grid always contains
+25 points in total. We use LU as a solver on the coarsest grid. As transfer operators we choose full weighting restriction [33, equation 2.3.3] and bilinear interpolation
+[33, equation 2.3.7]. We always use a V -cycle. The number of sweeps for pre- and
+postsmoothing steps is the same an given in brackets; for example, “ILU(0) (2)” refers
+to two sweeps of incomplete LU. Properties of smoothers are collected in Table 1 and
+Table 2.
+We also list results for multigrid used as a preconditioner. We test conjugate
+gradient and GMRES.
+q
+As a performance measure for multigrid we use ρ̂ =
+
+N̂
+
+∥e(N̂ ) ∥∞ /∥e(0) ∥∞ , where
+
+e(N̂ ) is an error on iteration N̂ , which is chosen such that ρ̂N̂ ≤ 10−10 . The same N̂
+is used to compare the efficiency of preconditioners.
+Following [15, equation (2.31a)] we define effective amount of work Eff ≡ Nsolver Neff ,
+where Nsolver estimates the number of floating point operations per N performed
+by
+
+a solver and Neff is a reference number of iterations chosen as Neff ≡ −1 log10 ρ̂ for a
+P∞
+solver and Neff ≡ N̂ for a preconditioner.4 For multigrid Nsolver ≡ k=0 (2Ns +δ)/4k =
+4(2Ns + δ)/3, where δ (21 for five-point stencil, 29 for nine-point stencil) is the number of operations needed for error correction, projection, interpolation, and Ns can
+be found in Table 1. For stand-alone solvers we use Nsolver = Ns /m.
+Figure 4(a), Figure 4(b), Figure 4(c), Figure 5(a), and Figure 5(b) contain results
+for multigrid used as a stand-alone solver (the left part of the table) as well as a
+preconditioner (the right part of the table). Figure 5(c) contains results for standalone solvers.
+Table 1
+Table contains computational complexity of GaBP (error correction scheme) with precomputed
+Λ messages and other relaxation schemes. Number of sweeps in m, number of variables in N , matrix
+A corresponds to five-point or nine-point stencil. Details on solvers can be found in subsection 4.2,
+subsection 5.1, and Table 2.
+Solver
+GaBP
+Jacobi
+Chebyshev m ≥ 2
+Line GaBP
+Gauss–Seidel
+Alternating zebra GS
+ILU(0)
+
+Computational complexity per N
+Five-point stencil Nine-point stencil
+12m + 12
+24m + 20
+9m
+17m
+16(m − 2) + 25
+24(m − 2) + 41
+22m + 11
+22m + 19
+9m
+17m
+26m
+42m
+9m + 11
+17m + 19
+
+4 Note that our definition of Eff is suitable for comparison of solvers with solvers and preconditioners with preconditioners. It is meaningless to use Eff (as it is defined here) to compare solvers
+with preconditioners.
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+A96
+
+VLADIMIR FANASKOV
+
+Table 2
+In this table we collect degree of parallelism of smoothers. First column contains the names
+of the solvers. Second column lists the number of operations that can be performed in parallel
+for a linear operator with a five-point stencil on the square 2D grid with N points in total (see
+subsection 5.1 for details). The last column contains a reference where the precise information
+about the smoother can be found.
+Solver
+Parallel GaBP
+Jacobi, Chebyshev
+Red-black schemes
+Four-color schemes
+Line GaBP
+Alternating zebra GS
+Sequential GaBP, GS
+ILU(0)
+
+Independent
+points
+N
+N
+
+N 2
+
+N 4
+√
+N
+√ 
+N 2
+√
+≤ N
+√
+≤ N
+
+Reference
+Algorithm 2.1
+[27, equation (4.5)], [6, Algorithm 3.1]
+[33, equation (2.1.11), Remark (2.1.1)]
+[33, Remark (5.4.5)]
+Algorithm 3.1, subsection 5.1
+[33, section 5.1, 5.2]
+Algorithm 2.1, [27, equation (4.8)]
+[7, Algorithm 1], [33, section 7.5]
+
+5.1. Note about solvers and smoothers. The computational complexity of
+solvers is given in Table 1. The degree of parallelism is estimated in Table 2. To
+exemplify how these numbers are computed consider a Gauss–Seidel iteration for a
+linear operator with five-point stencil on square grid with N points in total. For each
+sweep we start by obtaining the value of variable (i, j) = (1, 1). After that, we can
+compute variables (i + 1, j), (i, j + 1). On the next step we can obtain variables with
+coordinates
+(i + 2, j), (i + 1, j + 1), (i, j + 2), and so on. This means at best we have
+√
+N number of points we can process in parallel.
+We would like to add that there are various parallel versions of classical algorithms. For example, it is possible to construct a parallel version of the Gauss–Seidel
+method [1] and cyclic reduction [12] for a parallel solution of tridiagonal linear systems
+(e.g., in application to line smoothers).
+Polynomial smoothers require λmax and λmin . Following [1] we use λmax =
+1.1ρ(A) and λmin = 0.3ρ(A), where ρ(A) is a maximal eigenvalue estimated with
+the projection method.
+Line GaBP is an example of a generalized GaBP smoother. The set-decomposition
+which defines this solver consists of all horizontal and vertical lines. For example, on
+a grid with 3 points in each direction the set-decomposition used in Algorithm 3.1 is
+P = {{1, 2, 3} , {4, 5, 6} , {7, 8, 9} , {1, 4, 7} , {2, 5, 8} , {3, 6, 9}}.
+5.2. Model equations. All test equations have the following form:
+ X
+X 
+∂ 2 u(x1 , x2 )
+∂u(x1 , x2 )
+aij (x1 , x2 )
++
+bi (x1 , x2 )
+∂xj ∂xi
+∂xi
+(5.1)
+i,j=1,2
+i=1,2
+2
+
++ c(x1 , x2 )u(x1 , x2 ) = f (x1 , x2 ), x1 , x2 ∈ Γ = [0, 1] , u(x1 , x2 )|∂Γ = 0,
+where ∂Γ is a boundary of the domain Γ. To specify a given equation we use a vector
+of coefficients Cf ≡ a11 a12 a21 a22 b1 b2 c .
+
+5.2.1. Poisson equation. Cf = −1 0 0 −1 0 0 0 .
+The results for this classical test problem are given in Figure 4(a). We can see
+that red-black GaBP has better convergence rate than other solvers. The closest two
+are zebra line Gauss–Seidel and ILU(0). From the comparison of the effective amount
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+A97
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+GAUSSIAN BELIEF PROPAGATION SOLVERS
+ρ̂
+Eff
+
+
+Smoother J
+Gauss–Seidel (2)
+GaBP (2)
+Zebra line GS (2)
+Line GaBP (2)
+Red-black GS (2)
+Red-black GaBP (2)
+ILU(0) (2)
+Chebyshev (4)
+Chebyshev (8)
+
+N̂
+Eff
+
+4
+
+5
+
+6
+
+7
+
+4
+
+5
+
+6
+
+7
+
+.05
+58
+.03
+81
+.01
+83
+.06
+143
+.04
+54
+.01
+62
+.01
+53
+.05
+138
+.03
+230
+
+.07
+66
+.05
+95
+.02
+98
+.06
+143
+.04
+54
+.01
+62
+.02
+62
+.07
+156
+.03
+230
+
+.08
+69
+.05
+95
+.02
+98
+.07
+151
+.04
+54
+.01
+62
+.02
+62
+.07
+156
+.03
+230
+
+.08
+69
+.05
+95
+.02
+98
+.07
+151
+.04
+54
+.01
+62
+.02
+62
+.07
+156
+.03
+230
+
+7
+364
+7
+700
+5
+721
+6
+908
+6
+316
+5
+508
+5
+415
+6
+940
+6
+1964
+
+7
+364
+8
+796
+5
+721
+6
+908
+6
+316
+5
+508
+5
+415
+7
+1092
+6
+1964
+
+7
+364
+8
+796
+5
+721
+7
+1055
+6
+316
+5
+508
+5
+415
+7
+1092
+6
+1964
+
+7
+364
+8
+796
+5
+721
+7
+1055
+6
+316
+5
+508
+5
+415
+7
+1092
+6
+1964
+
+(a) Poisson, finite difference, conjugate gradient.
+
+
+Smoother J
+Gauss–Seidel (2)
+GaBP (2)
+Zebra line GS (2)
+Line GaBP (2)
+Four-color GS (2)
+Four-color GaBP (2)
+ILU(0) (2)
+Chebyshev (4)
+Chebyshev (8)
+
+ρ̂
+Eff
+
+N̂
+Eff
+
+4
+
+5
+
+6
+
+7
+
+4
+
+5
+
+6
+
+7
+
+.52
+455
+.34
+470
+.27
+462
+.54
+772
+.56
+514
+.31
+433
+.13
+203
+.49
+891
+.32
+1075
+
+.73
+946
+.54
+822
+.52
+925
+.73
+1512
+.71
+870
+.57
+901
+.4
+452
+.72
+1935
+.6
+2398
+
+.85
+1832
+.75
+1761
+.72
+1841
+.83
+2554
+.83
+1598
+.75
+1761
+.6
+811
+.84
+3645
+.76
+4464
+
+.92
+3572
+.85
+3117
+.82
+3048
+.89
+4084
+.89
+2555
+.85
+3117
+.78
+1668
+.88
+4971
+.85
+7537
+
+20
+1852
+20
+3665
+13
+2951
+20
+3399
+19
+1761
+10
+1852
+10
+1452
+20
+4785
+10
+4972
+
+20
+1852
+20
+3665
+20
+4519
+20
+3399
+20
+1852
+20
+3665
+17
+2441
+20
+4785
+20
+9905
+
+30
+2759
+30
+5479
+20
+4519
+30
+5079
+30
+2759
+30
+5479
+20
+2865
+40
+9532
+30
+14839
+
+50
+4572
+50
+9105
+40
+8999
+50
+8439
+50
+4572
+40
+7292
+30
+4279
+50
+11905
+40
+19772
+
+(b) Mixed derivative δ = 0.01, finite difference, restarted GMRES (10).
+
+
+Smoother J
+Gauss–Seidel (2)
+GaBP (2)
+Zebra line GS (2)
+Line GaBP (2)
+Red-black GS (2)
+Red-black GaBP (2)
+ILU(0) (2)
+Chebyshev (4)
+Chebyshev (8)
+
+ρ̂
+Eff
+
+N̂
+Eff
+
+4
+
+5
+
+6
+
+7
+
+4
+
+5
+
+6
+
+7
+
+.02
+45
+.007
+58
+.004
+70
+.02
+103
+.06
+62
+.05
+95
+.0006
+33
+.16
+226
+.02
+206
+
+.05
+58
+.03
+81
+.01
+83
+.05
+134
+.06
+62
+.05
+95
+.005
+46
+.07
+156
+.02
+206
+
+.06
+62
+.04
+89
+.02
+98
+.06
+143
+.06
+62
+.05
+95
+.01
+53
+.08
+164
+.03
+230
+
+.07
+66
+.05
+95
+.02
+98
+.06
+143
+.05
+58
+.05
+95
+.01
+53
+.1
+180
+.03
+230
+
+9
+460
+10
+988
+10
+1415
+10
+1495
+20
+988
+10
+988
+5
+415
+10
+1548
+10
+3255
+
+10
+508
+10
+988
+16
+2247
+10
+1495
+20
+988
+11
+1084
+7
+569
+10
+1548
+10
+3255
+
+10
+508
+10
+988
+9
+1276
+10
+1495
+10
+508
+20
+1948
+20
+1575
+10
+1548
+10
+3255
+
+10
+508
+10
+988
+9
+1276
+9
+1348
+13
+652
+11
+1084
+10
+801
+10
+1548
+10
+3255
+
+(c) Boundary layer ϵ = 0.05, finite difference, restarted GMRES (10).
+Fig. 4. Under each table, we list the name of the equation with parameters used (if applicable), the type of discretization scheme, and the projection method for which we use multigrid as a
+preconditioner. The numbers of pre- and postsmoothing steps are given in brackets. The left side of
+each table contains the result on multigrid as a solver. Here ρ̂ is an approximation to the spectral
+radius of the error propagation matrix and Eff is an amount of work (defined in section 5). The
+right side of each table lists results on multigrid used as a preconditioner. Here N̂ is the number
+of iterations needed to drop relative error by 10−10 and Eff is an amount of work (defined in section 5). Results for individual equations are discussed in (a) subsection 5.2.1, (b) subsection 5.2.2,
+(c) subsection 5.2.3.
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+A98
+
+VLADIMIR FANASKOV
+
+
+Smoother J
+Gauss–Seidel (3)
+GaBP (3)
+Zebra line GS (2)
+Line GaBP (2)
+Red-black GS (3)
+Red-black GaBP (3)
+ILU(0) (2)
+Chebyshev (4)
+Chebyshev (8)
+
+ρ̂
+Eff
+
+N̂
+Eff
+
+4
+
+5
+
+6
+
+7
+
+4
+
+5
+
+6
+
+7
+
+.79
+977
+.03
+102
+0
+0
+0
+0
+.78
+927
+.48
+489
+0
+0
+.85
+2550
+.75
+2807
+
+.94
+3721
+.08
+142
+0
+0
+0
+0
+.93
+3173
+.84
+2060
+0
+0
+.95
+8080
+.92
+9684
+
+.98
+11397
+.32
+315
+0
+0
+0
+0
+.98
+11397
+.95
+7003
+0
+0
+.97
+13607
+.96
+19780
+
+.99
+22911
+.6
+703
+0
+0
+0
+0
+.99
+22911
+.97
+11793
+0
+0
+.97
+13607
+.97
+26509
+
+20
+1468
+10
+1308
+2
+305
+5
+761
+20
+1468
+20
+2588
+4
+337
+30
+4588
+20
+6481
+
+40
+2908
+10
+1308
+2
+305
+5
+761
+40
+2908
+40
+5148
+2
+183
+60
+9148
+40
+12935
+
+310
+22348
+40
+5148
+4
+583
+6
+908
+120
+8668
+80
+10268
+6
+492
+170
+25868
+90
+29068
+
+150
+10828
+90
+11548
+4
+583
+3
+468
+340
+24508
+200
+25628
+4
+337
+>500
+>76028
+300
+96828
+
+(a) Anisotropic Poisson σ = 10−6 , finite difference, restarted GMRES (10)
+
+
+Smoother J
+Gauss–Seidel (2)
+GaBP (2)
+Zebra line GS (2)
+Line GaBP (2)
+Four-color GS (2)
+Four-color GaBP (2)
+ILU(0) (2)
+Chebyshev (4)
+Chebyshev (8)
+
+ρ̂
+Eff
+
+N̂
+Eff
+
+4
+
+5
+
+6
+
+7
+
+4
+
+5
+
+6
+
+7
+
+.04
+93
+.03
+144
+.03
+172
+.23
+324
+.02
+76
+.02
+129
+.013
+95
+.03
+181
+.016
+296
+
+.1
+129
+.08
+201
+.06
+215
+.23
+324
+.07
+112
+.07
+190
+.06
+147
+.09
+264
+.07
+461
+
+.23
+203
+.21
+325
+.2
+376
+.23
+324
+.22
+197
+.21
+325
+.14
+211
+.16
+347
+.18
+714
+
+.54
+483
+.49
+710
+.56
+1043
+.52
+728
+.55
+498
+.49
+710
+.49
+581
+.52
+972
+.54
+1988
+
+6
+583
+6
+1127
+5
+1159
+9
+1551
+5
+492
+5
+945
+4
+604
+5
+1225
+5
+2505
+
+7
+673
+7
+1308
+6
+1383
+9
+1551
+6
+583
+8
+1489
+5
+745
+6
+1463
+6
+2999
+
+8
+764
+8
+1489
+7
+1607
+10
+1719
+7
+673
+9
+1671
+5
+745
+7
+1700
+7
+3492
+
+10
+945
+10
+1852
+9
+2055
+11
+1887
+9
+855
+12
+2215
+8
+1169
+9
+2175
+8
+3985
+
+(b) Helmholtz k2 h = 0.1, finite element, conjugate gradient.
+
+
+Smoother J
+Jacobi
+Gauss–Seidel
+GaBP (2)
+Zebra line GS
+Line GaBP (2)
+Color GS
+Color GaBP (2)
+
+ρ̂
+Eff ,
+
+3
+.89
+336
+.81
+186
+.76
+243
+.70
+271
+.83
+389
+.81
+186
+.76
+243
+
+Mehrstellen
+4
+5
+6
+
+.94
+633
+.92
+469
+.89
+573
+.87
+694
+.92
+870
+.92
+469
+.91
+708
+
+.96
+959
+.95
+763
+.94
+1079
+.94
+1563
+.94
+1172
+.94
+633
+.94
+1079
+
+.96
+959
+.95
+763
+.95
+1302
+.95
+1885
+.96
+1777
+.96
+959
+.96
+1636
+
+ρ̂
+Eff ,
+
+3
+.91
+220
+.84
+119
+.71
+121
+.70
+168
+.71
+185
+.84
+119
+.70
+116
+
+Poisson
+4
+5
+
+.96
+508
+.94
+335
+.86
+275
+.71
+175
+.82
+319
+.93
+286
+.86
+275
+
+.98
+1026
+.96
+508
+.94
+670
+.80
+268
+.89
+543
+.96
+508
+.94
+670
+
+6
+.98
+1026
+.98
+1026
+.95
+808
+.88
+468
+.92
+759
+.98
+1026
+.96
+1015
+
+(c) Mehrstellen and anisotropic Poisson σ = 10−3 , finite difference.
+Fig. 5. The organization of tables is the same as for Figure 4. Results for individual equations
+are discussed in (a) subsection 5.2.4, (b) subsection 5.2.5, (c) subsection 5.2.6.
+
+of work, we can conclude that red-black Gauss–Seidel is slightly more efficient than
+red-black GaBP.
+
+5.2.2. Large mixed derivative. Cf = −1 2 − δ 0 −1 0 0 0 .
+When δ ≥ 0 is small, the equation almost loses the ellipticity which presents
+challenges for classical multigrid components. From the convergence rates presented
+in Figure 4(b) we can see that sequential GaBP versions are more robust. Indeed, for
+GaBP and four-color GaBP the convergence rates are better than the ones for Gauss–
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+GAUSSIAN BELIEF PROPAGATION SOLVERS
+
+A99
+
+Seidel and four-color Gauss–Seidel. These results become less pronounced for larger
+grids. Comparing Eff, we conclude that GaBP is more efficient than Gauss–Seidel,
+and four-color GaBP is more efficient on the smallest grid but loses its advantage on
+larger grids. It is also interesting that line GaBP seems to be preferable over zebra
+line Gauss–Seidel as a preconditioner for J = 7 even though it is inferior as a solver.
+Overall, for this problem all smoothers perform poorly. Incomplete LU shows the
+best convergence rate, but Chebyshev (8) is more preferable because of the excellent
+parallelism.
+
+5.2.3. Boundary layer. Cf = −ϵ 0 0 −ϵ 1 1 0 .
+For small ϵ we have advection-dominated diffusion. The results are presented in
+Figure 4(c). All smoothers are reasonable for this problem. We can see that sequential
+GaBP produces a slightly better convergence rate than Gauss–Seidel. The same is
+true for line versions because line GaBP is more parallel than line Gauss–Seidel.
+Overall, it is reasonable to use either Chebyshev or any of the red-black smoothers
+for this problem. Incomplete LU, having the smallest Eff, is also an option but looks
+less attractive because of the poor parallelism.
+
+5.2.4. Anisotropic Poisson. Cf = −ϵ 0 0 −1 0 0 0 .
+Here we continue the study of anisotropic problem that we mentioned in subsection 4.1. The standard approach is to use semicoarsening, but we will continue to use
+full coarsening to investigate the effect of the smoother.
+For this problem ILU(0) and line smoothers are essentially the exact solvers, so
+they produce an almost correct solution after a single iteration. This is indicated
+by ρ̂ = 0, Eff = 0 in Figure 5(a), where the convergence rates for this problem are
+summarized. GaBP clearly presents the best alternative among the other solvers,
+at least when the grid size is not too large. We can see that, as was expected, the
+convergence rate deteriorates when J increases. Nevertheless, this deterioration is less
+pronounced than the decline of ρ̂ for other point smoothers. Analysis of Eff shows
+that among the “exact” solvers, line GaBP seems to be preferable as a preconditioner.
+Again, ILU(0) has the smallest Eff but cannot be effectively run in parallel.
+
+5.2.5. Helmholtz. Cf = −1 0 0 −1 0 0 −k 2 .
+Here we consider finite element discretization of the Helmholtz equation with fixed
+k 2 h. The condition k 2 h = const means a fixed number of wavelength per grid spacing;
+this allows us to avoid the pollution effect [2]. Figure 5(b) indicates that for the largest
+grid ILU(0), four-color GaBP and GaBP have the same (smallest) convergence rate.
+Among color smoothers (and overall), Gauss–Seidel has the smallest Eff. It is also
+the best preconditioner. Comparison of line smoothers reveals that GaBP is more
+efficient than Gauss–Seidel as both a solver and a preconditioner.
+5.2.6. Testing GaBP as a stand-alone solver. To compare GaBP with classical iteration we use two equations. The first one is a Mehrstellen discretization [26]
+of the Laplace operator given by a stencil
+
+
+−1 −4 −1
+s = −4 20 −4 .
+(5.2)
+−1 −4 −1
+
+The second equation Cf = g1 (x1 , x2 ) 0 0 g2 (x1 , x2 ) 0 0 0 is an anisotropic
+problem with
+(
+(2 − i)σ + (i − 1), if (x1 − 0.5)(x2 − 0.5) ≥ 0;
+(5.3)
+gi (x1 , x2 ) =
+(i − 1)σ + (2 − i), if (x1 − 0.5)(x2 − 0.5) < 0.
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+A100
+
+VLADIMIR FANASKOV
+
+The results for both equations are given in Figure 5(c).
+Convergence rates for Mehrstellen discretization indicate that four-color Gauss–
+Seidel is the most cost-efficient solver. One can see that GaBP solvers result in a
+faster convergence rate for the smaller grids. However, the increased cost of GaBP
+solvers makes them less preferable. Interestingly, on the finest grid, line GaBP seems
+to be more efficient than zebra line Gauss–Seidel.
+For the anisotropic problem, the most efficient solver is either line GaBP or zebra
+line Gauss–Seidel. The latter one has smaller Eff, but since parallel properties of line
+GaBP are superior, this difference is mitigated, and line GaBP is at least as efficient as
+line Gauss–Seidel. We also would like to mention that sequential GaBP outperforms
+sequential Gauss–Seidel on the finest grid. The same is true for red-black versions,
+although the difference is negligible.
+5.3. Summary of results. We have seen that for all test problems, GaBP
+smoothers results in solvers with smaller or similar ρ̂ compared to classical smoothers.
+However, GaBP can be less efficient because the presence of messages leads to an
+increased number of floating point operations. Two other trends are evident. First,
+GaBP has advantages in situations when there are weakly linked small clusters of
+variables. Second, for large grids, GaBP smoothers resemble the classical ones. The
+situation is less clear for the generalized GaBP solvers and smoothers because their
+performance depends on the set-decomposition P.
+Set-decomposition for generalized GaBP is not a well-studied subject. Contributions [41], [36] contain some general recommendations on the construction of setdecomposition. The technique of embedded trees [32] is also related to the choice
+of good set-decomposition. To the best of our knowledge, the literature completely
+lacks results on the influence of set-decomposition on the quality of a generalized
+GaBP smoothers. We leave this topic for further research.
+6. Conclusions. In the present contribution, we show how GaBP and generalized GaBP can be applied to nonsymmetric linear systems. We demonstrate that
+known results on consistency and convergence can be extended to the nonsymmetric
+version of GaBP. The resulting algorithms can be applied as stand-alone solvers and
+within a geometric multigrid scheme. Benchmarks on model equations indicate that
+in most cases, GaBP is comparable to well-established solvers and, in some cases, is
+superior to them.
+Acknowledgments. The author is indebted to Dr. Aslan Kasimov for his valuable suggestions. The author also would like to express his gratitude to anonymous
+referees.
+REFERENCES
+[1] M. Adams, M. Brezina, J. Hu, and R. Tuminaro, Parallel multigrid smoothing: Polynomial
+versus Gauss-Seidel, J. Comput. Phys., 188 (2003), pp. 593–610, https://doi.org/10.1016/
+S0021-9991(03)00194-3.
+[2] I. M. Babuska and S. A. Sauter, Is the pollution effect of the FEM avoidable for the Helmholtz
+equation considering high wave numbers?, SIAM J. Numer. Anal., 34 (1997), pp. 2392–
+2423.
+[3] S. Bartels, J. Cockayne, I. C. Ipsen, and P. Hennig, Probabilistic linear solvers: A unifying
+view, Stat. Comput., 29 (2019), pp. 1249–1263.
+[4] D. Bickson, Gaussian Belief Propagation: Theory and Application, preprint, arXiv:0811.2518
+[cs.IT], 2008.
+[5] C. M. Bishop, Pattern Recognition and Machine Learning (Information Science and Statistics), Springer-Verlag, Berlin, 2006.
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+GAUSSIAN BELIEF PROPAGATION SOLVERS
+
+A101
+
+[6] J. Brannick, X. Hu, C. Rodrigo, and L. Zikatanov, Local Fourier analysis of multigrid
+methods with polynomial smoothers and aggressive coarsening, Numer. Math. Theory
+Methods Appl., 8 (2015), pp. 1–21, https://doi.org/10.4208/nmtma.2015.w01si.
+[7] E. Chow and A. Patel, Fine-grained parallel incomplete LU factorization, SIAM J. Sci.
+Comput., 37 (2015), pp. C169–C193, https://doi.org/10.1137/140968896.
+[8] J. Cockayne, C. J. Oates, I. C. Ipsen, and M. Girolami, A Bayesian conjugate gradient
+method, Bayesian Anal. 14 (2019), pp. 937–1012.
+[9] T. A. Davis, S. Rajamanickam, and W. M. Sid-Lakhdar, A survey of direct methods for
+sparse linear systems, Acta Numer., 25 (2016), pp. 383–566.
+[10] Y. El-Kurdi, D. Giannacopoulos, and W. J. Gross, Relaxed Gaussian belief propagation,
+in Proceedings of the 2012 IEEE International Symposium on Information Theory, 2012,
+pp. 2002–2006.
+[11] G. Elidan, I. McGraw, and D. Koller, Residual belief propagation: Informed scheduling
+for asynchronous message passing, in Proceedings of the Twenty-Second Conference on
+Uncertainty in Artificial Intelligence, UAI’06, Arlington, VA, 2006, AUAI Press, pp. 165–
+173.
+[12] W. Gander and G. H. Golub, Cyclic reduction—history and applications, in Scientific Computing (Hong Kong, 1997), Springer, Singapore, 1997, pp. 73–85.
+[13] G. H. Golub and C. F. Van Loan, Matrix Computations, Johns Hupkins University Press,
+Baltimore, MD, 2012.
+[14] J. E. Gonzalez, Y. Low, H. Gu, D. Bickson, and C. Guestrin, Powergraph: Distributed
+graph-parallel computation on natural graphs, in Proceedings of the 10th USENIX Symposium on Operating Systems Design and Implementation (OSDI 12), 2012, pp. 17–30.
+[15] W. Hackbusch, Iterative Solution of Large Sparse Systems of Equations, 2nd ed., Appl. Math.
+Sci. 95, Springer, Cham, 2016, https://doi.org/10.1007/978-3-319-28483-5.
+[16] P. Hennig, Probabilistic interpretation of linear solvers, SIAM J. Optim., 25 (2015), pp. 234–
+260.
+[17] T. Heskes, On the uniqueness of loopy belief propagation fixed points, Neural Comput., 16
+(2004), pp. 2379–2413.
+[18] M. R. Hestenes and E. Stiefel, Methods of conjugate gradients for solving linear systems,
+J. Res. Natl. Bur. Standards, 49 (1952), pp. 409–436.
+[19] R. A. Horn and C. R. Johnson, Matrix Analysis, 2nd ed., Cambridge University Press, New
+York, 2012.
+[20] D. M. Malioutov, J. K. Johnson, and A. S. Willsky, Walk-sums and belief
+propagation in Gaussian graphical models, J. Mach. Learn. Res., 7 (2006), pp.
+2031–2064.
+[21] T. P. Minka, Expectation propagation for approximate Bayesian inference, in Proceedings of
+the Seventeenth Conference on Uncertainty in Artificial Intelligence, Morgan Kaufmann
+Publishers, 2001, pp. 362–369.
+[22] H. Owhadi, Multigrid with rough coefficients and multiresolution operator decomposition from
+hierarchical information games, SIAM Rev., 59 (2017), pp. 99–149.
+[23] J. Pearl, Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference,
+Elsevier, New York, 2014.
+[24] K. H. Plarre and P. Kumar, Extended message passing algorithm for inference in loopy
+Gaussian graphical models, Ad Hoc Netw., 2 (2004), pp. 153–169.
+[25] D. Ron, I. Safro, and A. Brandt, Relaxation-based coarsening and multiscale graph organization, Multiscale Model. Simul., 9 (2011), pp. 407–423.
+[26] J. B. Rosser, Nine-point difference solutions for Poisson’s equation, Comput. Math. Appl., 1
+(1975), pp. 351–360.
+[27] Y. Saad, Iterative Methods for Sparse Linear Systems, 2nd ed., SIAM, Philadelphia, PA, 2003.
+[28] Y. Saad and H. A. Van Der Vorst, Iterative solution of linear systems in the 20th century,
+in Numerical Analysis: Historical Developments in the 20th Century, Elsevier, New York,
+2001, pp. 175–207.
+[29] O. Shental, P. H. Siegel, J. K. Wolf, D. Bickson, and D. Dolev, Gaussian belief propagation solver for systems of linear equations, in Proceedings of the IEEE International
+Symposium on Information Theory, 2008, pp. 1863–1867.
+[30] J. R. Shewchuk, An Introduction to the Conjugate Gradient Method Without the Agonizing
+Pain, Tech. Report, Carragie Mellon University, 1994.
+[31] G. W. Stewart, Matrix Algorithms: Volume 1: Basic Decompositions, SIAM, Philadelphia,
+1998.
+[32] E. B. Sudderth, M. J. Wainwright, and A. S. Willsky, Embedded trees: Estimation of
+gaussian processes on graphs with cycles, IEEE Trans. Signal Process., 52 (2004), pp. 3136–
+3150.
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+Downloaded 02/22/22 to 132.161.246.182 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy
+
+A102
+
+VLADIMIR FANASKOV
+
+[33] U. Trottenberg, C. W. Oosterlee, and A. Schuller, Multigrid, Elsevier, New york, 2000.
+[34] M. J. Wainwright and M. I. Jordan, Graphical models, exponential families, and variational
+inference, Found. Trend. Mach. Learn., 1 (2008), pp. 1–305.
+[35] Y. Weiss and W. T. Freeman, Correctness of belief propagation in Gaussian graphical models
+of arbitrary topology, Neural Comput., 13 (2001), pp. 2173–2200.
+[36] M. Welling, On the choice of regions for generalized belief propagation, in Proceedings of the
+20th Conference on Uncertainty in Artificial Intelligence, AUAI Press, 2004, pp. 585–592.
+[37] J. Xu and L. Zikatanov, Algebraic multigrid methods, Acta Numer., 26 (2017), pp. 591–721.
+[38] J. S. Yedidia, W. T. Freeman, and Y. Weiss, Bethe Free Energy, Kikuchi Approximations,
+and Belief Propagation Algorithms, Tech. Report TR2001-16, MERL - Mitsubishi Electric Research Laboratories, Cambridge, MA, 2001, http://www.merl.com/publications/
+TR2001-16/.
+[39] J. S. Yedidia, W. T. Freeman, and Y. Weiss, Generalized belief propagation, in Proceedings
+of the 13th International Conference on Neural Information Processing Systems, 2001,
+pp. 689–695.
+[40] J. S. Yedidia, W. T. Freeman, and Y. Weiss, Understanding belief propagation and its generalizations, in Exploring Artificial Intelligence in the New Millennium, Morgan Kaufmann
+Publishers, San Francisco, 2003, pp. 236–239.
+[41] J. S. Yedidia, W. T. Freeman, and Y. Weiss, Constructing free-energy approximations and
+generalized belief propagation algorithms, IEEE Trans. Inform. Theory, 51 (2005), pp. 2282–
+2312.
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited.
+
+

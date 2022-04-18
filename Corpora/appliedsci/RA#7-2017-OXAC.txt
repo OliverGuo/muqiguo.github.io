@@ -1,0 +1,839 @@
+J Syst Sci Complex (20XX) XX: 1–19
+
+arXiv:1607.02020v2 [cs.SI] 6 Oct 2017
+
+A Functional Complexity Framework for the Analysis of
+Telecommunication Networks∗
+DZAFERAGIC Merim · KAMINSKI Nicholas · MCBRIDE Neal · MACALUSO
+Irene · MARCHETTI Nicola
+
+DOI:
+Received: x x 20xx / Revised: x x 20xx
+c The Editorial Office of JSSC & Springer-Verlag Berlin Heidelberg 2014
+Abstract The rapid evolution of network services demands new paradigms for studying and designing
+networks. We propose a framework to investigate the underlying mechanisms of wireless network
+functions. This framework isolates and analyses a network function as a complex system. We propose
+functional topologies to visualise and systematically study the relationships between system entities.
+We also define a complexity metric CF (functional complexity) which quantifies the variety of structural
+patterns and roles of nodes in the topology. This complexity metric provides a wholly new approach to
+study the operation of telecommunication networks. We study the relationship between CF and graph
+structures by analysing graph theory metrics in order to recognize complex organisations. CF is equal
+to zero for both a full mesh topology and a disconnected topology. We show that complexity is high
+for a structure with shorter average path length and higher average clustering coefficient. We make
+a connection between functional complexity, robustness and response to changes that may appear in
+the system configuration. We also make a connection between the implementation and the outcome of
+a network function which correlates the characteristics of the outcome with the complex relationships
+that underpin the functional structure.
+Keywords Complex system science, functional complexity framework, telecommunication networks,
+structural complexity, frequency allocation.
+
+1
+
+Introduction
+
+The transition of humanity into the Information Age has precipitated the need of new
+paradigms to comprehend and overcome a new set of challenges. Specifically, the telecommunications networks that underpin modern societies represent some of the largest scale construction
+and deployment efforts ever attempted by humanity, with renovations occurring nearly continuously over the course of decades. The result is networks that consist of numerous subsections,
+each of which following its own trajectory of development, commingled into a complex cacophony. Considering the high degree of heterogeneity and dense interplay of network elements
+Address
+Email: dzaferam@tcd.ie; kaminskn@tcd.ie; mcbridne@tcd.ie; macalusi@tcd.ie; marchetn@tcd.ie
+∗ This material is based upon works supported by the Science Foundation Ireland under Grant No. 13/RC/2077
+
+2
+
+DZAFERAGIC MERIM, et al.
+
+in proposed 5G and Internet of Things (IoT) systems, achieving holistic understanding of network operation is poised to become an even more challenging prospect in the near future. The
+focus of our paper is to provide the paradigms necessary for comprehension of the multi-faceted,
+intermingled, and vital foundation of new networks by introducing a metric that quantifies the
+organisational structure of network functions.
+Every telecommunication network is designed to provide different services. Network functions are the building blocks of these services. Understanding the mechanisms that provide
+network functions implies understanding the function and thus the network itself. In order to
+analyse functional aspects of a telecommunication network we introduce a framework to map
+the network function into a functional topology. The functional topology enables a complex
+systems approach to analyse functions of telecommunications networks. We also introduce a
+metric which quantifies the complexity∗ of a particular implementation of a network function.
+Specifically, the proposed metric analyses the underlying communication between network entities which provide the network function.
+Using complex systems science we can analyse network functions holistically. This interdisciplinary field draws attention from researchers in physics, mathematics, engineering and many
+others. As we plan future networks, the experience of these fields is useful to draw upon. Papers like [1–7] testify about the interdisciplinary nature of the complex systems analysis. The
+authors of [8] discuss issues of different research areas. This discussion leads to the conclusion
+that different scientific fields face similar problems. An interdisciplinary approach, which implies borrowing solutions from other scientific fields, would save time and effort that researchers
+put into solving problems.
+Different sciences faced the problem of increasing complexity differently. In [9] the author
+presents a categorization of different complexity metrics and emphasises the interdisciplinary
+applicability of these metrics. The authors of [10–14] focus on community detection which allows
+us to analyse the structural organisation of a complex system. In [10] the authors investigate
+the underlying interactions between mobile phone users which determine the affiliation to a
+community. Similarly, in [13, 14] the authors focus on the modularity of the system. The
+authors of [11, 12] focus on links rather than nodes, which enables the detection of overlapping
+communities. Additionally, their approach allows them to analyse the hierarchical structure of
+a complex system. In contrast, we focus on the structural features of the graph representation
+of a network function implementation, rather than on community detection.
+The authors of [15–17] examine social networks and user behaviour from a complex systems
+science perspective. In [15], the authors propose a data-to-model process which allows them to
+analyse complex social interactions. This approach enables the prediction of the developments
+of eventual disasters in the system, which makes it possible to prepare the disaster recovery
+scenarios. The authors of [16] propose an agent-based framework for modelling competitive
+and cooperative behaviour under conflict (i.e. Common-Pool Resource (CPR) Dilemma). The
+framework allows them to study how and why do we reach some outcomes, and to determine
+∗ With the term "complexity" we refer to a specific set of complex systems science quantities, related to the
+interactions between functional entities (rather than to the entities themselves).
+
+A Functional Complexity Framework for the Analysis of Telecommunication Networks
+
+3
+
+the conditions needed to achieve desirable outcomes in a complex system. In [17], the authors
+analyse the human travel patterns based on the trajectory of 100,000 mobile phone users. The
+understanding of the mobility patterns allows them to predict the movement and therefore the
+influence on spreading viruses, urban planning, mobile network planning, etc. We propose a
+framework that treats the implementation of a network function as a complex system, which
+allows us to focus on the network function itself, rather than the impact of the unpredictability
+of human behaviour on the network.
+Authors of [18–22] analyse telecommunications networks as complex systems. The approach
+in [18, 19] involves analysis of complex phenomena in telecommunication networks (spreading
+patterns of mobile viruses and connection strengths between nodes in a social network) which are
+the result of complex user behaviour. The authors of [21, 22] analyse the complexity of outcomes
+of a self-organising frequency allocation algorithm. In [22], they analysed a relationship between
+robustness and complexity of the outcome. In contrast to the approach in [18–22], the work we
+propose here targets the network function itself, which means that we analyse the mechanisms
+that enable complex user behaviour and system outcome. We use the same frequency allocation
+algorithm proposed in [22] to show an example of how to map a network function (i.e. frequency
+allocation) into a functional topology.
+The main contributions of this paper are:
+• We introduce a framework which enables the functional analysis of a telecommunication
+network;
+• We provide several examples that show how to map a network function into a functional
+topology;
+• We provide a new complexity metric that quantifies the organisational structure of a
+telecommunication network function.
+
+2
+
+Network Function Framework
+
+The approach to planning, configuration, management and optimization of network functions is changing and moving towards self-organisation. The traditional approach to most
+network functions involves the use of central control or optimization. However, the increasing
+heterogeneity of wireless technologies contributes to the rapid evolution, change, and growth of
+networks that makes the centralised approach unsustainable. If controlled in a self-organizing
+way, network functions such as handover, transmit power control, user allocation, data rate
+control and frequency allocation provide more flexibility and robustness in response to changes
+that may appear in the network [23].
+In order to specify and analyse the complexity of a network function, we introduce the functional framework. Our framework represents an abstraction of a telecommunication network
+modelling its operation by capturing all elements, i.e. nodes and connections, necessary to perform a given function. Our framework includes functional topologies which are graphs created
+based on the functional connectivity between system entities. In contrast to logical topologies
+
+4
+
+DZAFERAGIC MERIM, et al.
+
+which refer to data flows between network nodes, functional topologies depict the connectivity
+pattern of a network function, which implies a broader meaning to nodes and links.
+A node in our topology represents a functional entity of a network node or any information
+source that is part of the given network function. The links indicate dependencies between
+nodes. The topology as a whole depicts the specific implementation of the network function.
+The topology allows us to apply our model to analyse the complexity of the implementation.
+The functional complexity quantifies the organisational structure by analysing the variety of
+relationships between system entities and roles that these entities have in the topology.
+As an instructive example, we focus on self-organization from a frequency allocation perspective. More precisely, we use the frequency allocation algorithm from [22] to describe the
+process of mapping a network function into a topology and in the end to calculate the functional
+complexity.
+The self-organising frequency allocation algorithm considers a cellular network as a twodimensional cellular automaton. Each cell in the model represents a self-organizing wireless
+system. The algorithm works based on the local information that nodes gather from their
+neighbours. Briefly, every cell senses the given frequency channels, and allocates a channel with
+no interference. For more details about the algorithm the reader is referred to [22].
+We focus on two frequency allocation algorithms (self-organizing algorithm and random
+frequency assignment) from [22]. Here we analyse the implementation rather than the outcome
+of the function. Each autonomous network is modelled as a node in a lattice which means that
+the physical topology is the same for both implementations. The physical topology according
+to the Moore neighbourhood is shown in Figure 1. Different implementations of the network
+function are mapped into different functional topologies.
+
+Figure 1: The physical topology according to the Moore neighbourhood from cellular automata.
+
+By analysing the physical topology shown in Figure 1, we recognize a motif that represents
+the Moore neighbourhood. The motif consists of nine neighbouring cells, as shown in Figure
+2(a). The motif depicts the local connections between neighbouring cells. The entire network
+
+A Functional Complexity Framework for the Analysis of Telecommunication Networks
+
+5
+
+is simply a repetition of that motif. The functional topology of an implementation of a network
+function is built upon the motif (Figure 2).
+We start with the random frequency allocation algorithm. It assumes that every cell assigns
+the frequency completely randomly from the set of available frequency channels. In order to
+create the functional topology let us imagine a virtual decision maker entity that is moving
+from one cell to another. At every cell the decision maker entity has no information about
+the allocated frequencies of other cells, which means that there are no functional connections
+between any two nodes. The result is a functional topology represented with a non-connected
+graph (Figure 2(b)).
+
+(a) The functional topology
+that represents the distributed
+self-organising frequency allocation algorithm; the Moore
+neighbourhood motif.
+
+(b) The functional topology
+that represents the random
+frequency allocation approach.
+Independent network functions
+have no interconnections
+
+Figure 2
+
+To examine the functional topology of the self-organising frequency allocation algorithm we
+use the same approach presented in the previous example. We imagine a virtual decision maker
+entity which is responsible for the frequency allocation of every node. In order to determine
+the functional connections of a node we analyse the interactions to other nodes in the process
+of decision making at our target node. As the self-organising algorithm assumes only the
+knowledge about allocated frequencies at the neighbouring cells, the functional connections
+exist only between physical neighbours. This results in a functional topology that is equivalent
+to the Moore neighbourhood motif of the physical topology (Figure 2(a)).
+In general network functions are not as simple as the above example. Therefore, to analyse
+the organisational structure of a network function we apply a multi-scale approach. The functional topology itself is built upon the local relationships between network cells according to the
+specified frequency allocation algorithm. The local interactions represent the lowest scale size.
+Analysis of higher scales is enabled by a multi-hop interaction examination. The reachability
+among nodes represents the interactions between them. By restricting the reachability to a
+certain number of hops along the topology we may examine the scale size of interest.
+In [2] the authors discussed the relation between the scale size and the complexity, and
+they emphasize the importance of the scale size noting that the same system can show high
+complexity on one scale and low complexity on the other. The functional connectivity of each
+
+6
+
+DZAFERAGIC MERIM, et al.
+
+node represents the lowest scale in the functional framework and describes the interactions in
+the process of making a decision on this particular node. From the functional point of view
+the lowest scale size models a decision that is made by one node (in our case the frequency
+allocation of one cell). In order to apply a multi-scale approach we include higher scales in our
+analysis as follows. As every node represents a functional part, a subtask or an informational
+source, every group of nodes represents a group of subtasks that are part of the same function.
+The 2-hop scale size considers the node, its neighbouring cells and neighbours of its neighbours.
+On this scale size the topology includes the interactions of nodes that are inside the radius
+of two hops. In our examples this scale size represents the frequency allocation of a two hop
+neighbourhood and the interactions between nodes in the process of making a decision among
+a group of nodes. Note that the reachability of nodes increases with the scale size. In this case
+every node can reach any other node that is two or less than two hops away. The highest scale
+size implies a full mesh topology, where every node can reach any other node in the topology.
+This approach enables a multi-scale functional analysis which is presented in the results section.
+
+3
+
+Complexity Model
+
+The traditional reductionist approach attempts to explain an entire system in terms of its
+individual components. In contrast, complex systems analysis is based on the relations between
+system parts which result in a greater outcome than would be expected from a simple sum of
+the outcomes of the individual parts. Therefore, complex systems move the focus from the node
+to the network.
+As we represent network functions with topologies, the complex systems approach allows
+us to analyse the relations between functional parts. Such analysis captures the joint effort
+of functionally interconnected system parts and provides a measurement of the deviation of
+the complex behaviour compared to a linear (non-complex) system. In order to capture this
+deviation, we analyse the joint effort of system sub-parts which are represented with subgraphs
+of the functional topology. Different subgraphs with the same size capture the variety of organisational structures in the topology, whereas different subgraph sizes allow us to understand
+the gain from increasing number of nodes and interactions.
+In order to capture the non-linear joint effort of functional parts we analyse the interactions
+of nodes involved in the decision making process on different scales. The scale size r determines
+the maximum number of allowed hops between two nodes in order to reach each other. In
+modelling a network function, our focus from the complexity point of view is the degree of
+interconnectivity which is represented by the reachability of functional parts. R is the maximum
+scale size of the system, which is defined as the longest shortest path in the entire topology (i.e.
+the graph diameter of the functional topology). If r = R the reachability of every node in the
+topology is equal to 1.
+Table 1: The notation used in the equations.
+
+A Functional Complexity Framework for the Analysis of Telecommunication Networks
+
+Symbol
+
+7
+
+Meaning
+
+n
+
+node
+
+N
+
+total number of nodes in the functional topology
+
+j
+
+subgraph size - number of nodes in the subgraph
+
+r
+
+scale size
+
+R
+
+maximum scale size, which is defined as the longest shortest
+path in the whole functional topology
+
+Λjk
+
+one of the k subgraphs with j nodes that is induced from
+the functional topology graph
+
+in
+r
+
+number of nodes that can reach node n for a given subgraph
+
+xn
+
+Bernoulli random variable. xn = 1 indicates that an interaction in the course of function operation involves node
+n, whereas xn = 0 indicates that the interaction does not
+involve node n, for a given scale
+
+X
+
+since xn is a Bernoulli random variable X = {0, 1}
+
+pr (xn = 1), pr (xn = 0)
+
+probabilities that any given interaction in the course of
+function operation involves or does not involve node n for
+a given scale r
+
+Hr (xn )
+
+entropy of node n which indicates the uncertainty of involvement of node n in the operation of a network function
+for a given scale size r
+
+In order to capture the relationships that underpin the operation of a given network function,
+we consider the interactions enabled by the structure of the functional topology on various scales
+of operation. Specifically, we consider that a node interacts if another node can reach this node
+on a particular scale. As such, we employ the Bernoulli random variable xn to describe the
+potential for a node to interact on a particular scale, under the assumption that interactions
+are uniformly initiated by all nodes within the topology. Therefore, the probability distribution
+of xn is determined by the reachability of node n for a given scale size r. Equation (1) provides
+the relative reachability of node n, where inr is the number of nodes that can reach node n for a
+given scale r and j represents the number of nodes for the given subgraph. Table 1 summarises
+the notation used in our equations.
+
+pr (xn = 1) =
+
+inr
+j
+
+(1)
+
+Shannon entropy for each node of the given subgraph with size j, and scale size r is calculated
+
+8
+
+DZAFERAGIC MERIM, et al.
+
+with equation (2).
+Hr (xn ) =
+
+X
+
+pr (xn ) · log2
+
+xn ∈X
+
+1
+pr (xn )
+
+(2)
+
+Since the probabilities in equation (1) and (2) indicate the relative reachability of a node,
+entropy in our functional model represents the uncertainty of interaction of node n during the
+operation of a network function for a given scale size r. The uncertainty of interaction of a
+node depends on the role of this node in the graph that represents the function (e.g. hub, stub,
+disconnected node). A node with zero entropy functionally represents a hub or a disconnected
+node. A hub in the functional topology is a node connected to all other nodes, which means
+that the reachability of this node is pr (xn = 1) = 1. Conversely, a disconnected node has the
+non-reachability pr (xn = 0) = 1. A hub is a functionality or informational source that interacts
+with each subtask in the functional topology. In contrast, a disconnected node in the functional
+framework represents a functionality not related to the modelled function, which means that
+this node does not provide information of interest for any part of our model.
+The total amount of information of the k th subgraph with j nodes for scale r is calculated
+with equation (3). Λjk is one of the k subgraphs with j nodes. The total amount of information
+represents the total uncertainty which is related to the actual roles of nodes that appear within
+a subgraph and different subgraph patterns.
+
+Ir (Λjk ) =
+
+X
+
+Hr (xn )
+
+(3)
+
+n∈Λjk
+
+The average amount of information for a given subgraph size j is calculated with equation
+(4). βj in the equation represents the number of connected subgraphs with size j.
+
+hIr (Λj )i =
+
+βj
+1 X
+Ir (Λjk )
+βj
+
+(4)
+
+k=1
+
+Functional complexity is calculated with equation (5).
+
+CF =
+
+R−1 N
+1 X X
+r+1−j
+|hIr (Λj )i −
+Ir (ΛN )|
+R − 1 r=1 j=1+r
+r+1−N
+
+(5)
+
+Note that ΛN is the set of all nodes in the functional topology. For j < 1 + r the amount
+of information is equal to zero, because every subgraph with size j < 1 + r for the scale size r
+represents a full mesh topology in terms of reachability, therefore Hr (xn ) = 0 and Ir (Λjk ) = 0.
+In order to determine the complexity of an implementation of a network function we have
+to compare this particular implementation to a non-complex model of itself. A non-complex
+
+A Functional Complexity Framework for the Analysis of Telecommunication Networks
+
+9
+
+model assumes that every functional part always contributes the same amount of information.
+Describing the functional parts provides full information about such a network function because
+the function is the sum of functionalities of its parts. Conversely, a complex implementation
+implies that the network function relies on communication between its parts which results in a
+higher utility outcome, i.e. greater than the sum of its parts. Complexity captures the variety
+of roles that each node has and the variety of structural patterns in the functional topology.
+The variety of roles emphasises the importance of interconnectivity of functional parts. Since
+nodes represent functional parts, different roles refer to different interactions that underpin the
+operation of a network function. If one node is highly connected to a group of nodes, this
+means that it influences the entire group. At the same time the group has a high influence
+on the operation of this node. In our frequency allocation example, the disconnected topology
+shows that every node is independent, which results in one simple role (disconnected node)
+for every subgraph. Describing the relationship between a single element and the rest of the
+functional topology provides all necessary information needed to understand the relationships
+of the entire topology. Therefore this structure is not considered as complex. Conversely, the
+self-organising algorithm provides different roles for nodes. This results in a complex structure,
+where the outcome depends on the communication between the structural parts, which means
+that the communication between system entities becomes more important to understand than
+the entities themselves.
+
+4
+
+Analysis
+
+In this section we apply our complexity model to several functional topologies to examine
+the main properties of the functional complexity metric. In addition to the two implementations
+of the frequency allocation function, we also investigate common graph structures (e.g. ring,
+star, bus, full mesh) that describe complex and non-complex functional relations. In the course
+of this analysis, we present the relationship between the complexity of a function and graph
+theory metrics that describe the functional topology representation of the network function.
+A complex system, and hence a complex function, is determined by many parameters. We
+compare our metric to the following graph theoretic notions to highlight the utility of our
+methodology:
+• number of nodes,
+• average path length,
+• clustering coefficient.
+Intuitively, if the number of nodes increases the system becomes more complex. The average
+path length indicates the distance between elements, which implicitly refers to the relationship
+strengths in the network. The clustering coefficient provides information about the overall
+strengths of functional dependencies between nodes grouped around a central entity. All these
+metrics provide useful information about certain organisational characteristics of the system.
+
+10
+
+DZAFERAGIC MERIM, et al.
+
+We start the analysis with common graph structures like a bus, ring, star and full mesh topology
+to investigate the impact of different graph structures on the amount of complexity. Figure 3
+shows complexity values of theses topologies in the range of six to ten nodes. Additionally, we
+present the correlation between the complexity metric and different graph theory metrics.
+
+Figure 3: Complexity of a bus, ring and star topology.
+
+4.1
+
+Bus, ring, star and full mesh topologies
+
+A full mesh topology results in zero complexity for any number of nodes. Therefore, even
+though a full mesh topology provides a densely connected structure, the overall relationships
+between functional parts represented by a full mesh topology are non-complex. The structures
+of any subgraph in a full mesh topology are also full mesh connectivity patterns. This means
+that a full mesh topology represents a function in which every functional part interacts with
+all other entities in order to make a decision. The functional structures and roles of nodes in a
+graph that represents such functions are always the same (each individual node is a hub). This
+means that in order to describe the system (the function), it is enough to describe an individual
+element and such functions are considered as non-complex.
+All the nodes in a bus topology are fairly spread out (i.e. the average path length between
+nodes is high). In other words, the bus topology represents a connectivity pattern with weak
+overall connections among parts of the topology. The bus topology does not provide a great
+variety of organisational structures, which results in low complexity. According to Figure 3,
+functional complexity of the bus topology increases with the increase in the number of nodes.
+Figure 3 shows that the functional complexity of a ring topology is higher than the complexity of a bus topology for the same number of nodes. The ring topology conforms to the same
+trend in which complexity increases with the number of nodes. The ring topology compared to
+the bus is less spread out (i.e. the average path length is shorter) and therefore provides tighter
+connections between the nodes. As the nodes are closer to each other, due to the additional
+
+A Functional Complexity Framework for the Analysis of Telecommunication Networks
+
+11
+
+path, this functional topology represents tighter functional relationships compared to the bus
+topology. Tighter functional relationships result in higher complexity.
+The star topology is a functional relationship in which one node interacts with all other
+nodes in the decision making process. It also conforms to the same trend in which complexity
+increases with the number of nodes in the topology. The star structure has tight connections
+between its parts. This means that the star topology depicts stronger functional relationships
+compared to the bus and ring topology. Therefore, the star topology has the highest complexity
+value compared to the other structures presented in Figure 3.
+The analysis of simple graph structures (bus, ring, star and full mesh) gives a general
+overview of the impact of different graph organisations on the amount of complexity. The
+functional complexity metric captures the diversity of structures and roles of nodes, which
+provides a different perspective to analyse the complex relationships between system entities.
+According to Figure 3, the star topology is the most complex structure compared to the bus, ring
+and full mesh topologies. Considering the sparse connectivity and short average path length
+between entities represented with a star topology, we believe that this type of relationship
+contributes to the increase in complexity. Based on the analysis of different sizes of ring and
+bus topologies, we believe that spreading (distributing) the functionality all over the topology
+also affects the increasing complexity values. We expect that a combination of these two types
+of relationships results in highly complex organisational structures. Such a structure consists of
+local centres (star subgraphs/clusters) that are highly interconnected. As functional complexity
+captures the variety of structural patterns, we expect that complexity is high if the number of
+local centres is high.
+4.2
+
+Comparison with graph theory metrics
+
+To describe the relationship between the average path length and the functional complexity
+of an implementation of a network function we analyse all possible graph organisations (distributions of links) between six nodes - see Figure 4. The Pearson product-moment correlation
+coefficient for these two metrics is -0.43 (see Table 2). Notice in Figure 4 that the highest
+functional complexity for six nodes is 2.9. Compared to the bus, ring and star topology the
+highest functional topology is at least 1.5 times higher. An important fact is that for the same
+average path length we have a range of different complexity values. Therefore, despite the high
+correlation between the average path length and complexity, we can’t predict the complexity of
+a structure based on the average path length. Additionally, the maximum value of complexity
+occurs for an extremely low average path length, which is still higher than one. Figure 4 also
+shows that the envelope of the complexity values is a non-monotonic function. That is, there
+exist complexity values for longer average path lengths that are larger than all complexity values for some shorter average path lengths. Notice also that complexity is equal to zero for the
+average path length equal to one. This value of the average path length represents a full mesh
+topology.
+
+12
+
+DZAFERAGIC MERIM, et al.
+
+Figure 4: The relationship between the average path length and functional complexity for
+all possible distributions of links between six nodes. The Pearson product-moment correlation
+coefficient for these two variables (average path length and functional complexity) is -0.43.
+
+As shown in Table 2, the correlation between the clustering coefficient and complexity is low
+(0.15) for six nodes. Figure 5 depicts the relationship between the average clustering coefficient
+and complexity for six nodes. The average clustering coefficient is a graph theory metric that
+measures the average number of neighbouring nodes that are neighbours to each other [24].
+Therefore, the average clustering coefficient quantifies the strength of functional connections
+between nodes grouped around local centres. Again, the envelope of the complexity values in
+this relationship is also non-monotonic. Notice in Figure 5 that complexity has its maximum
+for an average clustering coefficient close to one. This is expected because this value of the
+clustering coefficient represents a network with tight functional connections between nodes
+grouped around local centres. Notice also that complexity is zero for the average clustering
+coefficient equal to one. According to the definition of the clustering coefficient, the value one
+indicates that all neighbours of every node in the functional topology are neighbours to each
+other, which represents a full mesh topology.
+
+A Functional Complexity Framework for the Analysis of Telecommunication Networks
+
+13
+
+Figure 5: The relationship between the clustering coefficient and the functional complexity for
+
+all possible distributions of links between six nodes. The Pearson product-moment correlation
+coefficient for these two variables (clustering coefficient and functional complexity) is 0.15.
+In order to analyse the joint relationship between complexity and both of the graph theory
+metrics presented above (the average path length and the average clustering coefficient) we
+plot all these metrics together on one graph (see Figure 6). The x and y axis represent the
+average clustering coefficient and the average path length respectively and the complexity is
+represented by the radius of the circles. Additionally, the circles are coloured differently to
+emphasize the different complexity values. The multivariate correlation between these three
+variables is 0.47 (see Table 2). Notice that we have overlapping circles with different radii
+on the graph which means that for the same average path length and clustering coefficient
+we observe functional topologies with different complexities. As shown in the analysis above,
+graph theory metrics allow us to analyse individual aspects of the functional topology, whereas
+complexity adds additional information about the diversity of relationships between functional
+parts and provides a different approach to analyse complex network functions.
+
+14
+
+DZAFERAGIC MERIM, et al.
+
+Figure 6: The relationship between the clustering coefficient, average path length and the
+
+functional complexity for all possible distributions of links between six nodes. The complexity
+value is represented by the colour and diameter of circles.
+
+Table 2: Correlation between graph theory metrics and the functional complexity metric for all
+possible distributions of links between six nodes.
+Correlation variables
+
+Correlation
+
+Average Path length - Complexity
+
+-0.43
+
+Clustering coefficient - Complexity
+
+0.15
+
+Avg. Path length - Clustering coef. - Complexity
+
+0.47
+
+Figure 7 shows that the correlation between complexity and different graph theory metrics
+decreases as the number of nodes in the graph increases. This is expected, because the number
+of graph combinations increases exponentially with the number of nodes. The rapid increase
+of graph combinations allows us to create a variety of complex structures for the same value
+of certain graph theory metrics. Hence, the complexity range increases for an individual value
+of a graph theory metric. The decrease of correlation between complexity and different graph
+theory metrics suggests that graph theory metrics do not target the same properties of the
+system. This means that the complexity metric adds new information, which leads to better
+understanding of the relationships between system entities.
+
+A Functional Complexity Framework for the Analysis of Telecommunication Networks
+
+15
+
+Figure 7: The relationship between the correlation coefficients of the graph theory metrics
+
+(average path length, clustering coefficient) and the complexity metric for different sizes of
+functional topologies.
+4.3
+
+Complexity of the frequency allocation algorithms
+
+In order to analyse the functional complexity of the two frequency allocation algorithms
+presented in the framework section we apply our complexity model to the functional topology
+representation of these network functions. Our complexity metric, when applied over the functional topology, gives insight into the functional relationships between system entities, which
+allows us to focus on the joint effect of functional parts in order to execute the modelled network
+function.
+The random frequency allocation algorithm is represented by a disconnected graph. Each
+element represents a closed system which results in the absence of connections between them.
+From the system perspective the functional parts of this implementation represent a set of
+independent elements. As the elements do not interact with each other, in order to describe
+the set we can simply describe its elements. More precisely, to describe the set we have to
+describe only one element, because each element of the set is the same. Each element of the set
+simply assigns one of the available frequencies. Such a set that is represented with independent
+elements has zero functional complexity.
+Finally, the self-organising distributed frequency allocation algorithm is represented by a
+functional topology shown in Figure 2(a). In order to analyse the complexity of this implementation of the frequency allocation function we apply our complexity model to the functional
+topology representation. Figure 8(a) depicts the deviation in the amount of information with
+increasing subgraph sizes from a linear increase. The linear increase represents an equivalent
+simple system implementation, meaning that all the subgraphs of a specific size feature the
+same uncertainty of interaction. Every functional part contributes with the same amount of
+
+16
+
+DZAFERAGIC MERIM, et al.
+
+information, which results in a linear increase over increasing subgraph sizes. The non-linear
+increase represents the heterogeneity of structures within the functional representation of a
+network function, which indicates that the relationship between functional parts is complex.
+Considering that for the functional topology of the self-organising algorithm R = 2, the multiscale approach applied on this functional topology implies only a single scale analysis, that
+is r = 1. The subgraph sizes of interest are in the range of two to nine. Considering that
+r = 1, subgraphs with the size two or smaller represent full mesh topologies. The maximum
+value of the subgraph size is nine because the functional topology consists of nine nodes. The
+complexity of the self-organising frequency allocation algorithm is 1.69 and it is represented
+by the area between the linear and non-linear functions in Figure 8(a). Figure 8(b) shows the
+distance between the uncertainty of interactions for all subset sizes and the uncertainty which
+is expected from the calculation performed on the whole system, i.e. the functional complexity
+of the self-organising frequency allocation approach. More precisely, Figure 8(b) depicts the
+single scale complexity function which is represented by the inner sum of equation (5). The
+functional complexity is the sum of the function depicted in Figure 8(b).
+
+(a) The relationship between the uncertainty of interactions for all subset sizes and the uncertainty
+which is expected from the calculation performed
+on the whole system.
+
+(b) The distance between the uncertainty of interactions for all subset sizes and the uncertainty which
+is expected from the calculation performed on the
+whole system, i.e. the functional complexity of the
+self-organising frequency assignment approach.
+
+Figure 8: The functional topology has nine nodes; the maximum scale size R is 2; the functional
+
+complexity is represented by the area between the linear and non-linear function.
+Similarly, the authors of [22] analyse the two frequency allocation algorithms. In contrast
+to our work, they analyse the complexity of the outcome (i.e. the frequency allocation) of
+these implementations. The results that are presented in their work show that the random
+approach produces an outcome with zero complexity† , whereas the self-organising distributed
+frequency allocation algorithm produces a complex outcome. Here, our functional complexity
+metric analyses the complexity of the implementation itself. As discussed above, the functional
+† The
+
+complexity metric used in [22] is excess entropy.
+
+A Functional Complexity Framework for the Analysis of Telecommunication Networks
+
+17
+
+complexity of the random frequency allocation algorithm is zero, and the functional complexity
+of the self-organising distributed frequency allocation algorithm is 1.69. This suggests that a
+complex implementation of a function results in a complex outcome. In [22] the authors show
+that the response to a change of a system with highly complex output happens in a more
+manageable fashion causing less disruption. The authors of [22] also emphasize the higher
+robustness of a complex outcome compared to a non-complex outcome. Making a connection
+between the implementation and the outcome of a function correlates the characteristics of the
+outcome with the complex relationships that underpin the functional structure.
+
+5
+
+Conclusion
+
+The growing size and heterogeneity of telecommunication networks leads to a need to change
+the way we analyse and model them. Also the rapid evolution of network services demands a new
+approach to analyse them. The aim of this paper was to contribute to this new way of studying
+networks. We focus on network functions as building blocks of services. We consider network
+functions as complex systems. In order to provide a new approach to analyse and understand
+the impact of complex functional relationships between system entities, we developed a new
+framework. The framework allows us to visualise an implementation of a network function
+with graphs called functional topologies. We provide several examples that show how to map
+a network function into a functional topology. The graph visualisation of the implementation
+allows us to focus on the relationships between entities rather than the entities themselves.
+The next step after mapping an implementation of a network function into a functional
+topology was to provide a metric that quantifies the organisational structure of the topology.
+Our functional complexity (CF ) captures the variety of roles that each node in the topology has
+and the variety of structural patterns present in the topology. CF quantifies the deviation of the
+implementation of a network function from the non-complex model of itself. The quantification
+of this deviation as presented in Section 3 provides a new approach to understand increasingly
+complex telecommunication networks.
+In order to study the impact of different structural patterns on the functional complexity
+in Section 4, we start by analysing the complexity of simple graph structures (bus, ring, star
+and mesh). Additionally, we provide a detailed study that investigates the impact of several
+graph theory metrics on the functional complexity. We investigated the correlation between the
+combination of the graph theory metrics and complexity, due to the absence of high correlation
+between any graph theory metrics and the functional complexity. This analysis allowed us to
+make conclusions about the organisational structures that is needed in order to achieve high
+complexity.
+In this paper we also analysed the functional complexity of two different implementations of
+the frequency allocation function (random and self-organising). First, in Section 2 we explain
+how to map these implementations into functional topologies, and in Section 4, we apply our
+complexity metric to quantify the functional complexity of these implementations. We showed
+that the random frequency allocation has zero complexity (and represents therefore a non-
+
+18
+
+DZAFERAGIC MERIM, et al.
+
+complex implementation), whereas the self-organising implementation shows higher complexity.
+This allowed us to make a connection between our results and the results from [22], where the
+authors calculated the complexity of the outcome of these implementations and got the same
+kind of results. This implies that a complex implementation results in a complex outcome of
+the function and allows us to make assumptions about the robustness and response to change
+similar to [22].
+Overall, our complexity metric quantifies telecommunication networks in terms of their
+functional relationships and provides a wholly new approach to understanding the operation of
+networks. More precisely, the complexity metric quantifies the relationships employed during
+operation of network functions. This provides a new approach to study networks which is
+especially relevant for next generation networks.
+
+References
+[1]
+
+[2]
+[3]
+[4]
+
+[5]
+[6]
+[7]
+[8]
+[9]
+[10]
+
+[11]
+[12]
+
+Y.-Y. Liu, J.-J. Slotine, and A.-L. Barabási, “Observability of complex systems.” Proceedings of
+the National Academy of Sciences of the United States of America, vol. 110, no. 7, pp. 2460–5,
+2013.
+Y. Bar-Yam, “Multiscale Complexity/Entropy,” Advances in Complex Systems, vol. 07, no. 1, pp.
+47–63, 2004.
+L. Yaeger, “Evolution Selects For and Against Complexity,” no. November, 2007. Available:
+http://vw.slis.indiana.edu/talks-fall07/Yeager.pdf
+G. Tononi, O. Sporns, and G. M. Edelman, “A measure for brain complexity: relating functional
+segregation and integration in the nervous system.” Proceedings of the National Academy of
+Sciences of the United States of America, vol. 91, no. 11, pp. 5033–5037, 1994.
+R. Lopez-Ruiz, H. L. Mancini, and X. Calbet, “A statistical measure of complexity,” Physics
+Letters A, vol. 209, no. 5-6, pp. 321–326, 1995.
+D. Balduzzi and G. Tononi, “Integrated information in discrete dynamical systems: Motivation
+and theoretical framework,” PLoS Computational Biology, vol. 4, no. 6, 2008.
+N. J. Joshi, G. Tononi, and C. Koch, “The Minimal Complexity of Adapting Agents Increases
+with Fitness,” PLoS Comput Biol, vol. 9, no. 7, p. e1003111, 2013.
+T. P. Evans, E. Ostrom, and C. Gibson, “Scaling Issues With Social Data in Integrated Assessment
+Modeling,” Integrated Assessment, vol. 3, pp. 135–150, 2002.
+S. Lloyd, “Measures of complexity: a nonexhaustive list,” Control Systems, IEEE, vol. 21, no. 4,
+pp. 7–8, 2001.
+Z. Wang, D. Zhang, X. Zhou, D. Yang, Z. Yu, and Z. Yu, “Discovering and profiling overlapping communities in location-based social networks,” IEEE Transactions on Systems, Man, and
+Cybernetics: Systems, vol. 44, no. 4, pp. 499–509, 2014.
+Y.-Y. Ahn, J. P. Bagrow, and S. Lehmann, “Link communities reveal multiscale complexity in
+networks.” Nature, vol. 466, no. 7307, pp. 761–764, 2010.
+T. S. Evans and R. Lambiotte, “Line graphs, link partitions, and overlapping communities,”
+Physical Review E - Statistical, Nonlinear, and Soft Matter Physics, 2009.
+
+A Functional Complexity Framework for the Analysis of Telecommunication Networks
+[13]
+[14]
+[15]
+
+[16]
+
+[17]
+[18]
+[19]
+
+[20]
+
+[21]
+
+[22]
+[23]
+[24]
+
+19
+
+M. E. J. Newman and M. Girvan, “Finding and evaluating community structure in networks,”
+Phys. Rev. E, vol. 69, no. 2, p. 026113, Feb. 2004.
+M. E. J. Newman, “Modularity and community structure in networks,” Proceedings of the National
+Academy of Sciences, vol. 103, no. 23, pp. 8577–8582, 2006.
+M. J. Lanham, G. P. Morgan, and K. M. Carley, “Social Network Modeling and Agent-Based
+Simulation in Support of Crisis De-Escalation,” IEEE Transactions on Systems, Man and Cybernetics Part C: Applications and Reviews, vol. 44, no. 1, pp. 103–110, 2013.
+M. Bristow, L. Fang, and K. W. Hipel, “Agent-based modeling of competitive and cooperative
+behavior under conflict,” IEEE Transactions on Systems, Man, and Cybernetics: Systems, vol. 44,
+no. 7, pp. 834–850, 2014.
+M. González, C. Hidalgo, and a. L. Barabási, “Understanding individual human mobility patterns,” Nature, vol. 453, no. June, pp. 779–782, 2008.
+P. Wang, M. C. Gonzalez, C. A. Hidalgo, and A.-L. Barabasi, “Understanding the Spreading
+Patterns of Mobile Phone Viruses,” Science, vol. 324, no. May, pp. 1071–1076, 2009.
+J.-P. Onnela, J. Saramäki, J. Hyvönen, G. Szabó, D. Lazer, K. Kaski, J. Kertész, and
+a L Barabási, “Structure and tie strengths in mobile communication networks.” Proceedings of the
+National Academy of Sciences of the United States of America, vol. 104, no. 18, pp. 7332–7336,
+2007.
+H. Beigy and M. R. Meybodi, “Cellular learning automata with multiple learning automata in
+each cell and its applications,” IEEE Transactions on Systems, Man, and Cybernetics, Part B:
+Cybernetics, vol. 40, no. 1, pp. 54–65, 2010.
+I. Macaluso, H. Cornean, N. Marchetti, and L. Doyle, “Complex communication systems achieving
+interference-free frequency allocation,” Communications (ICC), 2014 IEEE International Conference on, pp. 1447–1452, 2014.
+I. Macaluso, C. Galiotto, N. Marchetti, and L. Doyle, “A Complex Systems Science Perspective
+on Wireless Networks,” Journal of Systems Science and Complexity, no. 10, pp. 1–27, 2016.
+N. J. Kaminski, “Social Intelligence for Cognitive Radios,” Ph.D. dissertation, Virginia Polytechnic Institute and State University, Blacksburg, Virginia, 2014.
+M. Newman, Networks: An Introduction. New York, NY, USA: Oxford University Press, Inc.,
+2010.
+
+

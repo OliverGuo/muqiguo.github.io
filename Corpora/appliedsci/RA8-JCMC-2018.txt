@@ -1,0 +1,2882 @@
+<heading>
+Title: Watching Me Watching You: How Observational Learning Affects Self-disclosure on Social Network Sites?
+Author: Tamar Ashuri, Shira Dvir-Gvisman, and Ruth Halperin
+Journal: Journal of Computer-Mediated Communication
+Year: 2018
+</heading>
+
+Abstract
+Many explanations have been proposed regarding people’s willingness to disclose information on social
+network sites (SNSs). Focussing on the reciprocal nature of such sites, this study explores the signiﬁcant
+role observational learning (OL) plays in determining users’ willingness to self-disclose information on
+Facebook. It demonstrates how the ability to view other users’ actions—and the rewards and setbacks
+they encounter—impinge on their risk assessment and resulting disclosure behavior. Using an
+online survey of 742 Facebook users and an experiment conducted with 264 such participants, we
+demonstrated that users learn from others regarding self-disclosure behavior and resulting gains/
+losses. We showed that the observation mechanism contributes to reward envy, that leads to a
+high level of self-disclosure behavior. By contrast, observation of risks has only a marginal eﬀect
+on such undertakings.
+
+Introduction
+Every 60 seconds, 1.09 billion active Facebook users around the world post 510 comments, 293,000
+statuses and 136,000 photos. On Twitter, 500 million tweets are submitted each day and billions of comments are shared on other social network sites (SNSs) (Zephoria digital marketing, 2017). This usercreated information, that contains personal details, news, moods, and opinions, is critical to sustaining the
+
+Theoretical framework and hypotheses: self-disclosure behavior in face-to face
+interactions and on SNSs
+Self-disclosure refers to the “process of making the self known to others” (Jourard & Lasakow, 1958,
+p. 91). SNSs oﬀer many means of fostering and enhancing self-disclosure among users. While almost any
+action taken on an SNS (e.g., updating proﬁle information, posting a status, photo, or video, clicking on
+commercial ads) directly or indirectly discloses information about the self (Tsay-Vogel, Shanahan, &
+Signorielli, 2016), in this study we relate to information SNS users intentionally reveal about themselves.
+Studies on self-disclosure—pre- and post-SNS—showed that such behavior encompasses various purposes, which dependent on the setting in which disclosure occurs (e.g., Antaki, Barnes, & Leudar, 2005;
+Jourard, 1971). Signiﬁcantly, it has been noted that the decision to share personal information involves
+counterbalance between two conﬂicting elements: Anticipated gains and possibility of losses (e.g.,
+Jourard, 1971). It may fulﬁll fundamental needs, such as social connectedness and belonging (e.g., Tamir
+& Mitchell, 2012), identity formation and enhancement of self-esteem (e.g., Hollenbaugh & Ferris, 2014),
+but it also bears potential losses: emotional distresses like jealousy in others’ supposedly “good life” life
+(Muise, Christoﬁdes, & Desmarais, 2009), and envy in the rewards they receive online (e.g., rewards like
+getting support in the form of receiving “Likes”), and other losses associated with undesired usage of the
+information disclosed that the discloser cannot fully control (Altman, 1975).
+To better understand disclosure decisions under conditions of risk and uncertainty, early information
+privacy scholars coined the term privacy calculus (Laufer & Wolfe, 1977). This metaphoric construct constitutes a cost-beneﬁt tradeoﬀ analysis that accounts for the inhibitors and drivers that eﬀect decisions
+regarding information disclosure. This construct was adopted by scholars who explored disclosure decisions in online interactions, primarily in ecommerce contexts (e.g., Dinev & Hart, 2004; Li, Sarathy, &
+Xu, 2010). More recently, it was used to explain users’ self-disclosure behavior on SNSs (chieﬂy
+Facebook). Here, scholars showed that perception of risk was negatively associated with self-disclosure on
+SNSs, while anticipated beneﬁts were positively associated with it (e.g., Krasnova, Koroleva, Spiekermann, &
+Hildebrand, 2010; Dienlin & Metzger, 2016; see also McKnight, Lankton, & Tripp, 2011).
+While acknowledging the contribution of such works, we identify some weaknesses with regards
+to their conceptualization of cost-beneﬁt analysis. Speciﬁcally, we highlight common tendency in the
+
+popularity and value of SNSs. Indeed, without massive production and consumption of personal information, SNSs would not be able to maintain the attention required to secure user loyalty (Chen, 2013).
+Several approaches have been oﬀered to explain users’ motivation to disclose personal information on
+SNSs. Anticipation of beneﬁts, such as enjoyment and social acceptance, have been suggested as incentives
+(e.g., Choi & Bazarova, 2015; Sledgianowski & Kulviwat, 2008), whereas perceived possibilities of loss, such
+as harassment, social rejection, browsing history tracking, third party use of personal data and identity theft,
+serve as deterrents (e.g., Acquisti, Brandimarte, & Loewenstein, 2015). Our overall motivation is improvement of our understanding of users’ willingness to disclose sensitive personal information on SNSs despite
+the substantial risks that stem from such behavior. More speciﬁcally, we aim to advance the current discussion on privacy concerns by tracing the early stages of decision-making processes and exploring how perceptions of gains and losses are learned and acquired. To this end, we point out the signiﬁcant role the
+reciprocal nature of SNSs plays in disclosure behavior. We argue that the ability to constantly monitor
+others and be monitored by others fosters social learning. Drawing on the seminal observational learning
+(OL) theory (e.g., Bandura, 1971b; Deutsch & Gerard, 1955; Simpson, Siguaw, & Cadogan, 2008), it is suggested that the visibility of other users’ self-disclosure behavior and the gains and setbacks they encounter
+in the process impinge on users’ risk assessment and by implication on their disclosure behavior.
+
+Uncertain consequences or outcomes that might follow one or more options should be evaluated and weighted in reaching an overall decision. Basically, the probability of each outcome is
+multiplied by the evaluation of that outcome and the score based on these products represents
+the overall utility of the option. This theory thus provides a model that serves as a rational or a
+normative basis for making decisions. (Van der Pligt, 2002, p. 258)
+This useful perspective was not incorporated in current studies on online self-disclosure. In recent
+studies, for example, Chang and Chen (2014) and Chang and Heo (2014) oﬀered elaborate scales that measured perceived beneﬁts by using items such as “I feel that Facebook helps me interact with friends.”
+Nevertheless, the authors did not measure perceived importance of interactions with friends via Facebook.
+Instead, it appears that the study adopts a normative view according to which social ties are universally
+important. Overlooking the diﬀerences among users with regard to signiﬁcance of speciﬁc gains (and
+losses), results in imprecise estimates of each user’s individual privacy calculus. The same shortcoming
+appears with regard to diﬀerences among scenarios. For example, although being hacked is clearly a worrisome situation, it is far less likely to occur than is receipt of comments from friends. By concentrating on
+magnitude alone, we risk misassessment of the perceived losses users ascribe to these two scenarios.
+Having identiﬁed these weaknesses, we oﬀer a new conceptualization of cost-beneﬁt analysis in
+the context of self-disclosure (SD) on SNSs that includes both the likelihood and the magnitude of
+beneﬁts and costs. We thus hypothesize:
+Hypothesis 1: Assessment of gains, the product of user-perceived magnitude and likelihood,
+will be associated with SD behavior: The more users expect gains by SD, the more they engage
+in self-disclosure behavior.
+Hypothesis 2: Assessment of losses, that is also the product of user-perceived magnitude and
+likelihood, will be associated with SD behavior: The more users anticipate losses by SD, the
+less they engage in self-disclosure behavior.
+
+The effects of social observation on technology perception and use
+As indicated, OL theory informs our predictions. In the 1960s and 1970s, Albert Bandura and his colleagues demonstrated that social interactions constitute a signiﬁcant component in learning processes
+that can accrue either intentionally or unintentionally. They showed that by observing the behavior of
+others and the beneﬁts and losses they incur as a result of such actions, one forms an idea of the advisability of a particular behavior. Subsequently, this coded information serves as a guide for action (e.g.,
+Bandura, 1971b). Learning accrues in cases in which the observed model is either actually present or
+only symbolically so (in mass media artifacts, for example). Signiﬁcantly, media consumers can learn
+by viewing a speciﬁc role model or from their encounter with a “vast amount of information about
+human values, styles of thinking and behavior patterns (…) gained from the extensive modeling in the
+symbolic environment of the mass media” (Bandura, 2001, p. 271). Thus, in the context of mass
+literature to ask users to assess their general perceptions of SNS safety and possible gains (e.g., “overall,
+I see no real threat to my privacy due to my presence in an SNS” [Krasnova, Veltri, & Günther, 2012];
+“Disclosing can improve my living and working eﬃciency” [Xu, Michael, & Chen, 2013]). Extensive
+research in risk assessment, however, indicates that people’s decision-making processes are far more complex (e.g., Sitkin & Pablo, 1992; Yates & Stone, 1992). When assessing both gains and losses, people consider
+two dimensions—the signiﬁcance of a given loss/gain and its probability. For example, winning the lottery
+could result in a signiﬁcant proﬁt, but the low likelihood of winning deters people from participating:
+
+T. Ashuri et al.
+
+Watching Me Watching You
+
+Others’ SD behavior
+Following early theorization of OL, numerous studies documented the inﬂuence of observed behavior,
+stressing the signiﬁcance of observing behavior performed by many (Bandura, 1971a). As noted by
+van de Bongardt et al. (2015):
+
+communication, consumers may also learn by watching behavior performed by numerous models,
+rather than by relying only on one speciﬁc model (e.g., Stefanone, Lackaﬀ, & Rosen, 2010).
+OL scholarship highlights four dimensions that foster observation learning: Attention, retention,
+reproduction, and motivation (e.g., Bandura, 2009). We contend that this four-dimensional framework
+can be applied successfully to the online environment and especially to SNSs. We begin with the
+dimension of attention, positing that a particular behavior may be learned successfully only if one
+pays suﬃcient attention to relevant information regarding, norms, values, thinking patents, conducts,
+etc., gained from extensive modeling in the media’s environment (e.g., Ball-Rokeach & DeFleur, 1976;
+Bandura, 2001). It is well documented that the attention-drawing mechanism is a major component
+of popular SNSs (e.g., Hodas & Lerman, 2012). One outstanding example is SNSs algorithms, that
+attract users’ attention to others who share their values and attitudes, while making dissimilar users
+invisible (e.g., Ellison, Vitak, Gray, & Lampe, 2014; Pariser, 2011). Such a mechanism might reinforce
+learning, as OL scholars note repeatedly: When models are similar to the learner, the chances that the
+learner will be inﬂuenced by the model’s behavior increase (van de Bongardt, Reitz, Sandfort, &
+Deković, 2015). Another signiﬁcant “attracting attention” feature is the ﬁrst-in-ﬁrst-out queue structure of the platforms’ interfaces (e.g., “Time line” in Facebook and chorological queue in Twitter). The
+second dimension, retention, indicates that storing information in ways enabling subsequent access is
+crucial to the OL process. SNSs might promote retention because these sites constitute archives of
+social information (Margetts, John, Hale, & Yasseri, 2015) that can be retrieved at diﬀerent points in
+time. For example, the individual user can easily utilize the research engine tool placed on top of a
+Facebook page. By typing a keyword in the designated “research window,” they can easily obtain
+requested information about network members’ past behaviors on the network, thereby learning their
+respective values and attendant beneﬁts and costs. In reproduction, the learner gets to practice the
+observed behavior. SNSs are designed to enhance repetitive SD actions, because their sustainability
+depends on user disclosure of personal information. Several features enhance such activities. On illustrative example is the ability to “comment on a comment” on one’s Facebook page, and clearly observe
+the chaining patterns. In Tweeter, it is the retweeting feature that facilitate and even encourage reproduction. With regard to motivation, observed rewards (gains) and punishment (losses) either raise or
+lower the learner’s motivation to repeat the modeled behavior, as Bandura (1971b) argues: “Seeing
+others gain desired outcomes by their actions can create outcome expectancies that function as positive incentives [referred to as perceived gains in this article]; observed punishing outcomes can create
+negative outcome expectancies that function as disincentives [referred to here as perceived losses]” (p.
+276). SNS platforms allow users to “visually monitor” (Carroll & Bandura, 1982) their friends’ behavior and the outcomes of these actions. For example, a prime feature in Facebook is the “Like” function.
+Any Facebook users can easily view the number of “Likes” other people received for the posts they
+publish. In line with OL scholarship, SNS users will most likely be conform to the behavioral patterns
+they observe because they expect certain beneﬁts or losses, such as social recognition or rejection, or
+an increase or decrease in social status.
+As SNS may constitute a conducive environment for OL, we aim to explore how the ability to
+observe other users on SNSs enables one to learn the advisability of the modeled behavior. We develop
+our hypotheses according to the three core elements users observe and from which they learn: Others’
+behavior, and the gains—or alternatively, losses—they incur.
+
+The larger the number of peers who engage in a certain behavior, the more functional and correct the behavior will be perceived to be and the more likely it is that adolescents will engage
+in the same behavior, based on the reasoning that if others are doing it, it is probably a good
+or wise thing to do the same. (p. 204)
+
+Hypothesis 3: Perceived SD of others will be positively associated with one’s own SD behavior.
+
+Others’ gains
+As indicated above, one signiﬁcant element that impinges on the eﬀectiveness of OL is the reward
+the observed model receives (Bandura, 1971a). In OL theory, if learners see that a model gains from
+a particular behavior, they develop the expectation that such behavior would aﬀord them the same
+gains. In such instances, users might be motivated to perform the observed behavior. Although
+observed gain is described as a fundamental factor in OL, to the best of our knowledge, it has been
+overlooked in SD literature on SNSs. Recent studies acknowledged the importance of observing
+behavior of others, as well as the gain one receives directly from the learning process (Cheung et al.,
+2015), yet no research has addressed the link between the two components. Hence we propose the
+following:
+Hypothesis 4: Observed gains of others will be positively associated with one’s perception of
+gains to self.
+With regard to others’ losses, OL theory posits that punishments (or losses) incurred by others
+receive deter the learner from repeating the observed behavior (van de Bongardt et al., 2015).
+Recently, this idea was tested in a study on software piracy, in which scholars showed that people tend
+
+H4
+Observed gains
+
+Observed losses
+
+H5
+
+Assessment of
+gains to self
+
+H1
+
+Observed SD
+behavior
+
+H3
+
+Assessment of
+losses to self
+
+SD behavior
+
+H2
+
+Figure 1 Suggested theoretical model.
+
+On the face of it, in SNSs such as Facebook, any user can, in principle, visually monitor the behavior of many network friends. Nevertheless, these platforms also embody a visibility constraint: Users
+who disclose more become more visible. Conversely, risk-averse users usually disclose less and hence
+are less visible. This may strengthen the perception of self-disclosure as the most common and therefore most prudent course of action.
+The inﬂuence of others’ perceived behavior on users’ decisions has been documented in the context of online environments. For example, it was demonstrated repeatedly that in the domain of ecommerce, consumers observe the purchase actions of previous individuals and tend to imitate them (e.g.,
+Wang & Yu, 2017). Similarly, Burke, Marlow, and Lento (2009), who studied online distribution of
+news, demonstrated that Facebook users who see their friends contributing news content proceed to
+share more content of this kind themselves (for similar results see Cheung, Liu & Lee, 2015). Building
+on these insights, we posit:
+
+T. Ashuri et al.
+
+Watching Me Watching You
+
+to avoid software pirating when they see online that those who commit this oﬀence suﬀer losses (e.g.,
+Sun, Lim, & Fang, 2013). In accordance with these observations, we propose (Figure 1):
+Hypothesis 5: Observed losses of others will be positively associated with one’s assessment of losses.
+
+Method
+We conducted an online survey among Israeli Facebook users between 7 and 9 December 2015.
+
+Sample
+We used the service of an online survey company that holds an online panel of participants who receive
+gift vouchers in exchange for their participation in online surveys. For this study, a sample of 742 Israeli
+Facebook users was created. The sample is not representative of the population of Israel, but rather was
+designed to be representative of the Israeli population of Facebook. Marketing data1 show that this latter
+group is far younger than the population as a whole and comprises more men (53%) than women. Israeli
+Facebook users are also more secular than Israeli society as a whole.2 The sample constitutes a nearperfect match to data available with regards to age and gender composition of Israeli Facebook users (age
+ranging between 18 and 71 with M = 42.3 SD = 14.6; 54% male; 3% ultra-Orthodox; 45% holding an academic degree; income: M = 3.0 SD = 1.2, on a 5-point scale).
+
+Measures
+For a full description of scale items and validation, see Appendix A.
+Dependent variable3
+To measure SD behavior, we created two scales: Actions taken and content shared. For the ﬁrst scale,
+we asked participants to rank how often they were involved in a list of activities (adapted from TsayVogel et al., 2016; 9 items, Cronbach’s alpha = .88), while the second inquired how often participants
+shared content concerning diﬀerent aspects of their life (e.g., politics, consumption preferences, family,
+etc.; Cronbach’s alpha = .88). In both cases, answers were expressed on a scale ranging from 1 (never) to
+5 (more than once a day) (actions: M = 2.4, SD = .86; information sharing: M = 1.7, SD = .70).
+Independent variables
+Perceived SD of others. To measure participants’ perception of how much others disclose, we asked
+them to answer the same questions as above with regard to their Facebook friends (Actions: Cronbach’s
+alpha = .90; M = 4.0, SD = .94; information sharing: Cronbach’s alpha = .93; M = 3.1, SD = 1.0).
+We measured signiﬁcance and likelihood of both gains and losses (Yates & Stone, 1992).
+Perception of gains. To gauge perception of gains that could be attributed to SD, we created a list of possible beneﬁts (Xu et al., 2013). To assess their signiﬁcance, we asked participants the following question: “To
+what extent do you consider the following to be advantages of Facebook use?” Answers were ranked on a
+scale from 1 (not an advantage at all) to 5 (a signiﬁcant advantage) (6 items, Cronbach’s alpha = .84; M =
+3.3, SD = 1.0). To assess likelihood, we asked: “When you think about the list we mentioned earlier, to what
+extent do you believe you are able to make the most of these beneﬁts?” Answers were ranked on a 1 to 5
+scale, ranging between “not at all” to “very much” (6 items, Cronbach’s alpha = .87; M = 3.2, SD = .96).
+Perception of losses. To measure losses possibly attributable to SD, we created a list of possible
+types of harm (Acquisti et al., 2015). As in the case of gains, we asked participants about magnitude,
+i.e., the extent to which they considered the listed events to be troubling: The answer scale ranged
+from 1 (not troubling at all) to 5 (very troubling) (7 items, Cronbach’s alpha = .87; M = 3.8,
+SD = .97). We also asked participants to evaluate the likelihood of each loss: “How likely is it that
+Journal of Computer-Mediated Communication 23 (2018) 34–68 © 2018 International Communication Association
+
+Covariates
+Besides applying demographic criteria, the model used three questions to control for online behavior.
+Participants were asked: (a) if, and how often they browse the web, (b) if, and how often they access
+Facebook, and (c) if, and how often they access other SNSs, such as Instagram or Twitter. Answers ranged
+from 1 (never) to 5 (several times a day). Participants who reported they engage in any of these activities
+on a daily basis were then asked how many hours a day they spent doing so, with answers reﬂecting a
+3-point scale: “Less than an hour,” “1–3 hours,” and “more than 3 hours.” In our sample, only 1%
+reported browsing and 11% reported using Facebook on a less than daily basis. Consequently, we only
+used the hours per day item to report web browsing behavior (for which the 1% that did not answer this
+question were coded as 0, M = 2.6, SD = .60). For Facebook and other SNS use, we created a combined
+6-point scale based on the two measures (Facebook M = 4.8, SD = 1.0; other SNS M = 2.7, SD = 1.0).
+Past experience
+We also asked participants whether any of the above risks aﬀected them, with responses ranging on a
+3-point scale: “never,” “once,” and “more than once” (ranging from 0 to 7, self: M = 3.1, SD = 2.0).
+
+Statistical analysis
+As indicated above, this theoretical approach to cost-beneﬁt analysis calls for a process of weighting
+the signiﬁcance of each item in gain/loss scales according to its perceived likelihood ([Van der Pligt,
+2002]; gains: M = 11.8, SD = 5.5; losses: M = 14.1, SD = 5.9, see Appendix B for distribution). The
+theoretical model described above requires mediation relations testing, for which we calculated
+Maximum Likelihood (ML) estimates, using IBM SPSS Amos 22.0 to assess the proposed model’s
+goodness of ﬁt and test each of the hypotheses. To test mediation, we relied on bootstrapping (5,000
+bootstrap samples) and following MacKinnon, Lockwood, Hoﬀman, West, and Sheets (2002) we
+opted for a bias-corrected conﬁdence interval (Preacher & Hayes, 2008).
+
+Results
+Before testing our hypotheses, we note the correlations between the two dimensions mentioned—
+signiﬁcance and likelihood of gains and losses—and SD behavior. In the case of gains, a strong positive correlation was found between signiﬁcance and likelihood of gains and SD (signiﬁcance: acts:
+Pearson’s r = .49, P < .01, information: Pearson’s r = .35, P < .01; likelihood: acts: Pearson’s r = .55,
+P < .01, information: Pearson’s r = .41, P < .01). By contrast, in the case of losses, both diminutions
+were weakly correlated with SD behavior (signiﬁcance: acts: Pearson’s r = .02, P = .75, information:
+Pearson’s r = -.07, P = .07). Importantly, likelihood was positively correlated with it (acts: Pearson’s
+r = .07, P = .08, information: Pearson’s r = .08, P = .07).
+We used Structural equation modeling (SEM) to test our hypotheses. The model was assessed
+with SD actions and sharing information creating a latent variable of SD behavior for both self and
+others (for full correlations table, see Appendix C). The theoretical model yielded satisfactory results
+
+such things will happen to you as a result of your Facebook use?” Answers were ranked on a 1 to 5
+scale, ranging between “not at all” to “very” (7 items, Cronbach’s alpha = .91; M = 3.6, SD = .99).
+Observed losses and gains of others. To measure participants’ assessments of the gains others
+achieved by using Facebook, we asked: “In your opinion, how successful are your Facebook friends in
+making the most of these beneﬁts?” using the same list as above. The response scale ranged from 1
+(not at all successful) to 5 (very successful) (6 items, Cronbach’s alpha = .90; M = 4.0, SD = .83).
+To gauge participants’ evaluation of others’ losses, we also asked whether any of the above risks
+aﬀected their Facebook friends. Responses reﬂected a 3-point scale: “Never,” “once” and “more than
+once” (ranging from 0 to 7, M = 3.3, SD = 2.8).
+
+T. Ashuri et al.
+
+Watching Me Watching You
+
+Observed losses
+
+.58*
+
+Assessment of
+losses to self
+
+Actions
+
+.09*
+Observed gains
+
+.46**
+
+.62**
+
+SD behavior
+
+Assessment of
+gains to self
+
+observed
+SD behavior
+Information
+
+Information
+.27**
+
+Actions
+
+Covariates: Demographics and online usage, past experience
+
+Figure 2 SEM of SD behavior social learning.
+Notes: Parameters are standardized coeﬃcients. ***p < .001, **p < .01, *p < .05; N = 742.
+in terms of goodness of ﬁt indices. We obtained a chi-square to df ratio (CMIN/DF) of 1.58 and found
+that the model ﬁt the data extremely well (χ2 = 55.4, df = 35, p = .02; RMSEA = .03, CFI = .987).
+Figure 2 shows that most of our hypotheses were conﬁrmed. Insofar as gains are concerned, H1
+and H4 were supported: observed gains were positively associated with gains assessment for self (H4),
+that were, in turn, positively associated with SD behavior. Observed gains had a positive and signiﬁcant indirect eﬀect on SD behavior (standardized estimates = .39; 95% C.I. [.21–.32]).
+As for losses, H5 was supported, with observed losses to others positively associated with assessment of loss to self. Contrary to H2, assessment of losses to self had no bearing on SD behavior.
+Finally, in keeping with H3, perceived SD of others behavior was positively associated with the participants’ own activity in this respect.
+It is important to note that results of Study 1 are the product of a cross-sectional design. As such,
+they are open to alternative interpretations and do not establish a causal relation.
+
+Study 2: experimental design
+The primary advantage of our survey design is the ability to gather information on users’ perceptions of
+their social reality. The survey, however, cannot establish causality, but can only demonstrate the association among the variables. In the case at hand, there could be two alternative explanations to the observed
+correlations between perceptions of others’ behavior gains and losses and cost-beneﬁt assessment for self.
+One option is that users learn from others (wherein the direction of causal relations is from others to
+self). Alternatively, it could be interpreted as a projection process in which one projects one’s own views
+on others. Consequently, we conducted an online experiment to demonstrate that OL does occur. We
+exposed participants to one of the most common gain and loss scenarios that Facebook users encounter:
+The sentiments expressed in responses to a given post (positive vs. negative).
+
+Method
+Participants
+Using the same recruitment platform, we sampled 512 participants for the experiment. Of these, 44
+did not have a Facebook account and were therefore excluded. An additional 41 did not complete the
+
+.42**
+
+Watching Me Watching You
+
+T. Ashuri et al.
+
+experiment, leaving 427 participants in the ﬁnal sample (age ranged between 18 and 71 with M = 37
+SD = 13.1; 59% female; 2% ultra-Orthodox; 42% with academic degrees; income: M = 2.8 SD = 1.2 on
+a 5-point scale).
+
+Manipulation
+Participants were divided randomly into four groups. Each was exposed to a segment of a Facebook
+page (see Figure 3) presenting a news feed in which a person shared a post and the reactions it
+received. In all cases, the post was identical, but the responses to it were manipulated. In the control
+case, there were no comments and 15 Likes.4 In the next three cases, we manipulated the type of
+responses, but held the amount of attention constant (that is, the number of comments and Likes
+were the same). In all cases, two comments were identical, one positive and one negative, while four
+additional comments varied in sentiment. The comments addressed four issues: Characteristics, post
+content, political issue described and public support regarding the issue (whether or not the post
+represents the opinion of many or few). The picture, user names of people commenting and length of
+comments were held constant across all cases. In the positive cases, the post received Likes and positive emoticons, as well as supportive comments from other users. In the negative case, responses
+included negative emotions and comments. Finally, a mixed response case included both positive and
+negative emotions, along with three positive and three negative comments.
+Manipulation check. To ensure that participants noticed the manipulation, we included ﬁve statements at the end of the questionnaire and asked participants to indicate the extent of their agreement
+on a scale of 1 (disagree) to 5 (agree): (a) The comments to the post were unpleasant, (b) The comments to the post were supportive (excluding participants in the control, F(2,425) = 13.9, p < .01;
+F(2,425) = 32.0, p < .01), (c) It was important to post this content (F(3,423) = 5.5, p < .01), (d) The post
+was convincing (F(3,423) = 5.1, p < .01), and (e) The post was inappropriate (F(3,423) = 1.1, p = .40). In
+all but the last case, the diﬀerences among groups were signiﬁcant and conformed to the anticipated
+directions (for means and std. errors, see Appendix D), suggesting that the manipulation worked.
+Measures. After exposure, participants were instructed to respond according to the scales
+described above for perceived losses (Cronbach’s alpha = .86; M = 3.8, SD = .90) and gains
+(Cronbach’s alpha = .86; M = 3.4, SD = .94) and were asked how likely they were to self-disclose,
+using the same items as earlier (Cronbach’s alpha = .86; M = 2.6, SD = .83). The order of scales was
+randomized across participants and ANOVA was conducted to test the hypothesis.
+
+Results
+Figure 4 presents the means and standard errors of all dependent variables, according to experimental
+case. As anticipated, participants in the positive case group reported a higher tendency to share when
+
+Figure 3 Experimental stimuli.
+
+T. Ashuri et al.
+
+Watching Me Watching You
+
+5
+4.5
+4
+3.5
+
+2.5
+2
+1.5
+1
+
+Self-disclosure
+Control
+
+Risks
+
+Gains
+Positive
+
+Mix
+
+Negative
+
+Figure 4 Means and standard errors: risk perception, gains perception and tendency towards SD
+behavior, by experimental case. Scale ranges from 1 (not at all) to 5 (a lot).
+using SNSs, while those in the negative case group reported a lower one (F(3,424) = 5.5, p < .01; all differences among groups are signiﬁcant; for a full description of contrasts, see Appendix E). Perceptions
+of gains were also aﬀected by the manipulation in the expected direction (F(3,424) = 7.37, p < .01).
+Participants in the positive case group perceived a greater number of advantages to self-disclosure
+behavior (in comparison to the negative case and the mixed case) while those in the negative case
+group reported the opposite (in comparison to the control group and positive case group).
+By contrast, there was no signiﬁcant diﬀerence in perception of losses (F(3,424) = .70, p = .55); contrary to expectations, participants in the negative case group did not demonstrate a higher perception
+of possible losses. We also observed correlations among the three dependent variables. In the current
+study, the correlation between SD tendency and perceived gains remains much stronger than the
+one between SD tendency and perceived losses (gains: r = .53, p < .001; losses: r = -.08, p = .20).
+We conjectured that OL shapes Facebook users’ perceptions of losses and gains, wherein users learn
+how much to share and the outcomes of various types of sharing behavior by observing others online.
+Most of these hypotheses were largely supported by empirical data: Surveys and experiments alike demonstrated that Facebook users learn from others regarding gains/losses and behavior. Moreover, perceived gains were positively correlated with SD behavior. Only partial conﬁrmation was obtained
+concerning losses, however: While a signiﬁcant association was found between perceived losses to self
+and to others, the applied manipulation did not alter perception and no eﬀects on behavior were noted.
+
+Discussion
+Our study applied the privacy calculus perspective to assess the inﬂuence of OL on SD in SNS. We
+conceptualized a model that underscores three key mechanisms at work: (a) Facebook users’ association of losses and gains with SD on SNS, (b) their assumption that positive relations obtain in both
+cases, and (c) the powerful eﬀect of OL on losses/gains perception and—by implication—on SD
+behavior. By focussing on OL’s role in determining SD perceptions and resulting behavior, this model
+adds a new dimension to existing studies emphasizing the eﬀects of social inﬂuence on SD (e.g.,
+Shibchurn & Yan, 2015). A core argument of these studies maintains that signiﬁcant others are likely
+
+3
+
+Watching Me Watching You
+
+T. Ashuri et al.
+
+SNS users must respond in a manner that leaves an observable marker of attention as a way of
+cultivating, or grooming, their connections. (…) On an SNS, explicitly responding to another
+user via activities that leave visible traces, such as commenting or clicking the “Like” button, is
+the most reliable way to indicate one has seen and attended to any individual piece of content
+on the site. (p. 858)
+Following this reasoning, gains may well become more apparent in users’ feeds, leading them to
+believe that other members of their network leverage the platform more than they do. We argue that
+this perception of the rewards other users are supposedly receiving is among the factors that motivate
+Facebook users to disclose information liberally.
+Another possible reason for the observed disparity concerns our approach to studying risk assessment in connection with SD on Facebook. Our ﬁndings suggest that in the case of perceived gains, the
+signiﬁcance and likelihood of the gain have a similar eﬀect on SD, but when it comes to losses, the picture is more complex: The signiﬁcance of a given loss is negatively correlated with SD, whereas the
+likelihood of a given loss is positively correlated with it. This may well reﬂect the complexity of riskassessment as it applies to SD on Facebook: Those who attribute signiﬁcant losses to SD on Facebook
+will be less likely to self-disclose, regardless of their perceived likelihood of these losses. By contrast,
+those who disclose more may realize that these activities increase their chances of being harmed, but
+they might not necessarily perceive the possible losses as signiﬁcant.
+
+to contribute to the formation of one’s intentions regarding SD behavior. For example, Shibchurn and
+Yan (2015) recently speculated that “[h]igh risk perceptions and low disclosure levels by signiﬁcant
+others may lead individuals to disclose less” (p. 106). If signiﬁcant others disclose information plentifully, users are likely to adopt such patterns and disclose more. To date, their hypothesis has not been
+tested empirically. We attempted to advance this discussion by focussing on aspects of social inﬂuence
+that ought to be accorded more attention in an age of networked media: rather than focussing on perceived social norms (what one believes others think), we addressed technological features that enable
+SNS users to retrieve information regarding others by viewing their conduct and the consequences
+thereof. We were thus able to shed new light on the complex eﬀect of social inﬂuence of risk assessment on disclosure behavior.5
+We discovered that when users perceive other Facebook users’ self-disclosure, together with the
+beneﬁts they obtain thereby, they tend to believe that they too can leverage the platform to their own
+advantage. We showed that this conception—that can be summarized as “more self-disclosure =
+greater beneﬁt”—encourages participants to intensify their SD behavior. The situation diﬀers with
+regard to perception of losses. We found that assessment of losses has a marginal eﬀect on users’ SD
+behavior. Although the ﬁrst study (survey) demonstrated that users’ risk assessment was linked with
+their perceptions of other users’ losses, the second (experiment) did not replicate these results. In fact,
+manipulation inﬂuenced assessment of gains and not of losses. These ﬁndings are in line with existing
+scholarship indicating that although users ascribe high risk levels to SD (lack of safety, security, reliability and trustworthiness), they still disclose a considerable amount of apparently sensitive information (e.g., Acquisti & Gross, 2006; Taddicken, 2013). When predicting Facebook self-disclosure,
+contemporary scholars studying privacy calculus on SNSs noted that expected beneﬁts have more predictive power than perceived losses (Dienlin & Metzger, 2016).
+We suggest two reasons that might explain the diﬀerence between the predictive power of gains
+and losses on SD. First, as noted by Ellison et al. (2014) in their study of Facebook, this platform is
+designed to impel users to reward those who generate content, because the absence of response is a
+vague signal that might be interpreted as a lack of interest. In Ellison et al.’s words:
+T. Ashuri et al.
+Limitations and future research directions
+
+Several aspects of the research design may well have aﬀected the ﬁndings of this study. Measures, for
+example, may constitute a signiﬁcant source of bias. To reinforce design, we supplemented the survey
+with an experiment. Although the resulting combination provides powerful methodical strength, alternative designs could have been considered as well, such as a study of organic interactions on
+Facebook, analyzing the interplay between visible social information and behavior patterns, made possible by the advent of unobtrusive behavioral measurement. Its advantages notwithstanding, this
+method also entails certain constraints, particularly ethical concerns: when monitoring SNS personal
+proﬁles of consenting participants, for example, exposure of research to content posted by others who
+provided no such consent is virtually inevitable. Furthermore, this study used an opt-in sampling
+method, wherein participants selected themselves. Obviously, a non-random sample of paid participants would engender various biases. Considering the extremely low response rates prevailing at present, however, the method appeared particularly useful despite its limitations.
+Another constraint worth mentioning involved the characteristics of the scales used. This study
+comprises some scales that contain “and” and “or” clauses. For example, we asked participants if they
+share personal information on Facebook, but did not specify whether this information contains a
+phone number, an email address, a password, etc. Clearly, while users might be willing to share phone
+numbers, they would not necessarily agree to sharing passwords. Future studies could focus on speciﬁc
+SD behavior and nuance our scales. Related to this, is a possible discrepancy between the use of the
+word “importance” of given beneﬁt users report to, and the “gain” they attribute to it. For example,
+getting “Likes” might be a big beneﬁt of SD on SNSs, but a respondent might not see it as “important”
+since the word might be associated with issues that carry social importance. Future research can
+address this limitation by “ﬁne-tuning” the measurement.
+Several additional factors may have exerted a substantive eﬀect on results. For example, the sample
+was limited in two respects, as it comprised Israeli users alone and was tailored to one platform only—
+Facebook. Although Facebook is the most popular SNS in Israel (Alexa, 2017), the study should be
+replicated in other cultural/national settings in which users may have a diﬀerent predisposition
+regarding self-disclosure. Such replication could also be useful in countries whose privacy regulations
+and concerns diﬀer from those of Israel. Considering the well-documented dissimilarities among
+countries (see, e.g., Krasnova & Veltri, 2010; Ribak & Turow, 2003), one would expect users in countries with diﬀerent approaches to privacy to ascribe diﬀerential gain/losses levels to SD on SNS.
+Studies of this kind might provide more intensive insight into the eﬀects of culture on cost-beneﬁt
+analysis and resulting SD behavior. Similarly, future eﬀorts could consider the manner in which designated visibility features inherent in certain online platforms such as WhatsApp, Instagram, or
+LinkedIn aﬀect users’ perceptions of others and their behavior patterns.
+Participants’ ages may also contribute to research bias. Our sample comprises users of diﬀerent
+ages (see discussion in the Methodology section), as we sought to provide a representative (nationwide) sample of Facebook users (to whatever extent possible—demographic information concerning
+Facebook users is not available to the public). It may be valuable, however, to conduct a comparative
+study with cohorts representing diﬀerent age groups (Generation Y and the older Generation X and
+Baby Boomers). As an increasing number of studies show that privacy concerns among young people
+diﬀer from the anxieties manifested by adults, subsequent studies could shed considerable light on
+the manner in which participant age aﬀects the value ascribed to SNS losses and gains. In this study,
+we did not distinguish between strong tie and weak tie friends. Realizing that social tie strength might
+inﬂuence OL, it could be valuable to conduct a study that explores the extent to which it does so.
+Watching Me Watching You
+Acknowledgments
+The project was funded by the Israel Science Foundation. Grant number 1385/13.
+
+Notes
+1 See http://www.ﬁalkov.co.il/english/facebook-audience-insights, accessed 23 December 2017.
+2 Ultra-Orthodox Jews, who comprise 8.8% of the population over age 20, often abstain from
+Internet use for ideological and economic reasons. See CBS, Statistical Abstract of Israel 2013—
+No. 64, Subject 7, Table 7.1, Persons aged 20 and over by selected characteristics., accessed 2
+September 2014. Because of language barriers, the Israeli Arab population was not included in the
+sample.
+3 The order of scales was randomized across participants.
+4 We chose to present a certain degree of social response, given that typically any post receives some
+attention, thus a post with no response at all may appear unrealistic.
+5 Our ﬁndings show that users discern positive relationships between levels of self-disclosure and of
+gains/losses. When observing others’ gains, users appear to perceive self-disclosure engagements on
+Facebook as a double-edged sword, exacerbating personal vulnerability as it increases platform
+usefulness.
+
+References
+Acquisti, A., Brandimarte, L., & Loewenstein, G. (2015). Privacy and human behavior in the age of
+information. Science, 347(6221), 509–514.
+Acquisti, A., & Gross, R. (2006). Imagined communities: Awareness, information sharing and privacy
+on the Facebook. In Privacy enhancing technologies (pp. 36–58). Berlin Heidelberg: Springer.
+Alexa (2017). Available at https://www.alexa.com/topsites/countries/IL
+Altman, I. (1975). The environment and social behavior: Privacy, personal space, territory, and
+crowding. Monterey, CA: Brooks/Cole Publishing.
+Antaki, C., Barnes, R. and Leudar, I., (2005). Self-disclosure as a situated interactional practice. British
+Journal of Social Psychology, 44, 181–200.
+Ball-Rokeach, S., & DeFleur, M. (1976). A dependency model of mass media eﬀects. Communication
+Research, 3, 3–21.
+
+The study might also contribute to practice-led research. One issue that received massive attention
+by both researchers and practitioners is means of fostering privacy literacy in the context of online
+networked technologies, particularly on SNSs. The ﬁndings of the current study, that underscored
+the importance of reciprocal features of SNS, could assist in the construction of interventions that
+enhance users’ capability to control the eﬀects of their disclosure behavior. At present, Facebook
+responds to this challenge by sending its users personal reminders to review their privacy settings.
+One possible intervention that emerged from this study is an interface design that provides a visual
+display of friends’ privacy-related decisions, such as the relevant privacy settings.
+This study contributes to a growing body of research on SD behavior by pointing to the signiﬁcant
+role OL plays in determining users’ willingness to self-disclose personal information on SNSs. It shows
+that the observation mechanism contributes to reward envy, that leads, in turn, to a high level of
+online SD. Subsequent studies could apply the model to examine the eﬀects of OL on various manifestations of human conduct in online spaces.
+
+
+.77
+
+act9
+
+act8
+
+act7
+.80
+
+.55
+
+Acts
+
+act1
+act2
+act3
+act4
+act5
+act6
+act7
+act8
+act9
+
+
+SD information-self
+
+info1
+info2
+info3
+info4
+info5
+info6
+info7
+info8
+info9
+
+N
+
+Min.
+
+Max.
+
+Mean
+
+Std. D.
+
+Skewness
+
+Std. Error
+
+Kurtosis
+
+Std. Error
+
+744
+744
+744
+744
+744
+744
+744
+743
+744
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
+
+5
+5
+5
+5
+5
+5
+5
+5
+5
+
+2.04
+1.78
+1.7
+1.71
+1.78
+1.69
+1.72
+1.85
+1.3
+
+1.13
+1.04
+.98
+.98
+.98
+.92
+.91
+1.16
+.78
+
+.94
+1.31
+1.54
+1.53
+1.31
+1.37
+1.39
+1.46
+2.99
+
+.09
+.09
+.09
+.09
+.09
+.09
+.09
+.09
+.09
+
+.04
+.99
+1.92
+1.88
+1.19
+1.44
+1.74
+1.27
+8.78
+
+.18
+.18
+.18
+.18
+.18
+.18
+.18
+.18
+.18
+
+info1 Share content regarding politics and current events, such as your opinions, political content
+you support, or news stories you found interesting
+info2 Share content regarding your consumer preferences and shopping habits, such as companies
+and products you like or dislike
+info3 Share information regarding your family, such as your relationship status, the identity of your
+partner, your parental status, or activities in which your children took part
+info4 Share information regarding your work, such as your workplace, your profession, or the people
+you work with
+info5 Share information regarding your friends, such as the identity of the people you hang out with
+info6 Share information regarding your current location, such as restaurants or events you are
+currently attending
+info7 Share information regarding your location in retrospect, such as restaurants or events you
+previously attended
+info8 Indicate where you live on your proﬁle
+info9 Share personal information, such as phone numbers, ID numbers, or passwords, or send it in messages
+
+
+Fit of model:
+χ2 = 15.9, df = 26, p = .87; RMSEA = .00, CFI = .995
+inf3
+
+inf2
+
+inf1
+
+.63
+
+.76
+
+.72
+
+.72
+
+inf9
+
+inf8
+
+inf7
+.57
+
+.60
+
+information
+
+SD acts—Others
+act_fr1
+act_fr2
+act_fr3
+act_fr4
+act_fr5
+act_fr6
+act_fr7
+
+Write status updates
+Comment on other people’s status updates
+Share other people’s content
+Upload photos
+Tag themselves in photos
+Tag other people in photos
+Indicate their geographical location, for example by mentioning a name of a restaurant, an
+event, or a landmark
+act_fr8 Indicate they intend to go to an event, or check in
+act_fr9 Participate in groups
+
+act_fr1
+act_fr2
+act_fr3
+act_fr4
+act_fr5
+act_fr6
+act_fr7
+act_fr8
+act_fr9
+
+52
+
+N
+
+Min.
+
+Max.
+
+Mean
+
+Std. D.
+
+Skewness
+
+Std. Error
+
+Kurtosis
+
+Std. Error
+
+698
+697
+693
+710
+668
+668
+677
+650
+633
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
+
+5
+5
+5
+5
+5
+5
+5
+5
+5
+
+3.97
+4.21
+3.98
+3.94
+3.71
+3.62
+3.46
+3.44
+3.93
+
+1.04
+.97
+1.04
+1.04
+1.14
+1.16
+1.20
+1.18
+1.07
+
+−.80
+−1.21
+−.87
+−.80
+−.56
+−.51
+−.37
+−.34
+−.83
+
+.09
+.09
+.09
+.09
+.10
+.10
+.09
+.10
+.10
+
+−.22
+.91
+.01
+−.15
+−.65
+−.67
+−.84
+−.84
+−.10
+
+.19
+.19
+.19
+.18
+.19
+.19
+.19
+.19
+.19
+
+.72
+
+.68
+
+.50
+
+inf6
+
+inf5
+
+inf4
+
+T. Ashuri et al.
+
+Watching Me Watching You
+
+act1
+
+act2
+
+.84
+
+.81
+
+act3
+.80
+
+act4
+.85
+
+act5
+.77
+
+act6
+.78
+
+.77
+
+act9
+
+act8
+
+act7
+. 80
+
+.60
+
+Acts
+FR
+
+SD-information others
+info_fr1 Share their opinions regarding current events and political contents they support
+info_fr2 Share content regarding their consumer preferences and shopping habits, such as companies
+and products they like or dislike
+info_fr3 Share information regarding their family, such as their relationship status, the identity of
+their partner, their parental status, or activities in which their children took part
+info_fr4 Share information regarding their work, such as their workplace, their profession, or the
+people they work with
+(Continued)
+
+
+Fit of model:
+χ2 = 37.5, df = 15, p = .07; RMSEA = .03, CFI = .981
+
+Watching Me Watching You
+
+T. Ashuri et al.
+
+Continued
+
+info_fr1
+info_fr2
+info_fr3
+info_fr4
+info_fr5
+info_fr6
+info_fr7
+info_fr8
+info_fr9
+
+54
+
+N
+
+Min.
+
+Max.
+
+Mean
+
+Std. D.
+
+Skewness
+
+Std. Error
+
+Kurtosis
+
+Std. Error
+
+688
+669
+681
+676
+690
+684
+692
+644
+611
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
+
+5
+5
+5
+5
+5
+5
+5
+5
+5
+
+3.37
+3.06
+3.03
+2.91
+3.3
+3.25
+3.21
+2.89
+1.96
+
+1.17
+1.26
+1.25
+1.28
+1.19
+1.21
+1.17
+1.37
+1.34
+
+−.28
+.03
+.05
+.18
+−.16
+−.10
+−.10
+.19
+1.12
+
+.09
+.09
+.09
+.09
+.09
+.09
+.09
+.10
+.10
+
+−.86
+−1.12
+−1.09
+−1.11
+−1.01
+−1.06
+−.95
+−1.23
+−.15
+
+.19
+.19
+.19
+.19
+.19
+.19
+.19
+.19
+.20
+
+
+info_fr5 Share information regarding their friends, such as the identity of the people they hang out
+with or how they hang out with them
+info_fr6 Share information regarding their current location, such as restaurants or events they are
+currently attending
+info_fr7 Share information regarding places they previously attended, such as restaurants and events
+info_fr8 Indicate where they live on their proﬁle
+info_fr9 Share personal information, such as phone numbers, ID numbers, or passwords
+
+T. Ashuri et al
+Fit of model:
+χ2 = 10.3, df = 16, p = .85; RMSEA = .00, CFI = .994
+inf3
+
+inf2
+
+inf1
+
+.80
+
+.88
+
+.88
+
+.85
+
+inf9
+
+inf8
+
+inf7
+.71
+
+.49
+
+information
+
+SD-Gains self:
+adv1
+adv2
+adv3
+adv4
+adv5
+
+Simply and rapidly obtaining information suiting my interests
+Obtaining likes and support from others
+Expressing myself—my opinions and feelings
+Maintaining and reinforcing social relations
+Getting personalized information, such as information about my close friends or about my
+ﬁelds of interest
+adv6 Eﬀectively promoting myself professionally
+Signiﬁcance
+
+adv1
+adv2
+adv3
+adv4
+adv5
+adv6
+
+N
+
+Min.
+
+Max.
+
+Mean
+
+Std. D
+
+Skewness
+
+Std. Error
+
+Kurtosis
+
+Std. Error
+
+744
+744
+744
+744
+744
+744
+
+1
+1
+1
+1
+1
+1
+
+5
+5
+5
+5
+5
+5
+
+3.64
+3.13
+2.92
+3.60
+3.53
+3.02
+
+1.23
+1.35
+1.33
+1.24
+1.19
+1.40
+
+−.63
+−.18
+.01
+−.56
+−.54
+−.03
+
+.09
+.09
+.09
+.09
+.09
+.09
+
+−.52
+−1.13
+−1.15
+−.63
+−.48
+−1.23
+
+.18
+.18
+.18
+.18
+.18
+.18
+
+
+
+.85
+
+.80
+
+.72
+
+inf6
+
+inf5
+
+inf4
+
+Watching Me Watching You
+
+T. Ashuri et al.
+
+Fit of model:
+χ2 = 10.3, df = 5, p = .08; RMSEA = .03, CFI = .995
+ad2
+
+.58
+
+.71
+
+ad3
+
+ad4
+.73
+
+.70
+
+ad6
+
+ad5
+.70
+
+.57
+
+Gains
+
+SD-Gains self:
+Likelihood
+
+adv1
+adv2
+adv3
+adv4
+adv5
+adv6
+
+56
+
+N
+
+Min.
+
+Max.
+
+Mean
+
+Std. D.
+
+Skewness
+
+Std. Error
+
+Kurtosis
+
+Std. Error
+
+743
+743
+743
+743
+743
+743
+
+1
+1
+1
+1
+1
+1
+
+5
+5
+5
+5
+5
+5
+
+3.49
+3.24
+2.96
+3.38
+3.40
+2.47
+
+1.17
+1.27
+1.31
+1.23
+1.20
+1.29
+
+−.37
+−.20
+.04
+−.36
+−.31
+.48
+
+.09
+.09
+.09
+.09
+.09
+.09
+
+−.67
+−.99
+−1.08
+−.79
+−.75
+−.84
+
+.18
+.18
+.18
+.18
+.18
+.18
+
+
+ad1
+
+T. Ashuri et al
+Fit of model:
+χ2 = 5.39, df = 5, p = .14; RMSEA = .033, CFI = .998
+ad2
+
+.64
+
+.80
+
+ad3
+.71
+
+ad4
+.79
+
+ad6
+
+ad5
+.67
+
+.71
+
+Gains
+likelihood
+
+SD-Gains others:
+adv_fr1
+adv_fr2
+adv_fr3
+adv_fr4
+adv_fr5
+
+Obtaining information suiting their interests
+Obtaining likes and support from others
+Publicly expressing themselves and their feelings
+Reinforcing social relations
+Getting personalized information, such as information about their close friends or about
+their ﬁelds of interest
+adv_fr6 Promoting themselves professionally
+
+adv_fr1
+adv_fr2
+adv_fr3
+adv_fr4
+adv_fr5
+adv_fr6
+
+N
+
+Min.
+
+Max.
+
+Mean
+
+Std. D.
+
+Skewness
+
+Std. Error
+
+Kurtosis
+
+Std. Error
+
+579
+620
+614
+589
+575
+560
+
+1
+1
+1
+1
+1
+1
+
+5
+5
+5
+5
+5
+5
+
+4.07
+4.18
+4.13
+4.07
+3.98
+3.63
+
+.98
+.95
+.99
+1.02
+1.00
+1.19
+
+−.91
+−1.08
+−1.05
+−1.02
+−.77
+−.51
+
+.10
+.10
+.10
+.10
+.10
+.10
+
+.24
+.71
+.62
+.53
+.04
+−.62
+
+.20
+.20
+.20
+.20
+.20
+.21
+
+ad1
+
+Watching Me Watching Yo
+Fit of model:
+χ2 = 3.2, df = 5, p = .68; RMSEA = .00, CFI = .998
+ad2
+
+ad3
+
+.78
+
+.86
+
+.79
+
+ad4
+.77
+
+ad6
+
+ad5
+.82
+
+.69
+
+Gains
+others
+
+SD loss—self
+rsk1 Information I want to share with speciﬁc people will ﬁnd its way to other people
+rsk2 People will share information about me without my consent, for example by tagging me in
+pictures
+rsk3 I will often be exposed to information I don’t care about
+rsk4 Commercial companies will use information I share to my disadvantage, for example by
+bombarding me with irrelevant advertisements
+rsk5 Commercial companies will sell my information to third parties without my knowledge or
+consent
+rsk6 The state will know more about me than I want it to
+rsk7 Hackers will steal my information
+Signiﬁcance
+
+rsk1
+rsk2
+rsk3
+rsk4
+rsk5
+rsk6
+rsk7
+
+58
+
+Min.
+
+Max.
+
+Mean
+
+Std. D.
+
+Skewness
+
+Std. Error
+
+Kurtosis
+
+Std. Error
+
+1
+1
+1
+1
+1
+1
+1
+
+5
+5
+5
+5
+5
+5
+5
+
+3.61
+3.45
+3.27
+3.94
+4.02
+3.43
+4.04
+
+1.35
+1.36
+1.28
+1.20
+1.26
+1.37
+1.32
+
+−.62
+−.36
+−.26
+−.96
+−1.10
+−.39
+−1.11
+
+.09
+.09
+.09
+.09
+.09
+.09
+.09
+
+−.81
+−1.12
+−.94
+−.04
+.02
+−1.05
+−.09
+
+.18
+.18
+.18
+.18
+.18
+.18
+.18
+
+ad1
+T. Ashuri et al.
+rs1
+1.0
+
+rs5
+
+rs4
+
+rs2
+
+rs3
+
+.91
+
+.64
+
+.81 .82
+
+rs6
+.95
+
+rs7
+.96
+
+Losses
+significance
+
+Likelihood
+
+rsk1
+rsk2
+rsk3
+rsk4
+rsk5
+rsk6
+rsk7
+
+N
+
+Min.
+
+Max.
+
+Mean
+
+Std. D.
+
+Skewness
+
+Std. Error
+
+Kurtosis
+
+Std. Error
+
+743
+743
+743
+743
+743
+743
+743
+
+1
+1
+1
+1
+1
+1
+1
+
+5
+5
+5
+5
+5
+5
+5
+
+3.47
+3.56
+3.87
+3.9
+3.71
+3.46
+3.49
+
+1.24
+1.25
+1.15
+1.19
+1.27
+1.30
+1.26
+
+−.34
+−.46
+−.71
+−.87
+−.66
+−.41
+−.33
+
+.09
+.09
+.09
+.09
+.09
+.09
+.09
+
+−.91
+−.81
+−.47
+−.23
+−.66
+−.92
+−.98
+
+.18
+.18
+.18
+.18
+.18
+.18
+.18
+
+
+Fit of model:
+χ2 = 8.0, df = 6, p = .24; RMSEA = .02, CFI = .997
+
+Watching Me Watching You
+
+T. Ashuri et al.
+
+χ2 = 3.8, df = 6, p = .73; RMSEA = .00, CFI = .999
+rs1
+1.0
+
+rs5
+
+rs4
+
+rs2
+
+rs3
+
+.88
+
+.71
+
+.93
+
+.97
+
+rs7
+
+rs6
+.91
+
+.92
+
+Losses—others
+rsk_fr1 Information they want to share with speciﬁc people will ﬁnd its way to other people
+rsk_fr2 People will share information about them without their consent, for example by tagging them
+in pictures
+rsk_fr3 They will often be exposed to information they don’t care about
+rsk_fr4 Commercial companies will use information they share to their disadvantage, for example by
+bombarding them with irrelevant advertisements
+rsk_fr5 Commercial companies will sell their information to third parties without their knowledge or
+consent
+rsk_fr6 The state will know more about them than they want it to
+rsk_fr7 Hackers will steal their information
+
+rsk_fr1
+rsk_fr2
+rsk_fr3
+rsk_fr4
+rsk_fr5
+rsk_fr6
+rsk_fr7
+
+60
+
+N
+
+Min.
+
+Max.
+
+Mean
+
+Std. D.
+
+Skewness
+
+Std. Error
+
+Kurtosis
+
+Std. Error
+
+440
+490
+509
+454
+418
+413
+433
+
+1
+1
+1
+1
+1
+1
+1
+
+3
+3
+3
+3
+3
+3
+3
+
+2.13
+2.31
+2.51
+2.34
+2.08
+1.96
+1.85
+
+.72
+.69
+.68
+.74
+.79
+.77
+.72
+
+−.20
+−.50
+−1.07
+−.63
+−.14
+.06
+.23
+
+.12
+.11
+.11
+.12
+.12
+.12
+.12
+
+−1.06
+−.83
+−.12
+−.92
+−1.37
+−1.32
+−1.04
+
+.23
+.22
+.22
+.23
+.24
+.24
+.23
+
+
+Likelihood
+losses
+
+T. Ashuri et al
+χ2 = 13.0, df = 9, p = .15; RMSEA = .02, CFI = .992
+rs1
+.89
+
+rs2
+
+rs3
+
+.85
+
+.80
+
+rs4
+.85
+
+rs5
+.90
+
+rs6
+
+.79
+
+Losses
+others
+
+Construct validity
+To validate our measurements, we tested their correlations with related concepts on an additional
+sample, relying on previous research by Dienlin and Metzger (2016), who developed scales to measure
+Facebook beneﬁts, privacy concerns, Facebook privacy self-eﬃcacy, Facebook self-disclosure and
+Facebook self-withdrawal. Furthermore, to validate data about self-disclosure, we asked participants to
+provide us with their Facebook activity log and added an item measuring passive Facebook use (demonstrating distinction between self-disclosure and passive use).
+
+Sample
+We used an online sample of 261 participants, 124 of whom completed the survey, ranging in age
+between 19 and 64 with M = 40.5 SD = 12.7; 49% male; 3% ultra-Orthodox; 50% with academic
+degrees; income: M = 3.0 SD = 1.4 on a 5-point scale; participants were recruited using the same platform as the samples described in the article.
+
+Measures
+In addition, developing the above measures, we also asked participants about their Facebook beneﬁts,
+privacy concerns, Facebook privacy self-eﬃcacy, Facebook self-disclosure and Facebook selfwithdrawal. All scales are taken from Dienlin and Metzger (2016) (full scales: https://osf.io/h4pef/?
+view_only=cf4c10222def4efdbecae20c1dca7dc6).
+Activity log data: Facebook allows users to download a log documenting all their activities. To protect participants’ privacy, we did not ask them to disclose their log (containing a complete documentation of photos, posts, etc.), but rather to report the size of the ﬁles downloaded (see Figure A1), based
+on the assumption that size is an indicator of amount of material shared. Nevertheless, it is important
+to note that 137 participants did not comply with this request, resulting in a high attrition rate.
+Furthermore, 22 participants failed to follow the instructions and thus supplied incorrect data.
+Seeking a uniform size indicator for all ﬁles (photos, posts, events, friends, etc.), we standardized each
+item (image ﬁles are much larger than text ﬁles, for example), ensuring that each participant was
+assigned an accurate relative score that could be compared with those of other participants.
+Passive use: To gauge passive use, we asked participants how often they read their Facebook
+friends’ posts (text and images) as part of the activity scale we developed to measure SD act frequency.
+
+Journal of Computer-Mediated Communication 23 (2018) 34–68 © 2018 International Communication Association
+
+
+.81
+
+rs7
+
+Watching Me Watching You
+
+T. Ashuri et al.
+
+Results
+Table A1 presents the descriptive statistics of variables measured, while Table A2 displays the results
+of a factor analysis for all scales. As indicated, all items in our scales were loaded on one factor, except
+for the SD acts scale, for which a two-factor solution was identiﬁed: SD acts were loaded on one factor
+and another measuring passive use was loaded on another. Only one item displayed high loadings of
+both factors: Liking friends’ posts/images. The dual high score may be explained by the item’s relevance to self and others, as it measures the participant’s active use yet relies on observation by others
+as well.
+Table A3, that presents the correlation among the variables, provides additional validation for the
+measurements developed: Self-disclosure measurements were highly correlated with Dienlin and
+Matzear’s Facebook self-disclosure measurements, suggesting convergence validity. We also noted a
+positive correlation among perceived gains, Dienlin and Matzear’s Facebook beneﬁts, self-disclosure
+and privacy concerns. Perceived losses were correlated with Facebook self-withdrawal and privacy
+concerns.
+
+
+Figure A1 Sample activity log data disclosed by participant.
+
+T. Ashuri et al.
+
+
+Table A1 Descriptive Statistics of All Variables
+Mean Std. D. Skewness S.E. Kurtosis S.E. Cronbach’s α
+
+Type
+Ads
+Contact info
+Events
+Friends
+Messages
+Mobile device
+Photos
+Places
+Synced photos
+Timeline
+Videos
+
+2.43
+1.78
+3.50
+3.60
+2.75
+2.48
+
+.85
+.74
+1.00
+.95
+.79
+.96
+
+.66
+1.54
+−.34
+−.48
+−.35
+.25
+
+.21
+.23
+.23
+.23
+.23
+.23
+
+.11
+3.10
+−.40
+−.25
+−.32
+−.63
+
+.43
+.46
+.46
+.46
+.46
+.46
+
+.89
+.88
+.86
+.86
+.59
+.88
+
+3.29
+
+.86
+
+−.37
+
+.23
+
+.63
+
+.46
+
+.90
+
+2.68
+
+.94
+
+.24
+
+.23
+
+−.26
+
+.46
+
+.86
+
+1.69
+
+.29
+
+−1.07
+
+.23
+
+.54
+
+.46
+
+.61
+
+.66
+
+1.04
+
+.24
+
+2.02
+
+.47
+
+.87
+
+.002
+
+N
+
+Min.
+
+Max.
+
+Mean
+
+Std. D.
+
+101
+102
+102
+102
+101
+102
+102
+102
+102
+102
+102
+
+2
+1.61
+2
+2
+1.01
+1
+1
+1
+1
+3
+1
+
+62,919
+2,879,918
+20,187,833
+191,275
+43,798,254
+1,538
+65,703
+10,628
+1,431
+8,214,581
+42,768
+
+9,547
+145,797
+329,373
+13,994
+3,173,460
+858
+6,687
+1,082
+792
+569,150
+4,305
+
+10,773
+361,512
+2,032,835
+28,121
+6,615,034
+681
+11,083
+1,517
+628
+1,050,921
+7,629
+
+Table A2 Exploratory Factor Analysis
+SD actions
+Item
+
+Component
+1
+
+Write status updates
+Comment on other people’s status updates
+Share other people’s content
+Upload photos
+Tag yourself in photos
+
+2
+.78 −.02
+.73 .38
+.73 .32
+.79 −.16
+.79 −.39
+
+(Continued)
+
+Journal of Computer-Mediated Communication 23 (2018) 34–68 © 2018 International Communication Association
+
+63
+
+Downloaded from https://academic.oup.com/jcmc/article/23/1/34/4832997 by Grinnell College Library user on 20 February 2022
+
+SD activity
+SD information
+Gains
+Risks
+Privacy concerns (Dienlin and Matzear)
+Facebook privacy self-eﬃcacy (Dienlin
+& Matzear)
+Facebook beneﬁts (Dienlin and
+Matzear)
+Facebook self-disclosure (Dienlin and
+Matzear)
+Facebook self-withdrawal (Dienlin and
+Matzear)
+Activity log data
+
+Watching Me Watching You
+
+T. Ashuri et al.
+
+Table A2 Continued
+SD actions
+Item
+
+Component
+
+SD information
+Item
+
+.78 −.30
+.63 .45
+.76 −.36
+.74 −.16
+.44 .62
+
+Component
+
+Share their opinions regarding current events and political contents they support
+Share content regarding their consumer preferences and shopping habits, such as
+companies and products they like or dislike
+Share information regarding their family, such as their relationship status, the identity of
+their partner, their parental status, or activities in which their children took part
+Share information regarding their work, such as their workplace, their profession, or the
+people they work with
+Share information regarding their friends, such as the identity of the people they hang
+out with or how they hang out with them
+Share information regarding their current location, such as restaurants or events they
+are currently attending
+Share information regarding places they previously attended, such as restaurants and
+events
+Indicate where they live on their proﬁle
+Share personal information, such as phone numbers, ID numbers, or passwords
+
+.835
+.814
+.778
+.747
+.743
+.705
+.675
+.62
+.562
+
+SD gains
+Signiﬁcance
+Item
+
+Component
+
+Simply and rapidly obtaining information suiting my interests
+Obtaining likes and support from others
+Expressing myself—my opinions and feelings
+Maintaining and reinforcing social relations
+Getting personalized information, such as information about my close friends or about
+my ﬁelds of interest
+Eﬀectively promoting myself professionally
+
+64
+
+.687
+.845
+.818
+.696
+.794
+.756
+
+Journal of Computer-Mediated Communication 23 (2018) 34–68 © 2018 International Communication Association
+
+Downloaded from https://academic.oup.com/jcmc/article/23/1/34/4832997 by Grinnell College Library user on 20 February 2022
+
+Tag other people in photos
+Participate in groups
+Indicate your geographical location, for example by mentioning a name of a restaurant,
+an event, or a landmark
+Indicate you intend to go to an event, or check in
+Read content uploaded by your friends
+
+T. Ashuri et al.
+
+Watching Me Watching You
+
+Likelihood
+Item
+
+.816
+.865
+.779
+.733
+.719
+.631
+
+SD losses
+Signiﬁcance
+Item
+
+Component
+
+Information I want to share with speciﬁc people will ﬁnd its way to other people
+People will share information about me without my consent, for example by tagging me
+in pictures
+I will often be exposed to information I don’t care about
+Commercial companies will use information I share to my disadvantage, for example by
+bombarding me with irrelevant advertisements
+Commercial companies will sell my information to third parties without my knowledge
+or consent
+The state will know more about me than I want it to
+Hackers will steal my information
+
+.82
+.714
+.523
+.701
+.823
+.779
+.781
+
+Likelihood
+Item
+
+Component
+
+Information I want to share with speciﬁc people will ﬁnd its way to other people
+People will share information about me without my consent, for example by tagging me
+in pictures
+I will often be exposed to information I don’t care about
+Commercial companies will use information I share to my disadvantage, for example by
+bombarding me with irrelevant advertisements
+Commercial companies will sell my information to third parties without my knowledge
+or consent
+The state will know more about me than I want it to
+Hackers will steal my information
+
+.865
+.815
+
+
+.734
+.82
+.816
+.717
+.775
+
+65
+
+Downloaded from https://academic.oup.com/jcmc/article/23/1/34/4832997 by Grinnell College Library user on 20 February 2022
+
+Simply and rapidly obtaining information suiting my interests
+Obtaining likes and support from others
+Expressing myself—my opinions and feelings
+Maintaining and reinforcing social relations
+Getting personalized information, such as information about my close friends or about
+my ﬁelds of interest
+Eﬀectively promoting myself professionally
+
+Component
+
+Watching Me Watching You
+
+T. Ashuri et al.
+
+Table A3 Pearson’s Correlations for Measurements
+Acts
+Information
+
+Gains-lik
+Loss-sig
+Loss-lik
+Activity log
+Self-withdrawal
+Dienlin and Matzear
+Beneﬁts
+Dienlin and Matzear
+SD
+Dienlin and Matzear
+Privacy con
+Dienlin and Matzear
+
+Gainssig
+
+Gainslik
+
+Losssig
+
+Losssig
+
+Activity
+log
+
+Selfwithdrawal Beneﬁts
+
+.411**
+121
+.516**
+121
+.239**
+121
+.194*
+121
+.212*
+102
+.159
+119
+.212*
+121
+.573**
+121
+−.098
+121
+
+121
+.758**
+121
+.393**
+121
+.419**
+121
+.349**
+102
+.108
+119
+.342**
+121
+.531**
+121
+−.06
+121
+
+.433**
+121
+.407**
+121
+.347**
+102
+.165
+119
+.404**
+121
+.622**
+121
+.008
+121
+
+.586**
+121
+.219*
+102
+.235*
+119
+−.011
+121
+.285**
+121
+.148
+121
+
+.321**
+102
+.221*
+119
+−.007
+121
+.210*
+121
+.341**
+121
+
+.168
+100
+−.022
+102
+.210*
+102
+.216*
+102
+
+.161
+119
+.145
+119
+.198*
+119
+
+SD
+
+.349**
+121
+−.275** −.118
+121
+121
+
+*p < .5; **p < .01
+
+Appendix B: Distribution of Risk Assessment Measures
+10
+9
+8
+
+Percent
+
+7
+6
+5
+4
+3
+2
+1
+0
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+Perceived Gains
+
+Perceived Losses
+
+Note: Percent refers to the percentage of participants for each scale. Perceived gains are measured as
+the likelihood of gain (on a scale of 1–5) weighted by its magnitude (on a 1–5 scale). Perceived losses
+measured as the likelihood of loss (on a scale of 1–5) weighted by its magnitude (on a scale of 1–5).
+
+66
+
+Journal of Computer-Mediated Communication 23 (2018) 34–68 © 2018 International Communication Association
+
+Downloaded from https://academic.oup.com/jcmc/article/23/1/34/4832997 by Grinnell College Library user on 20 February 2022
+
+Gains-sig
+
+.754**
+121
+.487**
+121
+.591**
+121
+.236**
+121
+.301**
+121
+.274**
+102
+.152
+119
+.168
+121
+.556**
+121
+−.044
+121
+
+Information
+
+T. Ashuri et al.
+
+Watching Me Watching You
+
+Appendix C: Pearson’s Correlations Among Variables
+
+1
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+.093*
+704
+.126**
+704
+.132**
+704
+.119**
+704
+.130**
+704
+.032
+704
+.158**
+704
+.258**
+623
+
+.425**
+742
+.218**
+742
+.086*
+742
+.015
+742
+.009
+742
+.082*
+742
+.046
+632
+
+.339**
+742
+.06
+742
+.048
+742
+−.029
+742
+.369**
+742
+.154**
+632
+
+.166**
+742
+.154**
+742
+.022
+742
+.198**
+742
+−.037
+632
+
+.447**
+742
+.281**
+742
+.036
+742
+−.063
+632
+
+.046
+742
+.059
+742
+-.083*
+632
+
+10
+
+11
+
+.197**
+724
+.321** .592**
+704
+.126**
+742
+.335**
+742
+.359**
+742
+.222**
+742
+.166**
+742
+−.04
+742
+.391**
+742
+.132**
+632
+
+744
+.058
+732
+.103**
+730
+.254**
+240
+.222**
+742
+.109**
+619
+.063
+724
+.272**
+723
+.400**
+616
+
+.076*
+742
+.095* .507**
+632 632
+
+Notes: *p < .5; **p < .01
+Variables: (1) Sharing activity—self; (2) Sharing information—self; (3) Sharing activity—others; (4) Sharing information—others; (5) Browsing; (6) Facebook use in hours; (7) Other SNS use in hours; (8) Sustained damage in the
+past—self; (9) Losses—others; (10) Losses—self; (11) Gains –self; (12) Perceived gains—others.
+
+Journal of Computer-Mediated Communication 23 (2018) 34–68 © 2018 International Communication Association
+
+67
+
+Downloaded from https://academic.oup.com/jcmc/article/23/1/34/4832997 by Grinnell College Library user on 20 February 2022
+
+2. Sharing information—self .665**
+744
+3. Sharing activity—others
+.278**
+774
+4. Sharing information—
+.126**
+others
+744
+5. Browsing
+.231**
+732
+6. Facebook use (hrs.)
+.473**
+730
+7.Other SNS use (hrs.)
+.344**
+240
+8. Past damage—self
+.115**
+742
+9. Losses—others
+−.004
+622
+10. Losses—self
+.038
+742
+11. Gains—self
+.538**
+741
+12. Perceived gains—others .201**
+616
+
+2
+
+Watching Me Watching You
+
+T. Ashuri et al.
+
+Appendix D: Manipulation Check
+5
+
+4.5
+
+3.5
+
+3
+
+2.5
+
+2
+
+1.5
+
+1
+Comments unpleasant Comments supportive
+Control
+
+Important post
+Positive
+
+Mix
+
+Convincing post
+
+Post was in appropriate
+
+Negative
+
+Figure A Means and std. errors for post and comment evaluation, according to experimental condition: 1 (disagree); 5 (agree).
+
+Appendix E
+Table 1 Results of Contrast between Experimental Conditions
+
+Self-disclosure
+
+Gains
+
+68
+
+Contrast
+
+Value of Contrast
+
+Std. Error
+
+t
+
+Sig.
+
+Control vs. Negative
+Control vs. Positive
+Mix vs. Negative
+Mix vs. Positive
+Negative vs. Positive
+Control vs. Negative
+Control vs. Positive
+Mix vs. Negative
+Mix vs. Positive
+Negative vs. Positive
+
+.34
+−.31
+.33
+−.32
+−.32
+.42
+−.24
+.25
+−.41
+−.41
+
+.13
+.12
+.13
+.12
+.12
+.17
+.16
+.18
+.17
+.17
+
+2.60
+−2.57
+2.48
+−2.55
+−2.55
+2.42
+−1.48
+1.38
+−2.49
+−2.49
+
+.01
+.01
+.01
+.01
+.01
+.02
+.14
+.17
+.01
+.01
+
+
+

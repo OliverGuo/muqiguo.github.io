@@ -1,0 +1,586 @@
+Active Power Curtailment in Power System Planning
+ABSTRACT In regions with high penetration of Distributed Energy Resources (DER), grid congestion is
+mostly caused by power feed-in of generators. In this context, conventional approaches for solving the grid
+congestion problems are Active Power Curtailment (APC) of DER and grid reinforcement. In the wake of
+increased DER generation, it is not only of interest how to obtain the grid reinforcement, but also how to
+consider APC during grid planning. The challenge of such grid planning is to determine the best combination
+of reinforcement and APC. We present a new grid planning method and use it to find the trade-off between
+APC and grid reinforcement in a case study of a High-Voltage (HV) grid with a future renewable energy
+scenario. We compare the proposed reinforcement method to two existing methods. With the combination of
+APC and grid reinforcement, the proposed method shows a decrease regarding the total expenditures.
+
+I. INTRODUCTION
+THE increased development of Distributed Energy
+Resources (DER) can lead to grid congestion, which
+means that power lines would have to be operated above
+their nominal current limit in order to transport all the electricity generated. This would lead to inadmissible levels of
+sag of overhead conductors and damage of power system
+equipment. Active power curtailment (APC) can be used to
+maintain line operation within the loading limits by temporarily reducing the output of some generators during peak
+times [1]. Although it is effective to maintain congestion-free
+grid operation, APC incurs high costs due to the remuneration
+of curtailed energy or the need to procure flexibility services.
+The costs incurred due to APC can be treated differently
+depending on the country. For example, in Germany, the costs
+of APC are reflected in the grid fees, and in the UK whether
+the DER operators are compensated depends on the grid
+level [2].
+Besides APC, grid congestion can be mitigated by reinforcing the grid. New power lines can be constructed in
+place of those overloaded to increase the transport capabilities
+of the grid. We do not consider new right-of-ways due to
+the regulatory approval delays that they entail. In general,
+High-Voltage (HV) grids have meshed topology and consist of overhead power lines. Due to the meshed structure,
+the change of impedance caused by reinforcement of a line
+impacts the loading of other lines. This effect must be considered in the HV grid planning process.
+While planning the reinforcement of a power system, combining the reinforcement and APC can be an opportunity to
+reduce the total expenditures and potentially achieve a more
+cost-efficient outcome than with either measure separately.
+It has been suggested to reinforce the grid up to a certain point
+and apply APC to remove the remaining congestion [3]. Nevertheless, finding the best way to combine APC and reinforcement requires a specific and thorough approach. An effective
+way to determine a cost-efficient combination of APC and
+reinforcement is essential to obtain such a trade-off point.
+In this paper we introduce a novel method to determine
+which power lines to reinforce by analyzing the impact
+of line reinforcement on the total expenditures (TOTEX).
+We consider the costs of APC as part of the general expenditures of the system from the macroeconomic perspective
+and incorporate them into the grid planning decisions. A line
+reinforcement increases the TOTEX due to the capital expenditure (CAPEX) of investing in the new line. At the same
+time, it can reduce the operating expenditure (OPEX) by
+avoiding the APC that is associated with the line. We express
+reinforcement investments as an equivalent annual cost and
+add the OPEX (defined as the costs of APC) to obtain the
+TOTEX. This method demonstrates its inventiveness, in that
+it attributes a portion of the overall APC to a specific line. The
+method then selects the lines that lead to the lowest increase
+of TOTEX for reinforcement. This approach aims to optimize
+the allocation of capital rather than minimizing the technical
+indicator of overloading. We compare the proposed method
+to the similar existing methods that are based on line overloading by conducting a case study of an HV grid in northern
+Germany. Based on the results of the case study, we discuss
+the impact of APC on grid planning and demonstrate how the
+trade-off between APC and reinforcement can be determined.
+Our findings will be of interest to Distribution System
+Operators (DSOs) that experience a high penetration of DER
+and need to decide whether to use APC or grid reinforcement,
+or select a particular combination.
+II. RELATED WORK
+A number of approaches to define which lines to reinforce have been covered in various articles [4], [5]. Discrete optimization methods such as branch-and-bound [6]
+and branch-exchange [7] are computationally expensive due
+to the large size of the solution space [8]. Numerical methods like mixed-integer linear programming (MILP) provide
+an accurate solution [4] but can encounter computational
+limitations [5] and require linearization and relaxation of
+their formulations when applied to realistic problems. Mathematical solvers often do not converge for realistically large
+problems [9]. In contrast, heuristic methods can be applied
+to complex grid models [4] to determine a satisfactory solution for the grid planning problem. Heuristic methods use
+a set of operations to generate a candidate solution, assess
+the solution, and modify it until the termination criterion is
+reached [10]. A common approach is a greedy heuristic, also
+known as a ranking algorithm [11]. The lines are reinforced
+one-by-one, starting with the most overloaded one, and the
+load flow calculation is repeated after every such line reinforcement [12], [13]. A further development of this approach
+is a ranking of lines based on a sensitivity index (SI) that considers the increase of the line transport capacity in relation to
+the required investment [3]. We analyze the total expenditures
+that are obtained by using two variants of ranking algorithms,
+with the line loading and the sensitivity index as the criterion,
+and compare them with the method introduced in this paper.
+With active power curtailment (APC), the grid is brought
+to a contingency-free operating condition by curtailing the
+output of some of the generators. A widespread approach to
+obtain the cost-optimal allocation of curtailment for every
+generator is based on solving a linear programming (LP)
+problem, which is defined using distribution factors (DF) [1],
+[3], [14]–[18]. The DF represent a linear approximation of the
+load flow at a given operational point of the grid. DF based on
+AC load flow is used in an LP problem formulation in [14] to
+obtain cost-optimal APC. We further enhance this method by
+iteratively applying the output of the optimization to the grid
+and re-calculating the DF to ensure a more accurate result.
+The idea of integrating curtailment of loads [11] or generators [3] in the grid planning process is not new. The total
+expenditures (TOTEX) have been used to find the trade-off
+between grid reinforcement and APC in [3], showing that it is
+a viable grid planning strategy. We introduce a novel method
+of grid reinforcement, which achieves a lower TOTEX for
+the trade-off point than other existing methods. The solution
+obtained with our method is valid for AC power flow and can
+be applied in AC context. The methods based on mathematical optimization sometimes have convergence difficulties [9].
+Alternatively, a method that approaches the solution iteratively is guaranteed to deliver a result, though not necessarily
+an optimal one. This is the approach we selected for our
+method.
+
+III. ITERATIVE GRID REINFORCEMENT
+The grid is planned for a specific future scenario that is represented with time series data of generation and consumption
+in a target year. The grid is reinforced in an iterative process,
+one line at a time (Fig.1). After loading the grid data and the
+time series data, the grid is evaluated in a static time series
+simulation, i.e. a load flow calculation is executed for every
+grid condition, one-by-one, that changes with the time steps
+that represent a given year. The results of the time series
+simulation are analyzed to identify grid congestion. If grid
+congestion occurred at any time step, the possible reinforcement options are identified based on the required transport
+capacity. Next, a sensitivity index (SI) is calculated for every
+reinforcement option. This step depends on the particular
+implementation of the used method, which is described in
+Sections IV-A, IV-B and V. Next, the reinforcement options
+are ranked based on their SI, and the line reinforcement
+with the highest SI is applied. Finally, the selected line reinforcement is added to the overall set of reinforced lines.
+After the selected line is replaced by a new line, the process
+repeats. As soon as the grid is no longer congested, the algorithm terminates. The CAPEX (expressed as the equivalent annual cost) and OPEX (costs of APC) corresponding
+to every iteration are analyzed and the trade-off point is
+obtained.
+A curve of the relationship between TOTEX and CAPEX
+can be obtained by calculating TOTEX for every incremental step of grid reinforcement (as in the schematic example
+in Fig.2 illustrating a comparison for two fictive methods).
+Every point of the curve represents a grid with a subset of
+its lines reinforced. To obtain every such point, a time series
+simulation of one year is required in order to evaluate the
+maximally occurring overloading of the lines and to calculate the amount of APC that is necessary to maintain the
+grid operation with no overloading. The sum of the costs of
+APC (OPEX) and the CAPEX of grid reinforcement constitutes the TOTEX of the grid at a given point. At the leftmost
+point, no lines are reinforced, the APC is the highest, and
+the CAPEX equals to zero. Every next point to the right is
+obtained by reinforcing an additional overloaded line and
+calculating the APC that is required to avoid the overloading
+of the remaining lines. With every further reinforced line,
+the CAPEX increases and the TOTEX decreases due to the
+reduction of the necessary APC. After a certain point, any
+additional line reinforcement would increase the TOTEX,
+because the corresponding increase of CAPEX outweighs the
+reduction of the OPEX. With the help of this curve, the tradeoff point can be obtained, which describes the amount of
+investment in grid reinforcement that leads to the lowest
+TOTEX. At this point, the searched combination of APC and
+grid reinforcement is obtained.
+The method to rank and select the lines for reinforcement
+influences the curve that describes the dependence of TOTEX
+on CAPEX and the obtained trade-off point. We introduce a
+new method of ranking the lines based on their contribution to
+TOTEX and compare it to two existing methods. The TOTEX
+resulting from the different line reinforcement measures is
+used to compare and evaluate the used methods.
+In the following sections, we describe two often used
+ranking methods [3], [13] and introduce our new method.
+Afterwards, the introduced method is compared to the existing methods in a case study.
+IV. STATE OF THE ART RANKING APPROACH FOR LINE
+REINFORCEMENT
+The existing ranking-based methods to select line reinforcement use line loading as their main criterion. In the following,
+we describe two common variants of this approach.
+A. LOADING METHOD
+A straightforward method of grid planning in HV grids would
+be to iteratively reinforce the lines starting with the most overloaded ones, similarly to [11], [13], [17], [19], [20]. In this
+case, the lines are selected based on a technical criterion of
+line overloading. The values of the highest loading of every
+line during all analyzed time steps is obtained in the step of
+the evaluation of the grid (see Fig.1) via load flow calculation.
+A sensitivity index SI Loading
+L
+is calculated for every line L
+from the set of all lines and used to select the next line for
+reinforcement. For the loading criterion, the sensitivity index
+for a given line is the maximal value of the line loading (the
+observed current IL,t divided by the rated current Imax,L) over
+all the calculated time steps t ∈ 1 . . . N (Eq. (1)). The line
+with the highest value of SI Loading
+L
+is the one with the highest
+loading. We refer to this approach as the loading method.
+
+B. CAPEX METHOD
+An alternative method to define the sensitivity index combines the impact of a particular line reinforcement on line
+transport capacity with the CAPEX of its reinforcement [3],
+[11]. The sensitivity index SICAPEX
+L
+for a line L is defined
+based on the loading of the line in relation to the CAPEX of
+the reinforcement of the line, CAPEXL (Eq. (2)). We call this
+C. EXAMPLE AND DISCUSSION OF LINE RANKING
+METHODS
+The impact of the order in which lines are reinforced can be
+illustrated using the example in Fig.3. The output of both
+generators, G1 and G2, must be curtailed to maintain the
+loading of both lines L1 and L2 below the limit of 100 %.
+If the line L1 is reinforced, the overloading of the line L1 is
+eliminated and the curtailment of the generator G1 is no
+longer necessary. The output of G2 would still need to be
+curtailed to avoid the overloading of the line L2. However,
+the overall curtailment is reduced. If the line L2 is replaced
+instead of L1, the line L1 would still be overloaded and the
+curtailment of G1 would increase slightly due to the omission
+of losses in the line L2. In this example, choosing the line
+that has the highest overloading does not have an additional
+benefit of improving the grid condition. This example demonstrates that it is necessary to use a method that considers the
+APC for line ranking. Furthermore, the differences in APC
+costs (OPEX) must be considered alongside the differences
+in the line reinforcement CAPEX. Next, we introduce the
+TOTEX method that considers the impact of line reinforcement on APC.
+
+V. OBTAINING GRID REINFORCEMENT BASED ON
+TOTEX
+We call the method that we are introducing in this paper
+the TOTEX method. Within this method, we rank lines by
+their contribution to the reduction of the sum of CAPEX,
+expressed as the equivalent annual cost, and the OPEX (costs
+of APC). To this end, we define the sensitivity index SI TOTEX
+L
+that associates a particular overloaded line with the expected
+reduction of the TOTEX as the result of its replacement.
+To calculate the contribution of a single line to the overall
+APC, we repeat the calculation of APC while only considering the loading limit for the particular line. The calculation of
+APC involves two steps that are repeated consecutively: the
+AC load flow to establish the power balance and calculate
+the AC distribution factors (DF) for the operational point,
+and an optimization step to obtain the required APC. In the
+following, this approach is described in more detail.
+A. CALCULATING ACTIVE POWER CURTAILMENT
+Different methods of calculating the required APC have been
+described in literature [21]–[24]. We are using the linear
+programming (LP) approach because of its high reliability,
+very high speed of calculation, and excellent convergence
+properties [22], [23].
+We define a linear programming (LP) problem based on
+distribution factors (DF) so as to obtain the reduction of
+power injection that is required to satisfy the constraints
+of line loading limits, while minimizing the overall costs of
+APC. The optimization problem is solved separately from
+solving the load flow equations.
+
+1) DISTRIBUTION FACTORS
+In the matrix of distribution factors DF =
+dIft
+dPk
+, the rows
+represent branches and the columns represent grid buses
+(set K). Every element of the matrix describes a change of
+the current dIft through the branch that connects the buses
+f , t that is caused by the change of the injected power dPk
+at the bus k ∈ K. The DF are obtained by first calculating
+the voltage sensitivity from the change of bus power injection
+based on the Jacobian matrix from Newton-Raphson load
+flow calculation, similarly to [25] and, in the second step,
+by applying the chain rule to partial derivative matrices of
+current and voltage. The method to obtain the distribution
+factors is described in more detail in the appendix. As the
+distribution factors are a linear approximation of the load flow
+at a given operational point of the grid, they are accurate only
+close to the point they are calculated for due to non-linearity
+of the AC load flow problem [15], [26]. Therefore, if the grid
+operation point is changed, the DF need to be recalculated.
+
+2) CALCULATION OF CURTAILED ACTIVE POWER
+Using the DF, we can formulate the LP problem to calculate
+the necessary APC, as follows (Eq. (3)).
+
+The DF refer to buses, therefore also the costs and the
+curtailment represent the aggregated values at buses. The
+objective of the LP problem is to minimize the sum of the curtailment costs defined as P(c
+T
+K
+· 4PK ) at every bus k ∈ K.
+The individual cost of curtailment is defined as vector cK .
+
+The vector 4PK reflects the active power curtailment, which
+is defined as the available active power injection minus the
+active power injection after curtailment. Using the generation
+reference system, which is correspondent to the DF calculation, 4PK is always equal or greater than zero. The linear
+approximation of the current change in branch (f , t) caused
+by the curtailment of 4PK equals to (DFft ·4PK ). The second
+inequality constraint guarantees that the current limit will not
+be exceeded in case of a reversal of current flows, similarly
+to the implementation in [27]. Adding the initial values of
+the branch current Ift yields the branch current after the
+curtailment 4PK . To ensure that the resulting branch currents
+are below the maximal current limit, the right side of the
+inequality constraint is the current limit of the branch Imax,ft .
+Moreover, the curtailed power must not exceed the current
+available active power injection Pmax,K , which is limited by
+the installed capacity as well as the availability of the natural
+resource such as wind and solar radiation.
+In order to accurately enforce the constraints, we iterate
+solving the LP problem and calculating the AC load flow
+until the desired accuracy is achieved. This ensures that the
+obtained solution matches the operation point of the grid.
+The costs of curtailment can be set individually for every
+bus and time step. It is also possible to set individual line
+loading limits, for example to account for dynamic line rating
+(DLR).
+B. ATTRIBUTION OF APC TO INDIVIDUAL LINES
+After the overall APC is calculated it is still not clear what
+amount every single line ‘‘contributes’’ to the APC. In order
+to determine the required grid reinforcement based on the
+minimization of TOTEX, the curtailed power must be allocated to individual lines. In order to determine these values,
+we modify the LP problem to only consider the constraint
+for a single line. Solving the modified LP for every line oneby-one attributes parts of the overall APC to individual lines.
+The DF matrices are not updated for this step, because the
+operational point of the grid is not changed after the overall
+APC is obtained.
+To this end, the row DFft corresponding to the line (f , t)
+(Eq. (4)) is used to formulate a linear programming problem,
+similarly to Eq. (3), except that only the constraint for the
+selected line is considered:
+
+The row DFft is multiplied by the results of the APC
+calculation 4PK , leading to the reduction of the power flowing through the line (f , t). The curtailment at every bus is
+obtained with a linear solver, and the sum of the values for
+curtailed power is attributed to the line (f , t).
+In the context of the reinforcement method, this value
+represents the portion of curtailment that is directly caused
+by the line (f , t) and is attributed to it.
+
+This approach ignores any possible superposition with the
+solutions for other lines, and therefore the sum of individual line curtailments is not guaranteed to match the overall
+results of the APC in the grid. Coming back to the example
+in Fig.3, the APC of 16.21 MW is required if both lines are
+considered together (Table 1). Both generators are curtailed
+to remove overloading. When attributing the APC to L1 and
+L2, the individual curtailments of generators are different
+(Table 2). While there is a mismatch in the curtailment of
+individual generators, this approach is helpful at selecting the
+lines that contribute the most to the APC. The line L1 would
+be prioritized according to this approach, because the APC
+attributed to it is higher, which is in line with the discussion
+in Section IV-C (provided that the CAPEX do not outweigh
+the reduction of APC).
+C. SENSITIVITY INDEX
+With this method, we intend to prioritize the line replacements that reduce the APC more effectively, even if they
+lead to a higher value of CAPEX. Although reinforcing the
+line with the highest SI increases the TOTEX by the amount
+required to reinforce the line, the APC is reduced and so
+are the costs to maintain the operation of the grid within the
+line loading limits. This way, the SI reflects an economic
+evaluation of the investment and operation expenditures that
+are relevant for the grid as a whole, rather than a technical
+evaluation of individual lines.
+
+Equation (5) describes the calculation of SI TOTEX
+L
+for a
+given line L. The costs of APC that are attributed to a line
+L are calculated as a sum of the APC attributed to the line
+(1PK,t,L) over all the time steps t ∈ 1..N, multiplied by the
+costs per the unit of curtailed energy, cK . As the result of subtracting the CAPEX for reinforcing the line from the OPEX,
+the value of SI TOTEX
+L
+represents a reduction of TOTEX that
+can be achieved by reinforcing the line L.
+
+VI. CASE STUDY
+Based on publicly available data [28]–[31], we developed a
+power system model that consists of the High-Voltage (HV)
+grid in the German federal state of Schleswig-Holstein and
+includes a relevant part of the Extra-High-Voltage (EHV)
+grid (Fig.4). The detailed representation of the EHV grid
+allows to accurately represent transit flows and the interactions between the EHV grid and the HV grid [32]. The large
+size of the grid, an inclusion of several voltage levels and
+local control of grid assets (e.g. transformer tap changers)
+present additional challenges for grid planning. We intend to
+demonstrate that our method can be utilized for such grids.
+The grid model already includes the reinforcement that
+is required in the time frame until the year 2025 that have
+so far been planned and published by the distribution and
+transmission system operators. Therefore, the year 2025 is
+used as the starting point of the case study. The time series
+data for consumption and generation in the year 2035 are
+used to represent the target state for the planning of grid
+reinforcement.
+We used the software pandapower [33] for the grid modeling and calculations, the interior-point linear program solver
+as implemented in CVXOPT [34] to obtain the APC, and
+MPI4py [35] to enable parallel time series calculations.
+In the following, important components of the grid model
+and the investigated scenario of consumption and generation
+in the year 2035 are presented. Finally, the results of grid
+reinforcement using three different methods are introduced
+and discussed.
+A. GRID MODEL
+The HV grid is divided in four separate zones (Fig.4), which
+are all connected to the EHV grid. The HV grid zones are not
+directly interconnected at the HV level, and the reinforcement
+results can be determined for each zone separately. The grid
+model has 157 buses in the HV level, where the consumption
+and generation is connected, and 23 EHV/HV substations.
+There are 530 HV line sections with the total circuit length
+of 3360 km.
+Voltage control is implemented using shunt reactors in
+the EHV grid, as well as extended ward equivalents that
+represent remote generators. The power balance in the grid
+is maintained by the load flow calculation with distributed
+slack. To this end, the difference at the slack bus is distributed among the transit buses in the EHV grid, weighed
+according to the installed capacity of the connected power
+lines. If a power system has voltage violations in addition to
+line overloading, the calculation can be extended to include
+reactive power control. Because the solution is AC-feasible,
+the influence of reactive power control on line overloading
+can be accounted for. In our case, the grid model has no
+voltage limit violations. Therefore, the voltage limits are not
+considered and the case study does not include reactive power
+control.
+The equivalent annual costs of line reinforcement and the
+considered line types (Table 3) are based on the assumptions
+in [20]. Line reinforcements are bundled in combined measures that include all the necessary changes to the grid model
+that must be applied together. This approach ensures that the
+power poles carry the same specific weight on both sides.
+The costs of APC are assumed at 100 e/MWh, which is in
+line with the curtailment cost of wind generation in Germany
+in 2017 [36]. This assumption is used solely to demonstrate
+the approach of the calculation and the method to obtain the
+trade-off between grid reinforcement and APC, as the costs of
+curtailment vary among different countries. We assume equal
+costs for DER curtailment at all buses of the grid. It is possible
+to use individual costs for every bus and time step.
+
+B. INVESTIGATED SCENARIOS
+The time series data for the year 2035 provide the specifications of consumption and generation. The installed power
+and the total annual energy for the starting year 2025 and
+the target year 2035 in the HV voltage level can be seen
+in Table 4. The installed power of generation is higher than
+the peak consumption by a multiple because the region has
+a particularly high potential for wind power. Thus, it can be
+expected that the demand for reinforcement in the considered
+grid is driven by generation and not consumption, which
+provides a suitable use-case to study the potential of APC.
+The scenario data contain hourly time series for generation
+and consumption at every bus of the HV grid, as well as transit
+flows to adjacent EHV grids.
+We use the load and generation profiles from the research
+project NEW 4.0 that represent a forecast of the year
+2035 [37]. The weather-dependent loads and generators have
+their behavior modeled according to the weather data from
+the year 2012. The time series data for the remaining categories of generation and consumption are based on a European spot market model. The profiles of generation and
+consumption data are presented in more detail in [38]. Our
+calculations in the case study have the time resolution of one
+hour and reflect a time period of one year.
+
+C. REINFORCEMENT RESULTS
+The variations of grid reinforcement, from no reinforcement
+and the highest APC to the full reinforcement with no more
+violations and no more APC, define the range of the available
+budget allocations between grid reinforcement and APC. The
+lowest value of the TOTEX defines the amount of investment
+in grid reinforcements that represents the desired trade-off
+between CAPEX and OPEX. The grid reinforcement and
+APC for the studied grid (Fig.4) have been obtained by
+applying the methods described in Section IV and Section V.
+The resulting expenditures that are necessary to eliminate lineoverloading in every zone of the HV grid can be used to
+compare the analyzed methods (Table 5). The results include
+the expenditures for the trade-off points of the three methods,
+as well as for the reference scenarios of no reinforcement
+(only APC is used to avoid overloading) and full reinforcement according to the Loading method (no APC is required).
+The highest TOTEX in all four zones are observed when all
+congestion situations are eliminated by only using APC. All
+the results for the trade-off points obtained by three different
+reinforcement methods lead to the lower TOTEX than if congestion were addressed with full reinforcement. The lowest
+TOTEX for every zone are achieved by using the TOTEX
+method. Full reinforcement leads to 35 % to 254 % higher
+TOTEX than a combination of APC and reinforcement.
+The planning of grid reinforcement is impacted by the
+assumed costs of APC. For the APC to have parity with full
+reinforcement, the costs of APC should equal 58 e/MWh
+for the zone Flensburg, 91 e/MWh for the zone Göhl,
+98 e/MWh for Heide-West and 59 e/MWh for Kummerfeld.
+The trade-off point is also affected by the assumption of the
+APC costs. With the TOTEX method, the cost assumptions
+of APC can also affect the order of line reinforcements.
+A challenge of grid reinforcement using a constructive
+heuristic is that an addition of certain lines can cause an
+increase in line overloading, as identified in [11]. In addition,
+it is often necessary to add a sequence of line measures
+in a path until the congestion is solved, while any single
+line reinforcement in the sequence leads only to a small
+improvement [11]. We have observed this effect to be more
+pronounced with the method that is based on line overloading.
+For instance, it can be seen in Fig.5 that an addition of a
+line reinforcement in the zone Flensburg (marked with red)
+causes an increase of the loading of several lines in the
+same path, and reduces the loading in other lines that form
+a different path. The mentioned line reinforcement reduces
+the impedance in the affected path and therefore causes an
+increase of the power flow through it, leading to an increase
+of loading. The reinforcement of the path of the affected lines
+reduces the APC substantially.
+In the situation described in Fig.5, the proposed method
+assigns similar curtailment costs to all the lines that belong to
+the same path as the highlighted line. The distribution factors
+associated with those lines are similar and therefore the lines
+on the same path are reinforced as a sequence, even if the
+lines of the sequence have different properties and do not
+have the highest overloading in the grid. In contrast, the Loading method only considers the overloading regardless of the
+associated curtailment, which can cause comparatively high
+OPEX throughout the progression of the reinforcement. This
+effect is responsible for the strong increase and a subsequent
+reduction of TOTEX at a later point for the Loading method
+in the zones Flensburg and Göhl (Fig.6), and the TOTEX
+method avoids such spikes because it follows the path of the
+fastest reduction of APC.
+The impact of the increase in reinforcement investment on
+TOTEX is seen in Fig.6. A trade-off between the CAPEX
+of reinforcement and the costs of APC exists for all zones
+and line selection methods. The lines that correspond to the
+TOTEX method have a steadier course than the line for the
+loading method. Due to this effect, it would not be correct to
+stop the calculation as soon as the TOTEX start rising again in
+order to determine the trade-off point. If the complete curve is
+not required, the calculation can be terminated after the costs
+have started rising and are above the trade-off point with a
+safety margin.
+
+D. COMPUTATIONAL COST
+The computational cost for the analyzed methods is expressed
+as the time needed to achieve the result (Table 6). It can
+be seen, that the TOTEX method requires 357 % to 372 %
+more time to obtain the results. The calculation has been
+performed using 450 CPU cores on a computing cluster with
+the Intel Xeon E5-2620 v3 2.4 GHz CPUs. A sizable portion
+of the time stated here must be attributed to overhead e.g. for
+communication between the processes or reading and writing
+data. The values in the table are presented for the parallel
+calculation (not the sum of time used per process. When
+considering the computational cost of the proposed method,
+it is to note that our implementation has some potential for
+improvement in terms of its computational efficiency.
+Such rather high computation time can be attributed to the
+need to calculate multiple time series calculations, once for
+every data point in Fig.6. In the case of the TOTEX method,
+a load flow calculation and an LP optimization occur multiple
+times in the time steps that have grid congestion
+VII. CONCLUSION
+We introduced a new grid reinforcement method for meshed
+HV grids that considers APC and follows the path of the
+lowest total expenditure. A combination of APC and grid
+reinforcement has a trade-off point which corresponds to
+the lowest expenditures and leads to substantial savings in
+comparison to solving grid congestion only with reinforcement or only with active power curtailment. The results of
+the case study demonstrate that the proposed method that
+uses TOTEX for line ranking has advantages over using line
+overloading as reference. In particular, grid reinforcement
+with consideration of curtailment costs achieves a solution
+with a lower TOTEX for the trade-off point than the methods
+based on loading.
+The proposed method to find the trade-off between the grid
+reinforcement and APC can be used to optimize the expenditures of grid operation and grid expansion, and increase
+planning certainty by deferring grid reinforcement. During
+a period of increasing DER capacity, the DSO can prioritize
+certain reinforcement options that have the strongest impact
+on APC, while still targeting the trade-off point. Therefore,
+combining APC and reinforcement rather than reinforcing the
+grid completely is more advantageous for a DSO in terms of
+expenditures and planning certainty.
+The calculation presented in the case study can be extended
+in practice. Although we used equal costs per bus and constant line ratings, the method can be used with individually
+set costs and with weather-dependent limits of line loading.
+406 VOLUME 8, 2021
+Bolgaryn et al.: Active Power Curtailment in Power System Planning
+Furthermore, if the grid has voltage limit violations, reactive
+power control strategies can be applied alongside the calculation. The impact of reactive power on line loading is included
+because the method is based on solving AC load flow.
+Even though our implementation can be improved in terms
+of its efficiency, there is no doubt that the proposed method is
+rather computationally intensive. We suggest that the method
+is applicable for the scope that is not time critical, e.g. strategic grid planning. We demonstrate that our method is suitable
+for large, realistic grids.
+
+ACKNOWLEDGMENT
+The authors would like to thank Ihor Kosenko and Ghanshyam Malaviya for their assistance with the work on the grid
+model. They are grateful to Sureshkumar Thiyagarajan with
+Avacon Netz GmbH, Matthias Dau with Schleswig-Holstein
+Netz AG, and Johannes Dasenbrock with Fraunhofer IEE
+for their recommendations about the HV grid planning principles. Map data used for the creation of the grid model
+are copyrighted by OpenStreetMap contributors and available from https://www.openstreetmap.org. They used MPI
+for Python [35] for parallel calculations. They are solely
+responsible for the contents of this publication.

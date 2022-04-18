@@ -1,0 +1,1272 @@
+Plant Cell, Tissue and Organ Culture (PCTOC) (2018) 132:413–424
+https://doi.org/10.1007/s11240-017-1350-0
+
+REVIEW
+
+Ca2+ channels and ­Ca2+ signals involved in abiotic stress responses
+in plant cells: recent advances
+Jiayu Liu1 · Yufan Niu1 · Jingjing Zhang1 · Yuqing Zhou1 · Zheng Ma1 · Xuan Huang1
+Received: 4 July 2017 / Accepted: 12 November 2017 / Published online: 29 November 2017
+© Springer Science+Business Media B.V., part of Springer Nature 2017
+
+Abstract
+Calcium ­(Ca2+) signals are essential transducers and regulators in many adaptive and developmental processes in plants.
+Protective responses of plants to a variety of environmental stress factors are mediated by transient changes of C
+­ a2+ concentra2+
+tion in plant cells. ­Ca ions are quickly transported by channel proteins present on the plasma membrane. During responses
+to external stimuli, various signal molecules are transported directly from extracellular to intracellular compartments via
+­Ca2+ channel proteins. Three types of ­Ca2+ channels have been identified in plant cell membranes: voltage-dependent
+­Ca2+-permeable channels (VDCCs), which is sorted to depolarization-activated ­Ca2+-permeable channels (DACCs) and
+hyperpolarization-activated ­Ca2+-permeable channels (HACCs), voltage-independent C
+­ a2+-permeable channels (VICCs).
+They make functions in the abiotic stress such as TPCs, CNGCs, MS channels, annexins which distribute in the organelles,
+plasma membrane, mitochondria, cytosol, intracelluar membrane. This review summarizes recent advances in our knowledge
+of many types of ­Ca2+ channels and ­Ca2+ signals involved in abiotic stress resistance and responses in plant cells.
+Keywords Plant cells · Ca2+ channels · Abiotic stress · Signal transduction
+
+Introduction
+Plants are subject to numerous abiotic stress factors (including drought, salinity, high or low temperature, and hypoosmotic conditions) that suppress growth and may even
+cause death. Accordingly, plants have evolved a variety of
+physiological mechanisms (collectively termed “environmental adaptability”) to resist abiotic stress factors (Gilroy
+and Trewavas 2001).
+Calcium ­(Ca2+) functions as a second messenger in
+many biotic activities. Signals are transmitted through ­Ca2+
+conducting channels, and are able to sense and respond to
+internal and environmental stimuli (Jammes et al. 2011).
+In plants, these are essential mechanisms, and ­Ca2+ plays
+an important role in resisting abiotic stress (Hepler 2005).
+Communicated by Ming-Tsair Chan.
+* Xuan Huang
+
+Key Laboratory of Resource Biology and Biotechnology
+in Western China (Northwest University), Ministry
+of Education, Provincial Key Laboratory of Biotechnology
+of Shaanxi, College of Life Science, Northwest University,
+Xi’an 710069, People’s Republic of China
+
+Intracellular ­Ca2+ is significant in signal transduction for
+gene expression and cell cycle control (Berridge et al. 2003),
+and is involved a variety of plant biological processes such
+as light signaling (Harada et al. 2003), hormone responses
+(Munemasa et al. 2007), cell growth (Frietsch et al. 2007),
+stress and plant-pathogen interactions (Qi et al. 2010).
+Two general categories of transfer systems for ­Ca2+ transport are found in plants: influx and efflux via channels and
+carriers. ­Ca2+ channels are a type of transmembrane channel protein present on the surface of plant cells or organs
+that transmit C
+­ a2+ quickly and specifically. C
+­ a2+ channels
+are thus essential in transfer and regulation of C
+­ a2+, which
+is involved in all responses to abiotic stress. This review
+describes recent research advances on C
+­ a2+ channels and
+their roles in abiotic stress response mechanisms.
+
+Generation of ­Ca2+ signals
+Plants have strong adaptive abilities to sense changes in their
+surrounding environment and to regulate their growth and
+development through appropriate responses to stimuli. To
+induce expression of related genes, stress signals originating
+outside the cell must cross the cell wall and reach the cell
+
+interior. Under environmental stresses (e.g., drought, low
+temperature, salinity), osmotic pressure at the cell membrane
+increases (Boudsocq and Lauriere 2005), and this increase
+is transmitted to membrane signal receptors. Activation
+of ­Ca2+ channels by a series of phosphorylation reactions
+results in C
+­ a2+ influx, and increasing C
+­ a2+ concentration
+induces ­Ca2+ signals (Chinnusamy et al. 2004). The source
+of quickly increasing C
+­ a2+ is release from intracellular C
+­ a2+
+storage sites such as endoplasmic reticulum (ER) and vacuoles. ­Ca2+ signals are essentially a type of chemical code,
+and decoding is performed by ­Ca2+ sensors or decoders that
+recognize changes in C
+­ a2+ signals and are transferred into
+the nucleus where genes are involved in transcription activity (Swarbreck et al. 2013). ­Ca2+ signals may also be generated automatically in plant cell nuclei. Nuclear ­Ca2+ signals
+are linked to a variety of extranuclear signals, and provide
+the best model for studies of symbiotic nuclear ­Ca2+ signals
+(Charpentier and Oldroyd 2013).
+After the plant perceives the stimulus, C
+­ a2+ transport2+
+ers regulate intracellular ­Ca concentration and produce
+related ­Ca2+ signals. Intracellular ­Ca2+ concentration plays
+essential roles in several aspects of plant growth, including cell division and organ formation (Zhang et al. 2014).
+One classification system recognizes two types of C
+­ a2+
+2+
+channel based on location: C
+­ a influx channels in plasma
+membrane, and ­Ca2+ releasing channels in intracellular
+membranes. An alternative system recognizes (i) voltagedependent ­Ca2+-permeable channels (VDCCs), which are
+subdivided into depolarization-activated ­Ca2+-permeable
+channels (DACCs) and hyperpolarization-activated
+­C a 2+-permeable channels (HACCs), and (ii) voltageindependent ­Ca2+-permeable channels (VICCs). H
+­ +/Ca2+
+2+
+enzyme and C
+­ a -ATP enzyme are the major components of
+­Ca2+ transporters and C
+­ a2+ pumps, which form transporting
+systems for intracellular ­Ca2+ and maintain ­Ca2+ stability.
+
+Influx ­Ca2+‑permeable channels in plasma
+membrane
+Elevated levels of intracellular or extracellular ­Ca2+ are
+maintained by plasma membrane ­Ca2+-permeable channels
+(Munaron et al. 2004). These influx channels are classified
+into VDCCs and VICCs as described above. Intracellular
+­Ca2+ may be accumulated by ­Ca2+ influx channels in plasma
+membrane.
+
+Plant Cell, Tissue and Organ Culture (PCTOC) (2018) 132:413–424
+
+Voltage‑dependent ­Ca2+‑permeable channels
+(VDCCs)
+VDCCs are subdivided into DACCs and HACCs as
+described above, and in more detail below. Activation
+of VDCCs is one mechanism whereby voltage pulses in
+plasma membrane cause elevation of cytosolic C
+­ a2+ level.
+Depolarization‑activated ­Ca2+‑permeable channels (DACCs)
+The first VDCCs discovered in plasma membrane were
+DACCs (Thuleau et al. 1994). Depolarization on plasma
+membrane is due to cation influx. Cell depolarization is
+induced by low-temperature stress (White 2009). DACCs,
+which open in response to low but above-freezing temperatures, are apparently present in plasma membranes of root
+cells in all types of plants.
+The existence of DACCs in carrot cell suspension was
+demonstrated using patch-clamp technology (Thuleau
+et al. 1994). DACCs were activated when plasma membrane was depolarized to − 135 mV, and they showed high
+permeability to M
+­ g2+, ­Sr2+ and ­Ba2+. This was the first
+direct demonstration of VDCCs on plasma membrane in
+higher plants. Similar VDCCs were subsequently found in
+protoplasts of leaves, mesophyll, and roots of A. thaliana
+(thale cress) (Piñeros and Tester 2011).
+Two types of VDCCs were found in wheat: root C
+­ a2+
+channel (RCA channel) and Maxi-Cation channel (Piñeros
+and Tester 1995). RCA channels are usually closed in dormant or normal wheat root cells. When cells are depolarized, RCA channels are activated, resulting in C
+­ a 2+
+influx. RCA channels were later shown to be sensitive
+under certain conditions to 1,4-dihydropyridines (DHPs)
+such as nifedipine, with increased opening rate of channels (Piñeros and Tester 2011). Maxi-Cation channels are
+permselective to monatomic and divalent cations (e.g., ­K+,
+­Na2+, ­Ca2+, ­Ba2+), and therefore have useful applications
+in pharmacology. Cationic influx channels are inhibited
+by ruthenium red, while efflux channels are inhibited by
+ruthenium red, diltiazem, verapamil, quinine (Weiger and
+Hermann 2014). Maxi-Cation channels are inhibited by
+polyamines. Effects of C
+­ a2+/H+ transport under polyamine treatment in pea roots were studied by microelectrode
+technique, and ­Ca2+ activity was found to be coupled with
+­H+ pump. ­H+ pump may inhibit accumulation of intracellular ­Ca2+ (Pottosin et al. 2014). Many other types of cation channels can be suppressed by polyamines, resulting
+in plasma membrane depolarization. In contrast, reduction of polyamine level leads to increased cation channel
+activation and hyperpolarization. A cooperative mechanism between ­Ca2+-dependent protein kinase 32 (CPK32)
+
+and cyclic nucleotide-gated channel 18 (CNGC18) was
+responsible for increased depolarization of pollen tubes
+and regulation of their growth (Zhou et al. 2014).
+Hyperpolarization‑activated ­Ca2+‑permeable channels
+(HACCs)
+Hyperpolarization (the opposite of depolarization) refers to
+an increase in potential difference (PD) relative to normal
+transmembrane potential. Voltage PD across plasma membrane in plants is generally between − 120 and − 180 mV.
+Hyperpolarization of plasma membrane may be caused
+by ­H+ pump. HACCs are activated when PD falls below
+− 120 mV, and the degree of activation depends on voltage
+strength and duration. VDCCs activated by hyperpolarization were discovered in a sequential manner. Miedema et al.
+(2008) showed that ­Ca2+ channel conductance is activated
+by hyperpolarization in root cells of A. thaliana. On plasma
+membrane of epidermal cells in onions, such channels are
+involved in mechanical protection (Pickard and Ding 1993),
+and enables depolarization of plasma membrane to prevent
+water loss by initiating closure of stomata in guard cells
+(Cosgrove and Hedrich 1991). HACCs is also a key component of the phytohormone abscisic acid (ABA) in guard
+cells (Jiao et al. 2013).
+Annexins, a type of binding protein consisting of C
+­ a2+,
+phospholipids, and cytoskeleton, can also induce C
+­ a2+
+mobilization in HACCs. Annexins were first discovered in
+higher plants (Boustead et al. 1989), and shown to affect cell
+growth, development, adaptation, and responses to abiotic
+stress. They are widely distributed in plants, and localized
+in cytosol, plasma membrane, intracellular membranes, and
+certain organelles. They play functional roles in exocytosis
+and ­Ca2+ metabolism. Pharmacological experiments have
+shown that annexins help regulate activities of non-selective
+cation channels and ­Ca2+ influx channels. Annexin affected
+transmembrane ­Ca2+ current in synthetic membrane only
+under appropriate pH, and such current was highly sensitive
+to ­Ca2+ inhibitor and ­Gd3+ (Laohavisit et al. 2009).
+
+Voltage‑independent ­Ca2+‑permeable channels
+(VICCs)
+Phytohormones affect the permeability of ­Ca2+ channels.
+Under drought stress, ABA acts synergistically with C
+­ a2+ to
+prevent stomatal opening and reduce water evaporation (Jiao
+et al. 2013). ABA also helps regulate iron channel activation in plasma membrane, H
+­ 2O2 production, and C
+­ a2+ influx
+2+
+(Siegel et al. 2009). ­Ca permeability of plasma membrane
+in coleoptile vesicular cells of corn was enhanced by the
+phytohormone auxin, and appeared to be regulated by auxinbinding protein 1 (ABP1) (Kirpichnikova et al. 2014).
+
+Cyclic nucleotide-gated channels (CNGCs) associated with ­Ca2+ signaling play roles in plant physiological processes such as plant growth, thermotolerance, and
+in responses to biotic and abiotic stress factors (Gao et al.
+2012). The genome of A. thaliana includes ~ 20 CNGCencoding genes (Jha et al. 2016). Because of difficulty in
+isolating CNGC mutants, it remains unclear which CNGCs
+are involved in which processes (Table 1).
+The 20 CNGCs can be divided into five subfamilies.
+CNGCs 1, 2, 7, 8, 10, 11, 12, 16, and 18 are involved
+mainly in plant growth (Frietsch et al. 2007). CNGCs
+1, 2, 3, 10, 19, and 20 are involved in stress responses
+(Kugler et al. 2009). CNGCs 1, 2 mainly influence the
+metal toxicity and the others are mainly related to the salt
+stress. CNGCs 2, 4, 11, and 12 are involved in immunity (Dietrich et al. 2010). The AtCNGC2 mutant dnd1
+(defense no death) belongs to immune phenotype, and the
+A. thaliana mutant rdd1 (repressor of defense no death 1)
+inhibited most dnd1 phenotypes. Genetic analysis revealed
+involvement of rdd1 in AtCNGC4 signal transduction,
+and bimolecular fluorescence complementation analysis
+showed the presence of AtCNGC2 and AtCNGC4 in the
+same pathway (Chin et al. 2013). The existence of nonselective ­Ca2+ channels encoded by CNGC5 and CNGC6
+in A. thaliana guard cells was demonstrated by overexpression experiments. Guard cells of CNGC5 and CNGC6
+mutants displayed harmful effects on electricity activated
+by cGMP and show synergistically with ABA (Wang
+et al. 2013). CNGC6 is discovered to be mediated heatinduced ­Ca2+ influx and related to the heat shock (HSP)
+genes in A. thaliana. Gao (2012) showed the activation
+of the C
+­ a2+ channel could increase the concentration of
+cytosolic cAMP and then downstream expression of the
+HSP gene to the heat shock response. CNGC12 interacts
+with the ­Ca2+ sensor calmodulin (CaM) via combination
+of an IQ-motif channel with the CaM C-terminus. At the
+N-terminal binding site of CNGC12, ­Ca2+/CaM plays a
+regulatory role through negative feedback (Defalco et al.
+2016a, b). Shih (2015) found that CNGC14 played a role
+in the auxin-induced ­Ca2+ signaling pathway controlled
+by gravitropism in roots. Charpentier et al. (2016) showed
+that ­Ca2+ spiking in Medicago truncatula was controlled
+by three CNGC15 homologs (Mt-CNGC15a, -b, -c) acting as channels in nuclear membrane, and ­Ca2+ could not
+cross the membrane when these homologs were knocked
+down. ­K+ is maintained by CNGC15 through its interaction with K
+­ + channel during C
+­ a 2+ spiking in the membrane (Capoen et al. 2011). By quantitative PCR analysis
+of pollen, Tune-Ozdemir (2013) showed expression of
+heat-resistance genes in a CNGC16 mutant. Pollen feasibility analysis indicated that the mutant pollen was highly
+sensitive to C
+­ a2+, and that thermotolerance was enhanced
+by the pollen through cyclic nucleotide signals, ­C a 2+
+
+Table 1  Main cyclic nucleotide-gated channels distribution in A. thaliana
+Types
+
+Permeable ions Distribution
+
+Flow direction Functions
+
+CNGC 1
+
+Ca2+, ­Na+, ­K+
+
+Plasma membrane
+
+CNGC 2
+
+Ca2+, ­K+
+
+Plasma membrane
+
+Na+ influx
+K+ efflux
+Ca2+ influx
+K+ efflux
+
+CNGC 3
+
+Na+, ­K+
+
+Plasma membrane
+
+CNGC 4
+
+Ca2+, ­K+
+
+Plasma membrane
+
+CNGC 5
+
+Ca2+
+
+Plasma membrane
+
+Na+ influx
+K+ efflux
+Ca2+ influx
+K+ efflux
+Ca2+ influx
+
+CNGC 6
+CNGC 7
+CNGC 8
+
+Ca2+
+
+Plasma membrane
+Plasma membrane
+Ca2+ influx
+
+CNGC 10 Na+, ­K+
+
+Plasma membrane
+
+CNGC 12 Ca2+, ­K+
+
+Plasma membrane
+
+Na+ influx
+K+ efflux
+Ca2+ influx
+K+ efflux
+Ca2+ influx
+–
+Ca2+ influx
+Ca2+ influx
+
+CNGC 14
+CNGC 16
+CNGC 17
+CNGC 18
+
+Ca2+
+–
+Ca2+
+Ca2+
+
+CNGC 19 Ca2+
+CNGC - Ca2+
+
+Plasma membrane
+Pollen
+Plasma membrane
+Plasma membrane
+
+Vacuole
+Ca2+ efflux
+Endoplasmic Reticulum Ca2+ efflux
+
+channels, and a thermotolerance-activating signal network.
+CNGC17 forms compounds with the leucine-rich repeat
+receptor-like protein kinase co-receptor BAK1, members
+of the A. thaliana ­H+-ATPase family of proton pumps, and
+the phytosulfokine receptor PSKR1 (Ladwig et al. 2015).
+CNGC18 is one of the isoforms related to ­Ca2+ channels;
+it helps regulate pollen tube guidance and interacts with
+calcium-dependent protein kinase (CPK32) (Zhou et al.
+2014). In Xenopus oocytes, CNGC18 was activated following co-expression of CPK32 (Zhou et al. 2014), indicating that CNGCs are involved in C
+­ a2+ channel function
+(Gao et al. 2016). However, the mechanisms of CNGC
+distribution remain unclear. A proposal that CNGCs are
+distributed only on plasma membrane was shown to be
+incorrect. Mt-CNGC15a/b/c is distributed in the nucleus,
+and controls ­Ca2+ store flux in the nuclear envelope lumen
+and to ER (Yuen and Christopher 2013). Many CNGCs
+have putative nuclear localization signal (NLS) sequences,
+including isoforms located in plasma membrane (Charpentier et al. 2016; Fischer et al. 2013). Among the 21 CNGCs
+in M. truncatula, 14 types in DMI1 (Capoen et al. 2011)
+and CASTOR (Charpentier et al. 2008) are predicted to
+contain NLS motifs. It remains to be determined whether
+
+References
+
+Sunkar et al. (2000), Ma et al.
+Conferred ­Pb2+ tolerance; affect
+the growth of root
+(2006)
+Ca2+ signaling; plant growth;stress Finka et al. (2012), Frietsch et al.
+responses; immunity
+(2007), Kugler et al. (2009),
+Dietrich et al. (2010)
+Affect seed germination and distri- Gobert et al. (2006)
+bution of monovalent cations
+Displayed an alteration in flower- Fortuna et al. (2015), Chin et al.
+ing transition;pathogen defense
+(2013)
+Wang et al. (2013)
+Be required for a cyclic GMP
+(cGMP)-activated nonselective
+­Ca2+ channel in guard cells
+Heat-activated involved in HSRs
+Gao et al. (2012)
+Tuncozdemir et al. (2013)
+Provide an essential function at
+the initiation of pollen tube tip
+growth
+Sensitive to salt stress
+Guo et al. (2008)
+Programed cell death, immunity
+
+Dietrich et al. (2010), Defalco et al.
+(2016a, b)
+Cell expansion
+Shih et al. (2015)
+Be critical for heat stress tolerance Tuncozdemir et al. (2013)
+Cell expansion
+Ladwig et al. (2015)
+Pollen tube guidance
+Gao et al. (2016), Zhou et al.
+(2014), Frietsch et al. (2007)
+–
+Kugler et al. (2009)
+–
+Defalco et al. (2016a, b)
+
+CNGC distribution is dynamic in the face of differing cellular stimuli.
+Besides A. thaliana, CNGCs are also distributed in other
+kinds of species which are discovered by the bioinformatics
+analyses. There are total 16 CNGCs genes in Oryza sativa L.
+expanded through chromosomal segmentation. The family
+of OsCNGCs could be divided into four major groups and
+two sub-groups (Nawaz et al. 2014); Physcomitrella contains
+eight CNGC homologues, four of which are clustered with
+the AtCNGCs including AtCNGC2, AtCNGC4 and AtCNGC19, indicating that there may be a conserved function
+between mosses and angio-sperms (Verret et al. 2010). In
+the important crop tomato, Solanum lycopersicum L., there
+are 18 CNGC genes. SlCNGC genes make sense in the disease resistance and ­Ca2+ signaling. They silenced these SlCNGCs genes and found the changes in the expression of the
+­Ca2+ signaling genes. Thus they made a conclusion that the
+regulation of the resistance may be related to the affecting
+of the ­Ca2+ signaling (Saand et al. 2015). In pear (Pyrus
+bretchneideri Rehd.), there are 21 CNGC genes which could
+be divided into five groups. Group 1 has the most motifs in
+all CNGCs groups including 26 motifs. Among all kinds
+of motifs, there are 8 motifs existing all kinds of group
+
+indicating the conservative part of the CNGC family (Chen
+et al. 2015).
+Reactive oxygen species (ROS) present in the surrounding environment are the basis of an important index that
+reflects damage and defensive responses in plants under
+stress. ROS are related to levels of polyamines and ABA
+(Alcazar et al. 2010), which produce nitric oxide (NO) and
+regulate opening and equilibrium of ­Ca2+ channels. NO
+and ­Ca2+ are essential parts of signal cascades related to
+aging in plants, but interaction between these two components during the aging process remains unclear (Ma et al.
+2010). Associations between ROS and ­Ca2+ are involved in
+cell–cell communication and long-distance delivery (Steinhorst and Kudla 2013). ROS function as a second messenger
+to activate anion channels during sensing and guard cells
+signaling. Anion channels distributed on plasma membrane
+are activated by anion fluxes via voltage-gated ­K+ transport
+channels (Murata et al. 2015), ABA (Roelfsema et al. 2012),
+and NADPH (Leterrier et al. 2016). Damage by ROS can
+be reduced by antioxidant enzymes through inhibition of
+phospholipase C (PLC) activity and blocking of C
+­ a2+ signaling pathways in cells (Domijan et al. 2014). PLC is also
+involved in responses to lipopolysaccharide stress. Treatment of cultured plant cells with 20 µM U73122 (a PLC
+inhibitor) inhibited stress response and greatly increased
+­Ca2+ signals relative to negative control. Ranf et al. (2015)
+recently discovered lectin S-domain receptor kinase, characterized as a receptor in lipopolysaccharide stress response.
+
+Ca2+ releasing channels in intracellular
+membranes
+Ca2+ channels located in chloroplasts
+Chloroplasts have a bilayer structure and contain chlorophyll
+used for photosynthesis. The chloroplast stroma includes
+numerous thylakoids comprised of a membranous capsule
+and containing DNA. Pottosin and Schönknecht (1996) studied ­Ca2+ currents generated by opening of VDCCs. Such
+­Ca2+ channels had electrical conductivity higher than that
+of monovalent cation channels, but showed greater selectivity for divalent than for monovalent cations. Opening of
+the channels was enhanced when chloroplasts had greater
+positive charge in the stroma than inside the thylakoids.
+This type of channel controls exchanges between thylakoids
+and chloroplast, but its involvement in signal transduction
+is unclear. Chloroplasts produce immune signaling molecules such as salicylic acid and jasmonic acid, and are thus
+involved in plant immune responses. The molecular mechanisms of nuclear immune signaling to chloroplasts and mitochondria are unknown. Specific ­Ca2+ signals may be triggered by chloroplasts or mitochondria in response to biotic
+
+or abiotic stress (Nomura and Shiina 2014). ­Ca2+ absorbance
+can be inhibited by light stimulation and by ruthenium red.
+Recognition of ­Ca2+ transporters and the presence of signals
+indicate that ­Ca2+ functions not only in the cell interior, but
+also in plant immune responses and responses to external
+stress factors.
+Proteins such as calcium-sensing receptor (CAS) are
+present in chloroplasts and can be transferred to the stroma
+to reduce specific ­Ca2+ signals via the pathogen-associated molecular pattern (PAMP) pathway. This pathway is
+involved in ­Ca2+ transfer and in death of sensitive cells
+mediated by R genes (Nomura et al. 2013). CAS also makes
+functions in the photoacclimation in Chlamydomonas proved
+by the knockdown species (Petroutsos et al. 2011). AtCAS
+makes sense in the stomatal closure related to the concentration of ­Ca2+ (Han et al. 2003).
+
+Ca2+ channels located in tonoplasts
+The vacuole occupies > 90% of the space in a plant cell,
+and contains the major C
+­ a2+ store and source of C
+­ a2+ for
+cell signaling (Pottosin and Schönknecht 2007). The electrochemical gradient of C
+­ a2+ across the tonoplast (membrane
+that surrounds the vacuole) is very large. Channels that react
+to ­Ca2+ stimulating factors are distributed in tonoplast. C
+­ a2+
+concentration is regulated through release or uptake of ­Ca2+
+stimulated by low temperature. Slow vacuolar (SV) channels, encoded by two-pore channel 1 (TPC1), were detected
+by fura-2 fluorescence measurements and patch-clamp technique (Peiter et al. 2005) in carrot root vacuoles (Gradogna
+et al. 2009). AtTPC1 make in sense in homestasis more than
+signalling to stress (Stael et al. 2012).
+Certain types of C
+­ a2+ channels coexist in tonoplasts.
+DACCs and VDCCs such as SV channels are selective for
+divalent cations, but their physiological functions remain
+unclear. The SV channel encoded by TPC1 is characterized
+by slow inactivation and activation, and its function is controversial because of its complicated mechanism and low
+cation selectivity (Peiter 2011). In the cytoplasm of guard
+cells of Vicia faba (fava bean), increase of ­Ca2+ concentration activates an SV channel present in tonoplast and results
+in ­Ca2+ efflux, a depolarizing reaction that leads to further
+opening of the SV channel. This phenomenon was proposed
+to be a positive feedback mechanism resulting from ­Ca2+
+oscillation and “calcium-induced calcium release” (Laver
+et al. 2013).
+Ca 2+ DACCs in tonoplasts of suspension-cultured
+tobacco cells were described in the 1990s. Such channels
+were blocked by C
+­ d2+ at various concentrations, but were
+not sensitive to ­Ni2+, ­La3+, ­Gd3+, verapamil, or nifedipine at
+the same concentrations for which sensitivity to B
+­ a2+, ­Sr2+,
+2+
+2+
+­Ca , or ­Mg was observed (Ping et al. 1992). Electrical
+
+conductivity was 19 pS under 50 mmol/L ­Ca2+, and 30 pS
+under 50 mmol/L ­Ba2+.
+DACCs may be involved in signaling pathways that are
+selective for divalent cations and promote C
+­ a2+ influx into
+2+
+cytoplasm. Several C
+­ a channels present in tonoplast are
+activated by second messengers such as ­IP3 and cyclic ADP
+ribose (cADPR). ­Ca2+ release is promoted by ­IP3 in vacuoles
+of Beta vulgaris (beet), indicating the presence of ­Ca2+ channels (Schönknecht 2013).
+
+Ca2+ channels located in lysosomes
+Mucolipin transient receptor potential (TRP) channels
+(termed TRPML1, -2, -3) are the basic C
+­ a2+ channels in
+lysosomes. TRPML1 is a key regulator of most lysosomal
+trafficking processes (Li et al. 2013; Cheng et al. 2010),
+which are localized in late endosome or lysosome (Venkatachalam et al. 2015). Regulation of TRPML1 by PI(3,5)P2
+is an example of compartment-specific regulation of organellar channels.
+Two-pore channels (TPCs) are found only in acidic organelles and lysosomes that have protective functions (Morgan
+and Galione 2014). Induction of ­Ca2+ release by nicotinic
+acid adenine dinucleotide phosphate (NAADP) is partially
+based on overexpression of TPCs (Parrington and Tunn
+2014; Calcraft et al. 2009), though a specific relationship
+between TPCs and NAADP has not been conclusively demonstrated. TPC1 is activated by the dimerization of the a
+predicted helix within the carboxyl-terminus (CTH), this
+indicates the TPC1 depends on the C-terminal dimerization
+(Larisch et al. 2016).
+
+Ca2+ channels located in ER
+Ca2+ channels distributed in ER are also present (but less
+well known) in various plant species.. Bryonia calcium
+channel 1 (BCC1) was described in ER of tendril tissues
+in Bryonia dioica (a climbing vine). Opening of BCC1 is
+controlled by ­Ca2+ concentration, which is regulated by
+­Ca2+-ATPase in ER. BCC1 may play a key role in ­Ca2+
+signal delivery via sensing/signaling pathways in higher
+plants (Klusener et al. 1995) belonging to voltage-gated
+rectifier channel. LCC1 (Lepidium calcium channel 1) is a
+­Ca2+ channel which is voltage gated and strongly rectifying
+existing in the ER of root cells discoveried by the technology
+of planar lipid bilayer in Lepidium sativum (garden cress; a
+cruciferous plant). BCC1 and LCC1 are highly selective and
+voltage-dependent ­Ca2+ channels whose activity is promoted
+by ­Ba2+, ­Sr2+, and M
+­ g2+, and inhibited by L
+­ a3+ and G
+­ d3+
+2+
+(Klusener and Weiler 1999). ­Ca flux from ER is closely
+related to cell signaling. C
+­ a2+ release appears to be associated with ER levels of cADPR, NAADP, and ­IP3, but direct
+evidence for such association is needed.
+
+Ca2+ channels located in mitochondria
+Ca2+ efflux is mediated by ­Na+-dependent (mitoNCX) and
+­Na+-independent ­Ca2+ transporters. In an A. thaliana model,
+six MCU genes with low homoloogy to the human. are conserved and have been identified as putative MCU channel
+proteins. They and their human MCU homologs share a
+pore-loop domain, transmembrane domains, and conserved
+DVME (Asp-Val-Met-Glu) signature sequence (Stael et al.
+2012). AtMCU1 activity is sensitive to the MCU inhibitors
+ruthenium red and G
+­ d3+, and to A. thaliana protein MICU,
+a regulatory MCUC component. AtMCU1 is expressed
+mainly in root cells and is localized in mitochondria. Its
+absence results in moderate changes in ­Ca2+ dynamics, as
+assessed by in vivo measurements in root tips. Under restrictive growth conditions, knockdown or overexpression of
+AtMCU1 results in altered ultrastructure of root mitochondria and shortening of primary roots (Teardo et al. 2016).
+
+Ca2+ channels related to abiotic stress
+resistance
+Changes in ­Ca2+ concentration and in forms of protein
+phosphorylation including mitogen-activated protein kinase
+(MAPK) cascades in plant cells may result from biotic and
+abiotic stress signals. Cytoplasmic ­Ca2+ concentration is the
+first to respond to all types of stress stimuli, and changes
+are quickly mediated via ­Ca2+ channels and other media
+to reach sensory elements in cells and thereby extend the
+stress signals (Kudla et al. 2010). ­Ca2+-dependent protein
+kinases (CDPKs) are involved in the signal transduction
+under the stress. Among all CDPK genes, the expression of
+VaCPK21 is significantly up-regulated in Vitis amurensis
+which is probably to be acted as a positive regulator under
+the salt and high temperature stress (Dubrovina et al. 2016).
+VaCPK1 and VaCPK21 are also related to the stilbene
+synthesis contributing to the plant biotic stress resistance
+(Aleynova et al. 2017). ­Ca2+ concentration was monitored
+by fluorescence signals in cells of A. thaliana, which have an
+aequorin expressing system; signals were emitted by germinating seedlings within 5 s after exposure to exogenous NaCl
+or mannitol, reaching a maximal level within 10 s (Knight
+et al. 1997). The appearance of these fluorescence signals
+in such a short time illustrates the ability of C
+­ a2+-channel
+proteins distributed on the cell membrane to respond very
+quickly to stress, resulting in ­Ca2+ influx and transduction of
+a series of signals. In Populus euphratica, heat shock (HS)
+could induce an early influx of C
+­ a2+ and K
+­ +. ­GdCl3 acts
+as an inhibitor to decrease the H
+­ 2O2, indicating that the P.
+euphratica probably resists the HS through the enhancement
+of the antioxidant system (Yu et al. 2016). Discovery and
+functional characterization of stress-related ­Ca2+ channels
+
+Table 2  Main ­Ca2+ channels distribution in plants under the abiotic stress
+Types
+
+Sub-types Species
+
+Distribution
+
+Affiliation
+
+Functions
+
+References
+
+TPC
+
+OsTPC
+
+Rice
+
+Vacuole
+
+Voltage-gated ion
+channels (VGICs)
+
+Hamada et al. (2012)
+
+AtTPC
+
+A. thaliana
+
+TaTPC
+CNGC2
+
+Wheat
+A. thaliana
+
+Hypersensitive cell
+death; synthesis of
+phyoalexin
+Tolerance of stress;
+aninonic channel
+opening; stomatal
+closure
+Response to stress
+stress responses
+
+CNGCs
+
+CNGC10
+CNGC16
+MSL
+
+MSL1-3
+
+Voltage-independent
+­Ca2+-permeable
+channel(VICCs)
+
+Plasma membrane
+
+A. thaliana
+
+MSL4-10 A. thaliana
+Annexins AtANN1
+ANNBJ1
+NNANN1
+GHANN1
+STANN1
+
+Plasma membrane
+
+Mitochondria; chloroplast
+mitochondria
+
+Nonselective channel
+
+A. thaliana
+Cytosol; plasma mem- Hyperpolarizationactivated (HACC)
+brane; intracecullar
+Brassica juncea
+membrane; certain
+Nelumbo nucifera
+organelles
+Gossypium hirutum
+Solanum tuberosum
+
+has lagged behind that of K
+­ + channels (Lan et al. 2011; Very
+and; Sentenac 2002; Hirsch et al. 1998) which have been
+cloned and more intensively studied (Table 2).
+ABA, ethylene, auxin, and I­ P3 are known to regulate plant
+growth and signaling in response to environmental stresses
+through complex signal transduction and metabolic processes. However, relationships between abiotic stress factors and resulting plant signals are unclear in many cases.
+
+Role of two‑pore channels (TPCs) in abiotic stress
+resistance
+Two-pore channels comprise a subfamily of the eukaryotic voltage-gated ion channels (VGICs) superfamily that
+are mainly expressed in acidic stores in plants(Sandra et al.
+2017), which comprise a large family of intracellular cation
+channels that are expressed only in acid organelles and vacuoles. The names applied to TPCs differ depending on the
+species of plant. OsTPC1, AtTPC1, and TaTPC1 are typical
+TPCs described in rice, guard cells, and wheat.
+OsTPC1, a voltage-gated ­Ca2+ channel found in rice, has
+a function similar to that of its homolog AtTPC1. Hamada
+et al. (2012) showed that OsTPC1 plays an essential role
+in hypersensitive cell death induced by TvX. Persistent
+increase of C
+­ a2+ induced by TvX is mediated by OsTPC1
+
+Sensitive to salt stress
+Be critical for heat
+stress tolerance
+Sense mechanical
+stumi
+Sense mechanical
+stumi
+Dought stress tolerance
+
+Hashimoto et al. (2004),
+Choi et al. (2014)
+(Wang et al. 2005)
+Finka et al. (2012),
+Frietsch et al. (2007),
+Kugler et al. (2009),
+Dietrich et al. (2010)
+Guo et al. (2008)
+Tuncozdemir et al.
+(2013)
+Wilson et al. (2011)
+Nakayama et al. (2012)
+Clark et al. (2012);
+Szalonek et al. (2015)
+
+as ­Ca2+ channel. OsTPC1 is also involved in synthesis of
+phytoalexins, a type of antimicrobial substance.
+In some cases, a particular signal transduction pathway
+may be involved in responses to multiple types of stress,
+which are difficult to distinguish because resistance to them
+depends on the same action. AtTPC1 is the most studied (to
+date) protein that functions in response to multiple stress
+factors. AtTPC1 is an SV C
+­ a2+ TPC involved in stomatal
+closure in guard cells. AtTPC1 can compensate for cch1
+mutation in yeast, and restores ­Ca2+ function to enhance
+tolerance of sugar stress (Hashimoto et al. 2004). In studies
+of AtTPC1 mutant attpc 1–2, exogenous C
+­ a2+ treatment did
+not induce stomatal closure nor activate anionic channels to
+produce current. AtTPC1 existing in guard cell stomata evidently responds to exogenous C
+­ a2+ signals and participates
+in both anionic channel opening and stomatal closure, but
+is not regulated by ABA or methyl jasmonate (Islam et al.
+2010). Transmission systems based on fast C
+­ a2+ waves can
+2+
+resist stress, and C
+­ a speed may reach 420 µm/s (Choi et al.
+2014). In A. thaliana root tissue subjected to salinity stress,
+­Ca2+ spreads through AtTPC1, a ­Ca2+ channel, existing in
+the cortex and endodermis. Waves in the C
+­ a2+/TPC1 system
+may involve specific molecular reactions induced by salinity
+stress (Choi et al. 2014).
+TaTPC1, a C
+­ a2+ channel found in wheat, is induced by
+high salinity, polyethylene glycol, low temperature, or ABA
+
+(Wang et al. 2005). In complementation experiments, a yeast
+cch1 mutant survived under L
+­ i+ ion stress when TaTPC1 was
+expressed. Stomatal closure ability was higher in TaTPC1overexpressing plants (Wang et al. 2005). The above findings all indicate the involvement of ­Ca2+ in responses to
+environmental changes.
+
+Role of cyclic nucleotide‑gated channels (CNGCs)
+in abiotic stress resistance
+The CNGCs are ligand-gated cation channels localized
+mostly in the plasma membrane belonging to the VICCs.
+Members of the CNGC family in A. thaliana are involved in
+ion signal transduction through ­Ca2+ flow, and in responses
+to biotic and abiotic stress factors.
+Tune-Ozdemir (2013) demonstrated expression of heatresistance genes in a CNGC16 mutant of A. thaliana by
+quantitative PCR analysis. Pollen feasibility analysis showed
+that pollen of the mutant was highly sensitive to C
+­ a2+, and
+that thermotolerance was induced by pollen through cyclic
+nucleotide signals, C
+­ a2+ channels, and a signal network.
+CGNC16 was responsive to high temperature and drought,
+whereas a cgnc16 mutant was sensitive to exogenous C
+­ aCl2
+(Tune-Ozdemir et al. 2013). In rice, a single-nucleotide polymorphism in COLD1 (a G protein) enhanced cold tolerance
+through rapid ­Ca2+ flow, suggesting that CNGCs may be
+complexed with COLD1 (Ma et al. 2015). In A. thaliana pollen and leaf cells, high temperature stress results in a sharp
+rise of cGMP concentration and greatly reduced expression
+of heat stress response genes, including those encoding heat
+shock transcription factors such as HsfA2 and HsfB1. Thus,
+CGNC16 appears to be a permeability channel involved in
+cyclic nucleotide signaling responses to high temperature
+and drought.
+CNGC19 and CNGC20 play a role in responses to salinity
+stress (Kugler et al. 2009). Expression of these two genes
+is upregulated in response to increased salinity stress, but
+is unaffected by mannitol stress. Under various durations
+(6–72 h) of salinity stress, there was a strong response by
+CNGC19 in buds, but no response by CNGC19 in roots.
+CGNC20 expression increased greatly after 1 h of salinity
+stress.
+
+Role of ­Ca2+‑permeable mechanosensitive (MS)
+channels in abiotic stress resistance
+Ca2+-permeable MS channels are able to sense mechanical stimuli. In Escherichia coli, hypo-osmotic shock is an
+activator for increase of cytoplasmic C
+­ a2+ concentration,
+2+
+mainly by ­Ca influx through plasma membrane (Nakagawa et al. 2007; Kurusu et al. 2012). MscS, one of three
+types of MS channels, helps prevent rupturing of cells
+under hypo-osmotic stress (Hurst et al. 2008). MscS-like
+
+channels (MSLs), a kind of nonselective channel, are present
+in plants and algae, which can be divided into two types:
+class I (localized in mitochondria and having plastids with
+target sequences) and class II (lacking plastids). The A. thaliana genome includes ten MSL genes: MSL1-3 (class I) and
+MSL4-10 (class II). The eukaryotic MscS members, especially MSL2 and MSL3 existing in the chloroplast make a
+great significant in the various physiological functions such
+as chloroplast division, plastid size, shape (Wilson et al.
+2011; Haswell and Meyerowitz 2006). They contain a C-terminal cytoplasmic conserved domain (Jensen and Haswell
+2012), which is necessary for the proper channel functions
+and subcellular localization. Class II such as MSL10, is distinguished with 6 TM regions with large soluble N- and
+C-termini, also has a large cytoplasmic loop between TM
+helix 4 and 5 (Haswell 2007; Nakayama et al. 2012), which
+is the basic of specific functions in the eukaryote such as
+controlling and sensing the C
+­ a2+ influx including hypoosmotic stress (Nakayama et al. 2012).
+
+Role of annexins in abiotic stress resistance
+Annexins are a type of C
+­ a2+ channel belonging to HACCs
+involved in drought stress tolerance in plants. AtANN1 is
+an annexin found in A. thaliana. In a study by KonopkaPostupolska et al. (2009), A. thaliana was treated by short
+photoperiod for 4 weeks, and then by drought stress until
+complete dehydration. An atann1 deletion mutant died by
+day 5, whereas wild-type and an AtANN1-overexpressing
+mutant remained green, illustrating the role of annexins in
+drought stress resistance.
+
+Future prospects
+The environment of plants contains a variety of physical
+and chemical stimuli, and the associated signal transduction
+pathways involve many types of ­Ca2+ channels. Research
+on plant ­Ca2+ channels has undergone important, sequential
+advances during the past decade. Continued development
+of patch-clamp technology, calcium imaging systems, and
+related methods will lead to discovery and elucidation of
+more ­Ca2+ channels.
+Ca2+ concentrations resulting from various plant cell
+stimuli display differences in range, duration, and spatial
+distribution that are associated with specific reactions.
+­Ca2+ signals are one of the most important signal types that
+regulate plant homeostasis and growth. Research on ­Ca2+
+channels and C
+­ a2+ signals is essential to clarify the mechanisms of plant tolerance/resistance to all types of abiotic
+and biotic stress, and is becoming increasingly popular
+in our field. Studies on stress-related physiological modifications are well advanced, but the associated molecular
+
+modifications remain poorly known. There is an exciting
+future for studies on identification of stress-related proteins
+and use of transgenesis techniques to enhance stress resistance in plants.
+Acknowledgements This study was supported by grants from the
+National Natural Science Foundation of China (31300223), Natural
+Science Foundation of Shaanxi Province (2016JM3001), Key Scientific Research Project of Provincial Education Department of Shaanxi
+(15JS110), Scientific Research form Shaanxi Provincial Department
+of Education (16JK1756), Opening Foundation of Key Laboratory of
+Resource Biology and Biotechnology in Western China (Northwest
+University), Ministry of Education, and Training Programs of Innovation and Entrepreneurship for Undergraduate (Northwest University,
+2017167). In addition to this, the authors are grateful to Dr. S. Anderson for English editing of the manuscript.
+Author contributions JL was responsible for collecting references and
+writing articles; YN, JZ, and YZ assisted to write the manuscript, ZM
+assisted to collect references, XH guided and modified the whole manuscript as the corresponding author.
+
+Compliance with ethical standards
+Conflict of interest No conflict of interest exits in the submission of
+this manuscript, and manuscript is approved by all authors for publication. I would like to declare on behalf of my co-authors that the work
+described was original research that has not been published previously,
+and not under consideration for publication elsewhere, in whole or in
+part. All the authors listed have approved the manuscript that is enclosed.
+
+References
+Alcázar R, Altabella T, Marco F, Bortolotti C, Reymond M, Koncz
+C, Carrasco P, Tiburcio AF (2010) Polyamines: molecules with
+regulatory functions in plant abiotic stress tolerance. Planta
+231:1237–1249
+Aleynova OA, Dubrovina AS, Kiselev KV (2017) Activation of stilbene synthesis in cell cultures of vitis amurensis, by calciumdependent protein kinases vacpk1, and vacpk26. Plant Cell Tissue Org Cult 130:141–152
+Berridge MJ, Bootman MD, Roderick HL (2003) Calcium signalling:
+dynamics, homeostasis and remodelling. Nat Rev Mol Cell Biol
+4:517–529
+Boudsocq M, Laurière C (2005) Osmotic signaling in plants. Multiple
+pathways mediated by emerging kinase families. Plant Physiol
+138:1185–1194
+Boustead CM, Smallwood M, Small H, Bowles DJ, Walker JH (1989)
+Identification of calcium-dependent phospholipid-binding proteins in higher plant cells. FEBS Lett 244:456–460
+Calcraft PJ, Ruas M, Pan Z, Cheng X, Arredouani A, Hao X et al
+(2009) NAADP mobilizes calcium from acidic organelles
+through two-pore channels. Nature 459:596–600
+Capoen W et al (2011) Nuclear membranes control symbiotic calcium
+signaling of legumes. Proc Natl Acad Sci USA 108:14348–14353
+Charpentier M, Oldroyd GED (2013) Nuclear calcium signaling in
+plants. Plant Physiol 163:496–503
+Charpentier M, Bredemeier R, Wanner G et al (2008) Lotus japonicus
+CASTOR and POLLUX are ion channels essential for perinuclear calcium spiking in legume root endosymbiosis. Plant Cell
+20(12):3467–3479
+
+Charpentier M et al (2016) Nuclear-localized cyclic nucleotidegated channels mediate symbiotic calcium oscillations. Science 352:1102–1105
+Chen J, Yin H, Gu J, Li L, Liu Z, Jiang X et al (2015) Genomic characterization, phylogenetic comparison and differential expression of the cyclic nucleotide-gated channels gene family in pear
+(Pyrus bretchneideri, rehd.). Genomics 105(1):39–52
+Cheng X, Shen D, Samie M, Xu H (2010) Mucolipins intracellular
+TRPML1–3 channels. FEBS Lett 584:2013–2021
+Chin K, DeFalco TA, Moeder W, Yoshioka K (2013) The Arabidopsis cyclic nucleotide-gated ion channels AtCNGC2 and AtCNGC4 work in the same signaling pathway to regulate pathogen defense and floral transition. Plant Physiol 163:611–624
+Chinnusamy V, Schumaker K, Zhu JK (2004) Molecular genetic perspectives on cross-talk and specificity in abiotic stress signaling in plants. J Exp Bot 55:225–236
+Choi WG, Toyota M, Kim SH, Hilleray R, Gillroy S (2014) Salt
+stress-induced ­C a 2+ waves are associated with rapid, longdistance root-to-shoot signaling in plants. Proc Natl Acad Sci
+USA 111:6497–6502
+Clark GB, Morgan RO, Fernandez M-P, Roux SJ (2012) Evolutionary adaptation of plant annexins has diversified their molecular structures, interactions and functional roles. New Phytol
+196:695–712
+Cosgrove DJ, Hedrich R (1991). Stretch-activated chloride, potassium,
+and calcium channels coexisting in plasma membranes of guard
+cells of Vicia faba L. Planta 186:143–153
+Defalco TA et al (2016a) Multiple calmodulin-binding sites positively
+and negatively regulate Arabidopsis cyclic nucleotide-gated
+channel12. Plant Cell 28:1738–1751
+Defalco TA, Moeder W, Yoshioka K (2016b) Opening the gates:
+insights into cyclic nucleotide-gated channel-mediated signaling. Trends Plant Sci 21(11):903
+Dietrich P, Anshütz U, Kugler A, Becker D (2010) Physiology and biophysics of plant ligand-gated ion channels. Plant Biol 12:80–93
+Domijan AM, Kovac S, Abramov AY (2014) Lipid peroxidation is
+essential for phospholipase C activity and the inositol-trisphosphate-related ­Ca2+ signal. J Cell Sci 127:21–26
+Dubrovina AS, Kiselev KV, Khristenko VS, Aleynova OA (2016)
+Vacpk21, a calcium-dependent protein kinase gene of wild grapevine Vitis amurensis, rupr. is involved in grape response to salt
+stress. Plant Cell Tissue Org Cult 124(1):137–150
+Finka A, Cuendet AF, Maathuis FJ, Saidi Y, Goloubinoff P (2012)
+Plasma membrane cyclic nucleotide gated calcium channels control land plant thermal sensing and acquired thermotolerance.
+Plant Cell 24:3333–3348
+Fischer C et al (2013) An IQ domain mediates the interaction with
+calmodulin in a plant cyclic nucleotide-gated channel. Plant Cell
+Physiol 54:573–584
+Fortuna A, Lee J, Ung H, Chin K, Moeder W, Yoshioka K (2015).
+Crossroads of stress responses, development and flowering regulation–the multiple roles of cyclic nucleotide gated ion channel
+2. Plant Signal Behav 10:3
+Frietsch S, Wang YF, Sladek C et al (2007) A cyclic nucleotide-gated
+channel is essential for polarized tip growth of pollen. Proc Natl
+Acad Sci USA 104:14531–14536
+Gao F, Han X, Wu J, Zheng S, Shang Z, Sun D, Zhou R, Li B (2012)
+A heat-activated calcium-permeable channel Arabidopsis
+cyclic nucleotide-gated ion channel 6 is involved in heat shock
+responses. Plant J 70:1059–1069
+Gao QF et al (2016) Cyclic nucleotide-gated channel 18 is an essential ­Ca2+ channel in pollen tube tips for pollen tube guidance to
+ovules in Arabidopsis. Proc Natl Acad Sci USA 113:3096–3101
+Gilroy S, Trewavas A (2001) Signal processing and transduction in
+plant cell: the end of the beginning? Nat Rev Mol Cell Biol
+2:307–314
+
+Gobert A, Park G, Amtmann A, Sanders D, Maathuis FJM (2006)
+Arabidopsis thaliana cyclic nucleotide gated channel 3 forms
+a non-selective ion transporter involved in germination and
+cation transport. J Exp Bot 57(4):791
+Gradogna A, Scholz-Starke J, Gutla PVK, Carpaneto A (2009) Fluorescence combined with excised patch: measuring calcium currents in plant cation channels. Plant J 58:175–182
+Guo KM, Babourina O, Borsics CDA, Rengel T, Z (2008) The cyclic
+nucleotide-gated channel, atcngc10, influences salt tolerance
+in arabidopsis. Physiol Plant 134(3):499
+Hamada H, Kurusu T, Okuma E, Nokajima H, Kiyoduka M, Koyano T, Sugiyama Y, Okada K, Koga J, Saji H et al (2012)
+Regulation of a proteinaceous elicitor-induced C
+­ a 2+ influx
+and production of phytoalexins by a putative voltage-gated
+cation channel, OsTPC1, in culture rice cells. J Biol Chem
+287:9931–9939
+Han S, Tang R, Anderson LK, Woerner TE, Pei ZM (2003) A cell
+surface receptor mediates extracellular ­Ca2+ sensing in guard
+cells. Nature 425(6954):196–200
+Harada A, Sakai T, Okada K (2003) Phot1 and phot2 mediate blue
+light-induced transient increases in cytosolic C
+­ a2+ differently in
+Arabidopsis leaves. Proc Natl Acad Sci USA 100:8583–8588
+Hashimoto K, Saito M, Matsuka H, Iida K, Iida H (2004) Functional
+analysis of a rice putative voltage-dependent C
+­ a2+ channel,
+OSTPC1, expressed in yeast cell lacking its homologous gene
+CCH1. Plant Cell Physiol 45:496–500
+Haswell ES (2007) MscS-like proteins in plants. Curr Top Membr
+58(06):329–359
+Haswell ES, Meyerowitz EM (2006) Mscs-like proteins control plastid
+size and shape in arabidopsis thaliana. Curr Biol Cb 16(1):1
+Hepler PK (2005) Calcium: a central regulator of plant growth and
+development. Plant Cell 17:2142–2155
+Hirsch RE, Lewis BD, Spalding EP, Sussman MR (1998) A role
+for the AKT1 potassium channel in plant nutrition. Science
+280:918–921
+Hurst AC et al (2008) MscS, the bacterial mechanosensitive channel of
+small conductance. Int J Biochem Cell Biol 40:581–585
+Islam MM, Munemasa S, Hossain MA, Nakamura Y, Mori IC, Murata
+Y (2010) Roles of AtTPC1, vacuolar two pore channel 1, in
+Arabidopsis stomatal closure. Plant Cell Physiol 51:302–311
+Jammes F, Hu HC, Villiers F, Bouten R, Kwak JM (2011) Calciumpermeable channels in plant cells. FEBS J 278:4262–4276
+Jensen GS, Haswell ES (2012). Functional analysis of conserved motifs
+in the mechanosensitive channel homolog mscs-like2 from arabidopsis thaliana. PLoS ONE 7(6):e40336
+Jha SK, Sharma M, Pandey GK (2016) Role of cyclic nucleotide
+gated channels in stress management in plants. Curr Genomics
+17(4):315–329
+Jiao Y, Sun L, Song Y, Wang L, Liu L, Zhang L, Liu B, Li N, Miao C,
+Hao F (2013) AtrbohD and AtrbohF positively regulate abscisic acid-inhibited primary root growth by affecting ­Ca2+ signalling and auxin response of roots in Arabidopsis. J Exp Bot
+64:4183–4192
+Kirpichnikova AA, Rudashevskaya EL, Yemelyanov VV, Shishova
+MF (2014) C
+­ a2+-transport through plasma membrane as a test
+of auxin sensitivity. Plants 3:209–222
+Klüsener B, Weiler EW (1999) A calcium-selective channel from
+root-tip endomembranes of garden cress. Plant Physiol
+119:1399–1406
+Klüsener B, Boheim G, Liss H, Engelberth J, Weiler EW (1995) Gadolinium-sensitive, voltage-dependent calcium release channels
+in the endoplasmic reticulum of a higher plant mechanoreceptor
+organ. EMBO J 14:2708–2714
+Knight H, Trewavas AJ, Knight MR (1997) Calcium signaling in
+Arabidopsis thaliana responding to drought and salinity. Plant
+J 12:1067–1078
+
+Plant Cell, Tissue and Organ Culture (PCTOC) (2018) 132:413–424
+Konopka-Postupolska D, Clark G, Goch G, Debski J, Floras K,
+Cantero A, Fijolek B, Roux S, Hennig J (2009) The role of
+annexin 1 in drought stress in Arabidopsis. Plant Physiol
+150:1394–1410
+Kudla J, Batistic O, Hashimoto K (2010) Calcium signals: the
+lead currency of plant information processing. Plant Cell
+22:541–563
+Kugler A, Köhler B, Palme K, Wolff P, Dietrich P (2009) Salt-dependent regulation of a CNG channel subfamily in Arabidopsis. BMC
+Plant Biol 9:140
+Kurusu T et al (2012) Plasma membrane protein OsMCA1 is involved
+in regulation of hypo-osmotic shock-induced ­Ca2+ influx and
+modulates generation of reactive oxygen species in cultured rice
+cells. BMC Plant Biol 12(1):1–15
+Ladwig F et al (2015) Phytosulfokine regulates growth in Arabidopsis
+through a response module at the plasma membrane that includes
+cyclic nucleotide-gated channel17, H
+­ +-ATPase, and BAK1. Plant
+Cell 27:1718–1729
+Lan WZ, Lee SC, Che YF, Jiang YQ, Luan S (2011) Mechanistic analysis of AKT1 regulation by CBL-CIPK-PP2CA interaction. Mol
+Plant 4:527–536
+Laohavisit A, Mortimera JC, Demidchika V, Coxon KM, Stancombe
+MA, Macpherson N, Brownlee C, Hofmann A, Webb AAR,
+Miedema H et al (2009) Zea mays annexins modulate cytosolic
+free ­Ca2+ and generate a C
+­ a2+-permeable conductance. Plant Cell
+21:479–493
+Larisch N, Kirsch SA, Schambony A, Studtrucker T, Bockmann RA,
+Dietrich P (2016) The function of the two-pore channel TPC1
+depends on dimerization of its carboxy-terminal helix. Cell Mol
+Life Sci 73:256
+Laver DR, Kong CHT, Imtiaz MS, Cannell MB (2013) Termination of
+calcium-induced calcium release by induction decay: an emergent property of stochastic channel gating and molecular scale
+architecture. J Mol Cell Cardiol 54:98–100
+Leterrier M, Barroso JB, Valderrama R, Begara-Morales JC, SánchezCalvo B, Chaki M, Luque F, Viñegla B, Palma JM, Corpas FJ
+(2016) Peroxisomal NADP isocitrate dehydrogenase is required
+for Arabidopsis stomatal movement. Protoplasma 253:403–415
+Li X, Garrity AG, Xu H (2013) Regulation of membrane trafficking
+by signalling on endosomal and lysosomal membranes. J Physiol
+591:4389–4401
+Ma W, Ali R, Berkowitz GA (2006) Characterization ofplant phenotypes associated with loss-of-function ofatcngc1, aplant cyclic
+nucleotide gated cation channel. Plant Physiol Biochem Ppb
+44(7–9):494
+Ma W, Smigel A, Walker RK, Moeder W, Yoshioka K, Berkowitz GA
+(2010) Leaf senescence signaling: the C
+­ a2+-conducting Arabidopsis cyclic nucleotide gated channel 2 acts through nitric oxide
+to repress senescence programming. Plant Physiol 154:733–743
+Ma Y et al (2015) COLD1 confers chilling tolerance in rice. Cell
+160:1209–1221
+Miedema H, Demidchik V, Véry AA, Bothwell JHF, Brownlee C,
+Davies JM (2008) Two voltage-dependent calcium channels coexist in the apical plasma membrane of Arabidopsis thaliana root
+hairs. New Phytol 179:378–385
+Morgan AJ, Galione A (2014) Two-pore channels (TPCs): current controversies. BioEssays 36:173–183
+Munaron L, Antoniotti S, Lovisolo D (2004) Fiorio PlaA. Blocking
+­Ca2+ entry: a way to control cell proliferation. Curr Med Chem
+11:1533–1543
+Munemasa S, Oda K, Watanabe-Sugimoto M, Nakamura Y, Shimoishi Y, Murata Y (2007) The coronatine-insensitive 1 mutation
+reveals the hormonal signaling interaction between abscisic acid
+and methyl jasmonate in Arabidopsis guard cells: specific impairment of ion channel activation and second messenger production.
+Plant Physiol 143:1398–1407
+
+Murata Y, Mori IC, Munemasa S (2015) Diverse stomatal signaling
+and the signal integration mechanism. Annu Rev Plant Biol
+66:369–392
+Nakagawa Y et al (2007) Arabidopsis plasma membrane protein crucial
+for ­Ca2+ influx and touch sensing in roots. Proc Natl Acad Sci
+USA 104(15):3639–3644
+Nakayama Y, Yoshimura K, Iida H (2012) Organellar mechanosensitive channels in fission yeast regulate the hypo-osmotic shock
+response. Nat Commun 3(2):1020
+Nawaz Z, Kakar KU, Saand MA, Shu QY (2014) Cyclic nucleotidegated ion channel gene family in rice, identification, characterization and experimental analysis of expression response to plant
+hormones, biotic and abiotic stresses. BMC Genom 15(1):1–18
+Nomura H, Shiina T (2014) Calcium signaling in plant endosymbiotic organelles: mechanism and role in physiology. Mol Plant
+7:1094–1104
+Nomura H, Komori T, Uemura S, Kanda Y, Shimotani K, Nakai K,
+Furuichi T, Takebayashi K, Sugimoto T, Sano S et al (2013)
+Chloroplast-mediated activation of plant immune signalling in
+Arabidopsis. Nat Commun 3:926
+Parrington J, Tunn R (2014) ­Ca2+, signals, naadp and two-pore channels: role in cellular differentiation. Acta Physiol 211(2):285–296
+Peiter E (2011) The plant vacuole: emitter and receiver of calcium
+signals. Cell Calcium 50:120–128
+Peiter E, Maathuis FJM, Mills LN, Knight H, Pelloux J, Hetherington AM et al (2005) The vacuolar C
+­ a2+-activated channel
+TPC1 regulates germination and stomatal movement. Nature
+434(7031):404
+Petroutsos D, Busch A, Janssen I, Trompelt K, Bergner SV, Weinl
+S et al (2011) The chloroplast calcium sensor cas is required
+for photoacclimation in Chlamydomonas reinhardtii. Plant Cell
+23(8):2950
+Pickard BG, Ding JP (1993) The mechanosensory calcium-selective
+ion channel: key component of a plasmalemmal control centre.
+Aust J Plant Physiol 20:439–459
+Piñeros M, Tester M (1995) Characterization of a voltage-dependent
+­Ca2+-selective channel from wheat roots. Planta 195:478–488
+Piñeros M, Tester M (2011) Calcium inhibits dihydropyridine-stimulated increases in opening and unitary conductance of a plant
+­Ca2+ channel. J Membr Biol 240:13–20
+Ping Z, Yabe I, Muto S (1992) Identification of K+, Cl-, and C
+­ a2+
+channels in the vacuolar membrane of tobacco cell suspension
+cultures. Protoplasma 171:7–18
+Pottosin I, Schönknecht G (1996) Ion channel permeable for divalent
+and monovalent cations in native spinach thylakoid membranes.
+J Membr Biol 152:223–233
+Pottosin I, Schönknecht G (2007) Vacuolar calcium channels. J Exp
+Bot 58:1559–1569
+Pottosin I, Velarde-Buendía AM, Bose J, Fuglsang AT, Shabala S
+(2014) Polyamines cause plasma membrane depolarization,
+activate ­Ca2+, and modulate H
+­ +-ATPase pump activity in pea
+roots. J Exp Bot 65:2463–2472
+Qi Z, Verma R, Gehring C et al (2010) ­Ca2+ signaling by plant Arabidopsis thaliana Pep peptides depends on AtPepR1, a receptor
+with guanylylcyclase activity, and cGMP-activated C
+­ a2+ channels. Proc Natl Acad Sci USA 107:21193–21199
+Ranf S, Gisch N, Schäffer M, Illig T, Westphal L, Knirel YA et al
+(2015) A lectin s-domain receptor kinase mediates lipopolysaccharide sensing in arabidopsis thaliana. Nat Immunol
+16(4):426–433
+Roelfsema MR, Hedrich R, Geiger D (2012) Anion channels: master
+switches of stress responses. Trends Plant Sci 17:221–229
+Saand MA, Xu YP, Li W, Wang JP, Cai XZ (2015) Cyclic nucleotide
+gated channel gene family in tomato: genome-wide identification and functional analyses in disease resistance. Front Plant
+Sci 6(303):303
+
+Sandra FB, Marıa GV, Vanessa GR, Esther RL, Manuel P, Miguel R,
+Jose RG, Francisca L (2017) Two-pore channels (TPCs): novel
+voltage-gated ion channels with pleiotropic functions. Channels
+11(1):20–33
+Schönknecht G (2013) Calcium signals from the vacuole. Plants
+2:589–614
+Shih HW et al (2015) The cyclic nucleotide-gated channel CNGC14
+regulates root gravitropism in Arabidopsis thaliana. Curr Biol
+25:3119–3125
+Siegel RS, Xue SW, Murata Y, Yang YZ, Nishimura N, Wang A,
+Schroeder JI (2009) Calcium elevation-dependent and attenuated
+resting calcium-dependent abscisic acid induction of stomatal
+closure and abscisic acid-induced enhancement of calcium sensitivities of S-type anion and inward-rectifying ­K+ channels in
+Arabidopsis guard cells. Plant J 59:207–220
+Stael S, Wurzinger B, Mair A, Mehlmer N, Vothknecht UC, Teige M
+(2012) Plant organellar calcium signalling: an emerging field. J
+Exp Bot 63:1525–1542
+Steinhorst L, Kudla J (2013) Calcium and reactive oxygen species rule
+the waves of signaling. Plant Physiol 163:471–485
+Sunkar R, Kaplan B, Bouché N, Arazi T, Dolev D, Talke IN et al (2000)
+Expression of a truncated tobacco ntcbp4 channel in transgenic
+plants and disruption of the homologous arabidopsis cngc1 gene
+confer ­pb2+ tolerance. Plant J Cell Mol Biol 24(4):533–542
+Swarbreck SM, Colaço R, Davies JM (2013) Plant calcium-permeable
+channels. Plant Physiol 163:514–522
+Szalonek M, Sierpien B, Rymaszewski W, Gieczewska K, Garstka M,
+Lichocka M, Sass L, Paul K, Vass I, Vankova R et al (2015)
+Potato annexin STANN1 promotes drought tolerance and mitigates light stress in transgenic Solanum tuberosum L. plants.
+PLoS ONE 10:e0132683
+Teardo E, Carraretto L, Wagner S et al (2016) Physiological characterization of a plant mitochondrial calcium uniporter in vitro and
+in vivo. Plant Physiol 173(2):1355
+Thuleau P, Ward JM, Ranjeva R, Schroeder JI (1994) Voltage-dependent calcium-permeable channels in the plasma membrane of a
+higher plant cell. EMBO J 13:2970–2975
+Tuncozdemir M, Rato C, Brown E, Rogers S, Mooneyham A, Frietsch
+S et al. (2013). Cyclic nucleotide gated channels 7 and 8 are
+essential for male reproductive fertility. PLoS ONE 8(2):e55277
+Tune-Ozdemir M, Tang C, Ishka MR, Brown E, Groves NR, Myers
+CT, Rato C, Poulsen LR, McDowell S, Miller G et al (2013) A
+cyclic nucleotide-gated channel (CNGC16) in pollen is critical
+for stress tolerance in pollen reproductive development. Plant
+Physiol 161:1010–1020
+Venkatachalam K, Wong CO, Zhu MX (2015) The role of TRPMLs in
+endolysosomal trafficking and function. Cell Calcium 58:48–56
+Verret F, Wheeler G, Taylor AR, Farnham G, Brownlee C (2010) Calcium channels in photosynthetic eukaryotes: implications for
+evolution of calcium-based signalling. New Phytol 187(1):23–43
+Véry AA, Sentenac H (2002) Cation channels in the Arabidopsis
+plasma membrane. Trends Plant Sci 7:168–175
+Wang YJ, Yu JN, Chen T, Zhang ZG, Hao YJ, Zhang JS, Chen SY
+(2005) Functional analysis of a putative ­Ca2+ channel gene
+TaTPC1 from wheat. J Exp Bot 56:3051–3060
+Wang YF, Munemasa S, Nishimura N, Ren HM, Robert N, Han M,
+Puzõrjova I, Kollist H, Lee S, Mori I et al (2013) Identification of
+cyclic GMP-activated nonselective ­Ca2+-permeable cation channels and associated CNGC5 and CNGC6 genes in Arabidopsis
+guard cells. Plant Physiol 163:578–590
+Weiger TM, Hermann A (2014) Cell proliferation, potassium channels,
+polyamines and their interactions: a mini review. Amino Acids
+46(3):681–688
+White PJ (2009) Depolarization-activated calcium channels shape the
+calcium signatures induced by low-temperature stress. New Phytol 183:6–8
+
+Wilson ME, Jensen GS, Haswell ES (2011) Two mechanosensitive
+channel homologs influence division ring placement in arabidopsis chloroplasts. Plant Cell 23(1):2939–2949
+Yu Y, Li X, Sun J, Zhang X, Xu T, Zhang J et al (2016) Heat shock
+responses in populus euphratica, cell cultures: important role
+of crosstalk among hydrogen peroxide, calcium and potassium.
+Plant Cell Tissue Org Cult 125(2):215–230
+Yuen CCY, Christopher DA (2013) The group IV-A cyclic nucleotidegated channels, CNGC19 and CNGC20, localize to the vacuole
+membrane in Arabidopsis thaliana. AoB Plants 5:1–14
+
+Zhang G, Liu Y, Ni Y, Meng Z, Lu T, Li T (2014) Exogenous calcium
+alleviates low night temperature stress on the photosynthetic
+apparatus of tomato leaves. PLoS ONE 9:e97322
+Zhou L, Lan W, Jiang Y, Fang W, Luan S (2014) A calcium-dependent
+protein kinase interacts with and activates a calcium channel to
+regulate pollen tube growth. Mol Plant 7:369–376
+
+Reproduced with permission of copyright owner. Further reproduction
+prohibited without permission.

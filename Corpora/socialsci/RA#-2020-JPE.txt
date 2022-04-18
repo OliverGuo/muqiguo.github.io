@@ -1,0 +1,1258 @@
+Economic uncertainty before and during the COVID-19 pandemic
+Dave Altig a
+
+, Scott Baker b
+
+, Jose Maria Barrero c
+
+, Nicholas Bloom d,
+
+⁎, Philip Bunn e
+
+, Scarlet Chen d
+
+, Steven J. Davis f
+,
+
+Julia Leather g
+
+, Brent Meyer a
+
+, Emil Mihaylov a
+
+, Paul Mizen g
+
+, Nicholas Parker a
+
+, Thomas Renault h
+,
+
+Pawel Smietanka e
+
+, Gregory Thwaites g
+a Atlanta Federal Reserve Bank, United States of America
+b Northwestern University, United States of America
+c Instituto Tecnológico Autónomo de México, Mexico
+d Stanford University, United States of America
+e Bank of England, United Kingdom of Great Britain and Northern Ireland
+f University of Chicago, United States of America
+g University of Nottingham, United Kingdom of Great Britain and Northern Ireland
+h University of Paris 1, France
+article info abstract
+Article history:
+Received 7 June 2020
+Received in revised form 25 August 2020
+Accepted 26 August 2020
+Available online 9 September 2020
+Keywords:
+Forward-looking uncertainty measures
+Volatility
+COVID-19
+Coronavirus
+JEL classifications:
+D80
+E22
+E66
+G18
+L50
+
+We consider several economic uncertainty indicators for the US and UK before and during the COVID-19 pan-
+demic: implied stock market volatility, newspaper-based policy uncertainty, Twitter chatter about economic un-
+certainty, subjective uncertainty about business growth, forecaster disagreement about future GDP growth, and a
+
+model-based measure of macro uncertainty. Four results emerge. First, all indicators show huge uncertainty
+jumps in reaction to the pandemic and its economic fallout. Indeed, most indicators reach their highest values
+on record. Second, peak amplitudes differ greatly – from a 35% rise for the model-based measure of US economic
+uncertainty (relative to January 2020) to a 20-fold rise in forecaster disagreement about UK growth. Third, time
+paths also differ: Implied volatility rose rapidly from late February, peaked in mid-March, and fell back by late
+March as stock prices began to recover. In contrast, broader measures of uncertainty peaked later and then
+
+plateaued, as job losses mounted, highlighting differences between Wall Street and Main Street uncertainty mea-
+sures. Fourth, in Cholesky-identified VAR models fit to monthly U.S. data, a COVID-size uncertainty shock fore-
+shadows peak drops in industrial production of 12–19%.
+
+Crown Copyright © 2020 Published by Elsevier B.V. All rights reserved.
+
+1. Introduction
+
+Fed Chairman Jerome Powell aptly summarized the level of uncer-
+tainty in his May 21st speech, noting “We are now experiencing a whole
+
+new level of uncertainty, as questions only the virus can answer complicate
+
+the outlook.” Indeed, there is massive uncertainty about almost every as-
+pect of the COVID-19 crisis, including the infectiousness and lethality of
+
+the virus; the time needed to develop and deploy vaccines; whether a sec-
+ond wave of the pandemic will emerge; the duration and effectiveness of
+
+social distancing; the near-term economic impact of the pandemic and
+
+policy responses; the speed of economic recovery as the pandemic re-
+cedes; whether “temporary” government interventions will become per-
+manent; the extent to which pandemic-induced shifts in consumer
+
+spending patterns, business travel, and working from home will persist;
+and the impact on business formation and research and development.1
+
+Journal of Public Economics 191 (2020) 104274
+
+⁎ Corresponding author.
+E-mail addresses: dave.altig@atl.frb.org (D. Altig), s-baker@kellogg.northwestern.edu
+(S. Baker), jose.barrero@itam.mx (J.M. Barrero), nbloom@stanford.edu (N. Bloom),
+philip.bunn@bankofengland.co.uk (P. Bunn), sijiac@stanford.edu (S. Chen),
+Steven.Davis@chicagobooth.edu (S.J. Davis), Julia.Leather@nottingham.ac.uk (J. Leather),
+Brent.Meyer@atl.frb.org (B. Meyer), emil.mihaylov@atl.frb.org (E. Mihaylov),
+Paul.Mizen@nottingham.ac.uk (P. Mizen), nicholas.parker@atl.frb.org (N. Parker),
+Thomas.Renault@univ-paris1.fr (T. Renault), pawel.smietanka@bankofengland.co.uk
+(P. Smietanka), gregory.thwaites@nottingham.ac.uk (G. Thwaites).
+
+1 On uncertainty about key parameters in epidemiological models of Covid-19 transmis-
+sion and mortality, see Atkeson (2020a), Bendavid and Bhattacharya (2020), Dewatripont
+
+et al. (2020), Fauci et al. (2020), Li et al. (2020), Linton et al. (2020), and Vogel (2020). On
+
+what key parameter values imply in standard epidemiological models and extensions that in-
+corporate behavioral responses to the disease and various testing, social distancing, and quar-
+antine regimes, seeAnderson et al. (2020),Atkeson (2020b), Berger, Herkenhoff and Mongey
+
+(2020), Eichenbaum et al. (2020), Ferguson et al. (2020), and Stock (2020a). On the potential
+for vigorous antigen and antibody testing to shift the course of the pandemic, see Romer and
+Shah (2020) and Stock (2020b). On stock market effects, see Alfaro et al. (2020), Baker et al.
+
+(2020b) and Toda (2020). On complexities arising from highly uneven supply-side disrup-
+tions caused by a major pandemic, see Guerreri et al. (2020). On the post-pandemic shift
+
+to working from home, see Altig et al., (2020a). On potential medium- and long-term macro-
+economic consequences, see Barrero et al. (2020), Barro et al. (2020) and Jorda et al. (2020).
+
+https://doi.org/10.1016/j.jpubeco.2020.104274
+0047-2727/Crown Copyright © 2020 Published by Elsevier B.V. All rights reserved.
+
+Contents lists available at ScienceDirect
+Journal of Public Economics
+journal homepage: www.elsevier.com/locate/jpube
+
+In this light, we examine several measures of economic uncertainty before
+and during the COVID-19 pandemic. Our focus is on uncertainty measures
+available in near real-time or with modest delays. We adopt this focus for
+three reasons. First, many macro indicators become available with lags of
+months or quarters, which limits their usefulness in producing real-time
+uncertainty measures. Second, uncertainty measures have different
+strengths and weaknesses. For example, measures derived from models
+
+fit to standard macro data have the upside of being linked to a well-
+defined concept of uncertainty, but the downside of being based on the
+
+premise that past statistical relationships and their interpretation continue
+to hold in the wake of sudden, novel developments. In reverse, newspaper
+
+measures of uncertainty do not correspond to a precise model, but are for-
+ward looking and available on a real-time basis. Third, when a large, novel
+
+shock hits with great suddenness, it is especially vital for real-time fore-
+casting purposes and for policy formulation to work with measures that
+
+capture the uncertainties that economic agents actually perceive. Many
+of the forward-looking uncertainty measures we consider can potentially
+meet that test in a way that other measures cannot.
+2. The extraordinary economic fallout of the COVID-19 pandemic
+
+To appreciate the tremendous speed with which the COVID-19 eco-
+nomic crisis unfolded and the magnitude of the shock, consider some
+
+observations for the United States. New claims for unemployment ben-
+efits in the early part of 2020 ranged from 200,000–280,000 per week.
+
+Relative to covered employment, these figures correspond to the
+slowest pace of new claims in the history of the series back to 1971.
+Over the ensuing twelve weeks 40 million Americans filed new claims,
+an astonishing surge without precedent in US history.2 As measured in
+
+the Current Population Survey, unemployment rose from 3.5% in Febru-
+ary 2020 – its lowest rate in over 60 years – to 14.7% in April, the highest
+
+rate in 80 years.3 US GDP fell 11.2% from 2019Q4 to 2020Q2, the largest
+
+drop since the Great Depression. A similar story of sharply contracting
+output emerged in the UK, with GDP falling a record 20.4% in April–
+June after a fall of 2.2% in January–March. In sum, the speed and scale
+
+of the COVID-19 contraction dwarfs that of any previous US or UK epi-
+sode in the modern era.
+
+Another set of observations further underscores the lack of close his-
+toric parallels to the economic impact of COVID-19. Barro et al. (2020)
+
+estimate that the Spanish Flu pandemic a century ago killed about 40
+million people worldwide, or about 2.1% of the world's population.
+Worldwide deaths attributed to COVID-19 as of 18 August 2020 are
+about 766,000 on a global population base of 7.7 billon, yielding a global
+mortality rate of about 0.01%.4 Although the ultimate death toll will
+surely be substantially higher, the size of the COVID-19 mortality
+shock is likely to remain at least an order of magnitude smaller than
+the one associated with the Spanish Flu. Seen in this light, the economic
+toll of COVID-19 is anomalous.
+In terms of mortality, the COVID-19 pandemic is much closer to
+
+more recent influenza pandemics. The US Center for Disease Control es-
+timates that the 1957–58 and 1968 influenza pandemics caused
+
+116,000 and 100,000 excess deaths in the United States.5 Scaling by
+population yields excess mortality rates of 0.067% in 1957–58 and
+0.050% in 1968. As of 10 July 2020, US excess mortality during the
+COVID-19 pandemic is (175,700/326.69 million) = 0.054%.6 It was an
+estimated 0.52% during the Spanish Flu (Barro et al., 2020, Table 1).
+Thus, the COVID-19 impact on excess mortality in the US is similar to
+
+that of influenza pandemics in 1957–58 and 1968 and an order of mag-
+nitude smaller than that of the Spanish Flu. Yet, as Ferguson, 2020un-
+derscores, the 1957–58 pandemic imparted a mild impact on
+
+2 The unemployment claims data are available at https://oui.doleta.gov/unemploy/
+
+claims_arch.asp.The figures cited in the text are seasonally adjusted. 3 As noted in the April 2020 BLS Employment Situation Report, an unusually large num-
+ber of persons classified as “employed but absent from work” during the reference week
+
+(April 12–18) for the household survey. As discussed in the FAQs at https://www.bls.
+gov/cps/employment-situation-covid19-faq-april-2020.pdf, it appears that many of the
+“employed but absent from work” were, in fact, on temporary layoff. Adding these to
+the 14.7% official unemployment rate for April 2020 yields and unemployment rate of
+19.5% according to the BLS.
+
+4 The global COVID-19 mortality figure is from www.ft.com/content/a2901ce8-5eb7-
+
+4633-b89c-cbdf5b386938, accessed 18 August 2020. Epidemiologists typically prefer ex-
+cess mortality data, because they are more encompassing and less susceptible to
+
+underreporting. However, they are available for fewer countries. We use excess mortality
+data when discussing outcomes in the United Kingdom and the United States.
+5 See www.cdc.gov/flu/pandemic-resources/1957-1958-pandemic.html and www.cdc.
+
+gov/flu/pandemic-resources/1968-pandemic.html. Glezen (1996) reports similar esti-
+mates for excess mortality in the 1957–58 and 1968 pandemics and discusses the concept
+
+of excess mortality.
+6 Based on World Bank population data and excess mortality data at www.economist.
+com/graphic-detail/2020/07/15/tracking-covid-19-excess-deaths-across-countries,
+accessed 18 August 2020.
+
+Table 1
+Measures of uncertainty for the COVID-19 crisis.
+Measure Value in
+January
+2020
+% Jump Jan 2020
+to Peak
+
+Date of COVID-19
+peak value
+
+Source
+
+VIX 1-Month implied
+volatility, US
+
+13.3 497 March 16 www.cboe.com/vix
+
+VIX 24-Month implied
+volatility, US
+
+16.2 108 March 18 Dew-Becker and Giglio (2020)
+
+News Economic Policy
+Uncertainty, US
+
+110.1 683 May 26 www.economicuncertainty.com
+
+Twitter Economic
+Uncertainty, US
+
+139.8 594 April 22–28 Baker, Bloom et al. (2020)
+
+Firm Subjective Sales
+Uncertainty, US
+
+2.7 154 April 2020 www.frbatlanta.org/research/surveys/business-uncertainty
+
+Firm Subjective Sales
+Uncertainty, UK
+
+4.3 91 April 2020 www.decisionmakerpanel.com
+
+Macro Forecaster
+disagreement, US
+
+0.3 755 2020q2 www.philadelphiafed.
+
+org/research-and-data/real-time-center/survey-of-professional-forecasters/data-files/rgdp
+
+Macro Forecaster
+disagreement, UK
+
+0.5 1960 2020q2 www.bankofengland.co.
+
+uk/report/2020/monetary-policy-report-financial-stability-report-may-2020
+
+Model-Based Macro
+Uncertainty
+
+0.8 36 March 2020 https://www.sydneyludvigson.com/macro-and-financial-uncertainty-indexes
+Notes: The VIX is the implied volatility (over the next month and over the next 24 months) on the S&P500 index from the Chicago Board of Options Exchange. Economic Policy Uncertainty
+index values constructed from the daily data as described in Baker et al. (2016). Subjective sales growth uncertainty is the activity-weighted average of the standard deviation of each firm's
+
+subjective forecast distribution over its own future sales growth rate from the current quarter to four quarters hence. See Altig et al., 2020b). US data are form the Survey of Business Un-
+certainty, UK data are from the Decision Maker Panel Survey. Forecast disagreement is measured as the standard deviation across forecasters of one-year-ahead annual real GDP growth
+
+rate forecasts. US data are from the Survey of Professional Forecasters conducted by the Philadelphia Fed. UK data are from the Survey of External Forecasters conducted by the Bank of
+England. Model-Based Macro Uncertainty constructed from hundreds of time series, as described in Jurado et al. (2015).
+D. Altig, S. Baker, J.M. Barrero et al. Journal of Public Economics 191 (2020) 104274
+
+2
+
+aggregate economic activity. Similarly, US employment and output
+grew at a healthy pace in 1968, showing no visible effect of the influenza
+pandemic. These influenza pandemics offer a startling contrast to the
+enormous economic contraction triggered by COVID-19.7
+To summarize, the economic response to the COVID-19 pandemic is
+
+unprecedented in at least two respects: First, the suddenness and enor-
+mity of the economic shock, most visibly in massive job losses and, sec-
+ond, the severity of the economic contraction relative to the size of the
+
+mortality shock. There is no close historic parallel to the COVID-19 con-
+traction, which underscores the need for forward-looking measures of
+
+uncertainty. The unprecedented nature of the COVID-19 economic crisis
+also provides some insight into why uncertainty has skyrocketed in its
+wake.
+3. Uncertainty measures
+We now consider several uncertainty measures, with a focus on
+forward-looking measures.
+3.1. Stock market volatility
+Examples include the 1-month and 24-month VIX, which quantify
+the option-implied volatility of returns on the S&P 500 index over
+
+their respective horizons. The 1-month VIX rose from about 15 in Janu-
+ary 2020 to a peak daily value of 82.7 on 16 March before falling below
+
+30 by early May. The second-highest daily value in the history of the 1-
+month VIX, which dates back to 1990, was 80.9 on 27 October 2008.
+Fig. 1 plots the evolution of weekly-average values for the 1-month
+and 24-month VIX. The two series behave similarly in 2020, although
+the amplitude of the peak upward fluctuation is considerably smaller
+for the 24-month VIX. To push further back in time, one can calculate
+
+the realized volatility of daily market returns using short look-back win-
+dows that quickly capture abrupt changes in economic circumstances.
+
+Baker et al. (2020a) take this approach. They find five great realized
+
+return volatility episodes. Ordered by peak volatility, they are October
+1987, the stock market crash of 1929, the coronavirus pandemic in
+March 2020, March 1933 near the trough of the Great Depression, and
+December 2008 during the Global Financial Crisis.
+3.2. Newspaper-based uncertainty measures
+Examples include the Economic Policy Uncertainty Indices of Baker
+et al. (2016).
+8 The daily version of this index reflects the frequency of
+newspaper articles with one or more terms about “economics,” “policy”
+and “uncertainty” in roughly 2000 US newspapers. It is normalized to
+
+100 from 1985 to 2010, so values above 100 reflect higher-than-
+average uncertainty. Fig. 2 plots weekly averages of the daily EPU,
+
+which surges from around 100 in January 2020 to over 500 in March
+and April 2020, reaching its the highest values on record. The monthly
+
+US EPU index based on a balanced panel of major US newspapers dis-
+plays a similar pattern and also reaches its highest values on record in
+
+March, April and May 2020.9
+Newspaper-based measures of uncertainty are forward looking in
+that they reflect the real-time uncertainty perceived and expressed by
+journalists. They stretch back to 1900 for the United States and are
+now available for dozens of countries at www.policyuncertainty.com.
+They also offer a ready ability to drill down into the sources of economic
+
+uncertainty and its movements over time, as contemporaneously per-
+ceived. For example, over 90% of newspaper articles about economic
+
+policy uncertainty in March 2020 mention “COVID,” “Coronavirus,”
+“pandemic” or other term related to infectious diseases.
+
+Baker et al. (2019) develop a newspaper-based Equity Market Vola-
+tility (EMV) tracker that closely mirrors movements in the VIX. Their
+
+index lends itself to a quantitative exploration of news developments
+
+that drive stock market volatility, again as contemporaneously per-
+ceived by journalists. Applying their approach to infectious diseases,
+
+they find that COVID-19 is the dominant topic in newspaper articles
+
+7 The main text focuses on the US experience, but COVID-19 mortality rates differ
+greatly among advanced countries. In the United Kingdom, one of the worst-hit countries,
+
+excess mortality during the COVID-18 pandemic (as of 23 July 2020) is 0.096% of the pop-
+ulation, about ten times greater than in Germany.
+
+Fig. 1. VIX, implied stock returns volatility, Weekly Since 2000. Notes: Weekly implied volatility over the next month on the S&P500 index from the Chicago Board of Options Exchange,
+expressed in annualized units. We plot data from 3 January 2000 to 4 August 2020 (18 May 2020 for VIX 24 M). Values downloaded from https://fred.stlouisfed.org/series/VIXCLS. Weekly
+implied volatility over the next 24 months downloaded from Wharton Research Data Services. Latest data kindly provided by Ian L. Dew-Backer.
+
+8 Available at www.policyuncertainty.com. See, also, the World Uncertainty Index of
+Ahir et al. (2019) at www.worlduncertaintyindex.com, which uses Economist Intelligence
+Unit reports instead of newspapers.
+9 The monthly EPU index is available at http://www.policyuncertainty.com/us_
+monthly.html.
+
+D. Altig, S. Baker, J.M. Barrero et al. Journal of Public Economics 191 (2020) 104274
+
+3
+
+about stock market volatility since the last week in February. In compar-
+ison, Ebola, SARS, H1N1 and other infectious disease outbreaks since
+
+1985 made only minor contributions to stock market volatility.
+3.3. Twitter-based economic uncertainty
+To construct a Twitter-based economic uncertainty index (TEU), we
+
+scrape all tweets worldwide that contain both “economic” and “uncer-
+tainty” (including variants of each) from January 2010.10 We then com-
+pute weekly EU tweet frequency, which we plot in Fig. 2 alongside the
+
+weekly newspaper-based EPU index. The two series behave similarly
+around the COVID-19 crisis.
+3.4. Subjective uncertainty measures computed from business expectation
+surveys
+
+Examples include the US monthly panel Survey of Business Uncer-
+tainty (SBU) and the UK monthly Decision Maker Panel (DMP).11
+
+These panel surveys recruit participants by phone from databases that
+cover nearly all public and private companies with employees (about
+
+7 million in the US and about 1 million in the UK, although we only re-
+cruit firms with a minimum size of 10 employees, which vastly reduces
+
+the number of firms available to survey). The SBU has around 400 re-
+spondents per month, and the DMP has around 3000. Core survey ques-
+tions elicit five-point probability distributions (mass points and
+
+associated probabilities) over each firm's own future sales growth
+
+rates at a one-year look-ahead horizon. By calculating each firm's sub-
+jective standard deviation about its own future growth rate forecast in
+
+a given month, and aggregating over firms in that month, we obtain
+an aggregate measure of subjective uncertainty about future sales
+growth rates.
+Fig. 3 plots these survey-based time-series measures of sales growth
+rate uncertainty for the United States and the United Kingdom. These
+measures show pronounced increases in uncertainty in March and
+April 2020, before falling back slightly in May. But all three months are
+
+well above any previous peaks in their (short) histories. See Altig et al.
+(2020b) for evidence that firm-level growth expectations in the SBU
+
+are highly predictive of realized growth rates, and that firm-level sub-
+jective uncertainty predicts the magnitudes of future forecast errors
+
+and future forecast revisions.
+Fig. 4 draws on data from the UK Decision Maker Panel to depict how
+COVID-induced uncertainty rose rapidly in March 2020. Specifically, we
+exploit the large DMP sample to split the survey response periods and
+subdivide the monthly data. The percentage of firms reporting that
+COVID is “their single largest source of uncertainty” rose from about
+25% at the beginning of March to almost 90% by early April, and then
+
+slowly fell back to about 50% by late July. So, COVID became the over-
+whelmingly dominant source of uncertainty for UK firms within a pe-
+riod of less than four weeks. This is particularly striking given the
+
+ongoing Brexit process in the UK, which is itself a major source of uncer-
+tainty for firms Bloom et al., 2019. This pattern of a rapid spike in pan-
+demic uncertainty in March in the UK aligns well with the US-
+oriented evidence in Section 2 that the COVID-19 crisis unfolded with
+
+extraordinary speed.
+These business expectation surveys are valuable for measuring what
+firms actually perceive in real time. They yield actionable data within 5
+to 20 days of when the survey first goes to field. Their main downside is
+the substantial cost of building the sample and fielding the survey each
+month, and the need to accumulate data for comparisons over time.
+Once in place, however, these surveys are highly flexible and allow for
+rapid deployment of special questions that target current developments
+
+and policy issues. They also allow analysis of uncertainty by region, in-
+dustry, firm size and age, and growth rates. As an illustration,
+
+Appendix Figs. A1 and A2 report UK and US subjective uncertainty
+data broken down by firm size and broad sector.
+3.5. Forecaster disagreement
+Fig. 5 compares US and UK disagreement among professional
+forecasters about one-year-ahead GDP growth rate forecasts. The
+US data are from the Survey of Professional Forecasters (SPF),12
+
+10 See Baker et al. (2020c) for details. 11 At www.frbatlanta.org/research/surveys/business-uncertainty and http://
+decisionmakerpanel.com/
+
+12 See https://www.philadelphiafed.org/research-and-data/real-time-center/survey-of-
+professional-forecasters.
+
+Fig. 2. U.S. Economic Policy Uncertainty Index and Twitter Economic Uncertainty Index, Weekly Since 2000. Notes: Weekly values for EPU and Twitter EU using data downloaded from
+www.policyuncertainty.com/. See Baker et al. (2016) and Baker, Bloom et al. (2020) for details of index construction. We plot data from 1 January 2000 to 4 August 2020 (2 August for
+Twitter EU).
+D. Altig, S. Baker, J.M. Barrero et al. Journal of Public Economics 191 (2020) 104274
+
+4
+
+while the UK data are from the Survey of External Forecasters
+(SEF). There is a long history of using such disagreement measures
+to proxy for uncertainty, and also a long history of disagreement
+about their suitability for that purpose. Our view is that at least
+for real variables like GDP growth, high levels of disagreement
+are reasonable proxies for high levels of economic uncertainty. To
+quantify disagreement, we calculate the standard deviation of
+
+GDP growth rate forecasts across forecasters. There are, on aver-
+age, 41 forecasters per survey response period in the US and 23
+
+in the UK.
+
+As seen in Fig. 5, the COVID-19 pandemic triggered historically high
+levels of disagreement in the growth rate forecasts. US disagreement
+rose from a standard deviation 0.32 percentage points in 2020Q1 to
+2.74 in 2020Q2, a rise of nearly 8-fold. UK forecast disagreement rose
+from 0.49 percentage points to 10.1, an astounding 20-fold increase.
+3.6. Model-based macro uncertainty
+Fig. 6 plots the macro uncertainty measure of Jurado et al. (2015).
+They estimate their measure using a time-series statistical model that
+Fig. 3. Firm-Level Subjective Sales Uncertainty, Monthly from 2017. Notes: Subjective uncertainty about the growth rate of sales at a four-quarter look-ahead horizon. US data form the
+Survey of Business Uncertainty at www.frbatlanta.org/research/surveys/business-uncertainty (Altig et al., 2020c). UK data from the Decision Maker Panel Survey at www.
+decisionmakerpanel.com.
+
+% firms reporting Covid-19 as their top source of uncertainty
+
+Fig. 4. COVID-Induced Uncertainty Rose Rapidly in March 2020% firms reporting Covid-19 as their top source of uncertainty. Notes: Decision Maker Panel Survey (www.
+decisionmakerpanel.com) conducted by the Bank of England, Nottingham University and Stanford University and described in Baker et al. (2019).
+D. Altig, S. Baker, J.M. Barrero et al. Journal of Public Economics 191 (2020) 104274
+
+5
+
+incorporates more than a hundred macroeconomic, sectoral and finan-
+cial indicators.13 They adopt an iterative process to estimate innovations
+
+in these indicators and use them to construct an overall, or macro, indi-
+cator of the future variance (uncertainty) of these innovations. The JLN
+
+Macro Uncertainty measure reaches an all-time high in March 2020, ris-
+ing by 35% over its pre-pandemic January 2020 value. This pandemic
+
+peak slightly eclipses its previous peak in 2008.
+4. Comparing the uncertainty measures
+
+Armed with these uncertainty measures, we turn now to three ques-
+tions: How much did uncertainty rise in the wake of the COVID
+
+13 These include real output and income, employment and hours, real retail, manufactur-
+ing and trade sales, consumer spending, housing starts, inventories and inventory sales ra-
+tios, orders and unfilled orders, compensation and labor costs, capacity utilization
+
+measures, price indexes, bond and stock market indexes, and foreign exchange measures.
+Fig. 5. Cross-sectional dispersion of GDP growth forecasts. Notes: Chart shows standard deviation of one-year-ahead annual real GDP growth forecasts. US data are from the Survey of
+Professional Forecasters conducted by the Philadelphia Fed (www.philadelphiafed.org/research-and-data/real-time-center/survey-of-professional-forecasters). The deadline for
+submitting responses to the SPF survey is usually in the first half of February, May, August, and November (see www.philadelphiafed.org/-/media/research-and-data/real-time-center/
+survey-of-professional-forecasters/spf-release-dates.txt). The submission deadline for the latest survey was 12 May 2020. UK data are from the Survey of External Forecasters
+conducted by the Bank of England (www.bankofengland.co.uk/monetary-policy-report/2020/january-2020/other-forecasters-expectations). The SEF is in the field for two weeks one
+month ahead of the Bank of England's publication of the Monetary Policy Report. This is usually the second half of January, April, July, and October. The latest SEF survey ended on 24
+April 2020.
+
+Fig. 6. Model-based macro uncertainty. Notes: One-month-ahead macro uncertainty for 1960:07–2020:04, as computed by Jurado et al. (2015) and available at www.sydneyludvigson.
+com/macro-and-financial-uncertainty-indexes.
+D. Altig, S. Baker, J.M. Barrero et al. Journal of Public Economics 191 (2020) 104274
+
+6
+
+pandemic? When did it peak? How much, if it all, has it fallen since the
+peak?
+Table 1 summarizes our answers: First, every uncertainty measure
+we consider rose sharply in the wake of the COVID-19 pandemic.
+Most measures reached all-time peaks. The exceptions are the 24-
+month VIX, which peaked during the Global Financial Crisis, and the
+US GDP forecast disagreement measure, which peaked in the 1970s.
+Second, there is huge variation in the magnitude of the increase.
+
+Subjective uncertainty over sales growth rates at a one-year forecast ho-
+rizon roughly doubles, as does the 24-month VIX. In contrast, disagree-
+ment among professional forecasters about real GDP growth over the
+
+next year rises roughly 8-fold for the United States and 20-fold for the
+United Kingdom. The much greater rise in forecaster-based measures
+
+of macro uncertainty, as compared to the rise in average firm-level un-
+certainty, reflects the nature of the COVID-19 shock. It is a huge com-
+mon shock that hit all firms. Normally, even in recessions, common
+
+shocks are modest in size, and firm-level uncertainty is mainly driven
+by idiosyncratic shocks that are largely diversified away at the aggregate
+level. Thus, the pre-pandemic level of background risk is much greater
+at the firm level than at the aggregate level.14 Against this backdrop, a
+big jump in a common source of uncertainty triggers a larger percentage
+increase in macro uncertainty.
+The 1-month VIX, the newspaper-based EPU index, and the Twitter
+EU index also show large upward spikes (in percentage terms) in the
+wake of the COVID-19 shock. The 1-month VIX focuses on the near
+term by construction, and the text-based measures are also likely to
+give more attention to near-term sources of uncertainty rather than
+distant-future uncertainty. In addition, the text-based measures reflect
+a mix of macro and micro uncertainty, probably with a larger weight
+on the former.
+Third, the time profiles of uncertainty responses to the COVID-19
+shock differ across the various measures. Fig. 7 offers a close-up look
+at the recent behavior of several uncertainty measures that we can
+track at sub-monthly intervals. It includes a Likert-based measure for
+
+the UK derived from responses to the following DMP question: “How
+would you rate the overall level of uncertainty facing your business at
+the moment?” Response options are “Very high – very hard to forecast
+future sales,” “High – hard to forecast future sales,” “Medium – future
+
+sales can be approximately forecasted,” “Low – future sales can be accu-
+rately forecasted,” and “Very low – future sales can be very accurately
+
+forecasted.” For this measure, we display the percentage of firms that
+report high or very high uncertainty.
+
+Fig. 7 shows that the stock market volatility measures peak in mid-
+March and then fall back to close to their pre-COVID levels by August.
+
+In contrast, the real-side uncertainty measures peak later – or continue
+
+to remain extremely high through late June in the case of subjective un-
+certainty and through late July for economic policy uncertainty.15 This
+
+contrast highlights the Wall Street/Main Street distinction that is also
+apparent in first-moment outcomes. The S&P 500 index bottomed out
+on 23 March 2020, having dropped 34% from its level on 19 February.
+Since then, the market has risen sharply, recovering three-quarters of
+
+its losses by the end of May and all of its losses and reaching new all-
+time highs by mid-August.
+
+5. Vector autoregressive models of the impact of uncertainty
+
+We now fit vector autoregressive models (VARs) to estimate the re-
+lationship of output and employment to uncertainty in US data. Draw-
+ing causal inferences from VARs is challenging – in part because
+
+policy, and policy uncertainty, can respond to current and anticipated
+future economic conditions. Despite the challenges, VARs are useful
+for characterizing dynamic relationships. At a minimum, they let us
+
+gauge whether uncertainty innovations foreshadow weaker macroeco-
+nomic performance conditional on standard macro and policy variables.
+
+Given the rapid shifts in economic activity as the COVID-19 pan-
+demic unfolded, we estimate our VAR systems on monthly data and
+
+use industrial production as our output measure (since GDP data are
+quarterly). We consider, in turn, four alternative uncertainty measures
+for which long time series are available. We adopt a Cholesky
+
+14 The smaller percentage rise in subjective uncertainty about firm-level growth rates in
+the United Kingdom, as compared to the United States, also makes sense. U.K. firms were
+already contending with Brexit-related uncertainty before the pandemic struck.
+Fig. 7. High frequency measures of uncertainty during 2020. Notes: Decision Maker Panel Survey conducted by the Bank of England, Nottingham University and Stanford University and
+Baker et al. (2019) and www.decisionmakerpanel.com. Values linearly interpolated when the DMP survey was not in the field. Values of the Likert Uncertainty measure were extrapolated
+using information about firms' sales expectations and uncertainty for the first five weeks. VIX-24 M, Likert Uncertainty, and Sales Subjective Uncertainty's axes are hidden.
+
+15 This pattern is broadly consistent with the Covid-related risk measure extracted from
+quarterly earnings conference calls in Hassan et al. (2020)
+
+D. Altig, S. Baker, J.M. Barrero et al. Journal of Public Economics 191 (2020) 104274
+
+7
+
+decomposition with the following ordering: an uncertainty measure,
+the log of the S&P 500 index, the federal funds rate, log manufacturing
+employment, and log industrial production. This specification follows
+Baker et al. (2016). Our baseline VAR specification includes three lags
+of all variables. See the Appendix for additional details about the VAR
+specification and our sources of data.
+Fig. 8 displays (in red) the model-implied responses of industrial
+production to a COVID-size uncertainty innovation, which we equate
+to the uncertainty rise from January 2020 to its COVID-19 peak. For
+comparison we include (in blue) the model-implied responses to a
+2008/09-size increase in uncertainty, which we equate to the difference
+between the January 2020 value and the peak uncertainty value in
+2008/09. As seen in the upper right panel, a COVID-size innovation in
+the model-based uncertainty measure of JLN foreshadows an estimated
+
+12% fall in industrial production. This response magnitude is very simi-
+lar to the drop implied by a 2008/09-size uncertainty shock, because the
+
+two episodes involve very similar increases in this uncertainty measure.
+
+In the lower left panel, a COVID-size innovation in the forecaster dis-
+agreement measure of uncertainty foreshadows an estimated 19% fall
+
+in industrial production. This response magnitude is about four times
+as large as the drop implied by a 2008/09-size uncertainty shock
+based on forecaster disagreement. Using the VIX as the uncertainty
+
+measure yields results similar to those of the JLN measure. Using eco-
+nomic policy uncertainty yields results more similar to the disagree-
+ment measure, but with an earlier peak response and a faster bounce
+
+back.
+
+All of these VAR specifications predict a very sharp, but rather short-
+lived reduction in industrial production in reaction to the COVID
+
+uncertainty shock. The speed, size and rapid bounce back of industrial
+
+production predicted by the VARs is broadly in line with actual experi-
+ence. US industrial production fell 17% between February and April
+
+2020 and then recovered half its losses by July. This dynamic response
+path is most similar to the one shown for economic policy uncertainty
+in the lower right panel of Fig. 8.
+
+The appendix contains three additional sets of VAR results. First, em-
+ployment responses to uncertainty shocks are similar to those for indus-
+trial production, but somewhat smaller (Figure A3). Second, when we
+
+fit the VAR models to a sample that ends in December 2019, we obtain
+smaller peak response magnitudes for industrial production, except for
+
+the VIX measure (Figure A4). Ending the sample in 2019 has little im-
+pact on the shape of the impulse response functions. Third, when we re-
+verse the ordering in the VAR systems, placing the uncertainty measure
+
+last in the Cholesky ordering, we find very similar results to the ones
+displayed in Fig. 8 (Figure A5).
+6. Concluding remarks
+We have examined a variety of economic uncertainty measures.
+Four results emerge. First, all measures show huge uncertainty jumps
+
+in reaction to the pandemic and its economic fallout. Indeed, most indi-
+cators reach their highest values on record. Second, peak amplitudes dif-
+fer greatly. For example, two-year implied volatility on the S&P 500
+
+stock market index and subjective uncertainty about UK sales growth
+rates rose by around 100% (relative to January 2020), while forecaster
+disagreement about UK GDP growth rates rose 20-fold. Third, time
+paths also differ: Implied stock market volatility rose rapidly from late
+Model Based Macro Uncertainty (JLN)
+
+US GDP Forecast Disagreement News Economic Policy Uncertainty (BBD)
+VIX Stock Market Implied Volatility
+
+Fig. 8. Impact of uncertainty on US output. Note: The charts show VAR-estimated impulse response functions for industrial production to four uncertainty innovations equal to the increase
+from January 2020 to their 2020 peaks (red lines), with 90% confidence bands, or to their 2008/09 peak (blue lines). We detrend following Hamilton (with p = 36, h = 12) and include
+three lags of each variable. We identify innovations using a Cholesky ordering as follows: uncertainty, log(S&P 500 index), effective federal reserve funds rate, log(manufacturing
+employment), and log(industrial production). We fit models to monthly data from October 1966 to June 2020 (VIX), October 1966 to April 2020 (macro uncertainty), August 1974 to
+May 2020 (forecaster disagreement), and April 1989 to June 2020 (economic policy uncertainty).
+D. Altig, S. Baker, J.M. Barrero et al. Journal of Public Economics 191 (2020) 104274
+
+8
+
+February, peaked in mid-March, and fell back by late March as stock
+prices partly recovered. In contrast, broader measures peaked later, as
+
+job losses continued to mount. Broader measures plateaued or contin-
+ued rising after March. Fourth, in Cholesky-identified VAR models fit
+
+to monthly U.S. data, we find that a COVID-size uncertainty shock fore-
+shadows peak drops in US industrial production of 12–19%, depending
+
+on the uncertainty measures used. All VAR specifications we consider
+imply abrupt, short-lived contractions in industrial production and a
+rapid bounce back, in line with US experience through July 2020.
+We also marshalled evidence that the COVID-19 pandemic and its
+economic fallout lack close historic parallels in at least two respects:
+
+First, the suddenness and enormity of the massive job losses and, sec-
+ond, the severity of the economic contraction relative to the size of the
+
+mortality shock. The unprecedented scale and nature of the COVID-19
+crisis helps explain why it has generated such an extraordinary surge
+in economic uncertainty.
+It remains to be seen which uncertainty measures will prove most
+useful in explaining economic developments during and after the
+COVID-19 pandemic. Our prior is that several, and perhaps all, of these
+measures will prove useful, because they capture different aspects of
+
+economic uncertainty. For example, the subjective uncertainty mea-
+sures are particularly apt for theories that stress the role of firm-level
+
+risks in economic fluctuations (e.g., Christiano et al., 2014). The VIX
+
+measures are obviously more apt for theories that link asset-pricing be-
+havior to economic fluctuations. The EPU measures are highly relevant
+
+for theories that link asset-pricing to political decision-making in reac-
+tion to macroeconomic developments (e.g., Pastor and Veronesi,
+
+2012). The newspaper-based and Twitter-based measures are perhaps
+more closely aligned with the perceptions of households and salience
+of news. All of the uncertainty measures we consider are potentially
+
+useful in testing and implementing theories about investment and con-
+sumption under uncertainty. Indeed, many of them have been used to
+
+that end in previous studies.16
+Finally, we should point out that ongoing high levels of uncertainty
+
+do not bode well for a full and rapid economic recovery. Elevated uncer-
+tainty generally makes firms and consumers cautious, retarding invest-
+ment, hiring and expenditures on consumer durables ( see, for example,
+
+Bernanke (1983), Dixit and Pindyck (1994), Abel and Eberly (1996) and
+
+Bertola et al. (2005)). Given the scale of recent job losses and the col-
+lapse in investment, a strong and rapid recovery would require a huge
+
+surge in new activity, which sustained high levels of uncertainty (un-
+precedented in recent history) will discourage.
+
+Acknowledgements
+We thank the US National Science Foundation, the Sloan Foundation,
+the University of Chicago Booth School of Business, and the Economic
+and Social Research Council for financial support. We thank our editor
+Owen Zidar and an anonymous referee for useful comments, Mike
+
+Clements and Martin Weale for feedback on an earlier draft, Ian Dew-
+Becker for supplying data on the 24-month VIX, and Niall Ferguson for
+
+pointers to the literature on excess mortality in previous pandemics.
+The views expressed in this paper are those of the authors, and not
+necessarily those of the Bank of England or its committees.
+Appendix A
+
+To assess the impact of uncertainty shocks on real economic out-
+comes, we fit VARs to monthly US data and adopt a Cholesky ordering
+
+as follows: uncertainty measure; log(S&P500 stock market index), as
+measured by the closing value on the last day of the previous month;
+
+the effective Federal Funds Rate; log(manufacturing employment), sea-
+sonally adjusted; and log(industrial production), seasonally adjusted.
+
+The ordering and specification follow Baker et al. (2016). We detrend
+all variables using the method of Hamilton (2018), with p = 36 and h
+= 12.
+We use four uncertainty measures: implied stock market volatility,
+as measured by the one-month VIX (October 1966 to June 2020); the
+model-based macro uncertainty measure of Jurado, Ludvigson and Ng
+(October 1966 to April 2020); disagreement about US GDP growth
+
+rates at a one-year forecast horizon in the Philly Fed's Survey of Profes-
+sional Forecasters (August 1974 to May 2020); and the Baker-Bloom-
+Davis newspaper-based measure of economic policy uncertainty
+
+(April 1989 to Jun 2020). We linearly interpolate the once-per-quarter
+forecast disagreement values to create a series at monthly frequency.
+
+United States United Kingdom
+
+02468
+Sales subjective uncertainty, per cent
+
+250+
+100-249
+50-99
+<50
+
+2019 Mar 2020 - Jun 2020
+
+02468
+Sales subjective uncertainty, per cent
+
+250+
+100-249
+50-99
+<50
+
+2019 Mar 2020 - Jun 2020
+
+Fig. A1. Subjective sales growth rate uncertainty by firm size. Notes: Subjective uncertainty measured for the growth rate of 4 quarters ahead firm level sales expectations (details in Altig
+
+et al., 2020c). US data form the Survey of Business Uncertainty conducted by the Federal Reserve Bank of Atlanta, Stanford University, and the University of Chicago Booth School of Busi-
+ness (https://www.frbatlanta.org/research/surveys/business-uncertainty). UK data from the Decision Maker Panel Survey conducted by the Bank of England, Nottingham University and
+
+Stanford University (see Baker et al. (2019) and www.decisionmakerpanel.com).
+
+16 See Bloom (2014) and Baker et al. (2016) for references.
+D. Altig, S. Baker, J.M. Barrero et al. Journal of Public Economics 191 (2020) 104274
+
+9
+
+United States United Kingdom
+
+0 2 4 6 8
+Sales subjective uncertainty, per cent
+
+Education, heatlth and other
+Retail and wholesale trade
+Business services
+Manufacturing
+Construction, real estate
+and mining
+
+2019 Mar 2020 - May 2020
+
+0 2 4 6 8
+Sales subjective uncertainty, per cent
+
+Education, health and other
+Retail and wholesale trade
+Business services
+Manufacturing
+Construction, real estate,
+mining, and utilities
+
+2019 Mar 2020 - June 2020
+
+Fig. A2. Subjective sales growth rate uncertainty by industry. Notes: Subjective uncertainty measured for the growth rate of 4 quarters ahead firm level sales expectations (details in Altig
+et al., 2020b, 2020c). US data form the Survey of Business Uncertainty conducted by the Federal Reserve Bank of Atlanta, Stanford University, and the University of Chicago Booth School of
+Business (https://www.frbatlanta.org/research/surveys/business-uncertainty). UK data from the Decision Maker Panel Survey conducted by the Bank of England, Nottingham University
+and Stanford University (see Baker et al. (2019) and www.decisionmakerpanel.com).
+
+-15
+-10
+-5
+0
+5
+Employment, % deviation from trend
+0 6 12 18 24 30 36
+
+Months after shock
+
+COVID-19-sized shock
+2008/09-sized shock
+90%-c.i. -10
+-5
+0
+5
+Employment, % deviation from trend
+0 6 12 18 24 30 36
+
+Months after shock
+
+COVID-19-sized shock
+2008/09-sized shock
+90%-c.i.
+
+-20
+-15
+-10
+-5
+0
+5
+Employment, % deviation from trend
+0 6 12 18 24 30 36
+
+Months after shock
+
+COVID-19-sized shock
+2008/09-sized shock
+90%-c.i. -15
+-10
+-5
+0
+5
+Employment, % deviation from trend
+0 6 12 18 24 30 36
+
+Months after shock
+
+COVID-19-sized shock
+2008/09-sized shock
+90%-c.i.
+
+VIX Stock Market Implied Volatility
+
+US GDP Forecast Disagreement
+
+Model Based Macro Uncertainty (JLN)
+
+News Economic Policy Uncertainty (BBD)
+
+Fig. A3. Impact of uncertainty shocks on employment. Note: The charts show VAR-estimated impulse response functions for employment to four uncertainty innovations equal to the in-
+crease from January 2020 to their 2020 peaks (red lines), with 90% confidence bands, or to their 2008/09 peak (blue lines). We detrend following Hamilton (with p = 36, h = 12) and
+
+include three lags of each variable. We identify innovations using a Cholesky ordering as follows: uncertainty, log(S&P 500 index), effective federal reserve funds rate, log(manufacturing
+employment), and log(industrial production). We fit models to monthly data from October 1966 to June 2020 (VIX), October 1966 to April 2020 (macro uncertainty), August1974 to May
+2020 (forecaster disagreement), and April 1989 to June 2020 (economic policy uncertainty).
+D. Altig, S. Baker, J.M. Barrero et al. Journal of Public Economics 191 (2020) 104274
+
+10
+
+-15
+-10
+-5
+0
+5
+Industrial produciton, % deviation from trend
+0 6 12 18 24 30 36
+
+Months after shock
+
+COVID-19-sized shock
+2008/09-sized shock
+90%-c.i. -15
+-10
+-5
+0
+5
+Industrial production, % deviation from trend
+0 6 12 18 24 30 36
+
+Months after shock
+
+COVID-19-sized shock
+2008/09-sized shock
+90%-c.i.
+
+-15
+-10
+-5
+0
+5
+Industrial production, % deviation from trend
+0 6 12 18 24 30 36
+
+Months after shock
+
+COVID-19-sized shock
+2008/09-sized shock
+90%-c.i. -15
+-10
+-5
+0
+5
+Industrial production, % deviation from trend
+0 6 12 18 24 30 36
+
+Months after shock
+
+COVID-19-sized shock
+2008/09-sized shock
+90%-c.i.
+
+US GDP Forecast Disagreement
+VIX Stock Market Implied Volatility Model Based Macro Uncertainty (JLN)
+
+News Economic Policy Uncertainty (BBD)
+
+Fig. A4. Impact of uncertainty on output using pre-COVID data. Note: The charts show VAR-estimated impulse response functions for industrial production to four uncertainty innovations
+
+equal to the increase from January 2020 to their 2020 peaks (red lines), with 90% confidence bands, or to their 2008/09 peak (blue lines). We use the same detrending method, specifi-
+cation, identification assumptions, and data as in Fig. 8 in the main text, except for ending the sample period in December 2019.
+
+D. Altig, S. Baker, J.M. Barrero et al. Journal of Public Economics 191 (2020) 104274
+
+11
+
+References
+Abel, Andrew, Eberly, Janice, 1996. Optimal investment with costly reversibility. Review
+of Economic Studies 63 (4), 581–593.
+Ahir, Hites, Nicholas Bloom and Davide Furceri, 2019. “The World Uncertainty Index,”
+Stanford mimeo.
+Alfaro, Laura, Chari, Anusha, Greenland, Andrew, Shott, Peter K., 2020. Aggregate and
+Firm-Level Stock Returns during Pandemics, in Real Time (working paper, 2 April).
+Altig, David E., Barrero, Jose M., Nicholas, Bloom, Davis, Steven J., Brent, Meyer, Emil,
+Mihaylov, Parker Nicholas, B., 2020a. Firms Expect Working from Home to Triple.
+Federal Reserve Bank of Atlanta.
+Altig, David, Barrero, Jose Maria, Bloom, Nick, Davis, Steven J., Meyer, Brent, Mihaylov,
+
+Emil, Parker, Nick, 2020b. “Firms Expect Working from Home to Triple,” Technical Re-
+port, Federal Reserve Bank of Atlanta (28 May).
+
+Altig, David E., Barrero, Jose M., Bloom, Nicholas, Davis, Steven J., Meyer, Brent, Emil,
+Mihaylov, Parker, Nicholas B., 2020c. Firms Expect Working from Home to Triple.
+Federal Reserve Bank of Atlanta.
+Anderson, Roy M., Heersterbeek, Hans, Klinkenberg, Don, Hollingsworth, T. Dierdre, 2020.
+
+How will country-based mitigation measures influence the course of the covid-19 ep-
+idemic? The Lancet 395 (10228) (March).
+
+Atkeson, Andrew, 2020a. “How Deadly Is Covid-19? Understanding the Difficulties with
+Estimation of Fatality Rate,” Working Paper, 31 March 2020.
+Atkeson, Andrew, 2020b. “What Will Be the Economic Impact of COVID-19 in the US?
+Rough Estimates of Disease Scenarios,” NBER Working Paper 26867, March.
+
+Baker, Scott, Bloom, Nicholas, Davis, Steven J., 2016. Measuring economic policy uncer-
+tainty. The quarterly journal of economics 131 (4), 1593–1636 Oxford University
+
+Press.
+Baker, Scott Baker, Bloom, Nicholas, Davis, Steven J., Kost, Kyle, 2019. “Policy News and
+Equity Market Volatility,” NBER working paper 25720.
+Baker, Scott R., Bloom, Nicholas, Davis, Steven J., Kost, Kyle, Sammon, Marco, Viratyosin,
+
+Tasaneeya, 2020a. The Unprecedented Stock Market Reaction to COVID-19 (Forth-
+coming, Review of Asset Pricing Studies).
+
+Baker, Scott, Bloom, Nicholas, Davis, Steven J., Terry, Stephen, 2020b. “COVID-Induced
+Economic Uncertainty,” NBER Working Paper No. 26983.
+
+Baker, Scott Baker, Bloom, Nicholas, Davis, Steven J., Renault, Thomas, 2020c. Economic
+Uncertainty Measures Derived from Twitter (working paper, June).
+Barrero, Jose, Bloom, Nicholas, Davis, Steven J., 2020. “COVID-19 Is Also a Reallocation
+Shock,” Forthcoming, Brookings Papers on Economic Activity.
+
+Barro, Robert J., Ursua, Jose F., Weng, Joanna, 2020. “The Coronavirus and the Great Influ-
+enza Pandemic: Lessons from the ‘Spanish Flu’ for the Coronavirus’s Potential Effects
+
+on Mortality and Economic Activity,” NBER Working Paper 26866, Revised April
+2020.
+Bendavid, Eran, Bhattacharya, Jay, 2020. Is coronavirus as deadly as they say? Wall Street
+Journal (24 March).
+Bernanke, Ben, 1983. Irreversibility, uncertainty, and cyclical investment. Q. J. Econ. 98
+(1), 85–106.
+Bertola, Giuseppe, Guiso, Luigi, Pistaferri, Luigi, 2005. Uncertainty and consumer durables
+adjustment. Review of Economic Studies 72 (4), 973–1007.
+
+Bloom, Nicholas, 2014. Fluctuations in Uncertainty, 2014. Journal of Economic Perspec-
+tives 28 (2), 153–176 (Spring).
+
+Bloom, Nicholas, Chen, Scarlet, Bunn, Phil, Mizen, Paul, Smietanka, Pawel, Thwaites, Greg,
+2019. “The impact of Brexit on UK Firms,” NBER Working Paper 26218, September.
+Christiano, Lawrence J., Motto, Roberto, Rostagno, Massimo, 2014. Risk shocks. Am. Econ.
+Rev. 104 (1), 27–65.
+
+Dewatripont, Mathias, Goldman, Michel, Muraille, Eric, Platteau, Jean-Philippe, 2020. Rap-
+idly identifying workers who are immune to COVID-19 and virus-free is a priority for
+
+restarting the economy. VOX CEPR Policy Portal (23 March).
+Dew-Becker, Ian, Giglio, Stefano, 2020. Cross-sectional Uncertainty and the Business
+Cycle: Evidence From 40 Years of Options Data (working paper).
+
+Dixit, Avinash, Pindyck, Robert, 1994. Investment Under Uncertainty. Princeton Univer-
+sity Press, Princeton.
+
+Eichenbaum, Martin S., Rebelo, Sergio, Trabandt, Mathias, 2020. “The Macroeconomics of
+Epidemics,” NBER Working Paper 26882 (March).
+Fauci, Anthony S., Clifford Lane, H., Redfield, Robert R., 2020. Covid-19 – navigating the
+uncharted. New England Journal of Medicine https://doi.org/10.1056/
+NEJMe2002387 (26 March).
+Ferguson, Niall, 2020. 1918, 1957, 2020: Big Pandemics and their Economic, Social and
+Political Consequences (working paper, 20 May).
+
+-15
+-10
+-5
+0
+5
+Industrial produciton, % deviation from trend
+0 6 12 18 24 30 36
+
+Months after shock
+
+COVID-19-sized shock
+2008/09-sized shock
+90%-c.i. -15
+-10
+-5
+0
+5
+Industrial production, % deviation from trend
+0 6 12 18 24 30 36
+
+Months after shock
+
+COVID-19-sized shock
+2008/09-sized shock
+90%-c.i.
+
+-30
+-20
+-10
+0
+10
+Industrial production, % deviation from trend
+0 6 12 18 24 30 36
+
+Months after shock
+
+COVID-19-sized shock
+2008/09-sized shock
+90%-c.i.
+
+-10
+-5
+0
+5
+10
+15
+Industrial production, % deviation from trend
+0 6 12 18 24 30 36
+
+Months after shock
+
+COVID-19-sized shock
+2008/09-sized shock
+90%-c.i.
+
+US GDP Forecast Disagreement
+VIX Stock Market Implied Volatility Model Based Macro Uncertainty (JLN)
+
+News Economic Policy Uncertainty (BBD)
+
+Fig. A5. Impact of uncertainty on output – reversed ordering. Note: The charts show VAR-estimated impulse response functions for industrial production to four uncertainty innovations
+
+equal to the increase from January 2020 to their 2020 peaks (red lines), with 90% confidence bands, or to their 2008/09 peak (blue lines). We use the same detrending method, specifi-
+cation, and data as in Fig. 8 in the main text, except for a different identification assumptions, with variables ordered as follows: log(industrial production), log(manufacturing employ-
+ment), effective federal reserve funds rate, log(S&P 500 index), and uncertainty.
+
+D. Altig, S. Baker, J.M. Barrero et al. Journal of Public Economics 191 (2020) 104274
+
+12
+
+Ferguson, Neil M., Laydon, Daniel, Nedjati-Gilani, Gemma, Imai, Natsuko, Ainslie, Kylie,
+
+Baguelin, Marc, Bhatia, Sangeeta, Boonyasiri, Adhiratha, Cucunubá, Zulma, Cuomo-
+Dannenburg, Gina, et al., 2020. Report 9 - Impact of non-pharmaceutical interven-
+tions (NPIs) to reduce COVID-19 mortality and healthcare demand.
+
+Glezen, W. Paul, 1996. Emerging infections: pandemic influenza. Epidemiologic Review
+18 (1), 64–76.
+
+Guerreri, Veronica, Lorenzoni, Guido, Straub, Ludwig, Werning, Ivan, 2020. “Macroeco-
+nomic Implications of COVID-19: Can Negative Supply Shocks Cause Demand Short-
+ages?” Working Paper, 2 April.
+
+Hamilton, James, 2018. Why you should never use the Hodrick-Prescott filter. The Review
+of Economic and Statistics 100 (5) (December).
+Hassan, Tarek A., van Lent, Laurence, Hollander, Stephan, Tahou, Ahmed, 2020. Firm-level
+exposure to epidemic diseases: Covid-19, SARS, and H1N1 (mimeo).
+Jorda, Ocar, Singh, Sanjay R., Taylor, Alan M., 2020. Longer-run economic consequences of
+pandemics. Covid Economics: Vetted and Real-Time Papers. 1 (3 April).
+
+Jurado, Kyle, Ludvigson, Sydney, Ng, Serena, 2015. Measuring uncertainty. American Eco-
+nomic Review 105 (3) (March).
+
+Li, Ruiyun, Pei, Sen, Chen, Bin, Song, Yimeng, Zhang, Tao, Wan, Yang, Shaman, Jeffrey,
+2020. Substantial undocumented infection facilitates the rapid dissemination of
+
+novel coronavirus (SARS-CoV2). Science https://doi.org/10.1126/science.abb3221
+(16 March).
+Linton, N.M., et al., 2020. Incubation period and other epidemiological characteristics of
+
+2019 novel Coronavirus infections with right truncation: a statistical analysis of pub-
+licly available case data. Journal of Clinical Medicine 9 (2) (17 February).
+
+Pastor, Lubos, Veronesi, Pietro, 2012. Uncertainty about government policy and stock
+prices. J. Financ. 67 (4), 1219–1264.
+Romer, Paul, Shah, Rajiv, 2020. Testing is our way out. Wall Street Journal (3 April).
+Stock, James H., 2020a. “Data Gaps and the Policy Response to the Novel Coronavirus,”
+NBER Working Paper 26902 (March).
+Stock, James H., 2020b. Random Testing Is Urgently Needed (23 March).
+Toda, Alexis Akira, 2020. Susceptible-infected-recovered (SIR) dynamics of Covid-19 and
+economic impact. Covid Economics: Vetted and Real-Time Papers 1 3 April.
+
+Vogel, Gretchen, 2020. New blood tests for antibodies could show true scale of coronavi-
+rus pandemic. Science https://doi.org/10.1126/science.abb8028 (19 March).

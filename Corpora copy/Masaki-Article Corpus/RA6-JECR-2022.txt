@@ -1,0 +1,1102 @@
+<heading>
+Title: Entertainment Video Games for Academic Learning: A Systematic Review
+Author: Léa Martinez, Manuel Gimenes, and Eric Lambert
+Journal: Journal of English for Academic Purposes
+Year: 2022
+</heading>
+
+Abstract
+Entertainment video games are very popular among young audiences. Nevertheless,
+despite their potential to improve cognitive functioning, they are still studied rarely as a
+tool for digital game-based learning. To better understand video gaming practices’ value
+in the classroom, this article provides a systematic review of literature on the effect of
+entertainment video games on academic learning. Our literature search yielded 49
+relevant intervention studies published between 2005 and 2019 that integrated entertainment video games into academic curricula from preschool to college. Our
+review revealed that entertainment video games can be an effective educational tool
+and are beneﬁcial in almost all academic disciplines, particularly in foreign language and
+science. However, research on entertainment video gaming’s effects on academic
+learning is still not extensive enough and remains mostly qualitative. Future studies
+need to provide a quantitative approach to complete and conﬁrm already-existing
+literature, particularly in the environmental and social sciences, physical education, and
+programming. Given entertainment video games’ popularity and beneﬁts on cognition
+and learning, it seems essential to investigate their practical value further in the education sector and to determine the mechanisms that mediate their effects on academic
+learning.
+
+Introduction
+Today’s learners are digital natives who require new teaching styles to foster their
+motivation and engagement in academic learning (Kiryakova et al., 2014). A recent
+challenge is the implementation of alternative, modern teaching methods in education
+curricula that are adapted to our cultural context. Digital game-based learning (DGBL)
+is one of these methods. Its main purpose is to increase students’ interest and ensure
+their motivation to learn using digital media (Prensky, 2003). Indeed, students’ positive
+attitude toward video games is viewed as a great opportunity to develop a stimulating
+and effective learning context (for a review, see Coleman & Money, 2020). However,
+not all types of video games have been studied to the same extent. Currently, DGBL
+mainly has been restricted to willingness to design appropriate educational video
+games, and most studies have focused on serious, non-entertainment video games that
+include pedagogical content during game play (for a review, see Zhonggen, 2019).
+Compared with conventional methods, serious games improve declarative knowledge,
+procedural knowledge, and knowledge retention (see Riopel et al., 2019, for a metaanalysis). Their use in classrooms enhances students’ learning in many academic
+disciplines (Backlund & Hendrix, 2013). However, some studies have recommended
+using non-educational, entertainment video games—whose main goal is players’
+enjoyment—in academic learning methods, deeming them just as effective as serious
+games (Breuer & Bente, 2010; Charsky & Mims, 2008).
+This interest in entertainment video games in the DGBL literature highlights the
+need to examine and discuss the value of non-serious video games in academic learning
+(i.e., for the acquisition of knowledge and skills at school). As far as we know, no
+systematic review has been conducted on entertainment video games’ value as pedagogical support. For ease of reading, considering that no agreement exists on a term for
+non-educational games (commercial video games, Commercial-Off-The-Shelf video
+games, entertainment video games have been used, among others), we decided to use
+the term entertainment video games in this article.
+
+From Serious Video Games to Entertainment Video Games in
+Academic Learning
+For several years, serious video games have been studied extensively in various research ﬁelds. Contrary to entertainment video games, they play an increasingly important role in academic learning. Serious games can be deﬁned as any digital games in
+which their pedagogical purpose is embedded in the game scenario (Klopfer et al.,
+2009). A wide variety of serious games (e.g., Darfur is dying, Ruiz, 2006; Dragonbox,
+Siew et al., 2016; see Zhonggen, 2019, for a meta-analysis) has been mostly developed
+and used in educational and learning contexts, offering a beneﬁcial alternative to
+conventional instructional methods, as they correspond to a more active method that
+enables students to engage in higher-level cognitive tasks (Riopel et al., 2019). Playing
+serious games integrated into a school curriculum enhances academic learning in many
+Martinez et al.
+disciplines (mathematics, history, English, etc.). Meta-analyses have found small to
+moderate positive effects of serious games on reading (Cheung & Slavin, 2012),
+vocabulary (Thompson & von Gillern, 2020), and natural sciences (Riopel et al., 2019).
+Moreover, students learn more through serious video games if they receive additional
+teaching materials. External supports such as additional instructions, exercises, and
+feedback are moderators of serious games’ effects on academic learning (Sitzmann,
+2011; Wouters et al., 2013). Thus, serious video games have become a common tool in
+educational settings, particularly for academic learning.
+One issue in game and learning studies, particularly in the academic domain, is the
+lack of interest in all kinds of video games. A clear-cut distinction exists between
+serious and entertainment video games. Serious games designed for academic learning
+have been studied widely over the past decade, but they do not correspond to
+mainstream video games and are not commercialized, or they are commercialized to a
+limited audience. However, entertainment video games are very popular, mainly among
+young audiences. They aim to entertain the players and have no direct pedagogical
+purpose. For a long time, entertainment video games have suffered from their bad
+reputation regarding child education. Many studies have highlighted violent entertainment video games’ negative impact on behavior or affect (Anderson & Bushman,
+2001; Medeiros et al., 2020). However, many other studies have focused on the overall
+beneﬁts of playing entertainment video games on cognitive functions (for a review, see
+Choi et al., 2020). According to recent literature, the positive impact from playing
+entertainment video games on cognitive functions, particularly executive functions
+(McCord et al., 2020; Yang et al., 2020), has been largely demonstrated (for a review,
+see Choi et al., 2020). Executive functions are a set of mental processes necessary to
+control behavior in new and adapting situations (Diamond, 2013; Elliott, 2003).
+Compared with non-video gamers, entertainment video gamers demonstrate better
+attention, working memory, visuospatial, decision-making, and problem-solving
+abilities (Bediou et al., 2018; Buelow et al., 2015; Ruiz-Marquez et al., 2019). Furthermore, entertainment video game training programs has been found to improve
+attention, visuospatial (Oei & Patterson, 2013), working memory (Blacker et al., 2014),
+and problem-solving (Shute et al., 2015) abilities. For example, playing Call of Duty for
+28 hours signiﬁcantly increased visual working-memory performance (Blacker et al.,
+2014). It seems that any entertainment video game genre (e.g., traditional video games,
+simulation video games, strategy video games, action video games, fantasy video
+games) has the potential to enhance cognitive functions (Choi et al., 2020), but action
+video games in particular were found to improve attention and spatial cognition
+(Bediou et al., 2018). Therefore, entertainment video games were found to enhance
+several cognitive and executive functions.
+Numerous studies have demonstrated that cognitive and executive functions are
+related, positively and strongly, to academic learning. For example, cognitive abilities
+such as executive functions, reasoning, and working memory are predictors of reading
+and mathematics skills (Peng & Kievit, 2020). Working memory training based on 20
+training sessions with working memory tasks enhanced children’s academic achievement
+
+in reading and mathematics (Studer-Luethi et al., 2016). Therefore, it is relevant to
+consider whether entertainment video gaming also could improve academic skills
+through enhancement of cognitive functions. Some studies have already found a positive
+correlation between entertainment video game practice and academic learning. Compared with non-video gamers, entertainment video gamers demonstrate better results in
+English foreign language (Pitarch, 2018; Sundqvist, 2019), reading, and mathematics
+(Bowers & Berland, 2013). Therefore, we believe that it is essential to establish an
+overview of the use of entertainment video gaming for academic learning to determine
+whether it could be an effective alternative learning method in educational settings, and to
+highlight its strengths and limitations. To do so, a systematic review was conducted to
+address the central questions of how entertainment video games inﬂuence academic
+learning, how such video games’ effects are assessed in the education sector, and what
+recommendations can be made for future research. In this review, we focused on intervention studies in school settings so that we could determine the effect of entertainment
+video gaming on academic learning. Thus, intervention studies using entertainment video
+games that were integrated into a school curriculum (from preschool to college) were
+reviewed and classiﬁed according to the academic learning domain that they assessed.
+This literature review is of both scientiﬁc and pedagogical interest because it
+provides insights for both the research and education ﬁelds. Currently, to our
+knowledge, no integrative review on entertainment video games and academic learning
+exists. DGBL literature reviews mainly focused on the use and effect of serious games
+in education (Coleman & Money, 2020; Riopel, 2019; Zhonggen, 2019) while entertainment video games literature reviews reported effects on cognitive functions and
+did not directly focus on education (Choi et al., 2020). Therefore, this article provides
+an overview of the recent literature on an original topic, along with scientiﬁc insights on
+entertainment video games’ effects on academic learning and pedagogical insights on
+the implementation of this kind of video game in classrooms.
+
+Method
+The article selection method was based on recent best practice guidelines describing the
+state of the art of conducting literature reviews (Siddaway et al., 2019).
+
+Literature Search
+The literature search was conducted through PsycINFO (APA science and psychology
+database), Web of Science (multiple science databases), and ERIC (education research
+database). Peer-reviewed journal articles written in English and published between
+2005 (which corresponds to the release of Nintendo DS and Xbox 360 game systems)
+and 2019 were searched. The search request was ([“video game” OR “computer game”]
+AND [“academic learning” OR “learning” OR “classroom” OR “school” OR “education”] -[“serious game” OR “game-based learning” OR “game-based instruction” OR
+“computer-assisted instruction”]). We excluded search terms that could lead to studies
+Martinez et al.
+
+about educational games that are not within our search scope. The search yielded 3677
+articles. Based on their titles, 452 articles were identiﬁed as potentially relevant and
+were screened for inclusion.
+
+Inclusion Criteria
+Studies were included if they used entertainment video games in pedagogical contexts,
+and assessed participants’ academic learning and related skills. Altogether, 40 articles
+met the inclusion criteria and were selected. Nine additional articles that met the criteria
+were found through other sources, bringing the total to 49 articles selected for this
+review. An overview of the search and inclusion process is provided in Figure 1.
+
+Summary of Included Studies
+For each selected article, the academic learning domain, video game used, type of
+statistical analyses, and main results were noted. To conduct a detailed analysis, the
+articles then were grouped according to the academic learning assessed. This review
+includes academic learning from preschool to university level.
+
+Results
+An overview of selected articles’ distribution by academic disciplines and by school
+grade levels is provided in Figure 2. We found that most studies focused on college
+students (40.8%) and high school students (36.7%). Moreover, from preschool to
+middle school, the most studied academic ﬁeld is science (50%). However, the most
+studied disciplines with older students are history (33.3% in high school) and foreign
+language (50% in college).
+For a detailed analysis, the results of the selected articles were organized by academic domains to assess the effect of video game use on each domain (Table 1). The
+discipline, the school grade level, the employed video game and its category, the
+number of participants, and the type of analyses are speciﬁed for each selected article.
+
+Literature
+The largest body of research in this review demonstrated the beneﬁts from using video
+games for foreign language learning, with most studies indicating signiﬁcant improvements in students’ foreign language vocabulary through the use of video games.
+One qualitative study found that playing Scribblenauts and Age of Empires II increased
+English vocabulary acquisition among Colombian college students (Camacho Vásquez
+& Ovalle, 2019). Furthermore, deHaan (2005) also observed that playing a Japanese
+baseball video game improved a U.S. student’s Japanese oral and written comprehension skills. The student identiﬁed several learning supports from the game, including repetition of actions and sentences; contextual clues, such as expected baseball
+
+Journal of Educational Computing Research 0(0)
+
+Figure 1. Overview of the selection process.
+
+
+Figure 2. Selected articles’ distribution by disciplines and by school grade levels.
+
+movements; and simultaneous presentation of oral and written language. Newgarden
+and Zheng (2016) also analyzed interactions between students from various nations
+playing World of Warcraft and noticed that the game could improve English learning
+because students’ communicative activities sometimes corresponded with advanced
+English proﬁciency levels. These ﬁrst three studies used a qualitative method to assess
+
+Figure 2. Continued.
+
+foreign language learning, without any control group nor inferential statistical analyses.
+Five studies compared the use of video games with traditional learning methods for
+vocabulary acquisition. The ﬁrst study detected improvement in English learning
+attitudes and achievement among Taiwanese students who played Pokemon Go (Wu,
+2019). Iranian students who played the adventure game Runaway: A Road Adventure
+outperformed students who took a traditional class on English vocabulary learning
+(Vahdat & Rasti Behbahani, 2013). Ebrahimzadeh (2017) also demonstrated that,
+compared with an intensive reading method, Iranian students who played Warcraft and
+those who only watched the game gained signiﬁcantly in English vocabulary levels.
+Interestingly, comparisons between players and watchers of video games yielded mixed
+results. With Warcraft, Ebrahimzadeh and Alavi (2016) and Ebrahimzadeh (2017)
+found no differences between players and watchers on vocabulary acquisition, but
+deHaan et al. (2010) found that Japanese students who played a rhythm game were
+outperformed by those who only watched the game. One reason may involve game
+Literature
+Academic
+ﬁeld
+
+Foreign
+language
+
+Discipline
+
+Table 1. Selected Articles.
+
+Vahdat and Rasti
+Behbahani
+(2013)
+Ebrahimzadeh
+(2017)
+Ebrahimzadeh
+and Alavi
+(2016)
+deHaan et al.
+(2010)
+Miller and
+Hegelheimer
+(2006)
+Chen and Yang
+(2013)
+Ranalli (2008)
+Janebi Enayat
+and
+Haghighatpasand
+(2019)
+
+Newgarden and
+Zheng (2016)
+Wu (2019)
+
+Camacho Vásquez
+and Ovalle
+(2019)
+deHaan (2005)
+
+Articles
+
+80
+18
+
+Warcraft III: The Frozen Throne (real time
+strategy game)
+Warcraft III: The Frozen Throne (real time
+strategy game)
+Parappa the Rapper 2 (rhythm game)
+The Sims (life simulation game)
+
+Bone (adventure game)
+The Sims (life simulation game)
+The Secret of Monkey Island (adventure
+game)
+
+College,
+undergraduates
+College, unknown
+
+College, undergraduates
+College, unknown
+College,
+undergraduates
+
+High school, unknown
+
+9
+30
+
+22
+
+136
+
+241
+
+40
+
+61
+
+5
+
+1
+
+High school, unknown
+
+College, undergraduates
+
+College, unknown
+
+College, undergraduates
+
+College, unknown
+
+(continued)
+
+Quantitative
+Quantitative
+
+Quantitative
+
+Quantitative
+
+Quantitative
+
+Quantitative
+
+Quantitative
+
+Quantitative
+
+Quantitative
+
+Qualitative
+
+Qualitative
+
+Qualitative
+
+15
+
+Scribblenauts (puzzle-action game) and
+Age of Empires II (real-time
+strategy game)
+Jiikyoo Pawaﬁru Puro Yakkyu 6 (Japanese
+baseball game)
+World of Warcraft (massively multiplayer
+online role-playing game)
+Pokemon Go (mobile augmented reality
+game)
+Runaway: A Road Adventure point & click
+adventure game)
+
+College, undergraduates
+
+Type of
+analyses
+
+Number of
+participants
+
+Video games (category)
+
+School grade levels
+
+Academic
+ﬁeld
+
+Physics
+
+28
+
+Rayman Raving Rabbids (mini party games)
+
+College, unknown
+High school, unknown
+
+Middle school, unknown
+
+High school, unknown
+
+de Aldama and
+Pozo (2019)
+Masson et al.
+(2011)
+Jurcevic (2008)
+Nordine (2011)
+
+Enigmo (puzzle game), Railroad Tycoon 3
+(management, strategy game)
+Scorched 3D (artillery game)
+Super Mario Bros. (platform game)
+
+Angry Birds Space (puzzle and artillery game),
+Cut the Rope (puzzle game)
+Angry Birds Space (puzzle and artillery game)
+
+Angry Birds (puzzle and artillery game)
+Unreal Tournament 2004 (ﬁrst person
+shooter), Angry Birds (puzzle and artillery
+game)
+Angry Birds (puzzle and artillery game)
+
+Middle school, unknown
+College, undergraduates
+
+Preschool,
+pre-kindergarten
+High school, 9th grade
+
+Wii Play Motion (mini party games)
+
+College, undergraduates
+
+Unknown
+Unknown
+
+51
+
+(continued)
+
+Qualitative
+Qualitative
+
+Quantitative
+
+Quantitative
+
+Quantitative
+
+83
+110
+
+Quantitative
+
+Qualitative
+Quantitative
+
+Quantitative
+
+Quantitative
+
+Quantitative
+
+Quantitative
+
+Quantitative
+
+Qualitative
+Qualitative
+
+Qualitative
+
+Type of
+analyses
+
+32
+
+Unknown
+30
+
+111
+
+634
+
+20
+
+Rayman Raving Rabbids (mini party games)
+
+Dr. Kawashima’s Brain Training (puzzle game)
+
+16
+21
+
+Minecraft (adventure sandbox game)
+Tomb Raider (adventure game)
+
+236
+
+Unknown
+
+L.A. Noire (adventure and puzzle game)
+
+High school, college,
+12th grade and
+undergraduates
+High school, 12th grade
+Elementary school,
+3rd grade
+Elementary school,
+unknown
+Elementary school,
+unknown
+Elementary school, 3rd
+and 4th grades
+Elementary school, 3rd
+and 4th grades
+Dr. Kawashima’s Brain Training (puzzle game)
+
+Number of
+participants
+
+Video games (category)
+
+School grade levels
+
+Herodotou
+(2018)
+Sun et al. (2015)
+
+Berger and
+McDougall
+(2013)
+Marlatt (2018)
+Lacasa et al.
+(2008)
+Franceschini
+et al. (2013)
+Franceschini
+et al. (2017)
+O’Rourke
+et al. (2017)
+Miller and
+Robertson
+(2011)
+Stansbury et al.
+(2014)
+Lamb (2013)
+Novak and
+Tassell (2015)
+
+Native
+language
+
+Mathematics
+
+Articles
+
+Discipline
+
+Table 1. (continued)
+Humanities
+and
+social
+sciences
+
+Academic
+ﬁeld
+
+History
+
+Civilization (turn-based strategy game)
+Civilization (turn-based strategy game)
+
+Civilization (turn-based strategy game)
+
+Minecraft (adventure sandbox game)
+Assassin’s Creed (adventure game)
+
+High school, 9th grade
+High school, 9th grade
+
+High school, 9th grade
+
+High school, unknown
+High school, 9th to
+12th grade
+
+RollerCoaster Tycoon 3 (simulation,
+management game)
+Minecraft (adventure sandbox game)
+
+Middle school, 5th and
+6th grades
+Middle school, 7th grade
+
+Civilization (turn-based strategy game)
+
+SimCity Creator (city-builder game)
+
+High school, 9th grade
+
+High school, 11th grade
+
+Dance Dance Revolution (exergame)
+
+College, undergraduates
+
+Scientiﬁc
+methods
+and thinking
+
+Herrero et al.
+(2014)
+Stansbury and
+Munro (2013)
+Monjelat et al.
+(2012)
+Shah and Foster
+(2014)
+Checa-Romero
+and Pascual
+Gómez
+(2018)
+Lee and Probert
+(2010)
+Squire and Barab
+(2004)
+Pagnotti and
+Russell
+(2012)
+Charsky and
+Ressler
+(2011)
+Craft (2016)
+Gilbert (2019)
+
+Spore (simulation, management game)
+
+49
+14
+
+82
+
+Unknown
+
+18
+
+(continued)
+
+Qualitative
+Qualitative
+
+Quantitative
+
+Qualitative
+
+Qualitative
+
+Qualitative
+
+Quantitative
+
+85
+
+
+Quantitative
+
+Qualitative
+
+Quantitative
+
+Qualitative
+
+Qualitative
+
+Type of
+analyses
+
+21
+
+10
+
+65
+
+22
+
+>500
+
+Minecraft (adventure sandbox game)
+
+Preschool to high school,
+pre-kindergarten
+to 12th grade
+High school, 10th grade
+
+Hobbs et al.
+(2019)
+
+Biology and
+environmental
+science
+
+Number of
+participants
+
+Video games (category)
+
+School grade levels
+
+Articles
+
+Discipline
+
+Table 1. (continued)
+
+Martinez et al.
+11
+
+Physical
+education
+
+Academic
+ﬁeld
+
+Physical
+activity
+
+Sport
+knowledge
+
+Krom (2012)
+Jenny and Schary
+(2014)
+Jenny et al.
+(2017)
+Nyberg and
+Meckbach
+(2017)
+Gibbs et al.
+(2017)
+Finco et al.
+(2015)
+
+Kim and Shin
+(2016)
+Sierra (2019)
+Foster (2011)
+
+Geography
+
+Economy
+
+Articles
+
+Discipline
+
+Table 1. (continued)
+
+Just Dance (exergame)
+Xbox-Kinect exergames
+
+Elementary and middle
+school, unknown
+
+>20, 4 for
+analyses
+
+Just Dance (exergame)
+
+High school, unknown
+
+89
+
+Don Bradman Cricket 14 (cricket game)
+
+College, undergraduates
+and graduates
+Elementary to high
+school, unknown
+
+24
+
+25
+
+75
+40
+
+136
+26
+
+33
+
+Number of
+participants
+
+SimCity (simulation management game)
+RollerCoaster Tycoon 3 (simulation,
+management game)
+FarmVille (simulation game)
+Madden NFL (U.S. football game)
+
+SimCity (simulation, management game)
+
+Video games (category)
+
+College, unknown
+Middle school, 4th to
+6th grade
+College, unknown
+College, unkown
+
+College, undergraduates
+
+School grade levels
+
+Qualitative
+
+Qualitative
+
+Qualitative
+
+Quantitative
+
+Quantitative
+Quantitative
+
+Qualitative
+Quantitative
+
+Qualitative
+
+Type of
+analyses
+
+interactivity, which creates an additional cognitive load and diverts players’ attention away
+from learning vocabulary. Three other studies compared the effect of supplementary
+activities added to video games on vocabulary learning. First, students from various
+language backgrounds who received explicit vocabulary and grammar activities before
+playing The Sims scored signiﬁcantly higher on vocabulary and grammar questionnaires
+than students with optional access to an online dictionary during the game and students
+without additional activities or resources (Miller & Hegelheimer, 2006). However, Chen
+and Yang (2013) demonstrated that Taiwanese students who were allowed to take notes
+while playing the adventure game Bone did not outperform those who only played the
+game, with both groups improving their vocabulary learning to the same extent. Thus, the
+beneﬁts from supplementary activities elicited mixed results, but it seems that students
+have a favorable attitude toward these added materials for their learning and view them as
+important while playing the game (Ranalli, 2008). In most studies, students have expressed positive perceptions toward video game use for foreign language learning,
+viewing such games as helpful and an additional motivation, particularly for vocabulary
+learning (Janebi Enayat & Haghighatpasand, 2019).
+Several studies also employed video games for literature learning. The use of L.A.
+Noire allowed college students to link the game experience to other novels they already
+studied (Berger & McDougall, 2013). The students mentioned that the game corresponded to a digital novel that caught their interest and positively changed their approach to literature. The famous video game Minecraft also was used with high school
+students to reproduce scenes from a novel in the game (Marlatt, 2018). The teacher
+noticed that students felt more engaged through the game and had a deeper understanding of the novel. Likewise, Lacasa et al. (2008) used the game Tomb Raider in a
+primary school as a theme for theater scene writing and production. Children demonstrated better oral and written skills, along with better critical thinking abilities. It
+seems that video games can function as an efﬁcient tool for literature classes, positively
+impacting students’ engagement and critical thinking. However, future studies need to
+assess whether video games signiﬁcantly beneﬁt students’ literacy skills. Two studies
+have examined the effect of action and non-action video games on reading performance
+in dyslexic children (Franceschini et al., 2013, 2017). The speed and accuracy of
+children’s reading signiﬁcantly increased after playing action Rayman Raving Rabbids
+mini-games, but not non-action mini-games. Further studies will be needed to understand how action video game use can improve reading skills acquisition, but these
+two studies already demonstrated that improvement in attention abilities due to action
+video gaming can explain enhancements in reading proﬁciency directly.
+
+Sciences
+Several studies have found that playing video games have a positive impact on learning
+mathematics. Two studies have examined this effect using the game Dr. Kawashima’s
+Brain Training. The ﬁrst study compared use of the game with a traditional learning
+method with 10-year-old students learning mathematical operations (O’Rourke et al., 2017).
+
+14
+The group that played Dr. Kawashima’s Brain Training experienced signiﬁcant improvement in both speed and accuracy in their mathematical calculations compared
+with the control group, which used traditional learning. Moreover, the interviews
+during the intervention period indicated increasing motivation to learn mathematics.
+Using the same game, Miller and Robertson (2011) reported signiﬁcant gains in
+children’s mental computation skills from using the game compared with a control
+group that attended traditional classes. These two studies were based on a relatively
+large sample (236 and 634 students, respectively). More complex mathematical concepts
+also can be improved by playing video games. Stansbury et al. (2014) found improvement in undergraduate students’ statistics knowledge from playing Wii Play Motion
+mini-games. The concepts of parabolas and vectors also can be learned more quickly by
+playing Angry Birds (Lamb, 2013). The beneﬁts from learning mathematics by playing
+video games need to be examined further in future research, but an early conclusion can
+be drawn because current research has indicated that playing action video games leads to
+improvements in the cognitive skills necessary to learn mathematics, such as working
+memory and spatial abilities (Novak & Tassell, 2015).
+All the selected studies on teaching physics through video gaming focused on
+learning motion concepts. Three studies examined this through popular games such as
+Angry Birds. The ﬁrst one assessed this game’s effect on preschoolers’ understanding
+of projectile motion (Herodotou, 2018). After playing the game, 5-year-old children
+demonstrated a signiﬁcantly better understanding of projectile motion and were able to
+predict parabola movements correctly. Another study compared the use of Angry Birds
+Space and Cut the Rope with a traditional learning method among high school students
+(Sun et al., 2015). Students who played Angry Birds Space tended to improve their
+understanding of circular-motion concepts, while students who played Cut the Rope
+signiﬁcantly improved their knowledge of pendulum concepts. The effect was signiﬁcant, measured through the use of concept maps to assess students’ learning, but not
+with multiple-choice exams. A third study found that using Angry Birds alone may not
+be sufﬁcient to elicit signiﬁcant learning of motion concepts. de Aldama and Pozo
+(2019) added a speciﬁc instructional method to the game, providing an epistemic goal
+for students by suggesting questions that they needed to answer while playing the game.
+Compared with the control group and the group that played the game without questions,
+participants with an epistemic goal demonstrated signiﬁcant improvement in their
+understanding of motion concepts. Other types of games also can enhance the learning
+of motion concepts. With Enigmo, an arcade-style game, Masson et al. (2011) found a
+gain in students’ problem-solving skills related to object motion. Finally, two qualitative studies that evaluated learning about projectile motion through play highlighted
+students’ positive reactions. Jurcevic (2008) observed that college students who played
+the artillery game Scorched 3D discovered physics concepts about angles and speeds
+through the game on their own. Students then reported having fun using this game in
+physics class. Likewise, it seems that most of the students were highly motivated and
+strongly engaged in learning projectile motion concepts through Super Mario Bros.
+(Nordine, 2011). However, the teacher noticed that students who were uncomfortable
+
+Martinez et a
+with problem-solving in informal settings experienced some frustration, probably
+because they were not accustomed to open-ended problems and needed a more clearly
+deﬁned approach for their learning.
+Fewer studies focused on learning biology and environmental sciences through the
+use of video games. Only two qualitative studies were identiﬁed in this domain. Hobbs
+et al. (2019) set up the Science Hunters Project using Minecraft. Students of all ages
+were invited to solve speciﬁc problems in the game to explore science topics and gain
+knowledge about natural and environmental science subjects, such as volcanoes,
+animal habitats, ﬂowers, and biomes. The teachers who implemented this project in
+class noticed improvement in students’ learning and understanding of these various
+themes. Students were motivated to play the game and learn about science through the
+game. Moreover, teachers noted that the project may encourage students to attend
+college. The second study assessed the game Spore as a learning tool in high school
+biology class (Herrero et al., 2014). Students had to decide whether the theories of
+evolution represented in the game were in agreement with Darwin’s evolution theory
+and natural selection concepts. Students applied their academic knowledge in the game
+experience and sharpened their understanding of biological evolution concepts. The
+positive effect would come from playing the game, but only if it were combined with
+interactions with the teacher or other students. Thus, Spore seems to be a good tool for
+fostering students’ interest and biology learning through interactive way. Despite their
+promising results, these two qualitative studies are insufﬁcient to conﬁrm a signiﬁcant
+positive effect of video game use on natural science learning. Thus, this beneﬁt needs to
+be conﬁrmed in future quantitative studies.
+Besides academic knowledge in science, video games also can be used to develop
+scientiﬁc methods and thinking. For example, Stansbury and Munro (2013) used the
+Wii game Dance Dance Revolution to teach factorial designs to undergraduate psychology students. Students used the dance scores to learn and implement mixed
+factorial designs. Compared with students who received a traditional lecture, those who
+played the game signiﬁcantly improved their performance on a factorial design
+knowledge questionnaire. Even more generally, video games can be used to develop
+scientiﬁc thinking and creativity. For example, SimCity Creator seems to be a solid tool
+for developing students’ problem-solving skills (Monjelat et al., 2012). By playing this
+game, the students created a representation of in-game problems and solved it using
+different strategies. Likewise, playing RollerCoaster Tycoon 3 signiﬁcantly increased
+middle school students’ systems thinking knowledge (Shah & Foster, 2014). Regarding
+the development of students’ creativity, Checa-Romero and Pascual Gómez (2018)
+found that students scored signiﬁcantly higher on a creativity test after building the
+house of their dreams in Minecraft.
+Therefore, these ﬁndings highlight the beneﬁts of playing video games for students’
+scientiﬁc skills, but further quantitative studies need to conﬁrm these beneﬁts as they
+relate to problem-solving processes, logical thinking, and creativity.
+
+1
+Humanities and Social Sciences
+Most studies on the beneﬁts of video games on learning history focused on the use of the
+game Civilization in high school. Lee and Probert (2010) observed that this game helped
+reinforce U.S. history concepts on wars, military alliances, politics, and geography.
+However, the teacher was concerned that the students remained relatively passive and did
+not participate often during the lesson. Squire and Barab (2004) also observed that
+Civilization aided learning of world history and geography facts and deﬁnitions, but that
+students’ engagement depended on their perception of the game’s value for learning.
+Many students felt that the game was complex and that its relevance to history lessons was
+not clear enough. Thus, not all students understood its value for learning history. Likewise,
+Pagnotti and Russell (2012) found that even though students were motivated and
+comfortable with the game, they were unsure of its usefulness in learning history. To
+enhance Civilization’s educational value, Charsky and Ressler (2011) asked students to
+use or create concept maps while playing the game. However, with this addition, students’
+attention, motivation, satisfaction, and positive perception of the game signiﬁcantly
+decreased during the game session. Further studies with a quantitative research design are
+needed to assess Civilization’s actual beneﬁts on learning history and whether it is an
+appropriate game in an educational context. Indeed, other video games can be used during
+history lessons. Craft (2016) used Minecraft to teach high school students about ancient
+Rome’s history. After building Roman temples in a 3D model of Rome, students scored
+higher grades on history and Latin assessments. Assassin’s Creed also seems to be a good
+tool for history lessons, especially considering that this game offers a mode dedicated to
+history learning—the “Discovery Tour” (Gilbert, 2019). Students who played the game
+had a more critical perspective on history, could reconsider their preconceptions of
+historical facts, and could discuss the game’s historical accuracy. Once again, further
+quantitative studies will be needed to conﬁrm the beneﬁts from playing these video games
+on learning history, and the most appropriate conditions for using this tool need to be
+speciﬁed in particular.
+Very few studies speciﬁcally have investigated learning geographical concepts.
+Only one qualitative study found that college students who played SimCity seemed to
+enhance their understanding of urban geography theories (Kim & Shin, 2016).
+Moreover, interviews revealed that students were motivated to learn new skills through
+the game, critically assessed their in-game work, compared the game logic to real-world
+contexts, and experienced development in their geographic creativity through the game.
+Management simulations such as SimCity also are used for social studies and economics learning. Sierra (2019) noticed that playing SimCity helps students understand
+how public sector interventions work. Students also improved their time management,
+critical thinking, and problem-solving skills. Likewise, Foster (2011) found that
+students who played RollerCoaster Tycoon 3 scored signiﬁcantly higher on economics
+and social studies knowledge questionnaires. The students who played FarmVille had a
+better mean score on their managerial accounting ﬁnal exam than those who attended a
+traditional lecture, but this beneﬁt was statistically not signiﬁcant (Krom, 2012). All
+
+Martinez et a
+these ﬁndings indicate that students seem to beneﬁt from certain video games in
+geography, social sciences, and economics learning. However, more studies need to be
+conducted to conﬁrm this beneﬁt.
+
+Physical Education
+Several studies indicated that playing video games can be beneﬁcial for physical
+education. Two studies examined sports knowledge and found that, compared with a
+control group, college students who played a U.S. football video game (Jenny &
+Schary, 2014) or a cricket video game (Jenny et al., 2017) scored higher on sports
+knowledge questionnaires (rules, terminology, positions, etc.) and were interested in
+watching and playing U.S. football or playing cricket. Two other studies demonstrated
+how exergames (physical exercise video games) help to teach physical education. The
+famous exergame Just Dance appears to be a good tool to teach dance. Nyberg and
+Meckbach (2017) observed that students from elementary school learned several dance
+movements effectively through this game. Students discerned the different aspects of
+movements that they learned. Gibbs et al. (2017) also observed that Just Dance helps
+high school students learn dance moves and develop their ability to create new
+movements and choreography. Exergames also seem to be good tools for students’
+motivation in physical education classes. Finco et al. (2015) used Xbox-Kinect exergames only with elementary and middle school students who were unmotivated to
+participate in physical education classes. Compared with a traditional lesson, the games
+stimulated students’ motivation and interest, as the students engaged much more freely
+in physical activities. Moreover, teachers noticed that exergaming improved students’
+social skills as they seemed less introverted and more collaborative with and supportive
+of each other.
+
+Discussion
+This integrative review was conducted to assess the literature on entertainment video
+game use in academic learning methods. Following Siddaway et al.’s (2019) guidelines,
+the literature search yielded 49 articles published between 2005 and 2019, spanning
+almost all academic ﬁelds. The analysis of these articles provides scientiﬁc and
+pedagogical insights on the implementation of entertainment video games in school
+settings and their effects on academic learning.
+First, the literature indicates that the use of entertainment video games for academic
+learning represents a recent and dynamic ﬁeld (83.7% of the selected articles were
+published after 2010). Entertainment video games can be implemented effectively in
+academic curricula across all grades, from preschool to college, and are beneﬁcial in
+almost all academic disciplines. Promising results have been reported particularly in the
+literature and science disciplines (foreign language and mathematics learning,
+Ebrahimzadeh, 2017; Stansbury et al., 2014). However, mixed results were found for
+history (Charsky & Ressler, 2011). Students did not understand a video game-based
+
+1
+method’s relevance in history class, while its usefulness is better perceived for other
+disciplines (Pagnotti & Russell, 2012; Squire & Barab, 2004). All the selected studies
+on entertainment video games and learning history took a qualitative approach; thus,
+further quantitative studies are needed to deﬁne the necessary conditions to improve
+history learning signiﬁcantly through entertainment video games.
+It should be noted that not all academic ﬁelds have been studied to the same extent.
+Foreign language learning is the most widely studied discipline, with 25% of selected
+articles examining the acquisition of a second language. Indeed, the current trend of
+playing online video games allows for interactions between players worldwide and can
+be viewed as an efﬁcient and playful way to practice a foreign language with native
+speakers. In comparison, only one study focused on geographical learning (Kim &
+Shin, 2016), and only two studies examined natural and environmental sciences
+(Herrero et al., 2014; Hobbs et al., 2019). A limitation of this systematic review is the
+failure to address certain disciplines, such as engineering, technology, and arts, because no research focuses directly on these disciplines. They mostly have been studied
+through game design and not through the direct use of video games (Coller & Scott,
+2009; Doerschuk et al., 2013). Developing and designing a video game in class
+enhances programming and creativity skills, but playing already-existing games also
+seems useful for teaching programming or developing artistic creativity. For example,
+Minecraft is a good tool for developing students’ creativity and programming skills, and it
+is accessible even to younger students (Overby & Jones, 2015; Wilkinson et al., 2013).
+Therefore, further studies are needed in several academic domains—including history,
+geography, environmental and natural sciences, programming, and arts—to conﬁrm and
+complete already-existing literature and determine whether entertainment video game use
+in class can beneﬁt all academic learnings.
+As illustrated in Figure 2, most selected articles focused on college and high school
+students, which is probably because video games’ acceptability in education is higher
+for older students. The same bias is found in studies investigating video games’
+cognitive beneﬁts, which focus mainly on college students (for a review, see Bediou
+et al., 2018). However, younger students from middle school already are regular video
+gamers (Oﬂu & Yalcin, 2019) and several games are recommended to ages 3 or 7 years
+and over. Therefore, future studies need to assess whether video games are beneﬁcial
+for students of all ages and in all academic domains, especially domains that are
+currently absent from the scientiﬁc ﬁeld.
+Almost all selected articles reported signiﬁcant beneﬁts from entertainment video
+games on academic learning, but the experimental approach to studying entertainment
+video games’ effects on academic learning remains mostly qualitative. School settings
+are ecological environments that allow for applied research in class but limit experimental control. Control groups and comparisons with a traditional learning method
+often are missing. Half the selected articles are based on qualitative assessments of
+academic learning and did not compare their DGBL methods to a traditional learning
+method or did not perform pretest and posttest learning measures. Although teachers
+and researchers’ observations can be very relevant, a real need exists for studies with a
+Martinez et al
+quantitative approach to conﬁrm and complete qualitative observations, particularly for
+literature, natural and environmental sciences, history, geography, and economics.
+Moreover, it should be noted that all articles were selected in peer-reviewed scientiﬁc
+journals and were more likely to be published as they report meaningful results about
+entertainment video games’ beneﬁts on academic learning. Further studies are needed
+to systematically compare video game use in class with a traditional lecture to determine the precise beneﬁt of video games on academic learning and improve research
+quality in this ﬁeld. These studies need to be pre-registered in order to avoid publication
+bias and improve credibility of ﬁndings (Nosek et al., 2019).
+A ﬁnal issue to address is the mechanisms underlying entertainment video games’
+beneﬁcial effects on academic learning. These mediators between video games and
+learning remain under-examined. The explanatory factor most often presented is
+students’ motivation. Indeed, DGBL leads to stronger student motivation and,
+therefore, to better learning performances (Kim & Shin, 2016; Nordine, 2011;
+O’Rourke et al., 2017). However, aside from this motivational effect, other factors
+also can explain entertainment video games’ beneﬁts on academic learning. Indeed,
+entertainment video games have been proven to enhance cognitive functioning,
+particularly executive functioning (for a review, see Choi et al., 2020), and this
+literature review suggests that some of the video gaming beneﬁts on academic
+learning can be attributed to improved cognitive functioning. Thus, another
+mechanism that explains entertainment video games’ beneﬁts on academic learning
+could be the improvement of cognitive performance due to video gaming practices.
+Some studies already have demonstrated that improvements in working memory,
+spatial abilities, or attention skills as a result of entertainment video gaming can
+explain mathematics and reading improvement directly (Franceschini et al., 2013,
+2017; Novak & Tassell, 2015). Thus, future studies need to identify cognitive
+functions that are most impacted by entertainment video games and related the most
+to academic learning. Moreover, very few studies on cognitive training’s effect on
+academic learning exist, so it is also necessary to deﬁne whether entertainment video
+games integrated into a school curriculum can enhance students’ cognitive functioning and whether this improvement predicts entertainment video games’ beneﬁts
+to academic learning.
+
+Conclusion
+Given the popularity and beneﬁts from entertainment video games on cognition, we
+believed that it was essential to determine whether they could be an effective alternative learning method in educational settings. This systematic review showed
+that entertainment video games are beneﬁcial tools for academic learning and can be
+implemented effectively in almost all academic disciplines and for all grades. Today
+is a favorable era for the use of entertainment video games as tools in the classroom.
+Most schools have the technological means necessary to implement a DGBL method
+in class. Moreover, the entertainment video game market offers a wide range of
+
+choices suitable for diverse academic learning objectives. Despite their beneﬁts,
+entertainment video games are still used rarely in schools. Teachers, parents, and
+even students are not always convinced of their usefulness for learning. Future
+studies need to investigate and highlight entertainment video games’ practical value
+in the education sector further, as well as provide a quantitative assessment of
+academic learning through video gaming and deﬁne what mechanisms mediate
+entertainment video gaming sessions’ effects on academic learning in class. This
+type of research surely will increase video games’ acceptability level in the school
+environment in the future.

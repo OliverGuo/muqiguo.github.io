@@ -1,0 +1,666 @@
+Model-Based and Data-Driven HVAC Control Strategies for Residential Demand Response
+ABSTRACT The implementations of residential demand response (DR) based on heating, ventilation, and
+air conditioning (HVAC) are inseparable from effective control algorithms for coordinating the operating
+schedules of multiple HVAC devices. In this work, both model-based and data-driven HVAC control
+strategies are developed to determine the optimal control actions for HVAC systems. The control objectives
+are to minimize customers’ electricity costs, customers’ discomfort, and the utility-level load violation.
+In the model-based approach, a thermal resistance-capacitance (RC) HVAC model is formulated to capture
+buildings’ thermodynamic behaviors, and a distributed solution algorithm (i.e., alternating direction method
+of multipliers) is applied to determine the day-ahead HVAC operation schedules. In the data-driven approach,
+the neural networks continuously interact with the environment during the training process to learn what
+control actions to take under certain circumstances and then are used for online decision-making. The case
+study is performed on a utility system with one hundred houses. Simulation results demonstrate that the
+model-based approach can save 22% of the total cost compared to the data-driven approach, while the
+data-driven approach does not require outdoor temperature forecast information and its computational speed
+is 46 times faster than that of the model-based approach.
+
+I. INTRODUCTION
+As ELECTRICAL load continues to grow, it is highly
+interesting for power utilities to reduce the system peak
+demand and increase the utilization of electricity infrastructure with minimal investment in power generation and delivery systems. One way to realize this goal is through energy
+storage systems (ESSs) [1]. However, home appliances such
+as heating, ventilation, and air conditioning (HVAC) has
+relatively larger power rating and can also support through
+thermal energy storage [2]. In many cases, the use of HVACs
+for peak load reduction may provide an even lower cost
+solution than the conventional large ESSs [3].
+Currently, most demand response (DR) research focused
+on using industrial and commercial loads as flexible
+resources [4]. The reason is that those electricity users have
+large electricity consumption and are much easier to be controlled by energy management systems. However, 38% of
+the total electricity consumption in America is made up by
+the residential load, which represents a significantly overlooked opportunity [5], [6]. Unlike industrial or commercial
+loads, residential loads are composed of numerous low-power
+home appliances [7]. Moreover, residential customers are
+more concerned about privacy protection, and their electricity
+consumption patterns are highly variable and dynamic [8].
+Substantial effort has been invested in studying load controls
+and optimizations in residential systems. In the literature,
+available methods are categorized as model-based and datadriven [9].
+Model-based approaches calculate the building thermal
+dynamics by formulating equivalent thermal parameter (ETP)
+models with explicit equations. In [10], a linear relationship
+among HVAC coefficient of performance, HVAC power rating, outdoor temperature, and indoor temperature was proposed to capture the temperature dynamics in residential
+houses in direct load control programs. Simulation results
+demonstrated that the accuracy of the proposed model was
+very close to the real performance obtained. In [11], an HVAC
+equivalent thermal parameter model was utilized to evaluate
+the impacts of uncertain parameters (e.g., floor area, thermal resistance, and air change rate) on aggregate DR. The
+study showed that the sensitivities of system performance
+on various uncertain parameters were different, and accurate estimations of important parameter distributions could
+reduce the model uncertainties. In [12], a bi-level direct
+load control-based model was developed, where the upper
+level aimed to minimize the electricity consumption during the DR event, while the lower level minimized endusers’ discomfort. In this work, a thermal resistance-based
+model was applied to calculate the indoor temperature at
+each time. In [13], the resistance-capacitance (RC) model
+was employed to define the thermal dynamics of a building
+zone, where the thermal resistance and capacitance parameters were estimated from the construction data or measurement data by using a parameter identification technique. The
+literature review reveals that many papers assumed the thermal dynamic behaviors of residential houses could be accurately modeled. However, it is not a trivial task to obtain the
+functional relationships in practical applications due to the
+complex thermodynamic behaviors of buildings and ambient weather disturbances. Besides, parameters such as the
+thermal resistance and thermal capacitance of buildings are
+usually not readily available.
+In recent years, with the development of machine learning techniques, considerable attention has been focused on
+using data-driven approaches to solve power system problems
+(e.g. DR) [14]. In data-driven methods, the agents continuously interact with the environment and learn behaviors
+from experience to determine control actions. In [15], model
+predictive control (MPC) based co-scheduling was compared
+to data-driven building automation algorithms. The results
+indicated that both approaches can achieve significant energy
+cost reductions. In [16], a reinforcement learning (RL) based
+bidding strategy was proposed for the HVAC systems in the
+double-auction markets. The results demonstrated that the
+data-driven method performance was similar to the modelbased bidding strategy. Further, in [17], a deep RL based
+algorithm was presented for building HVAC controls. Simulation results showed that the proposed control strategy
+could reduce the energy cost while maintaining the indoor
+temperature within the desired range. In [18], a multi-agent
+Q-learning based approach was employed to determine the energy consumption schedules of home appliances and electric vehicles (EVs). The results suggested that this approach
+could save customers’ electricity costs and accelerate computational speed for making control decisions. In [19], [20],
+the deep deterministic policy gradient (DDPG) algorithm
+was leveraged for continuously controlling the setpoint of a
+multi-zone residential HVAC system for maximizing both the
+economic benefits and the users’ comfort. However, in these
+works, the residential DR controls were only deployed for
+a single household. When considering multiple households,
+most data-driven algorithms have to deal with the exponential
+combination of binary control actions, which easily results in
+an out-of-memory issue when the number of households is
+large [21]. Therefore, the data-driven approaches may not be
+well trained with limited hardware and computational sources
+that are currently available.
+In summary, the discussions on the applicability of the
+model-based method and the data-driven method for residential load control and optimization have been carried
+out separately in the literature. To the best of the authors’
+knowledge, no existing research work focuses on providing a comprehensive comparison of these two types of
+methods and analyzing their respective feasibilities in different application scenarios. In addition, most of the proposed methods, either model-based or data-driven, are only
+deployed for single households and cannot be easily extended
+to large-scale residential demand control and optimization.
+Our work aims to fill the above research gaps by comparing the performance and application scenarios of different approaches. Both the model-based and the data-driven
+HVAC control strategies are developed for residential DR
+programs in this work. The control objectives are to minimize customers’ electricity costs, customers’ discomfort
+costs, and the utility-level load violation. In the model-based
+approach, the indoor temperature is calculated by the RC
+model, and the alternating direction method of multipliers
+(ADMM) algorithm is applied to calculate the day-ahead
+HVAC operation schedules. In the data-driven approach,
+the DDPG algorithm is chosen to locally determine real-time
+HVAC control actions. Our contributions are summarized as
+follows:
+1) applying a distributed system architecture to decrease
+the computational complexity and the action space dimension
+of the central controller,
+2) describing a distributed model-based solution algorithm
+for large-scale residential DR,
+3) presenting a data-driven HVAC control strategy for
+residential DR without the knowledge of building models and
+weather forecasting data, and
+4) comparing conventional thermostat-based, RC modelbased, and data-driven approaches and demonstrating their
+application scenarios.
+The structure of this paper is as follows, Section II explains
+the distributed system architecture of residential DR programs, Section III presents the model-based HVAC control
+strategy for residential DR programs, Section IV provides the
+data-driven HVAC control strategy for residential DR programs, Section V conducts simulation study, and Section VI
+concludes the paper.
+
+II. RESIDENTIAL DR SYSTEM ARCHITECTURE
+There are centralized and distributed system architectures
+for residential DR programs [22]. Centralized DR applies
+to small systems with customers sharing the same control
+targets. The control center conducts global optimization and
+requires full information from each house. It also computes
+and conducts the control decisions for customers. The disadvantages of the centralized approach are that it may raise
+concerns about customer privacy, and, with the increase of
+customers, the computational burden of the control center
+would also be increased.
+Distributed residential DR conducts local optimization at
+each house and exchanges only limited information between
+agents. Therefore, customers do not have to release their
+device operation schedule information to others. As most
+computation is solved by local home energy management
+systems (HEMSs), in parallel, reducing the computational
+burden for the centralized system and leading a more scalable
+architecture. In this work, a distributed system architecture
+is adopted, including a utility, and multiple residential customers, as illustrated in Figure 1.
+
+The benefit of a distributed system architecture over a
+centralized system architecture is that the computational
+complexity and the action space dimension of the central
+controller are significantly reduced when the number of DR
+participants is large. Residential customers can also keep
+the operation status of their responsive devices private to
+protect privacy. In this work, the HVAC system within each
+house is used as the DR resource, and it is assumed that the
+HEMS within each house is responsible for communicating
+with the utility on behalf of customers, solving optimization
+problems in the model-based approach, providing training for
+the neural networks in the data-driven approach, and making
+HVAC control actions.
+
+
+III. MODEL-BASED HVAC CONTROL
+In the model-based HVAC control, the centralized residential DR management problem maximizes the social welfare,
+including optimizing electricity purchasing cost from the
+external grid, customers’ discomfort, and the utility-level
+load violation. The inputs to the model are the 24-hour
+weather forecast and the non-responsive load (i.e., load other
+than the HVAC) information. The output from the model is
+the HVAC operation schedule for the next day.
+A. OBJECTIVE FUNCTION
+The residential DR objective function is formulated as:
+
+
+where the first and the second terms are the utility company’s electricity purchasing cost, the third term represents
+indoor temperature discomfort, and the last term calculates
+the utility-level load violation charge.
+Note the quadratic function is used to represent the utility
+company’s electricity purchasing cost [23]–[25]. In this study,
+the quadratic function is used for modeling dynamic electricity pricing in the distribution network and encouraging
+residential customers to change their electricity consumption
+patterns (by shifting the load from peak to off-peak hours)
+to flatten the load curve. Also, the utility-level load violation
+charge in eq. (1) is defined as the product of the load violation
+charge rate and the amount of aggregated load that violates
+the maximum contracted load limit. The amount of load violation is calculated from eq. (2). In this study, the utility-level
+load violation rate is $10/kW.
+
+
+B. CONSTRAINTS
+First, the indoor temperature at each time is calculated based
+on a simplified version of the RC thermal model in [26].
+The RC model has a thermal resistance parameter (R) and
+a thermal capacitance (C) parameter, which are refined from
+historical data by using linear regressions. Due to its explicit
+model structure, the RC model can be applied to model the
+optimal controls of HVACs. In this section, the inputs to
+the RC model is the 24-hour outdoor temperature forecast.
+The HVAC model is provided as follows:
+ 
+where eq. (3) captures the indoor temperature of house i
+at each time, eq. (4) is the lower/upper indoor temperature
+limit constraint in each house, and eq. (5) quantifies customers’ discomfort based on the difference between actual
+indoor temperature and the indoor temperature setpoint.
+Table 1 provides detailed HVAC parameter settings. In this
+work, we assume the HVAC power factor is 0.81. However,
+this value can be adjusted based on the HVAC characteristics
+in actual implementation.
+The load consumption of each house is composed of the
+HVAC load and the non-responsive load, as given by (6).
+
+
+Finally, the power supply should be equal to the sum of
+the power consumption of all the customers at the point of
+common coupling (PCC) at all times, as given by:
+
+
+C. SOLUTION ALGORITHM
+The social welfare maximization model in (1)-(7) is a
+large mixed-integer nonlinear programming (MINLP) problem [27]. For example, if there are 100 houses participating
+in the residential DR program, the optimization problem
+would contain 9,600 binary variables, 28,992 continuous
+variables, and 57,792 constraints. Further, as the number of
+DR participants increases, the problem size would become
+even larger, making it difficult to be solved in a centralized
+manner. Because of the massive problem size and customers’
+privacy concerns, the centralized social welfare maximization
+model cannot be directly solved. Therefore, the ADMM is
+introduced as the solution algorithm for the model-based
+HVAC control strategy by decomposing the big centralized
+problem into small sub-problems. The ADMM is an iterative
+solution algorithm and is effective for solving optimization
+problems with separable objectives (e.g., the problem shown
+below) [28]:
+
+
+where f (x) and g(z) are separable objectives, x and z are two
+sets of variables, and eq. (9) is the equality coupling constraint
+since it has variables from both set x and set z.
+The augmented Lagrangian function in ADMM is given
+by:
+
+where y represents dual variables of the equality coupling
+constraints, and ρ is a penalty weight factor. As there are no
+uniform criteria for selecting ρ value in literature, the penalty
+factor must be tuned to get the best performance [29]. In this
+paper, 2 is chosen as the ρ value.
+Also, in the d
+th iteration of ADMM, the primary and
+secondary residuals are calculated by:
+
+To decouple variables x and z and to decompose the original centralized model, within each iteration, the solution
+of z from the previous iteration is substituted to eq. (10),
+and the augmented Lagrangian function is minimized over
+variable x. Then, in the same iteration, the updated solution
+of x is substituted to eq. (10), and the augmented Lagrangian
+function is minimized over variable z. This solving process
+continues until the primary and the secondary residuals in
+ADMM converge.
+In summary, the algorithm for updating the x, z, and y
+values in the dth iteration is given in eqs. (13)-(15):
+
+D. PROBLEM DECOMPOSITION
+In the centralized residential DR model, eqs. (16) and (17) are
+used to calculate the primary and the secondary residuals in
+ADMM:
+
+f (x) represents an individual customer’s objective, which
+minimizes the indoor temperature discomfort. The decision
+variable x is the HVAC operating schedule for the next day.
+g(z) is the utility company’s objective, which minimizes the
+electricity purchasing cost and the utility-level load violation
+charge. The decision variable z is the amount of electricity
+that needs to be purchased from the external grid at each
+time. Further, the power balance equation (7) is the equality
+coupling constraint since it has both the utility-level and
+house-level variables. Therefore, the centralized residential
+DR model is decomposed into one utility-level sub-problem
+and NN house-level sub-problems.
+When updating the solution for variable x, the HEMS in
+each residential house minimizes customer’s discomfort and
+the primary residual. The house-level objective function at the
+dth iteration is given by:
+
+According to eqs. (13)-(15), eq. (10) is first minimized over
+x with z fixed. Therefore, the first term in eq. (18) can be
+viewed as the f (x) in eq. (10), and the g(z) term in eq. (10) is
+neglected in the objective function (18). The remaining terms
+in eq. (18) are penalty terms to penalize the violations for the
+equality coupling constraint in eq. (7). The constraints for the
+house-level sub-problem are eqs. (3)-(6).
+When updating the solution for variable z, the utility minimizes the power purchasing cost from the external grid,
+the utility-level load violation, and the primary residual. The
+utility-level objective function at the dth iteration is represented in (19).
+
+According to eqs. (13)-(15), the first, the second, and the
+fifth term in eq. (19) can be viewed as the g(z) in eq. (10),
+and the f (x) term in eq. (10) is neglected in the objective
+function (19). Finally, the remaining terms in eq. (19) are
+penalty terms to penalize the violations for equality coupling constraint in eq. (7). The constraint in the utility-level
+sub-problem is eq. (2).
+Once the utility-level problem is solved, the dual variable
+of the equality coupling constraint (i.e., power balance equation) will be updated accordingly by the utility:
+
+To conclude, the process of solving the model-based
+approach is given in Algorithm 1.
+
+IV. DATA-DRIVEN HVAC CONTROL
+In practical applications, it may be challenging to develop
+an accurate model of indoor temperature dynamics with high
+accuracy. In such cases, the data-driven HVAC control has
+been gaining research interest. The data-driven HVAC control should have the same objective function as that in the
+model-based HVAC control problem. However, there is no
+governing model required to calculate the indoor temperature. In this section, the DDPG algorithm, which is an RL
+algorithm that combines the deep Q network and the deep
+policy gradient, is applied to determine the HVAC control
+action in each house [30]. The inputs to the HEMS are the
+current outdoor temperature and current non-responsive load.
+The output from the HEMS is the HVAC control action for the
+current time interval.
+
+A. SYSTEM STATES
+It is assumed that the current system state is only related to the
+system state and control action in the previous time slot, and
+is not related to the system states and actions in the other time
+slots. Therefore, the HVAC control problem is formulated
+as a finite Markov decision process [31]. Four features are
+identified to represent the system states, including:
+
+B. CONTROL ACTIONS
+The control actions (switching the HVAC on/off) are determined by the HEMS based on the system states. Once a
+control action is made, the HEMS is not allowed to change
+the HVAC operation status until the next time step comes
+(15 minutes in this study to avoid the HVAC over-cooling or
+short-cycling problem).
+C. REWARD FUNCTIONS
+The objective of the residential DR program is to minimize
+the sum of power purchasing cost, customers’ discomfort,
+and utility-level load violation cost. Therefore, the immediate
+reward of customer i at each time is calculated by:
+
+where the first term is the electricity cost of customer i at
+each time, the second term calculates the discomfort cost of
+customer i at each time, and the third term is the load violation
+charge when the utility-level load exceeds the contracted load
+limit.
+The electricity cost term in eq. (21) is calculated by:
+
+
+where eq. (22) calculates the total power consumption of
+customer i at each time, eq. (23) calculates the electricity
+cost of customer i at each time, B
+hvac
+i,t
+is a binary variable
+that indicates the HVAC operation status (1 means on, and
+0 means off).
+The discomfort in eq. (21) is defined as the difference
+between the actual indoor temperature and the indoor temperature setpoint, as calculated by (5). Finally, the amount of
+utility-level load violation is calculated by eq. (2), and the
+utility-level load violation rate is $10/kW.
+D. SOLUTION ALGORITHM
+The goal of HVAC controls is to maximize the sum of accumulative reward Ri =
+PT
+t=1
+ri,t
+in each house. However,
+due to the complex thermodynamic behavior of buildings and
+ambient weather disturbances, it may be difficult to develop a
+function to describe indoor temperature dynamics with high
+accuracy. To overcome this challenge, the DDPG algorithm
+is selected as the solution algorithm for solving the HVAC
+control problem [32].
+As illustrated in Figure 2, the DDPG is composed of
+four neural networks, including an actor behavior network
+π(s|θ
+π
+), an actor target network π’(s|θ
+π’
+), a critic behavior
+network Q(s, a|θ
+Q), and a critic target network Q’(s, a|θ
+Q’
+).
+The inputs to the actor networks are the system states, and
+the outputs from the actor networks are deterministic control
+actions. The inputs to the critic networks are system states
+and control actions generated by the actor network, and the
+outputs from the critic networks are the action values Q,
+which represent the quality of the actions in gaining the future
+rewards.
+
+During the training process, the equations for updating the
+critic networks are given by:
+
+Eq. (24) calculates the target Q value of house i at time
+step t, where ri,j,t
+is the reward for the current time step
+and Q
+’
+i,j,t+1
+(si,j,t+1, ai,j,t+1|θ
+Q
+0
+i
+) is the output from the critic
+target network. The symbol j is the index of samples selected
+to update the neural networks. The function of the critic
+target network is to provide a stable target value for the critic
+behavior network to learn and to avoid iteration divergence,
+and γ is a discount factor between 0 and 1. The function of
+the discount factor is to avoid infinite future sums. Eq. (25) is
+the loss function that minimizes the mean square error (MSE)
+between the behavior Q value Qi,j,t+1(si,j,t+1, ai,j,t+1|θ
+Q
+i
+)
+and the target Q value yi,j,t
+. The symbol M is the total
+number of samples selected to update the neural networks.
+The algorithm is expected to converge when the difference
+between the behavior Q value and the target Q value is small
+enough. Eq. (26) updates the critic behavior network by using
+the first-order derivative of the loss function to the network
+parameters θ
+Q
+i,k
+, where η
+Q is the learning rate for the critic
+network. Eq. (27) updates the critic target network at a slower
+rate than the critic behavior network, where α is a small value
+close to zero. The purpose of the slow update is to stabilize
+the learning process.
+The equations for updating the actor networks are given by:
+
+
+where eq. (28) is the loss function that maximizes the
+expected total reward under the policy π(s|θ
+π
+i
+), eq. (29)
+updates the weights in the actor behavior network, and
+eq. (30) updates the weights in the actor target network.
+The details of the training process in the DDPG algorithm are provided in Algorithm 2. Within each episode, the
+actor behavior network first generates a continuous value
+between 0 and 1 according to the current system state,
+and outputs the HVAC control action based on the logic in
+eq. (31). Then the replay buffer stores the transition (si,t
+, ai,t
+,
+ri,t
+, si,t+1) and randomly draws a mini-batch for training.
+After that, the current system state, the next system state,
+and the immediate reward are imported to the critic networks to evaluate the Q values. Finally, the weights in the
+critic networks are updated by the gradient descent method
+based on eq. (26)-(27), and the weights in the actor networks are also updated by the gradient descent method based
+on eq. (29)-(30).
+
+
+This data-driven approach continuously interacts with the
+environment through offline training to learn what control
+actions to take under certain circumstances. Once the neural
+networks are well trained, the data-driven approach is applied
+for online implementations.
+
+
+E. INFORMATION EXCHANGE AMONG AGENTS
+Figure 3 summarizes the process of information exchange
+between the utility and residential customers in the
+data-driven HVAC control strategy during the training
+process.
+Within each training episode, customers first send their
+non-responsive load information to the utility. Then the utility
+calculates the aggregated non-responsive load and broadcasts
+this information to all the customers. After receiving the
+aggregated non-responsive load messages, the HEMS in each
+house determines the operation status of the HVAC based on
+the local system state and reports the household aggregated
+load information to the utility. Finally, the utility calculates
+the electricity price and broadcasts it to all the customers.
+During the implementation period, the HEMS within each
+house automatically pulls the current outdoor temperature
+information from a local weather station and locally determines the HVAC control actions.
+
+V. SIMULATION STUDY
+The model-based and data-driven HVAC control strategies
+are implemented in a one-utility one hundred-house test
+system. The code for the model-based method is solved
+by GAMS, and the code for the data-driven method is
+implemented on the open-source deep learning platform TensorFlow [33], [34]. The results of these two approaches are
+compared with that of the conventional thermostat-based
+HVAC control method that is developed in MATLAB to
+demonstrate their performance. The hardware environment is
+a laptop with Intel
+R CoreTM i7-7600U 2.8 GHz CPU, and
+16.00 GM RAM. Note, in the conventional control approach,
+the HVAC system always maintains its current on/off status
+unless the indoor temperature violates the lower/upper temperature limit constraint [35].
+A. PARAMETER SETTINGS
+As shown in Figure 4, the outdoor temperature data [36]
+of a summer day (the purple line) is used as the input data
+for the model-based approach and as the testing data for the
+data-driven approach. The outdoor temperature data [36] of
+another 29 days in summer (the green lines) are used as
+training data to train the neural networks in the data-driven
+approach.
+
+Figure 5 shows the non-responsive load profile [37]. In this
+work, random samples following normal distributions are
+generated based on Figure 5 for each house to provide variation.
+The HVAC power rating is set to 3.5 kW. The indoor
+temperature setpoint of each house is set as a random
+number between 21◦C and 23◦C to provide variation.
+The lower/upper temperature limit is one Celsius degree
+below/above the indoor temperature setpoint in each house.
+The discomfort weight factor is set to 0.05 $/◦C. In practical
+applications, the discomfort weight factor may vary from case
+to case, and it should be determined by the DR participants
+depending on whether they prefer more comfort or more
+money-saving.
+The parameter settings of the DDPG algorithm are provided in V-B. There are two hidden layers in both the actor
+networks and the critic networks. Within each hidden layer,
+there are 20 neurons. The rectified linear unit (ReLU) is
+selected as the activation function for the actor network,
+and the hyperbolic tangent function (tanh) is selected as the
+activation function for the critic network. The learning rate
+is set to 0.01 and the decay factor in the critic network is set
+to 1. The number of episodes is set to 600.
+
+B. SIMULATION RESULTS
+Three test cases are designed to demonstrate the advantages
+and limitations of each approach. In Case 1, the conventional thermostat-based HVAC control strategy is applied.
+In Case 2, the model-based approach is used to manage the
+operating schedule of HVACs. Finally, Case 3 implements the
+data-driven HVAC control strategy for managing the residential DR.
+
+Figure 6 shows the resulting utility-level load profiles
+solved by different approaches. In the conventional approach,
+the utility-level peak load is 280.39 kW, which is above the
+system contracted load limit of 255 kW. In Case 1, the peak
+load appears at 6:15 pm. In the model-based approach,
+the utility-level peak load is 254.77 kW, which satisfies the
+utility-level requirement. In Case 2, the peak load appears at
+5:15 pm. In the data-driven approach, the utility-level peak
+load is 256.52 kW, which is slightly above the contracted load
+limit but still considerably improves the system performance
+as compared to the conventional approach. In Case 3, the peak
+load appears at 7:45 pm.
+
+Table 3 compares the average cost of residential customers
+in different cases. The customers with the model-based control strategy are expected to have greater cost savings and less
+discomfort than the other two cases, and the load violation
+charge in the model-based approach is $0.
+The average electricity cost and average discomfort cost
+in the data-driven approach are the highest among the
+three cases. However, since the utility-level load violation
+in the data-driven approach is much smaller than that in
+the conventional approach, the overall performance of the
+data-driven HVAC control is still better than the conventional thermostat-based control approach. Therefore, both
+the model-based and data-driven HVAC control strategies
+can reduce the utility-level peak load, but the model-based
+approach outperforms the data-driven approach in terms of
+average electricity cost, average discomfort cost, and peak
+load reduction.
+
+Figure 7 compares the indoor temperature of house 1 by
+using the three different approaches. The indoor temperature
+setpoint is 22◦C. The minimum indoor temperature bound is
+set to 21◦C and the maximum indoor temperature bound is set
+to 23◦C. From the graph, it is observed that the indoor temperature in the model-based approach has the least deviation
+from the setpoint and is always within the preferred bound,
+while the indoor temperature in the other two approaches may
+violate the temperature constraints in some time intervals.
+
+Table 4 shows the computational time and input data
+requirements of each approach. From the table, it can be concluded that the conventional thermostat-based HVAC control
+strategy has the lowest requirements on input data, and it can
+instantaneously output the control actions. However, there is
+no coordination among the responsive devices in this control
+mode, and therefore it cannot conduct the residential DR.
+In contrast, the model-based approach can significantly
+reduce the utility-level load violation and reduces customers’
+electricity costs, but this method requires accurate building models and 24-hour outdoor temperature forecasts. The
+model-based HVAC control also has the longest computational time among the three approaches (more than 46 times
+longer than the data-driven approach), which restricts its
+potential for online control applications.
+Finally, even though the load profile in the data-driven
+approach may slightly exceed the contracted load limit,
+the data-driven approach can still considerably reduce the
+utility-level load violation. The biggest advantage of the
+data-driven over the model-based HVAC control strategy
+is that it significantly reduces the requirements on input
+data. Furthermore, once the neural networks are well trained,
+it only takes 2.76 sec for the agent in each house to determine
+HVAC control actions.
+To conclude, the application scenarios of the different
+HVAC control strategies are listed as follows:
+• Conventional: cases where the smart thermostat and/or
+communication channels between the utility and residential customers are not available.
+• Model-based: day-ahead HVAC operation scheduling,
+requiring accurate building models and outdoor temperature forecast.
+• Data-driven: online HVAC controls or cases where the
+building models and/or the outdoor temperature forecast
+information are not accurate/available.
+
+C. ECONOMIC FEASIBILITY
+In this work, it is assumed that residential customers
+are essentially responsible for paying the upfront cost of
+installing HEMS if there is no government-subsidy program
+in place. It is undeniable that the installation fee may impede
+customers’ enthusiasm for participating in the residential
+DR programs, especially when the economic outcome is
+unclear [38]. However, from Table 3, it is observed that the
+total costs are reduced by 34.16% and 16.12% in model-based
+and data-driven approaches, respectively. As time goes by,
+the HEMS will eventually pay for itself. Moreover, as the
+technology matures, the cost of the HEMS is expected to
+drop in the future. Therefore, it is reasonable and economic
+to assume that a HEMS equipment is installed in each house.
+
+VI. CONCLUSION
+In this paper, both model-based and data-driven HVAC control strategies are developed for residential DR management programs. In the model-based approach, the buildings’
+thermal dynamic behaviors are represented with explicit
+equations, and the original centralized social welfare maximization problem is decomposed and distributively solved by
+the local HEMS. In the data-driven approach, it is assumed
+that detailed building models and/or day-ahead outdoor temperature forecasting are not available, and the agents continuously interact with the environment to learn competitive
+HVAC control actions. The simulation study is performed
+on a one hundred-house system, and the results demonstrate that both model-based and data-driven approaches can
+reduce the utility-level load violation. However, the average
+cost in the model-based approach is lower than that in the
+data-driven approach. Another observation is that after the
+neural networks are well trained, the computational time of
+the data-driven approach is much less than the model-based
+approach. Therefore, the data-driven method is applicable
+to online residential DR programs. Finally, the data-driven
+approach significantly reduces the input data requirements
+since it does not need accurate building models or weather
+forecast information to determine HVAC control actions.
+In the real world, the uncertainties regarding residential
+HVAC controls come from several aspects such as the outdoor
+temperature, non-responsive load, and the electricity price.
+For further improvement of the developed method against
+modeling uncertainties, in the model-based method, stochastic programming or robust optimization can be applied to
+mitigate the impact of uncertain input parameters. In the
+data-driven method, one worthy future direction can be to
+re-shape the reward function in the reinforcement learning
+method with risk measurements, such as expected value or
+conditional value-at-risk (CVaR), which considers the potential impacts from unseen uncertainties on the decision outcomes and enhances the robustness of the control policy.
+Finally, another interesting topic would be to combine the
+model-based method with the data-driven method to formulate a hybrid residential demand control strategy, which
+will integrate the advantages of both methods and result
+in improved control performance and higher computational
+efficiency.
+The results in this comparative study may provide guidelines for decision makers when choosing different implementations of HVAC-based DR program, as well as inputs to
+future research works.
+
+ACKNOWLEDGMENT
+This manuscript has been authored by UT-Battelle, LLC
+under Contract No. DE-AC05-00OR22725 with the US
+Department of Energy. The United States Government retains
+and the publisher, by accepting the article for publication,
+acknowledges that the United States Government retains a
+non-exclusive, paid-up, irrevocable, worldwide license to
+publish or reproduce the published form of this manuscript, or
+allow others to do so, for United States Government purposes.
+The Department of Energy will provide public access to these
+results of federally sponsored research in accordance with the
+DOE Public Access Plan (http://energy.gov/downloads/doepublic-access-plan).
+

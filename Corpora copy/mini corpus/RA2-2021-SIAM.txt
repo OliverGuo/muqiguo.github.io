@@ -1,0 +1,641 @@
+1. Introduction. Graphs are everywhere. They appear, for example, in physics, engineering, biology, climate science, expectedly every time discrete entities inter- act through links of some nature [2]. They offer a conceptually simple but gen- eral enough modeling approach to real-life networks of various degrees of complex- ity. But as very large graphs have become commonplace in scientific research and real-world applications-online social networks or the brain are relevant examples- a range of graph-theoretical methods, algorithms, and computational problems on graphs face scalability issues. In a recent series of works on the continuum limit of graphs, graphons have emerged as an appropriate limit object, defined when the num- ber of nodes goes to infinity [30, 7, 4, 29]. They offer both an elegant and efficient workaround allowing for the analysis of massive graphs, while simultaneously provid- ing a nonparametric network generation method that reaches far beyond the classical stochastic block model [22]. The versatility of graphons and their practical interest is revealed in their present-day use in many diverse domains, e.g., network identifica- tion [16], power network dynamics [26], control theory [18], epidemics spreading [40], reaction-diffusion [25], synchronization of oscillators [32, 34], and game theory [36, 9]. However, the majority of these examples focus on a specific type of diffusion, namely Fickean diffusion, while alternative random-walk processes are usually preferred to build network algorithms for node ranking [8] or community detection [12]. This constitutes an important limitation that we address in this paper. 
+Diffusion on finite graphs is an extensive topic of research, which is relevant from both a theoretical and an applied perspective, and is often modeled as some variant of a random walk process. Random walks on graphs are useful in many ways. They can, for example, identify clusters of well-connected nodes, also known as communities [39, 12], or measure the relative importance or centrality of the nodes in a networked system [8, 28, 27], and as mentioned they are a paradigm for various diffusive and spreading processes on graphs [31]. There are overall three dominant classes of random walks. The first one is the discrete-time walk, in which case the walker performs a new jump at every discrete time step. The destination node of the jump is uniformly chosen among the neighbors in the graph structure. Second, there is the continuous- time, node-centric variant. The difference resides in that the jumps take place at any point in time, as dictated by a continuous random variable governing the resting time of the walker on a node. Finally, the third class corresponds to the continuous-time edge-centric walk, which can interestingly be viewed as the discrete version of the heat equation. These are two different forms of normal diffusion equations that can be derived from Fick's law, which essentially implies a flux from regions of high to low concentration, across a concentration gradient. The difference between the node- centric and edge-centric processes is clear when observing the matrices controlling their dynamics, the random-walk, and the combinatorial Laplacian, respectively [37]. 
+In this work, we first revisit existing results for the continuum limit of the discrete heat equation and some nonlinear variants. This limit was the subject of a series of papers recently [32, 33, 34], but a random walk interpretation is useful and was still lacking. We then concentrate on the continuum limit of the node-centric case, hence considering the limit of the random-walk Laplacian operator. In general, for non- regular graphs, this operator differs from the combinatorial Laplacian, which is often preferred in algorithmic implementations such as spectral clustering [41], because it properly accounts for the heterogeneous degree distributions observed in real-life networks. The random-walk operator in this work shouldn't be confused with another operator common in the machine learning community, also called a random-walk Laplacian, which has an established convergence to the Laplace-Beltrami operator [20, 3]. 
+Our approach is based on graph-limit theory [29], which does not rely on the assumption that the data generating the graphs is sampled from a distribution on a manifold [19, 38]. Our main contribution is to prove the convergence of the space- discrete problem to a continuous problem in some appropriate setting. The problem on the continuum then falls in the realm of nonlocal evolution equations, as it is a volume-constrained diffusion problem [11]. Its analysis is limited to some consequences of spectral theory applied to our operators. 
+Importantly, graph-limit theory defines a framework for the convergence of graphs of increasing size, but it may as well be seen as a possibly random graph-generating method. From that perspective, our work demonstrates that one may analyze the continuum model, to draw valid conclusions regarding the dynamics on the graphs generated by that model. As such, we answer positively the question of transferabil- ity, showing that we can avoid the cost of repeatedly storing each graph, designing, visualizing, or analyzing it, or computing the associated spectral properties, a com- putationally demanding task for large graphs [35]. 
+The paper is organized as follows. Section 2 contains the basics about graph- limit theory and introduces graphons as the limit objects of dense graph sequences. A short presentation of the main random walk models opens section 3. Then follows a random-walk interpretation of the continuum limit of the heat equation on graphs, before we focus on our main concern, the continuous-time node-centric walk. Well-posedness of the continuum problem is the subject of section 4. The main convergence results are presented in section 5. These results apply to dense graphs and follow from a semigroup approach. We distinguish between different scenarios: first the discrete problem on graphs is sampled from the continuum version and then the other way around. We then proceed with an analysis of the relaxation time of the process based on spectral theory in section 6. In section 7, we revisit the discrete-time problem, before the conclusion of section 8. 
+
+2. Preliminaries. We first set the notation and recall definitions for various graph-related concepts, closely following [42]. For the sake of self-consistency, we then introduce key notions about graph-limit theory [29]. 
+2.1. Graphs. Let G = (V,E) be a graph where V is a finite set of vertices 
+(or nodes) and E \subset V \times V is the set of edges. We consider a symmetric adjacency 
+relation \sim such that the graph is undirected. Each edge may be attributed a weight, 
+making the otherwise unweighted graph into a weighted one. Let | V | and | E| denote 
+the number of vertices and edges, respectively. The density \rho of the graph is the 
+fraction of edges that are actually present, compared with the maximum possible 
+number of connections: \rho = | E| . When it makes sense to take the limit | V | \rightarrow \infty , (| V | ) 
+2 
+one says the graph is dense if | E| = O(| V | 2), and sparse otherwise. The number of neighbors of node v is denoted by deg(v). In weighted graphs, str(v) stands for the weighted degree, or strength, of node v, namely the sum of the weights of all edges attached to v. For the sake of simplicity, the notation str(v) will henceforth also apply to unweighted graphs and will refer to the degree, thereby 
+identifying unweighted graphs with graphs with binary weights, either 0 or 1. A path between two nodes v, w is an ordered sequence of nodes [v1, . . . , vn] such that v = v1, w = vn, and vi \sim vi+1, i = 1,...,n - 1. A graph is connected if every pair of nodes is linked by a path. Let \BbbM n be the space of n \times n matrices. The adjacency matrix A \in \BbbM n of a graph G with n vertices is the square matrix where Aij is the weight of the edge between nodes with labels i and j and zero if no such edge exists. 
+Unweighted graphs have a binary adjacency matrix. 
+2.2. Graphons. Recent research [30, 7, 4, 29] provides a theoretical framework to study the convergence of dense graph sequences. As a starting point, the so-called cut (or rectangular) metric allows us to define the notion of a Cauchy sequence of graphs of an increasing number of nodes. Their limit object, called a graphon, is a symmetric Lebesgue-measurable function W : [0, 1]2 \rightarrow [0, 1].1 Therefore, the space of graphons is essentially the completion of the set of finite graphs seen as step functions (see section 2.3), endowed with the so-called cut metric,2 which we introduce hereafter in its graphon version [29, 32, 17]. The cut norm for graphons is given by 
+\bigm| \int \int \bigm| 
+to the usual Lp norm of the function defined on [0, 1]2 for 1 \leq p \leq \infty . The following 
+1Note that this choice of domain and range is somehow restrictive by comparison with other works where graphons may be unbounded and only feature some integrability property. However, we will work with the standard definition because it achieves the desired degree of generality. 
+2There is a different, though equivalent, notion of convergence for dense graph sequences. It is called subgraph convergence and is defined via associated sequences of induced subgraph densities [7]. 
+W(x,y)dxdy\bigm| \bigm| , where the supremum is over measurable subsets of [0,1]. The notation \| W\| p refers 
+\| W\| \square = sup \bigm| \bigm|  S,T\subset \frakM [0,1]\bigm| S\times T \bigm| 
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+2326 J. PETIT, R. LAMBIOTTE, AND T. CARLETTI inequalities are immediate consequences of this definition and of the inclusion theorem 
+of Lp spaces on finite measure spaces: 
+(2.1) \| W\| \square \leq \| W\| 1 \leq \| W\| 2 \leq \| W\| \infty \leq 1. 
+Graphons are unique up to a composition with an invertible measure-preserving map- ping \phi : [0,1] \rightarrow [0,1], which amounts to the invariance of the limit graphon with respect to a relabeling of the nodes of the graphs. The graphons W\phi defined by W \phi (x, y) = W (\phi (x), \phi (y)) and W are in the same equivalence class. The cut metric \delta \square between two graphons U and W is therefore defined by 
+(2.2) \delta \square (U,W)= inf \| U\phi - W\| \square , \phi \in \frakL 
+where \frakL is the space of the Lebesgue measurable bijections on the unit interval. The definition is similar for the \delta p (\cdot , \cdot ) metrics based on the Lp norms, 1 \leq p \leq \infty . Since two different graphons U, W can satisfy \delta \square (U, W ) = 0, strictly speaking, \delta \square is a metric only when we identify such graphons U and W [7]. Let us denote by \BbbW the space of graphons after this identification. 
+It holds that the metric space (\BbbW , \delta \square ) is compact; namely, sequences of graphons possess at least one convergent subsequence in the cut metric. Unless explicitly men- tioned, in this work we assume the convergence of graphons in the L2 norm topology. Hence, by completeness, Cauchy sequences in (\BbbW , \| \cdot , \cdot \| 2 ) converge in the L2 metric, and thus also in the \delta 2 and \delta \square metrics, the limit being the same. 
+Many attributes of graphs have natural counterparts in the realm of graphons. 
+A prominent example is the notion of strength, which plays a key role in this paper. 
+For a given graphon, we let k(x) := \int 1 W (x, y)dy denote the (generalized) degree 0 
+function. Since in this work graphons are bounded function W : [0, 1]2 \rightarrow [0, 1], the degree function is bounded: 0 \leq k(x) \leq 1 for all x \in [0, 1]. 
+2.3. Graphs as step graphons and graphs from graphon models. The 
+connection between graphs and graphons is a two-way street. First, graphs can be 
+mapped to the graphon space through a step function representation of their adjacency 
+matrix. Let \scrP = \{ P1,...,Pn\} be a uniform partition of [0,1], where Pi = \bigl[ i - 1, i \bigr) nn 
+for i = 1,...,n - 1, and Pn = \bigl[ n - 1,1\bigr] . Then let \eta : \BbbM n \rightarrow \BbbW be a mapping such 
+n 
+that (2.3) \eta (G)(x, y) = \sum \sum Aij \chi Pi (x)\chi Pj (y), 
+nn i=1 j=1 
+where \chi S is the indicator function of set S and A the adjacency matrix of graph G. The mapping thus defines the step (or empirical) graphon \eta (G) associated to G. Similarly, \eta maps vectors u = (u1 , . . . , un ) to piecewise constant functions on [0, 1], so that 
+n (2.4) \eta (u)(x) = \sum ui\chi Pi (x). 
+i=1 
+On the other hand, graphons can be considered as deterministic or (exchange- able [14]) random graph models, but in this work we adopt and present the deter- ministic setting. Let W \in \BbbW be a graphon, and let the integer n denote the desired number of nodes in the graph. Then W generates a dense graph by assigning weights 
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+RANDOM WALKS ON GRAPHONS 2327 
+to the edges, which can be done in two ways. In a first approach, the weight Aij of the edge between two nodes i and j equals the mean value of W on the corresponding cell of the partition of the unit square: 
+\int \int 
+(2.5) Aij = n2 W(x,y)dxdy, i,j = 1,...,n. Pi Pj 
+This results in the so-called quotient graph W/\scrP . One can prove that there is almost everywhere pointwise convergence of the associated step graphon \eta (W/\scrP ) to W (see [7, Lemma 3.2]). 
+A second approach to generate a graph from a given graphon W \in \BbbW is to define \biggl( i j\biggr) 
+(2.6) Aij =W n,n , i,j=1,...,n, 
+in a way that is reminiscent of W -random graphs [30]. Let us denote W[n] the corre- sponding graph. Observe that \eta \bigl( W[n]\bigr) \rightarrow W pointwise at every point of continuity of W [32]. 
+2.4. Graphons as kernels of operators. Every graphon W \in \BbbW can be con- sidered as a kernel, giving rise to the definition of an integral operator \scrW , typically \scrW : L2[0, 1] \rightarrow L2[0, 1] in this work, given by 
+\int 1 0 
+(2.7) \scrW f(x) = Other choices of the Lebesgue spaces in the definition of \scrW may, however, be appro- 
+W(x,y)f(y)dy. priate. The composition (product) of two such operators is given by 
+\int 1 
+(2.8) \scrU \scrW f(x) = where \circ is the operator product between the graphon kernels, defined by 
+\int 1 0 
+Observe that, in general, U \circ W is not a symmetric function. We denote W \circ n the opera- tor product of the kernel, as opposed to the pointwise product W n(x, y) = (W (x, y))n, which is associated to the operator \scrW n. It follows from (2.9) that W\circ n(x,y) = \int W(x,z1)W(z1,z2)...W(zn - 1,y)dz1dz2 ...dzn - 1. 
+3. Random walks and their continuum limit. The aim of this section is twofold. First, we introduce the three main random-walk models. Second, we give a random-walk perspective on the continuum limit of the discrete heat equation, namely the edge-centric walk. We then formally derive the continuum limit of the so-called node-centric walk. Our approach implies that edges are directed, because they are associated with possible moves of the walker, with an origin and a destination. There- fore, the symmetry of the adjacency matrix indicates that there exists a reciprocal to each edge and that both have the same weight. Further, we may assume that the graph is connected; otherwise, the random walk is considered independently on each connected component, that is, each connected subgraph that is connected to no other additional node of the original graph. 
+(2.9) (U \circ W )(x, y) = 
+U (x, z)W (z, y)dz \forall x, y \in [0, 1]. 
+0 
+(U \circ W)(x,y)f(y)dy, 
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+2328 J. PETIT, R. LAMBIOTTE, AND T. CARLETTI 
+3.1. Random walks in discrete and continuous time. In discrete time, we introduce a random walk on a connected graph with n nodes as a Markov chain where V is the state space and the transition probability from node vi to vj is encoded in the n \times n matrix with elements 
+\Biggl\{ Aij/str(vi) ifvi\sim vj, (3.1) Tij = 0 otherwise, 
+where str(.) refers to the weighted degree of a node, as defined in section 2.1. Let p(\ell ) = (p1(\ell ), . . . , pn(\ell )) \in [0, 1]n be the row vector of residence probabilities on the nodes; that is, pi(\ell ) is the probability that the walker is located on node number i after \ell steps. Then 
+(3.2) p(\ell + 1) = p(\ell )T, 
+where T = D - 1A. Here D \in \BbbM n denotes the diagonal matrix of the strengths, or degrees in unweighted graphs. Observe that T is indeed a probability (transition) matrix since 
+(3.4) u\.i(t)= 
+nn1n 
+(3.3) \sum Tij = \sum \bigl( D - 1A\bigr) j=1 j=1 
+ij 
+= 
+str(vi ) 
+\sum Aij = 1 j=1 
+\forall i \in \{ 1,...,n\} . 
+
+It follows from (3.2) that for any \ell \in \BbbN , p(\ell ) = p(0)T\ell . In the continuous-time node-centric variant, when the walker arrives on node v, a 
+probability density function \psi v(t) determines the waiting time until the next jump, in which case a destination node is selected uniformly among the neighboring ones. We limit ourselves to Poissonian walks, for which the waiting time follows a memoryless exponential distribution \psi v(t) = \mu v exp( - \mu vt) with rate \mu v (t \geq 0). The master equation for ui(t), the probability of finding the walker on node i at time t, reads as 
+\sum n 1 
+\mu jujstr(vj)Aji - \mu iui, i=1,...,n. 
+A detailed derivation of this equation can be found, for example, in [1]. Assume that in(3.4)therate\mu j onthenodesisthesameforallnodes: \mu j =\kappa >0forallj. Then \kappa sets the timescale, and after a scaling of time, t \mapsto \rightarrow \kappa t, under matrix form the master equation (3.4) rewrites as 
+(3.5) u\. = u(D - 1A - I), 
+where u(t) = (u1(t),...,un(t)) is a row vector. The matrix Lrw = D - 1A - I is the random-walk Laplacian. Moreover, it is easy to show that the discrete-time walk and the continuous-time version share the same asymptotic state and that it is propor- tional to (str(v1), . . . , str(vn)). 
+In the edge-centric variant,3 the rate of the exponential distribution is propor- tional to the strength of the node, \mu j = \kappa str(vj ), allowing for a constant rate of jump 
+3The fact that this walk can be formulated in terms of edges dynamics, where the walker passively follows the activations of the edges, explains the alternative designation of ``fluid model"" [31]. In this edge-centric viewpoint, the walker resides on a node until an edge becomes available, at which time the jump is performed. In the Markovian walk considered here, the interactivation times of the edges would follow an exponential distribution. The master equation of this model is derived, for instance, in [21]. It is the graph version of the heat equation on a continuum. 
+
+j=1 
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+RANDOM WALKS ON GRAPHONS 2329 
+across all edges of the graph. This implies that jumps no longer occur more frequently across edges because they originate from nodes with a low degree (or strength). In matrix form, (3.4) rewrites in this case as 
+(3.6) u\. = \kappa u(A - D). 
+Here L = A - D is called the combinatorial Laplacian of the graph. This model exhibits a homogeneous asymptotic state. Observe that the number of jumps is not trajectory-independent, as is the case in both the discrete- and the continuous-time node-centric walks. 
+3.2. Formal derivation of the continuum limit. Let us first take a closer look at the edge-centric walk, and assume for simplicity an unweighted graph. If \kappa > 0, then \kappa deg(vj) \rightarrow \infty if deg(vj) \rightarrow \infty , which will happen for some if not all nodes of a dense graph. The walker would perform jumps at an infinite rate, which is physically unrealistic. 
+Normalizing the rate of the process according to the number of vertices avoids this situation. Indeed, if \kappa depends on n in a suitable manner, say \kappa n = n1 , the resulting rate in each node remains bounded: \kappa n deg(vj) \leq 1 for all j independently of the number of nodes. This explains the normalization that was required to justify the continuum limit of (3.6) in [32]. 
+In contrast with the edge-centric model, no normalization of the rate parameter \kappa of the node-centric walk is needed when the number of nodes grows to infinity since the rate does not depend on the structure of the graph. The continuum limit therefore directly applies to the unmodified discrete model. For a formal derivation in this case, consider again the vector u(t) satisfying (3.5) and the uniform partition \scrP = \{ P1, . . . , Pn\} of [0, 1], with u(\cdot , t) := \eta (u(t)) an associated step function on the interval. Let k\eta denote the generalized degree function (defined in subsection 2.2) of the step graphon \eta (G). Observe that this degree function is actually the normalized strength (or also the degree when the graph is unweighted) of the nodes in G: 
+(3.7) str(vi) = n for all x \in Pi. It follows that 
+j=1 Pj nA n\int A 
+j=1 Pj 
+\sum n\int \sum n\int Aijdy = n 
+\eta (G)(x,y)dy = nk\eta (x) 
+ 
+(3.8) 
+u(y,t)dy nk (y)u(y,t)dy= 
+\int 1 \eta (G)(x,y) k (y) 
+\sum ij j=1 str(vj) 
+uj(t) = \sum n ij j=1 Pj str(vj) 
+\sum n \int Aij = n 
+u(y,t)dy for every x \in Pi. Hence, the node-centric walk on the graph has an equivalent 
+ 
+j=1 Pj \eta continuum domain formulation: 
+\partial \int 1 \eta (G)(x,y) (3.9) \partial tu(x,t)= k (y) u(x,t)dy - u(x,t). 
+0\eta  The goal of this work is to prove the convergence in the appropriate norm of the 
+solution of (3.9) to the solution of the evolution equation on the continuum \partial \int 1 W(x,y) 
+(3.10) \partial tw(x,t)= 
+0 
+k(y) w(y,t)dy - w(x,t), 
+0 \eta 
+ 
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+2330 J. PETIT, R. LAMBIOTTE, AND T. CARLETTI 
+where W is the limit graphon of \eta (G) in the L2 metric. Observe that similarly, a discrete equation of the form (3.5) is obtained starting 
+from (3.10) when the graph is W/\scrP or W[n]. 
+4. Well-posedness of the continuum initial value problem. Before we prove the above-mentioned convergence, let us determine whether the up-to-now for- mal (3.10), together with initial condition w(x, 0) = g(x), defines a well-posed initial value problem (IVP). 
+4.1. Connectedness of the graphon. Care will be taken first regarding how connectedness in the graph translates to graphons and how it affects the integrability of W/k. The following definition follows from [23, 29]. 
+Definition 4.1. A graphon W is connected if \int every S \in \frakM [0, 1] with Lebesgue measure \mu (S) \in (0, 1). 
+W(x,y)dxdy > 0 for 
+Notice at this point that the connectedness (or lack thereof) of the graphs Gn of the sequence does not imply that of their limit [23]. Indeed, one could always make all the (otherwise disconnected) graphs of the sequence connected by adding each time a node connected to all other nodes. This would leave the limit unchanged. And conversely, disconnecting one node in each connected graph of the sequence would not change the limit either. Also note that if a graphon W is (dis)connected, then so are all the kernels in the same equivalence class (see [23, Theorem 1.16]). Let us now look into the implications of the connectedness of the graphon on the positiveness of the degree function and hence on the definition of the random-walk Laplacian operator. 
+Proposition 4.2. Let W be a connected graphon; then k > 0 \mu -almost every- where (a.e.). 
+Proof. Let Nx = \{ y \in [0,1] : W(x,y) > 0\} denote the neighborhood of x \in [0,1] in W. Since W is connected, \mu (Nx) > 0 for \mu -almost every x (see [23, Lemma 5.1]), and therefore 
+\int 
+Nx 
+Remark 4.3. The connectedness of the graphon does not imply, however, that the degree function is bounded away from zero, namely that there exists a constant c such that 0 < c \leq k on [0,1]. Take, for instance, W(x,y) = xmym, with m > 0, for which k(x) = xm/(m + 1). 
+(4.1) k(x) = 
+W (x, y)dy > 0 for \mu -a.e. x. 
+That k can be arbitrarily small influences the integrability of the kernel K(x, y) := W(x,y) in (3.10), as discussed in the following remark. 
+S\times ([0,1]\setminus S) 
+
+k(y) Remark 4.4. The connectedness of the graphon does not imply that the integral 
+kernel K(x,y) is in Lp[0,1]2 for p > 1. Consider, for example, the binary graphon 
+W = \chi x\alpha +y\alpha \leq 1 for \alpha > 0, where the subscript x\alpha +y\alpha \leq 1 is short for the set of 
+couples (x,y) \in [0,1]2 such that the inequality is satisfied. By a direct integration, 1 
+k(x)=(1 - x\alpha )\alpha . Theintegral 
+\int \int p \int 1 1 - p (4.2) \| K\| p = (1 - y\alpha ) - \alpha dxdy = (1 - y\alpha ) \alpha dy 
+x\alpha +y\alpha \leq 1 0 isfiniteifandonlyifp<1+\alpha . Hence,KisinL2[0,1]onlyif\alpha >1,andin 
+particular, the kernel K of the threshold graphon [13] obtained with \alpha = 1 is not 
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+RANDOM WALKS ON GRAPHONS 2331 square-integrable. However, using Fubini-Tonelli it is easy to show that \| K\| 1 = 1 for 
+all connected graphons, such that K is always in L1[0,1]2. Based on the preceding remark, in order to ensure that the kernel is square- 
+integrable, we will make the following assumption. 
+Assumption 4.5. There exists a constant c such that 0 < c \leq k on [0, 1]. 
+If W is bounded away from zero, so is k, but graphons with localized support may still fulfill the assumption, as shown in Figure 1. 
+0 0.5 
+11 0.8 0.8 0.6 0.6 0.4 0.4 0.2 0.2 
+W (x, y) 
+degree 
+  
+100 0 0.5 1 
+0 0.250.50.75 1 yx 
+Fig. 1. The stripe graphon W(x,y) = \chi | x - y| \leq 1/4(x,y) (left panel) and its degree function (right panel). Observe that the support of W is localized on a subset of the square, but k is bounded away from zero. 
+4.2. The IVP with functions in \bfitL \bftwo [0, 1]. Based on the operator in the right- hand side of (3.10), we come to the following definition. 
+Definition 4.6. Let W \in \BbbW be a connected graphon that verifies Assumption 4.5. The random-walk Laplacian operator \scrL rw : L2[0, 1] \rightarrow L2[0, 1] is defined by 
+\int 1 W(x,y) 
+rw 
+(4.4) \scrK f(x) = is a compact Hilbert-Schmidt operator. Following Definition 4.6, the continuum IVP 
+where we will consider g \in Lp[0,1], with either p = 2 or p = \infty . Theorem 4.7. Let W \in \BbbW be connected and satisfying Assumption 4.5. Then 
+there exists a unique classical solution to the IVP (4.5) with g \in L2 [0, 1]. Proof. The operator \scrK is linear and continuous and hence bounded. It follows 
+that \scrL rw is linear and bounded. Hence, it is closed. Therefore, \scrL rw is the infinitesimal 
+(4.3) \scrL  By the definition of W and Assumption 4.5, K(x, y) = W (x, y)/k(y) is a Hilbert- 
+f(x) = 
+k(y) f(y)dy - f(x). Schmidt kernel and \scrK : L2 [0, 1] \rightarrow L2 [0, 1] defined by 
+
+k(y) f(y)dy \forall x \in [0,1] and f \in L [0,1] (4.5a) \partial w(x, t) = \scrL rw w(x, t), 
+has the form 
+\partial t (4.5b) w(x, 0) = g(x), 
+0 
+\int 1 W(x,y) 2 
+
+0 
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+x 
+k(x) 
+2332 J. PETIT, R. LAMBIOTTE, AND T. CARLETTI generator of the (uniformly and thus) strongly continuous semigroup 
+\scrL r w t 
+Remark 4.8 (classical solution). By the definition of the classical solution of the abstract Cauchy problem (4.5), the orbit maps t \in \BbbR + \mapsto \rightarrow w(x,t) \in L2[0,1] are continuously differentiable. 
+Remark 4.9. The asymptotic steady state w\infty of (4.5) follows from \scrL rww\infty = 0 and is proportional to the degree, w\infty \propto k. 
+4.3. Positivity. The continuum IVP (4.5) would lose physical relevance if its solution were to lose the positivity of the initial condition, w(\cdot ,0) \geq 0. Before we proceed to a proof of positivity, let us first introduce a notation. For g \in L\infty [0,1], and 1 \leq p \leq \infty , let \scrM g : Lp[0,1] \rightarrow Lp[0,1] denote the multiplication operator defined by \scrM gf(x) = g(x)f(x). 
+Proposition 4.10. Let W be a connected graphon satisfying Assumption 4.5, and let w(\cdot ,0) = g \geq 0 be the initial condition of IVP (4.5). Then the classical solution w(x, t) of the IVP satisfies w(\cdot , t) \geq 0 for all t \geq 0. 
+Proof. Let us define \scrL \widetilde = \scrM 1/k\scrL rw\scrM k, yielding by a direct calculation 1\int 1 
+r w 
+(4.6) \scrT  Proposition 6.2 in [15, Chapter 2] leads to the conclusion. 
+(t) = e 
+:= 
+\ell ! . 
+\sum \infty t \ell ( \scrL r w ) \ell 
+
+W(x,y)f(y,t)dy - f(x,t) \forall f \in L2[0,1]. 
+Further, let u = \scrM 1/kw with w(x,t) be the solution of (4.5) such that 
+\epsilon > 0 arbitrarily, and let v(x, t) = u(x, t) + \epsilon t. Observe that \scrL v = \scrL u, and hence \partial v - \scrL v= \partial u+\epsilon - \scrL u=\epsilon . 
+(4.7) \scrL f(x,t)= 
+\widetilde 
+k(x) 0 
+\ell =0 
+
+\partial u=\scrM \partial w=\scrM \scrL rww=\scrM \scrL rw\scrM u=\scrL u. 
+\partial t1/k\partial t1/k 1/kk\widetilde  Since w(\cdot , t) \geq 0 \Leftarrow \Rightarrow u(\cdot , t) \geq 0, it remains to prove the positivity of u(\cdot , t). Choose 
+\scrL v(a, \tau ) = \partial t 
+W (a, y)v(y, \tau )dy - v(a, \tau ) \geq 
+\widetilde 
+\partial t \widetilde \partial t \widetilde 
+Let us show that v(x, t) reaches its minimum at some (a, 0), a \in [0, 1]. Assume by contradiction that there exists (a, \tau ) \in [0, 1] \times (0, T ) for some T > 0 such that v(x,t) \geq v(a,\tau ) for all x and t. It follows that 
+1 \int 1 k(a) 0 
+v(a,\tau )\int 1 k(a) 0 
+W (a, y)dy - v(a, \tau ) = 0. Hence, \partial v(a,\tau ) = \scrL v(a,\tau )+\epsilon = \epsilon > 0, which is in contradiction with the assumption 
+of v attaining its minimum in (a,\tau ) with \tau > 0, so \tau = 0. We have thus proved v(x, t) \geq v(a, 0), so that 
+u(x,t)+\epsilon t=v(x,t)\geq v(a,0)=u(a,0)= g(a) \geq 0. k(a) 
+Since \epsilon is arbitrary, this leads to the conclusion. 
+\widetilde \widetilde 
+ 
+\widetilde 
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+RANDOM WALKS ON GRAPHONS 2333 
+4.4. The IVP with probability density functions. Let us observe that when w(\cdot ,t) in (4.5) is a probability density function, it is natural to consider w(\cdot ,t) \in L1[0, 1], and one may define \scrL rw as a mapping L1[0, 1] \rightarrow L1[0, 1]. Indeed, as in (4.4) let us still write \scrK the integral part of \scrL rw defined on L1[0,1], namely 
+(4.8) 
+\leq sup \bigm|  | | f | | 1 =1 [0,1]2 \bigm| k(y) 
+sup 
+| | f | | 1 =1 
+\int 1 \bigm| \int 1 \| \scrK \| 1,1 = sup \bigm| \bigm| 
+\bigm| 
+K(x, y)f(y)dy\bigm| \bigm| dx \bigm| 
+\bigm| \bigm| 
+f(y)\bigm| dxdy = \bigm| 
+\scrK f(x) = 
+| | f| | 1=1 0 \bigm| 0 \int \bigm| \bigm| W (x, y) 
+\int 
+| f(y)| dy = 1. [0,1] 
+\int 1 0 
+K(x, y)f(y)dy \forall x \in [0, 1], this time with f \in L1[0,1] and K(x,y) = W(x,y) for all (x,y) \in [0,1]2. 
+
+k(y) By Fubini-Tonelli, the operator norm \| \scrK \| 1,1 := \| \scrK \| L1[0,1]\rightarrow L1[0,1] satisfies 
+
+This, combined with the fact that \| \scrK f\| 1 = 1 if f = 1, shows that \| \scrK \| 1,1 = 1. Therefore, even without Assumption 4.5, \scrL rw is a bounded mapping of L1[0,1] into itself. Additionally, Theorem 4.7 about the existence and unicity of a solution to the IVP has a similar formulation and proof in the present case. Further, the positivity established in subsection 4.3 also applies here, and this would still not require Assumption 4.5. The only significant change in the proof of Proposition 4.10 would be to use the auxiliary operator \scrL rw\scrM k instead of \scrL \widetilde = \scrM 1/k\scrL rw\scrM k. When 
+w(\cdot , 0) \geq 0, we further have conservation of the L1 norm: \partial \partial \int 1 \partial \int 1 
+(4.9) \partial t \| w(\cdot , t)\| 1 = \partial t | w(x, t)| dx = \partial t w(x, t)dx = 0. 00 
+In the remainder of the paper, for the sake of simplicity and in order to benefit from the Hilbert space framework at a later stage, we will, however, assume that W satisfies Assumption 4.5. This allows us to define \scrL rw as an operator acting on L2[0,1], and we do not use L1 but rather the stronger L2 norms also present in other works about dynamics on graphons [32, 34]. 
+5. Convergence on dense graphs. This section is divided in three parts. The first two parts show that the solution of the discretized problem on W/\scrP or W[n] converges to that of the continuum IVP in norm \| \cdot \| C([0,T],L2[0,1]) for any T > 0. The goal of the third part is to prove that the discrete problem can be approximated by its continuum version. The convergence theorems of this section are proved using two lemmas in Appendix A. 
+5.1. Convergence on the quotient graph \bfitW /\bfscrP . The continuous formulation of the discrete problem associated to (4.5) on the quotient graph reads as4 
+(5.1a) \partial u(x, t) = \scrL rw u(x, t), \partial t \square 
+(5.1b) u(x, 0) = g\square (x), 
+4The subscript \square refers to fact that the averaging is performed on square cells of [0,1]2. To lighten the notations, we do not refer explicitly to the number of nodes of the graph, so we write u(x,t) instead of, for instance, u(n)(x,t). 
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+2334 J. PETIT, R. LAMBIOTTE, AND T. CARLETTI where the random-walk Laplacian operator on W/\scrP satisfies 
+rw \int 1 \eta (W/\scrP )(x,y) 2 (5.2) \scrL \square f(x)= k (y) f(y)dy - f(x) \forall f\in L[0,1], 
+0\square  and the initial condition is averaged on each cell of the partition as 
+\sum n \int 
+
+(5.3) g\square (x) = n Based on the following proposition, operator \scrL rw is well-defined. 
+\square 
+Proposition 5.1. Let W be a connected graphon satisfying Assumption 4.5; then the strength of every node of the quotient graph determined by the partition \scrP = \{ P1,...,Pn\} of [0,1] is positive. 
+Proof. The strength of the ith node vi, i = 1,...,n, is given by str(vi) = nk\square (x) for every x \in Pi. We have 
+(5.4) k\square (x) = where Aij was defined by (2.5). Hence, 
+\int \sum n \int k\square (x) = n 
+\int \int 1 Pi 0 
+\int 1 \sum n 0 j=1 
+1 \sum n Aij \chi Pj (y)dy = n Aij 
+j=1 
+\forall x \in Pi, 
+\int 
+i=1 Pi 
+g(y)dy\chi Pi (x) \forall x \in [0, 1]. 
+W (x\prime , y\prime )dy\prime dx\prime = n showing that k\square (x) \geq c, where c > 0 is the constant from Assumption 4.5. 
+Remark 5.2. It follows that the finite-dimensional IVP (5.1) on the quotient graph has a unique solution given by et\scrL \square g\square . 
+Theorem 5.3 (convergence with W/\scrP ). Let W be a connected graphon satisfy- ing Assumption 4.5, and let w(x,t) be the solution of IVP (4.5) with g \in L\infty [0,1]. Further, let u(x, t) be the solution of the associated discrete problem (5.1). Then for all t \in \BbbR + it holds that 
+\| u(\cdot ,t) - w(\cdot ,t)\| 2 \rightarrow 0 as n\rightarrow \infty . Proof. Using Remark 5.2, by the Minkowski inequality we have 
+\| u(\cdot , t) - w(\cdot , t)\| 2 = \bigm\| \bigm\| et\scrL \square g\square - et\scrL g\bigm\| \bigm\| 2 
+\bigm\| \bigm\| \sum \infty tk \sum \infty tk\bigm\| \bigm\| = \bigm\| \bigm\| \bigm\| k ! \scrL k\square g \square - k ! \scrL k g \bigm\| \bigm\| \bigm\| 
+k=0 k=0 2 
+(\ast ) 
+Pij=1Pj 
+Pi 
+W (x\prime , y\prime )dy\prime dx\prime = n 
+k(x\prime )dx\prime , 
+\leq \| g\square - g\| 2 + \sum \infty tk \bigm\| \bigm\| \scrL k\square g\square - \scrL kg\bigm\| \bigm\| 2 . k=1 k! \underbrace{} \underbrace{} 
+(5.5) Let us write \scrL rw = \scrK - \scrI , where \scrK is the operator previously defined in (4.4) and 
+\scrI is the identity operator. We have a similar decomposition \scrL rw = \scrK \square - \scrI for the \square 
+Laplacianofthestepgraphon. Fork\geq 1and0\leq m\leq k,letuswrite\alpha mk = 
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+RANDOM WALKS ON GRAPHONS 2335 ( - 1)m\bigl( k\bigr) and consider (\ast ) in the right-hand side of (5.5). Using Newton's binomial 
+m 
+theorem, we have \bigm\| \bigm\| \scrL k\square g\square - \scrL kg\bigm\| \bigm\| 2 = \bigm\| \bigm\| (\scrK \square - \scrI )kg\square - (\scrK - \scrI )kg\bigm\| \bigm\| 2 
+\bigm\| \bigm\| k k \bigm\| \bigm\| 
+\leq \bigm\| \bigm\|  with | \alpha mk | = \bigl( k \bigr) , and using Lemma A.1, 
+m 
+= \bigm\| \bigm\| \bigm\| m=0 
+\bigm\| \bigm\| k - 1 
+\alpha mk\scrK \square 
+g\square - 
+\alpha mk\scrK g\bigm\| \bigm\| \bigm\| 2 
+\sum k - m \sum k - m 
+\sum \bigm\| m=0 
+\bigl( k - m \scrK \square 
+m=0 
+g\square - \scrK 
+\bigm\| \bigm\|  g\bigm\| \bigm\| +\| \alpha kk(g\square - g)\| 2, 
+\bigm\| 2 
+\alpha mk 
+k - m \bigr) 
+k - 1 \biggl( k\biggr)  \leq \sum \bigm\| \bigm\| \bigl( \scrK k - m - \scrK k - m\bigr) g\bigm\| \bigm\| +\| (g\square - g)\| . 
+(5.6) By Assumption 4.5 and Proposition 5.1, there exists some constant c > 0 such that 
+m=0m\square 2 2 \underbrace{} \underbrace{} 
+(\ast \ast ) 
+ 
+k\square (y) \geq c for all y \in [0,1]. Further, 0 \leq W \leq 1 on [0,1]2, and so 
+\bigm\| \bigm\| \eta ( W / \scrP ) \bigm\| \bigm\| \bigm\| \bigm\| 1 \bigm\| \bigm\| 1 (5.7) \| K\square \| 2 =\bigm\| \bigm\| \leq \| \eta (W/\scrP )\| \bigm\| \bigm\| \leq =:\beta \square , 
+\bigm\| k\square \bigm\| 2\bigm\| k\square \bigm\| c 22 
+where K\square denotes the integral kernel of \scrK \square . Following the steps of a calculation provided in Appendix B, where we also define 
+\beta := max \{ \| K\| 2, \beta \square \} \geq 1, we obtain that (5.8) \| u(\cdot , t) - w(\cdot , t)\| 2 \leq \| g\square - g\| 2et + \| K\square - K\| 2\| g\| 2te2\beta t. 
+\underbrace{} \underbrace{} 
+(\ast \ast \ast ) By the Lebesgue differentiation theorem, g\square \rightarrow g pointwise for almost every 
+x \in [0, 1] as n \rightarrow \infty , so that (5.9) \| g\square - g\| 2 - - - \rightarrow 0 
+n\rightarrow 0 using the boundedness of g [32]. Let us consider (\ast \ast \ast ) in (5.8): 
+2 \int \biggl( \eta (W/\scrP )(x,y) W(x,y)\biggr) 2 
+\| K\square - K\| 2 = \leq ess sup 1 
+\leq \beta 4 \int \bigl( \eta (W/\scrP )(x, y)(k(y) - k\square (y))\bigr) 2dxdy [0,1]2 
+(5.10) \leq \beta 4 \bigl( \| k - k\square \| 2 + \| W - \eta (W/\scrP )\| 2\bigr) . 
+- 
+dxdy \bigl( \eta (W/\scrP )(x, y)k(y) - W (x, y)k\square (y)\bigr) 2dxdy 
+ 
+[0,1]2 k\square (y) y\in [0,1] k\square 2 (y)k2(y) [0,1]2 
+k(y) 
+\int 
+
++\beta 4 \int [0,1]2 
+\bigl( (W(x,y) - \eta (W/\scrP )(x,y))k\square (y)\bigr) 2dxdy, and because \| \eta (W/\scrP )\| 2 \leq 1 and \| k\square \| 2 \leq 1, 
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+2336 J. PETIT, R. LAMBIOTTE, AND T. CARLETTI By the Cauchy-Schwarz inequality, 
+\| k - k\square \| 2 = \leq 
+\biggr) 2 dy 
+(5.14) \scrL [n]f(x)= 0 
+k (y) f(y)dy - f(x) \forall f \in L [0,1], [n] 
+\int 1 \biggl( \int 1 00 
+(W(y,z) - \eta (W/\scrP )(y,z))dz \int 1\int 1 2 
+(W(y,z) - \eta (W/\scrP )(y,z)) dzdy 
+00 = \| W - \eta (W/\scrP )\| 2, 
+which together with (5.10) yields (5.11) \| K\square - K\| 2 \leq 2\beta 4\| W - \eta (W/\scrP )\| 2. 
+By the same argument leading to (5.9), we have \| W - \eta (W/\scrP )\| 2 \rightarrow 0 as n \rightarrow \infty , which with (5.11) implies 
+(5.12) \| K\square - K\| 2 - - - \rightarrow 0. n\rightarrow 0 
+Combining (5.8), (5.9), and (5.12) leads to the conclusion. 
+5.2. Convergence on the sampled graph \bfitW [\bfitn ]. The case of the discrete problem on W[n] can be handled similarly as the discrete problem on W/\scrP , and the convergence theorem follows mainly from the observation in subsection 2.3 that W[n] \rightarrow W at every point of continuity of W. The necessary convergence in L2 will follow from the supplemental assumption that the graphon is a.e. continuous. The discrete problem (in its step function form) associated to (4.5) on the sampled graph W[n] reads as 
+(5.13a) \partial u(x, t) = \scrL rw u(x, t), \partial t [n] 
+(5.13b) u(x, 0) = g\square (x), where the random-walk Laplacian operator on W[n] satisfies 
+rw \int 1 \eta \bigl( W[n]\bigr) (x,y) 2 
+
+and the initial condition is again averaged on each cell of the partition as in (5.3). One needs to assume sufficiently large n to guarantee k[n] to be bounded away from 0 and thus the Laplacian to be well-defined. 
+Theorem 5.4 (convergence with W[n]). Let W be a connected, a.e. continu- ous graphon satisfying Assumption 4.5, and let w(x,t) be the solution of IVP (4.5) with g \in L\infty [0,1]. Further, let u(x,t) be the solution of the associated discrete prob- lem (5.13). Then for all t \in \BbbR + it holds that 
+\| u(\cdot ,t) - w(\cdot ,t)\| 2 \rightarrow 0 as n\rightarrow \infty . The proof is similar to that of Theorem 5.3. 
+Remark 5.5. The initial condition could have been sampled in a fashion similar to that of the graphon, to yield the step function g[n] = \sum ni=1 g \bigl( i \bigr) \chi Pi . A.e. con- 
+n tinuity of g would ensure that \| g - g[n]\| 2 \rightarrow 0 when n \rightarrow \infty and would be part 
+of the hypothesis of a convergence theorem. The proof of Theorem 5.4 would only require minor changes, which are similar to those discussed next in the new context of subsection 5.3. 
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+RANDOM WALKS ON GRAPHONS 2337 
+5.3. Convergence for a sequence of discrete problems. This time we con- sider a sequence of problems defined on graphs with an increasing number of nodes. We assume that the sequence of dense connected graphs, say (Gn), converges to a limit graphon W in the L2 metric, in the sense that \| \eta (Gn) - W\| 2 \rightarrow 0 as n \rightarrow \infty . Let kn denote the degree function of the empirical graphon \eta (Gn). Consider the family of discrete problems under the mapping \eta : 
+(5.15a) \partial u(x, t) = \scrL rw u(x, t), \partial t n 
+(5.15b) u(x, 0) = gn(x) \in L2[0, 1], where the random-walk Laplacian operator \scrL rw satisfies 
+rw \int 1 \eta (Gn)(x,y) (5.16) \scrL n f(x)= k(y) f(y)dy - f(x) \forall f\in L[0,1]. 
+0n Similarly as before, we write \scrL rw = \scrK - \scrI . 
+\bigm\| nn\bigm\| 2 mnn2 m=0 
+n 
+k - 1 \biggl( k\biggr)  +\sum \bigm\| \bigl( \scrK k - m - \scrK k - m\bigr) g\bigm\| +\| (g - g)\| , 
+m=0 m \bigm\| n \bigm\| 2 n 2 where again the first term right of the inequality is new. In fashion similar to the 
+proof of Theorem 5.3, with \beta := max \bigl\{ \| K\| 2, | | 1 | | \infty \bigr\} we have kn 
+\infty k - 1 \sum tk\sum \biggl( k\biggr) \ell - m 
+\| u(\cdot ,t) - w(\cdot ,t)\| 2 \leq k! m \| \scrK n (gn - g)\| 2 k=1 m=0 
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
++ \| gn - g\| 2et + \| Kn - K\| 2\| g\| 2te2\beta t. 
+2 
+
+nn 
+Theorem 5.6 (convergence with (Gn)). Let (Gn) be a sequence of connected graphs that converges in the L2 metric to a connected graphon W satisfying Assump- tion 4.5. Let w(x,t) be the solution of the IVP (4.5) associated to W with initial condition w(\cdot , 0) = g \in L2[0, 1]. Further, let u(x, t) be the solution of the correspond- ing discrete problem (5.15), and assume that \| gn - g\| 2 \rightarrow 0 as n \rightarrow \infty . Then for all t \in \BbbR + it holds that 
+\| u(\cdot ,t) - w(\cdot ,t)\| 2 \rightarrow 0 as n\rightarrow \infty . 
+Proof. The proof follows the same steps as those of Theorem 5.3. However, using Lemma A.1 to obtain (5.6) is now prohibited due to the initial condition of a discrete problem no longer resulting from an averaging of the continuous IVP. Consider a sufficiently large n such that the degree function of the empirical graphon satisfies kn \geq c for some constant c > 0. Not relying this time on Lemma A.1, we write 
+\| \scrK \ell - mg - \scrK k - mg\| = \| \scrK \ell - mg - \scrK \ell - mg + \scrK \ell - mg - \scrK k - mg\| nn2nnnn2 
+\leq \| \scrK \ell - m(g - g)\| + \| (\scrK \ell - m - \scrK \ell - m)g\| , nn2n 2 
+with the first term in the right-hand side newly present. Following the same steps leading to (5.6), we obtain 
+k - 1 \biggl( k\biggr)  \bigm\| \scrL kg - \scrL kg\bigm\| \leq \sum \| \scrK \ell - m(g - g)\| 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+2338 J. PETIT, R. LAMBIOTTE, AND T. CARLETTI Using\| \scrK k - m\| \leq \beta k - m \leq \beta k and\sum k - 1 \bigl( k\bigr) \leq 2k,wehave 
+m=0 m \infty 
+\infty k - 1 \sum tk \sum \biggl( k\biggr) 
+\sum tk k! m n n 2 k! n 2 n 2 
+\| \scrK \ell - m(g k=1 m=0 k=1 
+leading to \| u(\cdot , t) - w(\cdot , t)\| 2 \leq \| gn - g\| 2 \bigl( et + e2\beta t\bigr) + \| Kn - K\| 2\| g\| 2te2\beta t. 
+Remark 5.7 (on the use of the L2 metric). As mentioned in subsection 2.2, the convergence \eta (Gn) \rightarrow n\rightarrow \infty W in the L2 metric implies the convergence in the cut metric, but the converse is not true. Hence, a meaningful question is to determine whether a convergence result similar to Theorem 5.6 could be formulated assuming only convergence of the empirical graphon in the cut metric. This question is not treated here, and it remains to be seen whether it is compatible with the semigroup approach. However, this matter is formulated as a possible follow-up in the conclusion. Further, we should note that a first step towards a (partial) response is the equivalence between the convergence in the cut metric and the L1 metric established in [24, Lemma 10.2] in the case of so-called random-free graphons. This terminology refers specifically to \{ 0, 1\} -valued graphons, but what actually matters is the sampling procedure of a graph based on the graphon to be deterministic [24, Remark D.2]. In this particular case, the use of the cut metric would thus still mean working in a Lebesgue space. 
+6. Relaxation. The evolution of a system towards its asymptotic state w\infty starting from any initial condition is know as relaxation. The so-called relaxation time characterizes the rate of this evolution. In the continuum limit of the node- centric walk, it is determined by the spectral properties of \scrK in a way reminiscent of random walks on finite graphs. For the node-centric continuous-time walk, we will show now that this rate can be exponential. Let us define a normalized adjacency operator, which is then used in the definition of a normalized Laplacian. 
+Definition 6.1 (normalized adjacency operator). Under Assumption 4.5, let the normalized adjacency operator be the integral operator \scrA norm : L2[0, 1] \rightarrow L2[0, 1] defined by \scrA norm = \scrM 1/\surd k \scrK \scrM \surd k. 
+Observe that under Assumption 4.5 the kernel W(x,y)/\sqrt{} k(x)k(y) of \scrA norm is square-integrable and symmetric. Hence, \scrA norm is a compact, self-adjoint Hilbert- Schmidt integral operator and the Hilbert-Schmidt theorem applies. Therefore, there exists an orthonormal basis of eigenfunctions \{ \phi m\} with associated eigenvalues \theta m, so that operator \scrA norm has the canonical form 
+\infty 
+(6.1) \scrA norm = \sum \theta m (\phi m, \cdot ) \phi m. m=1 
+The operator \scrL norm := \scrA norm - \scrI is the associated normalized (or sometimes called symmetric) Laplacian. Note that for \ell \in \BbbN , (\scrA norm)\ell has eigenfunctions \phi m and eigenvalues \theta m\ell and that (\scrL rw)\ell = \scrM \surd k (\scrL norm)\ell \scrM 1/\surd k. Combined with (6.1), this 
+- g)\| \leq 
+2k\beta k\| (g - g)\| = \| (g - g)\| e2\beta t, 
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+RANDOM WALKS ON GRAPHONS 
+yields the singular value decomposition 
+e\scrL rwt=\scrM \surd =\scrM \surd 
+2339 
+m=1 k the solution of IVP (4.5) reads as 
+\left( \infty \Biggl( \infty \Biggr) \ell \right) \sum t\ell \sum \theta m(\phi m,\cdot )\phi m - \scrI 
+\scrM \surd k\ell ! 1/k 
+\ell =0 m=1 \left( \infty \Biggl( \infty \Biggr) \ell \right) 
+\sum t\ell \sum (\theta m - 1)(\phi m,\cdot )\phi m 
+\scrM \surd k\ell ! 1/k 
+\ell =0 m=1 \Biggl( \infty \infty \Biggr) 
+\sum \sum t\ell 
+\ell !\lambda \ell m (\phi m,\cdot )\phi m = e\lambda mt \surd m ,\cdot k\phi m 
+\scrM 1/\surd k 
+= \scrM \surd k \sum \infty \biggl( \phi \biggr) \surd 
+m=1 \ell =0 
+(6.2) with\lambda =\theta - 1theeigenvaluesof\scrL norm. Byletting\psi = \phi m and\zeta =\surd k\phi , 
+m \surd k m m (6.3) w(x, t) = \sum e\lambda mt (\psi m, g) \zeta m(x). 
+m=1 The following proposition allows for a characterization of the rate of the relaxation 
+towards w\infty . 
+Proposition 6.2. Let W be a graphon satisfying Assumption 4.5; then the ei- genvalues \lambda m of \scrL norm are nonpositive reals, and the largest eigenvalue is zero. If, moreover, W is connected, then the eigenvalue zero has multiplicity one. 
+Proof. That the eigenvalues are reals results from \scrL norm being a self-adjoint operator on L2[0,1]. Let \lambda be an eigenvalue of \scrL norm associated to \phi . Then \lambda is given by the Rayleigh quotient 
+(6.4) \lambda = (\lambda \phi ,\phi ) = (\scrL norm\phi ,\phi ). (\phi , \phi ) (\phi , \phi ) 
+Consider the numerator in the right-hand side of (6.4). For all f \in L2[0,1], we can write 
+m m 
+\infty 
+ 
+\int 1\int 1 W(x,y) (\scrL normf, f) = \sqrt{} \sqrt{} 
+0 0 k(x) k(y) 
+\int 1 f(x)f(y)dxdy - f2(x)dx 
+ 
+1\Biggl( \int 1\int 1\sqrt{} W(x,y)\sqrt{} W(x,y) =2 2 \sqrt{} \sqrt{} 
+0 0 k(x) k(y) \int 1 \int 1 W(x,y) 
+0 
+f(x)f(y)dxdy \int 1 \int 1 W(x,y) \Biggr) 
+    
+- k(x) f2(x)dxdy - k(y) f2(y)dxdy 00 00 
+ 
+1 \int 1 \int 1 \Biggl( \sqrt{} W(x,y) \sqrt{} W(x,y) \Biggr) 2 (6.5) = - 2 0 0 \sqrt{} k(x) f(x) - \sqrt{} k(y) f(y) dxdy, 
+which is nonpositive. The claim that zero is an eigenvalue follows from the fact that \scrL norm\sqrt{} k(x) = 0 on [0,1]. Finally, let us show that the nullspace of \scrL norm has 
+      
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+2340 J. PETIT, R. LAMBIOTTE, AND T. CARLETTI dimension one if W is connected. By defining g = \scrM 1/\surd k f on [0, 1], we have to show 
+that if the right-hand side of (6.5) is zero, namely 1 \int \int 2 
+(6.6) - W(x,y)(g(x) - g(y)) dxdy=0, 2 [0,1]2 
+then g has to be a constant function on [0,1]. By contradiction, assume that there existc1 \in \BbbR andS\in \frakM [0,1]with\mu (S)\in (0,1)suchthatg\geq c1 onSandg<c1 on Sc := [0, 1] \setminus S. Based on (6.6), we can write (6.7) 
+\int \int 2\int \int 2 0= W(x,y)(g(x) - g(y)) dxdy\geq W(x,y)(g(x) - g(y)) dxdy, 
+[0,1]2 S\times Sc and the integral in the right-hand side is zero. Since W is connected, we have 
+\int \int W (x, y)dxdy > 0, and hence there exists a positive-measured subset E \times F S\times Sc 
+of S \times Sc such that W > 0 on E \times F. Therefore, g(x) - g(y) = 0 for almost every (x,y)\in E\times F. Butthen,sinceg\geq c1 onE\subset S,wealsohaveg\geq c1 onF \subset Sc,a contradiction. 
+Remark 6.3 (spectral gap). The last claim of Proposition 6.2 means that the 
+spectral gap of \scrL norm, namely the positive difference between the largest and the 
+second largest eigenvalues, is nonzero when the graphon is connected with the degree 
+function bounded away from zero. Observe that if k is not bounded away from zero, \surd 
+we may no longer write \scrA norm = \scrM 1/\surd k \scrK \scrM \surd k because 1/ k is not bounded. This implies that the spectrum of \scrL rw can no longer be deduced directly from the spectrum of the compact self-adjoint operator \scrL norm. However, the eigenvalues of \scrL rw may in some cases be computed directly; see Example 6.4 hereafter. If the graphon is not connected, one can analyze the dynamics on each connected component independently, as follows from the decomposition introduced in [23]. Therefore, it only remains to consider relaxation in the case of a connected graphon where Assumption 4.5 is not satisfied, meaning that k(x) becomes arbitrarily small on positive measured subsets of [0, 1] and such that \scrK is still well-defined. In this situation, the eigenvalues of the generally non-self-adjoint operator \scrL rw may be embedded in the continuous spectrum, while in the discrete or discretized version, the spectrum is composed only of eigenvalues and there can be a positive spectral gap as a result of the connectedness in a finite graph. 
+Example 6.4 (eigenvalues of \scrL rw on a separable graphon). Consider the sep- 
+arable5 graphon W(x,y) = xy. The degree function is k(x) = x/2, in which case 
+\scrL rw = \scrK - \scrI with \scrK f (x) = 2x \int 1 f (y)dy. Any eigenvalue \lambda \scrK of \scrK satisfies 0 
+\int 1 0 
+where \phi \scrK is an eigenfunction. It suffices to subtract one to the eigenvalues of \scrK and to hold the same eigenfunctions to obtain the eigenpairs of \scrL rw. From (6.8), one finds that \lambda \scrK = 1 with the one-dimensional eigenspace span\{ x\} or \lambda \scrK = 0 with the infinite-dimensional eigenspace \{ 1\} \bot . Observe these spaces are not orthogonal, but their sum is L2[0, 1]. 
+5The graphon W (x, y) is separable if it can be written as W (x, y) = \zeta (x)\zeta (y) for some function \zeta . 
+(6.8) 2x 
+\phi \scrK (y)dy = \lambda \scrK \phi \scrK (x), x \in [0, 1], 
+
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+RANDOM WALKS ON GRAPHONS 2341 
+7. Extension to the discrete-time walk. The analysis of the node-centric continuous-time walk carries over to the discrete-time version (3.2). The correspond- ing IVP on the continuum reads as 
+(7.1a) w(\cdot ,\ell +1)=\scrK w(\cdot ,\ell ), \ell \in \BbbN 0, (7.1b) w(\cdot , 0) = w0 \in L2[0, 1], 
+with the solution given by w(\cdot , \ell ) = \scrK \ell w0 for every \ell \in \BbbN . Following the same steps as in subsection 3.2 and sections 4 and 5, we obtain a 
+similar convergence result on the quotient graph W/\scrP . Indeed, the proof in continuous time already contains the necessary bound on the operator norm of the difference \scrK \ell - \scrK \square \ell ; see (B.2). The same holds true on the sampled graph W[n] and for a sequence of discrete problems. Analogously as for (6.3), the spectral expansion of the solution of the discrete-time IVP (7.1) reads as 
+\infty 
+(7.2) w(\cdot ,\ell ) = \sum \lambda \ell m (\psi m,w0)\zeta m, \ell \geq 0. m=1 
+8. Conclusion. There are two main arguments motivating this work. On the one hand, random walks and Laplacians play a central role in the study of graphs, and a better understanding of their behavior on graphons has a clear mathematical interest, with theoretical and algorithmic objectives. On the other hand, even though large networks become ever more common in numerous fields of research, a rigorous study of the continuum limit of the different types of random walks on graphs was still lacking. 
+This paper is intended as a first step towards a systematic study of classes of random walks on discrete domains, relying on the adequate framework provided by graph-limit theory. We have first shown that the continuum limit of the discrete heat equation [32] could be interpreted as the limit of a rescaled edge-centric continuous- time Poisson random walk. We have then studied the continuum limit of the remaining two fundamental classes of random walks on graphs, which complement the discrete heat equation: the discrete-time walk and its continuous-time generalization. A final part of the paper was devoted to spectral aspects of the introduced random-walk Laplacian operator, thereby allowing for a characterization of the relaxation time of the process. 
+The world of random walks is a very broad one, and this initial work calls for extensions. As mentioned previously, a technical yet interesting question would be to formulate weaker forms of convergence results (where we would, for instance, only require convergence in the cut metric of the empirical graphon, rather than using the norms of Lp spaces). Another promising research direction would consist in gen- eralizing the semigroup approach developed here, or the one in [32, 33, 34], to the diverse classes of random-walk processes omitted here, for instance walks on temporal or directed networks. A third line of research could focus on the case of sparse graphs and the way they affect the approximation procedure we have applied. Sparsity is indeed known to be the norm rather than the exception in real-life networks. Such an extension was already provided for the graph-limit version of the heat equation, using Lp graphons [6, 33, 25]. Another possible venue of investigation could follow from recent work on sparse exchangeable graphs generated via graphon processes or graphexes [4, 5, 10]. 
+Appendix A. Lemmas used in the proof of the convergence theorems. 
+This section contains two lemmas needed to prove Theorems 5.3, 5.4, and 5.6. 
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+2342 J. PETIT, R. LAMBIOTTE, AND T. CARLETTI 
+Lemma A.1. Let \scrA \eta : L2 [0, 1] \rightarrow L2 [0, 1] be an integral operator with bounded kernel A\eta . Assume that A\eta is a.e.-constant on every cell Pi \times Pj of the uniform partition of [0, 1]2 . Further, let f \in L2 [0, 1] and define f\eta by 
+\sum n \int 
+f\eta (x) = n Then for all \ell \in \BbbN 0 it holds that \scrA \ell \eta f = \scrA \ell \eta f\eta . 
+Proof. The proof in the case \ell = 1 follows from a direct calculation; see, for instance, [18, Lemma 3]. The claim for \ell > 1 is a direct consequence since then 
+\scrA \ell f =\scrA \ell - 1\scrA f =\scrA \ell - 1\scrA f =\scrA \ell f . \eta \eta \eta \eta \eta \eta \eta \eta 
+Lemma A.2. Let \scrA , \scrB : L2 [0, 1] \rightarrow L2 [0, 1] be two Hilbert-Schmidt integral opera- tors with respective kernels A and B defined on the unit square, with A \leq \beta for some constant \beta > 0. Then, for all f \in L2[0,1] and \ell \in \BbbN 0, 
+\| \scrA \ell f - \scrB \ell f\| 2 \leq \beta \ell - 1\| A - B\| 2\| f\| 2 + \| (\scrA \ell - 1 - \scrB \ell - 1)\scrB f\| 2. Proof. Using the Minkowski inequality, we have 
+\| \scrA \ell f - \scrB \ell f\| 2 = \| \scrA \ell - 1\scrA f - \scrB \ell - 1\scrB f\| 2 = \| \scrA \ell - 1\scrA f - \scrA \ell - 1\scrB f + \scrA \ell - 1\scrB f - \scrB \ell - 1\scrB f\| 2 
+= \| \scrA \ell - 1(\scrA f - \scrB f) + (\scrA \ell - 1 - \scrB \ell - 1)\scrB f\| 2 (A.1) \leq \| \scrA \ell - 1(\scrA f - \scrB f)\| 2 + \| (\scrA \ell - 1 - \scrB \ell - 1)\scrB f\| 2. 
+Now \scrA \ell - 1 is a Hilbert-Schmidt integral operator with kernel A\circ (\ell - 1), where we use the superscript notation \circ defined by (2.9). For such an operator, as a product of the Cauchy-Schwarz inequality it is known about the operator norm \| \cdot \| that \| \scrA \ell - 1\| \leq \| A\circ (\ell - 1)\| 2, or equivalently 
+(A.2) \| \scrA \ell - 1f\| 2 \leq \| A\circ (\ell - 1)\| 2\| f\| 2. 
+The first term in the right-hand side of (A.1) therefore satisfies 
+(A.3) \| \scrA \ell - 1(\scrA f - \scrB f)\| 2 \leq \| A\circ (\ell - 1)\| 2\| \scrA f - \scrB f\| 2 \leq \beta \ell - 1\| \scrA f - \scrB f\| 2, 
+where we use \| A\circ (\ell - 1)\| \leq \| A\| \ell - 1 (see [17, Lemma 6]) and A(x,y) \leq \beta for all 22 
+0 \leq x,y \leq 1 to obtain the last inequality. Using again (A.2) with \ell = 2, we also have \| \scrA f - \scrB f\| 2 \leq \| A - B\| 2\| f\| 2, which together with (A.1) and (A.3) leads to the conclusion. 
+Appendix B. Omitted steps in the proof of Theorem 5.3. This section contains the details of the calculations directly following (5.7) in the proof of Theo- rem 5.3. These details were omitted in the main body to preserve readability. 
+i=1 Pi 
+f(y)dy\chi Pi (x) \forall x \in [0, 1]. 
+Recall first (5.6): (B.1) \bigm\| \scrL k g - \scrL kg\bigm\| \leq \sum \bigm\| \bigl( \scrK k - m - \scrK k - m\bigr) g\bigm\| +\| (g - g)\| . 
+k - 1 \biggl( k\biggr)  \bigm\| \square \square \bigm\| 2m\bigm\| \square \bigm\| 2\square 2 
+m=0 \underbrace{} \underbrace{} (\ast \ast ) 
+ 
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+RANDOM WALKS ON GRAPHONS 2343 For \ell \in \BbbN 0, let us define \scrE \ell := \scrK \square \ell - \scrK \ell and E\ell := K\square \ell - K\ell . Then, applying 
+Lemma A.2 successively \ell - 1 times to (\ast \ast ) in (5.6) with \ell = k - m, we obtain \| \scrE \ell g\| 2 \leq \beta \ell - 1\| E1\| 2\| g\| 2 + \| \scrE \ell - 1\scrK g\| 2 
+\square 
+\leq \bigl( \beta \ell - 1\| g\| 2 + \beta \ell - 2\| \scrK g\| 2\bigr) \| E1\| 2 + \| \scrE \ell - 2\scrK 2g\| 2 \square \square 
+\leq  andsinceE\ell isthekernelof\scrE \ell if\ell =1, 
+. 
+\left( \ell - 1 \right) \sum \beta \ell - j\| \scrK j - 1g\| 2 
+\| E1\| 2 +\| \scrE 1\scrK \ell - 1g\| 2, 
+\square 
+j=1 
+\left( \ell - 1 \right) \leq \sum \beta \ell - j\| \scrK j - 1g\| 2 
+\| E1\| 2 +\| E1\| 2\| \scrK \ell - 1g\| 2, and with \| \scrK j - 1g\| \leq \| K\circ (j - 1)\| \| g\| \leq \| K\| j - 1\| g\| for j \in \BbbN , 
+(B.2) 
+\square 
+j=1 
+222220 
+\left( \ell - 1 \right) \leq \sum \beta \ell - j\| K\| j - 1 +\| K\| \ell - 1 
+\| E \| \| g\| \square 22122 
+j=1 \leq \ell \beta \ell - 1\| E1\| 2\| g\| 2, 
+where the last inequality stems from \beta := max \{ \| K\| 2, \beta \square \} \geq 1. Combining (B.1) and (B.2) yields 
+k - 1 \biggl( k\biggr)  \bigm\| \bigm\| \scrL k\square g\square - \scrL kg\bigm\| \bigm\| 2 \leq \sum (k - m)\beta k - m - 1\| K\square - K\| 2\| g\| 2 + \| (g\square - g)\| 2 
+m=0 m k - 1 \biggl( k\biggr) 
+(B.3) \leq \beta k - 1 \sum (k - m)\| K\square - K\| 2\| g\| 2 + \| (g\square - g)\| 2. m=0 m 
+Recall (5.5), namely 
+(B.4) \| u(\cdot , t) - w(\cdot , t)\| 2 \leq \| g\square - g\| 2 + \sum \infty tk \bigm\| \bigm\| \scrL k\square g\square - \scrL kg\bigm\| \bigm\| 2 . k=1 k! \underbrace{} \underbrace{} 
+Used in combination with (B.3), it yields 
+\sum \infty t k 
+\| u(\cdot ,t) - w(\cdot ,t)\| 2 \leq \| g\square - g\| 2 + + \| K\square - K\| 2\| g\| 2 \beta k - 1 
+=\| g\square - g\| 2et +\| K\square - K\| 2\| g\| 2 
+k=1 
+k!\| (g\square - g)\| 2 \infty k - 1 
+\sum tk k=1 k! 
+\sum \biggl( k \biggr) 
+(k - m) k - 1 
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+m=0 \infty 
+m 
+\beta k - 1 
+\sum tk k=1 k! 
+\sum \biggl( k \biggr) m=0 m 
+(k - m), 
+(\ast ) 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+2344 J. PETIT, R. LAMBIOTTE, AND T. CARLETTI andwith\sum k - 1 \bigl( k\bigr) (k - m)=k2k - 1, 
+(B.5) 
+m=0 m 
+= \| g\square - g\| 2et + \| K\square - K\| 2\| g\| 2 \leq \| g\square - g\| 2et + \| K\square - K\| 2\| g\| 2t \sum \infty (2\beta t)k - 1 
+k=1 
+k=1 \leq \| g\square - g\| 2et + \| K\square - K\| 2\| g\| 2te2\beta t. 
+REFERENCES 
+(k - 1)! 
+\sum \infty t k 
+k!k(2\beta )k - 1 
+
+[1] C. N. Angstmann, I. C. Donnelly, and B. I. Henry, Pattern formation on networks with reactions: A continuous-time random-walk approach, Phys. Rev. E (3), 87 (2013), 032804. 
+[2] A.-L. Baraba\'si, Network Science, Cambridge University Press, Cambridge, UK, 2016. [3] M. Belkin and P. Niyogi, Towards a theoretical foundation for Laplacian-based manifold 
+methods, J. Comput. System Sci., 74 (2008), pp. 1289-1308. [4] C. Borgs, J. Chayes, L. Lova\'sz, V. So\'s, and K. Vesztergombi, Limits of randomly grown 
+graph sequences, European J. Combin., 32 (2011), pp. 985-999. [5] C. Borgs, J. T. Chayes, H. Cohn, and N. Holden, Sparse exchangeable graphs and their 
+limits via graphon processes, J. Mach. Learn. Res., 18 (2017), 210. [6] C. Borgs, J. T. Chayes, H. Cohn, and Y. Zhao, An Lp theory of sparse graph convergence I: Limits, sparse random graph models, and power law distributions, Trans. Amer. Math. 
+Soc., 372 (2019), pp. 3019-3062. [7] C. Borgs, J. T. Chayes, L. Lova\'sz, V. T. So\'s, and K. Vesztergombi, Convergent sequences 
+of dense graphs I: Subgraph frequencies, metric properties and testing, Adv. Math., 219 
+(2008), pp. 1801-1851. [8] S. Brin and L. Page, Anatomy of a large-scale hypertextual web search engine, in Proceedings 
+of the Seventh International World Wide Web Conference, 1998, pp. 107-117. [9] P. E. Caines and M. Huang, Graphon mean field games and the GMFG equations: \varepsilon -Nash equilibria, in Proceedings of the 58th IEEE Conference on Decision and Control (CDC), 
+2019, pp. 286-292. [10] F. Caron and E. B. Fox, Sparse graphs using exchangeable random measures, J. R. Stat. Soc. 
+Ser. B. Stat. Methodol., 79 (2017), pp. 1295-1366. [11] M. D'Elia, Q. Du, M. Gunzburger, and R. Lehoucq, Nonlocal convection-diffusion problems 
+on bounded domains and finite-range jump processes, Comput. Methods Appl. Math., 17 
+(2017), pp. 707-722. [12] J. C. Delvenne, S. N. Yaliraki, and M. Barahona, Stability of graph communities across 
+time scales, Proc. Natl. Acad. Sci. USA, 107 (2010), pp. 12755-12760. [13] P. Diaconis, S. Holmes, and S. Janson, Threshold graph limits and random threshold graphs, 
+Internet Math., 5 (2008), pp. 267-320. [14] P. Diaconis and S. Janson, Graph limits and exchangeable random graphs, Rend. Mat. Appl. 
+(7), 28 (2008), pp. 33-61. [15] K.-J. Engel and R. Nagel, One-Parameter Semigroups for Linear Evolution Equations, 
+Grad. Texts in Math. 194, Springer, New York, 2001. [16] C. Gao, Y. Lu, and H. H. Zhou, Rate-optimal graphon estimation, Ann. Statist., 43 (2015), 
+pp. 2624-2652. [17] S. Gao and P. E. Caines, The control of arbitrary size networks of linear systems via graphon 
+limits: An initial investigation, in Proceedings of the 56th Annual IEEE Conference on 
+Decision and Control (CDC), 2017, pp. 1052-1057. [18] S. Gao and P. E. Caines, Graphon control of large-scale networks of linear systems, IEEE 
+Trans. Automat. Control, 65 (2020), pp. 4090-4105. [19] E. Gine\' and V. Koltchinskii, Empirical graph Laplacian approximation of Laplace-Beltrami 
+operators: Large sample results, in High Dimensional Probability, Institute of Mathemati- 
+cal Statistics, Waite Hill, OH, 2006, pp. 238-259. [20] M. Hein, J.-Y. Audibert, and U. v. Luxburg, Graph Laplacians and their convergence on 
+random neighborhood graphs, J. Mach. Learn. Res., 8 (2007), pp. 1325-1368. [21] T. Hoffmann, M. A. Porter, and R. Lambiotte, Generalized master equations for non- 
+Poisson dynamics on networks, Phys. Rev. E (3), 86 (2012), 046102. [22] P. W. Holland, K. B. Laskey, and S. Leinhardt, Stochastic blockmodels: First steps, Soc. 
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 
+RANDOM WALKS ON GRAPHONS 2345 
+Netw., 5 (1983), pp. 109-137. [23] S. Janson, Connectedness in Graph Limits, preprint, https://arxiv.org/abs/0802.3795, 2008. [24] S. Janson, Graphons, Cut Norm and Distance, Couplings and Rearrangements, NYJM 
+Monogr. 4, State University of New York, University at Albany, Albany, NY, 2013. [25] D. Kaliuzhnyi-Verbovetskyi and G. S. Medvedev, The semilinear heat equation on sparse random graphs, SIAM J. Math. Anal., 49 (2017), pp. 1333-1355, https://doi.org/10.1137/ 
+16M1075831. [26] C. Kuehn and S. Throm, Power network dynamics on graphons, SIAM J. Appl. Math., 79 
+(2019), pp. 1271-1292, https://doi.org/10.1137/18M1200002. [27] R. Lambiotte and M. Rosvall, Ranking and clustering of nodes in networks with smart 
+teleportation, Phys. Rev. E (3), 85 (2012), 056107. [28] A. N. Langville and C. D. Meyer, Deeper inside PageRank, Internet Math., 1 (2004), 
+pp. 335-380. [29] L. Lova\'sz, Large Networks and Graph Limits, Amer. Math. Soc. Colloq. Publ. 60, American 
+Mathematical Society, Providence, RI, 2012. [30] L. Lova\'sz and B. Szegedy, Limits of dense graph sequences, J. Combin. Theory Ser. B, 96 
+(2006), pp. 933-957. [31] N. Masuda, M. A. Porter, and R. Lambiotte, Second corrigendum to ``Random walks and 
+diffusion on networks,"" Phys. Rep., 851 (2020), pp. 37-39. [32] G. S. Medvedev, The nonlinear heat equation on dense graphs and graph limits, SIAM J. 
+Math. Anal., 46 (2014), pp. 2743-2766, https://doi.org/10.1137/130943741. [33] G. S. Medvedev, Small-world networks of Kuramoto oscillators, Phys. D, 266 (2014), pp. 13- 
+22. [34] G. S. Medvedev and X. Tang, The Kuramoto model on power law graphs: Synchronization 
+and contrast states, J. Nonlinear Sci., 30 (2020), pp. 2405-2427. [35] R. B. Morgan, Computing interior eigenvalues of large matrices, Linear Algebra Appl., 154 
+(1991), pp. 289-309. [36] F. Parise and A. Ozdaglar, Graphon games, in Proceedings of the 2019 ACM Conference on 
+Economics and Computation, 2019, pp. 457-458. [37] J. Petit, R. Lambiotte, and T. Carletti, Classes of random walks on temporal networks 
+with competing timescales, Appl. Netw. Sci., 4 (2019), pp. 72-91. [38] L. Rosasco, M. Belkin, and E. D. Vito, On learning with integral operators, J. Mach. Learn. 
+Res., 11 (2010), pp. 905-934. [39] M. Rosvall, D. Axelsson, and C. T. Bergstrom, The map equation, Eur. Phys. J. Spec. 
+Top., 178 (2009), pp. 13-23. [40] R. Vizute, P. Frasca, and F. Garin, Graphon-based sensitivity analysis of SIS epidemics, 
+IEEE Control Syst. Lett., 4 (2020), pp. 542-547. [41] U. Von Luxburg, M. Belkin, and O. Bousquet, Consistency of spectral clustering, Ann. 
+Statist., 36 (2008), pp. 555-586. [42] W. Woess, Random walks on Infinite Graphs and Groups, Cambridge Tracts in Math. 138, 
+Cambridge University Press, Cambridge, UK, 2000. 
+Copyright © by SIAM. Unauthorized reproduction of this article is prohibited. 
+Downloaded 02/21/22 to 132.161.245.25 . Redistribution subject to SIAM license or copyright; see https://epubs.siam.org/terms-privacy 

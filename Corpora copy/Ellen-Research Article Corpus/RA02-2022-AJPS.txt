@@ -1,0 +1,350 @@
+Title: Political Networks Across Political Systems
+Author: Florence Metz, Lauren Brandenberger
+Journal: American Journal of Political Science
+Year: 2022
+
+Abstract
+Polities shape power structures and interaction patterns between actors in policymaking processes. Although the social fabric of interactions is key to successful policymaking, it remains unclear which relational structures are typically found across political systems. By adopting a network approach, we analyse differences in power structures and interaction patterns across four policy networks in German and Swiss consensual–federal, French majoritarian–unitary, and hybrid Dutch consensual–unitary democracies. Using survey data from 149 state and non-state actors, we fit exponential random graph models and calculate predicted probabilities to compare the four networks. Results show that the consensus democracies institutionalize neighbourhoods of networks where actors share power and collaborate with opponents. Our case of a majoritarian democracy illustrates power concentration with restricted access to competitors, limiting the need to interact and search for compromises with opponents. Findings allow future work to differentiate typical from atypical network structures, given the embeddedness into a political system.
+
+
+Policy networks can be understood as social maps of policymaking processes, which provide a synthetic overview of the actors involved in policymaking, their interactions or power dependencies (Börzel 1998; Dowding 1995, p. 157). Although policymaking has long been described as a black box where a societal problem ‘goes in’ and a policy solution ‘comes out’, the policy network approach offers an analytical tool to uncover the social processes in the ‘black box’ (Easton 1965; Immergut 1992; Metz 2017).
+The question of how policy networks operate has generated an important amount of scholarly work. Scholars have analysed patterns of collaboration (Desmarais et al. 2015; Gerber, Henry, and Lubell 2013; Metz, Leifeld, and Ingold 2019), coordination (Matti and Sandström 2011) or information exchange (Angst and Brandenberger Forthcoming; Leifeld and Schneider 2012) in policy networks in order to understand the reasons for why policy actors establish contacts, or fail to do so. Drivers of network structure that scholars have investigated include perceived influence (e.g. Ingold and Leifeld 2016), similarity of ideology and preferences (e.g. Henry, Lubell, and McCoy 2011) or social trust (e.g. Di Cagno and Sciubba 2010). Scant attention has been paid to the institutional opportunity structures that political systems create for policy networks (exceptions include Gronow, Wagner, and Ylä-Anttila 2019; Kriesi, Adam, and Jochum 2006, whose studies fail to address methodological aspects in comparing networks). To date, we know relatively little about the structural aspects that policy networks exhibit given their embeddedness into a political system.
+In order to address this gap, we explore whether political systems provide opportunity structures for the emergence of certain network structures over others. We employ the term political system to refer to a country's macro-political architecture, which, in democracies, is typically defined by horizontal and vertical distribution of power and electoral rules. Political systems institutionalize a modus operandi which is reflected in the way policy processes operate, that is, in the actors participating in policymaking, and in actors' decision-making power and interactions. Given this stable institutional arrangement, it is unlikely that every type of network can form, but networks are likely to belong to a neighbourhood of networks with similar structural aspects (Lubell et al. 2012). We ask: Does the institutional context across political systems systematically shape the structure of policy networks?
+It is well-established that institutions matter in shaping policy content (North 1990). Despite uncontested institutionalism, the literature has difficulties linking a country's political system and its policies across time and policy fields (Lijphart 1999). Rather than creating a direct link, some authors suggest instead an indirect impact, mediated via policy networks (Bressers and O'Toole 1998; Kriesi, Adam, and Jochum 2006). As such, the network approach can provide a powerful tool for uncovering the ways in which political systems (i.e. polity) shape policy processes (i.e. politics), thereby constraining possible policy outputs (i.e. policy).
+To illustrate our argument, we compare policy networks in four countries, which vary with regard to their political systems. Whereas Switzerland and Germany both exemplify consensual–federal democracies, France is a classic majoritarian–unitary system, and the Netherlands a hybrid form of federal–unitary democracy. In these countries, we analyse existing network properties given the institutional frame. We focus on two network properties: interaction and power patterns in policymaking. Thereby, we explore structural aspects characterizing the neighbourhoods of networks across political systems and shed light on the social environments that produce (or fail to produce) policy outputs across political systems. For this cross-national comparison, we limit cases to one policy domain, that is, water protection.
+Our goal is to conceive of a model that captures the structural aspects of policy networks across political systems. Comparisons between networks of varying size represent an inherent challenge for network research (see, e.g. Friedkin 1981). Our approach distinguishes itself from previous comparative studies on policy networks (e.g. Brockhaus and Di Gregorio 2014; Wagner et al. 2021) by making use of advanced network inference tools. To capture the link between network structures and political systems across countries, we rely on the use of micro-level interpretations of exponential random graph models (ERGMs) (Desmarais and Cranmer 2012) and comparing predicted probabilities based on ERGMs (Faust and Skvoretz 2002). This allows us to take a global view on the networks and compare individual structural aspects between the networks, while holding other aspects of the network constant (as compared to Brockhaus and Di Gregorio 2014 or Kriesi, Adam, and Jochum 2006). As a result, we can compare structural aspects of policy networks across countries and link them to the political system in a comparative manner.
+
+Policy Networks and Patterns of Democracy
+The network approach to policymaking begins with the assumption that the most important elements that shape policymaking are the relationships of influence among policy actors (Knoke 1994). Actors exert influence through various relations, including gathering and disseminating information (Leifeld and Schneider 2012), discussing policy options, exchanging positions or collaborating with allies (Weible and Sabatier 2007). Yet, actors' opportunities to exert influence vary by political systems. Consensus-oriented political systems, more so than their majoritarian counterparts, incentivize actors to coordinate and bargain with opponents in order to reach a compromise (Fischer 2014). Political systems mediate actors' opportunities to exert influence and thereby shape politics, which should be reflected in the structure of policy networks.
+Policy networks represent a structural depiction of the policymaking process (Knoke 1994). Building on the structural perspective of politics, we define policy networks as aggregated snapshots of multi-actor interactions in the policymaking processes over time. Most studies that analyse the structure of policy networks focus on power dependencies and interaction patterns, which cannot be understood independently from political systems. Formal and informal institutions shape power dependencies and interactions between policy actors in the policymaking process, thereby also shaping networks.
+Lijphart (1999) establishes a typology of modern democracies, which proves relevant to the study of policy networks, that is, actors' power dependencies and interactions. He differentiates the extent to which states formally and informally concentrate or diffuse political responsibility, based on two dimensions: vertical division of power termed the federal–unitary dimension, and horizontal division of power, the executive–party dimension (see also Vatter and Stadelmann-Steffen 2013).
+Ideal–typical majoritarian democracies are characterized by unitary and centralized governments (on the federal–unitary dimension), a competitive two-party system out of which one majority party controls the entire government and dominates the parliament, a first-past-the-post electoral system and a competitive interest group pluralism (on the executive–party dimension). Distinctive is the concentration of power in the hands of the majority, typically in the form of one-party cabinets (Lijphart 1999, p. 91).
+While competition and majority rule guide policymaking processes in majoritarian democracies, compromise-seeking and consensual negotiations are emphasized in consensus democracies (Kriesi, Adam, and Jochum 2006; Lijphart 1999; Vatter 2014, p. 56). Consensus democracies are defined by federal and decentralized governments (on the federal–unitary dimension); multi-party systems, executive power sharing, balance of power between the executive and the legislative, proportional representation, and interest group corporatism (on the executive–party dimension). According to those characteristics, ideal–typical consensual democracies restrain power from governmental and parliamentary majorities, they strengthen participatory rights of political minorities, and they emphasize the diffusion of power (Schmidt 2010). To overcome political conflicts, political elites are incentivized to work towards amicable agreements in both parliamentary and extra-parliamentary phases of policymaking processes.
+In summary, Lijpharts typology distinguishes between consensual–federal and majoritarian–unitary democracies at the extremes, and consensual–unitary as well as majoritarian–federal democracies as hybrid forms of democracies. These macro-political institutions should impact the patterns of ties among policy actors.
+
+Distribution of Power
+Distribution of power constitutes a fundamental aspect of policy networks, as powerful actors hold greater leverage in influencing policy outputs according to their preferences. Depending on how power is distributed across the entire network, the courses of policy action can be in line with the preferences of only a few or various actors.
+Policy networks have been described as relationships of power dependencies (Henning 2009). Power can refer to actors' attributes or to their relational profile. The former refers to the attribution of power to specific types of actors, such as state actors, through institutionally defined formal authority to propose, adopt or implement legislation (Kriesi, Adam, and Jochum 2006). The latter definition of power represents a network characteristic. Central actors with many ties or those with a strategic position in the network can be regarded as powerful, because their relational profiles enable them to control the flow of information, or, more generally, other network members.
+Several network typologies employ power as a key criterion for differentiating types of policy networks (Adam and Kriesi 2007; Van Waarden 1992). At one end of the continuum are policy networks, which distribute power across (groups of) actors; at the other end are networks, which concentrate power among a few actors (or one dominant group of actors) (Kriesi, Adam, and Jochum 2006).
+Whether power is concentrated or diffused in the network depends on the type of political system (Adam and Kriesi 2007; Ingold and Leifeld 2016; Kriesi, Adam, and Jochum 2006). In consensus democracies, several organizations typically share power, and within those organizations, different political forces further divide the power. Several institutions contribute to the diffusion of power. Proportional representation and interest group corporatism, for example, restrict power from parliamentary or governmental majorities. Such diffusion of power should be reflected in the structure of policy networks where several central network actors share power (Kriesi, Adam, and Jochum 2006).
+Although a diffusion of power is typical for consensus democracies, majoritarian democracies tend to concentrate power (Lijphart 1999). We therefore expect policy networks in majoritarian democracies to be centralized around only a few actors. Based on these theoretical foundations, we formulate the following hypothesis:
+Hypothesis 1. (Power)The more a country's political system resembles an ideal–typical consensus democracy (or: majoritarian democracy), the more likely policy networks are to exhibit a diffusion (or: concentration) of power in the hands of several (or: few) actors.
+
+Types of Interactions
+Political systems do not only structure power dependencies but also interaction patterns between policy actors. The term interactions is generic and refers to various social relations that actors maintain, such as information exchange, negotiations or collaboration. Such interactions are decisive in building trust and social capital (Berardo and Scholz 2010; Coleman 1990), overcoming divergences and reaching a policy decision (Fischer 2014; Hermans et al. 2013), promoting actors organizing or problem-solving capacities, and actors' ability to find solutions for policy problems (Provan and Kenis 2007). As a result of interactions in the network, collective policy outputs are more likely to be adopted (Weible and Sabatier 2007).
+The basic characteristics of interactions are their quantity and quality. Quantity refers to the density of interactions, whereas quality pertains to the way in which objectives are distributed among actors (Bressers and O'Toole 1998).
+A high density of interactions means that many interaction points exist among actors, and, low density signifies that few opportunities for exchange are present. Actors exchange within formal and informal arenas of the policymaking process. Examples of formal arenas include parliamentary committees or cabinet meetings, where actors meet and negotiate various policies. Informal arenas can refer to, among others, ad hoc working groups or workshops. Such formal and informal arenas create opportunities for dense interaction patterns.
+Another central aspect of policy networks is the distribution of objectives, also termed beliefs, among network members (Weible and Sabatier 2007). Beliefs refer to actors' underlying values that guide their policy preferences and (inter)actions. Sharing beliefs often means that actors agree on the general need to take policy action and on the direction of such action. With shared beliefs, actors empathize with each other and self-identify as cohesive clusters or coalitions drawing a line between them and their opponents (Bressers and O'Toole 1998). Actors' interactions are likely to be consensual among actors with shared beliefs. By contrast, across belief-dissimilar actors, interactions are likely to be rather conflictual.
+Both quantity and quality of interactions can be combined into a typology of policy networks (Bressers and O'Toole 1998). One dimension captures few versus many interactions among actors (quantity), whereas the other dimension depicts conflictual versus consensual interactions (quality). A country's political system mediates whether actors exhibit only few or many opportunities to interact, as well as the extent to which policy processes are open to diverse types of actors and potential clashes of interests.
+Political systems diverge with regard to participation mechanisms, that is, the degree to which they give access to a large diversity of actors with diverging and potentially conflicting beliefs, or, instead restrain access to belief-similar actors. Furthermore, political systems are distinct in the degrees to which they provide for consensus-seeking mechanisms across belief-dissimilar actors or groups of actors, or whether they lack institutionalized conflict-settlement.
+
+Interactions in Consensus Democracies
+Consensus democracies integrate a variety of actors from the political spectrum into the policymaking process, and include conflict-settlement mechanisms through consensus-seeking mechanisms.
+Due to proportional electoral rules, the legislature and government tend to include a diverse set of parties across the political spectrum (e.g. multi-party governments), which must then reach a compromise. Likewise, corporatism creates participatory processes, which can provide access to policymaking to a diversity of non-state actors. For example, tripartite commissions are stable arenas between state, labour and employer organizations, which institutionalize exchange.
+Policy processes that welcome diverse political actors, allow space for diverging opinions. To circumvent conflicts, ideal–typical consensus democracies, according to Lijphart (1999), provide strong incentives for compromise and negotiation across belief dissimilarities. Institutionalized consultative procedures exist, which establish arenas for interactions among actors, such as legislative committees, consultation procedures, working groups or advisory bodies. These arenas promote negotiations in cases of conflict and induce cooperative styles of policymaking (Kriesi, Adam, and Jochum 2006). As such, consultation procedures increase the level of connectedness between policy actors (Bressers and O'Toole 1998, p. 219).
+For consensus democracies, we expect that network structures reflect the cooperative style of policymaking by means of close-knit, interconnected patterns of ties among network members, in general, and among actors with diverging beliefs, in particular (Adam and Kriesi 2007).
+Whereas consensus democracies are said to provide strong incentives for cooperation, majoritarian democracies are known for their competitive style of policymaking (Kriesi, Adam, and Jochum 2006; Lijphart 1999).
+Interactions in Majoritarian Democracies
+Interactions in majoritarian democracies follow a fundamentally different logic than in consensus democracies. Majoritarian democracies tend to exclude parts of the political spectrum to the advantage of one clear majority. Clear majorities are more likely to comprise a group of belief-similar actors (e.g. one-party governments), which are then less prone to conflictual interactions.
+Majoritarian democracies provide access to policymaking to a less diverse set of political parties due to first-past-the-post and two-party systems. As a result, clear majorities build, which then have leverage to act and adopt policies. Additionally, there exists transparency regarding the party responsible for adopting of a certain policy.
+Interest group pluralism tends to parallel a diversified, competitive landscape of non-state actors. Additionally, pluralist nations tend to lack stable arenas for exchange. Nevertheless, interest groups may participate in policymaking, but in a less institutionalized form than is the case for consensus democracies.
+Policy processes that are closed, that is, only include a homogeneous set of political actors, provide less room for diverging opinions. As such, building clear majorities can aid to prevent conflictual interactions. However, majoritarian democracies lack both formal and informal incentives for cooperative and consensual styles of policymaking. As a results, belief-dissimilar actors are less likely to interact with one another. Under such circumstances, if clear majorities fail to build, majoritarian democracies find themselves locked into particularly polarized conflicts that also lack conflict-settlement mechanisms.
+In majoritarian democracies, informal rules are thought to underline more competitive interaction patterns along with a unilateral style of policymaking (Adam and Kriesi 2007). We expect network interactions to be less close-knit and more competitive in nature compared to consensus democracies. Across coalitions, conflictive types of interactions are likely to be common as these systems typically lack consultation mechanisms and provide incentives for competition.
+Combining insights on consensus and majoritarian democracies, we hypothesize the following network structures:
+Hypothesis 2. (Interactions)The more a countries' political system resembles an ideal–typical consensus democracy (or: majoritarian democracy), the greater the likelihood that policy networks exist with close-knit cooperative (or: sparse competitive) interactions among policy actors.
+
+In summary, we propose a two-dimensional typology of network structures in Table 1, in which the distribution of power constitutes the first dimension, whereas the second is denoted by the types of interactions (Adam and Kriesi 2007; Bressers and O'Toole 1998). Together these two dimensions distinguish network structures in consensus and majoritarian democracies.
+Data and Methods
+Case
+We illustrate our argument by comparing cases from (a) Germany and Switzerland, which are both typical consensual–federal democracies; (b) France, a classic example of a majoritarian–unitary system; and (c) the Netherlands, a hybrid system with its federal–unitary democracy (Lijphart 1999). Section  A (p. 1) in the Supplementary Information (SI) contains additional information on the political systems of the four countries.
+In accordance with their macro-political systems, network structures of Switzerland and Germany should belong to the same neighbourhood (Lubell et al. 2012). In these consensus democracies, we test whether networks display (a) a fragmented power structure; (b) dense, cooperative interaction patterns, in general, and among actors with diverging beliefs; and (c) a low degree of conflict. Due to their ‘opposite’ type of democratic system, French network structures should (a) concentrate power in the hands of a few actors, (b) display fewer but more competitive interaction patterns, and (c) exhibit a greater degree of conflict. The Dutch macro-political system is positioned between the two extremes of consensus and majoritarian democracies, so its network structures should also reflect a combination of these qualities. Table 1 provides a summary of the relationship between macro-political and network structures, and categorizes the four cases into the typology.
+
+Data
+We asked a total of 149 state and non-state actors in Switzerland, Germany, France and the Netherlands to participate in our survey. Survey respondents included actors involved in defined policymaking processes based on the boundary-specification approaches by Laumann and Knoke (1987) (see additional information in Section  B (p. 5) of the SI for further explanations on data gathering procedures). We chose policymaking processes related to pollutants of emerging concern in water, for example, pharmaceuticals. This issue was part of the political agenda in all four countries.1
+Actors involved in formulating, advocating and selecting policies on emerging pollution issues in water protection were surveyed. Respondents include governmental bodies, scientific entities, political parties as well as water, environmental and economic associations. Response rates range from 89.2% for Switzerland, to 68.4% for Germany, 45.5% for France, and 50.5% for the Netherlands (response rates calculated after AAPOR 2011).
+The survey included questions on collaboration ties, ally-opponent ties and policy beliefs. Respondents received a complete list of country-specific actors and were asked to check all those with whom their organization had closely collaborated during the policymaking process on emerging pollutants in the respective timeframe. For each country, we created an 
+𝑛×𝑛
+$n\times n$
+ adjacency matrix (N) of cooperation ties with n actors (values 0 indicating no cooperation tie and 1 indicating cooperation between two actors). Additionally, we surveyed each actor's consensual/conflictive interaction patterns through their ally/opponents ties. Allies (or opponents) correspond to actors with whom they agreed (disagreed) on policy content.
+The survey further included a question capturing actors' beliefs and instrument preferences on a four-point Likert scale (see Table S1 (p. 6) for the survey question on beliefs and Table S2 (p. 6) for the survey question on instruments of the SI).
+Figure 1 depicts the four collaboration networks. The Swiss network 
+𝑁
+𝐶𝐻
+$N_{CH}$
+ contains 47 unique nodes (i.e. actors) together with 253 directed edges (i.e. collaboration ties between actors), resulting in a network density of almost 12% (
+253/(47·46)
+$253/(47\cdot 46)$
+). The German policy network 
+𝑁
+𝐷𝐸
+$N_{DE}$
+ contains 29 actors and 121 edges (network density =15%). The French policy network 
+𝑁
+𝐹𝑅
+$N_{FR}$
+ contains 18 actors and 96 edges (network density =31%). Finally, the Dutch policy network 
+𝑁
+𝑁𝐿
+$N_{NL}$
+ contains 16 actors and 108 edges (network density =45%).
+Statistical Approach
+ERGMs
+We examine structural differences in the four policy networks using ERGM. The inherent dependencies among observations in network settings violate the core assumption of independence in conventional regression models. The violation of the independence assumption may result in biased estimates and optimistic p-values (Cranmer and Desmarais 2011; Cranmer et al. 2017). To overcome these potentials for inaccuracy, we use a statistical model that can handle and explicitly model dependencies. ERGMs are developed to estimate effects of both exogenous and endogenous covariates on network formation (Frank and Strauss 1986; Robins et al. 2007; Wasserman and Pattison 1996). The model can be expressed as the probability of observing the given network N over all possible permutations 
+𝒩
+$\mathcal {N}$
+ of the network:
+𝑃(𝑁,𝜃)=
+exp{
+𝜃
+𝑇
+ℎ(𝑁)}
+∑
+𝑁
+∗
+∈𝒩
+exp{
+𝜃
+𝑇
+ℎ(
+𝑁
+∗
+)}
+
+,
+\begin{equation} P(N, \pmb {\theta }) = \frac{\exp \lbrace \pmb {\theta }^T \pmb {h}(N) \rbrace }{\sum _{N^* \in \mathcal {N}} \exp \lbrace \pmb {\theta }^T \pmb {h}(N^*)\rbrace }, \end{equation}
+(1)
+where N is the observed network, 
+𝜃
+$\pmb {\theta }$
+ represent the estimated parameters and 
+ℎ(𝑁)
+$\pmb {h}(N)$
+ is a vector of statistics containing exogenous and endogenous covariates (Cranmer and Desmarais 2011).
+The ERGM can also be thought of as a logistic regression of tie formation, where the probability of observing a specific tie between two actors i and j is dependent on the specified changes in the 
+ℎ(𝑁)
+$\pmb {h}(N)$
+ statistics (Desmarais and Cranmer 2012; Wasserman and Pattison 1996).
+𝑃(
+𝑁
+𝑖𝑗
+=1|
+𝑁
+−𝑖𝑗
+,𝜃)=𝑙𝑜𝑔𝑖
+𝑡
+−1
+(𝜃·
+𝛿
+(𝑖𝑗)
+(𝑁)),
+\begin{equation} P(N_{ij}=1|N_{-ij},\pmb {\theta }) = logit^{-1}{\left(\pmb {\theta }\cdot \pmb {\delta }^{(ij)}(N) \right)}, \end{equation}
+(2)
+where 
+𝑁
+−𝑖𝑗
+$N_{-ij}$
+ refers to the network excluding 
+𝑁
+𝑖𝑗
+$N_{ij}$
+, logit−1 is the inverse logistic function and 
+𝛿
+(𝑖𝑗)
+(𝑁)
+$\pmb {\delta }^{(ij)}(N)$
+ are the vector of change statistics for the vector of endogenous and exogenous covariate statistics such that they measure the changes in the statistics as dyad {i,j} changes from zero to one (Desmarais and Cranmer 2012, pp. 404–5).
+To allow the incorporation of endogenous network statistics into the model, the estimation of the ERGM is carried out with Markov chain Monte Carlo maximum likelihood estimation (MCMC MLE) (Cranmer and Desmarais 2011; Wasserman and Pattison 1996). We use the ergm package (Hunter et al. 2008) in the statnet suit of packages (Handcock et al. 2008) for the statistical computing environment R to estimate the ERGMs.
+The inclusion of endogenous network statistics are bound to the assumption that all necessary statistics are modelled to prevent omitted variable bias (Cranmer et al. 2017). To ensure the sufficient inclusion of endogenous network statistics we perform goodness-of-fit tests for each of the models using the btergm package (Leifeld, Cranmer, and Desmarais 2018).
+
+Comparing Results Across Networks
+We run four separate ERGMs, one for each of the policy networks, and compare the effects of our independent variables across the models. To ensure comparability of the effects as well as their effect sizes, we use the micro-level interpretation of ERGM models that conceptualize ERGMs as a logistic regression of tie formation (Desmarais and Cranmer 2012). We calculate predicted probabilities over all dyads in the networks, using change statistics for all endogenous and exogenous variables and the estimated coefficients from the ERGMs, as proposed by Faust and Skvoretz (2002).
+Comparing structural properties across different networks proves challenging, as the number of nodes and the number of ties differ between each of the networks. The estimated coefficients of the ERGMs allow for an interpretation of which structural patterns or data-generating processes are discernible within one network. However, they do not allow for a direct comparison of coefficient sizes across different networks. This is because the coefficients are reported as log-odds and show relative risks, that is, the coefficients can be interpreted as the risk of having a cooperative tie between two actors compared to the risk of having no cooperative tie. These risks are dependent on network size and density. In order to compare the effects between different ERGMs, predicted probabilities can be calculated for each dyad 
+(𝑖,𝑗)
+$(i, j)$
+ in the network. These predicted probabilities can be used at the dyad level to examine the probability that node i has a tie to node j conditional on the rest of the network (Faust and Skvoretz 2002).
+𝑃𝑟({𝑖,𝑗}=1|
+𝑁
+−𝑖𝑗
+)=
+exp(
+𝜃
+̂
+𝑒𝑑𝑔𝑒𝑠
++ℎ(
+𝑁
+𝑖𝑗
+)·
+𝜃
+̂
+)
+(1+exp(
+𝜃
+̂
+𝑒𝑑𝑔𝑒𝑠
++ℎ(
+𝑁
+𝑖𝑗
+)·
+𝜃
+̂
+))
+
+.
+\begin{equation} Pr(\lbrace i, j\rbrace = 1|N^{-ij}) = \frac{{\rm exp}(\hat{\theta }_{edges} + \pmb {h(N_{ij})}\cdot \pmb {\hat{\theta }})}{(1 + {\rm exp}(\hat{\theta }_{edges} + \pmb {h(N_{ij})}\cdot \pmb {\hat{\theta }}))}. \end{equation}
+(3)
+First, the odds of a dyad between nodes i and j is calculated using the baseline probability of a tie (captured in the 
+𝑒𝑑𝑔𝑒𝑠
+$edges$
+-term) plus the change statistic for each independent and control variable (here in the simplified notation 
+ℎ(
+𝑁
+𝑖𝑗
+)
+$h(N_{ij})$
+) times the estimated coefficient of said variable (Faust and Skvoretz 2002, pp. 276–7). Then the odds are transformed into probabilities by dividing them by one plus the odds. The change statistic represents the difference in the value of the independent or control variable if the dyad 
+(𝑖,𝑗)
+$(i, j)$
+ is toggled, that is, if the dyad 
+(𝑖,𝑗)
+$(i, j)$
+ is transformed into an edge if it was previously a non-edge; or if the dyad 
+(𝑖,𝑗)
+$(i, j)$
+ is transformed into a non-edge, if it was previously an edge.
+We use the btergm package (Leifeld, Cranmer, and Desmarais 2018) to calculate predicted probabilities that allow comparisons of effects between ERGMs.
+Operationalization of Variables
+We use a number of endogenous and exogenous variables to test our main hypotheses whilst controlling for a number of possibly confounding effects.
+Power Concentration
+Hypothesis 1 relates to power concentration and network centralization. We examine to which extent the four networks show centralized or decentralized tendencies by examining the indegree distribution of the network nodes. In centralized networks, coordination is dominated by few central actors and power is inherently concentrated, resulting in a distinct network structure of few high-indegree nodes and many low-indegree nodes. By contrast, in networks where power is more broadly distributed and shared, there are fewer high-indegree nodes and more nodes with similar numbers of incoming ties. We use a geometrically weighted indegree distribution term, presented by Hunter (2007) to model power concentration. The term captures tendencies of popular nodes (i.e. nodes with high indegree centrality) to disproportionally attract other nodes and become even more popular. More formally, the term creates a count of nodes with indegrees ranging from its minimum to its maximum:
+ℎ
+gwindegree
+=
+𝑒
+𝛼
+∑
+𝑚=1
+𝑛−1
+{1−
+(1−
+𝑒
+−𝛼
+)
+𝑚
+}𝐼𝐷𝑒
+𝑔
+𝑚
+(𝑁),
+\begin{equation} h_\text{gwindegree} = e^{\alpha } \sum _{m=1}^{n-1} \lbrace 1-(1-e^{-\alpha })^m\rbrace IDeg_m(N), \end{equation}
+(4)
+where N refers to the Network, m represent indegree specifications ranging from 1 to the maximum indegree (in a network with n nodes, 
+max(𝐼𝐷𝑒𝑔)=𝑛−1
+${\rm max}(IDeg) = n-1$
+) and α is a decay parameter used to scale down low indegree counts of high indegree nodes (Hunter 2007, p. 221). The higher the α-parameter, the more weight is given to changes to high-indegree nodes. To adequately model high-indegree nodes, we set a high α-parameter of 1.4 and compare model fit (using BIC scores) with other models with slightly higher or lower α-parameters. A negative coefficient for the geometrically weighted indegree distribution term indicates that the network is more centralized due to its large variance in the indegree distribution among the nodes (Levy 2016). The term can be interpreted as a popularity statistic that captures whether or not indegree is distributed equally among the nodes. In networks where the distribution is skewed, some nodes have high indegrees, that is, are popular nodes in the network.
+We expect power concentration – or network centralization – to play a role in all four policy networks. However, we expect the effect to be stronger in both the French and the Dutch policy network due to the nature of their unitary political system that favours centralization and gives a few actors the opportunity to hold strong positions to exercise power and marginalize opponents.
+To compare the effects of power concentration on the probability of forming ties, we calculate predicted probabilities for a random selection of nodes and with specific indegree levels. We use these predicted probabilities to assess the increase in the probability of forming a new tie, if the node has a high or low indegree centrality (following the framework of interpreting ERGMs at the dyad level, presented by Desmarais and Cranmer 2012).
+Interaction Patterns
+We test for differences in quantity and quality of interaction patterns. To capture quantity and account for whether interactions are close-knit versus sparse, we test for the overall level of clustering in the network. We include a triadic closure effect that examines the extent to which two nodes i and j become tied due to the number of additional partners k they share. We use a geometrically weighted term, presented by Hunter (2007, p. 224), to capture effects of triadic closure:
+ℎ
+𝑔𝑤𝑒𝑠𝑝
+=
+𝑒
+𝛼
+∑
+𝑘=1
+𝑛−2
+{1−
+(1−
+𝑒
+−𝛼
+)
+𝑘
+}𝐸
+𝑃
+𝑘
+(𝑁),
+\begin{equation} h_{gwesp} = e^{\alpha } \sum _{k=1}^{n-2} \lbrace 1-(1-e^{-\alpha })^k\rbrace EP_k(N), \end{equation}
+(5)
+where N represents the network and 
+𝐸𝑃
+$EP$
+ refers to the number of shared partners k that edges i, j have in common. The counts of shared partners for all edges in the network are summed up. The α-parameter is used to weigh the counts, with a α-value near 0 giving more weight to lower counts (i.e. number of edges with only one or two shared partners, for instance). We chose an α-parameter of 0.25 as it produced the best fit for the four network models based on BIC scores. The effect yields a positive coefficient if nodes have a tendency to close open triads and therefore form denser collaboration patterns. We expect to find a positive effect of triadic closure in consensus democracies, because such systems foster close-knit collaboration patterns. We also expect a smaller or nonexistent effect of triadic closure in majoritarian democracies, which institutionalize competitive relations.
+We use two variables to operationalize the quality of interactions and test whether interactions are cooperative versus competitive. First, edge covariate measures whether actors reach out towards opponents, that is, actors with whom they have a conflictual relationship:
+ℎ
+edgeCovariate
+=
+∑
+𝑖,𝑗
+𝑁
+𝑖𝑗
+𝑥
+𝑖𝑗
+,
+\begin{equation} h_\text{edgeCovariate} = \sum _{i, j} N_{ij}x_{ij}, \end{equation}
+(6)
+where N refers to the all edges in the focal network and x refers to the edge attribute pertaining to nodes i and j. A positive coefficient indicates that actors tend to collaborate with other actors despite their opposition. We expect to find a positive relationship in consensus democracies due to their inherent necessity to collaborate and overcome adversities and seek compromises across coalitions.
+Second, we test for belief dissimilarities among collaboration partners, which we operationalize with an absolute difference effect for weighted policy beliefs (see Section  C (p. 5) in the SI for additional information and phrasing of the belief questions). The absolute difference effects were calculated by comparing the differences in answers for each of the five questions k:
+ℎ
+𝑎𝑏𝑠𝑑𝑖𝑓𝑓
+=
+∑
+𝑙
+𝑘
+|𝑥
+(𝑘)
+𝑖
+−𝑥
+(𝑘)
+𝑗
+|
+𝑙
+
+,
+\begin{equation} \nobreakspace h_{absdiff} = \frac{\sum _k^l | x(k)_i - x(k)_j |}{l}, \end{equation}
+(7)
+where k refers to the l belief questions and 
+𝑥(𝑘)
+$x(k)$
+ represents the value of question k for each respondent i and j.
+In the resulting dissimilarity matrices, higher values denote actors' belief dissimilarities. A negative coefficient in the ERGM indicates that strong belief dissimilarities among two nodes have a negative effect on the nodes' likelihood of forming a collaboration tie.
+In other words, the smaller the differences in beliefs between two actors, the more likely they are to work together. Based on insights from the multiple studies on advocacy coalitions and their applications in various political systems, we expect to find a negative effect of belief dissimilarities on collaboration in all four networks (Henry, Lubell, and McCoy 2011; Ingold 2011; Weible and Sabatier 2005). Nevertheless, we expect the effect to be stronger in majoritarian democracies, where cooperation and consensus-seeking among dissimilar actors is not institutionally encouraged as is the case for consensus democracies (Adam and Kriesi 2007; Kriesi, Adam, and Jochum 2006; Lijphart 1999).
+We further include an interaction effect for belief dissimilarities and collaboration with opponents to ensure that both variables do not confound each other in the model.
+Control Variables and Model Fit
+We control for a number of endogenous and exogenous variables to (a) account for additional factors affecting collaboration ties between policy actors, (b) ensure our effects for the independent variables do not suffer from omitted-variable bias and (c) stabilize our ERG models. Apart from the most basic control variable – network density – we control for reciprocity to account for the symmetric nature of collaboration ties (Berardo and Scholz 2010). We control for different activity and popularity effects of governmental actors as these actors are institutionally mandated to engage in a policy issue and are often approached by other actors, for example, to exchange information (König and Bräuninger 1998). We control for activity effects of important actors (i.e. actors with high reputational power) (Leifeld and Schneider 2012) and for instrument preference dissimilarity to strengthen our test of belief dissimilarities. We control for differences in reputational power as this term helped stabilize the ERGM of the Swiss case and did not affect the ERGM of the other three cases. Section D (p. 7) in the SI holds additional details along with specifications on our control variables.
+ERG models are only interpretable if they are well-specified (Cranmer et al. 2017). Figure 2 shows goodness-of-fit assessments of our models presented in the subsequent section.
+Together with the independent variables, the control variables help capture the data-generating process of each of the four policy networks well. We simulated 500 networks using the estimated parameters and compared their network properties to the original network (boxplots represent the values from simulated networks and black lines represent values from the original networks). We compare degree distributions, dyad-wise shared partners, incoming k-stars, geodesic distance and triadic closure for the observed and simulated networks. All networks show an acceptable fit with the small exception of incoming k-stars for the Swiss network.2 We further check whether tie prediction in the simulated networks is accurate using receiver-operating curves (see far right panels in Figure 2). All curves are well above the curves including exogenous variables only, which indicates good fit and predictive power, and allows for a substantive interpretation of the model coefficients.
+Results
+Figure 3 reports the results of the four ERGMs on tie formation.
+Power
+We test our first hypothesis on power-sharing by examining the degree of centralization of the four policy networks. As is expected in policy networks, all networks exhibit negative and significant popularity effects, demonstrating skewed indegree distributions. To examine the effect in more detail, we calculate the (relative) probability of adding an additional tie for a randomly selected node to a node with a specified indegree. Figure 4 shows the increase in the probability of a tie when an additional incoming tie is added to a node. Both the Swiss and German networks show slowly increasing probabilities, with an additional incoming tie increasing a node's attractiveness by only a few percentage points. In the unitary French and Dutch systems, networks show much steeper increases in popularity effects (as well as overall higher probabilities of tie-creation, controlled for overall network density) that tailor off only after six existing incoming ties. Results indicate higher levels of power concentration in the French and Dutch cases than in the Swiss and German federal systems that prioritize power fragmentation.
+
+Interaction Patterns
+To test our hypothesis 2 on the quantity of interactions, we examine the density of collaboration ties by studying triadic closure. The Swiss, German and French networks exhibit a strong tendency towards triadic closure, and therefore also close-knit collaboration patterns, whereas the Dutch network exhibits no tendency towards triadic closure.
+We test our hypothesis 2 on the quality of interactions by means of two operationalizations: collaboration with named opponents and collaboration across belief dissimilarities.
+The term for collaboration with opponents is highly significant and positive in the Swiss and German networks, non-significant in the French network and weakly significant and positive in the Dutch case. The term should be interpreted as a correlation between naming someone as a collaboration partner and naming someone as an opponent. Actors in Switzerland and Germany have a strong tendency to collaborate with others with whom they disagree. The effect appears weaker in the Dutch network. Deepening the ERGM results, Figure 5 shows that edge probabilities for actors to create ties with opponents are comparable among the Swiss, German and Dutch case as their confidence intervals overlap, indicating non-significant differences between the three cases. Accordingly, Dutch, followed by German and Swiss actors have a strong tendency to collaborate with others with whom they also disagree. Section E Figure S4 (p. 14) in the SI shows the results of a detailed analysis of cooperation with governmental and non-governmental opponents. The probability of collaborating with an opponent is driven in the Swiss and German cases by collaborations with governmental actors, which is not true for the Dutch case.
+
+The French network contains few mentions of opponents (see Figure S1 (p. 10) in the SI) resulting in large confidence intervals for predicted probabilities (not shown). Results indicate that there are fewer opponents in the French case. Rather than exhibiting several opposing coalitions, the French network structure resembles one large majority coalition within which intensive collaboration takes place.
+Our second operationalization of the quality of interactions captures collaboration among actors who hold opposing beliefs. Figure 6 (left panel) shows descriptives of the dissimilarities regarding policy beliefs among two collaborating actors. French members have a significantly lower mean compared to the other three cases (Two-sample t-test, mean CH, DE and NL =0.83, mean FR =0.68, 
+𝑡=3.06
+$t = 3.06$
+, p-value =0.003), indicating stronger belief similarities among collaboration partners in the French case compared to those of the Swiss, German or Dutch.
+Results in Figure 3 (reporting the coefficients of the absolute difference effects), as well as the marginal effects of belief differences on collaboration in Figure 6 (right panel), affirm the comparably stronger belief similarities in the French case. Results of the ERGM in Figure 3 show that only the French coefficients are significant and negative for belief dissimilarities. As belief dissimilarities between pairs of actors increase, their odds of forming a collaboration tie decrease when holding all other independent and control variables constant. In the Swiss, German and Dutch cases, by contrast, belief dissimilarities do not impact collaboration patterns. In those consensus democracies, network members collaborate with belief-similar and dissimilar others.
+Figure 6 (right panel) depicts a more fine-grained interpretation of the belief differences and their correlation with cooperative ties for the French network (single significant effect in the ERGM). The marginal effect exhibits a slightly curved relationship, where the probability of a tie decreases, as differences in policy beliefs increase, and then trails off. The confidence intervals are large and spread across the zero-line (which reflects the baseline probability of a tie for the network).
+Controls
+We controlled for a number of effects to ensure the models have a good fit and the independent variables are not confounded. Regarding instrument preference dissimilarity, the Swiss and French cases show negative effects, indicating that actors with the same instrument preferences are more likely to work together. Unsurprisingly, reciprocity has a strong positive effect in all four networks, which indicates that reciprocity is stronger for the observed networks than for the random networks with all other variables held constant. Actors who nominate other actors as collaboration partners are often named as partners themselves. Governmental actors are slightly more popular in France – reflecting French etatism – and actors who are regarded as important by network members are also more active (have higher outdegree centrality). Section D (p. 7) in the SI interprets results for the control variables in more detail.
+
+Discussion
+Results that test our hypothesis 1 show that power generally matters in policy networks. In a political context, it is not a surprising finding that actors tend to collaborate with others whom they consider powerful. Our data additionally indicate that the popularity effect is stronger in the French and Dutch unitarian systems where higher levels of power concentration occur than in the Swiss and German federal systems that diffuse power.
+With Hypothesis 2, we first tested whether actors are more likely to exhibit close-knit interaction patterns in consensus democracies than in majoritarian democracies. We expected our French instance of a majoritarian democracy to exhibit a less dense network (in terms of triadic closure) than those of Switzerland and Germany; however, this was not the case. Reflecting the more competitive nature of the French political system, the French network exhibits only a few mentions of opponents. Opponents are less integrated into the policymaking process than is the case for the Swiss, German and Dutch networks. The existing, dense collaborative patterns take place among actors who generally agree on policy content rather than as a result of a consensus-finding mechanism across coalitions of opposing actors.
+Secondly, we tested whether interactions tend to be more cooperative in consensus than in majoritarian democracies. Our results confirm that in the consensus democracies of Switzerland, Germany and the Netherlands, there is a high probability of establishing a tie with opponents. Governmental actors are driving consensus-seeking interactions (in the Swiss and German case). These results indicate that institutionalized arenas for exchange exist and create opportunities for the creation of dense interaction patterns with opponents. Overall, results for interactions with opponents follow the pattern of Lijpharts typology of democracies, according to which German and Swiss consensual–federal systems are diametrically opposed to the French majoritarian–unity democracy, whereas the Dutch consensual–unitary democracy represents a hybrid of the two system types.
+Moreover, we operationalized cooperative ties by testing for the effect of belief dissimilarities on interactions. Results follow theory, whereby belief dissimilarities have no significant effect on collaboration in the Swiss, German and Dutch consensus democracies. Results also support our expectations for the French majoritarian democracy, where actors who display dissimilar beliefs are less likely to collaborate. Results show that, in consensus democracies, activities in political policymaking processes are largely contingent upon finding common ground with opponents and across belief dissimilarities.
+In summary, political systems provide opportunity structures for the emergence of specific patterns of ties in policy networks. Notwithstanding these results, some limitations should be noted.
+In line with Lijpharts map of democracies, our analysis treats Switzerland and Germany as instances of the same category. However, significant differences exist concerning the role of consensus procedures and power sharing in politics (see Section A (p. 1) in the SI for a characterization of the political system of the four countries), which should affect network structures. For example, Swiss consensus mechanisms are particularly strong. Swiss opposition parties are also institutionally more integrated into the executive branch than are German opposition parties (Vatter 2014; Von Beyme 2010). Moreover, domain specificities can structure policy networks (Brockhaus and Di Gregorio 2014; John and Cole 2000; Wagner et al. 2021). Therefore, we emphasize that results should be regarded as neighbourhoods of networks, that is, structures that allow for further within-case variation.
+Our survey response rates vary between the four cases: 89.2% for Switzerland, 68.4% for Germany, 50.5% for the Netherlands and 45.5% for France. Although our inferential analysis of the four network structures ensures comparability across different network sizes and densities (through examining micro-level interpretations of ERGM coefficients), different response rates can nevertheless distort our analysis. In network studies, non-responses can occur if respondents are only indirectly involved and consider their own participation as irrelevant. We tested whether actors who did not participate in the survey were also less often named as collaboration partners. In all four cases, the average indegree of non-respondents was markedly smaller than that of respondents (with significant t-tests in France and the Netherlands). This outcome is a small indication that those actors involved in the policy process indeed responded to our survey in all four cases, giving some certainty to our results. Nonetheless, it is still possible that differences in response rates affect our inferential results. We further tested whether our inferential network results remain stable if data are removed. We chose the Swiss network for this experiment and re-ran the ERGM for the Swiss network by removing 5, 10, 15 and 20 random nodes from the network and re-estimating the ERGM. Results are presented in Section F (p. 15) of the SI and show that key features of the network hold up, even if nodes are removed. This test is not definitive, but rather an indication that differences in response rates do not gravely affect results (Schaub and Metz 2020). We look towards future studies comparing policy networks across different political systems to strengthen our results.
+
+Conclusion
+First, our analysis has revealed that political systems systematically shape policy networks (Lubell et al. 2012) by enabling and constraining actors ability for power concentration and cooperation. These findings suggest that policymaking is not merely determined by actors steering capacity, but also by the institutional structures in which actors behave (Daugbjerg and Marsh 1998). The institutional context conditions actors behaviour within the network by facilitating and constraining negotiations across political camps. Comprehending such impact of institutions on policy networks is decisive for democratic and successful policymaking (Fischer 2017).
+Second, and contrary to what one would expect, we found that our cases of water policy networks in consensus democracies were more conflictual and less densely connected than their majoritarian counterpart. Our explanation is that consensus democracies are open to a heterogeneous set of actors, which also allows room for conflict. By contrast, majoritarian democracies create clear, homogenous majorities. Actors tend to collaborate within their political camp, which provides less room for conflict, but may impede productive exchanges of policy ideas, deliberation and learning.
+These findings bear some interesting policy implications: In the daily business of policymaking, it may be tedious to confront a heterogenous set of actors and search for compromise across political camps in consensus democracies. Such efforts nevertheless pay off in the long-term as a culture of compromise-seeking establishes, which promotes effective and generally accepted policy outputs. This is precisely what we observed in our cases. For example, the German Federal Environmental Agency reported to us that broad integration of actors across camps led to a dilution of the policy to some extent. Nevertheless, a legally binding policy was adopted, which constituted a first step towards increased water protection. By contrast, in our French case, an ambitious, but legally non-binding policy plan was adopted. Its implementation remains uncertain. The French Ministry of Ecology reported to us that it was typical to adopt policy plans (instead of legally binding laws) in French environmental policy. This strategy may serve to avoid confrontation with the political opponent, but it also impedes the search for generally accepted policy proposals. Results highlight that differences between network structures can affect policy outputs. To then better understand the reasons for which certain political systems perform better in terms of producing policy outputs and policy change, future research is needed that systematically links network structures to policy outputs (Metz 2017). A promising research agenda could focus on institutions that promote collaboration and consensus-finding with the political opponent, particularly in majoritarian democracies.
+Third, results confirm what previous network studies have concluded and according to which there is not one single way how a policy network operates (Leifeld and Schneider 2012, p. 742). We have suggested that networks operate differently across political systems. Most policy network studies, however, are case studies that focus on one country (Baumgartner and Leech 1996; Fischer 2017) and neglect the institutional context, thereby excluding a major explanatory variable. To explain variation in policy outcomes across countries, one can hardly ignore the broader institutional context (Daugbjerg and Marsh 1998, p. 54). We therefore propose that future studies should take the political system into account when analysing policy networks. We contribute to the advancement of the literature on policy networks with a model that identifies those aspects of macro-political architecture that fundamentally shape the structure of policy networks. Our model can be considered a baseline in order to distinguish typical from atypical network structures given their embeddedness into a political system. Studying the atypical will prove particularly valuable to understand domain-specific differences, or, with longitudinal data, the effect of regime change, new governance arrangements and shocks on decision making over time.
+Finally, we recognize the utility and limitations of conceptualizing policy processes as networks. One cannot explain variation in policy outcomes by simply referencing the structures of policy networks (Daugbjerg and Marsh 1998, p. 71). Nevertheless, understanding why networks take the form they do given their embeddedness into a political system is key to better understanding the social context upon which policy content is agreed.
+

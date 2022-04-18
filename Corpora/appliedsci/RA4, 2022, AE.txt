@@ -1,0 +1,518 @@
+Hierarchical soft measurement of load current and state of charge for future
+smart lithium-ion batteries
+
+ABSTRACT
+Accurate current measurement is indispensable for the management of lithium-ion battery (LIB), especially for
+the state-of-charge (SOC) estimation. However, accurate current sensing is challenging in electric vehicles (EVs)
+due to the electromagnetic interference. Moreover, the currents across the parallel branches of battery pack are
+even unmeasurable due to the absence of current sensor. Motivated by this, this paper proposes a hierarchical
+soft measurement framework for the load current and SOC addressing different degrees of current sensor uncertainty. Rooted from a common least squares (LS)-based state optimization problem, a total least square (TLS)-
+based modification is proposed and solved to compensate for the measurement disturbances, and in accordance
+to estimate the SOC more accurately. One step further, an input-free optimization method is proposed to coestimate the SOC and load current without using the current measurements. Simulation and experimental results suggest that the proposed hierarchical framework can realize high-fidelity co-estimation of the SOC and
+load current, especially in the adverse scenarios of both strong noise corruption and current sensor malfunction/
+missing. The encouraging results open new paradigms for both the high-robustness current-free SOC estimation
+and the hardware-free soft current measurement of LIB. 
+
+1. Introduction
+With the rapid development, the lithium-ion battery (LIB) has earned
+its popularity in power storage, electric vehicles (EVs), and portable
+electronics, attributed to its unique advantages of high energy/power
+density, long life span, and weak memory effects. As the performance of
+LIB system is principally determined by the weakest cells, the state-ofcharge (SOC) that indicates the remaining charge of a cell is a critical
+state need to be monitored by the battery management system (BMS) to
+maintain the safe operation of LIB system [1–3].
+SOC estimation has been widely explored in the past years, and the
+associated methods can be broadly divided into four categories, i.e.,
+open circuit voltage (OCV) method, coulomb counting (CC) method,
+artificial intelligence method, and model-based method [4–6]. Except
+for the OCV method, it is well recognized that the rest approaches all
+depend directly on the accurate measurement of load current of battery.
+Unfortunately, accurate current sensing could be quite challenging in
+practical EV applications. In the state-of-the-art techniques, the halleffect current sensor and the shunt resistor current sensor are two
+major choices widely adopted for the BMS of EV [7]. Nevertheless, these
+techniques suffer from two recognized drawbacks for practical use. First,
+the current measurements contain remarkable errors due to the heavy
+electromagnetic interference and dynamic temperature condition within
+the EV environment. Second, the currents across parallel branches of the
+pack are not uniformly distributed due to cell inconsistency. It is not
+practical to install a physical current sensor for each parallel branch
+concerning the high cost. Such limitations have raised practical concerns
+and expectations for the BMS design, i.e., how to ensure the fidelity of
+SOC estimation with low-quality/noise-corruptive current measurement, or even without current sensors.
+For the circumstance of low-quality current measurements, the
+exploration of novel current sensing techniques, e.g., on-chip temperature compensation and dynamic error-correction [8], can restore the
+measurement quality effectively. However, the installation of the
+complicatedly-structured sensor on each cell is not cost-friendly. Alternatively, the model-based SOC estimators have been most studied
+attribute to the high robust performance against disturbances. According to the specific model in use, such methods can be further categorized
+into electrochemical model-based [9–11] and equivalent circuit model
+(ECM)-based estimators [12]. On the premise of well-validated models,
+real-time SOC observers have been explored progressively, like Kalman
+Filter (KF) family [13–16], particle filter [17–19], H-infinity filter
+[20,21], sliding-mode observer [22], proportional integral-based
+observer [23], etc. Recent progresses have also transformed the SOC
+estimation into solving an optimization problem, which formulates the
+well-recognized moving horizon estimator (MHE) [24–26].
+In spite of the successful use of existing model-based observers, their
+performance in practical scenarios can be deteriorated due to the difficulty in obtaining measurements with sufficient quality under special
+environmental constraints. Within this scope, low-quality sensinginduced biases of SOC estimation have been studied for most commonlyused EKF and least squares (LS) method in [27]. It is found that the
+sensor errors contribute to persistent estimation biases, and this
+contribution is in comparable magnitude to the model uncertainty. To
+remedy the impact of sensing noises, the wavelet transform has been
+employed to de-noise the corrupted measurements and thus to improve
+the accuracy of SOC estimation [28,29]. However, the low-frequency
+drifting errors are not likely to be eliminated by the filtering approaches. Moreover, the non-optimized filtering also risks distorting the
+original measurements if the parameters of filter are not tuned meticulously. Considering the current measurement offset (CMO), the twostage recursive least squares algorithm has been exploited to deal with
+the interference of CMO on parameter identification and SOC estimation
+effectively [30].
+In practical applications, more adverse conditions can occur where
+the current measurement is absolutely unavailable. A typical scenario is
+the occurrence of current sensor failure, while routine management
+tasks such as SOC estimation have to be ensured. Moreover, the refined
+LIB management requires the current flowing across each parallelconnected branch, which is typically not measurable due to the lack of
+physical sensors. To this end, few works that focus on the LIB management without using current sensor have been reported in the literature.
+Two current estimators based on a Thevenin model and a simple RC
+model are respectively proposed in [31,32]. The essence is to design a
+filter based on the transfer function of the battery model. In spite of the
+simplicity, the intrinsic open-loop mechanism inevitably results in low
+robustness to modeling and measurements uncertainty. A current unknown SOC estimation method is proposed by voltage filtering based on
+an ECM [33]. However, a primary model is utilized and the frequent
+relaxations are ignored, which potentially declines the estimation accuracy. To remedy such deficiencies, a closed-loop unknown input
+observer is proposed to estimate the SOC and input current concurrently
+based on a second-order RC model [34]. However, it is difficult to meet
+all the pre-conditions at the same time in practical applications.
+To bridge the above research gap, this paper develops a hierarchical
+soft measurement framework for the SOC and load current, oriented for
+different degrees of current sensor uncertainty. In particular, the corresponding SOC estimation tasks are transformed into three optimization problems which are solved in a real-time manner with the MHE.
+Three primary contributions are made.
+First, a hierarchical algorithmic framework is proposed, for the first
+time, to realize the accurate soft measurement of battery SOC and load
+current. The universal framework provides a series of estimators accounting for different degrees of current sensor uncertainties, i.e., accurate current measurement, heavily-corrupted current measurement,
+and no current measurement.
+Second, the method from Hierarchy II can ensure high robustness
+against the disturbances on current measurements, including both
+drifting errors and stochastic noises. The accuracy of SOC estimate is
+improved largely compared to conventional methods in the heavy noisecorrupted condition.
+Third, the method from Hierarchy III gives a solution for highfidelity co-estimation of the input current and SOC without using the
+current sensor. This challenges the entrenched mindset that precise
+current measurements are imperative for accurate SOC estimation.
+The remainder of the paper is organized as follows. The LIB modeling
+and parameterization are presented in Section 2. The proposed hierarchical soft-measurement framework is elaborated in Section 3. Simulation and experimental results are discussed in Sections 4 and 5, while the
+primary conclusions are drawn in Section 6.
+
+2. Battery modelling
+The high-fidelity objective modeling is the prerequisite for any
+model-based estimator or controller. A thorough exposition of the
+control-oriented models for the LIB can be found in [35]. A wellcompromised model with sufficient simplicity yet simulating the
+dominant electrical dynamics of LIB is generally favorable for the
+formulated problem. To this end, the first-order RC model shown in
+Fig. 1 (a) is used in this paper, where the voltage source is used to
+simulate the SOC-dependent OCV, Rs is the ohmic resistance, the parallel
+connected Rp and Cp are polarization impedances describing the polarization effects of the LIB.
+According to Kirchhoff’s circuit laws and capacitor equation, the
+mathematical expression of the first-order RC model is expressed as: 
+
+where IL denotes the load current, z the battery SOC, Cn the nominal
+capacity (in Ah), Vp and Vt the polarization and terminal voltage, the
+OCV (VOC) is a function of SOC: 
+
+where ci are the coefficients, and m is the polynomial order.
+The SOC-OCV test is performed and the commonly-used pulserelaxation approach is used for calibrating Eq. (2) [36]. The curve-fitted
+SOC-OCV correlation is plotted against the experimental values in Fig. 1
+(b), while the fitted coefficients are summarized in Table. 1.
+Define the system input and output as IL and yk = Vt,k, the state as xk
+= [Vp,k zk]
+T, the standard discrete-time state-space model can be
+determined from Eqs. (1.a)–(1.c) by: 
+
+where wk and vk are respectively the zero mean and Gaussian process
+and measurement disturbances, whose covariances are Qk and Rk,
+respectively. VOC is substituted by the relation between OCV and SOC f
+(zk) to interrelate the states with the system output. The reference
+matrices are given by: 
+
+The model parameters of the first-order RC model, i.e., Rs, Rp and Cp,
+are also SOC-dependent. Therefore, a hybrid pulse test is performed to
+calibrate these impedance parameters beforehand. Particularly, hybrid
+pulse sequences with charge/discharge pulses (10 s for each) and resting
+periods among them (40 s) are imposed on the LIB, and the impedance
+parameters of interest are offline identified with the obtained current–voltage responses. As the calibration method is a common one
+studied for years, the details are not elaborated herein but can be
+referred to the existing works [37].
+
+3. Hierarchical estimation framework
+In practical applications, current sensors can be contaminated by
+unignorable noises in heavy electromagnetic environments. Even worse,
+the current is unmeasurable in the parallel branches of the battery pack
+due to the difficulty of sensor installation. Regarding these two harsh
+conditions, this section goes further to elaborate a hierarchical coestimation framework for SOC and input current based on the ECM
+presented in Section 2. In the proposed hierarchical framework, three
+constrained optimization problems are formulated, the solutions of
+which provide a series of estimation methods accounting for different
+degrees of current sensor uncertainties, i.e., accurate current measurement, heavily-corrupted current measurement, and no current
+measurement.
+3.1. Hierarchy I: Conventional least squares-based problem formulation
+To ease describing the proposed hierarchical algorithmic framework,
+a conventional optimization-based SOC estimation method is put forward in this section, as Hierarchy I of the proposed framework. Based on
+the general probability theory, it is well-recognized that the optimal
+estimation of internal states is a function of the conditional state probability density with knowledge of {yi}k i = 0 and system measurements,
+
+By combining the maximization problem of Eq. (5) with the statespace function of the ECM in Eqs. (3.a-b), a full information optimization for the battery states is given by [38]:
+where x0 is the initial system state, P0 is the initial state covariance used
+to penalize the deviation of the initial state estimate. Explicitly, the
+computational endeavor to solve the formulated optimization problem
+builds up rapidly with the enlargement of data length. This has motivated the exploration of the moving horizon framework which is
+believed to appeal to real-time embedded applications.
+Suppose that a moving time horizon owning a fixed length of n is
+defined, then the k-th sampling can be divided into [0, …, tk-n] and [tk,n+1, …, tk]. Bearing this in mind, the full information optimization
+problem of Eq. (6) can be reconstructed as: 
+
+It is shown that the first three terms of Eq. (7) are meant to convey
+the historical information before the present time horizon, i.e., [0, …, tkn]. The first three terms are used to represent the arrival cost [39]. In
+accordance with this, the concerned state estimation problem at time tk
+can be expressed as the following nonlinear optimization problem [24]:
+
+where xk− n+1 is the priori state estimate at the first of the time horizon,
+which is calculated by the (k − n)-th optimal estimate of states and the
+(k − n + 1)-th system measurements. The first term represents the deviation of the initial state from the priori state estimate, and is called the
+arrival cost. The second term is the penalty accounting for the deviation
+between the measured and estimated terminal voltage calculated by the
+estimated SOC and Vp via the Eq. (3.b), and the third term is used to
+penalize the mismatch between the optimized estimated state and the
+propagated state via Eq. (3.a).
+As the errors on the system input are not considered, the SOC estimation method based on Eq. (8) is called LS-MHE for simplicity. It is
+expected that the LS-MHE can give optimized estimation if the current
+measurements are free from errors. It is also worth noting that the LSMHE has already been studied in the literature thus is not an innovation of this work. However, LS-MHE forms Hierarchy I of the proposed
+overall framework, since it lays the foundation for the methods in Hierarchy II and III, which are major contributions of this endeavor.
+3.2. Hierarchy II: Total least squares-based problem formulation
+The formulation of Eq. (8) gives a universal solution for the state
+estimation problem with accurate current measurements. However, as
+the current sensor is vulnerable to electromagnetic interference (EMI),
+precise current measurements are not always available in practical
+application, in contrast, the current measurements are usually contaminated by stochastic noises and drifting errors. In this regard, considering the current measurement errors, by introducing an extended
+vector ρ = [xT IL]T, the total least squares (TLS)-based constrained
+optimization problem is formulated as: 
+
+the input error term which is added into the objective function to form a
+TLS-based problem, M indicates the confidence on the current measurements, xk− n+1 is updated with the estimate of input current at k − n
++ 1. The SOC estimation method based on Eqs. (9. a - f) is called the TLSMHE method for simplicity.
+Unlike the problem formulation in Eq. (8), the proposed TLS-MHE
+method treats the system input as a decision variable to be estimated
+together with states of interest, using the state-space model as a
+constraint. Another primary difference is that the state error cost has
+been excluded referring to Eq. (8). This is reasonable with the assumption that the noise covariance Q is a zero matrix [40]. Hence, the state
+sequence is reconstructed via the process model once the initial state is
+optimized, which virtually decreases the solution time. By appropriately
+selecting the confidence factor M, the TLS-MHE method is supposed to
+accurately estimate the SOC and correct the load current measurements
+simultaneously. It is explicit that compared to the LS-MHE, the TLS-MHE
+has lower dependence on accurate current measurements, and is more
+robust to the disturbance on battery current. Therefore, the TLS-MHE
+method is expected to be favorable under the practical in-vehicle condition where the current measurements contain heavy noises.
+3.3. Hierarchy III: Current-free constrained problem formulation
+The aforementioned TLS-based method surmounts the challenge of
+SOC estimation with low-quality current measurements. However, in
+the current sensor-less scenario like the parallel topology in a battery
+pack, the current across each parallel branch is unmeasurable. In this
+circumstance, the input current is expected to be estimated simultaneously with the states of interest via matching the voltage measurements with the aid of the state-space model. In particular, a modified
+input-free optimization problem is formulated by: 
+
+It is worth noting that the constraints of Eq. (10) are consistent with
+those of the TLS-based method in Section 3.2. The main difference from
+the TLS-based method is the absence of input error term in the objective
+function, since the unavailability of current information is an underlying
+assumption herein. Note that the estimation at each time point relies
+only on the latest n terminal voltage measurements, while the historical
+measurements are readily contained in the arrival cost. By solving the
+finite-horizon optimization problem formulated in Eq. (10), both the
+states of interest and the input current can be estimated concurrently. As 
+the estimation based on Eq. (10) no longer utilizes the current measurement, it is called current-free MHE for simplicity. Compared to the
+methods from Hierarchy I and II, the current-free MHE promises a
+unique advantage of estimation without a current sensor. This property
+appeals to some special scenarios like current sensor failure or the need
+for monitoring cells in the parallel branches of the pack. 
+
+3.4. Universal framework of the hierarchical methodology
+The efficient solution of constrained optimization problems defined
+in Sections 3.1–3.3 eventually gives rise to a series of estimation
+methods accounting for different degrees of current sensor uncertainties. In this paper, the sequential quadratic programming (SQP)
+method is employed to solve the involved optimization problems and
+thus provide the optimal estimates of SOC and input current at each
+iteration. For the sake of simplicity, the algorithmic procedure of the
+SQP is not detailed in this paper but can be found in [41].
+The proposed hierarchical framework is shown schematically in
+Fig. 2. It can be seen that one can always find a solution in response to
+different levels of current sensor uncertainty. In particular, the conventional LS-MHE represents “Hierarchy I”, which is preferable for use 
+under a favorable condition that the LIB current can be measured very
+precisely.
+In “Hierarchy II”, the TLS-MHE is employed to estimate the SOC and
+correct the current measurements concurrently. It is worth noting that
+the current measurements are subjected to heavy noises and drifting
+errors due to the dynamic working condition and electromagnetic
+interference of in-vehicle environment. Affected by these uncertainties,
+the existing estimation methods are easily deteriorated in the estimation
+accuracy. In contrast, this method mitigates the reliance on highlyprecise measurement, and thus appeals to a deteriorated condition
+that the current and voltage measurements of LIB are low-quality with
+large disturbances.
+In “Hierarchy”, the proposed current-free MHE eliminates
+completely the dependence on the current measurements by coestimating the SOC and load current using only the voltage measurements. This indicates its suitability for use under the most deteriorative
+scenario, where the current of LIB is not measurable due to either sensor
+breakdown or the difficulty of large-scale sensor installation.
+
+4. Simulation validation
+The performance of the proposed framework in comparison with
+existing ones in the literature is evaluated with simulations in this section. The merit of simulation is rooted in the full elimination of model
+uncertainty, which enables evaluating the algorithms from a purely
+theoretical perspective.
+
+4.1. Data acquisition
+During the simulation, the federal urban drive schedule (FUDS) is
+loaded to excite the battery model, while the load current, terminal
+voltage and SOC are sampled at 1 Hz and plotted in Fig. 3. The methods
+are performed with the acquired data to evaluate the effectiveness. The
+widely-used EKF-based state estimator is also executed and compared
+with the proposed methods to evaluate the performance of different
+methods. Since the precise initial SOC is unavailable practical applications, the SOC is initialized erroneously as 60% in this work, while the
+true initial SOC is 87.5%.
+
+4.2. Simulation results
+Random noises with a standard deviation of 0.5 A (10% when
+normalized by the range of the FUDS current) and 2 mV, as well as
+drifting errors of 0.5 A and 2 mV are added to the noise-free current and
+voltage measurements to simulate the scenario with heavy EMI. Note
+that the voltage disturbances are much smaller because the commercial
+voltage sensors of BMS can generally ensure a much higher precision
+than the current measurement. The estimation results by using the
+proposed framework, including the LS-MHE (Hierarchy I), TLS-MHE
+(Hierarchy II), and current-free MHE (Hierarchy) are plotted in Fig. 4.
+Meanwhile, the estimation results given by the widely-used EKF are also
+plotted against the ones from the hierarchical framework for a
+straightforward comparison. The corresponding MAEs and RMSEs of
+state estimation after the algorithms converge to within ± 5% error
+bound are summarized in Table 2.
+As shown in Fig. 4 (a-b) and Table 2, the SOC estimates with EKF and
+LS-MHE are comparable, and both of them suffer from a major error
+build-up due to the addition of large measurement errors. The estimation errors of these two methods keep around 4% in the first 4000 s and
+reach the maximum of 14 % at around 7000 s. The low robustness of LS
+MHE (Hierarchy I) can be explained by the optimization problem
+formulation in Eq. (8), which assumes a disturbance-free system input
+(load current measurement). In reality however, this deviation from
+such assumption virtually leads to a deteriorative performance of LSMHE. Even worse, the regional flat SOC-OCV curve within the SOC
+range of 20–50% causes a quasi-unobservable condition and thus a
+growing vulnerability to perturbations. As the disturbances imposed on
+the current and voltage data are eventually transferred into the estimated OCV, the enlarged SOC mismatch is hence within expectation for
+these two methods.
+In contrast, it is shown that the estimation errors of TLS-MHE (Hierarchy II) are much lower and always kept within the ±4% error bound.
+The superior performance of TLS-MHE is attributed to its full consideration of the disturbances on both current and voltage measurement, as
+suggested by Eq. (9), and the “error-in-variable” optimization mechanism can well compensate for such disturbances to ensure an unbiased
+estimation. Moreover, the TLS-MHE converges into the 4% error bounds
+rapidly in the first tens of seconds. The observed fast convergence is
+attributed to the input error penalty in objective function Eq. (9), where
+the estimation is guided efficiently towards the “correct direction” with
+the low-quality current measurements, but does not fully trust the
+measurements. With respect to the current-free MHE (Hierarchy), its
+estimate of SOC converges into the 4% error bounds gradually in nearly
+1000 s and keeps tracking of the benchmarked SOC trajectory closely.
+The relatively slow convergence of the current-free MHE can be
+explained from two perspective. On the one hand, as the input current is
+added into the decision variables, the elevated degree of freedom of the
+current-free MHE make the optimization more complex. On the other
+hand, the weight of the arrival cost in the objective function grows
+significantly as the input error term is removed, which limits the
+propagation step size of the SOC estimates at each iteration. As shown in
+Table 2, the steady-state estimation deviation is even lower than the
+TLS-MHE, which can be explained by the fact that the method is independent of the current measurement, so that the errors cannot be
+transferred to the state estimation.
+The estimation of polarization voltage, which is cross-linked with the
+SOC estimation, can serve as an important support for the aforementioned discussions. As can be seen in Fig. 4 (c-d), the results are
+consistent with those of SOC estimation for all the four involved
+methods. Therefore, this is not expanded for discussion for the briefness.
+It is worth noting that both the TLS-MHE and the current-free MHE
+can achieve input current estimation, although the former needs a rough
+measurement as the basis. The estimation results of the input current by
+using the two methods are shown in Fig. 5, while the statistical indicators are summarized in the last columns of Table 2. It is observed
+that both the estimates agree with the ground truth closely. The scrutiny
+of estimation errors, as shown in Fig. 5 (b, c), reveals that the two
+methods mitigate most of the noises and offset imposed on the current
+measurements. By comparison, the current-free MHE gives rise to an
+even more accurate steady-state estimation of the input current, even
+though it absolutely eliminates the need for current sensing.
+A potential limitation of the current-free MHE is the slower
+convergence during the start-up stage compared to the TLS-MHE, as
+supported by Fig. 4 (a-b) and Fig. 5 (c). In spite of this, the current-free
+MHE outperforms the methods in other hierarchies from the viewpoint
+that, it is applicable with expected performance without the need for
+current sensor installation. This unique merit appeals for wider applications including some special scenarios, such as the case of current
+sensor failure or the need for monitoring cells in the parallel branches of
+the pack.
+
+5. Experimental validation and discussion
+
+5.1. Experimental details
+The algorithms are evaluated experimentally using both the FUDS
+and the DST condition in this section. Arbin battery testing system is
+used to load the dynamic current profiles to the LIB in use. The ranges of
+the current and voltage sensors inside the test bench are 10 A and 5 V,
+while the measurement error limits are both within 0.05%. The acquired
+high-accuracy experimental data including the load current and terminal voltage are collected at 1 Hz and used to obtain the benchmarked
+SOC trajectory, which is used to evaluate the performance of different
+methods. Particularly, the reference SOC trajectory is determined by
+combining the accurate SOC pre-setting and CC-based calibration. The
+measurements and the benchmarked SOC trajectory are shown in Fig. 6.
+
+5.2. Validation of modelling accuracy
+The modeled terminal voltages are plotted against the measured
+values in Fig. 7. It is shown that the modeled terminal voltages approach
+their measurements very tightly. The modeling errors have been
+confined to the 50 mV error bound for both of the two validating conditions, except for a visually observable error build-up at the ending
+stage of the FUDS condition. This is caused by the high nonlinearity of
+LIB dynamics at the low SOC region (typically lower than 15%), which
+can be hardly described by the first-order RC model employed in this
+paper. Fortunately, such deep charge depletion is hardly met in practice
+as a consequence of the intention to protect the battery. It is hence
+validated the parameterized model is highly authentic to describe the
+LIB electrical dynamics, offering a solid basis for the model-based state
+and input current co-estimation.
+
+5.3. Experimental validation with ignorable noise corruption
+Measurements with high-precision sensors under well-protected
+laboratory conditions are used for method validation herein. With
+high-fidelity measurements, the TLS-MHE is approximately equivalent
+to the LS-MHE. Hence, only the LS-MHE, current-free MHE, and the
+widely-used EKF are included for comparison in this section. 
+The results of the SOC estimation under FUDS and DST conditions
+are illustrated in Fig. 8, and correspondingly, the statistical results of
+estimation deviation (MAE and RMSE) in the steady-state are summarized in Table. 3. It is shown that the widely-used EKF and LS-MHE
+(Hierarchy I) can estimate the SOC accurately. This is within expectation since the algorithms are implemented in an environment with
+ignorable noise corruption. By comparison, the proposed current-free
+MHE method augments the input current to the state space for coestimation, which risks declining the estimation performance due to
+the elevated degrees of freedom and the incurred cross-interference
+problem. This problem indeed exists, witnessed by the slow convergence at the initial stage. Once converged, however, the current-free
+MHE exhibits an equivalent accuracy compared to the benchmarked
+EKF and LS-MHE which utilize the high-quality input current
+information.
+By using the current-free MHE, the estimation results of input current
+are shown in Fig. 9 (a-c, d-f) in comparison with their benchmarks
+measured by the high-precision sensors. In correspondence to the
+convergence of SOC estimation, it takes a transition period for the
+current-free MHE method to alleviate the initialization error. After this
+stage, the input current estimates track the noise-free current measurements reference closely. Despite that the maximum estimation error
+that appears at the transient change of the current is nearly 0.6 A, the
+average estimation error is within a reasonable range under both the
+FUDS and DST conditions. This can be justified by the statistical error
+information summarized in Table. 4. The estimation RMSEs are 0.151 A
+and 0.197 A under the two conditions, respectively. The normalized
+RMSEs are smaller than 4%, which stands for a high accuracy
+considering the same level of precision of Hall-effect current sensors
+which are widely used.
+Two major conclusions can be drawn from the experimental results
+in this section. First, under the scenario of ignorable or slight noise
+corruption, the LS-MHE provides sufficient estimation performance that
+similar to the EKF. There is no need to move to hierarchy II or III, which
+inevitably increases the computing complexity. Second, the current-free
+MHE method is capable of co-estimation of the battery input current
+profile and SOC with sufficient accuracy leveraging merely the voltage
+measurements.
+
+5.4. Experimental validation with heavy disturbance
+In this section, remarkable disturbances consistent with the simulation study are imposed on the current and terminal voltage measurements. The SOC estimation results of the EKF, LS-MHE, TLS-MHE,
+current-free MHE methods are plotted in Fig. 10, and the statistical errors are summarized in Table. 5.
+It can be observed that the SOC estimation results by using EKF and
+LS-MHE methods are similar to the simulation study. Although all the
+methods converge stably and track the reference closely, the accuracy
+has declined compared to the case of simulation due to the existence of
+modeling uncertainties. Referring to Table. 5, the SOC estimates with
+EKF and LS-MHE show large errors thus are no longer recommended for
+use in practice. By comparison, the TLS-MHE and current-free MHE can
+remedy this deficiency. It is observed that the estimation results of these
+two methods keep high accuracy within the heavy noise-corruptive
+scenario. As discussed in Section 4.2, TLS-MHE attenuates the effect of
+disturbances by augmenting the input error penalty into the objective
+function, while the current-free MHE completely rules out the reliance
+on the noise-corrupted current information. Therefore, the disturbancetolerant property of the two methods can be explained. Consistent with
+the simulation results, the current-free MHE shows a higher steady-state
+accuracy but a deteriorated converging performance. Both of them
+(Hierarchy II and III) are applicable with sufficient precision under the
+adverse but practical in-vehicle condition of heavy noise corruption. In
+the case that the current measurements are not available, the currentfree MHE (Hierarchy III) can be used for high-fidelity SOC estimation. 
+The current estimation results by using the current-free MHE and the
+TLS-MHE are plotted comparatively in Fig. 11, and the statistical errors
+are summarized in Table. 5. The reported estimation accuracies show
+certain declinations compared with the foregoing given simulation results in Table 2. This is within expectation since the introduced model
+uncertainty inevitably discounts the performance of the discussed
+model-based estimator.
+The overall performance of the current estimation is shown in Fig. 11
+(a, d). Again, the convergence speed of the TLS-MHE is faster than the
+current-free MHE, which is consistent with the convergence of SOC
+estimation. As shown in Fig. 11 (b, e), the estimation accuracy of the
+current-free MHE is slightly higher than the TLS-MHE method after
+convergence, especially under the DST condition. Moreover, the estimation errors by using the two methods are both much smaller
+compared with the measurement noise, as illustrated in Fig. 11 (c, f),
+suggesting that the current measurement uncertainty has been mitigated
+to a large extent. Referring to Table. 6, the MAEs RMSEs of the current
+estimates are even smaller than the drifting error and the standard deviation of the random noises imposed on the current measurements.
+Two major findings can be summarized from the experimental results in this section. First, the LS-MHE (Hierarchy I) is heavily biased and
+thus not applicable in the adverse condition of heavy noise corruption.
+Instead, both the TLS-MHE (Hierarchy II) and the current-free MHE
+(Hierarchy III) promise disturbance-immune performance. Second, in
+the even worse condition of no available current sensor, only the
+current-free MHE (Hierarchy III) can promise an accurate estimation of
+SOC. Moreover, the highly-authentic estimation of input current reported by current-free MHE also inspires the possibility to extend its
+practical use for the design of the virtual current sensor and the real-time
+current sensor fault diagnostic of the battery system.
+
+5.5. Discussion on the practical application
+Although the proposed method is designed to be implemented on a
+cell-level processor toward the future application of self-regulated smart
+batteries, it is also applicable to the conventional configuration of battery system. Particularly, the proposed method can be compiled into the
+BMS in advance. Considering the condition where both the voltage and
+current are measurable (e.g. in series branches), the Hierarchy II of the
+proposed method is activated, which can give an accurate SOC estimation using the noise-corrupted measurements. Considering the condition
+where the current is unmeasurable (e.g. in parallel branches or with
+failed current sensors), the Hierarchy III of the proposed method is
+activated, which can realize accurate co-estimation of both the SOC and
+input current. In the future, this endeavor can potentially contribute to
+reducing the expense of battery system by discarding the physical current sensors.
+An undesirable effect is the growing computational burden when
+estimating the SOC and input current of all cells simultaneously. There
+can be two potential solutions to mitigate this adverse effect. First, each
+battery module can be equipped with one or more slave controllers to
+separate the huge computational burden into several affordable portions. Second, as depicted in BATTERY 2030 + Roadmap of Europe,
+higher degree of intelligent management is expected for the future
+battery system [42]. Within this vision, the system-level management
+can be realized in a distributed fashion by developing the self-regulated
+smart battery, which is generally devised with switches, sensors, and
+build-in cell-level processor. This endeavor will be focused on in our
+future work. 
+
+6. Conclusions
+This paper proposes a hierarchical framework for the accurate soft
+measurement of battery SOC and load current. Within the proposed
+framework, three constrained optimization problems are formulated
+accounting for different degrees of current sensor uncertainties, and
+three estimation methods named LS-MHE, TLS-MHE and current-free
+MHE are developed by solving them in a real-time fashion. The primary conclusions are:
+1. Under the scenario with accurate current measurements, the LS-MHE
+(Hierarchy I) is the best candidate with high accuracy and fast
+convergence. The MAEs of SOC estimation are 0.89% and 1.09%
+respectively under the FUDS and DST conditions.
+2. Under the scenario of heavily-corrupted current measurement, both
+TLS-MHE (Hierarchy II) and current-free MHE (Hierarchy III) can
+provide accurate SOC estimate. The MAEs of SOC estimation with
+TLS-MHE (1.59% and 1.99%) and current-free MHE (0.87% and
+1.67%) validate to be much smaller than those of LS-MHE (6.22%
+and 6.97%), under the FUDS and DST conditions.
+3. Under the scenario of no current measurement, only the current-free
+MHE (Hierarchy III) is applicable for SOC estimation. The MAEs of
+the SOC estimation are as low as 0.78% and 1.45% respectively
+under FUDS and DST conditions.
+4. The current-free MHE (Hierarchy III) can be used for the soft measurement of battery current. The normalized RMSEs of current estimation are smaller than 4%, which is in the same level with the
+widely-used Hall-effect current sensors. This unique merit inspires
+the possibility to extend its practical use for the design of virtual
+current sensor and the real-time current sensor fault diagnostic.
+CRediT authorship contribution statement
+Zhongbao Wei: Conceptualization, Methodology, Writing – original
+draft, Supervision, Funding acquisition. Jian Hu: Writing – review &
+editing, Methodology, Formal analysis, Investigation, Validation. Yang
+Li: Writing – review & editing, Methodology, Investigation. Hongwen
+He: Writing – review & editing, Resources. Weihan Li: Writing – review
+& editing. Dirk Uwe Sauer: Writing – review & editing. 
