@@ -20,6 +20,7 @@ files <- list.files(path = "~/relavis/Corpora/socialsci",
 # read in all files
 # first create empty data frame
 df <- data.frame()
+count = vector(mode = "integer", length = length(files))
 # for each file in our list of files
 for (i in 1:length(files)){
   # read the tab separated file in
@@ -30,13 +31,29 @@ for (i in 1:length(files)){
   start_idx = grep("^1\\.\\s.*", data, ignore.case = T)
   print(start_idx)
   end_idx = grep("^2\\.\\s.*", data, ignore.case = T)
-  if (identical(start_idx, integer(0))){
-    next
+  # start_I = grep("^I\\.\\s.*", data, ignore.case = T)
+  # end_II = grep("^II\\.\\s.*", data, ignore.case = T)
+  
+  if (identical(start_idx, integer(0)) | identical(end_idx, integer(0))){
+    # start_idx = grep("^I\\.\\s.*", data, ignore.case = T)
+    # end_idx = grep("^II\\.\\s.*", data, ignore.case = T)
+    text <- "No Intro"
+    df <- rbind(df, c(files[i], text))
   }
-  text <- data[start_idx:end_idx]
-  text <- trimws(text)
-  a <- corpus_frame(text)
-  a
+  # else if(identical(start_I, integer(0))){
+  #   print("no intro")
+  # }
+  else{
+    text <- data[start_idx:end_idx]
+    #text <- trimws(text)
+    print(text)
+    v = c(files[i], text)
+    df <- rbind(df, v)
+    df$file_name[i] <- files[i]
+    # df$text[i] <- text
+    
+  }
+  
   
 }
 
@@ -47,6 +64,5 @@ for (i in 1:length(files)){
 
 glimpse(df)
 head(df)
-
 # write file out so we don't have to run the whole thing again
-#write_csv(annotated_files, "bio.csv")
+#write_csv(df, "~/relavis/test.csv")
