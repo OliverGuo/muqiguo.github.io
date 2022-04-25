@@ -10,4 +10,4 @@ end_idx = grep("^2\\.\\s.*", data, ignore.case = T)
 text <- data[start_idx:end_idx-1]
 text <- trimws(text)
 text
-#text_sample(text, "which", 10)
+text_sample(text, "which", 10)
