@@ -36,7 +36,7 @@ content <- sapply(corpus, function(x){
 
 str_count(content, "which")
 
-text_locate(content[1], c("which", "that", "when", "who", "whose"))
+text_locate(content[2], c("which", "that", "when", "who", "whose"))
 # fileinfo <- sapply(complete_corpus, function(x){
 #   x <- x[1]
 # })
