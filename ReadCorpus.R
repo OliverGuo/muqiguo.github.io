@@ -6,7 +6,7 @@ library(readr)
 library(readtext)
 library(tidyverse)
 library(corpus)
-# data <- readLi("~/relavis/Corpora/mini corpus/RA1-2022-SIAM.txt")
+# data <- readLines("~/relavis/Corpora/mini corpus/RA1-2022-SIAM.txt")
 # 
 # 
 # start_idx = grep("^1\\.\\s.*", data, ignore.case = T)
