@@ -11,8 +11,6 @@ complete_corpus <- sapply(corpusfiles, function(x){
   x <- stringr::str_trim(x, side = "both") # remove superfluous white spaces at the edges of strings
   x <- stringr::str_squish(x)              # remove superfluous white spaces within strings
   x <- paste0(x, collapse = " ")       # paste all utterances in a file together
-  # split files into individual utterances
-  x <- strsplit(gsub("([%|*][a-z|A-Z]{2,4}[0-9]{0,1}:)", "~~~\\1", x), "~~~")
 })
 
 corpus <- sapply(corpusfiles, function(x){
@@ -22,7 +20,6 @@ corpus <- sapply(corpusfiles, function(x){
             quote = "",
             quiet = T,
             skipNul = T)
-  #x <- stringr::str_trim(x, side = "both")
   x <- paste0(x, sep = " ", collapse = " ")
   x <- stringr::str_squish(x)
 })
