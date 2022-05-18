@@ -4,12 +4,13 @@ library(corpus)
 soc <- "~/relavis/Corpora/socialsci"
 bio <- "~/relavis/Corpora/bio"
 app <- "~/relavis/Corpora/appliedsci"
-corpusfiles <- list.files(here::here(soc), # path to the corpus data
+corpusfiles <- list.files(here::here(bio), # path to the corpus data
                           # file types you want to analyze, e.g. txt-files
                           pattern = ".*.txt",
                           # full paths - not just the names of the files
-                          full.names = T)      
+                          full.names = T)   
 
+#use saveRDS
 complete_corpus <- sapply(corpusfiles, function(x){
   x <- stringr::str_trim(x, side = "both") # remove superfluous white spaces at the edges of strings
   x <- stringr::str_squish(x)              # remove superfluous white spaces within strings
@@ -27,30 +28,29 @@ corpus <- sapply(corpusfiles, function(x){
   x <- stringr::str_squish(x)
 })
 
-
 # content <- sapply(corpus, function(x){
-#   split_str <- str_split(x, "INTRODUCTION")
-#   second_half_str <- str_split(split_str[[1]][2], "\b[A-Z]+\b")
+#   split_str <- str_split(x, "Abstract|ABSTRACT")
+#   second_half_str <- str_split(split_str[[1]][2], "Introduction|INTRODUCTION|Background ")
 #   x <- second_half_str[[1]][1]
 # })
 
 content <- sapply(corpus, function(x){
-  split_str <- str_split(x, "1. Introduction|Introduction|INTRODUCTION|I. Introduction |Background")
-  second_half_str <- str_split(split_str[[1]][2], "2. |II. |Methods|methods|Method|Methodology|\\b[A-Z]+\\b")
+  split_str <- str_split(x, "1. Introduction")
+  second_half_str <- str_split(split_str[[1]][2], "2. ")
   x <- second_half_str[[1]][1]
 })
-content[length(content)]
+content[2]
 peek <- sapply(content, function(x){
   item <- str_count(x, "that|which|when|who|whose")
-  if(!is.na(item) & item>15){
+  if(!is.na(item) & item>200){
     x
   }
 })
 
 tb <- str_count(content, "that|which|when|who|whose")
 tb
-sum(tb != 0 & !is.na(tb))
-#content[9]
+sum(tb <=20 & tb >0 & !is.na(tb))
+
 #text_locate(content[2], c("which", "that", "when", "who", "whose"))
 # fileinfo <- sapply(complete_corpus, function(x){
 #   x <- x[1]

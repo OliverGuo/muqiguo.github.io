@@ -6,7 +6,10 @@ library(readr)
 library(readtext)
 library(tidyverse)
 library(corpus)
-corpusfiles <- list.files(here::here("~/relavis/Corpora/bio"), # path to the corpus data
+soc <- "~/relavis/Corpora/socialsci"
+bio <- "~/relavis/Corpora/bio"
+app <- "~/relavis/Corpora/appliedsci"
+corpusfiles <- list.files(here::here(app), # path to the corpus data
                           # file types you want to analyze, e.g. txt-files
                           pattern = ".*.txt",
                           # full paths - not just the names of the files
@@ -28,8 +31,6 @@ content <- sapply(data, function(text){
   }
   
 })
-# start_idx = grep("^1\\.\\s.*", data, ignore.case = T)
-# end_idx = grep("^2\\.\\s.*", data, ignore.case = T)
-# a = paste(data[start_idx:end_idx-1], collapse = '')
-# a
-view(content)
+tb <- str_count(content, "that|which|when|who|whose")
+tb
+sum(tb <=20 & tb >0 & !is.na(tb))
