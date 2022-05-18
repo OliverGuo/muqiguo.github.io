@@ -1,7 +1,10 @@
 library(tidyverse)
 library(tm)
 library(corpus)
-corpusfiles <- list.files(here::here("~/relavis/Corpora/bio"), # path to the corpus data
+soc <- "~/relavis/Corpora/socialsci"
+bio <- "~/relavis/Corpora/bio"
+app <- "~/relavis/Corpora/appliedsci"
+corpusfiles <- list.files(here::here(soc), # path to the corpus data
                           # file types you want to analyze, e.g. txt-files
                           pattern = ".*.txt",
                           # full paths - not just the names of the files
@@ -25,15 +28,30 @@ corpus <- sapply(corpusfiles, function(x){
 })
 
 
+# content <- sapply(corpus, function(x){
+#   split_str <- str_split(x, "INTRODUCTION")
+#   second_half_str <- str_split(split_str[[1]][2], "\b[A-Z]+\b")
+#   x <- second_half_str[[1]][1]
+# })
+
 content <- sapply(corpus, function(x){
-  words <- str_split(x, "Abstract|a b s t r a c t|abstract")
-  second <- str_split(words[[1]][2], "1. Introduction|INTRODUCTION|Background|Introduction|SUMMARY")
-  x <- second[[1]][1]
+  split_str <- str_split(x, "1. Introduction|Introduction|INTRODUCTION|I. Introduction |Background")
+  second_half_str <- str_split(split_str[[1]][2], "2. |II. |Methods|methods|Method|Methodology|\\b[A-Z]+\\b")
+  x <- second_half_str[[1]][1]
+})
+content[length(content)]
+peek <- sapply(content, function(x){
+  item <- str_count(x, "that|which|when|who|whose")
+  if(!is.na(item) & item>15){
+    x
+  }
 })
 
-str_count(content, "which")
-
-text_locate(content[2], c("which", "that", "when", "who", "whose"))
+tb <- str_count(content, "that|which|when|who|whose")
+tb
+sum(tb != 0 & !is.na(tb))
+#content[9]
+#text_locate(content[2], c("which", "that", "when", "who", "whose"))
 # fileinfo <- sapply(complete_corpus, function(x){
 #   x <- x[1]
 # })
